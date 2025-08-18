@@ -1,31 +1,46 @@
 :root {
     /* Primary color*/
 
-    --primary-950: #4DB100;
-    --primary-900: #55B40C;
-    --primary-800: #67BC26;
-    --primary-700: #79C43F;
-    --primary-600: #8BCC59;
-    --primary-500: #9DD472;
-    --primary-400: #AEDB8C;
-    --primary-300: #C0E3A5;
-    --primary-200: #D2EBBF;
-    --primary-100: #EAF3D8;
-    --primary-50: #F6FBF2;
+    --primary-950: #2d221d;
+    --primary-900: #554439;
+    --primary-800: #685344;
+    --primary-700: #7f644f;
+    --primary-600: #997b5d;
+    --primary-500: #a68c69;
+    --primary-400: #b5a182;
+    --primary-300: #cbbfa6;
+    --primary-200: #dfd8c9;
+    --primary-100: #f0ede5;
+    --primary-50: #f8f7f4;
 
     /* Secundary color*/
 
-    --secundary-950:#FED638;
-    --secundary-900:#FED841;
-    --secundary-800:#FEDC55;
-    --secundary-700:#FEE069;
-    --secundary-600:#FEE47D;
-    --secundary-500:#FEE891;
-    --secundary-400:#FEECA5;
-    --secundary-300:#FEF0B9;
-    --secundary-200:#FEF4CD;
-    --secundary-100:#FEF8E1;
-    --secundary-50:#FEFCF5;
+    --secundary-950:#072c0e;
+    --secundary-900:#184f23;
+    --secundary-800:#1a6127;
+    --secundary-700:#1b7a2c;
+    --secundary-600:#1d9631;
+    --secundary-500:#2bbc42;
+    --secundary-400:#52d667;
+    --secundary-300:#8ce99b;
+    --secundary-200:#bef4c6;
+    --secundary-100:#defae2;
+    --secundary-50:#f1fcf2;
+
+
+    /* Tertiary color */
+    --tertiary-950: #1f0f0f;
+    --tertiary-900: #5e3230;
+    --tertiary-800: #733a39;
+    --tertiary-700: #8e4640;
+    --tertiary-600: #ab574b;
+    --tertiary-500: #b86a57;
+    --tertiary-400: #c48573;
+    --tertiary-300: #d6ac9b;
+    --tertiary-200: #e6cdc2;
+    --tertiary-100: #f3e7e1;
+    --tertiary-50: #faf4f2;
+
 
     /* Basic color*/
     --white: #fff;
@@ -43,7 +58,8 @@
     --gray-50: #E9E9E9;
 
     /* Font-family */
-    --main-font: Helvetica, Arial, sans-serif;
+      --font-primary: 'Inter', sans-serif;
+  --font-secondary: 'Roboto', sans-serif;
 
     /* Font-size */
     --fs-xxxxl: 8.0rem; /* Ultra grande */
