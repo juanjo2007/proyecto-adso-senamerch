@@ -1,0 +1,108 @@
+/* HERO SECTION */
+.body__background {
+    background-color: #F0E8DB;
+}
+.hero {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    min-height: 90vh;
+    padding: 2rem;
+}
+
+.hero__content {
+    text-align: center;
+    max-width: 100%;
+}
+
+.hero__title {
+    font-size: 2.5rem;
+    margin-bottom: 1rem;
+    color: #184F23;
+    text-align: center;
+    position: absolute;
+    top: 170px;
+    left: 150px;
+    font-family: 'Inter', sans-serif;
+    font-size: 90px;
+    font-weight: 700;
+    line-height: 1.1;
+}
+
+.hero__subtitle {
+    font-size: 1.2rem;
+    color: #555;
+    margin-bottom: 2rem;
+}
+
+.hero__button {
+    background-color: #1B7A2C;
+    color: #ffffff;
+    padding: 1rem 3rem;
+    border-radius: 6px;
+    font-family: 'Inter', sans-serif;
+    font-size: 20px;
+    text-transform: uppercase;
+    text-decoration: none;
+    border: none;
+    display: inline-block;
+    transition: background-color 0.3s ease, transform 0.2s ease;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+    position: absolute;
+    margin-left: 7rem;
+    margin-top: 5rem;
+}
+
+.hero__button:hover {
+    background-color: #156c12;
+    transform: scale(1.03);
+    cursor: pointer;
+}
+
+
+/* Contenedor de la imagen */
+.hero__image-container {
+    height: 650px;  /* Más grande que la imagen */
+    width: 975px;
+    margin-top: 2rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+/* Imagen cuadrada centrada */
+.hero__image {
+    width: 600px;
+    height: 600px;
+    object-fit: cover;
+    border-radius: 12px;
+}
+
+/* Desktop layout */
+@media (min-width: 768px) {
+    .hero {
+    flex-direction: row;
+    justify-content: space-between;
+    padding: 4rem;
+    }
+
+    .hero__content {
+    flex: 1;
+    text-align: left;
+    padding-right: 2rem;
+    }
+
+    .hero__image-container {
+    flex: 1;
+    margin-top: 0.5rem;
+    height: 80%; /* o puedes forzar: height: 100%; */
+    }
+
+    .hero__image {
+    height: 550px;
+    width: 850px;
+    border-radius: 12px;
+    }
+}
+
