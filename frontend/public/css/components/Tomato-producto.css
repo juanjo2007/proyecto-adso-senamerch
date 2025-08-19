@@ -1,0 +1,58 @@
+body {
+  font-family: Arial, sans-serif;
+  display: flex;
+  justify-content: center;
+  margin-top: 50px;
+  background-color: #f4f4f4;
+}
+
+.Tomate {
+  border: 1px solid #ccc;
+  width: 250px;
+  background-color: #F0E8DB;
+  box-shadow: 2px 4px 6px rgba(0,0,0,0.1);
+}
+
+.Tomate__image {
+  width: 100%;
+  height: auto;
+  display: block;
+}
+
+.Tomate__content {
+  padding: 10px;
+  text-align: center;
+}
+
+.Tomate__title {
+  font-size: 18px;
+  color: #777;
+  margin: 5px 0;
+}
+
+.Tomate__price {
+  font-size: 22px;
+  font-weight: bold;
+  margin: 5px 0;
+}
+
+.Comprar__button {
+  margin-top: 10px;
+  padding: 10px 20px;
+  background-color: #2e7d32;
+  color: white;
+  border: none;
+  border-radius: 6px;
+  cursor: pointer;
+  box-shadow: 1px 2px 4px rgba(0,0,0,0.2);
+}
+
+.Comprar__button:hover {
+  background-color: #1b5e20;
+}
+
+@media (max-width: 500px) {
+  .Tomate {
+    max-width: 90%;
+  }
+}
