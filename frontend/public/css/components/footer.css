@@ -1,0 +1,47 @@
+/* ESTILO GENERAL DEL FOOTER */
+.footer {
+  background-color: #a15145; /* Color marrón institucional */
+  padding: 20px;
+  border-top: 1px solid black;
+  color: white;
+}
+
+/* CONTENEDOR DEL FOOTER */
+.footer-container {
+  max-width: 1200px;
+  margin: auto;
+  display: flex;
+  justify-content: space-between; /* Texto a la izquierda, íconos a la derecha */
+  align-items: center;
+  flex-wrap: wrap;
+  padding-top: 10px;
+  border-top: 1px solid #e2bfbf;
+}
+
+/* TEXTO DEL FOOTER */
+.footer-container p {
+  font-size: 14px;
+  margin: 0;
+}
+
+/* CONTENEDOR DE ÍCONOS */
+.social-icons {
+  display: flex;
+  gap: 10px;
+}
+
+/* ESTILO DE CADA ÍCONO */
+.social-icons img {
+  width: 28px;
+  height: 28px;
+  border-radius: 6px;
+  background-color: white;
+  padding: 4px;
+  transition: transform 0.2s ease;
+}
+
+/* EFECTO AL PASAR EL CURSOR */
+.social-icons img:hover {
+  transform: scale(1.1);
+  background-color: #f0f0f0;
+}

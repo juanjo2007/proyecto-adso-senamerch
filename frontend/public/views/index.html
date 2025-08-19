@@ -1,26 +1,167 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="es">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Home</title>
-    <link rel="stylesheet" href="/frontend/public/css/main.css">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Inicio - SENA MERCH</title>
 
-    <script src="/frontend/public/js/componets/navbar.js" defer></script>
-    <script src="/frontend/public/js/componets/hero.js" defer></script>
-    
+  <style>
+    /* --- Reset básico --- */
+    body {
+      margin: 0;
+      font-family: Arial, sans-serif;
+      display: flex;
+      flex-direction: column;
+      min-height: 100vh;
+    }
+
+    main {
+      flex: 1; /* Ocupa el espacio disponible */
+    }
+
+    /* --- Navbar --- */
+    nav {
+      background: #0a7d3e; /* Verde institucional */
+      color: white;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 10px 20px;
+    }
+
+    .logo {
+      display: flex;
+      align-items: center;
+    }
+
+    .logo img {
+      width: 40px;
+      margin-right: 10px;
+    }
+
+    .nav-menu {
+      list-style: none;
+      display: flex;
+      margin: 0;
+      padding: 0;
+    }
+
+    .nav-menu li {
+      margin-left: 15px;
+    }
+
+    .nav-menu a {
+      text-decoration: none;
+      color: white;
+      font-weight: bold;
+    }
+
+    .nav-menu a:hover {
+      text-decoration: underline;
+    }
+
+    /* Botón hamburguesa (oculto en PC) */
+    .nav-toggle {
+      display: none;
+      font-size: 24px;
+      background: none;
+      border: none;
+      color: white;
+      cursor: pointer;
+    }
+
+    /* --- Footer --- */
+    footer {
+      background: #9b4e3c;
+      color: white;
+      padding: 15px;
+      text-align: center;
+    }
+
+    .social-icons img {
+      width: 25px;
+      margin: 0 8px;
+      vertical-align: middle;
+      cursor: pointer;
+      transition: transform 0.3s ease;
+    }
+
+    .social-icons img:hover {
+      transform: scale(1.2);
+    }
+
+    /* --- Responsive --- */
+    @media (max-width: 600px) {
+      .nav-menu {
+        display: none; /* Ocultamos el menú */
+        flex-direction: column;
+        background: #0a7d3e;
+        padding: 10px;
+      }
+      .nav-menu.active {
+        display: flex; /* Mostramos cuando tenga la clase active */
+      }
+      .nav-toggle {
+        display: block; /* Botón visible en móvil */
+      }
+    }
+  </style>
 </head>
-
 <body>
-    <header class="navbar">
-        <div class="navbar-container"></div>
-    </header>
 
-    <section class="hero"></section>
+  <!-- Navbar -->
+  <header>
+    <nav>
+      <div class="logo">
+        <!-- Logo del SENA -->
+        <img src="imgs/logo sena.png" alt="Logo SENA">
+        <p><strong>SENA MERCH</strong></p>
+      </div>
 
-    
-    <h1>Estoy en inicio</h1>
+      <!-- Botón hamburguesa -->
+      <button class="nav-toggle">☰</button>
 
-    
+      <!-- Menú -->
+      <ul class="nav-menu">
+        <li><a href="#usuarios">Usuarios</a></li>
+        <li><a href="#pedidos">Pedidos</a></li>
+        <li><a href="#tiendas">Tiendas</a></li>
+        <li><a href="#productos">Productos</a></li>
+        <li><a href="#perfil">Perfil</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <!-- Contenido principal -->
+  <main>
+    <h1 style="text-align:center; margin-top:20px;">Bienvenido a SENA MERCH</h1>
+    <p style="text-align:center;">Explora nuestros productos y servicios exclusivos.</p>
+  </main>
+
+  <!-- Footer -->
+  <footer>
+    <p>© 2025 SENA MERCH - Todos los derechos reservados</p>
+    <div class="social-icons">
+      <a href="https://www.instragram.com" target="_blank">
+        <img src="imgs/instragram.jpg" alt="Instagram">
+      </a>
+      <a href="https://www.facebook.com" target="_blank">
+        <img src="imgs/facebook.png" alt="Facebook">
+      </a>
+    </div>
+  </footer>
+
+  <!-- JS del navbar -->
+  <script>
+    document.addEventListener("DOMContentLoaded", () => {
+      const toggleBtn = document.querySelector(".nav-toggle");
+      const navMenu = document.querySelector(".nav-menu");
+
+      toggleBtn.addEventListener("click", () => {
+        navMenu.classList.toggle("active");
+      });
+    });
+  </script>
+
 </body>
 </html>
