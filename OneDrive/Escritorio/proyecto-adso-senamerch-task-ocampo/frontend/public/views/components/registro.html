@@ -1,0 +1,39 @@
+<form class="form-content">
+  <h1 class="formulario__titulo">Completa los datos para crear tu cuenta</h1>
+
+  <label class="formulario__label" for="correo">Utiliza tu correo electrónico</label>
+  <input class="formulario__input" type="email" id="correo" name="correo" />
+  <small class="formulario__texto">Recibirás información de tu cuenta.</small>
+
+  <label class="formulario__label" for="nombre">Elige un nombre</label>
+  <input class="formulario__input" type="text" id="nombre" name="nombre" />
+  <small class="formulario__texto">Se mostrará a las personas que interactúen contigo.</small>
+
+  <label class="formulario__label" for="tipo">Tipo de usuario</label>
+  <select class="formulario__input" id="tipo" name="tipo">
+    <option value="">Selecciona...</option>
+    <option value="cliente">Cliente</option>
+    <option value="vendedor">Vendedor</option>
+    <option value="vendedor">Distribuidor</option>
+  </select>
+  <small class="formulario__texto">Qué tipo de usuario serás.</small>
+
+  <label class="formulario__label" for="departamento">Establece tu departamento</label>
+  <select class="formulario__input" id="departamento" name="departamento">
+    <option value="">Selecciona...</option>
+    <option value="Risaralda">Risaralda</option>
+    <option value="Quindio">Quindio</option>
+    <option value="Caldas">Caldas</option>
+  </select>
+  <small class="formulario__texto">Así podrás interactuar con locales.</small>
+
+  <label class="formulario__label" for="direccion">Dirección</label>
+  <a href="/frontend/public/views/agregar_direccion.html">Agregar</a>
+  <small class="formulario__texto">Los clientes estarán más cerca de ti.</small>
+
+  <label class="formulario__label" for="clave">Crea tu contraseña</label>
+  <input class="formulario__input" type="password" id="clave" name="clave" />
+  <small class="formulario__texto">Mantendrás tu cuenta asegurada.</small>
+
+  <button type="submit" class="formulario__boton formulario__boton--registrar">Registrar</button>
+</form>
