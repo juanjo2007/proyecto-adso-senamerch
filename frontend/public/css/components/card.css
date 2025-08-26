@@ -1,78 +1,80 @@
-/* ====== ESTILOS GENERALES ====== */
-body {
-  background-color: var(--primary-100);
-  font-family: var(--font-primary);
-  margin: 0;
-  padding: 20px;
-  text-align: center;
-}
-
-.main {
-  padding: 2rem;
-  background-color: var(--primary-50);
-}
-
-.products {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
-  gap: 2rem;
-}
-
-/* ====== CARD ====== */
+/* GRID DE LAS CARDS */
 .card {
-  border: 1px solid var(--gray-200);
-  border-radius: 0.8rem;
-  overflow: hidden;
-  background-color: var(--primary-100);
-  width: 100%;
-  max-width: 260px;
-  margin: 0 auto;
-  box-shadow: 0 2px 4px rgba(0,0,0,0.15);
-  font-family: var(--font-primary);
-  transition: transform 0.3s ease;
+  display: grid;
+  gap: 1.5rem;
+  grid-template-columns: repeat(2, 1fr);
+  padding: 2rem;
 }
 
-.card:hover {
+@media (min-width: 768px) {
+  .card {
+    grid-template-columns: repeat(6, 1fr);
+  }
+}
+
+/* CARD PRODUCTO */
+.producto {
+  background-color: var(--primary-100);
+  border: 1px solid var(--gray-200);
+  border-radius: 1rem;
+  box-shadow: 0 2px 6px rgba(0,0,0,0.1);
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+  transition: transform 0.2s ease;
+}
+
+.producto:hover {
   transform: translateY(-5px);
 }
 
-.card__image {
+/* IMAGEN */
+.producto__imagen {
   width: 100%;
   height: 150px;
   object-fit: cover;
-  display: block;
 }
 
-.card__content {
+/* INFORMACIÓN */
+.producto__informacion {
   padding: 1rem;
-  text-align: center;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: .5rem;
 }
 
-.card__title {
-  font-size: var(--fs-xs);
-  color: var(--primary-950);
-  margin-bottom: 0.5rem;
-}
-
-.card__price {
+/* NOMBRE DEL PRODUCTO */
+.producto__nombre {
+  font-family: var(--font-primary);
   font-size: var(--fs-sm);
-  color: var(--tertiary-800);
-  margin-bottom: 1rem;
   font-weight: bold;
+  color: var(--primary-950);
+  margin: 0;
 }
 
-.card__button {
+/* PRECIO */
+.producto__precio {
+  font-family: var(--font-secondary);
+  font-size: var(--fs-xs);
+  color: var(--tertiary-800);
+  margin: 0;
+}
+
+/* BOTÓN */
+.boton__primario {
   background-color: var(--secundary-600);
-  color: var(--secundary-700);
-  border: none;
-  padding: 0.6rem 1.2rem;
-  border-radius: 0.5rem;
+  color: var(--white);
+  font-family: var(--font-primary);
   font-size: var(--fs-xxs);
+  padding: .5rem 1rem;
+  border: none;
+  border-radius: .5rem;
   cursor: pointer;
-  box-shadow: 0 3px 4px rgba(0,0,0,0.2);
-  transition: background-color 0.3s ease;
+  transition: background-color 0.2s ease, transform 0.2s ease;
 }
 
-.card__button:hover {
-  background-color: var(--secundary-700);
+.boton__primario:hover {
+  background-color: var(--secundary-800);
+  transform: scale(1.05);
 }
