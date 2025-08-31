@@ -1,28 +1,96 @@
-/* ====== CARD PRODUCT DESCRIPTION ====== */
-.card-product__description {
-  border-top: 1px solid var(--gray-200);
+/* Contenedor general (card + descripción) */
+.product-detail {
+  border: 1px solid var(--black);
+  background-color: var(--white);
+  border-radius: 0.5rem;
   padding: 1rem;
-  background-color: var(--primary-50);
+  max-width: 400px;
+  margin: 2rem auto;
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
   font-family: var(--font-primary);
-  text-align: center;
 }
 
-.card-product__description-title {
+/* Caja de descripción */
+.product-description {
+
+  background-color: var(--gray-200);
+  border-top: 1px solid var(--black);
+  padding: 1rem;
+  text-align: left;
+  width: fit-content;
+  height: auto;
+}
+
+/* Título principal de descripción */
+.product-description__heading {
+  font-family: var(--font-secondary);
   font-size: var(--fs-xs);
   font-weight: bold;
-  color: var(--primary-950);
+  color: var(--black);
   margin-bottom: 0.8rem;
+  align-items: center;
 }
 
-.card-product__description-text {
+/* Texto */
+.product-description__text {
   font-size: var(--fs-xxs);
-  color: var(--gray-800);
-  line-height: 1.5;
+  color: var(--gray-700);
   margin-bottom: 1rem;
+  text-align: justify;
 }
 
-.card-product__description-note {
-  font-size: var(--fs-xxxs);
+/* Nota */
+.product-description__note {
   font-style: italic;
+  font-size: var(--fs-xxs);
   color: var(--gray-600);
+}
+
+/* ==========================
+   Media Queries - Product Detail
+   ========================== */
+
+/* Pantallas pequeñas (móviles) */
+@media (max-width: 480px) {
+  .product-detail {
+    max-width: 95%;  /* Se ajusta al ancho de la pantalla */
+    padding: 0.8rem;
+  }
+
+  .product-description {
+    width: 100%; /* Que se extienda en móviles */
+    padding: 0.8rem;
+  }
+
+  .product-description__heading {
+    font-size: var(--fs-xxs); /* Título más pequeño */
+    text-align: center;       /* Centrado en móvil */
+  }
+
+  .product-description__text,
+  .product-description__note {
+    font-size: var(--fs-xxs); /* Texto más compacto */
+  }
+}
+
+/* Pantallas medianas (tablets) */
+@media (min-width: 481px) and (max-width: 768px) {
+  .product-detail {
+    max-width: 600px; /* Un poco más ancho */
+    padding: 1rem 1.2rem;
+  }
+
+  .product-description {
+    width: 90%; /* Mantiene aire alrededor */
+  }
+
+  .product-description__heading {
+    font-size: var(--fs-xs); /* Ajuste intermedio */
+  }
+
+  .product-description__text {
+    font-size: var(--fs-xs);
+  }
 }

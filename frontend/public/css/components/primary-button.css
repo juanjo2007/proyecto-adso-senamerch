@@ -1,0 +1,67 @@
+/* ====== BOTÓN PRIMARIO (BEM) ====== */
+.btn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  padding: 0 1.6rem; /* Espaciado horizontal */
+  height: 40px; /* altura máxima */
+  width: fit-content; /* ancho ajustado al contenido */
+  border: none;
+  border-radius: 2rem; /* bordes redondeados */
+  font-family: var(--font-primary);
+  font-size: var(--fs-sm); /* texto legible */
+  font-weight: 500;
+  cursor: pointer;
+  transition: background 0.3s ease, transform 0.2s ease;
+  box-shadow: 2px 2px 6px var(--gray-900); /* sombreado actualizado */
+}
+
+/* Variante primaria */
+.btn--primary {
+  background: var(--secundary-600); /* verde principal */
+  color: var(--white);
+}
+
+.btn--primary:hover {
+  background: var(--secundary-700);
+  transform: translateY(-2px);
+}
+
+.btn--primary:active {
+  background: var(--secundary-800);
+  transform: translateY(0);
+}
+
+/* ==========================
+   Media Queries - Botón Primario
+   ========================== */
+
+/* Pantallas pequeñas (móviles) */
+@media (max-width: 480px) {
+  .btn {
+    width: 100%;            /* Botón ocupa todo el ancho */
+    height: 36px;           /* Más compacto */
+    font-size: var(--fs-xs);/* Texto más pequeño */
+    padding: 0 1rem;        /* Menos padding lateral */
+    border-radius: 1.5rem;  /* Bordes un poco más cerrados */
+  }
+}
+
+/* Pantallas medianas (tablets) */
+@media (min-width: 481px) and (max-width: 768px) {
+  .btn {
+    width: auto;            /* Ajustado al contenido */
+    height: 38px;
+    font-size: var(--fs-sm); /* Intermedio */
+    padding: 0 1.4rem;
+  }
+}
+
+/* Pantallas grandes (escritorio) */
+@media (min-width: 1024px) {
+  .btn {
+    font-size: var(--fs-md); /* Texto más notorio */
+    padding: 0 2rem;         /* Más espacio horizontal */
+    height: 44px;            /* Botón un poco más alto */
+  }
+}

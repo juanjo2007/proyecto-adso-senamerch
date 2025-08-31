@@ -1,74 +1,17 @@
-<!DOCTYPE html>
-<html lang="es">
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Tienda de Verduras</title>
-  <link rel="stylesheet" href="/css/variables.css">
-  <link rel="stylesheet" href="/css/components/card.css">
+<link rel="stylesheet" href="/frontend/public/css/main.css">
+<script src="/frontend/public/js/components/card.js" defer></script>
+<script src="/frontend/public/js/components/primary-button.js" defer></script>
 
-</head>
-<body>
-  <main class="contenedor">
-    <h1>Mi card</h1>
-
-    <div class = "card"></div>
-       <div class="producto">
-          <img class="producto__imagen" src="/frontend/public/img/image.png" alt="imagen Tomate">
-          <div class="producto__informacion">
-              <p class="producto__nombre">Tomate</p>
-              <p class="producto__precio">3000</p>
-                <button class="boton__primario">Comprar</button>
-          </div>
-        </div> <!-- Terminación de Card-->
-
-        <div class="producto">
-          <img class="producto__imagen" src="/frontend/public/img/image.png" alt="imagen Tomate">
-          <div class="producto__informacion">
-              <p class="producto__nombre">Banano</p>
-              <p class="producto__precio">3000</p>
-                <button class="boton__primario">Comprar</button>
-          </div>
-        </div> <!-- Terminación de Card-->
-
-        <div class="producto">
-          <img class="producto__imagen" src="/frontend/public/img/image.png" alt="imagen Tomate">
-          <div class="producto__informacion">
-              <p class="producto__nombre">Lechuga</p>
-              <p class="producto__precio">3000</p>
-                <button class="boton__primario">Comprar</button>
-          </div>
-        </div> <!-- Terminación de Card-->
-
-        <div class="producto">
-          <img class="producto__imagen" src="/frontend/public/img/image.png" alt="imagen Tomate">
-          <div class="producto__informacion">
-              <p class="producto__nombre">Cafe</p>
-              <p class="producto__precio">3000</p>
-                <button class="boton__primario">Comprar</button>
-          </div>
-        </div> <!-- Terminación de Card-->
-
-        <div class="producto">
-          <img class="producto__imagen" src="/frontend/public/img/image.png" alt="imagen Tomate">
-          <div class="producto__informacion">
-              <p class="producto__nombre">Zanahoria</p>
-              <p class="producto__precio">3000</p>
-                <button class="boton__primario">Comprar</button>
-          </div>
-        </div> <!-- Terminación de Card-->
-
-        <div class="producto">
-          <img class="producto__imagen" src="/frontend/public/img/image.png" alt="imagen Tomate">
-          <div class="producto__informacion">
-              <p class="producto__nombre">Pepino</p>
-              <p class="producto__precio">3000</p>
-                <button class="boton__primario">Comprar</button>
-          </div>
-        </div> <!-- Terminación de Card-->
-  </main>
-
-</body>
-</html>
-
-
+<main class="container">
+  <div class="card">
+    <div class="product">
+      <img class="product__image" src="/frontend/public/img/image.png" alt="imagen Tomate">
+      <div class="product__information">
+        <p class="product__name">Tomate</p>
+        <p class="product__price">$3000</p>
+        <!-- Botón reutilizable -->
+        <button class="btn btn--primary">Comprar</button>
+      </div>
+    </div>
+  </div>
+</main>

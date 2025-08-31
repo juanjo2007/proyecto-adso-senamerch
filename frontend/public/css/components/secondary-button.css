@@ -1,0 +1,68 @@
+/* ====== BOTÓN BASE ====== */
+.btn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  padding: 0 1.2rem; /* Espaciado lateral */
+  height: 30px; /* altura máxima */
+  width: fit-content; /* ancho ajustado al contenido */
+  border: none;
+  border-radius: 0.6rem; /* esquinas redondeadas */
+  font-family: var(--font-primary);
+  font-size: var(--fs-xs); /* tamaño de fuente más compacto */
+  font-weight: 600;
+  cursor: pointer;
+  transition: background 0.3s ease, transform 0.2s ease;
+  box-shadow: 2px 2px 5px var(--gray-900);
+}
+
+/* ====== VARIANTE SECUNDARIA ====== */
+.btn--secondary {
+  background: var(--black);
+  color: var(--white);
+}
+
+.btn--secondary:hover {
+  background: var(--gray-950);
+  transform: translateY(-2px);
+}
+
+.btn--secondary:active {
+  background: var(--gray-800);
+  transform: translateY(0);
+}
+
+/* ==========================
+   Media Queries - Botón Base
+   ========================== */
+
+/* Móviles */
+@media (max-width: 480px) {
+  .btn {
+    width: 100%;            /* Botón ocupa todo el ancho */
+    height: 36px;           /* Más alto para ser cómodo al tacto */
+    font-size: var(--fs-sm);/* Texto un poco más grande para legibilidad */
+    padding: 0 1rem;        /* Menos padding lateral */
+    border-radius: 0.8rem;  /* Bordes más suaves */
+  }
+}
+
+/* Tablets */
+@media (min-width: 481px) and (max-width: 768px) {
+  .btn {
+    width: auto;            /* Se ajusta al contenido */
+    height: 34px;
+    font-size: var(--fs-xs);/* Mantiene equilibrio */
+    padding: 0 1.4rem;
+  }
+}
+
+/* Escritorio grande */
+@media (min-width: 1024px) {
+  .btn {
+    height: 40px;           /* Botón más alto */
+    font-size: var(--fs-sm);
+    padding: 0 1.6rem;      /* Más espacioso */
+    border-radius: 1rem;    /* Bordes más redondeados */
+  }
+}
