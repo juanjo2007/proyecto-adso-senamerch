@@ -26,7 +26,7 @@
 /* Título principal de descripción */
 .product-description__heading {
   font-family: var(--font-secondary);
-  font-size: var(--fs-xs);
+  font-size: var(--fs-xxs);
   font-weight: bold;
   color: var(--black);
   margin-bottom: 0.8rem;
@@ -87,10 +87,10 @@
   }
 
   .product-description__heading {
-    font-size: var(--fs-xs); /* Ajuste intermedio */
+    font-size: var(--fs-xxs); /* Ajuste intermedio */
   }
 
   .product-description__text {
-    font-size: var(--fs-xs);
+    font-size: var(--fs-xxs);
   }
 }

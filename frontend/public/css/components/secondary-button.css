@@ -9,7 +9,7 @@
   border: none;
   border-radius: 0.6rem; /* esquinas redondeadas */
   font-family: var(--font-primary);
-  font-size: var(--fs-xs); /* tamaño de fuente más compacto */
+  font-size: var(--fs-xxs); /* tamaño de fuente más compacto */
   font-weight: 600;
   cursor: pointer;
   transition: background 0.3s ease, transform 0.2s ease;
@@ -41,7 +41,7 @@
   .btn {
     width: 100%;            /* Botón ocupa todo el ancho */
     height: 36px;           /* Más alto para ser cómodo al tacto */
-    font-size: var(--fs-sm);/* Texto un poco más grande para legibilidad */
+    font-size: var(--fs-xxs);/* Texto un poco más grande para legibilidad */
     padding: 0 1rem;        /* Menos padding lateral */
     border-radius: 0.8rem;  /* Bordes más suaves */
   }
@@ -52,7 +52,7 @@
   .btn {
     width: auto;            /* Se ajusta al contenido */
     height: 34px;
-    font-size: var(--fs-xs);/* Mantiene equilibrio */
+    font-size: var(--fs-xxs);/* Mantiene equilibrio */
     padding: 0 1.4rem;
   }
 }
@@ -61,7 +61,7 @@
 @media (min-width: 1024px) {
   .btn {
     height: 40px;           /* Botón más alto */
-    font-size: var(--fs-sm);
+    font-size: var(--fs-xxs);
     padding: 0 1.6rem;      /* Más espacioso */
     border-radius: 1rem;    /* Bordes más redondeados */
   }

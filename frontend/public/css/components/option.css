@@ -6,7 +6,7 @@
   background: var(--tertiary-800); /* color de fondo */
   color: var(--white);
   font-family: var(--font-primary);
-  font-size: var(--fs-sm); /* texto legible */
+  font-size: var(--fs-xxs); /* texto legible */
   padding: 0.8rem 2rem; /* padding horizontal aumentado a 2rem */
   border-radius: 0.4rem;
   cursor: pointer;
@@ -50,7 +50,7 @@
 /* Pantallas pequeñas (móviles) */
 @media (max-width: 480px) {
   .option-button {
-    font-size: var(--fs-xs);   /* Texto más pequeño */
+    font-size: var(--fs-xxs);   /* Texto más pequeño */
     padding: 0.6rem 1rem;      /* Menos padding */
     flex-direction: column;    /* Icono debajo en móvil */
     align-items: flex-start;   /* Alinea a la izquierda */
@@ -66,7 +66,7 @@
 /* Pantallas medianas (tablets) */
 @media (min-width: 481px) and (max-width: 768px) {
   .option-button {
-    font-size: var(--fs-sm);   /* Intermedio */
+    font-size: var(--fs-xxs);   /* Intermedio */
     padding: 0.7rem 1.5rem;    /* Ajuste de espacio */
   }
 
