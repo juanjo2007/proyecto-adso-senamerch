@@ -14,13 +14,13 @@
 
 /* Caja de descripción */
 .product-description {
-
-  background-color: var(--gray-200);
+  background-color: var(--white); /* Fondo más oscuro */
   border-top: 1px solid var(--black);
   padding: 1rem;
   text-align: left;
-  width: fit-content;
+  width: 100%; /* Se ajusta al ancho de la card */
   height: auto;
+  border-radius: 0.4rem; /* coherente con la card */
 }
 
 /* Título principal de descripción */
@@ -28,7 +28,7 @@
   font-family: var(--font-secondary);
   font-size: var(--fs-xs);
   font-weight: bold;
-  color: var(--black);
+  color: var(--white); /* contraste sobre fondo oscuro */
   margin-bottom: 0.8rem;
   align-items: center;
 }
@@ -36,7 +36,7 @@
 /* Texto */
 .product-description__text {
   font-size: var(--fs-xxs);
-  color: var(--gray-700);
+  color: var(--gray-700); /* más claro para legibilidad */
   margin-bottom: 1rem;
   text-align: justify;
 }
@@ -45,7 +45,7 @@
 .product-description__note {
   font-style: italic;
   font-size: var(--fs-xxs);
-  color: var(--gray-600);
+  color: var(--gray-900); /* tono intermedio */
 }
 
 /* ==========================
@@ -55,42 +55,42 @@
 /* Pantallas pequeñas (móviles) */
 @media (max-width: 480px) {
   .product-detail {
-    max-width: 95%;  /* Se ajusta al ancho de la pantalla */
+    max-width: 95%;
     padding: 0.8rem;
   }
 
   .product-description {
-    width: 100%; /* Que se extienda en móviles */
+    width: 100%; 
     padding: 0.8rem;
   }
 
   .product-description__heading {
-    font-size: var(--fs-xxs); /* Título más pequeño */
-    text-align: center;       /* Centrado en móvil */
+    font-size: var(--fs-xxs);
+    text-align: center;
   }
 
   .product-description__text,
   .product-description__note {
-    font-size: var(--fs-xxs); /* Texto más compacto */
+    font-size: var(--fs-xxs);
   }
 }
 
 /* Pantallas medianas (tablets) */
 @media (min-width: 481px) and (max-width: 768px) {
   .product-detail {
-    max-width: 600px; /* Un poco más ancho */
+    max-width: 600px;
     padding: 1rem 1.2rem;
   }
 
   .product-description {
-    width: 90%; /* Mantiene aire alrededor */
+    width: 100%; 
   }
 
   .product-description__heading {
-    font-size: var(--fs-xs); /* Ajuste intermedio */
+    font-size: var(--fs-xxs);
   }
 
   .product-description__text {
-    font-size: var(--fs-xs);
+    font-size: var(--fs-xxs);
   }
 }

@@ -1,18 +1,17 @@
-// ====== OPTION BUTTON JS ======
-document.addEventListener("DOMContentLoaded", () => {
-  const optionButton = document.querySelector(".option-button");
+document.addEventListener('DOMContentLoaded', function () {
+  const optionContainer = document.querySelector('.option-container');
 
-  optionButton.addEventListener("click", () => {
-    // Alternar el estado activo
-    optionButton.classList.toggle("option-button--active");
-
-    // Obtener el texto de la etiqueta
-    const label = optionButton.querySelector(".option-button__label").textContent;
-
-    if (optionButton.classList.contains("option-button--active")) {
-      console.log(`Opción activada: ${label}`);
-    } else {
-      console.log(`Opción desactivada: ${label}`);
-    }
-  });
+  if (optionContainer) {
+    fetch("/frontend/public/views/components/option.html")
+      .then(response => {
+        if (!response.ok) throw new Error("Error al cargar option.html");
+        return response.text();
+      })
+      .then(data => {
+        optionContainer.innerHTML = data;
+      })
+      .catch(error => console.error("Error cargando el componente Option:", error));
+  } else {
+    console.warn("No se encontró '.option-container' en el HTML.");
+  }
 });

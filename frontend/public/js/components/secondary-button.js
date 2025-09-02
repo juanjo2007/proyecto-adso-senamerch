@@ -1,12 +1,18 @@
-// ====== SECONDARY BUTTON JS ======
-document.addEventListener("DOMContentLoaded", () => {
-  const secondaryButton = document.querySelector(".btn--secondary");
+// /frontend/public/js/components/secondary-button.js
+document.addEventListener('DOMContentLoaded', function () {
+  const buttonContainer = document.querySelector('.secondary-button-container');
 
-  secondaryButton.addEventListener("click", () => {
-    // Acción al hacer clic en el botón secundario
-    console.log("Botón secundario presionado 🟢");
-
-    // Ejemplo de comportamiento: cancelar o cerrar
-    alert("Acción del botón secundario ejecutada ⚡");
-  });
+  if (buttonContainer) {
+    fetch("/frontend/public/views/components/secondary-button.html")
+      .then(response => {
+        if (!response.ok) throw new Error("Error al cargar secondary-button.html");
+        return response.text();
+      })
+      .then(data => {
+        buttonContainer.innerHTML = data;
+      })
+      .catch(error => console.error("❌ Error cargando Secondary Button:", error));
+  } else {
+    console.warn("⚠️ No se encontró '.secondary-button-container' en Product.html");
+  }
 });

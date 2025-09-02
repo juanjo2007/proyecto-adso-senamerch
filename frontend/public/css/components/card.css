@@ -8,7 +8,6 @@
   align-items: center;
   padding: 2rem;
   font-family: var(--font-primary);
-  /* background-color: var(--primary-50); */
 }
 
 /* Bloque principal */
@@ -22,6 +21,8 @@
   display: flex;
   flex-direction: column;
   justify-content: space-between;
+  transition: all 0.3s ease; /* transición suave */
+  cursor: pointer;
 }
 
 /* Elemento: Imagen */
@@ -42,7 +43,7 @@
 
 /* Elemento: Nombre */
 .product__name {
-  font-size: var(--fs-sm);
+  font-size: var(--fs-xxs);
   color: var(--gray-600);
   font-weight: 500;
   margin: 0;
@@ -50,17 +51,33 @@
 
 /* Elemento: Precio */
 .product__price {
-  font-size: var(--fs-md);
+  font-size: var(--fs-xs);
   color: var(--gray-900);
   font-weight: bold;
   margin: 0;
 }
 
+/* Estado: Hover */
+.product:hover {
+  transform: translateY(-5px) scale(1.02);
+  box-shadow: 0 6px 12px var(--gray-700);
+}
+
+/* Estado: Active (cuando se hace clic) */
+.product:active {
+  transform: scale(0.98);
+  box-shadow: 0 2px 6px var(--gray-600);
+}
+
+/* Estado extra (si quieres aplicar una clase activa desde JS) */
 .product--active {
   transform: scale(1.02);
   box-shadow: 0 4px 10px var(--gray-700);
   transition: all 0.2s ease;
 }
+
+
+
 
 /* ==========================
    Media Queries - Product Card
@@ -82,7 +99,7 @@
   }
 
   .product__name {
-    font-size: var(--fs-xs); /* Texto más pequeño */
+    font-size: var(--fs-xxs); /* Texto más pequeño */
   }
 }
 

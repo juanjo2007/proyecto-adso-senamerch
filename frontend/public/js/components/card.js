@@ -1,17 +1,18 @@
-// ====== CARD PRODUCT JS ======
-
-// Esperamos a que cargue el DOM
+// /frontend/public/js/components/card.js
 document.addEventListener("DOMContentLoaded", () => {
-  const cards = document.querySelectorAll(".product");
+  const container = document.querySelector(".card-container"); // donde se insertará la card
 
-  cards.forEach(card => {
-    // Efecto hover (ejemplo visual extra)
-    card.addEventListener("mouseenter", () => {
-      card.classList.add("product--active");
-    });
-
-    card.addEventListener("mouseleave", () => {
-      card.classList.remove("product--active");
-    });
-  });
+  if (container) {
+    fetch("/frontend/public/views/components/card.html")
+      .then((response) => {
+        if (!response.ok) {
+          throw new Error("Error al cargar el componente card");
+        }
+        return response.text();
+      })
+      .then((data) => {
+        container.innerHTML = data;
+      })
+      .catch((error) => console.error("Error cargando el card:", error));
+  }
 });
