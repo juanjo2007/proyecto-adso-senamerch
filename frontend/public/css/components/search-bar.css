@@ -4,6 +4,7 @@
   justify-content: flex-start; /* icono y texto juntos al inicio */
   width: 100%;
   max-width: 320px; /* límite de ancho */
+  max-height: 40px;
   background: var(--white);
   border-radius: 0.5rem;
   box-shadow: 2px 2px 5px var(--black);
@@ -11,7 +12,7 @@
   padding: 0.5rem 1rem;
   font-family: var(--font-primary);
   font-size: var(--fs-xs);  
-  gap: 1.5rem; /* espacio de 1.5rem entre icono y texto */
+  gap: 2rem; /* espacio de 1.5rem entre icono y texto */
 }
 
 .search-bar__input {
@@ -34,7 +35,7 @@
   background: transparent;
   border: none;
   cursor: pointer;
-  padding: 0.5rem;
+  padding: 1rem;
 }
 
 .search-bar__icon {

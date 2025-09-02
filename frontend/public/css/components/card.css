@@ -8,6 +8,7 @@
   align-items: center;
   padding: 2rem;
   font-family: var(--font-primary);
+  
 }
 
 /* Bloque principal */
@@ -47,6 +48,7 @@
   color: var(--gray-600);
   font-weight: 500;
   margin: 0;
+  order: -1;
 }
 
 /* Elemento: Precio */
@@ -55,6 +57,7 @@
   color: var(--gray-900);
   font-weight: bold;
   margin: 0;
+  order: -1;
 }
 
 /* Estado: Hover */
@@ -82,7 +85,6 @@
 /* ==========================
    Media Queries - Product Card
    ========================== */
-
 /* Pantallas pequeñas (móviles) */
 @media (max-width: 480px) {
   .card {
