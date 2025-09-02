@@ -11,3 +11,13 @@
 @import url('components/gestion_publicaciones.css');
 @import url('pages/home.css');
 @import url('themes/dark-mode.css');
+
+
+/* Importaciones de SenaMerch */
+@import url('components/card.css');
+@import url('components/description.css');
+@import url('components/option.css');
+@import url('components/primary-button.css');
+@import url('components/search-bar.css');
+@import url('components/secondary-button.css');
+@import url('components/producto.css');
