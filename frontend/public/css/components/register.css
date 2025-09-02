@@ -1,0 +1,111 @@
+body {
+  background-color: var(--primary-100);
+  font-family: var(--font-primary);
+  min-height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center; 
+  margin: 0;
+  margin-top: 7.1rem;
+}
+
+.form-container {
+  margin-top: 30px;
+}
+
+.form-content {
+  max-width: 500px;
+  max-height: auto;
+  margin-top: 5px; 
+  padding: 20px;
+  background-color: var(--white);
+  border-radius: 1.2rem;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.08);
+  font-family: var(--font-primary);
+}
+
+.form__title {
+   margin-top: 0.5rem; 
+  text-align: center;
+  font-size: var(--fs-md);
+  color: var(--black);
+  margin-bottom: 2rem;
+}
+
+.form__label {
+  display: block;
+  margin-top: 1.6rem;
+  font-size: var(--fs-xs);
+  font-weight: 600;
+  color: var(--gray-800);
+}
+
+.form__input {
+  width: 100%;
+  padding: 0.8rem 1.2rem;
+  margin-top: 0.4rem;
+  border: 1px solid var(--gray-200);
+  border-radius: 0.6rem;
+  background-color: var(--white);
+  font-size: var(--fs-xs);
+  font-family: var(--font-secondary);
+  color: var(--gray-900);
+  transition: all 0.3s ease;
+}
+
+.form__input:focus {
+  outline: none;
+  border-color: var(--secundary-700);
+  box-shadow: 0 0 0 3px var(--secundary-100);
+}
+
+.form__text {
+  display: block;
+  margin-top: 0.4rem;
+  font-size: var(--fs-xxs);
+  color: var(--gray-600);
+}
+
+a {
+  display: inline-block;
+  margin-top: 0.6rem;
+  font-size: var(--fs-xxs);
+  color: var(--secundary-700);
+  text-decoration: none;
+  font-weight: 500;
+}
+
+a:hover {
+  text-decoration: underline;
+}
+
+.form__button {
+  width: 100%;
+  padding: 1rem;
+  margin-top: 2.4rem;
+  font-size: var(--fs-sm);
+  font-weight: bold;
+  color: var(--white);
+  background-color: var(--secundary-700);
+  border: none;
+  border-radius: 0.8rem;
+  cursor: pointer;
+  transition: background-color 0.3s ease, transform 0.2s ease;
+}
+
+.form__button:hover {
+  background-color: var(--secundary-600);
+  transform: translateY(-2px);
+}
+
+.form__button:active {
+  background-color: var(--secundary-800);
+  transform: translateY(0);
+}
+
+@media (max-width: 768px) {
+  /* body {
+    align-items: flex-start; 
+    padding-top: 4rem;       
+  } */
+}
