@@ -1,6 +1,6 @@
 body {
   font-family: Arial, sans-serif;
-  background-color: #f2ebdd;
+  background-color: var(--primary-100);
   margin: 0;
   padding: 0;
   display: flex;
@@ -10,7 +10,7 @@ body {
 }
 
 .direction-content {
-  background-color: #ffffff;
+  background-color: var(--white);
   padding: 2rem;
   border-radius: 10px;
   box-shadow: 0 0 12px rgba(0, 0, 0, 0.1);
@@ -39,8 +39,8 @@ body {
 .formulario__boton {
   width: 100%;
   padding: 0.9rem;
-  background-color: #188038;
-  color: white;
+  background-color: var(--secundary-700);
+  color: var(--white);
   font-weight: bold;
   border: none;
   border-radius: 4px;
@@ -50,7 +50,7 @@ body {
 }
 
 .formulario__boton:hover {
-  background-color: #10642e;
+  background-color: var(--secundary-700);
 }
 
 @media (min-width: 768px) {

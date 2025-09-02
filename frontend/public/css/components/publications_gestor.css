@@ -13,9 +13,6 @@ body {
   flex-direction: column;
 }
 
-/* ===============================
-   HEADER
-   =============================== */
 .header {
   background-color: var(--tertiary-600);
   color: var(--white);
@@ -51,9 +48,6 @@ body {
   background-color: var(--secundary-600);
 }
 
-/* ===============================
-   MAIN
-   =============================== */
 main {
   flex: 1; 
   display: flex;
@@ -62,13 +56,13 @@ main {
   padding: 4rem 2rem;
 }
 
-.publicacion {
+.post {
   display: flex;
   justify-content: center;
   width: 100%;
 }
 
-.publicacion__container {
+.post__container {
   background-color: var(--white);
   padding: 3rem;
   border: 1px solid var(--gray-200);
@@ -78,21 +72,21 @@ main {
   box-shadow: 0 4px 12px rgba(0,0,0,0.08);
 }
 
-.publicacion__title {
+.post__title {
   font-size: var(--fs-xs);
   margin-bottom: 1.5rem;
   color: var(--gray-900);
   font-weight: 600;
 }
 
-.publicacion__label {
+.post__label {
   display: block;
   margin: 1rem 0 0.5rem;
   font-size: var(--fs-xxs);
   color: var(--gray-800);
 }
 
-.publicacion__image {
+.post__image {
   background-color: var(--gray-400);
   height: 120px;
   line-height: 120px;
@@ -101,12 +95,12 @@ main {
   border-radius: 0.4rem;
 }
 
-.publicacion__buscador {
+.post__search {
   display: flex;
   margin-bottom: 1.5rem;
 }
 
-.publicacion__input {
+.post__input {
   flex: 1;
   padding: 0.6rem;
   border: 1px solid var(--gray-200);
@@ -115,7 +109,7 @@ main {
   font-family: var(--font-secondary);
 }
 
-.publicacion__search-button {
+.post__search-button {
   padding: 0.6rem 1rem;
   background-color: var(--secundary-700);
   border: none;
@@ -126,11 +120,11 @@ main {
   transition: background-color 0.3s ease;
 }
 
-.publicacion__search-button:hover {
+.post__search-button:hover {
   background-color: var(--secundary-600);
 }
 
-.publicacion__submit {
+.post__submit {
   background-color: var(--secundary-800);
   color: var(--white);
   border: none;
@@ -141,13 +135,10 @@ main {
   transition: background-color 0.3s ease;
 }
 
-.publicacion__submit:hover {
+.post__submit:hover {
   background-color: var(--secundary-600);
 }
 
-/* ===============================
-   FOOTER
-   =============================== */
 .footer {
   background-color: var(--tertiary-600);
   color: var(--white);
@@ -174,11 +165,9 @@ main {
   color: var(--secundary-400);
 }
 
-/* ===============================
-   MEDIA QUERY
-   =============================== */
+
 @media (max-width: 768px) {
-  .publicacion__container {
+  .post__container {
     width: 90%;
     padding: 2rem;
   }
