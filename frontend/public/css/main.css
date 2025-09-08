@@ -8,3 +8,8 @@
 @import url('components/forms.css');
 @import url('pages/home.css');
 @import url('themes/dark-mode.css');
+@import url('components/carrito.css'); /* ✅ Estilos del carrito agregados */
+@import url('components/productos.css'); /* ✅ Estilos de productos agregados */
+@import url('components/usuarios.css'); /* ✅ Estilos de usuarios agregados */
+@import url('components/sales-history.css'); /* ✅ Estilos de historial de ventas agregados */
+@import url("components/publicaciones.css");
