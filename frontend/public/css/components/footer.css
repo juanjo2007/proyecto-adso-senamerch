@@ -1,0 +1,25 @@
+.footer {
+  background-color: var(--tertiary-600);
+  color: var(--white);
+  text-align: center;
+  padding: 1rem;
+  font-size: var(--fs-xxs);
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.footer__social {
+  display: flex;
+  gap: 0.8rem;
+}
+
+.footer__icon {
+  width: 20px;
+  height: auto;
+  transition: transform 0.2s;
+}
+
+.footer__icon:hover {
+  transform: scale(1.1);
+}
