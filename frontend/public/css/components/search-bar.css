@@ -21,8 +21,8 @@
   font-size: var(--fs-xxs);   /* Tamaño desde variables */
   color: var(--primary-950);
   background: transparent;
-  width: 100%;      /* ocupa el espacio disponible */
-  max-width: 240px; /* deja espacio al icono dentro de los 320px */
+  width: 1000px;      /* ocupa el espacio disponible */
+/* deja espacio al icono dentro de los 320px */
 }
 
 .search-bar__input::placeholder {
@@ -66,69 +66,23 @@
   background: var(--white);
 }
 
-/* ==========================
-   Media Queries - Search Bar
-   ========================== */
-
-/* Móviles */
+/* 📱 Móviles */
 @media (max-width: 480px) {
-  .search-bar {
-    max-width: 100%;       /* ocupa todo el ancho */
-    padding: 0.4rem 0.8rem;
-    gap: 0.8rem;           /* menos espacio entre icono e input */
-    font-size: var(--fs-xxs);
-  }
-
   .search-bar__input {
-    font-size: var(--fs-xxs);
-    max-width: none;       /* se adapta al contenedor */
-  }
-
-  .search-bar__icon {
-    width: 12px;
-    height: 12px;
-  }
-
-  .search-bar__icon::after {
-    width: 8px;
-    right: -4px;
-    bottom: -3px;
+    max-width: 300px; /* límite en celular */
   }
 }
 
-/* Tablets */
-@media (min-width: 481px) and (max-width: 768px) {
-  .search-bar {
-    max-width: 280px;      /* un poco más compacta */
-    padding: 0.5rem 1rem;
-    gap: 1rem;
-  }
-
+/* 📲 Tablets */
+@media (min-width: 481px) and (max-width: 1024px) {
   .search-bar__input {
-    max-width: 200px;
+    max-width: 400px; /* límite en tablet */
   }
 }
 
-/* Escritorio mediano/grande */
-@media (min-width: 769px) {
-  .search-bar {
-    max-width: 400px;      /* más amplia en desktop */
-    font-size: var(--fs-xxxs);
-  }
-
+/* 💻 Pantallas grandes (1920px en adelante) */
+@media (min-width: 1920px) {
   .search-bar__input {
-    font-size: var(--fs-xxxs);
-    max-width: 300px;
-  }
-
-  .search-bar__icon {
-    width: 18px;
-    height: 18px;
-  }
-
-  .search-bar__icon::after {
-    width: 10px;
-    right: -6px;
-    bottom: -4px;
+    width: 1000px; /* límite en pantallas grandes */
   }
 }

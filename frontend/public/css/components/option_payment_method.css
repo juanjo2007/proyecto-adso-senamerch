@@ -1,0 +1,84 @@
+/* Estilos base (desktop) */
+.payment-container {
+  display: flex;
+  flex-wrap: wrap;         
+  gap: 24px;               
+  background-color: var(--white);
+  padding: 1rem;
+  border-radius: 0.5rem;
+  justify-content: flex-start;
+}
+
+.payment-option {
+  flex: 1 1 auto;          
+  max-width: 263px;        
+}
+
+.payment-option__radio {
+  display: none;
+}
+
+.payment-option__label {
+  display: flex;
+  justify-content: center;   
+  align-items: center;         
+  gap: 24px;                   
+  background-color: var(--primary-800);
+  color: var(--black);
+  font-family: var(--font-primary);
+  font-size: var(--fs-xs);
+  padding: 0.8rem 1.2rem;
+  border: 3px solid var(--black);
+  cursor: pointer;
+  box-shadow: 2px 2px 5px rgba(0,0,0,0.15);
+  transition: background-color 0.3s, transform 0.2s;
+  width: 263px;
+  height: 45px;
+}
+
+.payment-option__label:hover {
+  background-color: var(--primary-100);
+  transform: translateY(-2px);
+}
+
+.payment-option__text {
+  text-align: center;   
+  flex: unset;          
+}
+
+.payment-option__icon {
+  width: 24px;
+  height: 24px;
+}
+
+/* Celulares (≤ 600px) */
+@media (max-width < 600px) {
+  .payment-container {
+    justify-content: center; /* que quede centrado */
+    gap: 16px;               /* menos separación */
+    padding: 0.5rem;
+  }
+
+  .payment-option__label {
+    width: 100%;             /* ocupa todo el ancho */
+    max-width: none;         /* elimina restricción */
+    font-size: var(--fs-sm); /* un poquito más grande para legibilidad */
+  }
+}
+
+/* Tablets (601px – 900px) */
+@media (min-width > 601px) and (max-width: 900px) {
+  .payment-container {
+    justify-content: center; 
+    gap: 20px;  
+    width: 263px;
+    height: 45px;            
+  }
+
+  .payment-option__label {
+    width: 45%;              /* que se acomoden en 2 columnas */
+    max-width: none;
+  }
+}
+
+
