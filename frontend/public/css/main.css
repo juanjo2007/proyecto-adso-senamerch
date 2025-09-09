@@ -11,8 +11,22 @@
 @import url('components/gestion_publicaciones.css');
 @import url('pages/home.css');
 @import url('themes/dark-mode.css');
+<<<<<<< HEAD
 @import url('components/carrito.css'); /* ✅ Estilos del carrito agregados */
 @import url('components/productos.css'); /* ✅ Estilos de productos agregados */
 @import url('components/usuarios.css'); /* ✅ Estilos de usuarios agregados */
 @import url('components/sales-history.css'); /* ✅ Estilos de historial de ventas agregados */
 @import url("components/publicaciones.css");
+=======
+
+
+/* Importaciones de SenaMerch */
+@import url('components/card.css');
+@import url('components/description.css');
+@import url('components/option.css');
+@import url('components/primary-button.css');
+@import url('components/search-bar.css');
+@import url('components/secondary-button.css');
+@import url('components/producto.css');
+@import url('components/option_payment_method.css');
+>>>>>>> 9cc73f457f2b3815cbb441238a94127d4bf8f108

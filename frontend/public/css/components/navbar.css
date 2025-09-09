@@ -1,0 +1,40 @@
+.navbar {
+  display: flex;
+  align-items: center;
+  background-color: var(--tertiary-600);
+  padding: 1rem 2rem;
+}
+
+.navbar__logo {
+  display: flex;
+  align-items: center;
+}
+
+.navbar__title {
+  font-size: var(--fs-md);
+  font-weight: bold;
+  color: var(--secundary-600);
+}
+
+.navbar__menu {
+  display: flex;
+  gap: 1rem;
+  margin-left: auto;   /* 👈 Esto empuja el menú totalmente a la derecha */
+}
+
+.navbar__btn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  background-color: var(--secundary-600);
+  color: var(--white);
+  padding: 0.5rem 1rem;
+  border-radius: 6px;
+  font-size: var(--fs-xxs);
+  text-decoration: none;
+  transition: background 0.3s ease;
+}
+
+.navbar__btn:hover {
+  background-color: var(--secundary-700);
+}
