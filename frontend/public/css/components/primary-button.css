@@ -32,10 +32,6 @@
   transform: translateY(0);
 }
 
-/* ==========================
-   Media Queries - Botón Primario
-   ========================== */
-
 /* Pantallas pequeñas (móviles) */
 @media (max-width: 480px) {
   .btn {

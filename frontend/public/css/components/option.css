@@ -45,41 +45,62 @@
   transform: translate(-50%, -50%);
 }
 
-/* ==========================
-   Media Queries - Option Button
-   ========================== */
-
-/* Pantallas pequeñas (móviles) */
+/* Móviles */
 @media (max-width: 480px) {
   .option-button {
-    font-size: var(--fs-xxs);   /* Texto más pequeño */
-    padding: 0.6rem 1rem;      /* Menos padding */
-    flex-direction: column;    /* Icono debajo en móvil */
-    align-items: flex-start;   /* Alinea a la izquierda */
-    gap: 0.5rem;               /* Espaciado entre label e icon */
+    font-size: var(--fs-xxs);  /* texto más pequeño */
+    padding: 0.6rem 1.2rem;   /* menos padding */
+    height: 3rem;             /* botón más compacto */
   }
 
   .option-button__icon {
-    margin-left: 0;            /* Se quita margen al cambiar layout */
-    align-self: flex-end;      /* Icono a la derecha dentro del botón */
-  }
-}
-
-/* Pantallas medianas (tablets) */
-@media (min-width: 481px) and (max-width: 768px) {
-  .option-button {
-    font-size: var(--fs-xxs);   /* Intermedio */
-    padding: 0.7rem 1.5rem;    /* Ajuste de espacio */
-  }
-
-  .option-button__icon {
-    margin-left: 1rem;         /* Menos separación que en desktop */
-    width: 18px;               /* Icono un poco más pequeño */
-    height: 18px;
+    width: 14px;
+    height: 14px;
+    margin-left: 1rem;
   }
 
   .option-button__icon::after {
     width: 8px;
     height: 8px;
+  }
+}
+
+/* Tablets */
+@media (min-width: 481px) and (max-width: 1024px) {
+  .option-button {
+    font-size: var(--fs-xs);   /* tamaño intermedio */
+    padding: 0.7rem 1.5rem;
+    height: 3.5rem;
+  }
+
+  .option-button__icon {
+    width: 15px;
+    height: 15px;
+    margin-left: 1.5rem;
+  }
+
+  .option-button__icon::after {
+    width: 9px;
+    height: 9px;
+  }
+}
+
+/* Pantallas grandes */
+@media (min-width: 1920px) {
+  .option-button {
+    font-size: var(--fs-s);   /* texto más grande */
+    padding: 1rem 2.5rem;     /* más aire */
+    height: 4.5rem;
+  }
+
+  .option-button__icon {
+    width: 18px;
+    height: 18px;
+    margin-left: 2.5rem;
+  }
+
+  .option-button__icon::after {
+    width: 12px;
+    height: 12px;
   }
 }
