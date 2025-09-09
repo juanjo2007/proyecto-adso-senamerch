@@ -30,7 +30,7 @@
   padding: 0.8rem 1.2rem;
   border: 3px solid var(--black);
   cursor: pointer;
-  box-shadow: 2px 2px 5px rgba(0,0,0,0.15);
+  box-shadow: 2px 2px 5px var(--gray-600);
   transition: background-color 0.3s, transform 0.2s;
   width: 263px;
   height: 45px;

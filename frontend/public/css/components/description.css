@@ -36,7 +36,7 @@
 
 /* Texto */
 .product-description__text {
-  font-size: var(--fs-xxs);
+  font-size: var(--fs-xs);
   color: var(--gray-800); /* más claro para legibilidad */
   margin-bottom: 1rem;
   text-align: justify;
@@ -46,11 +46,11 @@
 /* Nota */
 .product-description__note {
   font-style: italic;
-  font-size: var(--fs-xxs);
+  font-size: var(--fs-xs);
   color: var(--gray-950); /* tono intermedio */
 }
 /* Móviles */
-@media (max-width: 360px) {
+@media (max-width < 760px) {
   .product-detail {
     max-width: 300px;
     padding: 0.8rem;
@@ -84,11 +84,11 @@
   }
 
   .product-description__heading {
-    font-size: var(--fs-s);
+    font-size: var(--fs-xxs);
   }
 
   .product-description__text,
   .product-description__note {
-    font-size: var(--fs-xs);
+    font-size: var(--fs-xxs);
   }
 }
