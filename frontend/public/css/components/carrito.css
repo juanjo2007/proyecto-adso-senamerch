@@ -1,29 +1,60 @@
+:root {
+  /* Nuevas variables o ajustadas para coincidir con Figma */
+  --page-bg: #F5F2ED; /* Fondo beige claro de la página */
+  --cart-bg: #FFFFFF; /* Fondo blanco del carrito */
+  --border-color: #A0A0A0; /* Color del borde del carrito y separadores */
+  --text-dark: #333333; /* Texto más oscuro */
+  --text-light: #FFFFFF; /* Texto blanco (para botones) */
+  --primary-900: #000000; /* Negro (para botones y títulos) */
+  --success: #388E3C; /* Verde un poco más oscuro para el botón de confirmar */
+  --danger: #dc3545; /* Rojo peligro (mantengo este) */
+  --radius-lg: 5px; /* Radio ligeramente menor para esquinas sutiles */
+  --shadow-md: 0px 2px 5px rgba(0, 0, 0, 0.1); /* Sombra más sutil */
+}
+
 body {
-    font-family: Arial, sans-serif;
-    margin: 0;
-    padding: 0;
-    background-color: white; /* ¡Fondo de la página ahora es blanco! */
-    color: var(--text-dark);
+  font-family: Arial, sans-serif;
+  margin: 0;
+  padding: 0;
+  background-color: var(--page-bg); /* ¡Fondo de la página ahora es beige claro! */
+  color: var(--text-dark);
 }
 
 .cart {
   max-width: 900px;
   margin: 30px auto;
-  background: var(--text-light);
+  background: var(--cart-bg); /* Fondo del carrito blanco */
   padding: 20px;
-  border-radius: var(--radius-lg);
-  box-shadow: var(--shadow-md);
+  border-radius: var(--radius-lg); /* Esquinas redondeadas sutiles */
+  box-shadow: var(--shadow-md); /* Sombra suave */
+  border: 1px solid var(--border-color); /* Borde alrededor del carrito */
 }
 
 .cart__title {
   text-align: center;
   margin-bottom: 20px;
+  color: var(--text-dark); /* Color del título principal */
+  font-size: 1.8em; /* Un poco más grande para el título */
 }
 
 .cart__subtitle {
   margin-bottom: 10px;
-  color: var(--primary-900);
+  color: var(--primary-900); /* Negro para subtítulos como "Productos" */
+  font-weight: bold; /* Negrita para los subtítulos */
+  text-align: left; /* Alineación a la izquierda como en Figma */
+  padding-left: 5px; /* Un poco de padding para que no esté pegado al borde */
 }
+
+/* ESTILOS PARA LOS SEPARADORES HORIZONTALES */
+.cart__section-divider {
+  border-top: 1px solid var(--border-color); /* Línea divisoria */
+  margin: 20px 0; /* Espacio arriba y abajo de la línea */
+}
+/* Asegúrate de añadir un div con esta clase entre tus secciones HTML */
+/* Por ejemplo:
+  <div class="cart__section-divider"></div>
+*/
+
 
 .cart__table {
   width: 100%;
@@ -33,80 +64,81 @@ body {
 
 .cart__table th,
 .cart__table td {
-  border: 1px solid var(--primary-300);
+  border: none; /* Quitamos los bordes individuales de las celdas */
   padding: 8px;
   text-align: center;
 }
+
+/* Si quieres que los encabezados de la tabla sean ligeramente más oscuros y en negrita */
+.cart__table th {
+  color: var(--primary-900);
+  font-weight: bold;
+}
+
 
 .cart__summary {
   text-align: right;
   font-size: 1.1em;
   margin-bottom: 15px;
+  padding-right: 10px; /* Alineado un poco a la derecha */
 }
 
 /* ====== BUTTONS ====== */
+.cart__actions {
+  display: flex; /* Para que los botones estén uno al lado del otro */
+  justify-content: space-between; /* Espacio entre ellos */
+  margin-top: 20px;
+}
+
 .cart__btn {
-  padding: 10px 20px;
+  padding: 10px 25px; /* Un poco más de padding horizontal */
   border: none;
   border-radius: var(--radius-lg);
   cursor: pointer;
   font-weight: bold;
   transition: transform 0.2s;
+  display: flex; /* Para centrar el icono y el texto si hay */
+  align-items: center;
+  justify-content: center;
+  gap: 8px; /* Espacio entre icono y texto */
 }
 
+/* Botón "Continuar comprando" - negro con triángulo hacia la izquierda */
 .cart__btn--continue {
-  background: var(--primary-900);
-  color: var(--text-light);
+  background: var(--primary-900); /* Negro */
+  color: var(--text-light); /* Texto blanco */
 }
 
+/* Icono de triángulo para el botón "Continuar comprando" */
+.cart__btn--continue::before {
+  content: "◄"; /* Carácter de triángulo hacia la izquierda */
+  font-size: 0.9em;
+  margin-right: 5px; /* Espacio entre el triángulo y el texto */
+}
+
+
+/* Botón "Confirmar pedido" - verde */
 .cart__btn--confirm {
-  background: var(--success);
-  color: var(--text-light);
+  background: var(--success); /* Verde ajustado */
+  color: var(--text-light); /* Texto blanco */
 }
 
 .cart__btn:hover {
-  transform: scale(1.05);
+  transform: scale(1.03); /* Sutilmente más pequeño el hover */
 }
 
 .cart__btn-remove {
-  background: var(--danger);
-  color: var(--text-light);
+  background: none; /* Sin fondo */
+  color: var(--danger); /* El color del icono es rojo */
   border: none;
   padding: 5px 10px;
-  border-radius: var(--radius-lg);
   cursor: pointer;
+  font-size: 1.2em; /* Haz el ícono un poco más grande */
 }
 
 .cart__btn-remove:hover {
-  opacity: 0.8;
+  opacity: 0.7;
 }
-
-/* ====== BUTTONS ====== */
-.cart__btn {
-  padding: 10px 20px;
-  border: none;
-  border-radius: var(--radius-lg);
-  cursor: pointer;
-  font-weight: bold;
-  transition: transform 0.2s;
-}
-
-/* Botón negro */
-.cart__btn--continue {
-  background: #000000; /* Negro */
-  color: #ffffff; /* Texto blanco */
-}
-
-/* Botón verde */
-.cart__btn--confirm {
-  background: #28a745; /* Verde éxito */
-  color: #ffffff; /* Texto blanco */
-}
-
-.cart__btn:hover {
-  transform: scale(1.05);
-}
-
 
 /* ====== RESPONSIVE ====== */
 @media (max-width: 768px) {
@@ -132,12 +164,16 @@ body {
 
   .cart__btn {
     width: 100%;
+    margin-bottom: 10px; /* Espacio entre botones apilados */
+  }
+  .cart__btn:last-child {
+    margin-bottom: 0;
   }
 }
 
 @media (max-width: 480px) {
   .cart__title {
-    font-size: 1.3rem;
+    font-size: 1.5rem;
   }
 
   .cart__table th,
