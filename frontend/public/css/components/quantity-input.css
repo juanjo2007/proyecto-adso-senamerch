@@ -1,0 +1,96 @@
+/* Contenedor del componente */
+.quantity-container {
+  display: flex;
+  justify-content: center; /* centra horizontal */
+  align-items: center;     /* centra vertical */
+  height: 100vh;           /* ocupa toda la altura de la ventana */
+  padding: 0;              
+  box-sizing: border-box;
+}
+
+/* Bloque principal */
+.quantity {
+  border: 1px solid var(--black);
+  display: flex;
+  flex-direction: column;
+  align-items: center;  
+  gap: 1rem;
+  padding: 2rem;
+  font-size: var(--fs-xxs);
+  max-width: 500px;     
+  width: 100%;          
+  margin: 0;            
+  transition: border-color 0.3s, box-shadow 0.3s; /* transición suave */
+}
+
+/* Hover del bloque */
+.quantity:hover {
+  border-color: var(--primary-600);
+  box-shadow: 0 4px 12px rgba(0,0,0,0.2);
+}
+
+/* Input */
+.quantity__field {
+  width: 400px;
+  padding: 0.6rem 1rem;
+  border: 1px solid var(--gray-500);
+  border-radius: 0.5rem;
+  font-size: var(--fs-xxs);
+  outline: none;
+  transition: border 0.3s, box-shadow 0.3s;
+  box-shadow: 0 4px 8px var(--gray-800);
+}
+
+/* Hover del input */
+.quantity__field:hover {
+  border-color: var(--primary-400);
+  box-shadow: 0 0 6px var(--primary-300);
+}
+
+/* Focus del input */
+.quantity__field:focus {
+  border-color: var(--primary-600);
+  box-shadow: 0 0 4px var(--primary-900);
+}
+
+/* Active del input */
+.quantity__field:active {
+  border-color: var(--primary-700);
+  box-shadow: 0 0 8px var(--primary-800);
+}
+/* Media Query para tabletas y móviles */
+@media (max-width: 768px) {
+  .quantity {
+    max-width: 90%;      /* ocupa casi todo el ancho de la pantalla */
+    padding: 1.5rem;     /* menos padding para pantallas pequeñas */
+    gap: 0.8rem;         /* reduce la separación interna */
+  }
+
+  .quantity__field {
+    width: 100%;          /* input ocupa todo el ancho del bloque */
+    padding: 0.5rem 0.8rem; /* reduce padding del input */
+    font-size: var(--fs-xs); /* texto más legible en pantallas pequeñas */
+  }
+
+  .quantity__label,
+  .quantity__helper {
+    font-size: var(--fs-xxs); /* ajustar texto a tamaño móvil */
+  }
+}
+
+@media (max-width: 480px) {
+  .quantity {
+    padding: 1rem;       /* aún menos padding en móviles pequeños */
+    gap: 0.6rem;         /* separación interna compacta */
+  }
+
+  .quantity__field {
+    padding: 0.4rem 0.6rem;
+    font-size: var(--fs-xxxs); /* texto pequeño para móviles */
+  }
+
+  .quantity__label,
+  .quantity__helper {
+    font-size: var(--fs-xxxs);
+  }
+}

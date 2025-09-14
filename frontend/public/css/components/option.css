@@ -1,106 +1,87 @@
-/* ====== OPTION BUTTON (BEM) ====== */
-.option-button {
+/* Contenedor externo que ocupa toda la pantalla */
+.page-center {
+  display: flex;
+  justify-content: center;   /* centro horizontal */
+  align-items: center;       /* centro vertical */
+  min-height: 100vh;         /* ocupar toda la pantalla */
+}
+
+/* El bloque con borde */
+.unit-options {
+  border: 1px solid var(--black);
+  padding: 1rem 2rem;
+  box-sizing: border-box;
+  max-width: fit-content;
+}
+
+/* Opciones dentro */
+.unit-options__container {
+  display: flex;
+  flex-wrap: wrap;         
+  gap: 4rem;   
+  justify-content: center;
+}
+
+
+/* cada opción (caja con icono + texto) */
+.unit-options__item {
   display: flex;
   align-items: center;
-  justify-content: space-between;
+  height: 20px;
   width: fit-content;
-  height: 4rem;
-  background: var(--tertiary-800); /* color de fondo */
+  gap: 1.6rem;
+  background-color: var(--tertiary-700);
+  flex-direction: row-reverse;
+  gap: 16px;
   color: var(--white);
+  font-size: var(--fs-xxs);
   font-family: var(--font-primary);
-  font-size: var(--fs-xs); /* texto legible */
-  padding: 0.8rem 2rem; /* padding horizontal aumentado a 2rem */
+  padding: 1.6rem 1.2rem;
   border-radius: 0.4rem;
   cursor: pointer;
-  transition: background 0.3s ease;
+  transition: background 0.3s ease, transform 0.2s ease;
 }
 
-.option-button:hover {
-  background: var(--tertiary-700);
-}
-
-.option-button__label {
-  flex: 1;
-}
-
-.option-button__icon {
-  display: inline-block;
+/* tamaño del icono */
+.unit-option__icon {
   width: 16px;
   height: 16px;
-  border: 2px solid var(--white);
-  border-radius: 50%;
-  position: relative;
-  margin-left: 2rem; /* separación de 2rem con el texto */
+  object-fit: contain;
 }
 
-.option-button__icon::after {
-  content: "";
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  width: 10px;
-  height: 10px;
-  background: var(--white);
-  border-radius: 50%;
-  transform: translate(-50%, -50%);
+
+/* ocultar input */
+.unit-options__input {
+  display: none;
 }
 
-/* Móviles */
-@media (max-width: 480px) {
-  .option-button {
-    font-size: var(--fs-xxs);  /* texto más pequeño */
-    padding: 0.6rem 1.2rem;   /* menos padding */
-    height: 3rem;             /* botón más compacto */
+/* hover */
+.unit-options__item:hover {
+  background-color: var(--tertiary-800);
+  transform: translateY(-2px);
+}
+
+/* Móviles pequeños (≤ 481px) */
+@media (max-width: 481px) {
+  .unit-options__container {
+    flex-direction: column; /* apila */
+    gap: 1rem;
   }
 
-  .option-button__icon {
-    width: 14px;
-    height: 14px;
-    margin-left: 1rem;
-  }
-
-  .option-button__icon::after {
-    width: 8px;
-    height: 8px;
+  .unit-options {
+    max-width: 95%;
   }
 }
 
-/* Tablets */
-@media (min-width: 481px) and (max-width: 1024px) {
-  .option-button {
-    font-size: var(--fs-xs);   /* tamaño intermedio */
-    padding: 0.7rem 1.5rem;
-    height: 3.5rem;
+/* Tablets (≤ 768px) */
+@media (max-width: 768px) and (min-width: 482px) {
+  .unit-options__container {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr); /* 3 columnas */
+    gap: 1rem;
   }
 
-  .option-button__icon {
-    width: 15px;
-    height: 15px;
-    margin-left: 1.5rem;
-  }
-
-  .option-button__icon::after {
-    width: 9px;
-    height: 9px;
-  }
-}
-
-/* Pantallas grandes */
-@media (min-width: 1920px) {
-  .option-button {
-    font-size: var(--fs-s);   /* texto más grande */
-    padding: 1rem 2.5rem;     /* más aire */
-    height: 4.5rem;
-  }
-
-  .option-button__icon {
-    width: 18px;
-    height: 18px;
-    margin-left: 2.5rem;
-  }
-
-  .option-button__icon::after {
-    width: 12px;
-    height: 12px;
+  .unit-options {
+    max-width: 95%;
   }
 }

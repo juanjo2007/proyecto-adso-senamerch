@@ -1,20 +1,31 @@
-/* ==========================
-   Card - Product (BEM)
-   ========================== */
-
-.card {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  padding: 2rem;
-  font-family: var(--font-primary);
-  flex-wrap: wrap; /* permite que las cards bajen en varias filas */
-  gap: 1rem;       /* separación entre cards */
+.card-container {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, 180px); /* 👈 ancho fijo por card */
+  gap: 15px;
+  width: 100%;
+  height: 90%;
+  max-width: 100%;
+  margin: 0 auto;
+  padding: 0 10px; /* 10px de espacio a izquierda y derecha */
+  justify-content: center; /* centra el grid */
+  box-sizing: border-box;
 }
 
+@media (min-width > 768px) and (max-width < 1023px) {
+  .card-container {
+    grid-template-columns: repeat(3, 1fr); /* 3 columnas */
+  }
+}
+
+/* ====== Para celulares (<=767px) ====== */
+@media (max-width: 767px) {
+  .card-container {
+    grid-template-columns: 1fr; /* 1 columna */
+  }
+}
 /* Bloque principal */
 .product {
-  width: 220px;
+  width: 180px;
   border: 1px solid var(--black);
   border-radius: 0.5rem;
   background-color: var(--primary-200);
@@ -80,54 +91,4 @@
   transition: all 0.2s ease;
 }
 
-/* (móviles) */
-@media (max-width: 480px) {
-  .card {
-    padding: 1rem;
-    justify-content: center;
-    gap: 0.8rem;
-  }
 
-  .product {
-    width: 100%;          /* ocupa todo el ancho */
-    max-width: 320px;     /* límite para que no se estire demasiado */
-  }
-
-  .product__image {
-    height: 120px;
-  }
-
-  .product__name {
-    font-size: var(--fs-xxs);
-  }
-
-  .product__price {
-    font-size: var(--fs-xs);
-  }
-}
-
-/* (tablets) */
-@media (min-width: 481px) and (max-width: 768px) {
-  .card {
-    padding: 1.5rem;
-    justify-content: center; /* centramos las cards */
-    gap: 1rem;
-  }
-
-  .product {
-    width: 45%;           /* 2 columnas */
-    max-width: 250px;
-  }
-
-  .product__image {
-    height: 140px;
-  }
-}
-
-/* (desktop ≥ 769px) */
-@media (min-width: 769px) {
-  .card {
-    justify-content: flex-start; /* alineación a la izquierda */
-    gap: 1.5rem;
-  }
-}

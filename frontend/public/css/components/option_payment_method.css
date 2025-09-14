@@ -1,84 +1,142 @@
-/* Estilos base (desktop) */
-.payment-container {
+.payment-method__container {
+  background: var(--white);   /* fondo blanco del contenedor principal */
+  border: 1px solid var(--black); /* borde negro alrededor del contenedor */
+  padding: 2rem;
+  border-radius: 0.8rem;
+  text-align: center;
+  width: 100%;
+  max-width: 350px;
+  box-shadow: 0 4px 10px rgba(0,0,0,0.25);
+}
+
+.payment-method {
   display: flex;
-  flex-wrap: wrap;         
-  gap: 24px;               
-  background-color: var(--white);
-  padding: 1rem;
-  border-radius: 0.5rem;
-  justify-content: flex-start;
+  align-items: center;     /* centra verticalmente */
+  justify-content: center; /* centra horizontalmente */
+  min-height: 100vh;       /* ocupa toda la pantalla *//* opcional: darle un fondo */
 }
 
-.payment-option {
-  flex: 1 1 auto;          
-  max-width: 263px;        
-}
 
-.payment-option__radio {
-  display: none;
-}
 
-.payment-option__label {
-  display: flex;
-  justify-content: center;   
-  align-items: center;         
-  gap: 24px;                   
-  background-color: var(--primary-800);
+/* cada opción */
+.payment-method__option {
+  background-color: var(--primary-400);
   color: var(--black);
-  font-family: var(--font-primary);
   font-size: var(--fs-xs);
-  padding: 0.8rem 1.2rem;
-  border: 3px solid var(--black);
+  font-weight: 500;
+  border: 2px solid var(--black); 
+  border-radius: 0.6rem;
+  padding: 1rem 1.2rem;
+  width: 260px;
   cursor: pointer;
-  box-shadow: 2px 2px 5px var(--gray-600);
-  transition: background-color 0.3s, transform 0.2s;
-  width: 263px;
-  height: 45px;
+  box-shadow: 0 3px 5px rgba(0,0,0,0.2);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 24px; /* espacio entre texto e icono */
+  transition: background 0.3s ease, transform 0.2s ease;
 }
 
-.payment-option__label:hover {
-  background-color: var(--primary-100);
-  transform: translateY(-2px);
+.payment-method__options {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 2rem;              
+  background: var(--white); 
+  padding: 3rem 2rem;   
+  border-radius: 0.6rem;
+  border: 1px solid var(--black);
 }
 
-.payment-option__text {
-  text-align: center;   
-  flex: unset;          
+.payment-method__option:hover {
+  background-color: var(--primary-500); /* tono un poco más fuerte */
+  transform: translateY(-2px);          /* efecto de levantar */
+  box-shadow: 0 6px 10px rgba(0,0,0,0.25); /* sombra más marcada */
 }
 
-.payment-option__icon {
-  width: 24px;
-  height: 24px;
+.payment-method__option:active {
+  background-color: var(--primary-600); /* aún más oscuro */
+  transform: translateY(0);             /* vuelve a su lugar */
+  box-shadow: 0 3px 5px rgba(0,0,0,0.2); /* sombra más baja */
 }
 
-/* Celulares (≤ 600px) */
-@media (max-width < 600px) {
-  .payment-container {
-    justify-content: center; /* que quede centrado */
-    gap: 16px;               /* menos separación */
-    padding: 0.5rem;
+/* íconos */
+.payment-method__icon {
+  width: 2.4rem;
+  height: 2.4rem;
+  object-fit: contain;
+}
+
+.payment-method__actions {
+  margin-top: 2rem; 
+  display: flex;
+  flex-direction: column;   /* los pone en columna */
+  align-items: center;      /* los centra horizontalmente */
+  gap: 1rem;                /* espacio entre los dos botones */
+}
+
+/* ====== Móviles (pantallas pequeñas) ====== */
+@media (max-width: 480px) {
+  .payment-method__container {
+    max-width: 100%;   /* ocupa todo el ancho */
+    padding: 1.5rem;
+    border-radius: 0.6rem;
   }
 
-  .payment-option__label {
-    width: 100%;             /* ocupa todo el ancho */
-    max-width: none;         /* elimina restricción */
-    font-size: var(--fs-sm); /* un poquito más grande para legibilidad */
+  .payment-method__options {
+    padding: 2rem 1rem;
+    gap: 1.5rem;
+  }
+
+  .payment-method__option {
+    width: 100%;       /* opción ocupa todo el ancho */
+    font-size: var(--fs-xxs);
+    padding: 0.8rem 1rem;
+    gap: 16px;
+  }
+
+  .payment-method__actions {
+    flex-direction: column; /* botones uno debajo del otro */
+    gap: 0.8rem;
   }
 }
 
-/* Tablets (601px – 900px) */
-@media (min-width > 601px) and (max-width: 900px) {
-  .payment-container {
-    justify-content: center; 
-    gap: 20px;  
-    width: 263px;
-    height: 45px;            
+/* ====== Tablets (481px a 768px) ====== */
+@media (min-width: 481px) and (max-width: 768px) {
+  .payment-method__container {
+    max-width: 400px;
+    padding: 2rem;
   }
 
-  .payment-option__label {
-    width: 45%;              /* que se acomoden en 2 columnas */
-    max-width: none;
+  .payment-method__options {
+    flex-direction: column;
+    padding: 2.5rem 1.5rem;
+    gap: 1.8rem;
+  }
+
+  .payment-method__option {
+    width: 280px;
+    font-size: var(--fs-xs);
+  }
+
+  .payment-method__actions {
+    gap: 1.2rem;
   }
 }
 
+/* ====== Escritorio grande (1024px en adelante) ====== */
+@media (min-width: 1024px) {
+  .payment-method__container {
+    max-width: 450px;
+    padding: 2.5rem;
+  }
 
+  .payment-method__options {
+    padding: 3rem 2rem;
+  }
+
+  .payment-method__option {
+    width: 300px;
+    font-size: var(--fs-s);
+  }
+}

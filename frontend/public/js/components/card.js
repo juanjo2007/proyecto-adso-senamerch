@@ -1,18 +1,29 @@
 // /frontend/public/js/components/card.js
 document.addEventListener("DOMContentLoaded", () => {
-  const container = document.querySelector(".card-container"); // donde se insertará la card
+  const container = document.querySelector(".card-container");
 
   if (container) {
-    fetch("/frontend/public/views/components/card.html")
-      .then((response) => {
-        if (!response.ok) {
-          throw new Error("Error al cargar el componente card");
+    Promise.all([
+      fetch("/frontend/public/views/components/card.html"),
+      fetch("/frontend/public/data/cards.json")
+    ])
+      .then(async ([templateRes, dataRes]) => {
+        if (!templateRes.ok || !dataRes.ok) {
+          throw new Error("Error al cargar el componente o los datos");
         }
-        return response.text();
+        const template = await templateRes.text();
+        const products = await dataRes.json();
+
+        products.forEach(product => {
+          let html = template
+            .replace("{{image}}", product.image)
+            .replace("{{name}}", product.name)  
+            .replace("{{price}}", product.price);
+          container.insertAdjacentHTML("beforeend", html);
+        });
       })
-      .then((data) => {
-        container.innerHTML = data;
-      })
-      .catch((error) => console.error("Error cargando el card:", error));
+      .catch(error => console.error("Error cargando los cards:", error));
   }
 });
+
+

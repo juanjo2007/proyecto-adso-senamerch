@@ -1,17 +1,17 @@
 document.addEventListener('DOMContentLoaded', function () {
-  const optionContainer = document.querySelector('.payment-option-container');
+  const methodContainer = document.querySelector('.payment-method-container');
 
-  if (optionContainer) {
+  if (methodContainer) {
     fetch("/frontend/public/views/components/option_payment_method.html")
       .then(response => {
-        if (!response.ok) throw new Error("Error al cargar option_payment_method.html");
+        if (!response.ok) throw new Error("Error al cargar payment_method.html");
         return response.text();
       })
       .then(data => {
-        optionContainer.innerHTML = data;
+        methodContainer.innerHTML = data;
       })
       .catch(error => console.error("Error cargando el componente Payment Method:", error));
   } else {
-    console.warn("No se encontró '.payment-option-container' en el HTML.");
+    console.warn("No se encontró '.payment-method-container' en el HTML.");
   }
 });
