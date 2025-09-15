@@ -57,7 +57,7 @@
 /* Elemento: Nombre */
 .product__name {
   font-size: var(--fs-xxs);
-  color: var(--gray-600);
+  color: var(--gray-500);
   font-weight: 500;
   margin: 0;
   order: -1;
@@ -65,8 +65,8 @@
 
 /* Elemento: Precio */
 .product__price {
-  font-size: var(--fs-xs);
-  color: var(--gray-900);
+  font-size: var(--fs-xxs);
+  color: var(--gray-950);
   font-weight: bold;
   margin: 0;
   order: -1;

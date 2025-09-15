@@ -39,7 +39,7 @@
     height: 40px;           /* Más compacto */
     font-size: var(--fs-xxs);/* Texto más pequeño */
     padding: 0 1rem;        /* Menos padding lateral */
-    border-radius: 1.5rem;  /* Bordes un poco más cerrados */
+    border-radius: 0.6rem;  /* Bordes un poco más cerrados */
   }
 }
 

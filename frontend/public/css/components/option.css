@@ -3,7 +3,7 @@
   display: flex;
   justify-content: center;   /* centro horizontal */
   align-items: center;       /* centro vertical */
-  min-height: 100vh;         /* ocupar toda la pantalla */
+  min-height: 90vh;         /* ocupar toda la pantalla */
 }
 
 /* El bloque con borde */

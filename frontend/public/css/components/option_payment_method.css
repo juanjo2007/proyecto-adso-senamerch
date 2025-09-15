@@ -76,6 +76,7 @@
 }
 
 /* ====== Móviles (pantallas pequeñas) ====== */
+/* ====== Móviles (pantallas pequeñas) ====== */
 @media (max-width: 480px) {
   .payment-method__container {
     max-width: 100%;   /* ocupa todo el ancho */
@@ -89,8 +90,8 @@
   }
 
   .payment-method__option {
-    width: 100%;       /* opción ocupa todo el ancho */
-    font-size: var(--fs-xxs);
+    width: 150px;       
+    font-size: var(--fs-xxxs);
     padding: 0.8rem 1rem;
     gap: 16px;
   }
@@ -99,8 +100,12 @@
     flex-direction: column; /* botones uno debajo del otro */
     gap: 0.8rem;
   }
+  .payment-method__icon {
+    width: 14px;
+    height: 14px;
+    object-fit: contain;
+  }
 }
-
 /* ====== Tablets (481px a 768px) ====== */
 @media (min-width: 481px) and (max-width: 768px) {
   .payment-method__container {
@@ -112,17 +117,22 @@
     flex-direction: column;
     padding: 2.5rem 1.5rem;
     gap: 1.8rem;
+    align-items: center;   /* centra las opciones */
+    overflow: hidden;      /* evita que se desborden */
   }
 
   .payment-method__option {
-    width: 280px;
-    font-size: var(--fs-xs);
+    width: 100%;        /* ocupa todo el ancho del contenedor */
+    max-width: 250px;   /* pero como máximo 150px */
+    box-sizing: border-box; /* incluye padding y borde dentro del ancho */
+    font-size: var(--fs-xxs);
   }
 
   .payment-method__actions {
     gap: 1.2rem;
   }
 }
+
 
 /* ====== Escritorio grande (1024px en adelante) ====== */
 @media (min-width: 1024px) {
@@ -137,6 +147,6 @@
 
   .payment-method__option {
     width: 300px;
-    font-size: var(--fs-s);
+    font-size: var(--fs-xxs);
   }
 }

@@ -1,12 +1,12 @@
 /* Contenedor del componente */
 .quantity-container {
   display: flex;
-  justify-content: center; /* centra horizontal */
-  align-items: center;     /* centra vertical */
-  height: 100vh;           /* ocupa toda la altura de la ventana */
-  padding: 0;              
-  box-sizing: border-box;
+  flex-direction: column;
+  gap: 0.5rem; /* reduce la separación vertical */
+  align-items: center;
+  max-height: 960px;
 }
+
 
 /* Bloque principal */
 .quantity {
@@ -15,11 +15,11 @@
   flex-direction: column;
   align-items: center;  
   gap: 1rem;
-  padding: 2rem;
+  padding: 1.5rem;
+  margin-top: 0;
   font-size: var(--fs-xxs);
   max-width: 500px;     
-  width: 100%;          
-  margin: 0;            
+  width: 100%;                     
   transition: border-color 0.3s, box-shadow 0.3s; /* transición suave */
 }
 
@@ -35,7 +35,7 @@
   padding: 0.6rem 1rem;
   border: 1px solid var(--gray-500);
   border-radius: 0.5rem;
-  font-size: var(--fs-xxs);
+  font-size: var(--fs-xxxs);
   outline: none;
   transition: border 0.3s, box-shadow 0.3s;
   box-shadow: 0 4px 8px var(--gray-800);
