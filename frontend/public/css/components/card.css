@@ -9,6 +9,7 @@
   padding: 0 10px; /* 10px de espacio a izquierda y derecha */
   justify-content: center; /* centra el grid */
   box-sizing: border-box;
+  place-items: center;
 }
 
 @media (min-width > 768px) and (max-width < 1023px) {
@@ -20,7 +21,9 @@
 /* ====== Para celulares (<=767px) ====== */
 @media (max-width: 767px) {
   .card-container {
-    grid-template-columns: 1fr; /* 1 columna */
+    grid-template-columns: 1fr;
+    place-items: center;
+    
   }
 }
 /* Bloque principal */
@@ -56,7 +59,7 @@
 
 /* Elemento: Nombre */
 .product__name {
-  font-size: var(--fs-xxs);
+  font-size: var(--fs-xxxs);
   color: var(--gray-500);
   font-weight: 500;
   margin: 0;
@@ -65,7 +68,7 @@
 
 /* Elemento: Precio */
 .product__price {
-  font-size: var(--fs-xxs);
+  font-size: var(--fs-xxxs);
   color: var(--gray-950);
   font-weight: bold;
   margin: 0;
