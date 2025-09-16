@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Tiendas</title>
+<link rel="stylesheet" href="/frontend/public/css/reset.css">
+<link rel="stylesheet" href="/frontend/public/css/variables.css">
+<link rel="stylesheet" href="/frontend/public/css/components/stores.css">
+<link rel="stylesheet" href="/frontend/public/css/main.css">
+</head>
+<body>
+<main class="stores">
+    <h1 class="stores__title">Tiendas</h1>
+
+    <!-- 🔍 Barra de búsqueda -->
+    <div class="stores__search">
+        <input 
+        type="text" 
+        class="stores__search-input" 
+        placeholder="Buscar Tienda"
+    >
+        <span class="stores__search-icon">🔍</span>
+    </div>
+    <p class="stores__search-text">Encontrarás con facilidad lo que buscas.</p>
+
+    <!-- 📦 Tabla de tiendas -->
+    <div class="stores__table-wrapper">
+        <div class="stores__table">
+        <div class="stores__row stores__row--header">
+            <span class="stores__cell">#Tienda</span>
+            <span class="stores__cell">Nombre</span>
+            <span class="stores__cell">Número de registro</span>
+            <span class="stores__cell">Actividad económica</span>
+            <span class="stores__cell">Departamento</span>
+            <span class="stores__cell">#Usuario</span>
+            <span class="stores__cell">Acción</span>
+        </div>
+
+        <!-- ✅ Filas con datos (ejemplo del figma) -->
+        <div class="stores__row">
+            <span class="stores__cell">#1</span>
+            <span class="stores__cell">El ass de la papa</span>
+            <span class="stores__cell">julianigil@gmail.com</span>
+            <span class="stores__cell">4721</span>
+            <span class="stores__cell">Risaralda</span>
+            <span class="stores__cell">#1</span>
+            <button class="stores__btn">Deshabilitar</button>
+        </div>
+        <div class="stores__row">
+            <span class="stores__cell">#2</span>
+            <span class="stores__cell">Fruver del campo</span>
+            <span class="stores__cell">julianigil@gmail.com</span>
+            <span class="stores__cell">4721</span>
+            <span class="stores__cell">Risaralda</span>
+            <span class="stores__cell">#2</span>
+            <button class="stores__btn">Deshabilitar</button>
+        </div>
+        <div class="stores__row">
+            <span class="stores__cell">#3</span>
+            <span class="stores__cell">Donde don jorge</span>
+            <span class="stores__cell">julianigil@gmail.com</span>
+            <span class="stores__cell">4721</span>
+            <span class="stores__cell">Quindío</span>
+            <span class="stores__cell">#3</span>
+            <button class="stores__btn">Deshabilitar</button>
+        </div> 
+        <div class="stores__row">
+            <span class="stores__cell">#3</span>
+            <span class="stores__cell">Donde don jorge</span>
+            <span class="stores__cell">julianigil@gmail.com</span>
+            <span class="stores__cell">4721</span>
+            <span class="stores__cell">Quindío</span>
+            <span class="stores__cell">#3</span>
+            <button class="stores__btn">Deshabilitar</button>
+        </div> 
+        <div class="stores__row">
+            <span class="stores__cell">#3</span>
+            <span class="stores__cell">Donde don jorge</span>
+            <span class="stores__cell">julianigil@gmail.com</span>
+            <span class="stores__cell">4721</span>
+            <span class="stores__cell">Quindío</span>
+            <span class="stores__cell">#3</span>
+            <button class="stores__btn">Deshabilitar</button>
+        </div> 
+        <div class="stores__row">
+            <span class="stores__cell">#3</span>
+            <span class="stores__cell">Donde don jorge</span>
+            <span class="stores__cell">julianigil@gmail.com</span>
+            <span class="stores__cell">4721</span>
+            <span class="stores__cell">Quindío</span>
+            <span class="stores__cell">#3</span>
+            <button class="stores__btn">Deshabilitar</button>
+        </div> 
+        <!-- Agrega más filas como en tu figma -->
+        </div>
+    </div>
+
+    <!-- Botón final -->
+    <div class="stores__footer">
+        <button class="stores__btn stores__btn--primary">Pasarela de pago</button>
+    </div>
+</main>
+
+<script src="/frontend/public/js/components/stores.js"></script>
+</body>
+</html>

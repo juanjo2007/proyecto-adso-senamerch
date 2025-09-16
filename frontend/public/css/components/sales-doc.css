@@ -1,0 +1,103 @@
+/* ==============================
+   Componente Documento de Venta (BEM)
+   ============================== */
+
+body {
+font-family: Arial, sans-serif;
+    background-color: #E8DFD3;
+    margin: 0;
+    padding: 0;
+}
+
+.sales-doc {
+    text-align: center;
+    padding: 2rem;
+}
+
+.sales-doc__title {
+    font-size: 2rem;
+    margin-bottom: 1.5rem;
+    color: #000;
+}
+
+/* 🔍 Barra búsqueda */
+.sales-doc__search {
+    position: relative;
+    width: 300px;
+    margin: 0 auto 0.5rem auto;
+}
+
+.sales-doc__search-input {
+    width: 100%;
+    padding: 0.8rem 2.5rem 0.8rem 1rem;
+    border: none;
+    border-radius: 5px;
+    box-shadow: 2px 2px 5px #00000070;
+}
+
+.sales-doc__search-icon {
+    position: absolute;
+    right: 10px;
+    top: 50%;
+    transform: translateY(-50%);
+    pointer-events: none;
+}
+
+.sales-doc__search-text {
+    font-size: 0.9rem;
+    margin-bottom: 1.5rem;
+    color: #000;
+}
+
+/* 📄 Tabla */
+.sales-doc__table-wrapper {
+    overflow-x: auto; /* Responsivo */
+}
+
+.sales-doc__table {
+    display: inline-block;
+    min-width: 500px;
+    border: 1px solid #000;
+    padding: 1rem;
+    background-color: #E8DFD3;
+}
+
+.sales-doc__row {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    align-items: center;
+    padding: 0.6rem 0;
+}
+
+.sales-doc__row--header {
+    font-weight: bold;
+    border-bottom: 2px solid #000;
+    margin-bottom: 0.8rem;
+}
+
+.sales-doc__cell {
+    text-align: center;
+    color: #000;
+    font-size: 0.9rem;
+}
+
+.sales-doc__cell--muted {
+    color: #777;
+}
+
+/* Botones */
+.sales-doc__btn {
+    background-color: #000;
+    color: #fff;
+    font-weight: bold;
+    border: none;
+    padding: 0.6rem 1rem;
+    border-radius: 6px;
+    cursor: pointer;
+    box-shadow: 2px 2px 5px #00000080;
+    transition: background 0.2s ease;
+}
+
+.sales-doc__btn:hover {
+    background-color: #333;
+}

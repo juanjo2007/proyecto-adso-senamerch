@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Pasarela de pago</title>
+<link rel="stylesheet" href="/frontend/public/css/reset.css">
+<link rel="stylesheet" href="/frontend/public/css/variables.css">
+<link rel="stylesheet" href="/frontend/public/css/components/pasarela.css">
+<link rel="stylesheet" href="/frontend/public/css/main.css">
+</head>
+<body class="page">
+<main class="pasarela">
+    <h1 class="pasarela__title">Pasarela de pago</h1>
+
+    <!-- 🔍 Barra de búsqueda -->
+    <div class="sales-doc__search">
+        <input 
+        type="text" 
+        class="sales-doc__search-input" 
+        placeholder="Buscar tienda"
+        >
+        <span class="sales-doc__search-icon">🔍</span>
+    </div>
+    <p class="sales-doc__search-text">Encontrarás con facilidad lo que buscas.</p>
+
+    <!-- Tabla -->
+    <div class="pasarela__table table">
+        <table class="table__content">
+        <thead>
+            <tr>
+            <th>#Pago</th>
+            <th>#Documento de venta</th>
+            <th>#Usuario</th>
+            <th>#Tienda</th>
+            <th>Acción</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+            <td>#1</td>
+            <td>#1</td>
+            <td>#1</td>
+            <td>#1</td>
+            <td><button class="btn btn--black">Deshabilitar</button></td>
+            </tr>
+            <tr>
+            <td class="table__disabled">#2</td>
+            <td class="table__disabled">#2</td>
+            <td class="table__disabled">#2</td>
+            <td class="table__disabled">#2</td>
+            <td><button class="btn btn--black">Deshabilitar</button></td>
+            </tr>
+            <tr>
+            <td>#3</td>
+            <td>#3</td>
+            <td>#3</td>
+            <td>#3</td>
+            <td><button class="btn btn--black">Deshabilitar</button></td>
+            </tr>
+            <tr>
+            <td class="table__disabled">#4</td>
+            <td class="table__disabled">#4</td>
+            <td class="table__disabled">#4</td>
+            <td class="table__disabled">#4</td>
+            <td><button class="btn btn--black">Deshabilitar</button></td>
+            </tr>
+        </tbody>
+        </table>
+    </div>
+
+    <!-- Botón de navegación -->
+    <div class="pasarela__navigation">
+        <a href="documento.html" class="btn btn--black">Documento de venta</a>
+    </div>
+</main>
+<script src="/frontend/public/js/components/pasarela.js"></script>
+</body>
+</html>

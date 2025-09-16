@@ -1,0 +1,103 @@
+/* ==============================
+   Componente Tiendas (BEM)
+   ============================== */
+
+body {
+    font-family: Arial, sans-serif;
+    background-color: #E8DFD3; /* beige figma */
+    margin: 0;
+    padding: 0;
+}
+
+.stores {
+    text-align: center;
+    padding: 2rem;
+}
+
+.stores__title {
+    font-size: 2rem;
+    margin-bottom: 1.5rem;
+    color: #000;
+}
+
+/* 🔍 Barra búsqueda */
+.stores__search {
+    position: relative;
+    width: 300px;
+    margin: 0 auto 0.5rem auto;
+}
+
+.stores__search-input {
+    width: 100%;
+    padding: 0.8rem 2.5rem 0.8rem 1rem;
+    border: none;
+    border-radius: 5px;
+    box-shadow: 2px 2px 5px #00000070;
+}
+
+.stores__search-icon {
+    position: absolute;
+    right: 10px;
+    top: 50%;
+    transform: translateY(-50%);
+    pointer-events: none;
+}
+
+.stores__search-text {
+    font-size: 0.9rem;
+    margin-bottom: 1.5rem;
+    color: #000;
+}
+
+/* 📦 Tabla */
+.stores__table-wrapper {
+    overflow-x: auto; /* Responsivo */
+}
+
+.stores__table {
+    display: inline-block;
+    min-width: 800px; /* ancho mínimo para tabla */
+    border: 1px solid #777;
+    padding: 1rem;
+    background-color: #E8DFD3;
+}
+
+.stores__row {
+    display: grid;
+    grid-template-columns: repeat(7, 1fr);
+    align-items: center;
+    padding: 0.6rem 0;
+}
+
+.stores__row--header {
+    font-weight: bold;
+    border-bottom: 2px solid #000;
+    margin-bottom: 0.8rem;
+}
+
+.stores__cell {
+    text-align: center;
+    color: #000;
+    font-size: 0.9rem;
+}
+
+/* Botones */
+.stores__btn {
+    background-color: #000;
+    color: #fff;
+    font-weight: bold;
+    border: none;
+    padding: 0.6rem 1rem;
+    border-radius: 6px;
+    cursor: pointer;
+    box-shadow: 2px 2px 5px #00000080;
+    transition: background 0.2s ease;
+}
+
+.stores__btn:hover {
+    background-color: #333;
+}
+
+.stores__btn--primary {
+    margin-top: 1rem;
+}

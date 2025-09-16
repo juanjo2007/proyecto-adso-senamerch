@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Tus pedidos</title>
+<link rel="stylesheet" href="/frontend/public/css/reset.css">
+<link rel="stylesheet" href="/frontend/public/css/variables.css">
+<link rel="stylesheet" href="/frontend/public/css/components/tu-pedido.css">
+<link rel="stylesheet" href="/frontend/public/css/main.css">
+</head>
+<body>
+  <main class="pedido">
+    <h1 class="pedido__title">Tus pedidos</h1>
+
+    <section class="pedido__section">
+      <h2 class="pedido__subtitle">Servicio de transporte</h2>
+      <table class="pedido__table">
+        <thead>
+          <tr>
+            <th>Transportista</th>
+            <th>Fecha</th>
+            <th>Costo * distancia</th>
+            <th>Gasolina</th>
+            <th>Distancia recorrida</th>
+            <th>Total</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td>Jorge Galvis</td>
+            <td>Día de entrega</td>
+            <td>2.500 * (1)KM</td>
+            <td>3.000 * (1)KM</td>
+            <td>(2)Kilómetros</td>
+            <td>11.000</td>
+          </tr>
+        </tbody>
+      </table>
+    </section>
+
+    <section class="pedido__section">
+      <h2 class="pedido__subtitle">Productos</h2>
+      <table class="pedido__table">
+        <thead>
+          <tr>
+            <th>Productos</th>
+            <th>Descripción</th>
+            <th>Fecha</th>
+            <th>Precio * Medida</th> <br>
+            <th>Cantidad</th>
+            <th>Total</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td>Tomate</td>
+            <td>Fruta</td>
+            <td>Día del pedido</td>
+            <td>$6.500 * Kilo</td> <br>
+            <td>(2)Kilos</td>
+            <td>$13.000</td>
+          </tr>
+          <tr>
+            <td>Banano</td> 
+            <td>Fruta</td>
+            <td>Día del pedido</td>
+            <td>$3.000 * Kilo</td>
+            <td>(3)Kilos</td>
+            <td>$9.000</td>
+          </tr>
+        </tbody>
+      </table>
+    </section>
+
+    <section class="pedido__section">
+      <h2 class="pedido__subtitle">Agricultor</h2>
+      <table class="pedido__table">
+        <thead>
+          <tr>
+            <th>Nombre</th>
+            <th>Departamento</th>
+            <th>Dirección</th>
+            <th>Celular</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td>Mateo Imbachi</td>
+            <td>Risaralda</td>
+            <td>123#45-67 Cerritos</td>
+            <td>#3113973824</td>
+          </tr>
+        </tbody>
+      </table>
+    </section>
+
+    <section class="pedido__section">
+      <h2 class="pedido__subtitle">Cliente</h2>
+      <table class="pedido__table">
+        <thead>
+          <tr>
+            <th>Nombre</th>
+            <th>Departamento</th>
+            <th>Dirección</th>
+            <th>Celular</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td>Emanuel Quevedo</td>
+            <td>Risaralda</td>
+            <td>Carrera 10#34-36</td>
+            <td>#3102973825</td>
+          </tr>
+        </tbody>
+      </table>
+    </section>
+
+    <div class="pedido__actions">
+      <button class="btn btn--black">Cancelar pedido ✖</button>
+      <button class="btn btn--green">Confirmar pedido</button>
+    </div>
+  </main>
+
+  <script src="/frontend/public/js/components/tu-pedido.js"></script>
+</body>
+</html>
