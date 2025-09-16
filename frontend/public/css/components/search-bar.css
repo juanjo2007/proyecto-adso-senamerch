@@ -1,3 +1,4 @@
+/* Caja del buscador */
 .search-bar {
   display: flex;
   align-items: center;
@@ -66,21 +67,29 @@
   background: var(--white);
 }
 
-/* 📱 Móviles */
+/* Móviles */
 @media (max-width: 480px) {
   .search-bar__input {
     max-width: 300px; /* límite en celular */
   }
 }
 
-/* 📲 Tablets */
+@media (max-width: 300px) {
+  .search-bar {
+    max-width: 100%;
+  }
+  .search-bar__input{
+    font-size: 0;
+  }
+}
+/* Tablets */
 @media (min-width: 481px) and (max-width: 1024px) {
   .search-bar__input {
     max-width: 400px; /* límite en tablet */
   }
 }
 
-/* 💻 Pantallas grandes (1920px en adelante) */
+/* Pantallas grandes (1920px en adelante) */
 @media (min-width: 1920px) {
   .search-bar__input {
     width: 1000px; /* límite en pantallas grandes */

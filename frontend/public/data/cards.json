@@ -1,0 +1,38 @@
+[
+  {
+    "id": "tomate",
+    "name": "Tomate",
+    "price": 3000,
+    "image": "/frontend/public/assets/img/tomato_image.png"
+  },
+  {
+    "id": "cebolla",
+    "name": "Cebolla",
+    "price": 2500,
+    "image": "/frontend/public/assets/img/onion__image.jpg"
+  },
+  {
+    "id": "papa",
+    "name": "Papa",
+    "price": 2000,
+    "image": "/frontend/public/assets/img/potato__image.jpg"
+  },
+  {
+    "id": "zanahoria",
+    "name": "Zanahoria",
+    "price": 2800,
+    "image": "/frontend/public/assets/img/carrot_image.jpg"
+  },
+  {
+    "id": "lechuga",
+    "name": "Lechuga",
+    "price": 1800,
+    "image": "/frontend/public/assets/img/lettuce__image.jpg"
+  },
+  {
+    "id": "pimenton",
+    "name": "Pimenton",
+    "price": 3500,
+    "image": "/frontend/public/assets/img/pimenton_image.jpg"
+  }
+]

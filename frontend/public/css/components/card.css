@@ -1,20 +1,45 @@
-/* ==========================
-   Card - Product (BEM)
-   ========================== */
-
-.card {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  padding: 2rem;
-  font-family: var(--font-primary);
-  flex-wrap: wrap; /* permite que las cards bajen en varias filas */
-  gap: 1rem;       /* separación entre cards */
+.card-container {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(180px, 1fr));
+  gap: 15px;
+  width: 100%;
+  max-width: 1200px; /* límite para no desbordar en pantallas grandes */
+  margin: 0 auto;
+  padding: 0 10px;
+  box-sizing: border-box;
+  justify-items: center; /* centra cada card dentro de la celda */
 }
+
+.card-container {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(180px, 1fr));
+  gap: 15px; /* misma distancia en todos los breakpoints */
+  width: 100%;
+  max-width: 1200px; /* evita desbordamiento */
+  margin: 0 auto;
+  padding: 0 10px;
+  box-sizing: border-box;
+  justify-items: center; /* centra las cards dentro de la celda */
+}
+
+/* Tablets (>=640px) → 4 columnas */
+@media (min-width: 640px) {
+  .card-container {
+    grid-template-columns: repeat(4, minmax(180px, 1fr));
+  }
+}
+
+/* Desktop (>=1024px) → 6 columnas */
+@media (min-width: 1024px) {
+  .card-container {
+    grid-template-columns: repeat(6, minmax(180px, 1fr));
+  }
+}
+
 
 /* Bloque principal */
 .product {
-  width: 220px;
+  width: 180px;
   border: 1px solid var(--black);
   border-radius: 0.5rem;
   background-color: var(--primary-200);
@@ -41,12 +66,13 @@
   display: flex;
   flex-direction: column;
   gap: 0.5rem;
+  background-color: var(--primary-200);
 }
 
 /* Elemento: Nombre */
 .product__name {
   font-size: var(--fs-xxs);
-  color: var(--gray-600);
+  color: var(--gray-500);
   font-weight: 500;
   margin: 0;
   order: -1;
@@ -54,8 +80,8 @@
 
 /* Elemento: Precio */
 .product__price {
-  font-size: var(--fs-xs);
-  color: var(--gray-900);
+  font-size: var(--fs-xxs);
+  color: var(--gray-950);
   font-weight: bold;
   margin: 0;
   order: -1;
@@ -80,54 +106,4 @@
   transition: all 0.2s ease;
 }
 
-/* (móviles) */
-@media (max-width: 480px) {
-  .card {
-    padding: 1rem;
-    justify-content: center;
-    gap: 0.8rem;
-  }
 
-  .product {
-    width: 100%;          /* ocupa todo el ancho */
-    max-width: 320px;     /* límite para que no se estire demasiado */
-  }
-
-  .product__image {
-    height: 120px;
-  }
-
-  .product__name {
-    font-size: var(--fs-xxs);
-  }
-
-  .product__price {
-    font-size: var(--fs-xs);
-  }
-}
-
-/* (tablets) */
-@media (min-width: 481px) and (max-width: 768px) {
-  .card {
-    padding: 1.5rem;
-    justify-content: center; /* centramos las cards */
-    gap: 1rem;
-  }
-
-  .product {
-    width: 45%;           /* 2 columnas */
-    max-width: 250px;
-  }
-
-  .product__image {
-    height: 140px;
-  }
-}
-
-/* (desktop ≥ 769px) */
-@media (min-width: 769px) {
-  .card {
-    justify-content: flex-start; /* alineación a la izquierda */
-    gap: 1.5rem;
-  }
-}

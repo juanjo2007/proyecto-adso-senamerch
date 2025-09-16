@@ -1,15 +1,15 @@
-/* ====== BOTÓN BASE ====== */
-.btn {
+.btn-two {
   display: inline-flex;
   align-items: center;
   justify-content: center;
-  padding: 0 1.2rem; /* Espaciado lateral */
-  height: 30px; /* altura máxima */
-  width: fit-content; /* ancho ajustado al contenido */
+  padding: 0 1.2rem;      /* Espaciado lateral */
+  height: 30px;           /* altura fija */
+  line-height: 30px;      /* centra el texto vertical */
+  width: fit-content;     /* ancho ajustado al contenido */
   border: none;
-  border-radius: 0.6rem; /* esquinas redondeadas */
+  border-radius: 0.6rem;  /* esquinas redondeadas */
   font-family: var(--font-primary);
-  font-size: var(--fs-xxs); /* tamaño de fuente más compacto */
+  font-size: var(--fs-xxs);
   font-weight: 600;
   cursor: pointer;
   transition: background 0.3s ease, transform 0.2s ease;
@@ -17,48 +17,48 @@
 }
 
 /* ====== VARIANTE SECUNDARIA ====== */
-.btn--secondary {
+.btn-two--secondary {
   background: var(--black);
   color: var(--white);
 }
 
-.btn--secondary:hover {
+.btn-two--secondary:hover {
   background: var(--gray-950);
   transform: translateY(-2px);
 }
 
-.btn--secondary:active {
+.btn-two--secondary:active {
   background: var(--gray-800);
   transform: translateY(0);
 }
 
 /* Móviles */
 @media (max-width: 480px) {
-  .btn {
-    width: 100%;            /* Botón ocupa todo el ancho */
-    height: 36px;           /* Más alto para ser cómodo al tacto */
-    font-size: var(--fs-xxs);/* Texto un poco más grande para legibilidad */
-    padding: 0 1rem;        /* Menos padding lateral */
-    border-radius: 0.8rem;  /* Bordes más suaves */
+  .btn-two {
+    width: fit-content;
+    height: 25px;
+    font-size: var(--fs-xxs);
+    padding: 0 1rem;
+    border-radius: 0.6rem;
   }
 }
 
 /* Tablets */
 @media (min-width: 481px) and (max-width: 768px) {
-  .btn {
-    width: auto;            /* Se ajusta al contenido */
-    height: 34px;
-    font-size: var(--fs-xxs);/* Mantiene equilibrio */
+  .btn-two {
+    width: auto;
+    height: 30px;
+    font-size: var(--fs-xxs);
     padding: 0 1.4rem;
   }
 }
 
 /* Escritorio grande */
 @media (min-width: 1024px) {
-  .btn {
-    height: 40px;           /* Botón más alto */
+  .btn-two {
+    height: 30px;
     font-size: var(--fs-xxs);
-    padding: 0 1.6rem;      /* Más espacioso */
-    border-radius: 1rem;    /* Bordes más redondeados */
+    padding: 0 1.6rem;
+    border-radius: 0.6rem;
   }
 }

@@ -3,24 +3,28 @@
 @import url('reset.css');
 @import url('variables.css');
 @import url('layout.css');
+@import url('pages/home.css');
+@import url('themes/dark-mode.css');
+
+
+/* Importaciones de SenaMerch Juan Jose */
 @import url('components/navbar.css');
 @import url('components/footer.css');
 @import url('components/forms.css');
 @import url('components/agregar_direccion.css');
 @import url('components/registro.css');
 @import url('components/gestion_publicaciones.css');
-@import url('pages/home.css');
-@import url('themes/dark-mode.css');
-<<<<<<< HEAD
+
+/* Importaciones de SenaMerch Mateo */
 @import url('components/carrito.css'); /* ✅ Estilos del carrito agregados */
 @import url('components/productos.css'); /* ✅ Estilos de productos agregados */
 @import url('components/usuarios.css'); /* ✅ Estilos de usuarios agregados */
 @import url('components/sales-history.css'); /* ✅ Estilos de historial de ventas agregados */
 @import url("components/publicaciones.css");
-=======
 
 
-/* Importaciones de SenaMerch */
+
+/* Importaciones de SenaMerch Emanuel */
 @import url('components/card.css');
 @import url('components/description.css');
 @import url('components/option.css');
@@ -29,4 +33,6 @@
 @import url('components/secondary-button.css');
 @import url('components/producto.css');
 @import url('components/option_payment_method.css');
->>>>>>> 9cc73f457f2b3815cbb441238a94127d4bf8f108
+@import url('components/payment_method.css');
+@import url('components/quantity-input.css');
+

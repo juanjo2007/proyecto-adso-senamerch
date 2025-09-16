@@ -5,10 +5,19 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Productos</title>
   <link rel="stylesheet" href="/frontend/public/css/main.css">
-  <script src="/frontend/public/js/components/card.js" defer></script>
-  <script src="/frontend/public/views/Product.html" defer></script>
+
+  <!-- OJO: si usas export/import, debe ser module -->
+  <script type="module">
+    import { loadCards } from "/frontend/public/js/components/card.js";
+    document.addEventListener("DOMContentLoaded", () => { loadCards(".card-container"); });
+  </script>
+
+  <script src="/frontend/public/js/components/search-bar.js" defer></script>
 </head>
 <body>
-  <div class="card-container"></div>
+  <!-- >>> Section cards-->
+  <main class="container">
+    <div class="card-container"></div>
+  </main>
 </body>
 </html>

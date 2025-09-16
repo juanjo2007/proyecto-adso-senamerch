@@ -12,10 +12,9 @@ html {
 }
 
 body {
-    background-color: var(--gray-900);
-    color: var(--white);
+  background-color: var(--primary-950);
+  font-family: var(--font-primary);
 }
-
 /* 1. Contenedor Principal */
 .container {
     width: 90%;
