@@ -73,16 +73,14 @@
   }
 }
 
-@media (max-width: 200px) {
+@media (max-width: 300px) {
   .search-bar {
-    max-width: 150px;
+    max-width: 100%;
   }
   .search-bar__input{
     font-size: 0;
   }
 }
-  
-
 /* Tablets */
 @media (min-width: 481px) and (max-width: 1024px) {
   .search-bar__input {

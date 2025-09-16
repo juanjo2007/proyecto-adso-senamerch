@@ -34,7 +34,7 @@
   flex-direction: row-reverse;
   gap: 16px;
   color: var(--white);
-  font-size: var(--fs-xxs);
+  font-size: var(--fs-xxxs);
   font-family: var(--font-primary);
   padding: 1.6rem 1.2rem;
   border-radius: 0.4rem;
@@ -69,7 +69,7 @@
   }
 
   .unit-options {
-    max-width: 95%;
+    max-width: fit-content;
   }
 }
 
@@ -79,9 +79,15 @@
     display: grid;
     grid-template-columns: repeat(3, 1fr); /* 3 columnas */
     gap: 1rem;
+    
+  .unit-options__item {
+    font-size: var(--fs-xxxs);
+    max-width: 100%;
+  }
   }
 
   .unit-options {
     max-width: 95%;
+    width: fit-content;
   }
 }

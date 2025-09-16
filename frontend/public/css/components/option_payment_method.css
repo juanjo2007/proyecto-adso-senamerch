@@ -16,13 +16,11 @@
   min-height: 100vh;       /* ocupa toda la pantalla *//* opcional: darle un fondo */
 }
 
-
-
 /* cada opción */
 .payment-method__option {
   background-color: var(--primary-400);
   color: var(--black);
-  font-size: var(--fs-xs);
+  font-size: var(--fs-xxs);
   font-weight: 500;
   border: 2px solid var(--black); 
   border-radius: 0.6rem;
@@ -60,6 +58,14 @@
   box-shadow: 0 3px 5px rgba(0,0,0,0.2); /* sombra más baja */
 }
 
+.payment-method__title {
+  font-size: var(--fs-xs); /* tamaño de fuente con tu variable */
+  font-weight: bold;        /* opcional: lo hace más destacado */
+  margin-bottom: 1.5rem;    /* separa el título de las opciones */
+  text-align: center;       /* lo centra dentro del contenedor */
+}
+
+
 /* íconos */
 .payment-method__icon {
   width: 2.4rem;
@@ -82,6 +88,9 @@
     max-width: 100%;   /* ocupa todo el ancho */
     padding: 1.5rem;
     border-radius: 0.6rem;
+  }
+  .payment-method__title {
+    font-size: var(--fs-xxxs); /* más pequeño en móvil */
   }
 
   .payment-method__options {
@@ -107,10 +116,14 @@
   }
 }
 /* ====== Tablets (481px a 768px) ====== */
-@media (min-width: 481px) and (max-width: 768px) {
+@media (max-width: 768px) {
   .payment-method__container {
     max-width: 400px;
     padding: 2rem;
+  }
+
+  .payment-method__title {
+    font-size: var(--fs-sm); /* más pequeño en móvil */
   }
 
   .payment-method__options {
@@ -132,8 +145,6 @@
     gap: 1.2rem;
   }
 }
-
-
 /* ====== Escritorio grande (1024px en adelante) ====== */
 @media (min-width: 1024px) {
   .payment-method__container {
@@ -148,5 +159,8 @@
   .payment-method__option {
     width: 300px;
     font-size: var(--fs-xxs);
+  }
+  .payment-method__title {
+    font-size: var(--fs-sm); /* un poco más grande en escritorio */
   }
 }

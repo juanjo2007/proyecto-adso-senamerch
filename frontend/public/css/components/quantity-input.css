@@ -17,8 +17,8 @@
   gap: 1rem;
   padding: 1.5rem;
   margin-top: 0;
-  font-size: var(--fs-xxs);
-  max-width: 500px;     
+  font-size: var(--fs-xxxs);  
+  max-width: 400px; 
   width: 100%;                     
   transition: border-color 0.3s, box-shadow 0.3s; /* transición suave */
 }
@@ -31,9 +31,10 @@
 
 /* Input */
 .quantity__field {
-  width: 400px;
+  max-width: 100%;
+  width: 300px;
   padding: 0.6rem 1rem;
-  border: 1px solid var(--gray-500);
+  border: 1px solid var(--white);
   border-radius: 0.5rem;
   font-size: var(--fs-xxxs);
   outline: none;
@@ -61,15 +62,15 @@
 /* Media Query para tabletas y móviles */
 @media (max-width: 768px) {
   .quantity {
-    max-width: 90%;      /* ocupa casi todo el ancho de la pantalla */
+    max-width: 50%;      /* ocupa casi todo el ancho de la pantalla */
     padding: 1.5rem;     /* menos padding para pantallas pequeñas */
     gap: 0.8rem;         /* reduce la separación interna */
   }
 
   .quantity__field {
-    width: 100%;          /* input ocupa todo el ancho del bloque */
+    width: 280px;          /* input ocupa todo el ancho del bloque */
     padding: 0.5rem 0.8rem; /* reduce padding del input */
-    font-size: var(--fs-xs); /* texto más legible en pantallas pequeñas */
+    font-size: var(--fs-xxs); /* texto más legible en pantallas pequeñas */
   }
 
   .quantity__label,
@@ -82,11 +83,13 @@
   .quantity {
     padding: 1rem;       /* aún menos padding en móviles pequeños */
     gap: 0.6rem;         /* separación interna compacta */
+    
   }
 
   .quantity__field {
     padding: 0.4rem 0.6rem;
     font-size: var(--fs-xxxs); /* texto pequeño para móviles */
+    width: 100%;
   }
 
   .quantity__label,
