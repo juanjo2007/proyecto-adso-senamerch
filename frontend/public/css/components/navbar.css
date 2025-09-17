@@ -1,40 +1,139 @@
-.navbar {
-  display: flex;
-  align-items: center;
-  background-color: var(--tertiary-600);
-  padding: 1rem 2rem;
+body {
+  background-color: var(--primary-100);
 }
 
-.navbar__logo {
-  display: flex;
-  align-items: center;
-}
+.header{
+  position: static;
+  top: 0;
+  width: 100%;
+  margin-top: 0px;
+  padding: 0;
+} 
 
-.navbar__title {
-  font-size: var(--fs-md);
-  font-weight: bold;
-  color: var(--secundary-600);
-}
-
-.navbar__menu {
-  display: flex;
-  gap: 1rem;
-  margin-left: auto;   /* 👈 Esto empuja el menú totalmente a la derecha */
-}
-
-.navbar__btn {
-  display: inline-flex;
-  align-items: center;
+.title {
+  color: var(--tertiary-800);
+  margin: 0;
+  font-size: var(--fs-xxl);
+  padding: 50px;
   justify-content: center;
-  background-color: var(--secundary-600);
-  color: var(--white);
-  padding: 0.5rem 1rem;
-  border-radius: 6px;
-  font-size: var(--fs-xxs);
-  text-decoration: none;
-  transition: background 0.3s ease;
+  margin-top: 5%;
+  color: var(--tertiary-800);
+  position: relative;           /* necesario para mover con top */
+  transition: color 0.5s ease, top 0.5s ease; /* transición para color y posición */
+  top: 0; 
 }
 
-.navbar__btn:hover {
-  background-color: var(--secundary-700);
+.title:hover {
+  color: var(--tertiary-600); /* cambia de color al pasar el mouse */  
+  top: -10px;      /* se mueve 10px hacia arriba */
+
+}
+
+.navbar{
+  display: flex;
+  flex-direction: column;
+  margin: 0 auto;
+  width: 100%;
+  background-color: var(--tertiary-800);
+
+}
+
+/* mobile firts */
+.navbar__list{
+    display: flex;
+    /* justify-content: center; centra verticalmente si es necesario
+    align-items: center; centra horizontalmente */
+    flex-direction: column;
+    gap: 0;
+    width: 100%;
+    list-style: none;
+    padding: 0;
+}
+
+.navbar__link{
+    display: block;
+    text-align: center;
+    padding: 0.8rem;
+    text-decoration: none;
+    color: var(--white);
+    font-size: var(--fs-xs);
+    transition: color 0.3s ease;
+}
+
+
+
+.navbar__link:hover{
+    color: var(--secundary-600);
+}
+
+.paragraph__home {
+    max-width: 400px; 
+    max-height: 500px;         
+    padding: 20px;
+    font-size: var(--fs-xs);
+    background-color: var(--white);
+    border: 2px solid var(--secundary-600);
+    border-radius: 10px;
+    box-shadow: 0 5px 12px var(--black-)(0,0,0,0.1);
+    position: relative;
+    top: -40px; 
+    margin-left: 88px;
+    margin-right: 88px;    
+    transition: transform 0.3s ease, box-shadow 0.3s ease;  
+    ;  
+}
+
+.paragraph__home:hover {
+    transform: translateY(-10px); /* sube 10px */
+    box-shadow: 0 8px 16px rgba(0,0,0,0.2); /* sombra más marcada */
+}
+
+.home {
+    width: 500px;         
+    height: 420px;  
+    padding: 50px;         
+    position: relative;
+    top: -590px; /* sube 20px desde su posición original */ 
+    margin-left: 20px;
+    margin-right: 150px;     
+    float: right;  
+    border-radius: 10px;        
+    box-shadow: 0 8px 12px var(--tertiary-800); /* opcional: sombra */
+    transition: transform 0.3s ease, box-shadow 0.3s ease; 
+}
+
+.home:hover {
+    transform: translateY(-10px); /* sube 10px */
+    box-shadow: 0 8px 16px var(--tertiary-600); /* sombra más marcada */
+}
+
+.btn__register {
+    display: inline-block;
+    padding: 12px 25px; 
+    margin-left: 210px; 
+    margin-top: -40px;     /* tamaño del botón */
+    background-color:var(--secundary-800); /* color de fondo */
+    color: var(--white);               /* color del texto */
+    text-decoration: none;     /* quita subrayado */
+    border-radius: 8px;        /* esquinas redondeadas */
+    font-size: var(--fs-xs);
+    font-weight: bold;
+    transition: background-color 0.3s ease, transform 0.3s ease;
+}
+
+
+.btn__register:hover {
+    background-color: var(--secundary-600);
+    transform: translateY(-3px); /* sube un poquito */
+}
+
+@media (width > 768px) {
+    .navbar__list{
+        padding: 0;
+        margin: 0;
+        flex-direction: row;
+        gap: 40px;
+        flex-grow: 1;
+        justify-content: space-evenly;
+    }
 }
