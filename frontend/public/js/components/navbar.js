@@ -1,3 +1,4 @@
+
 document.addEventListener("DOMContentLoaded", function(){
     const navbarElement = document.querySelector(".navbar-container");
 

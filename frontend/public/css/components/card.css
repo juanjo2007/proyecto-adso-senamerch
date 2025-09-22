@@ -1,7 +1,8 @@
+
 .card-container {
   display: grid;
   grid-template-columns: repeat(auto-fill, minmax(180px, 1fr));
-  gap: 15px;
+  gap: 18px;
   width: 100%;
   max-width: 1200px; /* límite para no desbordar en pantallas grandes */
   margin: 0 auto;
@@ -10,27 +11,15 @@
   justify-items: center; /* centra cada card dentro de la celda */
 }
 
-.card-container {
-  display: grid;
-  grid-template-columns: repeat(auto-fill, minmax(180px, 1fr));
-  gap: 15px; /* misma distancia en todos los breakpoints */
-  width: 100%;
-  max-width: 1200px; /* evita desbordamiento */
-  margin: 0 auto;
-  padding: 0 10px;
-  box-sizing: border-box;
-  justify-items: center; /* centra las cards dentro de la celda */
-}
-
 /* Tablets (>=640px) → 4 columnas */
-@media (min-width: 640px) {
+@media (min-width <= 760px) {
   .card-container {
     grid-template-columns: repeat(4, minmax(180px, 1fr));
   }
 }
 
 /* Desktop (>=1024px) → 6 columnas */
-@media (min-width: 1024px) {
+@media (min-width >= 1024px) {
   .card-container {
     grid-template-columns: repeat(6, minmax(180px, 1fr));
   }
@@ -42,7 +31,7 @@
   width: 180px;
   border: 1px solid var(--black);
   border-radius: 0.5rem;
-  background-color: var(--primary-200);
+  background-color: var(--primary-100);
   box-shadow: 0 2px 4px var(--black);
   overflow: hidden;
   display: flex;
