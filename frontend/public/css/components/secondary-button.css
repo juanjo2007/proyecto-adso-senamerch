@@ -1,64 +1,60 @@
-.btn-two {
+/* ====== BOTÓN VARIANTE 2 (más pequeño) ====== */
+.btn--variant2 {
   display: inline-flex;
   align-items: center;
   justify-content: center;
-  padding: 0 1.2rem;      /* Espaciado lateral */
-  height: 30px;           /* altura fija */
-  line-height: 30px;      /* centra el texto vertical */
-  width: fit-content;     /* ancho ajustado al contenido */
-  border: none;
-  border-radius: 0.6rem;  /* esquinas redondeadas */
+  /* altura visual: 36px (4px menos que el primario de 40px) */
+  font-size: 12px;
+  line-height: 1;
+  padding: calc((36px - 12px) / 2) 12px; /* altura - fuente = padding vertical */
+  gap: 6px;
   font-family: var(--font-primary);
-  font-size: var(--fs-xxs);
-  font-weight: 600;
+  border: none;
+  border-radius: 0.6rem;
   cursor: pointer;
   transition: background 0.3s ease, transform 0.2s ease;
   box-shadow: 2px 2px 5px var(--gray-900);
+  width: auto;
+  white-space: nowrap;
+  min-width: 0;
 }
 
-/* ====== VARIANTE SECUNDARIA ====== */
-.btn-two--secondary {
+/* Iconos dentro del botón secundario */
+.btn--variant2__icon,
+.btn--variant2 img,
+.btn--variant2 svg {
+  width: 16px;   /* un poco más pequeño que el primario */
+  height: 16px;
+  display: block;
+}
+
+/* Variante secundaria del botón */
+.btn--variant2--secondary {
   background: var(--black);
   color: var(--white);
 }
 
-.btn-two--secondary:hover {
+.btn--variant2--secondary:hover {
   background: var(--gray-950);
   transform: translateY(-2px);
 }
 
-.btn-two--secondary:active {
+.btn--variant2--secondary:active {
   background: var(--gray-800);
   transform: translateY(0);
 }
 
-/* Móviles */
+/* Responsive: pantallas pequeñas */
 @media (max-width: 480px) {
-  .btn-two {
-    width: fit-content;
-    height: 25px;
-    font-size: var(--fs-xxs);
-    padding: 0 1rem;
-    border-radius: 0.6rem;
+  .btn--variant2 {
+    font-size: 11px;
+    padding: calc((32px - 11px) / 2) 10px; /* más compacto aún en móvil */
   }
-}
 
-/* Tablets */
-@media (min-width: 481px) and (max-width: 768px) {
-  .btn-two {
-    width: auto;
-    height: 30px;
-    font-size: var(--fs-xxs);
-    padding: 0 1.4rem;
-  }
-}
-
-/* Escritorio grande */
-@media (min-width: 1024px) {
-  .btn-two {
-    height: 30px;
-    font-size: var(--fs-xxs);
-    padding: 0 1.6rem;
-    border-radius: 0.6rem;
+  .btn--variant2__icon,
+  .btn--variant2 img,
+  .btn--variant2 svg {
+    width: 12px;
+    height: 12px;
   }
 }
