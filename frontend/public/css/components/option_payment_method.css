@@ -1,30 +1,23 @@
 .payment-method__container {
-  background: var(--tertiary-200);   /* fondo blanco del contenedor principal */
-  /*border: 1px solid var(--black); *//* borde negro alrededor del contenedor */
+  background: var(--white);
   padding: 2rem;
   border-radius: 0.8rem;
   text-align: center;
-  width: 100%;
   max-width: 350px;
   box-shadow: 0 4px 10px rgba(0,0,0,0.25);
-
 }
-
 .payment-method {
   display: flex;
-  align-items: center;     /* centra verticalmente */
-  justify-content: center; /* centra horizontalmente */
-  background: var(--white); 
-  min-height: 100vh;       /* ocupa toda la pantalla *//* opcional: darle un fondo */
+  align-items: center;     
+  justify-content: center;
 }
-
 /* cada opción */
 .payment-method__option {
-  background-color: var(--tertiary-600);
-  color: var(--white);
+  background-color: var(--secundary-50);
+  color: var(--black);
   font-size: var(--fs-xs);
   font-weight: 500;
-  border: 1px solid var(--gray-600); 
+  border: 1px solid var(--gray-200); 
   border-radius: 0.6rem;
   padding: 1rem 1.2rem;
   width: 260px;
@@ -36,45 +29,38 @@
   gap: 24px; /* espacio entre texto e icono */
   transition: background 0.3s ease, transform 0.2s ease;
 }
-
 .payment-method__options {
   display: flex;
   flex-direction: column;
   align-items: center;
   gap: 2rem;              
-  background: var(--white); 
   padding: 3rem 2rem;   
   border-radius: 0.6rem;
   border: 1px solid var(--gray-200);
-  background: var(--tertiary-200); 
+  background: var(--white); 
 }
-
 .payment-method__option:hover {
-  background-color: var(--tertiary-300); /* tono un poco más fuerte */
+  background-color: var(--secundary-400); /* tono un poco más fuerte */
   transform: translateY(-2px);          /* efecto de levantar */
   box-shadow: 0 6px 10px rgba(0,0,0,0.25); /* sombra más marcada */
 }
-
 .payment-method__option:active {
-  background-color: var(--tertiary-900);/* aún más oscuro */
+  background-color: var(--secundary-900);/* aún más oscuro */
   transform: translateY(0);             /* vuelve a su lugar */
   box-shadow: 0 3px 5px rgba(0,0,0,0.2); /* sombra más baja */
 }
-
 .payment-method__title {
   font-size: var(--fs-sm); 
   font-weight: bold;
   margin-bottom: 1.5rem;
   text-align: center;
-  color: var(--white);  
+  color: var(--secundary-900);  
 }
-/* íconos */
 .payment-method__icon {
   width: 2.4rem;
   height: 2.4rem;
   object-fit: contain;
 }
-
 .payment-method__actions {
   margin-top: 2rem; 
   display: flex;
@@ -93,19 +79,16 @@
   .payment-method__title {
     font-size: var(--fs-sm); 
   }
-
   .payment-method__options {
     padding: 2rem 1rem;
     gap: 1.5rem;
   }
-
   .payment-method__option {
     width: 100%;       
     font-size: var(--fs-sm);
     padding: 0.8rem 1rem;
     gap: 16px;
   }
-
   .payment-method__actions {
     flex-direction: column; /* botones uno debajo del otro */
     gap: 0.8rem;
@@ -122,11 +105,9 @@
     max-width: 400px;
     padding: 2rem;
   }
-
   .payment-method__title {
     font-size: var(--fs-sm); /* más pequeño en móvil */
   }
-
   .payment-method__options {
     flex-direction: column;
     padding: 2.5rem 1.5rem;
@@ -134,14 +115,12 @@
     align-items: center;   /* centra las opciones */
     overflow: hidden;      /* evita que se desborden */
   }
-
   .payment-method__option {
     width: 100%;        /* ocupa todo el ancho del contenedor */
     max-width: 250px;   /* pero como máximo 150px */
     box-sizing: border-box; /* incluye padding y borde dentro del ancho */
     font-size: var(--fs-xs);
   }
-
   .payment-method__actions {
     gap: 1.2rem;
   }
@@ -152,11 +131,9 @@
     max-width: 450px;
     padding: 2.5rem;
   }
-
   .payment-method__options {
     padding: 3rem 2rem;
   }
-
   .payment-method__option {
     width: 300px;
     font-size: var(--fs-xs);

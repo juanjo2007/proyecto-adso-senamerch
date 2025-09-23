@@ -1,5 +1,5 @@
 :root { 
-    /* Primary color */
+    /* ================== Primary color ================== */
     --primary-950: #2d221d;
     --primary-900: #554439;
     --primary-800: #685344;
@@ -12,7 +12,7 @@
     --primary-100: #f0ede5;
     --primary-50: #f8f7f4;
 
-    /* Secundary color */
+    /* ================== Secondary color ================== */
     --secundary-950:#072c0e;
     --secundary-900:#184f23;
     --secundary-800:#1a6127;
@@ -25,7 +25,7 @@
     --secundary-100:#defae2;
     --secundary-50:#f1fcf2;
 
-    /* Tertiary color */
+    /* ================== Tertiary color ================== */
     --tertiary-950: #1f0f0f;
     --tertiary-900: #5e3230;
     --tertiary-800: #733a39;
@@ -38,7 +38,7 @@
     --tertiary-100: #f3e7e1;
     --tertiary-50: #faf4f2;
 
-    /* Basic color */
+    /* ================== Basic color ================== */
     --white: #fff;
     --black: #000;
     --gray-950: #101010;
@@ -53,11 +53,11 @@
     --gray-100: #D4D4D4;
     --gray-50: #E9E9E9;
 
-    /* Font-family */
+    /* ================== Font-family ================== */
     --font-primary: 'Inter', sans-serif;
     --font-secondary: 'Roboto', sans-serif;
 
-    /* Font-size */
+    /* ================== Font-size ================== */
     --fs-xxxxl: 8.0rem;
     --fs-xxxl: 6.4rem;
     --fs-xxl: 4.8rem;
@@ -68,4 +68,24 @@
     --fs-xs: 1.6rem;
     --fs-xxs: 1.4rem;
     --fs-xxxs: 1.2rem;
+
+     /* ================== Button Primary ================== */
+    --button-padding-top:18px;
+    --button-padding-right:16px;
+    --button-padding-bottom:18px;
+    --button-padding-left:16px;
+
+    /* ================== Button Secundary ================== */
+    --padding-top:18px;
+    --padding-right:16px;
+    --padding-bottom:18px;
+    --padding-left:16px;
+
+    /* ================== Label / Input ================== */
+    --padding-top:14px;
+    --padding-right:16px;
+    --padding-bottom:14px;
+    --padding-left:16px
 }
+
+
