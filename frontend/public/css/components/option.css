@@ -8,7 +8,7 @@
 
 /* El bloque con borde */
 .unit-options {
-  border: 1px solid var(--black);
+  border: 1px solid var(--gray-100);
   padding: 1rem 2rem;
   box-sizing: border-box;
   max-width: fit-content;
@@ -34,7 +34,7 @@
   flex-direction: row-reverse;
   gap: 16px;
   color: var(--white);
-  font-size: var(--fs-xxxs);
+  font-size: var(--fs-xxs);
   font-family: var(--font-primary);
   padding: 1.6rem 1.2rem;
   border-radius: 0.4rem;
@@ -72,18 +72,16 @@
     max-width: fit-content;
   }
 }
-
-/* Tablets (≤ 768px) */
 @media (max-width: 768px) and (min-width: 482px) {
   .unit-options__container {
     display: grid;
     grid-template-columns: repeat(3, 1fr); /* 3 columnas */
     gap: 1rem;
-    
-  .unit-options__item {
-    font-size: var(--fs-xxxs);
-    max-width: 100%;
   }
+
+  .unit-options__item {
+    font-size: var(--fs-xxs);
+    max-width: 100%;
   }
 
   .unit-options {
@@ -91,3 +89,4 @@
     width: fit-content;
   }
 }
+

@@ -1,6 +1,5 @@
-:root {
-    /* Primary color*/
-
+:root { 
+    /* Primary color */
     --primary-950: #2d221d;
     --primary-900: #554439;
     --primary-800: #685344;
@@ -13,8 +12,7 @@
     --primary-100: #f0ede5;
     --primary-50: #f8f7f4;
 
-    /* Secundary color*/
-
+    /* Secundary color */
     --secundary-950:#072c0e;
     --secundary-900:#184f23;
     --secundary-800:#1a6127;
@@ -26,7 +24,6 @@
     --secundary-200:#bef4c6;
     --secundary-100:#defae2;
     --secundary-50:#f1fcf2;
-
 
     /* Tertiary color */
     --tertiary-950: #1f0f0f;
@@ -41,8 +38,7 @@
     --tertiary-100: #f3e7e1;
     --tertiary-50: #faf4f2;
 
-
-    /* Basic color*/
+    /* Basic color */
     --white: #fff;
     --black: #000;
     --gray-950: #101010;
@@ -58,18 +54,18 @@
     --gray-50: #E9E9E9;
 
     /* Font-family */
-      --font-primary: 'Inter', sans-serif;
-  --font-secondary: 'Roboto', sans-serif;
+    --font-primary: 'Inter', sans-serif;
+    --font-secondary: 'Roboto', sans-serif;
 
     /* Font-size */
-    --fs-xxxxl: 8.0rem; /* Ultra grande */
-    --fs-xxxl: 6.4rem; /* Súper grande */
-    --fs-xxl: 4.8rem; /* Extra grande */
-    --fs-xl: 4.0rem;  /* Muy grande */
-    --fs-lg: 3.2rem;  /* Grande */
-    --fs-md: 2.4rem;  /* Mediano */
-    --fs-sm: 2.0rem;  /* Pequeño */
-    --fs-xs: 1.6rem;  /* Extra pequeño */
-    --fs-xxs: 1.4rem; /* Extra extra pequeño */
-    --fs-xxxs: 1.2rem; /* Mínimo */
+    --fs-xxxxl: 8.0rem;
+    --fs-xxxl: 6.4rem;
+    --fs-xxl: 4.8rem;
+    --fs-xl: 4.0rem;
+    --fs-lg: 3.2rem;
+    --fs-md: 2.4rem;
+    --fs-sm: 2.0rem;
+    --fs-xs: 1.6rem;
+    --fs-xxs: 1.4rem;
+    --fs-xxxs: 1.2rem;
 }

@@ -1,97 +1,51 @@
-/* Caja del buscador */
 .search-bar {
   display: flex;
   align-items: center;
-  justify-content: flex-start; /* icono y texto juntos al inicio */
-  width: 100%;
-  max-width: 320px; /* límite de ancho */
-  max-height: 40px;
+  justify-content: flex-start;
   background: var(--white);
+  border: 1px solid var(--gray-400);
   border-radius: 0.5rem;
-  box-shadow: 2px 2px 5px var(--black);
-  margin: 2rem auto;
-  padding: 0.5rem 1rem;
+  padding: 0 12px;
+  gap: 8px;
   font-family: var(--font-primary);
-  font-size: var(--fs-xs);  
-  gap: 2rem; /* espacio de 1.5rem entre icono y texto */
+  font-size: 14px;
+  line-height: 24px;
+  box-shadow: 2px 2px 5px var(--black);
+
+  /* centrado y ancho controlado */
+  width: 100%;
+  margin: 2rem auto; 
+  max-width: 720px; /* evita que sea gigante en pantallas grandes */
 }
 
 .search-bar__input {
   border: none;
   outline: none;
-  font-size: var(--fs-xxs);   /* Tamaño desde variables */
+  flex: 1;
+  font-size: var(--fs-xs);
   color: var(--primary-950);
   background: transparent;
-  width: 1000px;      /* ocupa el espacio disponible */
-/* deja espacio al icono dentro de los 320px */
+  padding: 8px 0;
 }
 
 .search-bar__input::placeholder {
-  font-size: var(--fs-xxs);   /* Placeholder con mismo tamaño */
+  font-size: var(--fs-xs);
   color: var(--primary-950);
-  opacity: 0.7;
+  opacity: 0.6;
 }
 
 .search-bar__button {
   background: transparent;
   border: none;
   cursor: pointer;
-  padding: 1rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 0 12px;
 }
 
-.search-bar__icon {
-  display: inline-block;
-  width: 12px;   /* Ajustado al tamaño del texto */
-  height: 12px;
-  border: 2px solid var(--black);
-  border-radius: 50%;
-  position: relative;
-}
-
-.search-bar__icon::after {
-  content: "";
-  position: absolute;
-  right: -6px;
-  bottom: -4px;
-  width: 12px;
-  height: 2px;
-  background: var(--black);
-  transform: rotate(45deg);
-}
-
-.option-button--active {
-  background: var(--tertiary-700);
-}
-
-.option-button--active .option-button__icon::after {
-  background: var(--white);
-}
-
-/* Móviles */
-@media (max-width: 480px) {
-  .search-bar__input {
-    max-width: 300px; /* límite en celular */
-  }
-}
-
-@media (max-width: 300px) {
-  .search-bar {
-    max-width: 100%;
-  }
-  .search-bar__input{
-    font-size: 0;
-  }
-}
-/* Tablets */
-@media (min-width: 481px) and (max-width: 1024px) {
-  .search-bar__input {
-    max-width: 400px; /* límite en tablet */
-  }
-}
-
-/* Pantallas grandes (1920px en adelante) */
-@media (min-width: 1920px) {
-  .search-bar__input {
-    width: 1000px; /* límite en pantallas grandes */
-  }
+.search-bar__icon img {
+  width: 24px;
+  height: 24px;
+  display: block;
 }

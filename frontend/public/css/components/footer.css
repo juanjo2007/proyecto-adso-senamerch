@@ -1,25 +1,48 @@
+/* ================== FOOTER ================== */
 .footer {
-  background-color: var(--tertiary-600);
-  color: var(--white);
-  text-align: center;
-  padding: 1rem;
-  font-size: var(--fs-xxs);
+  background-color: var(--tertiary-700);
+  padding: 1rem 2rem;
+  font-family: var(--font-primary);
+}
+
+.footer__container {
   display: flex;
-  justify-content: space-between;
+  justify-content: space-between; /* separa el texto a la izq y los íconos a la der */
   align-items: center;
+  width: 100%;   /* ocupa todo el ancho */
+  margin: 0;     /* quita el centrado */
+}
+
+.footer__text {
+  font-size: var(--fs-xxs);
+  color: var(--white);
+  margin: 0; /* asegura que no tenga espacios extras */
 }
 
 .footer__social {
   display: flex;
-  gap: 0.8rem;
+  gap: 1rem;
 }
 
-.footer__icon {
-  width: 20px;
-  height: auto;
-  transition: transform 0.2s;
+.footer__icon img {
+  width: 24px;
+  height: 24px;
+  transition: transform 0.2s ease-in-out;
 }
 
-.footer__icon:hover {
+.footer__icon:hover img {
   transform: scale(1.1);
+}
+
+/* ================== RESPONSIVE ================== */
+@media (max-width: 768px) {
+  .footer__container {
+    flex-direction: column;
+    gap: 0.8rem;
+  }
+
+  .footer__text {
+    text-align: center;
+    font-size: var(--fs-xxxs);
+  }
 }
