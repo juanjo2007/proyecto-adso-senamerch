@@ -1,23 +1,18 @@
-body{
-    background-color: var(--primary-100);
-}
-
 .title {
-  color: var(--tertiary-800);
+  color: var(--secundary-700);
   font-family: var(--font-primary);
   margin: 40px;
-  font-size: var(--fs-xl);
+  font-size: var(--fs-xxxl);
   padding: 60px;
-  margin-left: 20%;
+  margin-left:  35px;
   justify-content: center;
   margin-top: 3rem;
-  color: var(--tertiary-800);
   position: relative;          
   transition: color 0.5s ease, top 0.5s ease; 
 }
 
 .title:hover {
-  color: var(--tertiary-600); 
+  color: var(--secundary-500); 
   top: -10px;      
 
 }
@@ -29,9 +24,8 @@ body{
     font-size: var(--fs-xs);
     font-family: var(--font-primary);
     background-color: var(--white);
-    border: 2px solid var(--tertiary-600);
+    border: 2px solid var(--secundary-600);
     border-radius: 10px;
-    box-shadow: 0 5px 12px var(--black-)(0,0,0,0.1);
     position: relative;
     top: -40px; 
     margin-left: 88px;
@@ -42,7 +36,7 @@ body{
 
 .paragraph__home:hover {
     transform: translateY(-10px); 
-    box-shadow: 0 8px 16px rgba(0,0,0,0.2); 
+    box-shadow: 0 8px 16px var(--secundary-400); 
 }
 
 .img__home {
@@ -55,13 +49,13 @@ body{
     margin-right: 150px;     
     float: right;  
     border-radius: 10px;        
-    box-shadow: 0 8px 12px var(--tertiary-800); 
+    box-shadow: 0 8px 12px var(--secundary-800); 
     transition: transform 0.3s ease, box-shadow 0.3s ease; 
 }
 
 .img__home:hover {
     transform: translateY(-10px); 
-    box-shadow: 0 8px 16px var(--tertiary-600); 
+    box-shadow: 0 8px 16px var(--secundary-600); 
 }
 
 .btn__home {
@@ -80,6 +74,6 @@ body{
 
 
 .btn__home:hover {
-    background-color: var(--secundary-600);
+    background-color: var(--secundary-400);
     transform: translateY(-3px); 
 }
