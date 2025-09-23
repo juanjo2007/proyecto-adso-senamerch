@@ -12,10 +12,12 @@ html {
 }
 
 body {
-  background-color: var(--primary-950);
+  background-color: var(--primary-100);
   font-family: var(--font-primary);
+  color: var(--black);
+  padding: 0;
+  margin: 0;
 }
-
 
 /* 1. Contenedor Principal */
 /* .container {
