@@ -10,6 +10,8 @@
 /* Importaciones de SenaMerch Juan Jose */
 @import url('components/navbar.css');
 @import url('components/navbar_register.css');
+@import url('components/navbar_login.css');
+@import url('components/navbar_contact.css');
 @import url('components/footer.css');
 @import url('components/forms.css');
 @import url('components/add_adress.css');
