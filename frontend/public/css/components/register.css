@@ -1,14 +1,3 @@
-/* body {
-  background-color: var(--primary-100);
-  font-family: var(--font-primary);
-  min-height: 100vh;
-  display: flex;
-  justify-content: center;
-  align-items: center; 
-  margin: 0;
-  margin-top: 7.1rem;
-} */
-
 .form-container {
   margin-top: 30px;
   margin: 50px 50px 50px 50px;
@@ -19,7 +8,7 @@
   max-width: 500px;
   max-height: auto;
   margin-top: 5px; 
-  padding: 20px;
+  padding: var(--padding-top) var(--padding-right) var(--padding-bottom) var(--padding-left);
   background-color: var(--white);
   border-radius: 1.2rem;
   box-shadow: 0 4px 12px rgba(0,0,0,0.08);
@@ -27,7 +16,7 @@
 }
 
 .form__title {
-   margin-top: 0.5rem; 
+  margin-top: 0.5rem; 
   text-align: center;
   font-size: var(--fs-md);
   color: var(--black);
@@ -44,7 +33,7 @@
 
 .form__input {
   width: 100%;
-  padding: 0.8rem 1.2rem;
+  padding: var(--padding-top) var(--padding-right) var(--padding-bottom) var(--padding-left);
   margin-top: 0.4rem;
   border: 1px solid var(--gray-200);
   border-radius: 0.6rem;
@@ -82,7 +71,7 @@ a:hover {
 
 .form__button {
   width: 100%;
-  padding: 1rem;
+  padding: var(--button-padding-top) var(--button-padding-right) var(--button-padding-bottom) var(--button-padding-left);
   margin-top: 2.4rem;
   font-size: var(--fs-sm);
   font-weight: bold;
@@ -104,9 +93,56 @@ a:hover {
   transform: translateY(0);
 }
 
-@media (max-width < 768px) {
-  body {
-    align-items: flex-start; 
-    padding-top: 4rem;       
+@media (max-width: 1024px) {
+  .form-container {
+    margin: 40px auto;      /* Centrado horizontal */
+    margin-left: auto;      /* Elimina el fijo de 475px */
+  }
+
+  .form-content {
+    max-width: 90%;         /* Se adapta a pantallas medianas */
+    padding: var(--padding-top) var(--padding-right) var(--padding-bottom) var(--padding-left);
+  }
+}
+
+@media (max-width: 768px) {
+  .form-container {
+    margin: 30px auto;      /* Más compacto en tablets */
+    padding: 0 1rem;
+  }
+
+  .form-content {
+    max-width: 95%;
+    border-radius: 0.8rem;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.06);
+  }
+
+  .form__title {
+    font-size: var(--fs-sm);  /* Ajuste de texto */
+  }
+
+  .form__button {
+    font-size: var(--fs-xs);
+  }
+}
+
+@media (max-width: 480px) {
+  .form-container {
+    margin: 20px auto;
+    padding: 0 0.8rem;
+  }
+
+  .form-content {
+    max-width: 100%;         /* Usa todo el ancho en móvil */
+    padding: 1rem;
+    border-radius: 0.6rem;
+  }
+
+  .form__input {
+    padding: 0.6rem 0.8rem;  /* Inputs más compactos */
+  }
+
+  .form__button {
+    padding: 0.8rem;
   }
 }

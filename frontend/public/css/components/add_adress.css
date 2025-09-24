@@ -4,7 +4,7 @@
   margin-top: 30px;
   margin: 50px 50px 50px 50px;
   margin-left: 475px;
-  padding: 20px;
+  padding: var(--padding-top) var(--padding-right) var(--padding-bottom) var(--padding-left);
   background-color: var(--white);
   border-radius: 1.2rem;
   box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
@@ -20,7 +20,7 @@
 
 .formulario__input {
   width: 100%;
-  padding: 1.2rem;
+  padding: var(--padding-top) var(--padding-right) var(--padding-bottom) var(--padding-left);
   margin-bottom: 1rem;
   border: 1px solid #ccc;
   border-radius: 4px;
@@ -29,9 +29,47 @@
   font-family: var(--font-primary);
 }
 
-@media (min-width: 768px) {
+@media (max-width: 1024px) {
   .direction-content {
-    padding: 2.5rem 3rem;
-    max-width: 500px;
+    margin: 40px auto; /* Centrado en pantallas medianas */
+    margin-left: auto; /* Elimina el margen fijo */
+    max-width: 90%;
+    padding: var(--padding-top) var(--padding-right) var(--padding-bottom) var(--padding-left);
+  }
+}
+
+@media (max-width: 768px) {
+  .direction-content {
+    margin: 30px auto; /* Centrado en tablets */
+    max-width: 95%;
+    border-radius: 0.8rem;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.06);
+    padding: calc(var(--padding-top) - 4px) calc(var(--padding-right) - 4px)
+             calc(var(--padding-bottom) - 4px) calc(var(--padding-left) - 4px);
+  }
+
+  .direction-content h2 {
+    font-size: calc(var(--fs-xs) + 1px); /* Texto un poco más grande en tablets */
+  }
+
+  .formulario__input {
+    font-size: var(--fs-xs);
+  }
+}
+
+@media (max-width: 480px) {
+  .direction-content {
+    margin: 20px auto; /* Centrado completo en móviles */
+    max-width: 100%;
+    padding: 1rem; /* Paddings más compactos para pantallas muy pequeñas */
+    border-radius: 0.6rem;
+  }
+
+  .direction-content h2 {
+    font-size: var(--fs-xs);
+  }
+
+  .formulario__input {
+    padding: 0.6rem 0.8rem; /* Inputs más compactos */
   }
 }
