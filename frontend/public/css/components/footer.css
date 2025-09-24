@@ -3,18 +3,19 @@ body {
   height: 100%;
   margin: 0;
   display: flex;
-  flex-direction: column; /* header → main → footer */
+  flex-direction: column;   /* header → main → footer */
 }
 
 main {
-  flex: 1;                /* Ocupa todo el espacio restante */
-  display: flex;          /* opcional, solo si necesitas flex interno */
-  flex-direction: column; /* opcional */
+  flex: 1;                   /* Ocupa todo el espacio restante */
+  display: flex;             /* opcional, solo si necesitas flex interno */
+  flex-direction: column;    /* opcional */
 }
 
+/* ================== FOOTER ================== */
 .footer-container {
   background-color: var(--secundary-700);
-  padding: 0.5rem 1rem; 
+  padding: var(--gap-xs) var(--gap-sm);   /* usa variables para consistencia */
   font-family: var(--font-primary);
   position: relative;
   bottom: 0;
@@ -25,8 +26,9 @@ main {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  max-width: 1200px;  
+  max-width: 1200px;
   margin: auto;
+  gap: var(--gap-sm);        /* separación flexible en desktop */
 }
 
 .footer-container__text {
@@ -36,7 +38,7 @@ main {
 
 .footer-container__social {
   display: flex;
-  gap: 1rem;
+  gap: var(--gap-sm);        /* separación entre íconos */
 }
 
 .footer-container__icon img {
@@ -53,7 +55,7 @@ main {
 @media (max-width: 768px) {
   .footer-container__container {
     flex-direction: column;
-    gap: 0.8rem;
+    gap: var(--gap-xs);      /* menos espacio en móvil */
     text-align: center;
   }
 }

@@ -1,9 +1,7 @@
+/* ================== DIRECTION CONTENT ================== */
 .direction-content {
-  max-width: 500px;
-  max-height: auto;
-  margin-top: 30px;
-  margin: 50px 50px 50px 50px;
-  margin-left: 475px;
+  max-width: 50rem; /* ~500px, controlado */
+  margin: var(--gap-xl) auto; /* Centrado horizontal y separación vertical */
   padding: var(--padding-top) var(--padding-right) var(--padding-bottom) var(--padding-left);
   background-color: var(--white);
   border-radius: 1.2rem;
@@ -13,60 +11,61 @@
 
 .direction-content h2 {
   text-align: center;
-  margin-bottom: 1.6rem;
-  font-size: var(--fs-xs);
+  margin-bottom: var(--gap-md); /* espacio consistente antes del formulario */
+  font-size: var(--fs-sm);      /* ligeramente más legible que xs */
   font-family: var(--font-primary);
 }
 
 .formulario__input {
   width: 100%;
   padding: var(--padding-top) var(--padding-right) var(--padding-bottom) var(--padding-left);
-  margin-bottom: 1rem;
-  border: 1px solid #ccc;
-  border-radius: 4px;
+  margin-bottom: var(--gap-sm);
+  border: 1px solid var(--gray-200);
+  border-radius: 0.6rem;
   box-sizing: border-box;
   font-size: var(--fs-xs);
   font-family: var(--font-primary);
 }
 
+/* ================== MEDIA QUERIES ================== */
+
+/* Laptops medianas */
 @media (max-width: 1024px) {
   .direction-content {
-    margin: 40px auto; /* Centrado en pantallas medianas */
-    margin-left: auto; /* Elimina el margen fijo */
     max-width: 90%;
-    padding: var(--padding-top) var(--padding-right) var(--padding-bottom) var(--padding-left);
+    margin: var(--gap-lg) auto;
   }
 }
 
+/* Tablets */
 @media (max-width: 768px) {
   .direction-content {
-    margin: 30px auto; /* Centrado en tablets */
     max-width: 95%;
+    margin: var(--gap-md) auto;
     border-radius: 0.8rem;
     box-shadow: 0 2px 8px rgba(0,0,0,0.06);
-    padding: calc(var(--padding-top) - 4px) calc(var(--padding-right) - 4px)
-             calc(var(--padding-bottom) - 4px) calc(var(--padding-left) - 4px);
+    padding: calc(var(--padding-top) - 4px)
+             calc(var(--padding-right) - 4px)
+             calc(var(--padding-bottom) - 4px)
+             calc(var(--padding-left) - 4px);
   }
 
   .direction-content h2 {
-    font-size: calc(var(--fs-xs) + 1px); /* Texto un poco más grande en tablets */
-  }
-
-  .formulario__input {
     font-size: var(--fs-xs);
   }
 }
 
+/* Móviles */
 @media (max-width: 480px) {
   .direction-content {
-    margin: 20px auto; /* Centrado completo en móviles */
     max-width: 100%;
-    padding: 1rem; /* Paddings más compactos para pantallas muy pequeñas */
+    margin: var(--gap-sm) auto;
+    padding: 1rem; /* padding más compacto */
     border-radius: 0.6rem;
   }
 
   .direction-content h2 {
-    font-size: var(--fs-xs);
+    font-size: var(--fs-xxs);
   }
 
   .formulario__input {
