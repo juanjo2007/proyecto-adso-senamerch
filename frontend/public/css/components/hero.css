@@ -60,8 +60,8 @@
 .btn__home {
   display: inline-block;
   padding: var(--button-padding-top) var(--button-padding-right) var(--button-padding-bottom) var(--button-padding-left);
-  margin-left: 200px; 
-  margin-top: -65px;     
+  margin-left: 210px; 
+  margin-top: 2rem;     
   background-color: var(--secundary-800); 
   color: var(--white);              
   text-decoration: none; 

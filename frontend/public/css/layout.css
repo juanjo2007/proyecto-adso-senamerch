@@ -2,20 +2,28 @@
 
 /* Distribución general (fondo del body, display, flexbox, grid, alturas, anchos, etc.). */
 
+/* ===================== LAYOUT BASE ===================== */
 html {
     margin: 0;
+    padding: 0;
+    height: 100%;
     box-sizing: border-box;
-    font-size: 62.5%;
+    font-size: 62.5%; 
 }
-*, *:before, *:after {
+
+*, *::before, *::after {
     box-sizing: inherit;
+    margin: 0;
+    padding: 0;
 }
 
 body {
-  background-color: var(--primary-100);
-  font-family: var(--font-primary);
+    background-color: var(--primary-100);
+    font-family: var(--font-primary);
+    font-size: var(--fs-xs); /* 🔹 Tamaño base uniforme en todo el sitio */
+    line-height: 1.5;
+    height: 100%;
 }
-
 
 /* 1. Contenedor Principal */
 /* .container {

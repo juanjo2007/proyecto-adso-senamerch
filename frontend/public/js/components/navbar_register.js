@@ -2,7 +2,7 @@ document.addEventListener("DOMContentLoaded", function(){
     const navbarElement = document.querySelector(".navbar-container");
 
     if(navbarElement){
-        fetch("/frontend/public/views/components/navbar.html")
+        fetch("/frontend/public/views/components/navbar_register.html")
         .then(response => response.text())
         .then(data => {
             navbarElement.innerHTML = data;
@@ -10,7 +10,7 @@ document.addEventListener("DOMContentLoaded", function(){
 
         //Obtener la ruta actual
         //Si no hay un archivo específico se asume que es el index
-        const currentPage = window.location.pathname.split("/").pop() || "index.html";
+        const currentPage = window.location.pathname.split("/").pop() || "login.html";
 
         //Selecciona todos los enlaces del navbar que usaran la clase personalizada
         const navLinks = navbarElement.querySelectorAll(".navbar__link");
