@@ -1,4 +1,4 @@
-// Datos de prueba
+// ===================== Datos de prueba =====================
 const usuarios = [
   { id: 1, nombre: "Julian gil", correo: "juliangil@gmail.com", tipo: "Común", depto: "Risaralda", direccion: "Carrera 10#34-54" },
   { id: 2, nombre: "Sebastian valencia", correo: "juliangil@gmail.com", tipo: "Común", depto: "Risaralda", direccion: "Avenida 10 #34-36" },
@@ -10,11 +10,12 @@ const usuarios = [
   { id: 8, nombre: "Yuli saenz", correo: "juliangil@gmail.com", tipo: "Común", depto: "Caldas", direccion: "Avenida 10 #34-36" }
 ];
 
-// Renderizar usuarios
+// ===================== Renderizar usuarios =====================
 const usuariosBody = document.getElementById("usuariosBody");
 
 function mostrarUsuarios(lista) {
   usuariosBody.innerHTML = "";
+
   lista.forEach(u => {
     const fila = `
       <tr>
@@ -24,22 +25,33 @@ function mostrarUsuarios(lista) {
         <td>${u.tipo}</td>
         <td>${u.depto}</td>
         <td>${u.direccion}</td>
-        <td><button class="btn-disable">Deshabilitar</button></td>
+        <td><button class="disable-btn">Deshabilitar</button></td>
       </tr>
     `;
     usuariosBody.innerHTML += fila;
   });
+
+  // === Agregar evento a cada botón después de renderizar ===
+  document.querySelectorAll(".disable-btn").forEach(btn => {
+    btn.addEventListener("click", () => {
+      btn.textContent = "Deshabilitado"; // cambia el texto
+      btn.disabled = true;              // lo bloquea (gris)
+    });
+  });
 }
 
+// Mostrar todos los usuarios al inicio
 mostrarUsuarios(usuarios);
 
-// Búsqueda
+// ===================== Búsqueda =====================
 document.getElementById("searchBtn").addEventListener("click", () => {
   const valor = document.getElementById("searchInput").value.toLowerCase();
+
   const filtrados = usuarios.filter(u =>
-    u.nombre.toLowerCase().includes(valor) || 
+    u.nombre.toLowerCase().includes(valor) ||
     u.correo.toLowerCase().includes(valor) ||
     u.depto.toLowerCase().includes(valor)
   );
+
   mostrarUsuarios(filtrados);
 });

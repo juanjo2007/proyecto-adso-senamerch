@@ -5,19 +5,13 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>SENA MERCH - Carrito</title>
 
-  <!-- Variables globales -->
-  <link rel="stylesheet" href="../css/components/variables.css">
-  <!-- Estilos base -->
-  <link rel="stylesheet" href="../css/main.css">
-
-  <!-- Estilos del carrito -->
-  <link rel="stylesheet" href="../css/components/carrito.css">
+  <!-- Variables y CSS -->
+  
+  <link rel="stylesheet" href="/frontend/public/css/main.css">
+  <link rel="stylesheet" href="/frontend/public/css/components/cart.css">
 </head>
 <body>
 
-  
-
-  <!-- ====== CARRITO ====== -->
   <main class="cart">
     <h2 class="cart__title">Tu Carrito de compras</h2>
 
@@ -38,25 +32,26 @@
         </thead>
         <tbody id="cart-products">
           <tr>
-            <td>Tomate</td>
-            <td>Fruta</td>
-            <td>Día del pedido</td>
-            <td>$6.500 * Kilo</td>
-            <td>(2) Kilos</td>
-            <td class="cart__total">$13.000</td>
-            <td><button class="cart__btn-remove">❌</button></td>
+            <td data-label="Productos">Tomate</td>
+            <td data-label="Descripción">Fruta</td>
+            <td data-label="Fecha">Día del pedido</td>
+            <td data-label="Precio + Medida">$6.500 * Kilo</td>
+            <td data-label="Cantidad">(2) Kilos</td>
+            <td data-label="Total" class="cart__total">$13.000</td>
+            <td data-label="Cancelar"><button class="cart__btn-remove">❌</button></td>
           </tr>
           <tr>
-            <td>Banano</td>
-            <td>Fruta</td>
-            <td>Día del pedido</td>
-            <td>$3.000 * Kilo</td>
-            <td>(3) Kilos</td>
-            <td class="cart__total">$9.000</td>
-            <td><button class="cart__btn-remove">❌</button></td>
+            <td data-label="Productos">Banano</td>
+            <td data-label="Descripción">Fruta</td>
+            <td data-label="Fecha">Día del pedido</td>
+            <td data-label="Precio + Medida">$3.000 * Kilo</td>
+            <td data-label="Cantidad">(3) Kilos</td>
+            <td data-label="Total" class="cart__total">$9.000</td>
+            <td data-label="Cancelar"><button class="cart__btn-remove">❌</button></td>
           </tr>
         </tbody>
       </table>
+
       <div class="cart__summary">
         <span>Total a pagar:</span>
         <strong id="cart-products-total">$22.000</strong>
@@ -80,30 +75,30 @@
         </thead>
         <tbody id="cart-transport">
           <tr>
-            <td>Jorge Galvis</td>
-            <td>Día de entrega</td>
-            <td>2.500 * (1)KM</td>
-            <td>3.000 * (1)KM</td>
-            <td>(2) Kilómetros</td>
-            <td class="cart__total">$11.000</td>
-            <td><button class="cart__btn-remove">❌</button></td>
+            <td data-label="Transportista">Jorge Galvis</td>
+            <td data-label="Fecha">Día de entrega</td>
+            <td data-label="Costo + distancia">2.500 * (1)KM</td>
+            <td data-label="Gasolina">3.000 * (1)KM</td>
+            <td data-label="Distancia recorrida">(2) Kilómetros</td>
+            <td data-label="Total" class="cart__total">$11.000</td>
+            <td data-label="Cancelar"><button class="cart__btn-remove">❌</button></td>
           </tr>
         </tbody>
       </table>
+
       <div class="cart__summary">
         <span>Total a pagar:</span>
         <strong id="cart-transport-total">$11.000</strong>
       </div>
     </section>
 
-    <!-- Botones -->
+    <!-- Botones de acción -->
     <div class="cart__actions">
-      <button class="cart__btn cart__btn--continue">⏮ Continuar comprando</button>
-      <button class="cart__btn cart__btn--confirm">Confirmar pedido</button>
+      <button class="cart__button cart__button--secondary">⏮ Continuar comprando</button>
+      <button class="cart__button cart__button--primary cart__btn--confirm">Confirmar pedido</button>
     </div>
   </main>
 
-  <!-- Script del carrito -->
- <script src="js/pages/carrito.js"></script>
+  <script src="js/pages/cart.js"></script>
 </body>
 </html>

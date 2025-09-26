@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Productos</title>
+<link rel="stylesheet" href="/frontend/public/css/reset.css">
+<link rel="stylesheet" href="/frontend/public/css/variables.css">
+<link rel="stylesheet" href="/frontend/public/css/components/products.css">
+<link rel="stylesheet" href="/frontend/public/css/main.css">
+</head>
+<body>
+<main class="products">
+    <h1 class="products__title">Productos</h1>
+
+    <!-- 🔍 Barra de búsqueda -->
+    <div class="products__search">
+        <input 
+        type="text" 
+        class="products__search-input" 
+        placeholder="Buscar Productos"
+        >
+        <span class="products__search-icon">🔍</span>
+    </div>
+    <p class="products__search-text">Encontrarás con facilidad lo que buscas.</p>
+
+    <!-- 📦 Tabla -->
+    <div class="products__table-wrapper">
+        <div class="products__table">
+        <!-- Encabezado -->
+        <div class="products__row products__row--header">
+            <span class="products__cell">#Producto</span>
+            <span class="products__cell">Stock</span>
+            <span class="products__cell">#Usuario</span>
+            <span class="products__cell">Tienda</span>
+            <span class="products__cell">Acción</span>
+        </div>
+
+        <!-- ✅ Filas con datos -->
+        <div class="products__row">
+            <span class="products__cell">#1</span>
+            <span class="products__cell">Común</span>
+            <span class="products__cell">#1</span>
+            <span class="products__cell">#1</span>
+            <button class="products__btn">Deshabilitar</button>
+        </div>
+        <div class="products__row">
+            <span class="products__cell products__cell--muted">#2</span>
+            <span class="products__cell">Común</span>
+            <span class="products__cell products__cell--muted">#2</span>
+            <span class="products__cell products__cell--muted">#2</span>
+            <button class="products__btn">Deshabilitar</button>
+        </div>
+        <div class="products__row">
+            <span class="products__cell">#3</span>
+            <span class="products__cell">Común</span>
+            <span class="products__cell">#3</span>
+            <span class="products__cell">#3</span>
+            <button class="products__btn">Deshabilitar</button>
+        </div>
+        <div class="products__row">
+            <span class="products__cell products__cell--muted">#4</span>
+            <span class="products__cell">Transportador</span>
+            <span class="products__cell products__cell--muted">#4</span>
+            <span class="products__cell products__cell--muted">#4</span>
+            <button class="products__btn">Deshabilitar</button>
+        </div>
+        <div class="products__row">
+            <span class="products__cell">#5</span>
+            <span class="products__cell">Común</span>
+            <span class="products__cell">#5</span>
+            <span class="products__cell">#5</span>
+            <button class="products__btn">Deshabilitar</button>
+        </div>
+        <div class="products__row">
+            <span class="products__cell products__cell--muted">#6</span>
+            <span class="products__cell">Transportador</span>
+            <span class="products__cell products__cell--muted">#6</span>
+            <span class="products__cell products__cell--muted">#6</span>
+            <button class="products__btn">Deshabilitar</button>
+        </div>
+        <div class="products__row">
+            <span class="products__cell">#7</span>
+            <span class="products__cell">Común</span>
+            <span class="products__cell">#7</span>
+            <span class="products__cell">#7</span>
+            <button class="products__btn">Deshabilitar</button>
+        </div>
+        <div class="products__row">
+            <span class="products__cell products__cell--muted">#8</span>
+            <span class="products__cell">Común</span>
+            <span class="products__cell products__cell--muted">#8</span>
+            <span class="products__cell products__cell--muted">#8</span>
+            <button class="products__btn">Deshabilitar</button>
+        </div>
+        </div>
+    </div>
+</main>
+
+<script src="/frontend/public/js/components/products.js"></script>
+</body>
+</html>

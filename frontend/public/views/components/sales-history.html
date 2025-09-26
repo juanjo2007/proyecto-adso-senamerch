@@ -1,40 +1,46 @@
-<!DOCTYPE html>
-<html lang="es">
+<!DOCTYPE html> <!-- Define el tipo de documento como HTML5 -->
+<html lang="es"> <!-- Etiqueta raíz del documento, idioma: español -->
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>SENA MERCH - Historial de Ventas</title>
-    <link rel="stylesheet" href="../css/themes/variables.css">
-    <link rel="stylesheet" href="../css/layout.css">
-    <link rel="stylesheet" href="../css/main.css">
-    <link rel="stylesheet" href="../css/components/navbar.css">
-    <link rel="stylesheet" href="../css/components/footer.css">
-    <link rel="stylesheet" href="../css/components/sales-history.css">
+    <meta charset="UTF-8"> <!-- Configura la codificación de caracteres como UTF-8 -->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- Permite que el diseño sea responsive en dispositivos móviles -->
+    <title>SENA MERCH - Historial de Ventas</title> <!-- Título de la pestaña del navegador -->
+
+    <!-- Enlaces a los archivos CSS para estilos globales y componentes -->
+    <link rel="stylesheet" href="../css/themes/variables.css"> <!-- Variables globales de estilo -->
+    <link rel="stylesheet" href="../css/layout.css"> <!-- Estilos generales del layout -->
+    <link rel="stylesheet" href="/frontend/public/css/main.css"> <!-- Estilos principales -->
+    <link rel="stylesheet" href="../css/components/navbar.css"> <!-- Estilos del navbar -->
+    <link rel="stylesheet" href="../css/components/footer.css"> <!-- Estilos del footer -->
+    <link rel="stylesheet" href="/frontend/public/css/sales-history.css"> <!-- Estilos del historial de ventas -->
 </head>
-<body>
+<body> <!-- Cuerpo del documento -->
 
-   
+    <main class="main-content"> <!-- Contenedor principal de la página -->
+        <div class="page-container"> <!-- Contenedor de la página -->
+            <div class="sales-history"> <!-- Bloque principal: Historial de ventas -->
 
-    <main class="main-content">
-        <div class="page-container">
-            <div class="sales-history">
+                <!-- Encabezado de la sección -->
                 <div class="sales-history__header">
-                    <h2 class="sales-history__title">Historial de Ventas</h2>
+                    <h2 class="sales-history__title">Historial de Ventas</h2> <!-- Título de la sección -->
                 </div>
+
+                <!-- Contenedor de la tabla -->
                 <div class="sales-history__table-container">
-                    <table class="sales-history__table">
-                        <thead class="sales-history__table-head">
-                            <tr>
-                                <th class="sales-history__table-header">#venta</th>
-                                <th class="sales-history__table-header">Fecha</th>
-                                <th class="sales-history__table-header">N°venta</th>
-                                <th class="sales-history__table-header">Cliente</th>
-                                <th class="sales-history__table-header">Total</th>
-                                <th class="sales-history__table-header">Método de pago</th>
-                                <th class="sales-history__table-header"></th>
+                    <table class="sales-history__table"> <!-- Tabla principal -->
+                        <thead class="sales-history__table-head"> <!-- Cabecera de la tabla -->
+                            <tr> <!-- Fila de la cabecera -->
+                                <th class="sales-history__table-header">#venta</th> <!-- Número de venta -->
+                                <th class="sales-history__table-header">Fecha</th> <!-- Fecha -->
+                                <th class="sales-history__table-header">N°venta</th> <!-- Número de venta (código) -->
+                                <th class="sales-history__table-header">Cliente</th> <!-- Cliente -->
+                                <th class="sales-history__table-header">Total</th> <!-- Total de la compra -->
+                                <th class="sales-history__table-header">Método de pago</th> <!-- Método de pago -->
+                                <th class="sales-history__table-header"></th> <!-- Columna vacía para botones -->
                             </tr>
                         </thead>
-                        <tbody class="sales-history__table-body">
+
+                        <tbody class="sales-history__table-body"> <!-- Cuerpo de la tabla -->
+                            <!-- Primera fila -->
                             <tr class="sales-history__table-row">
                                 <td class="sales-history__table-data">2</td>
                                 <td class="sales-history__table-data">Fecha</td>
@@ -43,9 +49,11 @@
                                 <td class="sales-history__table-data">Total</td>
                                 <td class="sales-history__table-data">Método de pago</td>
                                 <td class="sales-history__table-data">
-                                    <button class="sales-history__export-button">Exportar PDF</button>
+                                    <button class="sales-history__export-button">Exportar PDF</button> <!-- Botón de exportación -->
                                 </td>
                             </tr>
+
+                            <!-- Segunda fila -->
                             <tr class="sales-history__table-row">
                                 <td class="sales-history__table-data">3</td>
                                 <td class="sales-history__table-data">Fecha</td>
@@ -57,6 +65,8 @@
                                     <button class="sales-history__export-button">Exportar PDF</button>
                                 </td>
                             </tr>
+
+                            <!-- Tercera fila -->
                             <tr class="sales-history__table-row">
                                 <td class="sales-history__table-data">4</td>
                                 <td class="sales-history__table-data">Fecha</td>
@@ -68,6 +78,8 @@
                                     <button class="sales-history__export-button">Exportar PDF</button>
                                 </td>
                             </tr>
+
+                            <!-- Cuarta fila -->
                             <tr class="sales-history__table-row">
                                 <td class="sales-history__table-data">5</td>
                                 <td class="sales-history__table-data">Fecha</td>
@@ -79,6 +91,8 @@
                                     <button class="sales-history__export-button">Exportar PDF</button>
                                 </td>
                             </tr>
+
+                            <!-- Quinta fila -->
                             <tr class="sales-history__table-row">
                                 <td class="sales-history__table-data">6</td>
                                 <td class="sales-history__table-data">Fecha</td>
@@ -90,6 +104,8 @@
                                     <button class="sales-history__export-button">Exportar PDF</button>
                                 </td>
                             </tr>
+
+                            <!-- Sexta fila -->
                             <tr class="sales-history__table-row">
                                 <td class="sales-history__table-data">7</td>
                                 <td class="sales-history__table-data">Fecha</td>
@@ -104,17 +120,18 @@
                         </tbody>
                     </table>
                 </div>
+
+                <!-- Botón para volver a la tienda -->
                 <div class="sales-history__store-button-wrapper">
-                    <a href="#" class="sales-history__store-link">
-                        <button class="sales-history__store-button">Tienda</button>
+                    <a href="#" class="sales-history__store-link"> <!-- Enlace que dirige a la tienda -->
+                        <button class="sales-history__store-button">Tienda</button> <!-- Botón Tienda -->
                     </a>
                 </div>
             </div>
         </div>
     </main>
 
-
-
+    <!-- Script principal -->
     <script src="../js/script.js"></script>
 </body>
 </html>

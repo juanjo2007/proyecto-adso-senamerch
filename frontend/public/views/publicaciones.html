@@ -1,77 +1,106 @@
-<!DOCTYPE html>
-<html lang="es">
+<!DOCTYPE html> <!-- Declare document as HTML5 -->
+<html lang="en"> <!-- Main language is English -->
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Publicaciones</title>
+  <meta charset="UTF-8"> <!-- Supports special characters -->
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- Responsive scaling -->
+  <title>Posts</title> <!-- Browser tab title -->
 
-  <!-- CSS Global -->
+  <!-- ====== STYLESHEETS ====== -->
+  <!-- Global variables (colors, fonts, etc.) -->
   <link rel="stylesheet" href="../assets/css/themes/variables.css">
+  <!-- Base styles -->
   <link rel="stylesheet" href="../css/main.css">
-  <link rel="stylesheet" href="../assets/css/components/publicaciones.css">
+  <!-- Specific styles for posts page -->
+  <link rel="stylesheet" href="../assets/css/components/posts.css">
 </head>
 <body>
-  <main class="publicaciones">
-    <!-- Título -->
-    <h1 class="publicaciones__titulo">Publicaciones</h1>
+  
+  <!-- ====== MAIN CONTAINER ====== -->
+  <main class="posts"> <!-- Main block for posts -->
+    
+    <!-- Page title -->
+    <h1 class="posts__title">Posts</h1>
 
-    <!-- Buscador -->
-    <div class="publicaciones__buscador">
-      <input type="text" id="searchInput" class="publicaciones__buscador-input" placeholder="Buscar Publicaciones">
-      <button class="publicaciones__buscador-btn">
-        <span>🔍</span>
+    <!-- ====== SEARCH BAR ====== -->
+    <div class="posts__search"> <!-- Search container -->
+      <input 
+        type="text" 
+        id="searchInput" 
+        class="posts__search-input" 
+        placeholder="Search Posts"> <!-- Search field -->
+      <button class="posts__search-btn"> <!-- Search button -->
+        <span>🔍</span> <!-- Icon inside button -->
       </button>
     </div>
-    <p class="publicaciones__buscador-texto">Encontrarás con facilidad lo que buscas.</p>
+    <!-- Helper text under search bar -->
+    <p class="posts__search-text">Find easily what you’re looking for.</p>
 
-    <!-- Tabla -->
-    <div class="publicaciones__tabla">
-      <div class="publicaciones__tabla-header">
-        <span>#Publicación</span>
-        <span>#Usuario</span>
-        <span>#Tienda</span>
-        <span>Acción</span>
+    <!-- ====== POSTS TABLE (using divs instead of <table>) ====== -->
+    <div class="posts__table"> <!-- Table container -->
+
+      <!-- Table header -->
+      <div class="posts__table-header">
+        <span>#Post</span>
+        <span>#User</span>
+        <span>#Store</span>
+        <span>Action</span>
       </div>
 
-      <div class="publicaciones__tabla-body" id="publicacionesBody">
-        <!-- Filas de publicaciones -->
-        <div class="publicaciones__tabla-row">
+      <!-- Dynamic table body -->
+      <div class="posts__table-body" id="postsBody">
+        
+        <!-- Row 1 -->
+        <div class="posts__table-row">
           <span>#1</span><span>#1</span><span>#1</span>
-          <button class="publicaciones__btn">Deshabilitar</button>
+          <button class="posts__btn">Disable</button> <!-- Action button -->
         </div>
-        <div class="publicaciones__tabla-row">
+
+        <!-- Row 2 -->
+        <div class="posts__table-row">
           <span>#2</span><span>#2</span><span>#2</span>
-          <button class="publicaciones__btn">Deshabilitar</button>
+          <button class="posts__btn">Disable</button>
         </div>
-        <div class="publicaciones__tabla-row">
+
+        <!-- Row 3 -->
+        <div class="posts__table-row">
           <span>#3</span><span>#3</span><span>#3</span>
-          <button class="publicaciones__btn">Deshabilitar</button>
+          <button class="posts__btn">Disable</button>
         </div>
-        <div class="publicaciones__tabla-row">
+
+        <!-- Row 4 -->
+        <div class="posts__table-row">
           <span>#4</span><span>#4</span><span>#4</span>
-          <button class="publicaciones__btn">Deshabilitar</button>
+          <button class="posts__btn">Disable</button>
         </div>
-        <div class="publicaciones__tabla-row">
+
+        <!-- Row 5 -->
+        <div class="posts__table-row">
           <span>#5</span><span>#5</span><span>#5</span>
-          <button class="publicaciones__btn">Deshabilitar</button>
+          <button class="posts__btn">Disable</button>
         </div>
-        <div class="publicaciones__tabla-row">
+
+        <!-- Row 6 -->
+        <div class="posts__table-row">
           <span>#6</span><span>#6</span><span>#6</span>
-          <button class="publicaciones__btn">Deshabilitar</button>
+          <button class="posts__btn">Disable</button>
         </div>
-        <div class="publicaciones__tabla-row">
+
+        <!-- Row 7 -->
+        <div class="posts__table-row">
           <span>#7</span><span>#7</span><span>#7</span>
-          <button class="publicaciones__btn">Deshabilitar</button>
+          <button class="posts__btn">Disable</button>
         </div>
-        <div class="publicaciones__tabla-row">
+
+        <!-- Row 8 -->
+        <div class="posts__table-row">
           <span>#8</span><span>#8</span><span>#8</span>
-          <button class="publicaciones__btn">Deshabilitar</button>
+          <button class="posts__btn">Disable</button>
         </div>
-      </div>
-    </div>
+      </div> <!-- End table body -->
+    </div> <!-- End table -->
   </main>
 
-  <!-- JS -->
-  <script src="../js/publicaciones.js"></script>
+  <!-- ====== PAGE SCRIPT ====== -->
+  <script src="../js/posts.js"></script> <!-- JS for interactions -->
 </body>
 </html>

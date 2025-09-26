@@ -1,152 +1,142 @@
-/* Variables */
-:root {
-    --color-component-background: #f5f5dc; /* Un color beige claro */
-    --color-border: #ccc;
-    --color-button-primary: #8a8a8a; /* Gris oscuro para el encabezado */
-    --color-text-dark: #333;
-    --color-text-light: #fff;
-    --color-table-row-alternate: #e0e0e0; /* Gris claro para filas alternas */
-    --spacing-xs: 5px;
-    --spacing-sm: 10px;
-    --spacing-md: 20px;
-    --spacing-lg: 30px;
-    --border-radius-sm: 5px;
-    --border-radius-md: 8px;
-    --box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-    --font-size-title: 1.8rem;
-    --font-size-text-sm: 0.9rem;
-    --font-size-text-xs: 0.7rem;
-}
-
-/* Estilos generales del body y el contenedor principal */
+/* ================================
+   Estilos generales del body
+================================ */
 body {
-    font-family: sans-serif;
+    font-family: 'Inter', sans-serif; /* Fuente principal */
     margin: 0;
     padding: 0;
-    background-color: var(--color-component-background);
-    display: flex;
+    background-color: #f0ede5; /* Fondo claro */
+    display: flex; /* Centrado horizontal y vertical */
     justify-content: center;
     align-items: center;
-    height: 100vh;
+    height: 100vh; /* Ocupa toda la altura */
+    font-size: 1.6rem; /* Tamaño de fuente base */
 }
 
-/* B: sales-history */
+/* ================================
+   Bloque principal: sales-history
+================================ */
 .sales-history {
     width: 90%;
     max-width: 1000px;
-    margin: var(--spacing-lg) auto;
-    padding: var(--spacing-md);
-    background-color: var(--color-component-background);
-    border: 1px solid var(--color-border);
-    border-radius: var(--border-radius-md);
-    box-shadow: var(--box-shadow);
-    color: var(--color-text-dark);
+    margin: 30px auto;
+    padding: 12px 24px;
+    background-color: #f0ede5; /* Fondo claro */
+    border: 1px solid #BEBEBE; /* Borde gris */
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+    color: #262626; /* Texto oscuro */
 }
 
-/* E: header */
+/* ================================
+   Encabezado
+================================ */
 .sales-history__header {
     text-align: center;
-    margin-bottom: var(--spacing-md);
+    margin-bottom: 20px;
 }
 
-/* E: title */
 .sales-history__title {
-    font-size: var(--font-size-title);
+    font-size: 2.4rem; /* Tamaño grande */
     font-weight: bold;
+    color: #554439; /* Color primario oscuro */
 }
 
-/* E: table-container */
+/* ================================
+   Tabla
+================================ */
 .sales-history__table-container {
-    overflow-x: auto; /* Scroll horizontal en pantallas pequeñas */
-    border-radius: var(--border-radius-md);
-    border: 1px solid var(--color-border);
+    overflow-x: auto;
+    border-radius: 8px;
+    border: 1px solid #BEBEBE;
 }
 
-/* E: table */
 .sales-history__table {
     width: 100%;
     border-collapse: collapse;
-    min-width: 600px; /* Evita que se rompa en pantallas pequeñas */
+    min-width: 600px;
 }
 
-/* E: table-head */
 .sales-history__table-head {
-    background-color: var(--color-button-primary);
-    color: var(--color-text-light);
+    background-color: #a68c69; /* Color primario medio */
+    color: #fff; /* Texto blanco */
+    font-size: 1.4rem;
 }
 
-/* E: table-header */
 .sales-history__table-header {
-    padding: var(--spacing-xs) var(--spacing-xs);
+    padding: 5px 5px;
     text-align: left;
-    border-bottom: 2px solid var(--color-button-primary);
-    font-size: var(--font-size-text-sm);
+    border-bottom: 2px solid #a68c69;
+    font-size: 1.4rem;
     font-weight: bold;
-    color: var(--color-text-light);
-    white-space: nowrap; /* Evita quiebres de línea raros */
-}
-
-/* E: table-body */
-.sales-history__table-body .sales-history__table-row:nth-child(even) {
-    background-color: var(--color-table-row-alternate);
-}
-
-/* E: table-data */
-.sales-history__table-data {
-    padding: var(--spacing-xs) var(--spacing-xs);
-    border-bottom: 1px solid var(--color-border);
-    font-size: var(--font-size-text-sm);
-    color: var(--color-text-dark);
+    color: #fff;
     white-space: nowrap;
 }
 
-/* E: export-button */
+.sales-history__table-body .sales-history__table-row:nth-child(even) {
+    background-color: #D4D4D4; /* Alterna colores de fila */
+}
+
+.sales-history__table-data {
+    padding: 5px 5px;
+    border-bottom: 1px solid #BEBEBE;
+    font-size: 1.4rem;
+    color: #262626;
+    white-space: nowrap;
+}
+
+/* ================================
+   Botón Exportar (negro)
+================================ */
 .sales-history__export-button {
-    background-color: #000; /* Negro */
-    color: var(--color-text-light);
+    background-color: #000; /* Fondo negro */
+    color: #fff; /* Texto blanco */
     border: none;
-    border-radius: var(--border-radius-sm);
-    padding: var(--spacing-xs) var(--spacing-sm);
+    border-radius: 5px; /* Bordes redondeados pequeños */
+    padding: 12px 24px;
     cursor: pointer;
-    font-size: var(--font-size-text-xs);
+    font-size: 1.4rem;
     transition: background-color 0.3s ease;
     white-space: nowrap;
-    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+    box-shadow: 0 2px 4px rgba(0,0,0,0.2);
 }
 
 .sales-history__export-button:hover {
-    background-color: #333; /* Negro más claro en hover */
+    background-color: #333; /* Gris oscuro al pasar el mouse */
 }
 
-/* E: store-button-wrapper */
+/* Botón Tienda (verde destacado) */
 .sales-history__store-button-wrapper {
-    text-align: center; /* Centra el botón Tienda */
-    margin-top: var(--spacing-md);
+    text-align: center;
+    margin-top: 20px;
 }
 
-/* E: store-button */
 .sales-history__store-button {
-    background-color: #1e7b32; /* Verde como en la imagen */
-    color: var(--color-text-light);
+    background-color: #2bbc42; /* Verde principal */
+    color: #fff;
     border: none;
-    border-radius: 20px; /* Bordes más redondeados */
-    padding: 10px 30px; /* Tamaño del botón */
+    border-radius: 20px;
+    padding: 12px 24px;
     cursor: pointer;
-    font-size: 1.5rem; /* Texto grande */
+    font-size: 1.4rem;
     font-weight: bold;
     transition: background-color 0.3s ease;
-    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.3); /* Sombra */
+    box-shadow: 0 4px 6px rgba(0,0,0,0.3);
     display: inline-block;
 }
 
 .sales-history__store-button:hover {
-    background-color: #145a24; /* Verde más oscuro al pasar el mouse */
+    background-color: #1d9631; /* Verde más oscuro */
 }
 
-/* ====== RESPONSIVE ====== */
+/* ================================
+   Media Queries (Responsive)
+================================ */
+
+/* Tablets */
 @media (max-width: 768px) {
     .sales-history {
-        padding: var(--spacing-sm);
+        padding: 10px;
     }
 
     .sales-history__title {
@@ -158,16 +148,17 @@ body {
     }
 
     .sales-history__export-button {
-        width: 100%; /* Botón exportar ocupa todo el ancho */
-        margin-bottom: var(--spacing-sm);
+        width: 100%;
+        margin-bottom: 10px;
     }
 
     .sales-history__store-button {
-        width: 100%; /* Botón Tienda ocupa todo el ancho */
+        width: 100%;
         font-size: 1.2rem;
     }
 }
 
+/* Celulares */
 @media (max-width: 480px) {
     .sales-history__title {
         font-size: 1rem;
@@ -176,12 +167,12 @@ body {
     .sales-history__table-header,
     .sales-history__table-data {
         font-size: 0.8rem;
-        padding: var(--spacing-xs);
+        padding: 5px;
     }
 
     .sales-history__export-button,
     .sales-history__store-button {
         font-size: 0.9rem;
-        padding: var(--spacing-xs);
+        padding: 5px;
     }
 }
