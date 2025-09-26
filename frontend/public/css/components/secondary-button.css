@@ -3,10 +3,9 @@
   display: inline-flex;
   align-items: center;
   justify-content: center;
-  /* altura visual: 36px (4px menos que el primario de 40px) */
   font-size: 12px;
   line-height: 1;
-  padding: calc((36px - 12px) / 2) 12px; /* altura - fuente = padding vertical */
+  padding: calc((36px - 12px) / 2) 12px; 
   gap: 6px;
   font-family: var(--font-primary);
   border: none;
@@ -18,22 +17,17 @@
   white-space: nowrap;
   min-width: 0;
 }
-
-/* Iconos dentro del botón secundario */
 .btn--variant2__icon,
 .btn--variant2 img,
 .btn--variant2 svg {
-  width: 16px;   /* un poco más pequeño que el primario */
+  width: 16px;  
   height: 16px;
   display: block;
 }
-
-/* Variante secundaria del botón */
 .btn--variant2--secondary {
   background: var(--black);
   color: var(--white);
 }
-
 .btn--variant2--secondary:hover {
   background: var(--gray-950);
   transform: translateY(-2px);
@@ -43,14 +37,11 @@
   background: var(--gray-800);
   transform: translateY(0);
 }
-
-/* Responsive: pantallas pequeñas */
 @media (max-width: 480px) {
   .btn--variant2 {
     font-size: 11px;
-    padding: calc((32px - 11px) / 2) 10px; /* más compacto aún en móvil */
+    padding: calc((32px - 11px) / 2) 10px;
   }
-
   .btn--variant2__icon,
   .btn--variant2 img,
   .btn--variant2 svg {

@@ -18,12 +18,6 @@
     "image": "/frontend/public/assets/img/potato__image.jpg"
   },
   {
-    "id": "zanahoria",
-    "name": "Zanahoria",
-    "price": 2800,
-    "image": "/frontend/public/assets/img/carrot_image.jpg"
-  },
-  {
     "id": "lechuga",
     "name": "Lechuga",
     "price": 1800,
@@ -33,6 +27,12 @@
     "id": "pimenton",
     "name": "Pimenton",
     "price": 3500,
+    "image": "/frontend/public/assets/img/pimenton_image.jpg"
+  },
+  {
+    "id": "zanahoria",
+    "name": "Zanahoria",
+    "price": 2800,
     "image": "/frontend/public/assets/img/pimenton_image.jpg"
   }
 ]
