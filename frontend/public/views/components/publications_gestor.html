@@ -1,19 +1,38 @@
-<main class="post">
-  <div class="post__container">
-    <h1 class="post__title">Crea una publicación</h1>
+<section class="create-post">
+  <h2 class="create-post__title">Crear publicación</h2>
 
-    <label class="post__label">Nombre de la imagen</label>
-
-    <div class="post__image">FOTO</div>
-
-    <label class="post__label">Descripción</label>
-
-    <div class="post__search">
-      <input class="post__input" type="text" placeholder="Producto de inventario">
-      <button class="post__search-button">🔍</button>
+  <form class="create-post__form">
+    <!-- Campo: título -->
+    <div class="create-post__field">
+      <label class="create-post__label">Título de la publicación</label>
+      <input type="text" class="create-post__input create-post__input--text" placeholder="Escribe un título atractivo" required>
     </div>
 
-    <button class="post__submit">Publicar</button>
-  </div>
-</main>
-<footer></footer>
+    <!-- Campo: descripción -->
+    <div class="create-post__field">
+      <label class="create-post__label">Descripción</label>
+      <textarea class="create-post__textarea" placeholder="Describe tu publicación" required></textarea>
+    </div>
+
+    <!-- Campo: imagen -->
+    <div class="create-post__field">
+      <label class="create-post__label">Subir imagen</label>
+      <input type="file" class="create-post__input create-post__input--file" accept="image/*" required>
+    </div>
+
+    <!-- Campo: categoría -->
+    <div class="create-post__field">
+      <label class="create-post__label">Categoría</label>
+      <select class="create-post__select" required>
+        <option value="" disabled selected>Selecciona una categoría</option>
+        <option value="tecnologia">Tecnología</option>
+        <option value="hogar">Hogar</option>
+        <option value="moda">Moda</option>
+        <option value="alimentos">Alimentos</option>
+      </select>
+    </div>
+
+    <!-- Botón enviar -->
+    <button type="submit" class="btn btn--primary">Publicar</button>
+  </form>
+</section>
