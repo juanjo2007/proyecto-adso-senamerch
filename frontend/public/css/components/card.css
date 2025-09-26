@@ -1,20 +1,22 @@
 .card-container {
   display: grid;
-  gap: 18px;
+  gap: var(--gap-md); /* Usar spacing global */
   width: 100%;
   max-width: 1200px;
   margin: 0 auto;
-  padding: 0 10px;
+  padding: 0 var(--padding-right);
   box-sizing: border-box;
-  justify-content: center;  /* por defecto centrado */
+  justify-content: center;
   justify-items: start;
 }
+
 @media (width > 640px) {
   .card-container {
     grid-template-columns: repeat(3, minmax(180px, 1fr));
     justify-self: center;
-    }
+  }
 }
+
 @media (max-width > 760px) {
   .card-container {
     grid-template-columns: repeat(1, minmax(160px, 1fr));
@@ -22,6 +24,7 @@
     justify-items: center;
   }
 }
+
 @media (width > 1024px) {
   .card-container {
     grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
@@ -29,10 +32,10 @@
     justify-items: center;
   }
 }
-
+/* Bloque: Product */
 .product {
-  width: 100%;        /* ocupa su celda */
-  max-width: 180px;   /* no excede */
+  width: 100%;
+  max-width: 180px;
   border-radius: 0.5rem;
   background-color: var(--primary-100);
   box-shadow: 0 2px 4px var(--black);
@@ -54,12 +57,16 @@
 
 /* Elemento: Información */
 .product__information {
-  padding: 1rem;
+  padding: var(--padding-top) var(--padding-right) var(--padding-bottom) var(--padding-left);
   display: flex;
   flex-direction: column;
-  gap: 0.5rem;
+  gap: var(--gap-xs); /* usar spacing definido */
   background-color: var(--white);
 }
+.product__information button.btn {
+  align-self: flex-start; /* hace que el botón solo ocupe lo que necesita */
+}
+
 
 /* Elemento: Nombre */
 .product__name {
@@ -84,6 +91,7 @@
   transform: translateY(-5px) scale(1.02);
   box-shadow: 0 6px 12px var(--gray-700);
 }
+
 .product__information:hover {
   background-color: var(--secundary-100);
 }

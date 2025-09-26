@@ -1,5 +1,5 @@
 /* ================== NAVBAR ================== */
-.navbar {
+.navbar_login {
   display: flex;
   justify-content: flex-end;          /* Links a la derecha */
   align-items: center;

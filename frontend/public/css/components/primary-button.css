@@ -1,14 +1,11 @@
-/* ====== BOTÓN PRIMARIO (BEM) ====== */
-button.btn.btn--primary {
+.btn {
   display: inline-flex;
   align-items: center;
   justify-content: center;
-
-  font-size: var(--fs-xxs); /* 1.4rem ≈ 14px */
+  font-size: var(--fs-xxs);
   line-height: 1;
-  padding: calc((40px - 14px) / 2) 16px;
-
-  gap: 8px;
+  padding: var(--button-padding-top) var(--button-padding-right) var(--button-padding-bottom) var(--button-padding-left);
+  gap: var(--gap-sm);
   font-family: var(--font-primary);
   border: none;
   border-radius: 0.6rem;
@@ -18,25 +15,19 @@ button.btn.btn--primary {
   width: auto;
   white-space: nowrap;
   min-width: 0;
+}
 
-  /* Colores desde variables */
+.btn--primary {
   background: var(--secundary-800);
   color: var(--white);
 }
 
-button.btn.btn--primary:hover {
+.btn--primary:hover {
   background: var(--secundary-600);
   transform: translateY(-2px);
 }
 
-button.btn.btn--primary:active {
+.btn--primary:active {
   background: var(--secundary-900);
   transform: translateY(0);
-}
-
-button.btn.btn--primary img,
-button.btn.btn--primary svg {
-  width: 20px;
-  height: 20px;
-  display: block;
 }

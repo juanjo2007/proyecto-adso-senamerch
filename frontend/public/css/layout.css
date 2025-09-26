@@ -2,22 +2,38 @@
 
 /* Distribución general (fondo del body, display, flexbox, grid, alturas, anchos, etc.). */
 
+/* ===================== LAYOUT BASE ===================== */
 html {
     margin: 0;
+    padding: 0;
+    height: 100%;
     box-sizing: border-box;
-    font-size: 62.5%;
+    font-size: 62.5%; 
 }
-*, *:before, *:after {
+
+*, *::before, *::after {
     box-sizing: inherit;
+    margin: 0;
+    padding: 0;
 }
 
 body {
   background-color: var(--primary-100);
   font-family: var(--font-primary);
   color: var(--black);
-  padding: 0;
-  margin: 0;
+  font-size: var(--fs-xs); 
+  line-height: 1.5;
+  height: 100%;
+
+  /* 👇 Estas dos líneas hacen que el footer se quede abajo */
+  display: flex;
+  flex-direction: column;
 }
+
+main {
+  flex: 1; /* Empuja el footer al fondo */
+}
+
 
 /* 1. Contenedor Principal */
 /* .container {

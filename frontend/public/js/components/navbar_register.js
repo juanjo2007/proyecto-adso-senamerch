@@ -2,7 +2,7 @@ document.addEventListener("DOMContentLoaded", function(){
     const navbarElement = document.querySelector(".navbar-container");
 
     if(navbarElement){
-        fetch("/frontend/public/views/components/navbar.html")
+        fetch("/frontend/public/views/components/navbar_register.html")
         .then(response => response.text())
         .then(data => {
             navbarElement.innerHTML = data;

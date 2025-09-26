@@ -1,8 +1,8 @@
 document.addEventListener("DOMContentLoaded", function(){
-    const navbarElement = document.querySelector(".navbar-container");
+    const navbarElement = document.querySelector(".navbar-contact");
 
     if(navbarElement){
-        fetch("/frontend/public/views/components/navbar.html")
+        fetch("/frontend/public/views/components/navbar_contact.html")
         .then(response => response.text())
         .then(data => {
             navbarElement.innerHTML = data;
