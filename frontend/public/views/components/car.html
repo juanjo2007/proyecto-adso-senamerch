@@ -1,0 +1,39 @@
+<section class="shopping-cart">
+  <h2 class="shopping-cart__title">Carrito de compras</h2>
+
+  <!-- Lista de productos -->
+  <ul class="shopping-cart__list">
+    <li class="shopping-cart__item">
+      <img src="/frontend/public/assets/img/tomato_image.png" alt="Tomate fresco" class="shopping-cart__item-image">
+      <div class="shopping-cart__item-details">
+        <h3 class="shopping-cart__item-name">Tomate Del Valle</h3>
+        <p class="shopping-cart__item-price">$3.000 Kilo</p>
+        <p class="shopping-cart__item-quantity">Cantidad: 2</p>
+      </div>
+    </li>
+
+    <li class="shopping-cart__item">
+      <img src="/frontend/public/assets/img/potato__image.jpg" alt="Manzanas rojas" class="shopping-cart__item-image">
+      <div class="shopping-cart__item-details">
+        <h3 class="shopping-cart__item-name">Papa Roja</h3>
+        <p class="shopping-cart__item-price">$5.000 Kilo</p>
+        <p class="shopping-cart__item-quantity">Cantidad: 1</p>
+      </div>
+    </li>
+  </ul>
+
+  <div class="shopping-cart__summary">
+    <p class="shopping-cart__total">Total: <strong>$11.000</strong></p>
+
+    <!-- Botón secundario debajo del total -->
+    <button class="btn--variant2 btn--variant2--secondary shopping-cart__continue">
+      Continuar comprando
+    </button>
+
+    <!-- Contenedor de acciones -->
+    <div class="shopping-cart__actions">
+      <button class="btn btn--primary shopping-cart__checkout">
+        Ir al método de pago
+      </button>
+    </div>
+  </div>

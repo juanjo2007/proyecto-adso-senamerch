@@ -10,31 +10,26 @@
   border-radius: 12px;
   box-shadow: 0 2px 6px rgba(0,0,0,0.05);
 }
-
 .create-post__title {
   font-size: var(--fs-sm);
   font-weight: bold;
   color: var(--gray-900);
 }
-
 .create-post__form {
   display: flex;
   flex-direction: column;
   gap: var(--gap-md);
 }
-
 .create-post__field {
   display: flex;
   flex-direction: column;
   gap: var(--gap-xxs);
 }
-
 .create-post__label {
   font-size: var(--fs-xxs);
   font-weight: 500;
   color: var(--gray-800);
 }
-
 .create-post__input,
 .create-post__textarea,
 .create-post__select {
@@ -47,7 +42,6 @@
   background: var(--white);
   transition: border 0.3s;
 }
-
 .create-post__input:focus,
 .create-post__textarea:focus,
 .create-post__select:focus {
@@ -55,12 +49,10 @@
   outline: none;
   font-size: var(--fs-xs);
 }
-
 .create-post__textarea {
   min-height: 120px;
   resize: vertical;
 }
-
 .create-post__input--file {
   padding: var(--gap-xxs);
 }
@@ -73,7 +65,6 @@
 .create-post__input--file{
   font-size: var(--fs-xxs);
 }
-
 @media (max-width: 768px) {
   .create-post {
     padding: var(--gap-xs);

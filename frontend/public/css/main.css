@@ -21,9 +21,9 @@
 @import url('components/login.css');
 
 /* Importaciones de SenaMerch Mateo */
-/* @import url('components/carrito.css'); 
+@import url('components/car.css'); 
 @import url('components/productos.css');
-@import url('components/usuarios.css');  */
+@import url('components/usuarios.css');  
 /* @import url('components/sales-history.css');  */
 /* @import url("components/publicaciones.css"); */
 
@@ -38,4 +38,6 @@
 @import url('components/secondary-button.css');
 @import url('components/option_payment_method.css');
 @import url('components/quantity-input.css');
+@import url('components/orders.css');
+@import url('components/sale-details.css');
 

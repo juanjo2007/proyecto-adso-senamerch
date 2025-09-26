@@ -1,0 +1,97 @@
+<section class="sale-details">
+  <!-- Columna izquierda: info del agricultor y transporte -->
+  <aside class="sale-details__sidebar">
+    <h3 class="sale-details__subtitle">Agricultor</h3>
+    <p><strong>Nombre:</strong> Emanuel Guerrero</p>
+    <p><strong>Teléfono:</strong> 300 456 2340</p>
+    <p><strong>NIT:</strong> 1234675</p>
+    <p><strong>Correo:</strong> agricultorejemplo@email.com</p>
+    <hr>
+    <p><strong>Vendedor:</strong> Juan Pérez</p>
+    <p><strong>Tienda:</strong> Frutas El Valle</p>
+    <p><strong>Teléfono:</strong> 310987654</p>
+    <p><strong>Correo:</strong> vendedor@email.com</p>
+    <hr>
+    <h3 class="sale-details__subtitle">Servicio de transporte</h3>
+    <p><strong>Nombre:</strong> ServiCarro</p>
+    <p><strong>Teléfono:</strong> 310876543</p>
+    <p><strong>Correo:</strong> transporte@email.com</p>
+  </aside>
+
+  <!-- Columna derecha: productos y totales -->
+  <div class="sale-details__content">
+    <h2 class="sale-details__title">Detalles de venta</h2>
+
+    <!-- Tabla de productos -->
+    <section class="sale-details__section">
+      <h3 class="sale-details__subtitle">Productos</h3>
+      <table class="sale-details__table">
+        <thead>
+          <tr>
+            <th>Fecha</th>
+            <th>Producto</th>
+            <th>Cantidad</th>
+            <th>Unidad</th>
+            <th>Precio * unidad</th>
+            <th>Total</th>
+            <th>Stock</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td>23/09/2025</td>
+            <td>Tomate</td>
+            <td>5</td>
+            <td>Kg</td>
+            <td>$2.500</td>
+            <td>$12.500</td>
+            <td>122/150</td>
+          </tr>
+          <tr>
+            <td>23/09/2025</td>
+            <td>Manzana verde</td>
+            <td>3</td>
+            <td>Kg</td>
+            <td>$3.000</td>
+            <td>$9.000</td>
+            <td>90/120</td>
+          </tr>
+        </tbody>
+      </table>
+    </section>
+
+    <!-- Servicio de transporte -->
+    <section class="sale-details__section">
+      <h3 class="sale-details__subtitle">Servicio de transporte</h3>
+      <table class="sale-details__table">
+        <thead>
+          <tr>
+            <th>Fecha</th>
+            <th>Costo * distancia</th>
+            <th>Distancia recorrida</th>
+            <th>Total</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td>23/09/2025</td>
+            <td>$2.500 * 6km</td>
+            <td>6 km</td>
+            <td>$15.000</td>
+          </tr>
+        </tbody>
+      </table>
+    </section>
+
+    <!-- Totales -->
+    <div class="sale-details__totals">
+      <p><strong>Base:</strong> $20.000</p>
+      <p><strong>IVA:</strong> $3.800</p>
+      <p><strong>Total pagado:</strong> $23.800</p>
+    </div>
+
+    <div class="sale-details__actions">
+      <button class="btn btn--primary">Inicio</button>
+    </div>
+  </div>
+</section>
