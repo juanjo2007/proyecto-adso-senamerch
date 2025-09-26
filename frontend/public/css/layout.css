@@ -18,12 +18,22 @@ html {
 }
 
 body {
-    background-color: var(--primary-100);
-    font-family: var(--font-primary);
-    font-size: var(--fs-xs); /* 🔹 Tamaño base uniforme en todo el sitio */
-    line-height: 1.5;
-    height: 100%;
+  background-color: var(--primary-100);
+  font-family: var(--font-primary);
+  color: var(--black);
+  font-size: var(--fs-xs); 
+  line-height: 1.5;
+  height: 100%;
+
+  /* 👇 Estas dos líneas hacen que el footer se quede abajo */
+  display: flex;
+  flex-direction: column;
 }
+
+main {
+  flex: 1; /* Empuja el footer al fondo */
+}
+
 
 /* 1. Contenedor Principal */
 /* .container {

@@ -1,26 +1,13 @@
-html,
-body {
-  height: 100%;
-  margin: 0;
-  display: flex;
-  flex-direction: column;   /* header → main → footer */
-}
-
-main {
-  flex: 1;                   /* Ocupa todo el espacio restante */
-  display: flex;             /* opcional, solo si necesitas flex interno */
-  flex-direction: column;    /* opcional */
-}
-
 /* ================== FOOTER ================== */
 .footer-container {
   background-color: var(--secundary-700);
-  padding: var(--gap-xs) var(--gap-sm);   /* usa variables para consistencia */
+  padding: var(--gap-xs) var(--gap-md);  /* menos alto: vertical chico, horizontal medio */
   font-family: var(--font-primary);
   position: relative;
   bottom: 0;
   width: 100%;
 }
+
 
 .footer-container__container {
   display: flex;
@@ -28,7 +15,7 @@ main {
   align-items: center;
   max-width: 1200px;
   margin: auto;
-  gap: var(--gap-sm);        /* separación flexible en desktop */
+  gap: var(--gap-md);        /* separación flexible en desktop */
 }
 
 .footer-container__text {
@@ -55,7 +42,7 @@ main {
 @media (max-width: 768px) {
   .footer-container__container {
     flex-direction: column;
-    gap: var(--gap-xs);      /* menos espacio en móvil */
+    gap: var(--gap-xs);
     text-align: center;
   }
 }

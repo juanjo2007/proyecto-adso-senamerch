@@ -57,6 +57,16 @@
     --font-primary: 'Inter', sans-serif;
     --font-secondary: 'Roboto', sans-serif;
 
+    /* ===== Variantes de Inter ===== */
+    --font-primary-regular: 'Inter-Regular', sans-serif;
+    --font-primary-semibold: 'Inter-Semibold', sans-serif;
+    --font-primary-bold: 'Inter-Bold', sans-serif;
+
+    /* ===== Variantes de Roboto ===== */
+    --font-secondary-semibold-3: 'Roboto-Semibold 3', sans-serif;
+    --font-secondary-medium: 'Roboto-Medium', sans-serif;
+    --font-secondary-italic: 'Roboto-Italic', sans-serif;
+    
     /* ================== Font-size ================== */
     --fs-xxxxl: 8.0rem;
     --fs-xxxl: 6.4rem;
@@ -70,9 +80,9 @@
     --fs-xxxs: 1.2rem;
 
      /* ================== Button Primary ================== */
-    --button-padding-top:18px;
+    --button-padding-top: 12px;
+    --button-padding-bottom: 12px;
     --button-padding-right:16px;
-    --button-padding-bottom:18px;
     --button-padding-left:16px;
 
     /* ================== Button Secundary ================== */
