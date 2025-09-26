@@ -1,23 +1,43 @@
-/* ==========================
-   Card - Product (BEM)
-   ========================== */
-
-.card {
-  display: flex;
+.card-container {
+  display: grid;
+  gap: var(--gap-md); /* Usar spacing global */
+  width: 100%;
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 var(--padding-right);
+  box-sizing: border-box;
   justify-content: center;
-  align-items: center;
-  padding: 2rem;
-  font-family: var(--font-primary);
-  flex-wrap: wrap; /* permite que las cards bajen en varias filas */
-  gap: 1rem;       /* separación entre cards */
+  justify-items: start;
 }
 
-/* Bloque principal */
+@media (width > 640px) {
+  .card-container {
+    grid-template-columns: repeat(3, minmax(180px, 1fr));
+    justify-self: center;
+  }
+}
+
+@media (max-width > 760px) {
+  .card-container {
+    grid-template-columns: repeat(1, minmax(160px, 1fr));
+    justify-content: center;   /* siguen centradas */
+    justify-items: center;
+  }
+}
+
+@media (width > 1024px) {
+  .card-container {
+    grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+    justify-content: center;   /* vuelven al centro */
+    justify-items: center;
+  }
+}
+/* Bloque: Product */
 .product {
-  width: 220px;
-  border: 1px solid var(--black);
+  width: 100%;
+  max-width: 180px;
   border-radius: 0.5rem;
-  background-color: var(--primary-200);
+  background-color: var(--primary-100);
   box-shadow: 0 2px 4px var(--black);
   overflow: hidden;
   display: flex;
@@ -37,16 +57,21 @@
 
 /* Elemento: Información */
 .product__information {
-  padding: 1rem;
+  padding: var(--padding-top) var(--padding-right) var(--padding-bottom) var(--padding-left);
   display: flex;
   flex-direction: column;
-  gap: 0.5rem;
+  gap: var(--gap-xs); /* usar spacing definido */
+  background-color: var(--white);
 }
+.product__information button.btn {
+  align-self: flex-start; /* hace que el botón solo ocupe lo que necesita */
+}
+
 
 /* Elemento: Nombre */
 .product__name {
-  font-size: var(--fs-xxs);
-  color: var(--gray-600);
+  font-size: var(--fs-xs);
+  color: var(--tertiary-500);
   font-weight: 500;
   margin: 0;
   order: -1;
@@ -54,8 +79,8 @@
 
 /* Elemento: Precio */
 .product__price {
-  font-size: var(--fs-xs);
-  color: var(--gray-900);
+  font-size: var(--fs-sm);
+  color: var(--tertiary-900);
   font-weight: bold;
   margin: 0;
   order: -1;
@@ -65,6 +90,10 @@
 .product:hover {
   transform: translateY(-5px) scale(1.02);
   box-shadow: 0 6px 12px var(--gray-700);
+}
+
+.product__information:hover {
+  background-color: var(--secundary-100);
 }
 
 /* Estado: Active */
@@ -78,56 +107,4 @@
   transform: scale(1.02);
   box-shadow: 0 4px 10px var(--gray-700);
   transition: all 0.2s ease;
-}
-
-/* (móviles) */
-@media (max-width: 480px) {
-  .card {
-    padding: 1rem;
-    justify-content: center;
-    gap: 0.8rem;
-  }
-
-  .product {
-    width: 100%;          /* ocupa todo el ancho */
-    max-width: 320px;     /* límite para que no se estire demasiado */
-  }
-
-  .product__image {
-    height: 120px;
-  }
-
-  .product__name {
-    font-size: var(--fs-xxs);
-  }
-
-  .product__price {
-    font-size: var(--fs-xs);
-  }
-}
-
-/* (tablets) */
-@media (min-width: 481px) and (max-width: 768px) {
-  .card {
-    padding: 1.5rem;
-    justify-content: center; /* centramos las cards */
-    gap: 1rem;
-  }
-
-  .product {
-    width: 45%;           /* 2 columnas */
-    max-width: 250px;
-  }
-
-  .product__image {
-    height: 140px;
-  }
-}
-
-/* (desktop ≥ 769px) */
-@media (min-width: 769px) {
-  .card {
-    justify-content: flex-start; /* alineación a la izquierda */
-    gap: 1.5rem;
-  }
 }

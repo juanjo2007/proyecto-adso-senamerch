@@ -1,64 +1,60 @@
-/* ====== BOTÓN BASE ====== */
-.btn {
+/* ====== BOTÓN VARIANTE 2 (más pequeño) ====== */
+.btn--variant2 {
   display: inline-flex;
   align-items: center;
   justify-content: center;
-  padding: 0 1.2rem; /* Espaciado lateral */
-  height: 30px; /* altura máxima */
-  width: fit-content; /* ancho ajustado al contenido */
-  border: none;
-  border-radius: 0.6rem; /* esquinas redondeadas */
+  /* altura visual: 36px (4px menos que el primario de 40px) */
+  font-size: 12px;
+  line-height: 1;
+  padding: calc((36px - 12px) / 2) 12px; /* altura - fuente = padding vertical */
+  gap: 6px;
   font-family: var(--font-primary);
-  font-size: var(--fs-xxs); /* tamaño de fuente más compacto */
-  font-weight: 600;
+  border: none;
+  border-radius: 0.6rem;
   cursor: pointer;
   transition: background 0.3s ease, transform 0.2s ease;
   box-shadow: 2px 2px 5px var(--gray-900);
+  width: auto;
+  white-space: nowrap;
+  min-width: 0;
 }
 
-/* ====== VARIANTE SECUNDARIA ====== */
-.btn--secondary {
+/* Iconos dentro del botón secundario */
+.btn--variant2__icon,
+.btn--variant2 img,
+.btn--variant2 svg {
+  width: 16px;   /* un poco más pequeño que el primario */
+  height: 16px;
+  display: block;
+}
+
+/* Variante secundaria del botón */
+.btn--variant2--secondary {
   background: var(--black);
   color: var(--white);
 }
 
-.btn--secondary:hover {
+.btn--variant2--secondary:hover {
   background: var(--gray-950);
   transform: translateY(-2px);
 }
 
-.btn--secondary:active {
+.btn--variant2--secondary:active {
   background: var(--gray-800);
   transform: translateY(0);
 }
 
-/* Móviles */
+/* Responsive: pantallas pequeñas */
 @media (max-width: 480px) {
-  .btn {
-    width: 100%;            /* Botón ocupa todo el ancho */
-    height: 36px;           /* Más alto para ser cómodo al tacto */
-    font-size: var(--fs-xxs);/* Texto un poco más grande para legibilidad */
-    padding: 0 1rem;        /* Menos padding lateral */
-    border-radius: 0.8rem;  /* Bordes más suaves */
+  .btn--variant2 {
+    font-size: 11px;
+    padding: calc((32px - 11px) / 2) 10px; /* más compacto aún en móvil */
   }
-}
 
-/* Tablets */
-@media (min-width: 481px) and (max-width: 768px) {
-  .btn {
-    width: auto;            /* Se ajusta al contenido */
-    height: 34px;
-    font-size: var(--fs-xxs);/* Mantiene equilibrio */
-    padding: 0 1.4rem;
-  }
-}
-
-/* Escritorio grande */
-@media (min-width: 1024px) {
-  .btn {
-    height: 40px;           /* Botón más alto */
-    font-size: var(--fs-xxs);
-    padding: 0 1.6rem;      /* Más espacioso */
-    border-radius: 1rem;    /* Bordes más redondeados */
+  .btn--variant2__icon,
+  .btn--variant2 img,
+  .btn--variant2 svg {
+    width: 12px;
+    height: 12px;
   }
 }

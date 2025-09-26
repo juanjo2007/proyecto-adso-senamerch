@@ -1,12 +1,12 @@
 document.addEventListener("DOMContentLoaded", function (){
-    const direction = document.querySelector(".index-page");
+    const form = document.querySelector(".login");
 
-    if(direction){
-      fetch("/frontend/public/views/components/index.html")
+    if(form){
+      fetch("/frontend/public/views/components/login.html")
         .then(response => response.text())
         .then(data => {
-          direction.innerHTML = data;
+          form.innerHTML = data;
         })
     .catch(error => console.log("Error", error));
     } 
-});
+});  

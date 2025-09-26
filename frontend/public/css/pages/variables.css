@@ -58,8 +58,8 @@
     --gray-50: #E9E9E9;
 
     /* Font-family */
-      --font-primary: 'Inter', sans-serif;
-  --font-secondary: 'Roboto', sans-serif;
+    --font-primary: 'Inter', sans-serif;
+    --font-secondary: 'Roboto', sans-serif;
 
     /* Font-size */
     --fs-xxxxl: 8.0rem; /* Ultra grande */

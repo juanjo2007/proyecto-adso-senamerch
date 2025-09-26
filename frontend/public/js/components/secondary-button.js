@@ -11,8 +11,8 @@ document.addEventListener('DOMContentLoaded', function () {
       .then(data => {
         buttonContainer.innerHTML = data;
       })
-      .catch(error => console.error("❌ Error cargando Secondary Button:", error));
+      .catch(error => console.error("Error cargando Secondary Button:", error));
   } else {
-    console.warn("⚠️ No se encontró '.secondary-button-container' en Product.html");
+    console.warn("No se encontró '.secondary-button-container' en Product.html");
   }
 });
