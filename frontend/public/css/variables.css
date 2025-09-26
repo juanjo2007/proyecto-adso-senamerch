@@ -1,6 +1,5 @@
-:root {
-    /* Primary color*/
-
+:root { 
+    /* ================== Primary color ================== */
     --primary-950: #2d221d;
     --primary-900: #554439;
     --primary-800: #685344;
@@ -13,8 +12,7 @@
     --primary-100: #f0ede5;
     --primary-50: #f8f7f4;
 
-    /* Secundary color*/
-
+    /* ================== Secondary color ================== */
     --secundary-950:#072c0e;
     --secundary-900:#184f23;
     --secundary-800:#1a6127;
@@ -27,8 +25,7 @@
     --secundary-100:#defae2;
     --secundary-50:#f1fcf2;
 
-
-    /* Tertiary color */
+    /* ================== Tertiary color ================== */
     --tertiary-950: #1f0f0f;
     --tertiary-900: #5e3230;
     --tertiary-800: #733a39;
@@ -41,8 +38,7 @@
     --tertiary-100: #f3e7e1;
     --tertiary-50: #faf4f2;
 
-
-    /* Basic color*/
+    /* ================== Basic color ================== */
     --white: #fff;
     --black: #000;
     --gray-950: #101010;
@@ -57,19 +53,58 @@
     --gray-100: #D4D4D4;
     --gray-50: #E9E9E9;
 
-    /* Font-family */
-      --font-primary: 'Inter', sans-serif;
-  --font-secondary: 'Roboto', sans-serif;
+    /* ================== Font-family ================== */
+    --font-primary: 'Inter', sans-serif;
+    --font-secondary: 'Roboto', sans-serif;
 
-    /* Font-size */
-    --fs-xxxxl: 8.0rem; /* Ultra grande */
-    --fs-xxxl: 6.4rem; /* Súper grande */
-    --fs-xxl: 4.8rem; /* Extra grande */
-    --fs-xl: 4.0rem;  /* Muy grande */
-    --fs-lg: 3.2rem;  /* Grande */
-    --fs-md: 2.4rem;  /* Mediano */
-    --fs-sm: 2.0rem;  /* Pequeño */
-    --fs-xs: 1.6rem;  /* Extra pequeño */
-    --fs-xxs: 1.4rem; /* Extra extra pequeño */
-    --fs-xxxs: 1.2rem; /* Mínimo */
+    /* ===== Variantes de Inter ===== */
+    --font-primary-regular: 'Inter-Regular', sans-serif;
+    --font-primary-semibold: 'Inter-Semibold', sans-serif;
+    --font-primary-bold: 'Inter-Bold', sans-serif;
+
+    /* ===== Variantes de Roboto ===== */
+    --font-secondary-semibold-3: 'Roboto-Semibold 3', sans-serif;
+    --font-secondary-medium: 'Roboto-Medium', sans-serif;
+    --font-secondary-italic: 'Roboto-Italic', sans-serif;
+    
+    /* ================== Font-size ================== */
+    --fs-xxxxl: 8.0rem;
+    --fs-xxxl: 6.4rem;
+    --fs-xxl: 4.8rem;
+    --fs-xl: 4.0rem;
+    --fs-lg: 3.2rem;
+    --fs-md: 2.4rem;
+    --fs-sm: 2.0rem;
+    --fs-xs: 1.6rem;
+    --fs-xxs: 1.4rem;
+    --fs-xxxs: 1.2rem;
+
+     /* ================== Button Primary ================== */
+    --button-padding-top: 12px;
+    --button-padding-bottom: 12px;
+    --button-padding-right:16px;
+    --button-padding-left:16px;
+
+    /* ================== Button Secundary ================== */
+    --padding-top:18px;
+    --padding-right:16px;
+    --padding-bottom:18px;
+    --padding-left:16px;
+
+    /* ================== Label / Input ================== */
+    --padding-top:14px;
+    --padding-right:16px;
+    --padding-bottom:14px;
+    --padding-left:16px;
+
+    /* ================== Spacing / Gap ================== */
+    --gap-xxs: 0.4rem;  /* 4px  - Extra extra small */
+    --gap-xs:  0.8rem;  /* 8px  - Extra small */
+    --gap-sm:  1.2rem;  /* 12px - Small */
+    --gap-md:  1.6rem;  /* 16px - Medium (default recommended) */
+    --gap-lg:  2.4rem;  /* 24px - Large */
+    --gap-xl:  3.2rem;  /* 32px - Extra large */
+    --gap-xxl: 4.8rem;
 }
+
+

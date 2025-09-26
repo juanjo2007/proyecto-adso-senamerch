@@ -1,85 +1,92 @@
-/* ====== OPTION BUTTON (BEM) ====== */
-.option-button {
+/* Contenedor externo que ocupa toda la pantalla */
+.page-center {
+  display: flex;
+  justify-content: center;   /* centro horizontal */
+  align-items: center;       /* centro vertical */
+  min-height: 90vh;         /* ocupar toda la pantalla */
+}
+
+/* El bloque con borde */
+.unit-options {
+  border: 1px solid var(--gray-100);
+  padding: 1rem 2rem;
+  box-sizing: border-box;
+  max-width: fit-content;
+}
+
+/* Opciones dentro */
+.unit-options__container {
+  display: flex;
+  flex-wrap: wrap;         
+  gap: 4rem;   
+  justify-content: center;
+}
+
+
+/* cada opción (caja con icono + texto) */
+.unit-options__item {
   display: flex;
   align-items: center;
-  justify-content: space-between;
+  height: 20px;
   width: fit-content;
-  height: 4rem;
-  background: var(--tertiary-800); /* color de fondo */
+  gap: 1.6rem;
+  background-color: var(--tertiary-700);
+  flex-direction: row-reverse;
+  gap: 16px;
   color: var(--white);
+  font-size: var(--fs-xxs);
   font-family: var(--font-primary);
-  font-size: var(--fs-xs); /* texto legible */
-  padding: 0.8rem 2rem; /* padding horizontal aumentado a 2rem */
+  padding: 1.6rem 1.2rem;
   border-radius: 0.4rem;
   cursor: pointer;
-  transition: background 0.3s ease;
+  transition: background 0.3s ease, transform 0.2s ease;
 }
 
-.option-button:hover {
-  background: var(--tertiary-700);
-}
-
-.option-button__label {
-  flex: 1;
-}
-
-.option-button__icon {
-  display: inline-block;
+/* tamaño del icono */
+.unit-option__icon {
   width: 16px;
   height: 16px;
-  border: 2px solid var(--white);
-  border-radius: 50%;
-  position: relative;
-  margin-left: 2rem; /* separación de 2rem con el texto */
+  object-fit: contain;
 }
 
-.option-button__icon::after {
-  content: "";
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  width: 10px;
-  height: 10px;
-  background: var(--white);
-  border-radius: 50%;
-  transform: translate(-50%, -50%);
+
+/* ocultar input */
+.unit-options__input {
+  display: none;
 }
 
-/* ==========================
-   Media Queries - Option Button
-   ========================== */
+/* hover */
+.unit-options__item:hover {
+  background-color: var(--tertiary-800);
+  transform: translateY(-2px);
+}
 
-/* Pantallas pequeñas (móviles) */
-@media (max-width: 480px) {
-  .option-button {
-    font-size: var(--fs-xxs);   /* Texto más pequeño */
-    padding: 0.6rem 1rem;      /* Menos padding */
-    flex-direction: column;    /* Icono debajo en móvil */
-    align-items: flex-start;   /* Alinea a la izquierda */
-    gap: 0.5rem;               /* Espaciado entre label e icon */
+/* Móviles pequeños (≤ 481px) */
+@media (max-width: 481px) {
+  .unit-options__container {
+    flex-direction: column; /* apila */
+    gap: 1rem;
   }
 
-  .option-button__icon {
-    margin-left: 0;            /* Se quita margen al cambiar layout */
-    align-self: flex-end;      /* Icono a la derecha dentro del botón */
+  .unit-options {
+    max-width: fit-content;
+  }
+}
+@media (max-width: 768px) and (min-width: 482px) {
+  .unit-options__container {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr); /* 3 columnas */
+    gap: 1rem;
+  }
+
+  .unit-options__item {
+    font-size: var(--fs-xxs);
+    max-width: 100%;
+  }
+
+  .unit-options {
+    max-width: 95%;
+    width: fit-content;
   }
 }
 
-/* Pantallas medianas (tablets) */
-@media (min-width: 481px) and (max-width: 768px) {
-  .option-button {
-    font-size: var(--fs-xxs);   /* Intermedio */
-    padding: 0.7rem 1.5rem;    /* Ajuste de espacio */
-  }
-
-  .option-button__icon {
-    margin-left: 1rem;         /* Menos separación que en desktop */
-    width: 18px;               /* Icono un poco más pequeño */
-    height: 18px;
-  }
-
-  .option-button__icon::after {
-    width: 8px;
-    height: 8px;
-  }
-}

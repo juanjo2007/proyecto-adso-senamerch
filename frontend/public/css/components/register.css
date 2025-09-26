@@ -1,23 +1,15 @@
-body {
-  background-color: var(--primary-100);
-  font-family: var(--font-primary);
-  min-height: 100vh;
-  display: flex;
-  justify-content: center;
-  align-items: center; 
-  margin: 0;
-  margin-top: 7.1rem;
-}
-
+/* ================== FORM ================== */
 .form-container {
-  margin-top: 30px;
+  /* Centrado desde el inicio, sin márgenes fijos */
+  margin: var(--gap-xl) auto;                  /* separación vertical principal */
+  padding: 0 1rem;                             
+  max-width: 60rem;                            /* ~600px */
 }
 
 .form-content {
-  max-width: 500px;
-  max-height: auto;
-  margin-top: 5px; 
-  padding: 20px;
+  max-width: 50rem;                            /* ~500px */
+  margin: 0 auto;
+  padding: var(--padding-top) var(--padding-right) var(--padding-bottom) var(--padding-left);
   background-color: var(--white);
   border-radius: 1.2rem;
   box-shadow: 0 4px 12px rgba(0,0,0,0.08);
@@ -25,16 +17,16 @@ body {
 }
 
 .form__title {
-   margin-top: 0.5rem; 
+  margin-top: 0.5rem;
+  margin-bottom: var(--gap-md);                /* espacio con el resto del formulario */
   text-align: center;
   font-size: var(--fs-md);
   color: var(--black);
-  margin-bottom: 2rem;
 }
 
 .form__label {
   display: block;
-  margin-top: 1.6rem;
+  margin-top: var(--gap-md);                   /* separación entre campos */
   font-size: var(--fs-xs);
   font-weight: 600;
   color: var(--gray-800);
@@ -42,8 +34,8 @@ body {
 
 .form__input {
   width: 100%;
-  padding: 0.8rem 1.2rem;
-  margin-top: 0.4rem;
+  padding: var(--padding-top) var(--padding-right) var(--padding-bottom) var(--padding-left);
+  margin-top: var(--gap-xxs);                  /* espacio entre label e input */
   border: 1px solid var(--gray-200);
   border-radius: 0.6rem;
   background-color: var(--white);
@@ -61,28 +53,28 @@ body {
 
 .form__text {
   display: block;
-  margin-top: 0.4rem;
-  font-size: var(--fs-xxs);
+  margin-top: var(--gap-xxs);                  /* texto de ayuda compacto */
+  font-size: var(--fs-xs);
   color: var(--gray-600);
 }
 
 a {
   display: inline-block;
-  margin-top: 0.6rem;
-  font-size: var(--fs-xxs);
+  margin-top: var(--gap-xs);                   /* separación con el input */
+  font-size: var(--fs-xs);
   color: var(--secundary-700);
-  text-decoration: none;
   font-weight: 500;
+  text-decoration: none;
 }
 
 a:hover {
-  text-decoration: underline;
+  text-decoration: dotted;
 }
 
 .form__button {
   width: 100%;
-  padding: 1rem;
-  margin-top: 2.4rem;
+  padding: var(--button-padding-top) var(--button-padding-right) var(--button-padding-bottom) var(--button-padding-left);
+  margin-top: var(--gap-lg);                   /* separación clara antes del botón */
   font-size: var(--fs-sm);
   font-weight: bold;
   color: var(--white);
@@ -103,9 +95,58 @@ a:hover {
   transform: translateY(0);
 }
 
+/* ================== MEDIA QUERIES ================== */
+
+/* Pantallas medianas (laptops pequeñas) */
+@media (max-width: 1024px) {
+  .form-container {
+    max-width: 50rem;
+  }
+  .form-content {
+    max-width: 90%;
+  }
+}
+
+/* Tablets */
 @media (max-width: 768px) {
-  /* body {
-    align-items: flex-start; 
-    padding-top: 4rem;       
-  } */
+  .form-container {
+    margin: var(--gap-lg) auto;
+    padding: 0 1rem;
+  }
+
+  .form-content {
+    max-width: 95%;
+    border-radius: 0.8rem;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.06);
+  }
+
+  .form__title {
+    font-size: var(--fs-sm);
+  }
+
+  .form__button {
+    font-size: var(--fs-xs);
+  }
+}
+
+/* Móviles */
+@media (max-width: 480px) {
+  .form-container {
+    margin: var(--gap-md) auto;
+    padding: 0 0.8rem;
+  }
+
+  .form-content {
+    max-width: 100%;
+    padding: 1rem;
+    border-radius: 0.6rem;
+  }
+
+  .form__input {
+    padding: 0.6rem 0.8rem; /* Inputs más compactos */
+  }
+
+  .form__button {
+    padding: 0.8rem;
+  }
 }
