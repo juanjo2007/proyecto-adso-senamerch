@@ -1,9 +1,9 @@
 <section class="user-profile">
   <!-- Sidebar con avatar + datos básicos -->
   <aside class="user-profile__sidebar">
-    <div class="user-profile__avatar">
-      <img src="/frontend/public/assets/images/avatar-default.png" alt="Foto de perfil">
-    </div>
+    <figure class="user-profile__image">
+      <img src="/frontend/public/assets/img/client_photo_profile.jpg" alt="Photo_client">
+    </figure>
     <h2 class="user-profile__name">Juan Pérez</h2>
     <p class="user-profile__role">Cliente</p>
     <hr>
@@ -37,8 +37,9 @@
     <!-- Configuración -->
     <section class="user-profile__section">
       <h3 class="user-profile__subtitle">Configuración</h3>
-      <button class="btn btn--primary">Editar perfil</button>
-      <button class="btn--variant2 btn--variant2--secondary">Cerrar sesión</button>
+      <div class="user-profile__buttons">
+        <a href="profile_store_seller.html" class="btn btn--primary shopping-cart__checkout">Editar perfil</a>
+        <a href="profile_store_seller.html" class="btn--variant2 btn--variant2--secondary shopping-cart__continue">Cerrar sesión</a>
+      </div>
     </section>
-  </div>
 </section>

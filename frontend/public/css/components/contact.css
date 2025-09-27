@@ -1,0 +1,129 @@
+.contact-page{
+  height: 100%;
+    position: relative;
+    margin: 0;
+    background: 
+        linear-gradient(rgba(233, 233, 233, 0.5), rgba(233, 233, 233, 0.5)),
+        url('/frontend/public/assets/img/img_contact.jpg') center/cover no-repeat;
+    background-attachment: fixed;
+}
+
+.contact{
+    background-color: var(--white);
+    width: 400px;
+    height: 400px;
+    box-sizing: border-box;
+    border: 2px solid var(--black);
+    border-radius: 2rem;
+    margin-top: 10rem;
+    margin-left: 560px;
+    position: relative;
+    transition: color 1s ease, top 1s ease;
+}
+
+.contact:hover {
+    top: -10px;      
+    box-shadow: 0 8px 16px var(--secundary-400); 
+}
+
+.title_contact{
+    color: var(--tertiary-700);
+    text-align: center;
+    font-size: var(--fs-md);
+    font-family: var(--font-primary);
+    margin-top: 1rem;
+}
+
+.senamerch__contact{
+    margin-top: 1rem;
+    color: var(--secundary-800);
+    font-size: var(--fs-xs);
+    font-family: var(--font-secundary);
+    text-align: center;
+}
+
+.ubication{
+    margin-top: 24px;
+    text-align: center;
+    font-size: var(--fs-xs);
+    font-family: var(--font-primary);
+}
+
+.senamerch__ig{
+    margin-top: 24px;
+    text-align: center;
+    font-size: var(--fs-xs);
+    font-family: var(--font-primary);
+}
+
+.senamerch__fb{
+    margin-top: 24px;
+    text-align: center;
+    font-size: var(--fs-xs);
+    font-family: var(--font-primary);
+}
+
+.senamerch__telephone{
+    margin-top: 24px;
+    text-align: center;
+    font-size: var(--fs-xs);
+    font-family: var(--font-primary);
+}
+
+@media (max-width: 1024px) {
+    .contact {
+        width: 70%;
+        height: auto;
+        margin: 5rem auto 0; /* centrado horizontal y margen superior */
+        padding: 1rem;
+    }
+
+    .title_contact {
+        font-size: var(--fs-md);
+        text-align: center;
+    }
+}
+
+/* Tablet / móvil mediano (≤768px) */
+@media (max-width: 768px) {
+    .contact {
+        width: 85%;
+        margin: 4rem auto 0;
+        padding: 0.8rem;
+    }
+
+    .title_contact,
+    .senamerch__contact,
+    .ubication,
+    .senamerch__ig,
+    .senamerch__fb,
+    .senamerch__telephone {
+        font-size: var(--fs-xs);
+        text-align: center;
+        margin-top: 1rem;
+    }
+}
+
+/* Móviles pequeños (≤480px) */
+@media (max-width: 480px) {
+    .contact {
+        width: 95%;
+        margin: 3rem auto 0;
+        padding: 0.5rem;
+        border-radius: 1.5rem;
+    }
+
+    .title_contact {
+        font-size: var(--fs-xs);
+        margin: 10px auto;
+    }
+
+    .senamerch__contact,
+    .ubication,
+    .senamerch__ig,
+    .senamerch__fb,
+    .senamerch__telephone {
+        font-size: var(--fs-xxs); /* define fs-xxs en tus variables si no existe */
+        margin-top: 0.8rem;
+    }
+}

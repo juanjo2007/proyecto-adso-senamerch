@@ -1,13 +1,15 @@
-document.addEventListener("DOMContentLoaded", function(){
-    const heroElemnent = document.querySelector(".hero__content");
+document.addEventListener('DOMContentLoaded', function () {
+  const heroContainer = document.querySelector('.hero__container');
 
-    if(heroElemnent){
-        fetch("/frontend/public/views/components/hero.html")
-        .then(response => response.text())
-        .then(data => {
-            heroElemnent.innerHTML = data;
-        })
-
-    .catch(error => console.log("Error cargando el hero", error));
-    }
+  if (heroContainer) {
+    fetch("/frontend/public/views/components/hero.html")
+      .then(response => {
+        if (!response.ok) throw new Error("Error al cargar hero.html");
+        return response.text();
+      })
+      .then(data => {
+        heroContainer.innerHTML = data;
+      })
+      .catch(error => console.error("Error:", error));
+  }
 });

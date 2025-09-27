@@ -1,14 +1,16 @@
 .user-profile {
   display: grid;
-  grid-template-columns: 1fr 2fr;
-  gap: var(--gap-lg);
-  border: 2px solid var(--black);
-  border-radius: 12px;
-  padding: var(--gap-lg);
+  grid-template-columns: 0.8fr 1.6fr; /* columnas más estrechas */
+  gap: var(--gap-md); /* menos espacio entre columnas */
+  border: 1px solid var(--black); /* borde más delgado */
+  border-radius: 8px; /* esquinas más pequeñas */
+  padding: var(--gap-md); /* menos padding interno */
   background: var(--primary-50);
   font-family: var(--font-primary);
+  font-size: 90%; /* reduce un poco el texto */
+  max-width: 600px;   /* 🔹 límite de ancho */
+  margin: 2rem auto;    
 }
-
 /* Sidebar */
 .user-profile__sidebar {
   text-align: center;
@@ -16,7 +18,8 @@
   padding-right: var(--gap-md);
 }
 
-.user-profile__avatar {
+/* El figure contenedor redondo */
+.user-profile__image {
   width: 100px;
   height: 100px;
   margin: 0 auto var(--gap-sm);
@@ -25,14 +28,16 @@
   border: 2px solid var(--black);
 }
 
-.user-profile__avatar img {
+/* La imagen dentro del figure */
+.user-profile__image img {
   width: 100%;
   height: 100%;
   object-fit: cover;
 }
 
+
 .user-profile__name {
-  font-size: var(--fs-sm);
+  font-size: var(--fs-xs);
   font-weight: 600;
 }
 
@@ -56,7 +61,7 @@
 }
 
 .user-profile__title {
-  font-size: var(--fs-md);
+  font-size: var(--fs-sm);
   text-align: center;
 }
 
@@ -78,67 +83,67 @@
   color: var(--gray-800);
 }
 
-/* Botones */
-.btn {
-  display: inline-block;
-  padding: 0.5rem 1rem;
-  border-radius: 8px;
-  font-size: var(--fs-xxs);
-  cursor: pointer;
-  border: 1px solid transparent;
-  margin-right: var(--gap-sm);
+.user-profile__buttons {
+  display: flex;
+  justify-content: space-between; /* Los manda a cada esquina */
 }
 
-.btn--primary {
-  background: var(--secundary-700);
-  border-color: var(--secundary-700);
+.user-profile__buttons .btn {
+  align-self: center; 
+}
+.user-profile__buttons .btn--variant2 {
+  align-self: center; 
+}
+.user-profile__buttons .btn {
+  padding: var(--button-padding-top) var(--button-padding-right) 
+           var(--button-padding-bottom) var(--button-padding-left);
 }
 
-.btn--danger {
-  background: var(--black);
-  color: var(--white);
-  border-color: var(--black);
-}
-
-/* ====== Responsive ====== */
-
-/* Teléfonos */
+/* ====== Mobile (≤ 640px) ====== */
 @media (max-width: 640px) {
   .user-profile {
-    grid-template-columns: 1fr;
-    padding: var(--gap-md);
+    grid-template-columns: 1fr;  
+    gap: var(--gap-sm);           
+    padding: var(--gap-sm);       
+    border-radius: 6px;           
+    max-width: 100%;              
   }
 
   .user-profile__sidebar {
-    border-right: none;
-    border-bottom: 1px solid var(--gray-300);
-    padding-right: 0;
-    padding-bottom: var(--gap-md);
-    margin-bottom: var(--gap-md);
+    border-right: none;           
+    border-bottom: 1px solid var(--gray-200); 
+    padding: 0 0 var(--gap-sm) 0;
+    margin-bottom: var(--gap-sm);
   }
-}
 
-/* Tablets */
-@media (max-width: 768px) {
+  .user-profile__image {
+    width: 80px;                  
+    height: 80px;
+    margin-bottom: var(--gap-xs);
+  }
+
   .user-profile__name {
-    font-size: var(--fs-xs);
+    font-size: var(--fs-xs);      
   }
+
+  .user-profile__role {
+    font-size: var(--fs-xxs);
+  }
+
   .user-profile__title {
-    font-size: var(--fs-sm);
+    font-size: var(--fs-sm);      
   }
-}
 
-/* Laptops */
-@media (max-width: 1024px) {
-  .user-profile {
-    grid-template-columns: 1fr 1.5fr;
+  .user-profile__subtitle {
+    font-size: var(--fs-xxs);
   }
-}
 
-/* Desktop grande */
-@media (min-width: 1536px) {
-  .user-profile {
-    max-width: 1200px;
-    margin: 0 auto;
+  .user-profile__list {
+    font-size: var(--fs-xxxs);  
+  }
+
+  .user-profile__buttons {
+    flex-direction: column;      
+    gap: var(--gap-xs);          
   }
 }

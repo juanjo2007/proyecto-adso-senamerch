@@ -86,3 +86,11 @@
   align-self: flex-end; 
 }
 
+.shopping-cart__checkout .btn {
+  align-self: flex-start; 
+}
+.shopping-cart__checkout.btn {
+  padding: var(--button-padding-top) var(--button-padding-right) 
+           var(--button-padding-bottom) var(--button-padding-left);
+}
+

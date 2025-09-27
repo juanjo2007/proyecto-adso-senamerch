@@ -1,128 +1,72 @@
-.title {
-  color: var(--secundary-700);
-  font-family: var(--font-primary);
-  margin: var(--padding-top); /* Usamos padding-top como ref. para margen */
-  font-size: var(--fs-xxxl);
-  padding: var(--button-padding-top) var(--button-padding-right) var(--button-padding-bottom) var(--button-padding-left);
-  margin-left: 35px;
+.hero {
+    position: relative;
+    background-image: url(/frontend/public/assets/img/home_img.jpg);
+    background-position: center;
+    background-size: cover;
+    height: 50rem;
+    position: relative; 
+    text-align: center;
+    color: var(--white);
+    overflow: hidden;
+}
+
+.hero__content {
+    background-color: rgb(0 0 0 / 60%);
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    display : flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding: var(--gap-lg);
+    z-index: 2;
+}
+
+
+.hero__slogan {
+  font-size: var(--fs-sm);
+  font-weight: 700;
+  margin-bottom: var(--gap-md);
+}
+
+.hero__description {
+  font-size: var(--fs-xs);
+  margin-bottom: var(--gap-md);
+  line-height: 1.6;
+}
+.hero__actions {
+  display: flex;
+  flex-wrap: wrap;
+  gap: var(--gap-sm);
   justify-content: center;
-  margin-top: 3rem;
-  position: relative;          
-  transition: color 0.5s ease, top 0.5s ease; 
 }
 
-.title:hover {
-  color: var(--secundary-500); 
-  top: -10px;      
+.hero__actions .btn {
+  align-self: flex-start; 
+}
+.hero__actions .btn {
+  padding: var(--button-padding-top) var(--button-padding-right) 
+           var(--button-padding-bottom) var(--button-padding-left);
 }
 
-.paragraph__home {
-  max-width: 400px; 
-  max-height: 530px;         
-  padding: var(--padding-top) var(--padding-right) var(--padding-bottom) var(--padding-left);
-  font-size: var(--fs-xs);
-  font-family: var(--font-primary);
-  background-color: var(--white);
-  border: 2px solid var(--secundary-600);
-  border-radius: 10px;
-  position: relative;
-  top: -20px; 
-  margin-left: 88px;
-  margin-right: 88px;    
-  transition: transform 0.3s ease, box-shadow 0.3s ease;  
-}
-
-.paragraph__home:hover {
-  transform: translateY(-10px); 
-  box-shadow: 0 8px 16px var(--secundary-400); 
-}
-
-.img__home {
-  width: 500px;         
-  height: 420px;  
-  padding: var(--button-padding-top);        
-  /* position: relative;   ⬅️ quita si no la necesitas */
-  /* top: -400px;          ⬅️ quita esta línea */
-  margin-left: 20px;
-  margin-right: 150px;     
-  float: right;  
-  margin-top: -350px;       /* ✅ agrega espacio desde arriba */
-  border-radius: 10px;        
-  box-shadow: 0 8px 12px var(--secundary-800); 
-  transition: transform 0.3s ease, box-shadow 0.3s ease; 
-}
-
-.img__home:hover {
-  transform: translateY(-10px); 
-  box-shadow: 0 8px 16px var(--secundary-600); 
-}
-
-.btn__home {
-  display: inline-block;
-  padding: var(--button-padding-top) var(--button-padding-right) var(--button-padding-bottom) var(--button-padding-left);
-  margin-left: 210px; 
-  margin-top: 2rem;     
-  background-color: var(--secundary-800); 
-  color: var(--white);              
-  text-decoration: none; 
-  border: var(--black-);    
-  border-radius: 8px;        
-  font-size: var(--fs-xs);
-  transition: background-color 0.3s ease, transform 0.3s ease;
-}
-
-.btn__home:hover {
-  background-color: var(--secundary-400);
-  transform: translateY(-3px); 
-}
-
-@media (max-width: 1024px) {
-  .img__home {
-    position: static;        /* ❗ Quita cualquier top/left fijo */
-    top: auto;
-    margin: 30px auto 0;     /* Centrada y debajo del título */
-    float: none;
-    display: block;
-    width: 70%;
-    height: auto;
-    padding: 1rem;
-  }
-}
-
-@media (max-width: 768px) {
-  .img__home {
-    width: 90%;
-    margin: 20px auto 0;
-    padding: 0.8rem;
-  }
-}
-
-@media (max-width: 480px) {
-  .img__home {
-    width: 100%;
-    margin: 15px auto 0;
-    padding: 0.5rem;
-  }
-}
-@media (max-width: 480px) {
-  .title {
-    font-size: var(--fs-md);
-    margin: 10px auto;
+/* ====== RESPONSIVE ====== */
+@media (max-width: 640px) {
+  .hero {
+    height: 100vh; /* ocupa toda la pantalla */
   }
 
-  .paragraph__home {
-    max-width: 95%;
-    padding: 0.8rem;
+  .hero__slogan {
+    font-size: var(--fs-sm);
   }
 
-  .img__home {
-    width: 100%;
-    padding: 0.5rem;
+  .hero__description {
+    font-size: var(--fs-xs);
+    text-align: justify;
   }
 
-  .btn__home {
-    width: 90%;
-    margin: 15px auto;
-    padding: 0.7rem;
+  .hero__actions {
+    flex-direction: column;
+    gap: var(--gap-sm);
   }
 }
