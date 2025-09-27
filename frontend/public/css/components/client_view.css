@@ -4,3 +4,25 @@
     font-size: var(--fs-md);
     color: var(--black);
 }
+
+
+/* Media Query ≤ 1024px */
+@media (max-width: 1024px) {
+  .title_seller_view {
+    font-size: var(--fs-sm);
+  }
+}
+
+/* Media Query ≤ 768px */
+@media (max-width: 768px) {
+  .title_seller_view {
+    font-size: var(--fs-xs);
+  }
+}
+
+/* Media Query ≤ 486px */
+@media (max-width: 486px) {
+  .title_seller_view {
+    font-size: var(--fs-xs);
+  }
+}
