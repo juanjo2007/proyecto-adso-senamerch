@@ -2,6 +2,9 @@
   background-color: var(--white);
   padding: var(--gap-lg);
   margin-top: 10px;
+  width: 400px;
+  margin-left: 35%;
+  margin-top: 70px;
   border-radius: 8px;
   box-shadow: 0 4px 10px var(--black);
   font-family: var(--font-primary);
@@ -60,3 +63,4 @@
 .login__button:hover {
   background-color: var(--secundary-900);
 }
+
