@@ -1,8 +1,8 @@
 document.addEventListener("DOMContentLoaded", function (){
-    const form = document.querySelector(".contact-page");
+    const form = document.querySelector(".profile-client");
 
     if(form){
-      fetch("/frontend/public/views/components/contact.html")
+      fetch("/frontend/public/views/components/profile_client.html")
         .then(response => response.text())
         .then(data => {
           form.innerHTML = data;

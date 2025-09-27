@@ -1,3 +1,15 @@
+.hero{
+  height: 100%;
+    position: relative;
+    margin: 0;
+    background: 
+        linear-gradient(rgba(233, 233, 233, 0.5), rgba(233, 233, 233, 0.5)),
+        url('/frontend/public/assets/img/img_contact.jpg') center/cover no-repeat;
+    background-attachment: fixed;
+}
+
+
+
 .title {
   color: var(--secundary-700);
   font-family: var(--font-primary);
@@ -78,7 +90,7 @@
 
 @media (max-width: 1024px) {
   .img__home {
-    position: static;        /* ❗ Quita cualquier top/left fijo */
+    position: static;        /* Quita cualquier top/left fijo */
     top: auto;
     margin: 30px auto 0;     /* Centrada y debajo del título */
     float: none;
@@ -121,7 +133,7 @@
   }
 
   .btn__home {
-    width: 90%;
+    width: 100%;
     margin: 15px auto;
     padding: 0.7rem;
   }
