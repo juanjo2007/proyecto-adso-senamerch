@@ -2,9 +2,9 @@ document.addEventListener('DOMContentLoaded', function () {
   const userProfileContainer = document.querySelector('.user-profile-container');
 
   if (userProfileContainer) {
-    fetch("/frontend/public/views/components/emanuel.html")
+    fetch("/frontend/public/views/components/profile.html")
       .then(response => {
-        if (!response.ok) throw new Error("Error al cargar emanuel.html");
+        if (!response.ok) throw new Error("Error al cargar profile.html");
         return response.text();
       })
       .then(data => {
