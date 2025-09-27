@@ -1,0 +1,149 @@
+.user-profile {
+  display: grid;
+  grid-template-columns: 0.8fr 1.6fr; /* columnas más estrechas */
+  gap: var(--gap-md); /* menos espacio entre columnas */
+  border: 1px solid var(--black); /* borde más delgado */
+  border-radius: 8px; /* esquinas más pequeñas */
+  padding: var(--gap-md); /* menos padding interno */
+  background: var(--primary-50);
+  font-family: var(--font-primary);
+  font-size: 90%; /* reduce un poco el texto */
+  max-width: 700px;   /* 🔹 límite de ancho */
+  margin: 2rem auto;    
+}
+/* Sidebar */
+.user-profile__sidebar {
+  text-align: center;
+  border-right: 1px solid var(--gray-300);
+  padding-right: var(--gap-md);
+}
+
+/* El figure contenedor redondo */
+.user-profile__image {
+  width: 100px;
+  height: 100px;
+  margin: 0 auto var(--gap-sm);
+  border-radius: 50%;
+  overflow: hidden;
+  border: 2px solid var(--black);
+}
+
+/* La imagen dentro del figure */
+.user-profile__image img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+
+.user-profile__name {
+  font-size: var(--fs-xs);
+  font-weight: 600;
+}
+
+.user-profile__role {
+  font-size: var(--fs-xxs);
+  color: var(--gray-700);
+  margin-bottom: var(--gap-sm);
+}
+
+.user-profile__sidebar hr {
+  margin: var(--gap-sm) 0;
+  border: none;
+  border-top: 1px solid var(--gray-300);
+}
+
+/* Contenido */
+.user-profile__content {
+  display: flex;
+  flex-direction: column;
+  gap: var(--gap-md);
+}
+
+.user-profile__title {
+  font-size: var(--fs-sm);
+  text-align: center;
+}
+
+.user-profile__subtitle {
+  font-size: var(--fs-xs);
+  font-weight: 600;
+  margin-bottom: var(--gap-xs);
+}
+
+.user-profile__section {
+  border-bottom: 1px solid var(--gray-300);
+  padding-bottom: var(--gap-sm);
+}
+
+.user-profile__list {
+  font-size: var(--fs-xxs);
+  list-style: disc;
+  padding-left: 1.2rem;
+  color: var(--gray-800);
+}
+
+.user-profile__buttons {
+  display: flex;
+  justify-content: space-between; /* Los manda a cada esquina */
+}
+
+.user-profile__buttons .btn {
+  align-self: center; 
+}
+.user-profile__buttons .btn--variant2 {
+  align-self: center; 
+}
+.user-profile__buttons .btn {
+  padding: var(--button-padding-top) var(--button-padding-right) 
+           var(--button-padding-bottom) var(--button-padding-left);
+}
+
+/* ====== Mobile (≤ 640px) ====== */
+@media (max-width: 640px) {
+  .user-profile {
+    grid-template-columns: 1fr;  
+    gap: var(--gap-sm);           
+    padding: var(--gap-sm);       
+    border-radius: 6px;           
+    max-width: 100%;              
+  }
+
+  .user-profile__sidebar {
+    border-right: none;           
+    border-bottom: 1px solid var(--gray-200); 
+    padding: 0 0 var(--gap-sm) 0;
+    margin-bottom: var(--gap-sm);
+  }
+
+  .user-profile__image {
+    width: 80px;                  
+    height: 80px;
+    margin-bottom: var(--gap-xs);
+  }
+
+  .user-profile__name {
+    font-size: var(--fs-xs);      
+  }
+
+  .user-profile__role {
+    font-size: var(--fs-xxs);
+  }
+
+  .user-profile__title {
+    font-size: var(--fs-sm);      
+  }
+
+  .user-profile__subtitle {
+    font-size: var(--fs-xxs);
+  }
+
+  .user-profile__list {
+    font-size: var(--fs-xxxs);  
+  }
+
+  .user-profile__buttons {
+    flex-direction: column;      
+    gap: var(--gap-xs);          
+  }
+}

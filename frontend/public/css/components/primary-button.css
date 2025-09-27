@@ -16,17 +16,14 @@
   white-space: nowrap;
   min-width: 0;
 }
-
 .btn--primary {
   background: var(--secundary-800);
   color: var(--white);
 }
-
 .btn--primary:hover {
   background: var(--secundary-600);
   transform: translateY(-2px);
 }
-
 .btn--primary:active {
   background: var(--secundary-900);
   transform: translateY(0);

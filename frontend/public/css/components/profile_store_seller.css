@@ -54,47 +54,21 @@
 }
 
 .store-profile__actions {
+  display: flex;
   text-align: center;
+  justify-content: space-between;   
+  gap: var(--gap-md);
+  margin-top: var(--gap-lg);
 }
-
-/* Botón primario */
-.btn {
-  display: inline-block;
-  padding: var(--button-padding-top) var(--button-padding-right);
-  border-radius: 8px;
-  text-decoration: none;
-  font-size: var(--fs-xs);
-  cursor: pointer;
+.store-profile__actions .btn {
+  align-self: center; 
 }
-
-.btn--primary {
-  background-color: var(--secundary-600);
-  color: var(--white);
-  transition: background 0.3s ease;
+.store-profile__actions.btn--variant2 {
+  align-self: center; 
 }
-
-.btn--primary:hover {
-  background-color: var(--secundary-700);
-}
-
-@media (max-width: 1024px) {
-  .store-profile {
-    max-width: 90%;
-    padding: var(--gap-md);
-  }
-
-  .store-profile__logo {
-    width: 90px;
-    height: 90px;
-  }
-
-  .store-profile__name {
-    font-size: var(--fs-xs);
-  }
-
-  .store-profile__details {
-    font-size: var(--fs-xs);
-  }
+.store-profile__actions .btn {
+  padding: var(--button-padding-top) var(--button-padding-right) 
+           var(--button-padding-bottom) var(--button-padding-left);
 }
 
 /* =======================

@@ -1,14 +1,10 @@
-/* Contenedor del componente */
 .quantity-container {
   display: flex;
   flex-direction: column;
-  gap: 0.5rem; /* reduce la separación vertical */
+  gap: 0.5rem; 
   align-items: center;
   max-height: 960px;
 }
-
-
-/* Bloque principal */
 .quantity {
   border: 1px solid var(--black);
   display: flex;
@@ -20,16 +16,12 @@
   font-size: var(--fs-xxxs);  
   max-width: 400px; 
   width: 100%;                     
-  transition: border-color 0.3s, box-shadow 0.3s; /* transición suave */
+  transition: border-color 0.3s, box-shadow 0.3s; 
 }
-
-/* Hover del bloque */
 .quantity:hover {
   border-color: var(--primary-600);
   box-shadow: 0 4px 12px rgba(0,0,0,0.2);
 }
-
-/* Input */
 .quantity__field {
   max-width: 100%;
   width: 300px;
@@ -41,57 +33,44 @@
   transition: border 0.3s, box-shadow 0.3s;
   box-shadow: 0 4px 8px var(--gray-800);
 }
-
-/* Hover del input */
 .quantity__field:hover {
   border-color: var(--primary-400);
   box-shadow: 0 0 6px var(--primary-300);
 }
-
-/* Focus del input */
 .quantity__field:focus {
   border-color: var(--primary-600);
   box-shadow: 0 0 4px var(--primary-900);
 }
-
-/* Active del input */
 .quantity__field:active {
   border-color: var(--primary-700);
   box-shadow: 0 0 8px var(--primary-800);
 }
-/* Media Query para tabletas y móviles */
 @media (max-width: 768px) {
   .quantity {
-    max-width: 50%;      /* ocupa casi todo el ancho de la pantalla */
-    padding: 1.5rem;     /* menos padding para pantallas pequeñas */
-    gap: 0.8rem;         /* reduce la separación interna */
+    max-width: 50%;    
+    padding: 1.5rem;     
+    gap: 0.8rem;        
   }
-
   .quantity__field {
-    width: 280px;          /* input ocupa todo el ancho del bloque */
-    padding: 0.5rem 0.8rem; /* reduce padding del input */
-    font-size: var(--fs-xxs); /* texto más legible en pantallas pequeñas */
+    width: 280px;          
+    padding: 0.5rem 0.8rem; 
+    font-size: var(--fs-xxs);
   }
-
   .quantity__label,
   .quantity__helper {
-    font-size: var(--fs-xxs); /* ajustar texto a tamaño móvil */
+    font-size: var(--fs-xxs); 
   }
 }
-
 @media (max-width: 480px) {
   .quantity {
-    padding: 1rem;       /* aún menos padding en móviles pequeños */
-    gap: 0.6rem;         /* separación interna compacta */
-    
+    padding: 1rem;       
+    gap: 0.6rem;         
   }
-
   .quantity__field {
     padding: 0.4rem 0.6rem;
     font-size: var(--fs-xxxs); /* texto pequeño para móviles */
     width: 100%;
   }
-
   .quantity__label,
   .quantity__helper {
     font-size: var(--fs-xxxs);

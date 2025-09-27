@@ -1,0 +1,45 @@
+<section class="user-profile">
+  <!-- Sidebar con avatar + datos básicos -->
+  <aside class="user-profile__sidebar">
+    <figure class="user-profile__image">
+      <img src="/frontend/public/assets/img/client_photo_profile.jpg" alt="Photo_client">
+    </figure>
+    <h2 class="user-profile__name">Juan Pérez</h2>
+    <p class="user-profile__role">Cliente</p>
+    <hr>
+    <p><strong>Correo:</strong> juanperez@email.com</p>
+    <p><strong>Teléfono:</strong> +57 300 456 7890</p>
+    <p><strong>Dirección:</strong> Calle 123, Bogotá</p>
+  </aside>
+
+  <!-- Contenido con detalles -->
+  <div class="user-profile__content">
+    <h2 class="user-profile__title">Mi Perfil</h2>
+
+    <!-- Info personal -->
+    <section class="user-profile__section">
+      <h3 class="user-profile__subtitle">Información personal</h3>
+      <p><strong>Nombre completo:</strong> Juan Alberto Pérez</p>
+      <p><strong>Documento:</strong> CC 123456789</p>
+      <p><strong>Fecha de nacimiento:</strong> 15/08/1990</p>
+    </section>
+
+    <!-- Actividad -->
+    <section class="user-profile__section">
+      <h3 class="user-profile__subtitle">Actividad reciente</h3>
+      <ul class="user-profile__list">
+        <li>Pedido #12345 - Entregado (20/09/2025)</li>
+        <li>Pedido #12346 - En tránsito (22/09/2025)</li>
+        <li>Pedido #12347 - Pendiente de pago (25/09/2025)</li>
+      </ul>
+    </section>
+
+    <!-- Configuración -->
+    <section class="user-profile__section">
+      <h3 class="user-profile__subtitle">Configuración</h3>
+      <div class="user-profile__buttons">
+        <a href="edit_profile_client.html" class="btn btn--primary shopping-cart__checkout">Editar perfil</a>
+        <a href="profile_client.html" class="btn--variant2 btn--variant2--secondary shopping-cart__continue">Cerrar sesión</a>
+      </div>
+    </section>
+</section>

@@ -1,0 +1,152 @@
+/* ===== Componente base ===== */
+.sale-details {
+  display: grid;
+  grid-template-columns: 1fr 2fr;
+  gap: var(--gap-lg);
+  border: 1px solid var(--gray-200);
+  padding: var(--gap-lg);
+  border-radius: 12px;
+  background: var(--primary-50);
+  font-family: var(--font-primary);
+  max-width: 1000px;    
+  margin: 2rem auto;
+  box-shadow: 0 1px 16px rgba(0,0,0,0.15);
+  max-height: 1000px;
+}
+
+/* ===== Sidebar (Agricultor + Vendedor + Transporte) ===== */
+.sale-details__sidebar {
+  font-size: var(--fs-xxs);
+  color: var(--gray-900);
+  display: flex;
+  flex-direction: column;
+  gap: var(--gap-sm);
+  border-right: 1px solid var(--gray-300);
+  padding-right: var(--gap-md);
+}
+.sale-details__sidebar hr {
+  border: none;
+  border-top: 1px solid var(--gray-300);
+  margin: var(--gap-sm) 0;
+}
+
+/* ===== Contenido principal ===== */
+.sale-details__content {
+  display: flex;
+  flex-direction: column;
+  gap: var(--gap-md);
+}
+.sale-details__title {
+  font-size: var(--fs-xs);
+  text-align: center;
+  margin-bottom: var(--gap-sm);
+}
+.sale-details__subtitle {
+  font-size: var(--fs-xs);
+  font-weight: 600;
+  margin-bottom: var(--gap-xs);
+}
+.sale-details__section {
+  border-bottom: 1px solid var(--gray-300);
+  padding-bottom: var(--gap-sm);
+}
+
+/* ===== Cards de productos / transporte ===== */
+.products-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+  gap: var(--gap-md);
+}
+
+.product-card, .transport-card {
+  background: var(--white);
+  border: 1px solid var(--gray-200);
+  border-radius: 0.6rem;
+  padding: var(--gap-md);
+  box-shadow: 0 2px 6px rgba(0,0,0,0.1);
+  font-size: var(--fs-xxs);
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+.product-card:hover, .transport-card:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 4px 10px rgba(0,0,0,0.15);
+}
+
+/* ===== Totales ===== */
+.sale-details__totals {
+  font-size: var(--fs-xs);
+  font-family: var(--font-primary-semibold);
+  text-align: right;
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+}
+
+/* ===== Acciones ===== */
+.sale-details__actions {
+  display: flex;
+  justify-content: center;
+  margin-top: var(--gap-md);
+}
+
+.sale-details__actions .btn {
+  align-self: flex-start; 
+}
+.sale-details__actions .btn {
+  padding: var(--button-padding-top) var(--button-padding-right) 
+           var(--button-padding-bottom) var(--button-padding-left);
+}
+@media (max-width: 640px) {
+  .sale-details {
+    grid-template-columns: 1fr;
+    padding: var(--gap-md);
+  }
+  .sale-details__sidebar {
+    border-right: none;
+    border-bottom: 1px solid var(--gray-300);
+    padding-right: 0;
+    padding-bottom: var(--gap-md);
+    margin-bottom: var(--gap-md);
+  }
+  .products-grid {
+    grid-template-columns: 1fr; /* apila los cards */
+  }
+  .product-card, .transport-card {
+    font-size: var(--fs-xxs);
+  }
+}
+
+@media (max-width: 768px) {
+  .sale-details {
+    grid-template-columns: 1fr;
+  }
+  .sale-details__sidebar {
+    font-size: var(--fs-xxs);
+  }
+}
+
+@media (max-width: 1024px) {
+  .sale-details {
+    grid-template-columns: 1fr 1.5fr;
+    gap: var(--gap-md);
+  }
+}
+
+@media (max-width: 1280px) {
+  .sale-details {
+    grid-template-columns: 1fr 2fr;
+  }
+}
+
+@media (min-width: 1536px) {
+  .sale-details {
+    max-width: 1400px;
+    margin: 0 auto;
+  }
+  .sale-details__title {
+    font-size: var(--fs-lg);
+  }
+}
