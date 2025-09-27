@@ -110,6 +110,37 @@
 .sales-history__store-button:hover {
     background-color: #145a24; /* Verde más oscuro al pasar el mouse */
 }
+/* Desktop / default */
+.sale-details {
+  display: grid;
+  grid-template-columns: 1fr 2fr; /* sidebar + contenido */
+  gap: var(--gap-lg);
+}
+
+/* ====== MOBILE (teléfonos ≤640px) ====== */
+@media (max-width: 640px) {
+  .sale-details {
+    grid-template-columns: 1fr; /* 👈 se apila en una columna */
+  }
+
+  .sale-details__sidebar {
+    border-right: none; /* quitamos la división vertical */
+    border-bottom: 1px solid var(--gray-300); /* línea divisoria abajo */
+    padding-bottom: var(--gap-md);
+    margin-bottom: var(--gap-md);
+  }
+
+  .sale-details__content {
+    margin-top: 0; /* se pega justo debajo */
+  }
+
+  .sale-details__table {
+    font-size: var(--fs-xxs); /* tablas un poco más compactas */
+    overflow-x: auto; /* scroll si la tabla es más ancha que pantalla */
+    display: block;
+  }
+}
+
 
 /* ====== RESPONSIVE ====== */
 @media (max-width: 768px) {

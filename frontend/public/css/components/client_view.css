@@ -1,6 +1,6 @@
 .title_client_view{
     text-align: center;
     font-family: var(--font-primary);
-    font-size: var(--fs-md);
+    font-size: var(--fs-sm);
     color: var(--black);
 }

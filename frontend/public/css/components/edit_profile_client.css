@@ -29,7 +29,7 @@
   margin: 0;
   text-align: center;
   font-family: var(--font-primary-semibold);
-  font-size: var(--fs-lg);
+  font-size: var(--fs-sm);
   color: var(--black);
 }
 
@@ -90,42 +90,20 @@
 /* ================== Botones Edit ================== */
 .edit__actions {
   display: flex;
-  justify-content: center;   /* centrar horizontalmente */
+  justify-content: space-between;   /* centrar horizontalmente */
   gap: var(--gap-md);
   margin-top: var(--gap-lg);
 }
-
-.edit__btn {
-  font-family: var(--font-primary);
-  font-size: var(--fs-xs);
-  padding: var(--button-padding-top) var(--button-padding-right);
-  border-radius: 8px;
-  border: none;
-  cursor: pointer;
-  text-decoration: none;      /* quitar subrayado de <a> */
-  color: var(--white);
-  transition: background-color 0.3s ease, transform 0.2s ease;
-  display: inline-block;      /* importante para que tome el padding */
+.edit__actions .btn {
+  align-self: center; 
 }
-
-.edit__btn--save {
-  background-color: var(--primary-600);
+.edit__actions .btn--variant2 {
+  align-self: center; 
 }
-
-.edit__btn--save:hover {
-  background-color: var(--primary-700);
-  transform: scale(1.03);
+.edit__actions .btn {
+  padding: var(--button-padding-top) var(--button-padding-right) 
+           var(--button-padding-bottom) var(--button-padding-left);
 }
-
-.edit__btn--cancel {
-  background-color: var(--tertiary-600);
-}
-
-.edit__btn--cancel:hover {
-  background-color: var(--tertiary-700);
-  transform: scale(1.03);
-}
-
 /* Responsive tweaks */
 @media (max-width: 1024px) {
   .edit__container {
@@ -142,6 +120,6 @@
 
 @media (max-width: 480px) {
   .edit__image img { width: 110px; height: 110px; }
-  .edit__title { font-size: var(--fs-md); }
+  .edit__title { font-size: var(--fs-sm); }
   .edit__btn { padding: 10px 12px; font-size: var(--fs-xxxs); }
 }
