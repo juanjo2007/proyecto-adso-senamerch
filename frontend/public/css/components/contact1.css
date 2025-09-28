@@ -1,0 +1,110 @@
+/* ================== CONTACT ================== */
+.contact {
+  position: relative;
+  background: url("/frontend/public/assets/img/img_contact.jpg") no-repeat center center/cover;
+  width: 100%;  /* 👈 limita el ancho máximo */
+  margin: 0 auto;      /* 👈 centra en pantallas grandes */
+  margin-top: 2rem;
+  margin-bottom: 2rem;
+  height: 100vh;       /* 👈 ocupa toda la altura de la pantalla */
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: var(--white);
+  font-family: var(--font-primary);
+  overflow: hidden;    /* evita scroll raro si hay exceso de padding */
+}
+
+.contact__overlay {
+  background:rgba(233, 233, 233, 0.5);
+  width: 100%;
+  height: 100%;
+  padding: var(--gap-xl);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+}
+.contact__container {
+  background: var(--white);
+  color: var(--gray-900);
+  border-radius: 12px;
+  padding: var(--gap-xl);
+  max-width: 720px;
+  width: 100%;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.15);
+}
+
+.contact__header {
+  text-align: center;
+  margin-bottom: var(--gap-lg);
+}
+
+.contact__title {
+  font-size: var(--fs-sm);
+  font-family: var(--font-primary-bold);
+  margin-bottom: var(--gap-sm);
+  color: var(--primary-950);
+}
+
+.contact__subtitle {
+  font-size: var(--fs-xs);
+  color: var(--gray-700);
+  line-height: 1.6;
+}
+
+/* ===== FORM ===== */
+.contact__form {
+  display: flex;
+  flex-direction: column;
+  gap: var(--gap-md);
+}
+
+.contact__group {
+  display: flex;
+  flex-direction: column;
+  gap: var(--gap-xxs);
+}
+
+.contact__group label {
+  font-size: var(--fs-xxs);
+  font-family: var(--font-primary-bold);
+  color: var(--gray-800);
+}
+
+.contact__group input,
+.contact__group textarea {
+  padding: var(--gap-sm);
+  border: 1px solid var(--gray-300);
+  border-radius: 8px;
+  font-size: var(--fs-xs);
+  font-family: var(--font-primary);
+  color: var(--gray-900);
+  background: var(--gray-50);
+  outline: none;
+  transition: border-color 0.2s ease-in-out;
+}
+
+.contact__group input:focus,
+.contact__group textarea:focus {
+  border-color: var(--primary-600);
+}
+
+.contact__form .btn {
+  align-self: flex-start; 
+}
+.contact__form .btn {
+  padding: var(--button-padding-top) var(--button-padding-right) 
+           var(--button-padding-bottom) var(--button-padding-left);
+}
+
+/* ====== RESPONSIVE ====== */
+@media (max-width: 640px) {
+  .contact__container {
+    padding: var(--gap-lg);
+  }
+  .contact__title {
+    font-size: var(--fs-sm);
+  }
+}
+

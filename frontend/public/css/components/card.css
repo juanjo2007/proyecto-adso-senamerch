@@ -1,8 +1,8 @@
 .products__container {
   display: grid;
   gap: var(--gap-md);
-  margin-top: 2rem;
-  margin-bottom: 1.6rem;
+  margin-top: 1rem;
+  margin-bottom: 1rem;
 }
 .card-container {
   display: grid;
