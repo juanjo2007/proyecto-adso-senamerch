@@ -3,7 +3,7 @@
   background-image: url(/frontend/public/assets/img/home_img.jpg);
   background-position: center;
   background-size: cover;
-  height: 24rem;
+  height: 100vh; /* base: móvil */
   text-align: center;
   color: var(--secundary-200);
   overflow: hidden;
@@ -70,57 +70,14 @@
 }
 
 /* ====== RESPONSIVE ====== */
-@media (max-width: 640px) {
-  .hero {
-    height: 50vh; /* ocupa toda la pantalla */
-  }
-
-  .hero__subtitle {
-    font-size: var(--fs-sm);
-  }
-
-  .hero__description {
-    font-size: var(--fs-xs);
-    text-align: justify;
-  }
-
-  .hero__actions {
-    flex-direction: column;
-    gap: var(--gap-sm);
-  }
-}
-
 @media (min-width: 768px) {
   .hero {
-    height: 38vh; /* Ajusta a lo que necesites */
-  }
-
-  .hero__subtitle {
-    font-size: var(--fs-xs);
-  }
-
-  .hero__description {
-    font-size: var(--fs-xs);
-    text-align: justify;
+    height: 38vh; /* tablet */
   }
 }
 
-@media (max-width: 1280px) {
+@media (min-width: 1280px) {
   .hero {
-    height: 24vh;
-  }
-
-  .hero__subtitle {
-    font-size: var(--fs-sm);
-  }
-
-  .hero__description {
-    font-size: var(--fs-xs);
-    text-align: justify;
-  }
-
-  .hero__actions {
-    flex-direction: column;
-    gap: var(--gap-sm);
+    height: 40vh; /* desktop */
   }
 }
