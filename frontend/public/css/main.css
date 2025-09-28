@@ -19,6 +19,10 @@
 @import url('components/navbar_publications_gestor.css');
 @import url('components/navbar_edit_store_seller.css');
 @import url('components/navbar_profile_store_seller.css');
+@import url('components/navbar_product_description.css');
+@import url('components/navbar_viwe_car.css');
+@import url('components/navbar_payment_method.css');
+@import url('components/navbar_details.css');
 @import url('components/footer.css');
 @import url('components/forms.css');
 @import url('components/add_adress.css');
