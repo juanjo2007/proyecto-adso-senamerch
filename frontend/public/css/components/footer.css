@@ -9,17 +9,19 @@
 }
 .footer-container__container {
   display: flex;
-  justify-content: space-between;
+  justify-content: space-between; /* reparte izquierda - derecha */
   align-items: center;
-  max-width: 1200px;
-  margin: auto;
-  gap: var(--gap-md);      
+  width: 100%;    /* ocupa todo el ancho */
+  max-width: none; /* quita la limitación */
 }
+
+
 .footer-container__text {
   font-size: var(--fs-xs);
   color: var(--white);
 }
 .footer-container__social {
+  margin-left: auto;
   display: flex;
   gap: var(--gap-sm);   
 }
@@ -38,3 +40,4 @@
     text-align: center;
   }
 }
+

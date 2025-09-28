@@ -2,7 +2,7 @@
   display: flex;
   gap: var(--gap-lg);
   font-family: var(--font-primary);
-  background: var(--primary-50);
+  background: var(--secundary-50);
   border: 1px solid var(--gray-300); 
   padding: var(--gap-lg);
   border-radius: 12px;
