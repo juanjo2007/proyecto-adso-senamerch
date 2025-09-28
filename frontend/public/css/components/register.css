@@ -71,28 +71,12 @@ a:hover {
   text-decoration: dotted;
 }
 
-.form__button {
-  width: 100%;
-  padding: var(--button-padding-top) var(--button-padding-right) var(--button-padding-bottom) var(--button-padding-left);
-  margin-top: var(--gap-lg);                   /* separación clara antes del botón */
-  font-size: var(--fs-sm);
-  font-weight: bold;
-  color: var(--white);
-  background-color: var(--secundary-700);
-  border: none;
-  border-radius: 0.8rem;
-  cursor: pointer;
-  transition: background-color 0.3s ease, transform 0.2s ease;
+.form-content .btn {
+  justify-content: center;
 }
-
-.form__button:hover {
-  background-color: var(--secundary-600);
-  transform: translateY(-2px);
-}
-
-.form__button:active {
-  background-color: var(--secundary-800);
-  transform: translateY(0);
+.form-content .btn {
+  padding: var(--button-padding-top) var(--button-padding-right) 
+           var(--button-padding-bottom) var(--button-padding-left);
 }
 
 /* ================== MEDIA QUERIES ================== */
