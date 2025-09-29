@@ -1,4 +1,4 @@
-.user-profile {
+.user-profile-container {
   display: grid;
   grid-template-columns: 0.8fr 1.6fr; /* columnas más estrechas */
   gap: var(--gap-md); /* menos espacio entre columnas */
@@ -99,39 +99,79 @@
            var(--button-padding-bottom) var(--button-padding-left);
 }
 
-/* ====== Mobile (≤ 640px) ====== */
-@media (max-width: 640px) {
+/* ====== 1024px (Tablets grandes / Laptops pequeñas) ====== */
+@media (max-width: 1024px) {
   .user-profile {
-    grid-template-columns: 1fr;  
-    gap: var(--gap-sm);           
-    padding: var(--gap-sm);       
-    border-radius: 6px;           
-    max-width: 100%;              
+    max-width: 90%;               /* Más flexible en pantallas medianas */
+    font-size: 85%;               /* Texto ligeramente reducido */
+    padding: var(--gap-md);
   }
 
   .user-profile__sidebar {
-    border-right: none;           
-    border-bottom: 1px solid var(--gray-200); 
-    padding: 0 0 var(--gap-sm) 0;
-    margin-bottom: var(--gap-sm);
+    padding-right: var(--gap-sm); /* Menos espacio lateral */
   }
 
   .user-profile__image {
-    width: 80px;                  
-    height: 80px;
+    width: 90px;
+    height: 90px;
+  }
+
+  .user-profile__buttons {
+    gap: var(--gap-sm);
+  }
+}
+
+/* ====== 768px (Tablets en vertical) ====== */
+@media (max-width: 768px) {
+  .user-profile {
+    flex-direction: column;       /* Deja de ser dos columnas */
+    align-items: center;
+    max-width: 95%;
+    gap: var(--gap-md);
+    padding: var(--gap-sm);
+  }
+
+  .user-profile__sidebar {
+    border-right: none;
+    border-bottom: 1px solid var(--gray-300);
+    padding: 0 0 var(--gap-sm) 0;
+    text-align: center;
+    width: 100%;
+  }
+
+  .user-profile__content {
+    width: 100%;
+  }
+
+  .user-profile__buttons {
+    justify-content: center;
+    gap: var(--gap-sm);
+    flex-wrap: wrap; /* Si hay varios botones, que bajen en varias líneas */
+  }
+}
+
+/* ====== 480px (Móviles pequeños) ====== */
+@media (max-width: 480px) {
+  .user-profile {
+    max-width: 100%;
+    border-radius: 6px;
+    gap: var(--gap-sm);
+    font-size: 80%;               /* Texto más compacto */
+  }
+
+  .user-profile__image {
+    width: 70px;
+    height: 70px;
     margin-bottom: var(--gap-xs);
   }
 
-  .user-profile__name {
-    font-size: var(--fs-xs);      
-  }
-
-  .user-profile__role {
-    font-size: var(--fs-xxs);
+  .user-profile__buttons {
+    flex-direction: column;
+    gap: var(--gap-xs);
   }
 
   .user-profile__title {
-    font-size: var(--fs-sm);      
+    font-size: var(--fs-xs);
   }
 
   .user-profile__subtitle {
@@ -139,11 +179,6 @@
   }
 
   .user-profile__list {
-    font-size: var(--fs-xxxs);  
-  }
-
-  .user-profile__buttons {
-    flex-direction: column;      
-    gap: var(--gap-xs);          
+    font-size: var(--fs-xxxs);
   }
 }
