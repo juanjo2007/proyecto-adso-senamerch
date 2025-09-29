@@ -1,26 +1,38 @@
-.product-card {
+.product-description {
   display: flex;
   gap: var(--gap-lg);
   font-family: var(--font-primary);
-  background: var(--primary-50);
+  background: var(--secundary-50);
   border: 1px solid var(--gray-300); 
   padding: var(--gap-lg);
   border-radius: 12px;
   box-shadow: 0 2px 6px rgba(0,0,0,0.05); 
 }
-.product-card__gallery {
+.product-description .btn {
+  align-self: flex-start; 
+}
+.product-description .btn {
+  padding: var(--button-padding-top) var(--button-padding-right) 
+           var(--button-padding-bottom) var(--button-padding-left);
+}
+
+/* ==== Galería ==== */
+.product-description__gallery {
   flex: 1;
 }
-.product-card__image--main {
+
+.product-description__image--main {
   width: 100%;
   border-radius: 8px;
 }
-.product-card__thumbnails {
+
+.product-description__thumbnails {
   display: flex;
   gap: var(--gap-xs);
   margin-top: var(--gap-sm);
 }
-.product-card__thumbnail {
+
+.product-description__thumbnail {
   width: 60px;
   height: 60px;
   object-fit: cover;
@@ -28,57 +40,71 @@
   border-radius: 6px;
   cursor: pointer;
 }
-.product-card__details {
+
+/* ==== Detalles ==== */
+.product-description__details {
   flex: 1;
   display: flex;
   flex-direction: column;
   gap: var(--gap-md);
 }
-.product-card__title {
+
+.product-description__title {
   font-size: var(--fs-xs);
-  font-family: var(--font-primary-bold);
+  font-weight: 600;
   color: var(--gray-900);
 }
-.product-card__price {
+
+.product-description__price {
   font-size: var(--fs-sm);
-  font-family: var(--font-primary-bold);
+  font-weight: 600;
   color: var(--secundary-600);
 }
+
 .btn {
   align-self: flex-start; 
 }
-.product-card__info {
+
+/* ==== Info extendida ==== */
+.product-description__info {
   font-size: var(--fs-xxs);
   color: var(--gray-800);
 }
-.product-card__subtitle {
+
+.product-description__subtitle {
   font-size: var(--fs-xxs);
-  font-family: var(--font-primary-bold);
+  font-weight: 600;
   margin-bottom: var(--gap-xs);
 }
-.product-card__list {
+
+.product-description__list {
   margin-top: var(--gap-xs);
   padding-left: 1.2rem;
 }
 
-.product-card__list-item {
+.product-description__list-item {
   margin-bottom: var(--gap-xxs);
 }
-.product-card__rating {
+
+/* ==== Rating ==== */
+.product-description__rating {
   font-size: var(--fs-xxs);
   color: var(--gray-700);
 }
-.product-card__rating-text {
+
+.product-description__rating-text {
   font-size: var(--fs-xxs);
   color: var(--secundary-600);
 }
-.product-card__rating-label {
+
+.product-description__rating-label {
   font-size: var(--fs-xxs);
   display: block;
   margin-bottom: var(--gap-xxs);
   color: var(--gray-800);
 }
-.product-card__rating-stars {
+
+.product-description__rating-stars {
   display: inline-flex;           
   flex-direction: row-reverse;   
   justify-content: flex-end;     
@@ -86,30 +112,41 @@
   cursor: pointer;
   width: 100%;                   
 }
-.product-card__rating-stars label {
+
+.product-description__rating-stars label {
   font-size: var(--fs-sm);
-  color: var(--secundary-600);
+  color: var(--gray-400);
   cursor: pointer;
   transition: color 0.2s;
 }
-.product-card__rating-stars input:checked ~ label {
+
+.product-description__rating-stars input {
+  display: none; /* ocultar los radios */
+}
+
+.product-description__rating-stars input:checked ~ span {
   color: var(--secundary-600);
 }
-.product-card__rating-stars label:hover,
-.product-card__rating-stars label:hover ~ label {
+
+.product-description__rating-stars label:hover span,
+.product-description__rating-stars label:hover ~ label span {
   color: var(--secundary-600);
 }
-.product-card__rating-result {
+
+.product-description__rating-result {
   font-size: var(--fs-xs);
   color: var(--gray-700);
   margin-top: var(--gap-xs);
 }
+
+/* ==== Responsivo ==== */
 @media (max-width: 768px) {
-  .product-card {
+  .product-description {
     flex-direction: column;
   }
-  .product-card__gallery,
-  .product-card__details {
+
+  .product-description__gallery,
+  .product-description__details {
     width: 100%;
   }
 }

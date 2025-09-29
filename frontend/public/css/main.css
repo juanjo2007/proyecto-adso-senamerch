@@ -12,13 +12,28 @@
 @import url('components/navbar_register.css');
 @import url('components/navbar_login.css');
 @import url('components/navbar_contact.css');
+@import url('components/navbar_client_view.css');
+@import url('components/navbar_profile_client.css');
+@import url('components/navbar_edit_profile_client.css');
+@import url('components/navbar_seller_view.css');
+@import url('components/navbar_publications_gestor.css');
+@import url('components/navbar_edit_store_seller.css');
+@import url('components/navbar_profile_store_seller.css');
 @import url('components/footer.css');
 @import url('components/forms.css');
-@import url('components/agregar_direccion.css');
-@import url('components/registro.css');
-@import url('components/gestion_publicaciones.css');
-@import url('pages/home.css');
-@import url('themes/dark-mode.css');
+@import url('components/add_adress.css');
+@import url('components/hero.css');
+@import url('components/register.css');
+@import url('components/publications_gestor.css');
+@import url('components/login.css');
+
+/* Importaciones de SenaMerch Mateo */
+@import url('components/car.css'); 
+@import url('components/productos.css');
+@import url('components/usuarios.css');  
+/* @import url('components/sales-history.css');  */
+/* @import url("components/publicaciones.css"); */
+
 
 
 /* Importaciones de SenaMerch Emanuel */
@@ -32,17 +47,4 @@
 @import url('components/quantity-input.css');
 @import url('components/orders.css');
 @import url('components/sale-details.css');
-
-
-/* Importaciones de SenaMerch Jeferson */
-@import url('components/order.css');
-@import url('components/sales-doc.css');
-@import url('components/payment_gateway.css');
-@import url('components/stores.css');
-@import url('components/order_admin.css');
-
-
-
-
-
 

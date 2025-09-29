@@ -1,5 +1,5 @@
 document.addEventListener("DOMContentLoaded", function (){
-    const form = document.querySelector(".login");
+    const form = document.querySelector(".login-container");
 
     if(form){
       fetch("/frontend/public/views/components/login.html")
