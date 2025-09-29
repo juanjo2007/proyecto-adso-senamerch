@@ -1,0 +1,84 @@
+/* ================== POSTS BLOCK ================== */
+.posts {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: var(--gap-xl);
+  font-family: var(--font-primary);
+  background-color: var(--primary-50);
+}
+
+/* ================== CARD CONTAINER ================== */
+.posts__card {
+  background-color: var(--white);
+  padding: var(--gap-md);
+  border-radius: 8px;
+  box-shadow: 0 1px 3px rgba(0,0,0,0.1);
+  max-width: 1000px;
+  width: 100%;
+}
+
+/* ================== TITLE ================== */
+.posts__title {
+  font-size: var(--fs-sm); /* 32px */
+  font-weight: bold;
+  margin-bottom: var(--gap-lg);
+  color: var(--primary-950);
+  text-align: center;
+}
+
+/* ================== TABLE ================== */
+.posts__table {
+  width: 100%;
+  border-collapse: collapse;
+
+}
+
+.posts__table-row--header {
+  background-color: var(--primary-200);
+}
+
+.posts__table-header {
+  padding: var(--gap-sm);
+  text-align: left;
+  font-size: var(--fs-xs); /* 20px */
+  font-weight: 600;
+  border: 1px solid var(--gray-200);
+  color: var(--gray-900);
+}
+
+.posts__table-cell {
+  padding: var(--gap-sm);
+  border: 1px solid var(--gray-200);
+  font-size: var(--fs-xs); /* 16px */
+  color: var(--gray-900);
+}
+
+/* ================== BUTTON ================== */
+.posts__btn {
+  padding: 0.6rem 1.2rem;
+  background-color: var(--black);
+  color: var(--white);
+  border: none;
+  border-radius: 4px;
+  font-size: var(--fs-xxs);
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.posts__btn:hover {
+  background-color: var(--gray-800);
+}
+
+/* ================== RESPONSIVE ================== */
+@media (max-width: 768px) {
+  .posts__card {
+    padding: var(--gap-sm);
+  }
+
+  .posts__table-header,
+  .posts__table-cell {
+    font-size: var(--fs-xxs);
+    padding: var(--gap-xs);
+  }
+}

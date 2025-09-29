@@ -36,10 +36,12 @@
 
 /* Importaciones de SenaMerch Mateo */
 @import url('components/car.css'); 
-@import url('components/productos.css');
-@import url('components/usuarios.css');  
-/* @import url('components/sales-history.css');  */
-/* @import url("components/publicaciones.css"); */
+@import url('components/products.css');
+@import url('components/sales-history.css');  
+@import url('components/users.css');
+@import url('components/posts.css');  
+
+
 
 
 

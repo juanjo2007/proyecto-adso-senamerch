@@ -1,0 +1,159 @@
+/* ================== Contenedor principal ================== */
+.users {
+  max-width: 1000px;
+  margin: 40px auto;
+  padding: 20px;
+  background: var(--white);
+  border: 1px solid var(--gray-200);
+  border-radius: 8px;
+  color: var(--gray-950);
+}
+
+/* ================== Título ================== */
+.users__title {
+  text-align: center;
+  font-size: var(--fs-sm); /* 20px */
+  margin-bottom: var(--gap-lg);
+  color: var(--primary-950);
+  font-family: var(--font-primary-semibold);
+}
+
+
+
+.users__search-input {
+  padding: var(--padding-top) var(--padding-right);
+  border: 1px solid var(--gray-300);
+  border-radius: 4px;
+  width: 250px;
+  font-size: var(--fs-xs);
+}
+
+.users__search-btn {
+  background: var(--primary-950);
+  color: var(--white);
+  border: none;
+  padding: var(--button-padding-top) var(--button-padding-right);
+  border-radius: 4px;
+  cursor: pointer;
+  font-size: var(--fs-xxs);
+}
+
+.users__search-btn:hover {
+  opacity: 0.9;
+}
+
+/* ================== Texto debajo de búsqueda ================== */
+.users__search-info {
+  text-align: center;
+  margin-bottom: var(--gap-md);
+  font-size: var(--fs-xs);
+  color: var(--gray-600);
+}
+
+
+
+.users__export-btn {
+  background: var(--primary-950);
+  color: var(--white);
+  border: none;
+  padding: var(--button-padding-top) var(--button-padding-right);
+  border-radius: 4px;
+  cursor: pointer;
+  font-size: var(--fs-xxs);
+}
+
+.users__export-btn:hover {
+  opacity: 0.9;
+}
+
+/* ================== Tabla ================== */
+.users__table {
+  width: 100%;
+  border-collapse: collapse;
+  font-size: var(--fs-xs);
+}
+
+.users__table-header {
+  background: var(--primary-100);
+  font-weight: bold;
+  padding: var(--gap-xs);
+  border: 1px solid var(--gray-300);
+  color: var(--primary-950);
+}
+
+.users__table-cell {
+  border: 1px solid var(--gray-200);
+  padding: var(--gap-xs);
+  text-align: center;
+  color: var(--gray-800);
+}
+
+/* ================== Botón Deshabilitar ================== */
+.users__disable-btn {
+  background: var(--black);
+  color: var(--white);
+  border: none;
+  padding: var(--button-padding-top) var(--button-padding-right);
+  border-radius: 4px;
+  cursor: pointer;
+  font-size: var(--fs-xxxs);
+}
+
+.users__disable-btn:hover {
+  background: var(--secundary-900);
+}
+
+.users__disable-btn:disabled {
+  background: var(--gray-500);
+  cursor: not-allowed;
+}
+
+/* ================== RESPONSIVE ================== */
+@media (max-width: 768px) {
+  .users {
+    padding: var(--gap-sm);
+    margin: 20px auto;
+  }
+
+  .users__title {
+    font-size: var(--fs-sm); /* 24px */
+  }
+
+  .users__search {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .users__search-input,
+  .users__search-btn {
+    width: 100%;
+    max-width: 300px;
+  }
+
+  .users__export {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  .users__export-btn {
+    width: 100%;
+    max-width: 300px;
+  }
+
+  .users__table {
+    display: block;
+    overflow-x: auto;
+    white-space: nowrap;
+  }
+}
+
+@media (max-width: 480px) {
+  .users__title {
+    font-size: var(--fs-sm); /* 20px */
+  }
+
+  .users__disable-btn {
+    width: 100%;
+    font-size: var(--fs-xxxs);
+  }
+}

@@ -1,120 +1,38 @@
 <!DOCTYPE html>
 <html lang="es">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>SENA MERCH - Historial de Ventas</title>
-    <link rel="stylesheet" href="../css/themes/variables.css">
-    <link rel="stylesheet" href="../css/layout.css">
-    <link rel="stylesheet" href="../css/main.css">
-    <link rel="stylesheet" href="../css/components/navbar.css">
-    <link rel="stylesheet" href="../css/components/footer.css">
-    <link rel="stylesheet" href="../css/components/sales-history.css">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Historial de Ventas</title>
+
+  <!-- ================== CSS PRINCIPAL ================== -->
+  <link rel="stylesheet" href="/frontend/public/css/main.css">
+
+  <!-- ================== COMPONENTES JS ================== -->
+  <script src="/frontend/public/js/components/sales-history.js" defer></script>
+  <script src="/frontend/public/js/components/navbar.js" defer></script>
+  <script src="/frontend/public/js/components/footer.js" defer></script>
+  <script src="/frontend/public/js/components/search-bar.js" defer></script>
 </head>
 <body>
-
-   
-
-    <main class="main-content">
-        <div class="page-container">
-            <div class="sales-history">
-                <div class="sales-history__header">
-                    <h2 class="sales-history__title">Historial de Ventas</h2>
-                </div>
-                <div class="sales-history__table-container">
-                    <table class="sales-history__table">
-                        <thead class="sales-history__table-head">
-                            <tr>
-                                <th class="sales-history__table-header">#venta</th>
-                                <th class="sales-history__table-header">Fecha</th>
-                                <th class="sales-history__table-header">N°venta</th>
-                                <th class="sales-history__table-header">Cliente</th>
-                                <th class="sales-history__table-header">Total</th>
-                                <th class="sales-history__table-header">Método de pago</th>
-                                <th class="sales-history__table-header"></th>
-                            </tr>
-                        </thead>
-                        <tbody class="sales-history__table-body">
-                            <tr class="sales-history__table-row">
-                                <td class="sales-history__table-data">2</td>
-                                <td class="sales-history__table-data">Fecha</td>
-                                <td class="sales-history__table-data">N°venta</td>
-                                <td class="sales-history__table-data">Cliente</td>
-                                <td class="sales-history__table-data">Total</td>
-                                <td class="sales-history__table-data">Método de pago</td>
-                                <td class="sales-history__table-data">
-                                    <button class="sales-history__export-button">Exportar PDF</button>
-                                </td>
-                            </tr>
-                            <tr class="sales-history__table-row">
-                                <td class="sales-history__table-data">3</td>
-                                <td class="sales-history__table-data">Fecha</td>
-                                <td class="sales-history__table-data">N°venta</td>
-                                <td class="sales-history__table-data">Cliente</td>
-                                <td class="sales-history__table-data">Total</td>
-                                <td class="sales-history__table-data">Método de pago</td>
-                                <td class="sales-history__table-data">
-                                    <button class="sales-history__export-button">Exportar PDF</button>
-                                </td>
-                            </tr>
-                            <tr class="sales-history__table-row">
-                                <td class="sales-history__table-data">4</td>
-                                <td class="sales-history__table-data">Fecha</td>
-                                <td class="sales-history__table-data">N°venta</td>
-                                <td class="sales-history__table-data">Cliente</td>
-                                <td class="sales-history__table-data">Total</td>
-                                <td class="sales-history__table-data">Método de pago</td>
-                                <td class="sales-history__table-data">
-                                    <button class="sales-history__export-button">Exportar PDF</button>
-                                </td>
-                            </tr>
-                            <tr class="sales-history__table-row">
-                                <td class="sales-history__table-data">5</td>
-                                <td class="sales-history__table-data">Fecha</td>
-                                <td class="sales-history__table-data">N°venta</td>
-                                <td class="sales-history__table-data">Cliente</td>
-                                <td class="sales-history__table-data">Total</td>
-                                <td class="sales-history__table-data">Método de pago</td>
-                                <td class="sales-history__table-data">
-                                    <button class="sales-history__export-button">Exportar PDF</button>
-                                </td>
-                            </tr>
-                            <tr class="sales-history__table-row">
-                                <td class="sales-history__table-data">6</td>
-                                <td class="sales-history__table-data">Fecha</td>
-                                <td class="sales-history__table-data">N°venta</td>
-                                <td class="sales-history__table-data">Cliente</td>
-                                <td class="sales-history__table-data">Total</td>
-                                <td class="sales-history__table-data">Método de pago</td>
-                                <td class="sales-history__table-data">
-                                    <button class="sales-history__export-button">Exportar PDF</button>
-                                </td>
-                            </tr>
-                            <tr class="sales-history__table-row">
-                                <td class="sales-history__table-data">7</td>
-                                <td class="sales-history__table-data">Fecha</td>
-                                <td class="sales-history__table-data">N°venta</td>
-                                <td class="sales-history__table-data">Cliente</td>
-                                <td class="sales-history__table-data">Total</td>
-                                <td class="sales-history__table-data">Método de pago</td>
-                                <td class="sales-history__table-data">
-                                    <button class="sales-history__export-button">Exportar PDF</button>
-                                </td>
-                            </tr>
-                        </tbody>
-                    </table>
-                </div>
-                <div class="sales-history__store-button-wrapper">
-                    <a href="#" class="sales-history__store-link">
-                        <button class="sales-history__store-button">Tienda</button>
-                    </a>
-                </div>
-            </div>
-        </div>
-    </main>
+  <main>
+    <!-- ================== NAVBAR ================== -->
+    <section class="navbar-products">
+      <div class="navbar-container"></div>
+    </section>
+     <!-- >>> Section Search -->
+    <section class="seeker">
+      <div class="search-bar-container"></div>
+    </section>
 
 
+    <!-- ================== SALES HISTORY ================== -->
+    <section class="sales-history-section">
+      <div class="sales-history-container"></div>
+    </section>
+  </main>
 
-    <script src="../js/script.js"></script>
+  <!-- ================== FOOTER ================== -->
+  <footer class="footer-container"></footer>
 </body>
 </html>
