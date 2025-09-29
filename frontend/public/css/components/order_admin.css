@@ -1,0 +1,100 @@
+/* ================== ORDER COMPONENT ================== */
+.order {
+  font-family: var(--font-primary);
+  padding: var(--gap-xl);
+  text-align: center;
+  background-color: var(--primary-100);
+}
+
+/* ===== Título ===== */
+.order__title {
+  font-size: var(--fs-sm); /* h1 = 32px */
+  font-family: var(--font-primary-bold);
+  color: var(--primary-950);
+  margin-bottom: var(--gap-md);
+}
+
+/* ===== Tabla ===== */
+.order__table {
+  margin: var(--gap-xl) auto;
+  border: 1px solid var(--gray-300);
+  border-radius: var(--gap-xs);
+  overflow: hidden;
+  max-width: 800px;
+  background-color: var(--primary-50);
+  box-shadow: 0 2px 8px rgba(0,0,0,0.05);
+}
+
+/* Zebra striping */
+.order__row:nth-child(odd):not(.order__row--header) {
+  background-color: var(--white);
+}
+.order__row:nth-child(even):not(.order__row--header) {
+  background-color: var(--gray-50);
+}
+
+/* Fila */
+.order__row {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  padding: var(--gap-sm);
+  border-bottom: 1px solid var(--gray-200);
+  align-items: center;
+}
+
+
+
+/* Header */
+.order__row--header {
+  background: var(--primary-200);
+  font-weight: bold;
+  font-family: var(--font-primary-semibold);
+  font-size: var(--fs-sm);
+  color: var(--gray-950);
+}
+
+/* Celda */
+.order__cell {
+  text-align: center;
+  font-size: var(--fs-xs);
+  color: var(--gray-900);
+}
+
+/* Botón */
+.order__btn {
+  background: var(--black);
+  color: var(--white);
+  padding: var(--button-padding-top) var(--button-padding-right);
+  border-radius: var(--gap-xs);
+  border: none;
+  cursor: pointer;
+  transition: background 0.3s ease, transform 0.2s ease;
+  font-family: var(--font-primary-semibold);
+  font-size: var(--fs-xxs);
+}
+
+.order__btn:hover {
+  background: var(--secundary-700);
+  transform: translateY(-2px);
+}
+
+/* ===== Responsividad ===== */
+@media (max-width: 768px) {
+  .order__row {
+    grid-template-columns: 1fr 1fr;
+    grid-row-gap: var(--gap-xs);
+  }
+
+  .order__row--header {
+    display: none;
+  }
+
+  .order__cell {
+    text-align: left;
+    padding: var(--gap-xxs) 0;
+  }
+
+  .order__btn {
+    width: 100%;
+  }
+}

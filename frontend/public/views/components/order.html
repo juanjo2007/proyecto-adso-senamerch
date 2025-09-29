@@ -1,0 +1,119 @@
+<body>
+  <main class="order">
+    <h1 class="order__title">Tus pedidos</h1>
+
+    <!-- Transporte -->
+    <section class="order__section">
+      <h2 class="order__subtitle">Servicio de transporte</h2>
+      <table class="order__table">
+        <thead class="order__table-head">
+          <tr class="order__table-row pedido__table-row--header">
+            <th class="order__table-cell">Transportista</th>
+            <th class="order__table-cell">Fecha</th>
+            <th class="order__table-cell">Costo * Distancia</th>
+            <th class="order__table-cell">Gasolina</th>
+            <th class="order__table-cell">Distancia recorrida</th>
+            <th class="order__table-cell">Total</th>
+          </tr>
+        </thead>
+        <tbody class="pedido__table-body">
+          <tr class="pedido__table-row">
+            <td class="order__table-cell">Jorge Galvis</td>
+            <td class="order__table-cell">Día de entrega</td>
+            <td class="order__table-cell">$2.500 * (1)KM</td>
+            <td class="order__table-cell">$3.000 * (1)KM</td>
+            <td class="order__table-cell">(2) Kilómetros</td>
+            <td class="order__table-cell">$11.000</td>
+          </tr>
+        </tbody>
+      </table>
+    </section>
+
+    <!-- Productos -->
+    <section class="order__section">
+      <h2 class="order__subtitle">Productos</h2>
+      <table class="order__table">
+        <thead class="order__table-head">
+          <tr class="order__table-row order__table-row--header">
+            <th class="order__table-cell">Producto</th>
+            <th class="order__table-cell">Descripción</th>
+            <th class="order__table-cell">Fecha</th>
+            <th class="order__table-cell">Precio * Medida</th>
+            <th class="order__table-cell">Cantidad</th>
+            <th class="order__table-cell">Total</th>
+          </tr>
+        </thead>
+        <tbody class="order__table-body">
+          <tr class="order__table-row">
+            <td class="order__table-cell">Tomate</td>
+            <td class="order__table-cell">Fruta</td>
+            <td class="order__table-cell">Día del pedido</td>
+            <td class="order__table-cell">$6.500 * Kilo</td>
+            <td class="order__table-cell">(2) Kilos</td>
+            <td class="order__table-cell">$13.000</td>
+          </tr>
+          <tr class="order__table-row">
+            <td class="order__table-cell">Banano</td>
+            <td class="order__table-cell">Fruta</td>
+            <td class="order__table-cell">Día del pedido</td>
+            <td class="order__table-cell">$3.000 * Kilo</td>
+            <td class="order__table-cell">(3) Kilos</td>
+            <td class="order__table-cell">$9.000</td>
+          </tr>
+        </tbody>
+      </table>
+    </section>
+
+    <!-- Agricultor -->
+    <section class="order__section">
+      <h2 class="order__subtitle">Agricultor</h2>
+      <table class="order__table">
+        <thead class="order__table-head">
+          <tr class="order__table-row order__table-row--header">
+            <th class="order__table-cell">Nombre</th>
+            <th class="order__table-cell">Departamento</th>
+            <th class="order__table-cell">Dirección</th>
+            <th class="order__table-cell">Celular</th>
+          </tr>
+        </thead>
+        <tbody class="order__table-body">
+          <tr class="order__table-row">
+            <td class="order__table-cell">Mateo Imbachi</td>
+            <td class="order__table-cell">Risaralda</td>
+            <td class="order__table-cell">123#45-67 Cerritos</td>
+            <td class="order__table-cell">3113973824</td>
+          </tr>
+        </tbody>
+      </table>
+    </section>
+
+    <!-- Cliente -->
+    <section class="order__section">
+      <h2 class="order__subtitle">Cliente</h2>
+      <table class="order__table">
+        <thead class="order__table-head">
+          <tr class="order__table-row order__table-row--header">
+            <th class="order__table-cell">Nombre</th>
+            <th class="order__table-cell">Departamento</th>
+            <th class="order__table-cell">Dirección</th>
+            <th class="order__table-cell">Celular</th>
+          </tr>
+        </thead>
+        <tbody class="order__table-body">
+          <tr class="order__table-row">
+            <td class="order__table-cell">Emanuel Quevedo</td>
+            <td class="order__table-cell">Risaralda</td>
+            <td class="order__table-cell">Carrera 10#34-36</td>
+            <td class="order__table-cell">3102973825</td>
+          </tr>
+        </tbody>
+      </table>
+    </section>
+
+    <!-- Acciones -->
+    <div class="order__actions">
+      <button class="btn btn--cancel">Cancelar pedido ✖</button>
+      <button class="btn btn--confirm">Confirmar pedido</button>
+    </div>
+  </main>
+</body>
