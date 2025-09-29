@@ -1,103 +1,115 @@
 /* ==============================
    Componente Tiendas (BEM)
-   ============================== */
-
-body {
-    font-family: Arial, sans-serif;
-    background-color: #E8DFD3; /* beige figma */
-    margin: 0;
-    padding: 0;
-}
+============================== */
 
 .stores {
-    text-align: center;
-    padding: 2rem;
+  text-align: center;
+  padding: var(--gap-lg);
+  font-family: var(--font-primary);
+  background-color: var(--primary-50);
 }
 
+/* Títulos */
 .stores__title {
-    font-size: 2rem;
-    margin-bottom: 1.5rem;
-    color: #000;
+  font-size: var(--fs-sm); /* h1 */
+  font-family: var(--font-primary-bold);
+  color: var(--primary-950);
+  margin-bottom: var(--gap-md);
 }
 
-/* 🔍 Barra búsqueda */
-.stores__search {
-    position: relative;
-    width: 300px;
-    margin: 0 auto 0.5rem auto;
+.stores__subtitle {
+  font-size: var(--fs-md); /* h2 */
+  color: var(--gray-700);
+  margin-bottom: var(--gap-lg);
 }
 
-.stores__search-input {
-    width: 100%;
-    padding: 0.8rem 2.5rem 0.8rem 1rem;
-    border: none;
-    border-radius: 5px;
-    box-shadow: 2px 2px 5px #00000070;
-}
-
-.stores__search-icon {
-    position: absolute;
-    right: 10px;
-    top: 50%;
-    transform: translateY(-50%);
-    pointer-events: none;
-}
-
-.stores__search-text {
-    font-size: 0.9rem;
-    margin-bottom: 1.5rem;
-    color: #000;
-}
 
 /* 📦 Tabla */
 .stores__table-wrapper {
-    overflow-x: auto; /* Responsivo */
+  overflow-x: auto;
 }
 
 .stores__table {
-    display: inline-block;
-    min-width: 800px; /* ancho mínimo para tabla */
-    border: 1px solid #777;
-    padding: 1rem;
-    background-color: #E8DFD3;
+  display: inline-block;
+  min-width: 800px;
+  background-color: var(--white);
+  border-radius: var(--gap-xs);
+  box-shadow: 0 2px 8px rgba(0,0,0,0.05);
+  overflow: hidden;
+}
+
+/* Filas alternadas */
+.stores__row:nth-child(even):not(.stores__row--header) {
+  background-color: var(--gray-50);
 }
 
 .stores__row {
-    display: grid;
-    grid-template-columns: repeat(7, 1fr);
-    align-items: center;
-    padding: 0.6rem 0;
+  display: grid;
+  grid-template-columns: repeat(7, 1fr);
+  align-items: center;
+  padding: var(--gap-sm);
+  border-bottom: 1px solid var(--gray-200);
 }
 
 .stores__row--header {
-    font-weight: bold;
-    border-bottom: 2px solid #000;
-    margin-bottom: 0.8rem;
+  font-weight: bold;
+  font-family: var(--font-primary-semibold);
+  font-size: var(--fs-sm);
+  background-color: var(--primary-200);
+  color: var(--gray-950);
 }
 
 .stores__cell {
-    text-align: center;
-    color: #000;
-    font-size: 0.9rem;
+  text-align: center;
+  color: var(--gray-900);
+  font-size: var(--fs-xs);
 }
 
 /* Botones */
 .stores__btn {
-    background-color: #000;
-    color: #fff;
-    font-weight: bold;
-    border: none;
-    padding: 0.6rem 1rem;
-    border-radius: 6px;
-    cursor: pointer;
-    box-shadow: 2px 2px 5px #00000080;
-    transition: background 0.2s ease;
+  padding: var(--button-padding-top) var(--button-padding-right);
+  border: none;
+  cursor: pointer;
+  font-family: var(--font-primary-semibold);
+  border-radius: var(--gap-xs);
+  font-size: var(--fs-xs);
+  background-color: var(--black);
+  color: var(--white);
+  transition: background 0.3s ease, transform 0.2s ease;
+  box-shadow: 0 2px 5px rgba(0,0,0,0.15);
 }
 
 .stores__btn:hover {
-    background-color: #333;
+  background-color: var(--secundary-700);
+  transform: translateY(-2px);
 }
 
 .stores__btn--primary {
-    margin-top: 1rem;
+  margin-top: var(--gap-lg);
+}
+
+/* =======================
+   Responsive breakpoints
+======================= */
+@media (max-width: 1024px) { /* lg */
+  .stores__row {
+    grid-template-columns: repeat(4, 1fr);
+    font-size: var(--fs-xxs);
+  }
+}
+
+@media (max-width: 768px) { /* md */
+  .stores__table {
+    min-width: 100%;
+  }
+
+  .stores__row {
+    grid-template-columns: 1fr 1fr;
+    gap: var(--gap-sm);
+  }
+
+  .stores__cell {
+    text-align: left;
+    font-size: var(--fs-xxxs);
+  }
 }

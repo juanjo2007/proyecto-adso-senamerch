@@ -1,28 +1,18 @@
-// ==============================
-//   Componente Tiendas (BEM)
-// ==============================
+// ================== STORES COMPONENT ==================
+document.addEventListener('DOMContentLoaded', function () {
+  const storesContainer = document.querySelector('.stores-container');
 
-// 🔍 Filtro de búsqueda por nombre de tienda
-document.addEventListener("DOMContentLoaded", () => {
-const searchInput = document.querySelector(".stores__search-input");
-const rows = document.querySelectorAll(".stores__row:not(.stores__row--header)");
-
-searchInput.addEventListener("input", (e) => {
-    const term = e.target.value.toLowerCase();
-
-    rows.forEach((row) => {
-        const cells = row.querySelectorAll(".stores__cell");
-        const match = Array.from(cells).some(cell =>
-        cell.textContent.toLowerCase().includes(term)
-        );
-        row.style.display = match ? "grid" : "none";
-    });
-});
-
-  // ⚡ Acción al dar click en "Deshabilitar"
-document.querySelectorAll(".stores__btn").forEach((btn) => {
-    btn.addEventListener("click", () => {
-        alert(`Acción ejecutada en: ${btn.parentElement.querySelector(".stores__cell").textContent}`);
-    });
-  });
+  if (storesContainer) {
+    fetch("/frontend/public/views/components/stores.html")
+      .then(response => {
+        if (!response.ok) throw new Error("Error al cargar stores.html");
+        return response.text();
+      })
+      .then(data => {
+        storesContainer.innerHTML = data;
+      })
+      .catch(error => console.error("Error cargando el componente Stores:", error));
+  } else {
+    console.warn("No se encontró '.stores-container' en el HTML.");
+  }
 });
