@@ -2,19 +2,18 @@
 .contact {
   position: relative;
   background: url("/frontend/public/assets/img/img_contact.jpg") no-repeat center center/cover;
-  width: 100%;  /* 👈 limita el ancho máximo */
-  margin: 0 auto;      /* 👈 centra en pantallas grandes */
-  margin-top: 2rem;
-  margin-bottom: 2rem;
-  height: 100vh;       /* 👈 ocupa toda la altura de la pantalla */
+  width: 100%;
+  height: 690px;   /* 👈 altura fija */
   display: flex;
   align-items: center;
   justify-content: center;
   color: var(--white);
   font-family: var(--font-primary);
-  overflow: hidden;    /* evita scroll raro si hay exceso de padding */
+  overflow: hidden;
 }
-
+.contact {
+  height: 690px !important;
+}
 .contact__overlay {
   background:rgba(233, 233, 233, 0.5);
   width: 100%;
