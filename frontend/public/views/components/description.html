@@ -1,74 +1,54 @@
-<section class="product-card">
+<section class="product-description">
   <!-- Galería -->
-  <div class="product-card__gallery">
-    <img src="/frontend/public/assets/img/tomato_image.png" alt="Tomate fresco" class="product-card__image--main" />
-    <div class="product-card__thumbnails">
-      <img src="/frontend/public/assets/img/tomato_image.png" alt="Tomate vista 1" class="product-card__thumbnail" />
-      <img src="/frontend/public/assets/img/tomato_image.png" alt="Tomate vista 2" class="product-card__thumbnail" />
-      <img src="/frontend/public/assets/img/tomato_image.png" alt="Tomate vista 3" class="product-card__thumbnail" />
-      <img src="/frontend/public/assets/img/tomato_image.png" alt="Tomate vista 4" class="product-card__thumbnail" />
-      <img src="/frontend/public/assets/img/tomato_image.png" alt="Tomate vista 5" class="product-card__thumbnail" />
+  <div class="product-description__gallery">
+    <img src="/frontend/public/assets/img/tomato_image.png" alt="Tomate fresco" class="product-description__image--main" />
+    <div class="product-description__thumbnails">
+      <img src="/frontend/public/assets/img/tomato_image.png" alt="Tomate vista 1" class="product-description__thumbnail" />
+      <img src="/frontend/public/assets/img/tomato_image.png" alt="Tomate vista 2" class="product-description__thumbnail" />
+      <img src="/frontend/public/assets/img/tomato_image.png" alt="Tomate vista 3" class="product-description__thumbnail" />
+      <img src="/frontend/public/assets/img/tomato_image.png" alt="Tomate vista 4" class="product-description__thumbnail" />
+      <img src="/frontend/public/assets/img/tomato_image.png" alt="Tomate vista 5" class="product-description__thumbnail" />
     </div>
   </div>
-  <span class="star"></span>
+
   <!-- Detalles -->
-  <div class="product-card__details">
+  <div class="product-description__details">
     <!-- Calificación promedio -->
-    <div class="product-card__rating">
-      <p class="product-card__rating-text">
-        ★ ★ ★ ★ ★<span>(4.5/5 promedio por su frescura y versatilidad)</span>
+    <div class="product-description__rating">
+      <p class="product-description__rating-text">
+        ★ ★ ★ ★ ★ <span>(4.5/5 promedio por su frescura y versatilidad)</span>
       </p>
 
       <!-- Formulario de calificación -->
-      <form class="product-card__rating-form">
-        <label class="product-card__rating-label">Califica el producto del 1 al 5:</label>
-        <div class="product-card__rating-stars">
-          <label class="product-card__star">
-            <input type="radio" name="rating" value="5" class="product-card__star-input" />
-            <span class="product-card__star-icon" title="5 estrellas">★</span>
-          </label>
-
-          <label class="product-card__star">
-            <input type="radio" name="rating" value="4" class="product-card__star-input" />
-            <span class="product-card__star-icon" title="4 estrellas">★</span>
-          </label>
-
-          <label class="product-card__star">
-            <input type="radio" name="rating" value="3" class="product-card__star-input" />
-            <span class="product-card__star-icon" title="3 estrellas">★</span>
-          </label>
-
-          <label class="product-card__star">
-            <input type="radio" name="rating" value="2" class="product-card__star-input" />
-            <span class="product-card__star-icon" title="2 estrellas">★</span>
-          </label>
-
-          <label class="product-card__star">
-            <input type="radio" name="rating" value="1" class="product-card__star-input" />
-            <span class="product-card__star-icon" title="1 estrella">★</span>
-          </label>
+      <form class="product-description__rating-form">
+        <label class="product-description__rating-label">Califica el producto del 1 al 5:</label>
+        <div class="product-description__rating-stars">
+          <label><input type="radio" name="rating" value="5" /><span>★</span></label>
+          <label><input type="radio" name="rating" value="4" /><span>★</span></label>
+          <label><input type="radio" name="rating" value="3" /><span>★</span></label>
+          <label><input type="radio" name="rating" value="2" /><span>★</span></label>
+          <label><input type="radio" name="rating" value="1" /><span>★</span></label>
         </div>
       </form>
     </div>
 
     <!-- Información principal -->
-    <h2 class="product-card__title">Tomate Del Valle</h2>
-    <p class="product-card__price">$3.000 Kilo</p>
-    <!-- Botón Comprar -->
-    <button class="btn btn--primary">Comprar</button>
+    <h2 class="product-description__title">Tomate Del Valle</h2>
+    <p class="product-description__price">$3.000 Kilo</p>
+    <a href="viwe_car.html" class="btn btn--primary">Agregar al carrito de compras</a>
 
     <!-- Info extendida -->
-    <div class="product-card__info">
-      <h3 class="product-card__subtitle">Lo que tienes que saber sobre este producto</h3>
-      <p class="product-card__text"><strong>Unidad de medida:</strong> Kilogramo (kg) / libra (lb) / unidad.</p>
-      <p class="product-card__text"><strong>Tipo de garantía:</strong> Garantía de frescura (solo aplica al momento de la entrega, reemplazo si llega en mal estado).</p>
-      <p class="product-card__text"><strong>Descripción:</strong> El tomate es un fruto fresco, rojo, jugoso y de sabor ligeramente ácido, utilizado en ensaladas, salsas, guisos y múltiples preparaciones gastronómicas.</p>
-      <ul class="product-card__list">
-        <li class="product-card__list-item">Origen agrícola nacional/regional.</li>
-        <li class="product-card__list-item">Fruto maduro, firme y fresco.</li>
-        <li class="product-card__list-item">Rico en vitaminas A, C y antioxidantes.</li>
-        <li class="product-card__list-item">Bajo en calorías.</li>
-        <li class="product-card__list-item">Variedades comunes: chonto, cherry, perita, entre otros.</li>
+    <div class="product-description__info">
+      <h3 class="product-description__subtitle">Lo que tienes que saber sobre este producto</h3>
+      <p><strong>Unidad de medida:</strong> Kilogramo (kg) / libra (lb) / unidad.</p>
+      <p><strong>Tipo de garantía:</strong> Garantía de frescura (solo aplica al momento de la entrega, reemplazo si llega en mal estado).</p>
+      <p><strong>Descripción:</strong> El tomate es un fruto fresco, rojo, jugoso y de sabor ligeramente ácido, utilizado en ensaladas, salsas, guisos y múltiples preparaciones gastronómicas.</p>
+      <ul class="product-description__list">
+        <li>Origen agrícola nacional/regional.</li>
+        <li>Fruto maduro, firme y fresco.</li>
+        <li>Rico en vitaminas A, C y antioxidantes.</li>
+        <li>Bajo en calorías.</li>
+        <li>Variedades comunes: chonto, cherry, perita, entre otros.</li>
       </ul>
     </div>
   </div>

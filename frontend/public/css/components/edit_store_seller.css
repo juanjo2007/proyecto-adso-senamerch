@@ -1,0 +1,117 @@
+.edit-store-seller {
+  max-width: 600px;
+  margin: var(--gap-xl) auto;
+  padding: var(--gap-lg);
+  background: var(--primary-50);
+  border-radius: 12px;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+  font-family: var(--font-primary);
+  color: var(--gray-900);
+}
+
+.edit-store__title {
+  text-align: center;
+  font-size: var(--fs-sm);
+  font-weight: bold;
+  margin-bottom: var(--gap-lg);
+  color: var(--black);
+}
+
+.edit-store__form {
+  display: flex;
+  flex-direction: column;
+  gap: var(--gap-md);
+}
+
+.edit-store__field {
+  display: flex;
+  flex-direction: column;
+  gap: var(--gap-xxs);
+}
+
+.edit-store__label {
+  font-size: var(--fs-xs);
+  font-weight: 500;
+  color: var(--black);
+}
+
+.edit-store__input,
+.edit-store__textarea {
+  padding: var(--gap-xs);
+  font-size: var(--fs-xs);
+  border: 1px solid var(--gray-300);
+  border-radius: 8px;
+  background: var(--white);
+  color: var(--gray-900);
+  transition: border 0.3s ease;
+}
+
+.edit-store__input:focus,
+.edit-store__textarea:focus {
+  border-color: var(--secundary-600);
+  outline: none;
+}
+
+.edit-store__textarea {
+  min-height: 100px;
+  resize: vertical;
+}
+
+.edit-store__actions {
+  display: flex;
+  justify-content: space-between;
+  gap: var(--gap-md);
+  margin-top: var(--gap-lg);
+}
+
+.edit-store__actions .btn {
+  align-self: center; 
+}
+.edit-store__actions .btn--variant2 {
+  align-self: center; 
+}
+.edit-store__actions .btn {
+  padding: var(--button-padding-top) var(--button-padding-right) 
+           var(--button-padding-bottom) var(--button-padding-left);
+}
+
+@media (max-width: 1024px) {
+  .edit-store {
+    max-width: 90%;
+    padding: var(--gap-md);
+  }
+
+  .edit-store__title {
+    font-size: var(--fs-xs);
+  }
+
+  .btn {
+    font-size: var(--fs-xs);
+  }
+}
+
+@media (max-width: 768px) {
+  .edit-store__actions {
+    flex-direction: column;
+    gap: var(--gap-sm);
+  }
+
+  .btn {
+    width: 100%;
+  }
+}
+@media (max-width: 480px) {
+  .edit-store {
+    padding: var(--gap-sm);
+  }
+
+  .edit-store__input,
+  .edit-store__textarea {
+    font-size: var(--fs-xs);
+    padding: var(--gap-xxs);
+  }
+
+  .edit-store__title {
+    font-size: var(--fs-xs);
+  }
+}

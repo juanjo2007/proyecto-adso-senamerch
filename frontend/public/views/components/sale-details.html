@@ -22,65 +22,39 @@
   <div class="sale-details__content">
     <h2 class="sale-details__title">Detalles de venta</h2>
 
-    <!-- Tabla de productos -->
+    <!-- Productos en cards -->
     <section class="sale-details__section">
       <h3 class="sale-details__subtitle">Productos</h3>
-      <table class="sale-details__table">
-        <thead>
-          <tr>
-            <th>Fecha</th>
-            <th>Producto</th>
-            <th>Cantidad</th>
-            <th>Unidad</th>
-            <th>Precio * unidad</th>
-            <th>Total</th>
-            <th>Stock</th>
-          </tr>
-        </thead>
-        <tbody>
-          <tr>
-            <td>23/09/2025</td>
-            <td>Tomate</td>
-            <td>5</td>
-            <td>Kg</td>
-            <td>$2.500</td>
-            <td>$12.500</td>
-            <td>122/150</td>
-          </tr>
-          <tr>
-            <td>23/09/2025</td>
-            <td>Manzana verde</td>
-            <td>3</td>
-            <td>Kg</td>
-            <td>$3.000</td>
-            <td>$9.000</td>
-            <td>90/120</td>
-          </tr>
-        </tbody>
-      </table>
+      <div class="products-grid">
+        <div class="product-card">
+          <p><strong>Fecha:</strong> 23/09/2025</p>
+          <p><strong>Producto:</strong> Tomate</p>
+          <p><strong>Cantidad:</strong> 5 Kg</p>
+          <p><strong>Precio:</strong> $2.500</p>
+          <p><strong>Total:</strong> $12.500</p>
+          <p><strong>Stock:</strong> 122/150</p>
+        </div>
+
+        <div class="product-card">
+          <p><strong>Fecha:</strong> 23/09/2025</p>
+          <p><strong>Producto:</strong> Manzana verde</p>
+          <p><strong>Cantidad:</strong> 3 Kg</p>
+          <p><strong>Precio:</strong> $3.000</p>
+          <p><strong>Total:</strong> $9.000</p>
+          <p><strong>Stock:</strong> 90/120</p>
+        </div>
+      </div>
     </section>
 
-    <!-- Servicio de transporte -->
+    <!-- Transporte en card -->
     <section class="sale-details__section">
       <h3 class="sale-details__subtitle">Servicio de transporte</h3>
-      <table class="sale-details__table">
-        <thead>
-          <tr>
-            <th>Fecha</th>
-            <th>Costo * distancia</th>
-            <th>Distancia recorrida</th>
-            <th>Total</th>
-          </tr>
-        </thead>
-        <tbody>
-          <tr>
-            <td>23/09/2025</td>
-            <td>$2.500 * 6km</td>
-            <td>6 km</td>
-            <td>$15.000</td>
-          </tr>
-        </tbody>
-      </table>
+      <div class="transport-card">
+        <p><strong>Fecha:</strong> 23/09/2025</p>
+        <p><strong>Costo * distancia:</strong> $2.500 * 6km</p>
+        <p><strong>Distancia:</strong> 6 km</p>
+        <p><strong>Total:</strong> $15.000</p>
+      </div>
     </section>
 
     <!-- Totales -->
@@ -91,7 +65,7 @@
     </div>
 
     <div class="sale-details__actions">
-      <button class="btn btn--primary">Inicio</button>
+      <a href="client_view.html" class="btn btn--primary">Inicio</a>
     </div>
   </div>
 </section>
