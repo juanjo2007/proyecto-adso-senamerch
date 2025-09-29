@@ -1,4 +1,4 @@
-// ================== FOOTER COMPONENT ==================
+// ================== FOOTER COMPONENT ================== 
 document.addEventListener('DOMContentLoaded', function () {
   const footerContainer = document.querySelector('.footer-container');
 

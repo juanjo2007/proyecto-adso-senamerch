@@ -1,193 +1,127 @@
-/* Variables */
-:root {
-    --color-component-background: #f5f5dc; /* Un color beige claro */
-    --color-border: #ccc;
-    --color-button-primary: #8a8a8a; /* Gris oscuro para el encabezado */
-    --color-text-dark: #333;
-    --color-text-light: #fff;
-    --color-table-row-alternate: #e0e0e0; /* Gris claro para filas alternas */
-    --spacing-xs: 5px;
-    --spacing-sm: 10px;
-    --spacing-md: 20px;
-    --spacing-lg: 30px;
-    --border-radius-sm: 5px;
-    --border-radius-md: 8px;
-    --box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-    --font-size-title: 1.8rem;
-    --font-size-text-sm: 0.9rem;
-    --font-size-text-xs: 0.7rem;
-}
-
-/* Estilos generales del body y el contenedor principal */
-body {
-    font-family: sans-serif;
-    margin: 0;
-    padding: 0;
-    background-color: var(--color-component-background);
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    height: 100vh;
-}
-
-/* B: sales-history */
+/* ================== Sales History (Historial de Ventas) ================== */
 .sales-history {
-    width: 90%;
-    max-width: 1000px;
-    margin: 30px auto;
-    padding: 12px 24px;
-    background-color: #f0ede5; /* Fondo claro */
-    border: 1px solid #BEBEBE; /* Borde gris */
-    border-radius: 8px;
-    box-shadow: 0 4px 8px rgba(0,0,0,0.1);
-    color: #262626; /* Texto oscuro */
+  max-width: 1000px;
+  margin: 40px auto;
+  padding: 20px;
+  background: var(--white);
+  border: 1px solid var(--gray-200);
+  border-radius: 8px;
+  color: var(--gray-950);
 }
 
-/* ================================
-   Encabezado
-================================ */
+/* Encabezado */
 .sales-history__header {
-    text-align: center;
-    margin-bottom: 20px;
+  text-align: center;
+  margin-bottom: var(--gap-md);
 }
 
 .sales-history__title {
-    font-size: 2.4rem; /* Tamaño grande */
-    font-weight: bold;
-    color: #554439; /* Color primario oscuro */
+  font-size: var(--fs-sm); /* Ej: 20px */
+  font-family: var(--font-primary-semibold);
+  color: var(--primary-950);
 }
 
-/* ================================
-   Tabla
-================================ */
+/* Tabla */
 .sales-history__table-container {
-    overflow-x: auto;
-    border-radius: 8px;
-    border: 1px solid #BEBEBE;
+  overflow-x: auto;
 }
 
 .sales-history__table {
-    width: 100%;
-    border-collapse: collapse;
-    min-width: 600px;
+  width: 100%;
+  border-collapse: collapse;
+  font-size: var(--fs-xs);
 }
 
 .sales-history__table-head {
-    background-color: #a68c69; /* Color primario medio */
-    color: #fff; /* Texto blanco */
-    font-size: 1.4rem;
+  background: var(--primary-100);
 }
 
 .sales-history__table-header {
-    padding: 5px 5px;
-    text-align: left;
-    border-bottom: 2px solid #a68c69;
-    font-size: 1.4rem;
-    font-weight: bold;
-    color: #fff;
-    white-space: nowrap;
-}
-
-.sales-history__table-body .sales-history__table-row:nth-child(even) {
-    background-color: #D4D4D4; /* Alterna colores de fila */
+  padding: var(--gap-xs);
+  border: 1px solid var(--gray-300);
+  color: var(--primary-950);
+  font-weight: bold;
+  text-align: center;
 }
 
 .sales-history__table-data {
-    padding: 5px 5px;
-    border-bottom: 1px solid #BEBEBE;
-    font-size: 1.4rem;
-    color: #262626;
-    white-space: nowrap;
+  border: 1px solid var(--gray-200);
+  padding: var(--gap-xs);
+  text-align: center;
+  color: var(--gray-800);
 }
 
-/* ================================
-   Botón Exportar (negro)
-================================ */
+/* Botón exportar */
 .sales-history__export-button {
-    background-color: #000; /* Fondo negro */
-    color: #fff; /* Texto blanco */
-    border: none;
-    border-radius: 5px; /* Bordes redondeados pequeños */
-    padding: 12px 24px;
-    cursor: pointer;
-    font-size: 1.4rem;
-    transition: background-color 0.3s ease;
-    white-space: nowrap;
-    box-shadow: 0 2px 4px rgba(0,0,0,0.2);
+  background: var(--primary-950);
+  color: var(--white);
+  border: none;
+  padding: var(--button-padding-top) var(--button-padding-right);
+  border-radius: 4px;
+  cursor: pointer;
+  font-size: var(--fs-xxxs);
+  transition: opacity 0.2s ease-in-out;
 }
 
 .sales-history__export-button:hover {
-    background-color: #333; /* Gris oscuro al pasar el mouse */
+  opacity: 0.9;
 }
 
-/* Botón Tienda (verde destacado) */
+/* Botón tienda */
 .sales-history__store-button-wrapper {
-    text-align: center;
-    margin-top: 20px;
+  text-align: center;
+  margin-top: var(--gap-lg);
+}
+
+.sales-history__store-link {
+  text-decoration: none;
 }
 
 .sales-history__store-button {
-    background-color: #2bbc42; /* Verde principal */
-    color: #fff;
-    border: none;
-    border-radius: 20px;
-    padding: 12px 24px;
-    cursor: pointer;
-    font-size: 1.4rem;
-    font-weight: bold;
-    transition: background-color 0.3s ease;
-    box-shadow: 0 4px 6px rgba(0,0,0,0.3);
-    display: inline-block;
+  background: var(--secundary-800);
+  color: var(--white);
+  border: none;
+  padding: var(--button-padding-top) var(--button-padding-right);
+  border-radius: 4px;
+  cursor: pointer;
+  font-size: var(--fs-xs);
+  transition: background 0.2s ease-in-out;
 }
 
 .sales-history__store-button:hover {
-    background-color: #1d9631; /* Verde más oscuro */
+  background: var(--secundary-900);
 }
 
-/* ================================
-   Media Queries (Responsive)
-================================ */
-
-/* Tablets */
+/* ================== RESPONSIVE ================== */
 @media (max-width: 768px) {
-    .sales-history {
-        padding: 10px;
-    }
+  .sales-history {
+    padding: var(--gap-sm);
+    margin: 20px auto;
+  }
 
-    .sales-history__title {
-        font-size: 1.2rem;
-    }
+  .sales-history__title {
+    font-size: var(--fs-sm); /* Ej: 24px */
+  }
 
-    .sales-history__table-container {
-        overflow-x: auto;
-    }
+  .sales-history__table {
+    display: block;
+    overflow-x: auto;
+    white-space: nowrap;
+  }
 
-    .sales-history__export-button {
-        width: 100%;
-        margin-bottom: 10px;
-    }
-
-    .sales-history__store-button {
-        width: 100%;
-        font-size: 1.2rem;
-    }
+  .sales-history__store-button {
+    width: 100%;
+    max-width: 300px;
+  }
 }
 
-/* Celulares */
 @media (max-width: 480px) {
-    .sales-history__title {
-        font-size: 1rem;
-    }
+  .sales-history__title {
+    font-size: var(--fs-sm); /* Ej: 20px */
+  }
 
-    .sales-history__table-header,
-    .sales-history__table-data {
-        font-size: 0.8rem;
-        padding: 5px;
-    }
-
-    .sales-history__export-button,
-    .sales-history__store-button {
-        font-size: 0.9rem;
-        padding: 5px;
-    }
+  .sales-history__export-button {
+    width: 100%;
+    font-size: var(--fs-xxxs);
+  }
 }

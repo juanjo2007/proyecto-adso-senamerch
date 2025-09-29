@@ -1,126 +1,53 @@
-<!DOCTYPE html>
-<html lang="es">
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Usuarios - SENA MERCH</title>
+<!-- ================== Componente Usuarios (Administrador) ================== -->
+<main class="users">
+  <!-- Título principal -->
+  <h1 class="users__title">Usuarios</h1>
 
-  <!-- Enlaces CSS -->
-  <link rel="stylesheet" href="/frontend/public/css/main.css">
-  <link rel="stylesheet" href="/frontend/public/css/components/users.css">
-</head>
-<body>
-
-  <main class="users">
-    <!-- Título -->
-    <h1 class="users__title">Usuarios</h1>
-
-    <!-- Barra de búsqueda -->
-    <div class="users__search">
-      <input type="text" id="searchInput" placeholder="Buscar usuario">
-      <button id="searchBtn">🔍</button>
-    </div>
-    <p class="search-info">Encontrarás con facilidad lo que buscas.</p>
-
-    <!-- Botones de exportar -->
-    <div class="export-buttons">
-      <button class="export-btn">Exportar PDF</button>
-      <button class="export-btn">Exportar Excel</button>
-    </div>
-
-    <!-- Tabla de usuarios -->
-    <section>
-      <table class="users__table">
-        <thead>
-          <tr>
-            <th>#usuario</th>
-            <th>Nombre</th>
-            <th>Correo</th>
-            <th>Tipo de usuario</th>
-            <th>Departamento</th>
-            <th>Dirección</th>
-            <th>Acción</th>
-          </tr>
-        </thead>
-        <tbody id="usuariosBody">
-          <tr>
-            <td>#1</td>
-            <td>Julian Gil</td>
-            <td>juliangil@gmail.com</td>
-            <td>Común</td>
-            <td>Risaralda</td>
-            <td>Carrera 10#34-54</td>
-            <td><button class="disable-btn">Deshabilitar</button></td>
-          </tr>
-          <tr>
-            <td>#2</td>
-            <td>Sebastian Valencia</td>
-            <td>sebastianv@gmail.com</td>
-            <td>Común</td>
-            <td>Risaralda</td>
-            <td>Avenida 19 #34-36</td>
-            <td><button class="disable-btn">Deshabilitar</button></td>
-          </tr>
-          <tr>
-            <td>#3</td>
-            <td>Daniela Arias</td>
-            <td>danielaa@gmail.com</td>
-            <td>Común</td>
-            <td>Quindío</td>
-            <td>Carrera 10#34-54</td>
-            <td><button class="disable-btn">Deshabilitar</button></td>
-          </tr>
-          <tr>
-            <td>#4</td>
-            <td>Victoria Arias</td>
-            <td>victoriaa@gmail.com</td>
-            <td>Transportador</td>
-            <td>Quindío</td>
-            <td>Avenida 19 #34-36</td>
-            <td><button class="disable-btn">Deshabilitar</button></td>
-          </tr>
-          <tr>
-            <td>#5</td>
-            <td>Stiven Erazo</td>
-            <td>stivene@gmail.com</td>
-            <td>Común</td>
-            <td>Quindío</td>
-            <td>Carrera 10#34-54</td>
-            <td><button class="disable-btn">Deshabilitar</button></td>
-          </tr>
-          <tr>
-            <td>#6</td>
-            <td>Juan Ocampo</td>
-            <td>juano@gmail.com</td>
-            <td>Transportador</td>
-            <td>Caldas</td>
-            <td>Avenida 19 #34-36</td>
-            <td><button class="disable-btn">Deshabilitar</button></td>
-          </tr>
-          <tr>
-            <td>#7</td>
-            <td>Leon Ruiz</td>
-            <td>leonr@gmail.com</td>
-            <td>Común</td>
-            <td>Caldas</td>
-            <td>Carrera 10#34-54</td>
-            <td><button class="disable-btn">Deshabilitar</button></td>
-          </tr>
-          <tr>
-            <td>#8</td>
-            <td>Yuli Saenz</td>
-            <td>yulis@gmail.com</td>
-            <td>Común</td>
-            <td>Caldas</td>
-            <td>Avenida 19 #34-36</td>
-            <td><button class="disable-btn">Deshabilitar</button></td>
-          </tr>
-        </tbody>
-      </table>
-    </section>
-  </main>
-
-  <!-- Script -->
-  <script src="../js/users.js"></script>
-</body>
-</html>
+  
+  
+  <!-- Tabla de usuarios -->
+  <section class="users__section">
+    <table class="users__table">
+      <thead class="users__table-head">
+        <tr class="users__table-row">
+          <th class="users__table-header">#usuario</th>
+          <th class="users__table-header">Nombre</th>
+          <th class="users__table-header">Correo</th>
+          <th class="users__table-header">Tipo de usuario</th>
+          <th class="users__table-header">Departamento</th>
+          <th class="users__table-header">Dirección</th>
+          <th class="users__table-header">Acción</th>
+        </tr>
+      </thead>
+      <tbody class="users__table-body" id="usuariosBody">
+        <tr class="users__table-row">
+          <td class="users__table-cell">#1</td>
+          <td class="users__table-cell">Julian Gil</td>
+          <td class="users__table-cell">juliangil@gmail.com</td>
+          <td class="users__table-cell">Común</td>
+          <td class="users__table-cell">Risaralda</td>
+          <td class="users__table-cell">Carrera 10#34-54</td>
+          <td class="users__table-cell"><button class="users__disable-btn">Deshabilitar</button></td>
+        </tr>
+        <tr class="users__table-row">
+          <td class="users__table-cell">#2</td>
+          <td class="users__table-cell">Sebastian Valencia</td>
+          <td class="users__table-cell">sebastianv@gmail.com</td>
+          <td class="users__table-cell">Común</td>
+          <td class="users__table-cell">Risaralda</td>
+          <td class="users__table-cell">Avenida 19 #34-36</td>
+          <td class="users__table-cell"><button class="users__disable-btn">Deshabilitar</button></td>
+        </tr>
+        <tr class="users__table-row">
+          <td class="users__table-cell">#3</td>
+          <td class="users__table-cell">Daniela Arias</td>
+          <td class="users__table-cell">danielaa@gmail.com</td>
+          <td class="users__table-cell">Común</td>
+          <td class="users__table-cell">Quindío</td>
+          <td class="users__table-cell">Carrera 10#34-54</td>
+          <td class="users__table-cell"><button class="users__disable-btn">Deshabilitar</button></td>
+        </tr>
+      </tbody>
+    </table>
+  </section>
+</main>
