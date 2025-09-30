@@ -9,6 +9,10 @@
   box-shadow: 0 2px 6px rgba(0,0,0,0.05); 
 }
 .product-description .btn {
+  font-family: var(--font-primary-regular);
+  font-weight: 400;
+}
+.product-description .btn {
   align-self: flex-start; 
 }
 .product-description .btn {

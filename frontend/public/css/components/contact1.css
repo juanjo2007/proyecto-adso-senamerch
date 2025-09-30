@@ -88,11 +88,14 @@
 .contact__group textarea:focus {
   border-color: var(--primary-600);
 }
-
-.contact__form .btn {
+.contact__form  .btn {
+  font-family: var(--font-primary-regular);
+  font-weight: 400;
+}
+.contact__form  .btn {
   align-self: flex-start; 
 }
-.contact__form .btn {
+.contact__form  .btn {
   padding: var(--button-padding-top) var(--button-padding-right) 
            var(--button-padding-bottom) var(--button-padding-left);
 }

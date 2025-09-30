@@ -80,10 +80,10 @@
     --fs-xxxs: 1.2rem;
 
      /* ================== Button Primary ================== */
-    --button-padding-top: 14px;
-    --button-padding-bottom: 12px;
-    --button-padding-right:16px;
-    --button-padding-left:16px;
+    --button-padding-top: 12px;
+    --button-padding-bottom: 10px;
+    --button-padding-right:14px;
+    --button-padding-left:14px;
 
     /* ================== Button Secundary ================== */
     --padding-top:18px;

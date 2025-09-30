@@ -68,6 +68,14 @@
   padding: var(--button-padding-top) var(--button-padding-right)
            var(--button-padding-bottom) var(--button-padding-left);
 }
+.hero__actions {
+  font-family: var(--font-primary-regular);
+  font-weight: 400;
+}
+.hero__actions .btn {
+  padding: var(--button-padding-top) var(--button-padding-right) 
+           var(--button-padding-bottom) var(--button-padding-left);
+}
 
 /* ====== RESPONSIVE ====== */
 @media (min-width: 768px) {

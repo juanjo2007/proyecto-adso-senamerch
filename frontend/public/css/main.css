@@ -36,10 +36,11 @@
 
 /* Importaciones de SenaMerch Mateo */
 @import url('components/car.css'); 
-@import url('components/productos.css');
-@import url('components/usuarios.css');  
-/* @import url('components/sales-history.css');  */
-/* @import url("components/publicaciones.css"); */
+@import url('components/sales-history.css');  
+@import url('components/users.css');
+@import url('components/posts.css');  
+
+
 
 
 
@@ -57,3 +58,18 @@
 @import url('components/profile.css');
 @import url('index.css');
 @import url('components/contact1.css');
+@import url('components/create-store.css');
+@import url('components/admin.css');
+
+
+/* Importaciones de SenaMerch Jeferson */
+@import url('components/order.css');
+@import url('components/sales-doc.css');
+@import url('components/payment_gateway.css');
+@import url('components/stores.css');
+@import url('components/order_admin.css');
+
+
+
+
+

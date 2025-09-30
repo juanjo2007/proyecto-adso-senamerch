@@ -87,11 +87,11 @@
   display: flex;
   justify-content: space-between; /* Los manda a cada esquina */
 }
-
 .user-profile__buttons .btn {
-  align-self: center; 
+  font-family: var(--font-primary-regular);
+  font-weight: 400;
 }
-.user-profile__buttons .btn--variant2 {
+.user-profile__buttons  .btn {
   align-self: center; 
 }
 .user-profile__buttons .btn {

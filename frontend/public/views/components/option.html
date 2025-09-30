@@ -1,4 +1,11 @@
 <section class="page-center"> 
+
+  <!-- 🔹 Título del producto -->
+  <header class="product-header">
+    <h1 class="product-title">Nombre del Producto</h1>
+    <p class="product-subtitle">Selecciona la unidad y cantidad que deseas</p>
+  </header>
+
   <!-- Opciones de unidad -->
   <div class="unit-options">
     <div class="unit-options__container">
@@ -51,21 +58,18 @@
         <span class="unit-options__label">Litro</span>
       </label>
 
-      <!-- más opciones aquí -->
-
     </div>
   </div>
 
   <!-- Contenedor cantidad -->
   <div class="quantity-container">
     <section class="quantity">
-      <label for="quantity" class="quantity__label">
+      <label class="quantity__label">
         Selecciona una unidad de medida
       </label>
 
       <input 
         type="number" 
-        id="quantity" 
         class="quantity__field" 
         placeholder="Introduce la cantidad que deseas" 
         min="1"
@@ -75,5 +79,8 @@
         Máximo según la disponibilidad.
       </small>
     </section>
+  </div>
+  <div class="page-center__buttons">
+    <a href="viwe_car.html" class="btn btn--primary shopping-cart__checkout">Agregar al carrito de compras</a>
   </div>
 </section>
