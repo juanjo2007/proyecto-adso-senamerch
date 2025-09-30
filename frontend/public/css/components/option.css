@@ -1,15 +1,12 @@
 .page-center {
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-  gap: var(--gap-lg);
+  display: grid;
+  place-items: center;
   width: 1000px;
-  height: 500px; 
+  margin: 0 auto;
   margin-top: 2rem;
-  margin-left: 50rem;
-  padding: var(--gap-lg); /* opcional, si quieres separarlo del borde */
+  padding: var(--gap-lg);
   background: var(--white);
+  gap: var(--gap-lg);
 }
 
 .product-header {
@@ -94,7 +91,7 @@
   font-size: var(--fs-xs);
   font-family: var(--font-primary);
   color: var(--gray-900);
-  background: var(--gray-50);
+  background: var(--gray-white);
   outline: none;
   transition: border-color 0.2s ease-in-out, box-shadow 0.2s ease-in-out;
   width: 100%;
