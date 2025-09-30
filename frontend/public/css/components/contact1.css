@@ -79,7 +79,7 @@
   font-size: var(--fs-xs);
   font-family: var(--font-primary);
   color: var(--gray-900);
-  background: var(--gray-50);
+  background: var(--white);
   outline: none;
   transition: border-color 0.2s ease-in-out;
 }
