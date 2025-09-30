@@ -1,4 +1,5 @@
-<section class="page-center">
+<section class="page-center"> 
+  <!-- Opciones de unidad -->
   <div class="unit-options">
     <div class="unit-options__container">
 
@@ -27,32 +28,52 @@
       </label>
 
       <label class="unit-options__item">
-      <input type="radio" name="unit" class="unit-options__input" />
-      <img src="/frontend/public/assets/icons/icon_payment_method.svg" 
-           alt="Libra" 
-           class="unit-option__icon">
-      <span class="unit-options__label">Tonelada</span>
-    </label>
+        <input type="radio" name="unit" class="unit-options__input" />
+        <img src="/frontend/public/assets/icons/icon_payment_method.svg" 
+             alt="Tonelada" 
+             class="unit-option__icon">
+        <span class="unit-options__label">Tonelada</span>
+      </label>
 
-    <label class="unit-options__item">
-      <input type="radio" name="unit" class="unit-options__input" />
-      <img src="/frontend/public/assets/icons/icon_payment_method.svg" 
-           alt="Libra" 
-           class="unit-option__icon">
-      <span class="unit-options__label">Mililitro</span>
-    </label>
+      <label class="unit-options__item">
+        <input type="radio" name="unit" class="unit-options__input" />
+        <img src="/frontend/public/assets/icons/icon_payment_method.svg" 
+             alt="Mililitro" 
+             class="unit-option__icon">
+        <span class="unit-options__label">Mililitro</span>
+      </label>
 
-    <label class="unit-options__item">
-      <input type="radio" name="unit" class="unit-options__input" />
-      <img src="/frontend/public/assets/icons/icon_payment_method.svg" 
-           alt="Libra" 
-           class="unit-option__icon">
-      <span class="unit-options__label">Litro</span>
-    </label>
+      <label class="unit-options__item">
+        <input type="radio" name="unit" class="unit-options__input" />
+        <img src="/frontend/public/assets/icons/icon_payment_method.svg" 
+             alt="Litro" 
+             class="unit-option__icon">
+        <span class="unit-options__label">Litro</span>
+      </label>
 
       <!-- más opciones aquí -->
 
     </div>
   </div>
-</section>
 
+  <!-- Contenedor cantidad -->
+  <div class="quantity-container">
+    <section class="quantity">
+      <label for="quantity" class="quantity__label">
+        Selecciona una unidad de medida
+      </label>
+
+      <input 
+        type="number" 
+        id="quantity" 
+        class="quantity__field" 
+        placeholder="Introduce la cantidad que deseas" 
+        min="1"
+      >
+
+      <small class="quantity__helper">
+        Máximo según la disponibilidad.
+      </small>
+    </section>
+  </div>
+</section>

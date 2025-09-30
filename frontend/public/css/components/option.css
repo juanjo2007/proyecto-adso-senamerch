@@ -1,82 +1,152 @@
-/* Contenedor externo que ocupa toda la pantalla */
+/* ====== Contenedor externo ====== */
 .page-center {
   display: flex;
+  flex-direction: column;    /* primero opciones, luego cantidad */
   justify-content: center;   /* centro horizontal */
   align-items: center;       /* centro vertical */
-  min-height: 90vh;         /* ocupar toda la pantalla */
+  gap: var(--gap-lg);        /* separación entre opciones y cantidad */
+  margin-top: 2rem;
+  
 }
 
-/* El bloque con borde */
+/* ====== Opciones de unidad ====== */
 .unit-options {
   border: 1px solid var(--gray-100);
-  padding: 1rem 2rem;
+  padding: var(--gap-sm) var(--gap-lg);
   box-sizing: border-box;
   max-width: fit-content;
 }
 
-/* Opciones dentro */
 .unit-options__container {
   display: flex;
   flex-wrap: wrap;         
-  gap: 4rem;   
+  gap: var(--gap-xxl);   
   justify-content: center;
 }
 
-
-/* cada opción (caja con icono + texto) */
 .unit-options__item {
   display: flex;
   align-items: center;
   height: 20px;
   width: fit-content;
-  gap: 1.6rem;
   background-color: var(--tertiary-700);
   flex-direction: row-reverse;
-  gap: 16px;
   color: var(--white);
   font-size: var(--fs-xxs);
   font-family: var(--font-primary);
-  padding: 1.6rem 1.2rem;
+  padding: var(--gap-md) var(--gap-sm);
   border-radius: 0.4rem;
   cursor: pointer;
   transition: background 0.3s ease, transform 0.2s ease;
+  gap: var(--gap-md);
 }
 
-/* tamaño del icono */
 .unit-option__icon {
   width: 16px;
   height: 16px;
   object-fit: contain;
 }
 
-
-/* ocultar input */
 .unit-options__input {
   display: none;
 }
 
-/* hover */
 .unit-options__item:hover {
   background-color: var(--tertiary-800);
   transform: translateY(-2px);
 }
 
-/* Móviles pequeños (≤ 481px) */
-@media (max-width: 481px) {
+/* ====== Componente cantidad ====== */
+.quantity-container { 
+  display: flex;
+  flex-direction: column;
+  gap: var(--gap-xs); 
+  align-items: center;
+  max-height: 960px;
+}
+
+.quantity {
+  border: 1px solid var(--black);
+  display: flex;
+  flex-direction: column;
+  align-items: center;  
+  gap: var(--gap-md);
+  padding: var(--gap-lg);
+  margin-top: 0;
+  font-size: var(--fs-xxxs);  
+  max-width: 400px; 
+  width: 100%;                     
+  transition: border-color 0.3s, box-shadow 0.3s; 
+}
+
+.quantity:hover {
+  border-color: var(--primary-600);
+  box-shadow: 0 4px 12px rgba(0,0,0,0.2);
+}
+
+.quantity__field {
+  max-width: 100%;
+  width: 300px;
+  padding: 0.6rem 1rem;
+  border: 1px solid var(--white);
+  border-radius: 0.5rem;
+  font-size: var(--fs-xxxs);
+  outline: none;
+  transition: border 0.3s, box-shadow 0.3s;
+  box-shadow: 0 4px 8px var(--gray-800);
+}
+
+.quantity__field:hover {
+  border-color: var(--primary-400);
+  box-shadow: 0 0 6px var(--primary-300);
+}
+
+.quantity__field:focus {
+  border-color: var(--primary-600);
+  box-shadow: 0 0 4px var(--primary-900);
+}
+
+.quantity__field:active {
+  border-color: var(--primary-700);
+  box-shadow: 0 0 8px var(--primary-800);
+}
+
+/* ====== Responsividad ====== */
+
+/* móviles pequeños (≤ 480px) */
+@media (max-width: 480px) {
   .unit-options__container {
-    flex-direction: column; /* apila */
-    gap: 1rem;
+    flex-direction: column;
+    gap: var(--gap-sm);
   }
 
   .unit-options {
     max-width: fit-content;
   }
+
+  .quantity {
+    padding: var(--gap-sm);       
+    gap: var(--gap-xs);         
+  }
+
+  .quantity__field {
+    padding: 0.4rem 0.6rem;
+    font-size: var(--fs-xxxs); 
+    width: 100%;
+  }
+
+  .quantity__label,
+  .quantity__helper {
+    font-size: var(--fs-xxxs);
+  }
 }
-@media (max-width: 768px) and (min-width: 482px) {
+
+/* tablets (481px - 768px) */
+@media (max-width: 768px) and (min-width: 481px) {
   .unit-options__container {
     display: grid;
-    grid-template-columns: repeat(3, 1fr); /* 3 columnas */
-    gap: 1rem;
+    grid-template-columns: repeat(3, 1fr);
+    gap: var(--gap-sm);
   }
 
   .unit-options__item {
@@ -88,5 +158,21 @@
     max-width: 95%;
     width: fit-content;
   }
-}
 
+  .quantity {
+    max-width: 50%;    
+    padding: var(--gap-lg);     
+    gap: 0.8rem;        
+  }
+
+  .quantity__field {
+    width: 280px;          
+    padding: 0.5rem 0.8rem; 
+    font-size: var(--fs-xxs);
+  }
+
+  .quantity__label,
+  .quantity__helper {
+    font-size: var(--fs-xxs); 
+  }
+}
