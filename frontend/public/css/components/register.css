@@ -70,9 +70,12 @@ a {
 a:hover {
   text-decoration: dotted;
 }
-
 .form-content .btn {
-  justify-content: center;
+  font-family: var(--font-primary-regular);
+  font-weight: 400;
+}
+.form-content  .btn {
+  align-self: center; 
 }
 .form-content .btn {
   padding: var(--button-padding-top) var(--button-padding-right) 

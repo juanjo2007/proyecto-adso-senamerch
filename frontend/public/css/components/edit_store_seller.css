@@ -63,11 +63,11 @@
   gap: var(--gap-md);
   margin-top: var(--gap-lg);
 }
-
 .edit-store__actions .btn {
-  align-self: center; 
+  font-family: var(--font-primary-regular);
+  font-weight: 400;
 }
-.edit-store__actions .btn--variant2 {
+.edit-store__actions .btn {
   align-self: center; 
 }
 .edit-store__actions .btn {

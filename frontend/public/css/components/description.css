@@ -1,12 +1,20 @@
 .product-description {
   display: flex;
+  justify-content: center;
+  margin-top: 4rem;
+  margin-left: 16rem;
   gap: var(--gap-lg);
+  width: 80%;
   font-family: var(--font-primary);
   background: var(--secundary-50);
   border: 1px solid var(--gray-300); 
   padding: var(--gap-lg);
   border-radius: 12px;
   box-shadow: 0 2px 6px rgba(0,0,0,0.05); 
+}
+.product-description .btn {
+  font-family: var(--font-primary-regular);
+  font-weight: 400;
 }
 .product-description .btn {
   align-self: flex-start; 
