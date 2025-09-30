@@ -1,6 +1,10 @@
 .product-description {
   display: flex;
+  justify-content: center;
+  margin-top: 4rem;
+  margin-left: 16rem;
   gap: var(--gap-lg);
+  width: 80%;
   font-family: var(--font-primary);
   background: var(--secundary-50);
   border: 1px solid var(--gray-300); 
