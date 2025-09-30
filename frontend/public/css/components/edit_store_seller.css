@@ -95,10 +95,6 @@
     flex-direction: column;
     gap: var(--gap-sm);
   }
-
-  .btn {
-    width: 100%;
-  }
 }
 @media (max-width: 480px) {
   .edit-store {

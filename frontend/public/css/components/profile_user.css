@@ -83,18 +83,19 @@
   color: var(--gray-800);
 }
 
-.user-profile__buttons {
+.buttonss{
   display: flex;
   justify-content: space-between; /* Los manda a cada esquina */
 }
-.user-profile__buttons .btn {
-  font-family: var(--font-primary-regular);
+.buttonss .btn {
+  font-size: var(--fs-xs);
   font-weight: 400;
 }
-.user-profile__buttons  .btn {
-  align-self: center; 
+
+.buttonss .btn {
+  align-self: flex-start; 
 }
-.user-profile__buttons .btn {
+.buttonss .btn {
   padding: var(--button-padding-top) var(--button-padding-right) 
            var(--button-padding-bottom) var(--button-padding-left);
 }
@@ -141,9 +142,8 @@
   .user-profile__list {
     font-size: var(--fs-xxxs);  
   }
-
-  .user-profile__buttons {
-    flex-direction: column;      
-    gap: var(--gap-xs);          
+  .buttonss{
+  display: grid;
+  grid-template-columns: repeat(1fr, 1fr);
   }
 }
