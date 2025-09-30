@@ -39,5 +39,10 @@
     gap: var(--gap-xs);
     text-align: center;
   }
+  .footer-container__icon img {
+    flex-direction: column;
+    gap: var(--gap-xs);
+    text-align: center;
+  }
 }
 

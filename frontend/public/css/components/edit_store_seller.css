@@ -37,7 +37,7 @@
 
 .edit-store__input,
 .edit-store__textarea {
-  padding: var(--gap-xs);
+  padding: var(--padding-top) var(--padding-right) var(--padding-bottom) var(--padding-left);
   font-size: var(--fs-xs);
   border: 1px solid var(--gray-300);
   border-radius: 8px;
