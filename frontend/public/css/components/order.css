@@ -70,31 +70,17 @@
   gap: var(--gap-md);
 }
 
-.btn {
-  padding: var(--button-padding-top) var(--button-padding-right);
-  border-radius: 8px;
-  border: none;
-  cursor: pointer;
-  font-weight: bold;
+.order__actions .btn {
   font-size: var(--fs-xs);
-  box-shadow: 2px 2px 4px rgba(0,0,0,0.2);
-  transition: background 0.3s ease;
+  font-weight: 400;
 }
 
-.btn--cancel {
-  background: var(--black);
-  color: var(--white);
+.order__actions .btn {
+  align-self: flex-start; 
 }
-.btn--cancel:hover {
-  background: var(--tertiary-900);
-}
-
-.btn--confirm {
-  background: var(--secundary-600);
-  color: var(--white);
-}
-.btn--confirm:hover {
-  background: var(--secundary-800);
+.order__actions .btn {
+  padding: var(--button-padding-top) var(--button-padding-right) 
+           var(--button-padding-bottom) var(--button-padding-left);
 }
 
 /* ===== RESPONSIVE ===== */

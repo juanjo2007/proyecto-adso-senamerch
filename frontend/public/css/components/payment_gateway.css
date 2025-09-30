@@ -74,26 +74,17 @@ TÍTULO Y DESCRIPCIÓN
 /* =========================================
     BOTONES
 ========================================= */
-.btn {
-    padding: var(--button-padding-top) var(--button-padding-right);
-    border: none;
-    cursor: pointer;
-    font-family: var(--font-primary-semibold);
-    border-radius: var(--gap-xs);
-    font-size: var(--fs-xs);
-    display: inline-block;
-    transition: background 0.3s ease, transform 0.2s ease;
-    box-shadow: 0 2px 5px rgba(0,0,0,0.15);
+.payment-gateway .btn {
+  font-size: var(--fs-xs);
+  font-weight: 400;
 }
 
-.btn--black {
-    background-color: var(--black);
-    color: var(--white);
+.payment-gateway .btn {
+  align-self: flex-start; 
 }
-
-.btn--black:hover {
-    background-color: var(--secundary-700);
-    transform: translateY(-2px);
+.payment-gateway .btn {
+  padding: var(--button-padding-top) var(--button-padding-right) 
+           var(--button-padding-bottom) var(--button-padding-left);
 }
 
 /* =========================================
@@ -116,10 +107,5 @@ RESPONSIVE
 .table__content td {
     font-size: var(--fs-xxs);
     padding: var(--gap-xxs);
-  }
-
-.btn {
-    font-size: var(--fs-xs);
-    padding: var(--gap-xs) var(--gap-sm);
   }
 }

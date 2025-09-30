@@ -2,7 +2,7 @@
   display: inline-flex;
   align-items: center;
   justify-content: center;
-  font-size: var(--fs-xxs);        /* 16px */
+  font-size: var(--fs-xs);        /* 16px */
   line-height: 1;                  /* asegura altura = font-size */
   padding: var(--button-padding-top) var(--button-padding-right) 
            var(--button-padding-bottom) var(--button-padding-left);

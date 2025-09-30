@@ -3,11 +3,11 @@
   display: inline-flex;
   align-items: center;
   justify-content: center;
-  font-size: 12px;
+  font-size: var(--fs-xxs);
   line-height: 1;
-  padding: calc((36px - 12px) / 2) 12px; 
+  padding: calc((34px - 12px) / 2) 10px; 
   gap: 6px;
-  font-family: var(--font-primary);
+  font-family: var(--font-secundary);
   border: none;
   border-radius: 0.6rem;
   cursor: pointer;
