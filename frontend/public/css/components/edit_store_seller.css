@@ -2,7 +2,7 @@
   max-width: 600px;
   margin: var(--gap-xl) auto;
   padding: var(--gap-lg);
-  background: var(--primary-50);
+  background: var(--white);
   border-radius: 12px;
   box-shadow: 0 4px 12px rgba(0,0,0,0.1);
   font-family: var(--font-primary);
@@ -96,7 +96,7 @@
     gap: var(--gap-sm);
   }
 }
-@media (max-width: 480px) {
+@media (max-width: 640px) {
   .edit-store {
     padding: var(--gap-sm);
   }

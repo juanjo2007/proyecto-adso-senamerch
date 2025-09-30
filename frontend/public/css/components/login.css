@@ -9,7 +9,7 @@
   box-shadow: 0 4px 10px var(--black);
   font-family: var(--font-primary);
   align-items: center;
-  margin-top: 2rem;
+  margin-top: 8rem;
   margin-bottom: 2rem;
 }
 
@@ -141,7 +141,7 @@
 }
 
 /* ================== Media Query ≤ 486px ================== */
-@media (max-width: 486px) {
+@media (max-width: 640px) {
   .login {
     width: 90%;
     margin-left: 5%;

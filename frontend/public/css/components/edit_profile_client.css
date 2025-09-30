@@ -7,14 +7,13 @@
   align-items: center;
   min-height: 100vh;           /* ocupa la ventana pero solo dentro del layout */
   padding: var(--gap-lg);
-  background-color: var(--primary-50);
 }
 
 /* Card / container */
 .edit__container {
   width: 100%;
   max-width: 520px;
-  background-color: var(--primary-100);
+  background-color: var(--white);
   padding: var(--gap-lg);
   border-radius: 1rem;
   box-shadow: 0 8px 24px rgba(16,16,16,0.12);
@@ -105,7 +104,9 @@
   padding: var(--button-padding-top) var(--button-padding-right) 
            var(--button-padding-bottom) var(--button-padding-left);
 }
-/* Responsive tweaks */
+/* ===================== Responsive tweaks ===================== */
+
+/* 👉 Tablets grandes y pantallas medianas */
 @media (max-width: 1024px) {
   .edit__container {
     max-width: 92%;
@@ -113,14 +114,38 @@
   }
 }
 
+/* 👉 Tablets verticales */
 @media (max-width: 768px) {
-  .edit__image img { width: 130px; height: 130px; }
-  .edit__actions { flex-direction: column; }
-  .edit__btn { width: 100%; }
+  .edit__image img { 
+    width: 130px; 
+    height: 130px; 
+  }
+
+  .edit__actions { 
+    flex-direction: column; 
+    gap: var(--gap-sm);
+  }
+
+  .edit__btn { 
+    width: 100%; 
+    text-align: center;
+  }
 }
 
-@media (max-width: 480px) {
-  .edit__image img { width: 110px; height: 110px; }
-  .edit__title { font-size: var(--fs-sm); }
-  .edit__btn { padding: 10px 12px; font-size: var(--fs-xxxs); }
+/* 👉 Móviles */
+@media (max-width: 640px) {
+  .edit__image img { 
+    width: 110px; 
+    height: 110px; 
+  }
+
+  .edit__title { 
+    font-size: var(--fs-sm); 
+    text-align: center;
+  }
+
+  .edit__btn { 
+    padding: 10px 12px; 
+    font-size: var(--fs-xxxs); 
+  }
 }

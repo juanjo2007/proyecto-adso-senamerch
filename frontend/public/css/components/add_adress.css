@@ -56,7 +56,7 @@
 }
 
 /* Móviles */
-@media (max-width: 480px) {
+@media (max-width: 640px) {
   .direction-content {
     max-width: 100%;
     margin: var(--gap-sm) auto;
