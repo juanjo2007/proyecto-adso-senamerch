@@ -14,13 +14,13 @@
         <h3 class="shopping-cart__item-name">Tomate del Valle</h3>
         <p class="shopping-cart__item-price">$3.000 Kilo</p>
         <p class="shopping-cart__item-quantity">Cantidad: 2</p>
-        <p class="shopping-cart__item-unit-measurement">Kilogramos</p>
+        <p class="shopping-cart__item-unit">Kilogramos</p>
       </div>
 
       <!-- Botón eliminar -->
-      <form class="shopping-cart__delete-product" action="/eliminar-producto" method="POST">
+      <form class="shopping-cart__remove-form" action="/eliminar-producto" method="POST">
         <input type="hidden" name="producto" value="tomate-del-valle">
-        <button type="submit" class="shopping-cart__remove" aria-label="Eliminar producto">
+        <button type="submit" class="shopping-cart__remove-button" aria-label="Eliminar producto">
           <img src="/frontend/public/assets/icons/delete.svg" alt="Eliminar">
         </button>
       </form>
@@ -29,7 +29,7 @@
     <!-- Producto 2 -->
     <li class="shopping-cart__item">
       <img 
-        src="/frontend/public/assets/img/potato__image.jpg" 
+        src="/frontend/public/assets/img/potato_image.jpg" 
         alt="Papa roja" 
         class="shopping-cart__item-image"
       >
@@ -37,13 +37,13 @@
         <h3 class="shopping-cart__item-name">Papa Roja</h3>
         <p class="shopping-cart__item-price">$5.000 Kilo</p>
         <p class="shopping-cart__item-quantity">Cantidad: 1</p>
-        <p class="shopping-cart__item-unit-measurement">Libras</p>
+        <p class="shopping-cart__item-unit">Libras</p>
       </div>
 
       <!-- Botón eliminar -->
-      <form class="shopping-cart__delete-product" action="/eliminar-producto" method="POST">
+      <form class="shopping-cart__remove-form" action="/eliminar-producto" method="POST">
         <input type="hidden" name="producto" value="papa-roja">
-        <button type="submit" class="shopping-cart__remove" aria-label="Eliminar producto">
+        <button type="submit" class="shopping-cart__remove-button" aria-label="Eliminar producto">
           <img src="/frontend/public/assets/icons/delete.svg" alt="Eliminar">
         </button>
       </form>
@@ -55,14 +55,12 @@
     <p class="shopping-cart__total">
       Total: <strong>$11.000</strong>
     </p>
-
-    <!-- Botón secundario debajo del total -->
-    <a href="seller_view.html" class="btn--variant2 btn--variant2--secondary shopping-cart__continue">Continuar comprando</a>
     
-
-    <!-- Acciones principales -->
+    <a href="seller_view.html" class="btn--variant2 btn--variant2--secondary shopping-cart__continue">Continuar comprando</a>
     <div class="shopping-cart__actions">
-      <a href="payment_method.html" class="btn btn--primary">Ir al método de pago</a>
+      <a href="payment_method.html" class="btn btn--primary">
+        Ir al método de pago
+      </a>
     </div>
   </div>
 </section>

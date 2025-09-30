@@ -12,15 +12,15 @@
 
   /* Layout base */
   width: 80%;
-  margin: 4rem auto; /* espacio con navbar y footer */
+  margin: 4rem auto;
   max-height: 800px;
-  overflow-y: auto; /* recorte interno si se excede */
+  overflow-y: auto;
 }
 
 .shopping-cart__title {
-  font-size: var(--fs-sm);
+  font-size: var(--fs-md);
   font-weight: bold;
-  color: var(--secundary-950);
+  color: var(--secondary-950); /* corregido */
 }
 
 .shopping-cart__list {
@@ -54,15 +54,15 @@
 }
 
 .shopping-cart__item-name {
-  font-size: var(--fs-xs);
+  font-size: var(--fs-sm);
   font-weight: 600;
-  color: var(--secundary-950);
+  color: var(--secondary-950);
 }
 
 .shopping-cart__item-price,
 .shopping-cart__item-quantity,
 .shopping-cart__item-unit-measurement {
-  font-size: var(--fs-xxs);
+  font-size: var(--fs-xs);
   color: var(--gray-900);
 }
 
@@ -74,33 +74,27 @@
 }
 
 .shopping-cart__total {
-  font-size: var(--fs-xs);
+  font-size: var(--fs-sm);
   font-family: var(--font-primary-bold);
   color: var(--black);
 }
-
+.btn--variant2--secondary {
+  display: inline-block;
+  width: auto;
+}
 /* ==== Botones y acciones ==== */
 .shopping-cart__actions {
   display: flex;
   gap: var(--gap-sm);
-  justify-content: flex-end;
+  justify-content: space-between;
   flex-wrap: wrap;
 }
 
 .shopping-cart__actions .btn {
   font-size: var(--fs-xs);
   font-weight: 400;
-  align-self: flex-start; 
   padding: var(--button-padding-top) var(--button-padding-right) 
            var(--button-padding-bottom) var(--button-padding-left);
-}
-
-.shopping-cart__continue {
-  align-self: flex-start; 
-}
-
-.shopping-cart__checkout {
-  align-self: flex-end; 
 }
 
 .shopping-cart__delete-product {
@@ -142,9 +136,10 @@
   .shopping-cart {
     width: 95%;
     margin: 2rem auto;
-    max-height: 600px;
+    max-height: none; /* unificado */
     padding: var(--gap-md);
   }
+
   .shopping-cart__actions {
     justify-content: center; /* botones centrados */
   }
@@ -158,8 +153,8 @@
     padding: var(--gap-sm);
     margin: 1.5rem auto;
     height: auto;
-    max-height: none; /* 🔑 Permite que se muestre completo */
-    overflow-y: visible; /* 🔑 Evita scroll interno */
+    max-height: none;
+    overflow-y: visible;
   }
 
   .shopping-cart__item {
@@ -179,10 +174,5 @@
     align-items: stretch;
     justify-content: center;
     gap: var(--gap-sm);
-  }
-}
-@media (max-width: 1024px) {
-  .shopping-cart {
-    max-height: none;
   }
 }

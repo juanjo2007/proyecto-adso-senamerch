@@ -1,6 +1,6 @@
-/* ================== DIRECTION CONTENT ================== */
-.direction-content {
-  max-width: 50rem; /* ~500px, controlado */
+/* ================== ADDRESS FORM ================== */
+.address-form {
+  max-width: 50rem; /* ~500px */
   margin: var(--gap-xl) auto; /* Centrado horizontal y separación vertical */
   padding: var(--padding-top) var(--padding-right) var(--padding-bottom) var(--padding-left);
   background-color: var(--white);
@@ -9,14 +9,15 @@
   font-family: var(--font-primary);
 }
 
-.direction-content h2 {
+.address-form__title {
   text-align: center;
-  margin-bottom: var(--gap-md); /* espacio consistente antes del formulario */
-  font-size: var(--fs-sm);      /* ligeramente más legible que xs */
+  margin-bottom: var(--gap-md); /* espacio consistente antes de los inputs */
+  font-size: var(--fs-sm);
+  font-weight: 600;
   font-family: var(--font-primary);
 }
 
-.formulario__input {
+.address-form__input {
   width: 100%;
   padding: var(--padding-top) var(--padding-right) var(--padding-bottom) var(--padding-left);
   margin-bottom: var(--gap-sm);
@@ -27,11 +28,30 @@
   font-family: var(--font-primary);
 }
 
+.address-form__button {
+  display: inline-block;
+  width: 100%;
+  text-align: center;
+  padding: 0.8rem 1rem;
+  margin-top: var(--gap-sm);
+  background-color: var(--primary-500);
+  color: var(--white);
+  text-decoration: none;
+  font-size: var(--fs-sm);
+  font-weight: 600;
+  border-radius: 0.6rem;
+  transition: background-color 0.3s ease;
+}
+
+.address-form__button:hover {
+  background-color: var(--primary-600);
+}
+
 /* ================== MEDIA QUERIES ================== */
 
 /* Laptops medianas */
 @media (max-width: 1024px) {
-  .direction-content {
+  .address-form {
     max-width: 90%;
     margin: var(--gap-lg) auto;
   }
@@ -39,7 +59,7 @@
 
 /* Tablets */
 @media (max-width: 768px) {
-  .direction-content {
+  .address-form {
     max-width: 95%;
     margin: var(--gap-md) auto;
     border-radius: 0.8rem;
@@ -50,25 +70,38 @@
              calc(var(--padding-left) - 4px);
   }
 
-  .direction-content h2 {
+  .address-form__title {
     font-size: var(--fs-xs);
   }
 }
 
+.address-form .btn {
+  font-size: var(--fs-xs);
+  font-weight: 400;
+  align-self: flex-start; 
+  padding: var(--button-padding-top) var(--button-padding-right) 
+           var(--button-padding-bottom) var(--button-padding-left);
+}
+
 /* Móviles */
 @media (max-width: 640px) {
-  .direction-content {
+  .address-form {
     max-width: 100%;
     margin: var(--gap-sm) auto;
     padding: 1rem; /* padding más compacto */
     border-radius: 0.6rem;
   }
 
-  .direction-content h2 {
+  .address-form__title {
     font-size: var(--fs-xxs);
   }
 
-  .formulario__input {
+  .address-form__input {
     padding: 0.6rem 0.8rem; /* Inputs más compactos */
+  }
+
+  .address-form__button {
+    font-size: var(--fs-xs);
+    padding: 0.6rem 0.8rem;
   }
 }
