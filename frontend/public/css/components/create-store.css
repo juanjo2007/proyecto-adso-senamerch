@@ -1,0 +1,111 @@
+.create-store {
+  margin-top: 2rem;   
+  margin-bottom: 5rem;      
+  max-width: 1000px;      
+  margin-left: auto;      
+  margin-right: auto;       
+  padding: var(--gap-lg);   
+  background: var(--white);
+  box-sizing: border-box;
+}
+
+.create-store__wrapper {
+  max-width: 1000px;   /* caja de 1000px */
+  margin: 0 auto;      /* centrado */
+  padding: var(--gap-lg);
+  box-sizing: border-box;
+}
+
+.store-header {
+  text-align: center;
+}
+
+.store-title {
+  font-size: var(--fs-sm);
+  font-family: var(--font-primary-bold);
+  color: var(--primary-950);
+  margin-bottom: var(--gap-xs);
+}
+
+.store-subtitle {
+  font-size: var(--fs-xs);
+  font-family: var(--font-primary);
+  color: var(--gray-700);
+}
+
+/* ====== Formulario ====== */
+.store-form {
+  display: flex;
+  flex-direction: column;
+  gap: var(--gap-lg);
+  max-width: 600px;
+  width: 100%;
+  margin: 0 auto;
+}
+
+.form-group {
+  display: flex;
+  flex-direction: column;
+  gap: var(--gap-xs);
+}
+
+.form-label {
+  font-size: var(--fs-xs);
+  font-family: var(--font-primary-bold);
+  color: var(--primary-900);
+}
+
+.form-input {
+  padding: var(--padding-top) var(--padding-right) var(--padding-bottom) var(--padding-left);
+  border: 1px solid var(--gray-300);
+  border-radius: 8px;
+  font-size: var(--fs-xs);
+  font-family: var(--font-primary);
+  color: var(--gray-900);
+  background: var(--gray-50);
+  outline: none;
+  transition: border-color 0.2s ease-in-out, box-shadow 0.2s ease-in-out;
+  width: 100%;
+  box-sizing: border-box;
+}
+
+.form-input:focus {
+  border-color: var(--primary-600);
+  box-shadow: 0 0 4px var(--primary-600);
+}
+
+.form-helper {
+  font-size: var(--fs-xxxs);
+  color: var(--gray-600);
+  margin-top: var(--gap-xxs);
+}
+
+/* ====== Botones ====== */
+.form-buttons {
+  display: flex;
+  justify-content: space-between; /* uno izq, otro der */
+  gap: var(--gap-md);
+  flex-wrap: wrap; /* en móviles se apilan */
+}
+.form-buttons .btn {
+  font-family: var(--font-primary-regular);
+  font-weight: 400;
+}
+.form-buttons .btn {
+  align-self: flex-start; 
+}
+.form-buttons .btn {
+  padding: var(--button-padding-top) var(--button-padding-right) 
+           var(--button-padding-bottom) var(--button-padding-left);
+}
+
+/* ====== Responsividad ====== */
+@media (max-width: 640px) { /* sm: teléfonos */
+  .store-form {
+    gap: var(--gap-md);
+  }
+  .form-buttons {
+    flex-direction: column;
+    align-items: stretch;
+  }
+}

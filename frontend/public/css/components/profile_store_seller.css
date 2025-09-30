@@ -60,17 +60,20 @@
   gap: var(--gap-md);
   margin-top: var(--gap-lg);
 }
-.store-profile__actions .btn {
-  align-self: center; 
-}
 .store-profile__actions.btn--variant2 {
   align-self: center; 
 }
 .store-profile__actions .btn {
+  font-family: var(--font-primary-regular);
+  font-weight: 400;
+}
+.store-profile__actions  .btn {
+  align-self: center; 
+}
+.store-profile__actions  .btn {
   padding: var(--button-padding-top) var(--button-padding-right) 
            var(--button-padding-bottom) var(--button-padding-left);
 }
-
 /* =======================
    📱 ≤768px
 ========================= */

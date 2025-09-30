@@ -9,6 +9,10 @@ margin: var(--gap-lg) auto; /* centrado horizontal y con margen arriba/abajo */
 height: auto;
 }
 .payment-method__container .btn {
+  font-family: var(--font-primary-regular);
+  font-weight: 400;
+}
+.payment-method__container .btn {
   align-self: center; 
 }
 .payment-method__container .btn {

@@ -65,6 +65,11 @@
   background-color: var(--white);
 }
 .product__information .btn {
+  font-family: var(--font-primary-regular);
+  font-weight: 400;
+}
+
+.product__information .btn {
   align-self: flex-start; 
 }
 .product__information .btn {
