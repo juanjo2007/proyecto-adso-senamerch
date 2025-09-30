@@ -1,14 +1,17 @@
 .page-center {
   display: flex;
-  flex-direction: column;    
-  justify-content: center;   
-  align-items: center;      
-  gap: var(--gap-lg);       
-  margin-top: 15rem;
-  margin-bottom: var(--gap-lg);
-  margin-left: var(--gap-lg);
-  margin-right: var(--gap-lg);;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: var(--gap-lg);
+  width: 1000px;
+  height: 500px; 
+  margin-top: 2rem;
+  margin-left: 50rem;
+  padding: var(--gap-lg); /* opcional, si quieres separarlo del borde */
+  background: var(--white);
 }
+
 .product-header {
   text-align: center;
   margin-bottom: var(--gap-xs);
