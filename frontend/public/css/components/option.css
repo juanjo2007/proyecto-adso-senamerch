@@ -10,21 +10,24 @@
   gap: var(--gap-lg);
 }
 
-.product-header {
+/* ===== PRODUCT ===== */
+.product {
   text-align: center;
   margin-bottom: var(--gap-xs);
 }
-.product-title {
+.product__title {
   font-size: var(--fs-sm);
   font-family: var(--font-primary-bold);
   color: var(--primary-950);
   margin-bottom: var(--gap-xs);
 }
-.product-subtitle {
+.product__subtitle {
   font-size: var(--fs-xs);
   color: var(--gray-700);
   font-family: var(--font-primary);
 }
+
+/* ===== UNITS ===== */
 .unit-options {
   border: 1px solid var(--gray-100);
   padding: var(--gap-sm) var(--gap-lg);
@@ -33,8 +36,8 @@
 }
 .unit-options__container {
   display: flex;
-  flex-wrap: wrap;         
-  gap: var(--gap-xxl);   
+  flex-wrap: wrap;
+  gap: var(--gap-xxl);
   justify-content: center;
 }
 .unit-options__item {
@@ -53,7 +56,7 @@
   transition: background 0.3s ease, transform 0.2s ease;
   gap: var(--gap-md);
 }
-.unit-option__icon {
+.unit-options__icon {
   width: 16px;
   height: 16px;
   object-fit: contain;
@@ -65,25 +68,21 @@
   background-color: var(--tertiary-800);
   transform: translateY(-2px);
 }
-.quantity-container { 
-  display: flex;
-  flex-direction: column;
-  gap: var(--gap-xs); 
-  align-items: center;
-}
+
+/* ===== QUANTITY ===== */
 .quantity {
   border: 1px solid var(--gray-100);
   display: flex;
   flex-direction: column;
-  align-items: center;  
+  align-items: center;
   gap: var(--gap-md);
   padding: var(--gap-lg);
-  font-size: var(--fs-xs);             
-  transition: border-color 0.3s, box-shadow 0.3s; 
+  font-size: var(--fs-xs);
+  transition: border-color 0.3s, box-shadow 0.3s;
 }
 .quantity:hover {
   border-color: var(--primary-600);
-  box-shadow: 0 4px 12px rgba(0,0,0,0.2);
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
 }
 .quantity__field {
   padding: var(--padding-top) var(--padding-right) var(--padding-bottom) var(--padding-left);
@@ -92,11 +91,11 @@
   font-size: var(--fs-xs);
   font-family: var(--font-primary);
   color: var(--gray-900);
-  background: var(--gray-white);
+  background: var(--white);
   outline: none;
   transition: border-color 0.2s ease-in-out, box-shadow 0.2s ease-in-out;
   width: 100%;
-  box-sizing: border-box; 
+  box-sizing: border-box;
 }
 .quantity__field:hover {
   border-color: var(--primary-400);
@@ -110,23 +109,23 @@
   border-color: var(--primary-700);
   box-shadow: 0 0 8px var(--primary-800);
 }
-.page-center .btn {
-  font-family: var(--font-primary-regular);
-  font-weight: 400;
-}
-.page-center  .btn {
-  align-self: flex-start; 
-}
-.page-center  .btn {
-  padding: var(--button-padding-top) var(--button-padding-right) 
-           var(--button-padding-bottom) var(--button-padding-left);
-}
+
+/* ===== BUTTONS ===== */
 .page-center__buttons {
   display: flex;
   justify-content: center;
-  gap: var(--gap-md); 
-  flex-wrap: wrap; 
+  gap: var(--gap-md);
+  flex-wrap: wrap;
 }
+.page-center .btn {
+  font-family: var(--font-primary-regular);
+  font-weight: 400;
+  align-self: flex-start;
+  padding: var(--button-padding-top) var(--button-padding-right)
+           var(--button-padding-bottom) var(--button-padding-left);
+}
+
+/* ===== RESPONSIVE ===== */
 @media (max-width: 640px) {
   .page-center {
     width: 100%;
@@ -137,26 +136,26 @@
   }
 
   .unit-options__container {
-    flex-direction: column; 
+    flex-direction: column;
     gap: var(--gap-sm);
     align-items: stretch;
   }
 
   .unit-options__item {
-    width: 100%; 
+    width: 100%;
     justify-content: center;
     text-align: center;
   }
 
   .unit-options {
     width: 100%;
-    max-width: 95%; 
+    max-width: 95%;
     margin: 0 auto;
   }
 
   .quantity {
-    padding: var(--gap-sm);       
-    gap: var(--gap-xs);         
+    padding: var(--gap-sm);
+    gap: var(--gap-xs);
   }
 
   .quantity__label,
@@ -164,6 +163,7 @@
     font-size: var(--fs-xxxs);
   }
 }
+
 @media (max-width: 768px) {
   .page-center {
     width: 100%;
@@ -184,6 +184,7 @@
     gap: var(--gap-sm);
   }
 }
+
 @media (max-width: 1024px) {
   .page-center {
     width: 100%;
@@ -205,5 +206,3 @@
     gap: var(--gap-md);
   }
 }
-
-

@@ -78,11 +78,11 @@
   font-family: var(--font-primary-bold);
   color: var(--black);
 }
-.btn--variant2--secondary {
-  display: inline-block;
-  width: auto;
+
+.shopping-cart__actions-secundary{
+  font-size: var(--fs-xxs);
 }
-/* ==== Botones y acciones ==== */
+
 .shopping-cart__actions {
   display: flex;
   gap: var(--gap-sm);
