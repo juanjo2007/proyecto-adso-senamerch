@@ -83,22 +83,13 @@
   color: var(--gray-800);
 }
 
-.buttonss{
+.user-profile__secundary-button-porfile{
   display: flex;
-  justify-content: space-between; /* Los manda a cada esquina */
-}
-.buttonss .btn {
-  font-size: var(--fs-xs);
-  font-weight: 400;
+  justify-content: flex-end;
 }
 
-.buttonss .btn {
-  align-self: flex-start; 
-}
-.buttonss .btn {
-  padding: var(--button-padding-top) var(--button-padding-right) 
-           var(--button-padding-bottom) var(--button-padding-left);
-}
+
+
 
 /* ====== Mobile (≤ 640px) ====== */
 @media (max-width: 640px) {

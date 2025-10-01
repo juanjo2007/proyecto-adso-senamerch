@@ -1,57 +1,58 @@
 <section class="create-store">
   <div class="create-store__wrapper">
     <!-- 🔹 Encabezado -->
-    <header class="store-header">
-      <h1 class="store-title">Crear Tienda</h1>
-      <p class="store-subtitle">
+    <header class="create-store__header">
+      <h1 class="create-store__title">Crear Tienda</h1>
+      <p class="create-store__subtitle">
         Completa el formulario para registrar tu tienda en <strong>SENA MERCH</strong>.
         Con tu perfil podrás publicar productos y gestionar tus ventas fácilmente.
       </p>
     </header>
 
     <!-- 🔹 Formulario -->
-    <form class="store-form">
+    <form class="create-store__form">
       <!-- Nombre de la tienda -->
-      <div class="form-group">
-        <label class="form-label">Nombre de la tienda</label>
-        <input type="text" name="store-name" class="form-input" placeholder="Ejemplo: Frutas La Esperanza" required>
+      <div class="create-store__group">
+        <label class="create-store__label">Nombre de la tienda</label>
+        <input type="text" name="store-name" class="create-store__input" placeholder="Ejemplo: Frutas La Esperanza" required>
       </div>
       
-      <div class="form-group">
-        <label class="form-label">Dirección de la tienda</label>
-        <input type="text" name="store-name" class="form-input" placeholder="Ejemplo: Frutas La Esperanza" required>
+      <div class="create-store__group">
+        <label class="create-store__label">Dirección de la tienda</label>
+        <input type="text" name="store-address" class="create-store__input" placeholder="Ejemplo: Calle 123 #45-67" required>
       </div>
 
       <!-- Descripción -->
-      <div class="form-group">
-        <label class="form-label">Descripción</label>
-        <textarea name="store-description" class="form-input" rows="4" placeholder="Escribe una breve descripción de tu tienda..." required></textarea>
+      <div class="create-store__group">
+        <label class="create-store__label">Descripción</label>
+        <textarea name="store-description" class="create-store__input" rows="4" placeholder="Escribe una breve descripción de tu tienda..." required></textarea>
       </div>
 
       <!-- Categoría -->
-      <div class="form-group">
-        <label class="form-label">Categoría</label>
-        <select name="store-category" class="form-input" required>
+      <div class="create-store__group">
+        <label class="create-store__label">Categoría</label>
+        <select name="store-category" class="create-store__input" required>
           <option value="">Selecciona una categoría</option>
           <option value="Frutas">Frutas</option>
-          <option value="Verdeuras">Verdeuras</option>
+          <option value="Verduras">Verduras</option>
           <option value="Lácteos">Lácteos</option>
           <option value="Todas">Todas</option>
         </select>
       </div>
 
       <!-- Imagen de portada -->
-      <div class="form-group">
-        <label class="form-label">Imagen de portada</label>
-        <input type="file" name="store-image" class="form-input" accept="image/*">
-        <small class="form-helper">Formatos aceptados: JPG, PNG. Tamaño máximo: 2MB.</small>
+      <div class="create-store__group">
+        <label class="create-store__label">Imagen de portada</label>
+        <input type="file" name="store-image" class="create-store__input" accept="image/*">
+        <small class="create-store__helper">Formatos aceptados: JPG, PNG. Tamaño máximo: 2MB.</small>
       </div>
 
       <!-- Botones -->
-      <div class="form-buttons">
+      <div class="create-store__buttons">
         <a href="profile_store_seller.html" class="btn btn--primary">Crear Tienda</a>
-        <a href="seller_view.html" class="btn--variant2 btn--variant2--secondary shopping-cart__continue">Cancelar</a>
+        <a href="seller_view.html" class="btn btn-variant2--secondary">Cancelar</a>
       </div>
+      
     </form>
   </div>
 </section>

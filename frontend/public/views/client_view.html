@@ -5,10 +5,11 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="/frontend/public/css/main.css">
     <script type="module">
-        import { loadCards } from "/frontend/public/js/components/card.js";
-        document.addEventListener("DOMContentLoaded", () => { loadCards(".card-container"); });
+      import { loadCards } from "/frontend/public/js/components/card.js";
+      document.addEventListener("DOMContentLoaded", () => {
+        loadCards(".products__container");
+      });
     </script>
-
     <script src="/frontend/public/js/components/navbar_client_view.js"></script>
     <script src="/frontend/public/js/components/search-bar.js"></script>
     <script src="/frontend/public/js/components/client_view.js"></script>
@@ -28,8 +29,9 @@
       <section class="client-users">
         <div class="client-view"></div>  
       </section>
-      <section class="cardsdww">
-        <div class="card-container"></div>
+      
+      <section class="products">
+        <div class="products__container"></div>
       </section>
     </main>
     <section>

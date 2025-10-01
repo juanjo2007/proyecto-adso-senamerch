@@ -79,7 +79,10 @@
   color: var(--black);
 }
 
-/* ==== Botones y acciones ==== */
+.shopping-cart__actions-secundary{
+  font-size: var(--fs-xxs);
+}
+
 .shopping-cart__actions {
   display: flex;
   gap: var(--gap-sm);
