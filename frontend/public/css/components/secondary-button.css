@@ -1,13 +1,16 @@
 /* ====== BOTÓN VARIANTE 2 (más pequeño) ====== */
-.btn--variant2 {
+.btn-variant2--secondary {
   display: inline-flex;
   align-items: center;
   justify-content: center;
-  font-size: var(--fs-xxs);
-  line-height: 1;
-  padding: calc((34px - 12px) / 2) 10px; 
+  font-size: var(--fs-xxs);             /* ~12px */
+  line-height: 1;                       /* control del alto */
+  padding: var(--secundary-padding-top) 
+           var(--secundary-padding-right) 
+           var(--secundary-padding-bottom) 
+           var(--secundary-padding-left);
   gap: 6px;
-  font-family: var(--font-secundary);
+  font-family: var(--font-secondary);
   border: none;
   border-radius: 0.6rem;
   cursor: pointer;
@@ -16,35 +19,38 @@
   width: auto;
   white-space: nowrap;
   min-width: 0;
+  background-color: var(--black);
+  color: var(--white);
 }
-.btn--variant2__icon,
-.btn--variant2 img,
-.btn--variant2 svg {
+
+.btn-variant2__icon,
+.btn-variant2 img,
+.btn-variant2 svg {
   width: 16px;  
   height: 16px;
   display: block;
 }
-.btn--variant2--secondary {
-  background: var(--black);
-  color: var(--white);
-}
-.btn--variant2--secondary:hover {
-  background: var(--gray-950);
+
+/* ====== Estados ====== */
+.btn-variant2--secondary:hover {
+  background-color: var(--gray-950);
   transform: translateY(-2px);
 }
 
-.btn--variant2--secondary:active {
-  background: var(--gray-800);
+.btn-variant2--secondary:active {
+  background-color: var(--gray-800);
   transform: translateY(0);
 }
+
+/* 🔹 Versión responsiva */
 @media (max-width: 480px) {
-  .btn--variant2 {
+  .btn-variant2--secondary {
     font-size: 11px;
-    padding: calc((32px - 11px) / 2) 10px;
   }
-  .btn--variant2__icon,
-  .btn--variant2 img,
-  .btn--variant2 svg {
+
+  .btn-variant2__icon,
+  .btn-variant2 img,
+  .btn-variant2 svg {
     width: 12px;
     height: 12px;
   }

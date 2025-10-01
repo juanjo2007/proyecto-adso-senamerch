@@ -1,9 +1,10 @@
+/* ====== BOTÓN BASE ====== */
 .btn {
   display: inline-flex;
   align-items: center;
   justify-content: center;
   font-size: var(--fs-xs);        /* 16px */
-  line-height: 1;                  /* asegura altura = font-size */
+  line-height: 1;                 /* asegura altura = font-size */
   padding: var(--button-padding-top) var(--button-padding-right) 
            var(--button-padding-bottom) var(--button-padding-left);
   font-family: var(--font-primary-regular);
@@ -15,16 +16,18 @@
   box-shadow: 2px 2px 6px var(--gray-900);
   white-space: nowrap;
 }
-  
 
+/* ====== BOTÓN PRIMARIO ====== */
 .btn--primary {
-  background: var(--secundary-800);
+  background: var(--secundary-900);  
   color: var(--white);
 }
+
 .btn--primary:hover {
   background: var(--secundary-600);
   transform: translateY(-2px);
 }
+
 .btn--primary:active {
   background: var(--secundary-900);
   transform: translateY(0);

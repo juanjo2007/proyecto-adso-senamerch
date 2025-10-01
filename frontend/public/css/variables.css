@@ -86,10 +86,10 @@
     --button-padding-left:14px;
 
     /* ================== Button Secundary ================== */
-    --padding-top:18px;
-    --padding-right:16px;
-    --padding-bottom:18px;
-    --padding-left:16px;
+    --secundary-padding-top:10px;
+    --secundary-padding-right:10px;
+    --secundary-padding-bottom:12px;
+    --secundary-padding-left:12px;
 
     /* ================== Label / Input ================== */
     --padding-top:14px;
