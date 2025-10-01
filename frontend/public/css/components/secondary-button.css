@@ -42,7 +42,6 @@
   transform: translateY(0);
 }
 
-/* 🔹 Versión responsiva */
 @media (max-width: 480px) {
   .btn-variant2--secondary {
     font-size: 11px;
