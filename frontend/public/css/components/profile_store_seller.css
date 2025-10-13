@@ -1,24 +1,29 @@
-.store_profile {
-  max-width: 500px;
+.store-profile {
+  max-width: 520px;
   margin: var(--gap-xl) auto;
   padding: var(--gap-lg);
   background: var(--white);
   border-radius: 12px;
-  box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+  box-shadow: 0 4px 12px rgba(0,0,0,0.08);
   font-family: var(--font-primary);
   color: var(--gray-900);
+  display: flex;
+  flex-direction: column;
+  gap: var(--gap-lg);
 }
 
+/* ===== Header ===== */
 .store-profile__header {
   display: flex;
   align-items: center;
   gap: var(--gap-md);
-  margin-bottom: var(--gap-lg);
+  border-bottom: 1px solid var(--gray-100);
+  padding-bottom: var(--gap-md);
 }
 
 .store-profile__logo {
-  width: 80px;
-  height: 80px;
+  width: 88px;
+  height: 88px;
   object-fit: cover;
   border-radius: 50%;
   border: 2px solid var(--secundary-600);
@@ -27,67 +32,72 @@
 .store-profile__info {
   display: flex;
   flex-direction: column;
-  gap: var(--gap-xs);
+  gap: var(--gap-xxs);
 }
 
 .store-profile__name {
-  font-size: var(--fs-sm);
-  font-weight: bold;
+  font-size: var(--fs-md);
+  font-weight: 700;
   color: var(--secundary-700);
+  margin: 0;
 }
 
 .store-profile__category {
   font-size: var(--fs-xs);
-  color: var(--gray-700);
+  color: var(--gray-600);
+  margin: 0;
 }
 
+/* ===== Details ===== */
 .store-profile__details {
   display: flex;
   flex-direction: column;
-  gap: var(--gap-xs);
+  gap: var(--gap-sm);
   font-size: var(--fs-xs);
-  margin-bottom: var(--gap-lg);
+  line-height: 1.5;
 }
 
 .store-profile__details strong {
   color: var(--gray-900);
+  font-weight: 600;
 }
 
+/* ===== Actions ===== */
 .store-profile__actions {
   display: flex;
-  text-align: center;
-  justify-content: space-between;   
-  gap: var(--gap-md);
-  margin-top: var(--gap-lg);
+  width: 100%;
+  gap: var(--gap-sm);
+  justify-content: flex-start;
+  flex-wrap: wrap;
 }
-.store-profile__actions.btn--variant2 {
-  align-self: center; 
+
+.store-profile__actions-secundary{
+  display: flex;
+  justify-content: flex-end; 
+  align-items: center;
 }
+
 .store-profile__actions .btn {
   font-family: var(--font-primary-regular);
   font-weight: 400;
-}
-.store-profile__actions  .btn {
-  align-self: center; 
-}
-.store-profile__actions  .btn {
-  padding: var(--button-padding-top) var(--button-padding-right) 
+  padding: var(--button-padding-top) var(--button-padding-right)
            var(--button-padding-bottom) var(--button-padding-left);
+  min-width: 140px;
+  text-align: center;
 }
-/* =======================
-   📱 ≤768px
-========================= */
+
+/* ===== Responsividad ===== */
 @media (max-width: 768px) {
   .store-profile {
     padding: var(--gap-md);
-    margin: var(--gap-lg) auto;
+    gap: var(--gap-md);
   }
 
   .store-profile__header {
     flex-direction: column;
     align-items: center;
     text-align: center;
-    gap: var(--gap-sm);
+    padding-bottom: var(--gap-sm);
   }
 
   .store-profile__logo {
@@ -96,26 +106,26 @@
   }
 
   .store-profile__name {
-    font-size: var(--fs-xs);
+    font-size: var(--fs-sm);
+  }
+
+  .store-profile__actions {
+    flex-direction: column;
+    gap: var(--gap-sm);
   }
 }
 
-/* =======================
-   📱 ≤480px
-========================= */
 @media (max-width: 480px) {
   .store-profile {
     padding: var(--gap-sm);
   }
 
   .store-profile__logo {
-    width: 70px;
-    height: 70px;
+    width: 72px;
+    height: 72px;
   }
 
   .store-profile__details {
     gap: var(--gap-xxs);
-    font-size: var(--fs-xs);
   }
-
 }
