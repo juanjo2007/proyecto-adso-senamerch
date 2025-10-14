@@ -1,6 +1,5 @@
 <section class="create-store">
   <div class="create-store__wrapper">
-    <!-- 🔹 Encabezado -->
     <header class="create-store__header">
       <h1 class="create-store__title">Crear Tienda</h1>
       <p class="create-store__subtitle">
@@ -9,29 +8,25 @@
       </p>
     </header>
 
-    <!-- 🔹 Formulario -->
     <form class="create-store__form">
-      <!-- Nombre de la tienda -->
       <div class="create-store__group">
         <label class="create-store__label">Nombre de la tienda</label>
-        <input type="text" name="store-name" class="create-store__input" placeholder="Ejemplo: Frutas La Esperanza" required>
+        <input type="text" class="create-store__input" placeholder="Ejemplo: Frutas La Esperanza" required>
       </div>
-      
+
       <div class="create-store__group">
         <label class="create-store__label">Dirección de la tienda</label>
-        <input type="text" name="store-address" class="create-store__input" placeholder="Ejemplo: Calle 123 #45-67" required>
+        <input type="text" class="create-store__input" placeholder="Ejemplo: Calle 123 #45-67" required>
       </div>
 
-      <!-- Descripción -->
-      <div class="create-store__group">
+      <div class="create-store__group create-store__group--full">
         <label class="create-store__label">Descripción</label>
-        <textarea name="store-description" class="create-store__input" rows="4" placeholder="Escribe una breve descripción de tu tienda..." required></textarea>
+        <textarea class="create-store__input" rows="4" placeholder="Escribe una breve descripción de tu tienda..." required></textarea>
       </div>
 
-      <!-- Categoría -->
       <div class="create-store__group">
         <label class="create-store__label">Categoría</label>
-        <select name="store-category" class="create-store__input" required>
+        <select class="create-store__input" required>
           <option value="">Selecciona una categoría</option>
           <option value="Frutas">Frutas</option>
           <option value="Verduras">Verduras</option>
@@ -40,19 +35,18 @@
         </select>
       </div>
 
-      <!-- Imagen de portada -->
       <div class="create-store__group">
         <label class="create-store__label">Imagen de portada</label>
-        <input type="file" name="store-image" class="create-store__input" accept="image/*">
+        <input type="file" class="create-store__input" accept="image/*">
         <small class="create-store__helper">Formatos aceptados: JPG, PNG. Tamaño máximo: 2MB.</small>
       </div>
 
-      <!-- Botones -->
       <div class="create-store__buttons">
         <a href="profile_store_seller.html" class="btn btn--primary">Crear Tienda</a>
-        <a href="seller_view.html" class="btn btn-variant2--secondary">Cancelar</a>
       </div>
-      
+        <div class="create-store__buttons-secondary">
+          <a href="seller_view.html" class="btn btn-variant2--secondary">Cancelar</a>
+        </div>
     </form>
   </div>
 </section>

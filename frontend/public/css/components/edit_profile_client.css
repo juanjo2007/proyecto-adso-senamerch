@@ -1,18 +1,14 @@
-/* ===== Edit page (uses your :root variables) ===== */
-
-/* Centering container (NO body changes) */
 .edit {
   display: flex;
   justify-content: center;
   align-items: center;
-  min-height: 100vh;           /* ocupa la ventana pero solo dentro del layout */
-  padding: var(--gap-lg);
+  min-height: 100vh;
+  padding: var(--gap-sm);
+  background-color: var(--primary-50);
 }
-
-/* Card / container */
 .edit__container {
   width: 100%;
-  max-width: 520px;
+  max-width: 920px; 
   background-color: var(--white);
   padding: var(--gap-lg);
   border-radius: 1rem;
@@ -23,16 +19,16 @@
   font-family: var(--font-primary);
 }
 
-/* Title */
+/* ===== Title ===== */
 .edit__title {
   margin: 0;
   text-align: center;
   font-family: var(--font-primary-semibold);
-  font-size: var(--fs-sm);
+  font-size: var(--fs-md);
   color: var(--black);
 }
 
-/* Avatar / image centered inside the card */
+/* ===== Image (Profile photo) ===== */
 .edit__image {
   display: flex;
   justify-content: center;
@@ -41,21 +37,23 @@
   margin-bottom: var(--gap-md);
 }
 .edit__image img {
-  width: 150px;
-  height: 150px;
+  width: 160px;
+  height: 160px;
   border-radius: 50%;
   object-fit: cover;
   border: 3px solid var(--primary-300);
   display: block;
 }
 
-/* Form */
+/* ===== Form ===== */
 .edit__form {
-  display: flex;
-  flex-direction: column;
-  gap: var(--gap-md);
+  display: grid;
+  grid-template-columns: 1fr 1fr; /* Dos columnas */
+  gap: var(--gap-lg);
+  align-items: start;
 }
 
+/* Campos */
 .edit__field {
   display: flex;
   flex-direction: column;
@@ -83,69 +81,64 @@
 .edit__textarea:focus {
   outline: none;
   border-color: var(--primary-500);
-  box-shadow: 0 0 0 6px rgba(166,140,105,0.06); /* subtle focus ring */
+  box-shadow: 0 0 0 6px rgba(166,140,105,0.06);
 }
 
-/* ================== Botones Edit ================== */
+/* ===== Actions (Botones) ===== */
 .edit__actions {
+  grid-column: 1 / -1; /* ocupa todo el ancho en grid */
   display: flex;
-  justify-content: space-between;   /* centrar horizontalmente */
-  gap: var(--gap-md);
+  justify-content: center;
   margin-top: var(--gap-lg);
 }
 .edit__actions .btn {
-  font-family: var(--font-primary-regular);
-  font-weight: 400;
-}
-.edit__actions .btn {
-  align-self: flex-start; 
-}
-.edit__actions .btn {
-  padding: var(--button-padding-top) var(--button-padding-right) 
+  padding: var(--button-padding-top) var(--button-padding-right)
            var(--button-padding-bottom) var(--button-padding-left);
+  font-family: var(--font-primary-regular);
 }
-/* ===================== Responsive tweaks ===================== */
 
-/* 👉 Tablets grandes y pantallas medianas */
-@media (max-width: 1024px) {
+/* ===== Responsive ===== */
+
+/* Tablets y menores */
+@media (max-width: 768px) {
   .edit__container {
-    max-width: 92%;
+    max-width: 100%;
     padding: var(--gap-md);
   }
+
+  .edit__form {
+    grid-template-columns: 1fr; /* una sola columna */
+    gap: var(--gap-md);
+  }
+
+  .edit__image img {
+    width: 130px;
+    height: 130px;
+  }
+
+  .edit__actions {
+    flex-direction: column;
+    gap: var(--gap-md);
+  }
+
+  .edit__actions .btn {
+    width: 100%;
+  }
 }
 
-/* 👉 Tablets verticales */
-@media (max-width: 768px) {
-  .edit__image img { 
-    width: 130px; 
-    height: 130px; 
+/* Teléfonos pequeños */
+@media (max-width: 480px) {
+  .edit__title {
+    font-size: var(--fs-sm);
   }
 
-  .edit__actions { 
-    flex-direction: column; 
-    gap: var(--gap-sm);
+  .edit__image img {
+    width: 110px;
+    height: 110px;
   }
 
-  .edit__btn { 
-    width: 100%; 
-    text-align: center;
-  }
-}
-
-/* 👉 Móviles */
-@media (max-width: 640px) {
-  .edit__image img { 
-    width: 110px; 
-    height: 110px; 
-  }
-
-  .edit__title { 
-    font-size: var(--fs-sm); 
-    text-align: center;
-  }
-
-  .edit__btn { 
-    padding: 10px 12px; 
-    font-size: var(--fs-xxxs); 
+  .edit__actions .btn {
+    padding: 10px 12px;
+    font-size: var(--fs-xxxs);
   }
 }
