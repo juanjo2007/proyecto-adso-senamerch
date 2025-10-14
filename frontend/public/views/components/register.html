@@ -1,39 +1,59 @@
-<form class="form-content">
+<form class="form-content" action="#" method="POST">
   <h1 class="form__title">Completa los datos para crear tu cuenta</h1>
 
-  <label class="form__label" for="email">Utiliza tu correo electrónico</label>
-  <input class="form__input" type="email" name="email" />
-  <small class="form__text">Recibirás información de tu cuenta.</small>
+  <div class="form__grid">
+    <div class="form__column">
+      <div class="form__group">
+        <label class="form__label">Correo electrónico</label>
+        <input class="form__input" type="email" name="email" required />
+        <small class="form__text">Recibirás información de tu cuenta.</small>
+      </div>
 
-  <label class="form__label" for="name">Elige un nombre</label>
-  <input class="form__input" type="text" name="name" />
-  <small class="form__text">Se mostrará a las personas que interactúen contigo.</small>
+      <div class="form__group">
+        <label class="form__label">Nombre</label>
+        <input class="form__input" type="text" name="name" required />
+        <small class="form__text">Se mostrará a las personas que interactúen contigo.</small>
+      </div>
 
-  <label class="form__label" for="user-type">Tipo de usuario</label>
-  <select class="form__input" name="user-type">
-    <option value="">Selecciona...</option>
-    <option value="client">Cliente</option>
-    <option value="seller">Vendedor</option>
-    <option value="distributor">Distribuidor</option>
-  </select>
-  <small class="form__text">Qué tipo de usuario serás.</small>
+      <div class="form__group">
+        <label class="form__label">Tipo de usuario</label>
+        <select class="form__input" name="user-type" required>
+          <option value="">Selecciona...</option>
+          <option value="client">Cliente</option>
+          <option value="seller">Vendedor</option>
+          <option value="distributor">Distribuidor</option>
+        </select>
+        <small class="form__text">Selecciona el tipo de usuario que serás.</small>
+      </div>
+    </div>
 
-  <label class="form__label" for="department">Establece tu departamento</label>
-  <select class="form__input" name="department">
-    <option value="">Selecciona...</option>
-    <option value="Risaralda">Risaralda</option>
-    <option value="Quindio">Quindio</option>
-    <option value="Caldas">Caldas</option>
-  </select>
-  <small class="form__text">Así podrás interactuar con locales.</small>
+    <div class="form__column">
+      <div class="form__group">
+        <label class="form__label">Departamento</label>
+        <select class="form__input" name="department" required>
+          <option value="">Selecciona...</option>
+          <option value="Risaralda">Risaralda</option>
+          <option value="Quindio">Quindío</option>
+          <option value="Caldas">Caldas</option>
+        </select>
+        <small class="form__text">Así podrás interactuar con locales de tu zona.</small>
+      </div>
 
-  <label class="form__label" for="address">Dirección</label>
-  <a href="/frontend/public/views/add_adress.html">Agregar</a>
-  <small class="form__text">Los clientes estarán más cerca de ti.</small>
+      <div class="form__group">
+        <label class="form__label">Dirección</label>
+        <a href="add_adress.html" class="form__link">Agregar dirección</a>
+        <small class="form__text">Los clientes estarán más cerca de ti.</small>
+      </div>
 
-  <label class="form__label" for="password">Crea tu contraseña</label>
-  <input class="form__input" type="password" name="password" />
-  <small class="form__text">Mantendrás tu cuenta asegurada.</small>
+      <div class="form__group">
+        <label class="form__label">Contraseña</label>
+        <input class="form__input" type="password" name="password" required />
+        <small class="form__text">Mantén tu cuenta segura con una buena contraseña.</small>
+      </div>
+    </div>
+  </div>
 
-    <a href="index.html" class="btn btn--primary">Registrar</a>
+  <div class="form__actions">
+    <button type="submit" class="btn btn--primary">Registrar</button>
+  </div>
 </form>

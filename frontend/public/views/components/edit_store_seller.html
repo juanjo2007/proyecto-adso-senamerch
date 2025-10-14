@@ -4,44 +4,46 @@
   <form class="edit-store__form">
     <!-- Nombre de la tienda -->
     <div class="edit-store__field">
-      <label for="store-name" class="edit-store__label">Nombre de la tienda</label>
+      <label class="edit-store__label">Nombre de la tienda</label>
       <input type="text" class="edit-store__input" placeholder="Ej: Tienda Verde" required>
     </div>
 
     <!-- Correo -->
     <div class="edit-store__field">
-      <label for="store-email" class="edit-store__label">Correo electrónico</label>
+      <label class="edit-store__label">Correo electrónico</label>
       <input type="email" class="edit-store__input" placeholder="correo@tienda.com" required>
     </div>
 
     <!-- Teléfono -->
     <div class="edit-store__field">
-      <label for="store-phone" class="edit-store__label">Teléfono</label>
+      <label class="edit-store__label">Teléfono</label>
       <input type="tel" class="edit-store__input" placeholder="+57 300 000 0000" required>
     </div>
 
     <!-- Dirección -->
     <div class="edit-store__field">
-      <label for="store-address" class="edit-store__label">Dirección</label>
-      <input id="store-address" type="text" class="edit-store__input" placeholder="Calle 123 #45-67" required>
+      <label class="edit-store__label">Dirección</label>
+      <input type="text" class="edit-store__input" placeholder="Calle 123 #45-67" required>
     </div>
 
     <!-- Descripción -->
-    <div class="edit-store__field">
-      <label for="store-desc" class="edit-store__label">Descripción</label>
-      <textarea id="store-desc" class="edit-store__textarea" placeholder="Describe tu tienda" required></textarea>
+    <div class="edit-store__field edit-store__field--full">
+      <label class="edit-store__label">Descripción</label>
+      <textarea class="edit-store__textarea" placeholder="Describe tu tienda" required></textarea>
     </div>
 
     <!-- Logo -->
-    <div class="edit-store__field">
-      <label for="store-logo" class="edit-store__label">Logo</label>
+    <div class="edit-store__field edit-store__field--full">
+      <label class="edit-store__label">Logo</label>
       <input type="file" class="edit-store__input edit-store__input--file" accept="image/*">
     </div>
 
     <!-- Botones -->
-    <div class="edit-store__actions">
-      <a href="profile_store_seller.html" class="btn btn--primary shopping-cart__checkout">Guardar cambios</a>
-      <a href="profile_store_seller.html" class="btn--variant2 btn--variant2--secondary shopping-cart__continue">Cancelar</a>
-    </div>
+      <div class="edit-store__actions">
+        <a href="profile_store_seller.html" class="btn btn--primary">Guardar cambios</a>
+      </div>
+        <div class="edit-store__actions-secundary">
+          <a href="profile_store_seller.html" class="btn btn-variant2--secondary">Cancelar</a>
+        </div>
   </form>
 </section>
