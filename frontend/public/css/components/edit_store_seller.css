@@ -8,10 +8,7 @@
   box-shadow: 0 2px 8px rgba(0,0,0,0.08);
   font-family: var(--font-primary);
   color: var(--gray-900);
-
 }
-
-/* ===== Título ===== */
 .edit-store__title {
   text-align: center;
   font-size: var(--fs-sm);
@@ -19,33 +16,25 @@
   margin-bottom: var(--gap-md);
   color: var(--black);
 }
-
-/* ===== Grid ===== */
 .edit-store__form {
   display: grid;
   grid-template-columns: repeat(2, 1fr);
   gap: var(--gap-md);
 }
-
 .edit-store__field {
   display: flex;
   flex-direction: column;
   gap: var(--gap-xxs);
 }
-
 .edit-store__field--full {
   grid-column: 1 / -1;
 }
-
-/* ===== Labels ===== */
 .edit-store__label {
   font-size: var(--fs-xs);
   font-weight: 500;
   color: var(--black);
   line-height: 1.2;
 }
-
-/* ===== Inputs / Textareas ===== */
 .edit-store__input,
 .edit-store__textarea {
   padding: var(--padding-top) var(--padding-right) var(--padding-bottom) var(--padding-left);
@@ -58,32 +47,29 @@
   height: 54px;
   box-sizing: border-box;
 }
-
 .edit-store__textarea {
   height: auto;
   min-height: 80px;
   resize: vertical;
 }
-
 .edit-store__input:focus,
 .edit-store__textarea:focus {
   border-color: var(--secundary-600);
   outline: none;
 }
-
-/* ===== Botones ===== */
 .edit-store__actions {
   display: flex;
   width: 100%;
-  justify-content: flex-start; 
+  order: 2; 
+  justify-content: flex-end; 
   align-items: center;
   gap: var(--gap-sm);
   margin-top: var(--gap-md);
 }
-
 .edit-store__actions-secundary{
   display: flex;
-  justify-content: flex-end; 
+  order: 1; 
+  justify-content: flex-start; 
   align-items: center;
 }
 .edit-store__actions .btn {
@@ -93,30 +79,24 @@
   padding: var(--button-padding-top) var(--button-padding-right)
            var(--button-padding-bottom) var(--button-padding-left);
 }
-
-/* ===== Responsividad ===== */
 @media (max-width: 768px) {
   .edit-store__form {
     grid-template-columns: 1fr;
     gap: var(--gap-sm);
   }
-
   .edit-store__actions {
     flex-direction: column;
     align-items: stretch;
   }
 }
-
 @media (max-width: 480px) {
   .edit-store-seller {
     padding: var(--gap-sm);
   }
-
   .edit-store__input,
   .edit-store__textarea {
     font-size: var(--fs-xxxs);
   }
-
   .edit-store__title {
     font-size: var(--fs-xs);
   }
