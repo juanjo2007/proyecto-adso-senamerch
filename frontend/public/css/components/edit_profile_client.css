@@ -4,6 +4,10 @@
   align-items: center;
   padding: var(--gap-sm);
   background-color: var(--primary-50);
+  width: 100%;
+  height: 100h; /* hace que ocupe toda la pantalla visible */
+  box-sizing: border-box;
+  overflow: hidden; /* evita cualquier scroll */
 }
 .edit__container {
   width: 100%;
@@ -16,7 +20,15 @@
   flex-direction: column;
   gap: var(--gap-md);
   font-family: var(--font-primary);
+  max-height: calc(100vh - var(--gap-lg) * 2);
+  overflow: auto;
+  scrollbar-width: none; /* Oculta la barra de scroll en Firefox */
+  -ms-overflow-style: none; /* Oculta en IE/Edge */
 }
+.edit__container::-webkit-scrollbar {
+  display: none; /* Oculta la barra en Chrome/Safari */
+}
+
 .edit__title {
   margin: 0;
   text-align: center;
@@ -24,37 +36,42 @@
   font-size: var(--fs-md);
   color: var(--black);
 }
+
 .edit__image {
   display: flex;
   justify-content: center;
   align-items: center;
-  margin-top: calc(var(--gap-md) / 2);
-  margin-bottom: var(--gap-md);
+  margin-top: calc(var(--gap-xxs) / 2);
+  margin-bottom: var(--gap-xxs);
 }
 .edit__image img {
-  width: 160px;
-  height: 160px;
+  width: 120px;
+  height: 120px;
   border-radius: 50%;
   object-fit: cover;
   border: 3px solid var(--primary-300);
   display: block;
 }
+
 .edit__form {
   display: grid;
   grid-template-columns: 1fr 1fr;
   gap: var(--gap-lg);
   align-items: start;
 }
+
 .edit__field {
   display: flex;
   flex-direction: column;
   gap: var(--gap-xs);
 }
+
 .edit__label {
   font-size: var(--fs-xs);
   color: var(--black);
   font-family: var(--font-primary-semibold);
 }
+
 .edit__input,
 .edit__textarea {
   padding: var(--padding-top) var(--padding-right);
@@ -71,6 +88,7 @@
   border-color: var(--primary-500);
   box-shadow: 0 0 0 6px rgba(166,140,105,0.06);
 }
+
 .edit__actions {
   grid-column: 1 / -1; 
   display: flex;
@@ -82,10 +100,12 @@
            var(--button-padding-bottom) var(--button-padding-left);
   font-family: var(--font-primary-regular);
 }
+
+/* ==== Responsivo ==== */
 @media (max-width: 768px) {
   .edit__container {
-    max-width: 100%;
     padding: var(--gap-md);
+    max-height: calc(100vh - var(--gap-md) * 2);
   }
 
   .edit__form {
@@ -104,6 +124,7 @@
     width: 100%;
   }
 }
+
 @media (max-width: 480px) {
   .edit__title {
     font-size: var(--fs-sm);

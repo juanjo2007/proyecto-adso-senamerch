@@ -1,10 +1,10 @@
 .create-store {
-  margin-top: 2rem;
-  margin-bottom: 5rem;
+  margin-top: var(--gap-xs);
+  margin-bottom: var(--gap-xs);
   max-width: 900px;
   margin-left: auto;
   margin-right: auto;
-  padding: var(--gap-lg);
+  padding: var(--gap-xs);
   background: var(--white);
   box-sizing: border-box;
   border-radius: 10px;
