@@ -2,7 +2,6 @@
   display: flex;
   justify-content: center;
   align-items: center;
-  min-height: 100vh;
   padding: var(--gap-sm);
   background-color: var(--primary-50);
 }
@@ -18,8 +17,6 @@
   gap: var(--gap-md);
   font-family: var(--font-primary);
 }
-
-/* ===== Title ===== */
 .edit__title {
   margin: 0;
   text-align: center;
@@ -27,8 +24,6 @@
   font-size: var(--fs-md);
   color: var(--black);
 }
-
-/* ===== Image (Profile photo) ===== */
 .edit__image {
   display: flex;
   justify-content: center;
@@ -44,28 +39,22 @@
   border: 3px solid var(--primary-300);
   display: block;
 }
-
-/* ===== Form ===== */
 .edit__form {
   display: grid;
-  grid-template-columns: 1fr 1fr; /* Dos columnas */
+  grid-template-columns: 1fr 1fr;
   gap: var(--gap-lg);
   align-items: start;
 }
-
-/* Campos */
 .edit__field {
   display: flex;
   flex-direction: column;
   gap: var(--gap-xs);
 }
-
 .edit__label {
   font-size: var(--fs-xs);
   color: var(--black);
   font-family: var(--font-primary-semibold);
 }
-
 .edit__input,
 .edit__textarea {
   padding: var(--padding-top) var(--padding-right);
@@ -76,17 +65,14 @@
   background-color: var(--white);
   color: var(--gray-900);
 }
-
 .edit__input:focus,
 .edit__textarea:focus {
   outline: none;
   border-color: var(--primary-500);
   box-shadow: 0 0 0 6px rgba(166,140,105,0.06);
 }
-
-/* ===== Actions (Botones) ===== */
 .edit__actions {
-  grid-column: 1 / -1; /* ocupa todo el ancho en grid */
+  grid-column: 1 / -1; 
   display: flex;
   justify-content: center;
   margin-top: var(--gap-lg);
@@ -96,10 +82,6 @@
            var(--button-padding-bottom) var(--button-padding-left);
   font-family: var(--font-primary-regular);
 }
-
-/* ===== Responsive ===== */
-
-/* Tablets y menores */
 @media (max-width: 768px) {
   .edit__container {
     max-width: 100%;
@@ -107,36 +89,29 @@
   }
 
   .edit__form {
-    grid-template-columns: 1fr; /* una sola columna */
+    grid-template-columns: 1fr; 
     gap: var(--gap-md);
   }
-
   .edit__image img {
     width: 130px;
     height: 130px;
   }
-
   .edit__actions {
     flex-direction: column;
     gap: var(--gap-md);
   }
-
   .edit__actions .btn {
     width: 100%;
   }
 }
-
-/* Teléfonos pequeños */
 @media (max-width: 480px) {
   .edit__title {
     font-size: var(--fs-sm);
   }
-
   .edit__image img {
     width: 110px;
     height: 110px;
   }
-
   .edit__actions .btn {
     padding: 10px 12px;
     font-size: var(--fs-xxxs);

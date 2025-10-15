@@ -81,13 +81,15 @@
 .create-store__buttons {
   display: flex;
   width: 100%;
-  justify-content: flex-start; /* uno a la izquierda y otro a la derecha */
+  order: 2; 
+  justify-content: flex-end; 
   gap: var(--gap-md);
   margin-top: var(--gap-md);
 }
 .create-store__buttons-secondary{
   display: flex;
-  justify-content: flex-end; 
+  order: 1; 
+  justify-content: flex-start; 
   align-items: center;
 }
 .create-store__buttons .btn {
