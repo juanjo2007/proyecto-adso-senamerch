@@ -1,7 +1,7 @@
 .create-store {
   margin-top: var(--gap-xs);
   margin-bottom: var(--gap-xs);
-  max-width: 900px;
+  max-width: 1280px;
   margin-left: auto;
   margin-right: auto;
   padding: var(--gap-xs);
@@ -10,29 +10,23 @@
   border-radius: 10px;
   box-shadow: 0 2px 8px rgba(0,0,0,0.08);
 }
-
-/* ====== Encabezado ====== */
 .create-store__header {
   text-align: center;
 }
-
 .create-store__title {
   font-size: var(--fs-sm);
   font-family: var(--font-primary-bold);
   color: var(--primary-950);
   margin-bottom: var(--gap-xs);
 }
-
 .create-store__subtitle {
   font-size: var(--fs-xs);
   font-family: var(--font-primary);
-  color: var(--gray-700);
+  color: var(--black);
 }
-
-/* ====== Formulario (2 columnas como editar tienda) ====== */
 .create-store__form {
   display: grid;
-  grid-template-columns: repeat(2, 1fr);
+  grid-template-columns: repeat(3, 1fr);
   gap: var(--gap-md);
   margin-top: var(--gap-md);
 }
@@ -42,37 +36,31 @@
   flex-direction: column;
   gap: var(--gap-xs);
 }
-
 .create-store__group--full {
   grid-column: 1 / -1;
 }
-
-/* ====== Labels e inputs ====== */
 .create-store__label {
   font-size: var(--fs-xs);
   font-family: var(--font-primary-bold);
-  color: var(--primary-900);
+  color: var(--black);
 }
-
 .create-store__input {
   padding: var(--padding-top) var(--padding-right) var(--padding-bottom) var(--padding-left);
   border: 1px solid var(--gray-300);
   border-radius: 8px;
   font-size: var(--fs-xs);
   font-family: var(--font-primary);
-  color: var(--gray-900);
+  color: var(--black);
   background: var(--white);
   outline: none;
   transition: border-color 0.2s ease-in-out, box-shadow 0.2s ease-in-out;
   width: 100%;
   box-sizing: border-box;
 }
-
 .create-store__input:focus {
-  border-color: var(--primary-600);
-  box-shadow: 0 0 4px var(--primary-600);
+  border-color: var(--secundary-900);
+  box-shadow: 0 0 4px var(--secundary-900);
 }
-
 .create-store__helper {
   font-size: var(--fs-xxxs);
   color: var(--gray-600);
@@ -80,15 +68,13 @@
 }
 .create-store__buttons {
   display: flex;
-  width: 100%;
-  order: 2; 
   justify-content: flex-end; 
+  align-items: center;
   gap: var(--gap-md);
   margin-top: var(--gap-md);
 }
-.create-store__buttons-secondary{
+.create-store__secondary{
   display: flex;
-  order: 1; 
   justify-content: flex-start; 
   align-items: center;
 }
@@ -98,15 +84,11 @@
   padding: var(--button-padding-top) var(--button-padding-right)
            var(--button-padding-bottom) var(--button-padding-left);
 }
-
-
-/* ====== Responsividad ====== */
 @media (max-width: 768px) {
   .create-store__form {
     grid-template-columns: 1fr;
     gap: var(--gap-sm);
   }
-
   .create-store__buttons {
     flex-direction: column;
     align-items: stretch;

@@ -15,16 +15,13 @@
         max-width: 90%;
     }
 }
-
 @media (width > 1024px) {
     .cards__container {
-        grid-template-columns: repeat(4, 1fr);
+        grid-template-columns: repeat(3, 1fr);
         gap: var(--gap-lg);
         max-width: 90%;
     }
 }
-
-/* ====== CARD BASE ====== */
 .card {
   border: 1px solid var(--secundary-900);
   border-radius: 12px;
@@ -42,20 +39,16 @@
   transition: transform 0.3s ease, box-shadow 0.3s ease;
   cursor: pointer;
 }
-
 .card:hover {
   transform: translateY(-4px);
   box-shadow: 0 6px 14px rgba(0, 0, 0, 0.15);
 }
-
-/* ====== CONTENIDO DE LA CARD ====== */
 .card__image {
   width: 100%;
   height: 200px;
   object-fit: cover;
   border-radius: 8px;
 }
-
 .card__info {
   display: flex;
   flex-direction: column;
@@ -63,7 +56,6 @@
   gap: 8px;
   margin-top: 16px;
 }
-
 .card__info .btn{
   font-family: var(--font-primary-regular);
   font-weight: 400;
@@ -71,7 +63,6 @@
   padding: var(--button-padding-top) var(--button-padding-right)
            var(--button-padding-bottom) var(--button-padding-left);
 }
-
 .card__title {
   font-size: var(--fs-xs);
   color: var(--tertiary-500);
@@ -81,7 +72,6 @@
   margin: 0;
   order: -1;
 }
-
 .card__price {
   font-size: var(--fs-sm);
   color: var(--tertiary-900);
@@ -92,22 +82,3 @@
   order: -1;
 }
 
-/* ====== RESPONSIVE CARD ====== */
-@media (max-width: 480px) {
-  .card {
-    padding: 1rem;
-    max-width: 100%;
-  }
-
-  .card__image {
-    height: 140px;
-  }
-
-  .card__title {
-    font-size: var(--fs-xs);
-  }
-
-  .card__price {
-    font-size: var(--fs-xxs);
-  }
-}
