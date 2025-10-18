@@ -1,49 +1,72 @@
 <!-- ================== Componente Productos ================== -->
 <main class="products">
-  <!-- Título -->
+  <!-- 1️ Título -->
   <h1 class="products__title">Productos</h1>
 
-  <!-- 📦 Tabla -->
+  <!-- 2️ Envoltura de la tabla -->
   <div class="products__table-wrapper">
+
+    <!-- 3️ Tabla -->
     <table class="products__table">
-      <thead>
-        <tr>
-          <th>#Producto</th>
-          <th>Stock</th>
-          <th>#Usuario</th>
-          <th>Tienda</th>
-          <th>Acción</th>
+
+      <!-- 4️ Cabecera de la tabla -->
+      <thead class="products__table-head">
+        <tr class="products__table-row">
+          <th class="products__table-header">#Producto</th>
+          <th class="products__table-header">Stock</th>
+          <th class="products__table-header">#Usuario</th>
+          <th class="products__table-header">Tienda</th>
+          <th class="products__table-header">Acción</th>
         </tr>
       </thead>
-      <tbody>
-        <tr>
-          <td>#1</td>
-          <td>Común</td>
-          <td>#1</td>
-          <td>#1</td>
-          <td><button class="products__btn">Deshabilitar</button></td>
+
+      <!-- 5️ Cuerpo de la tabla -->
+      <tbody class="products__table-body">
+
+        <!-- 6️ Fila 1 -->
+        <tr class="products__table-row">
+          <td class="products__table-cell">#1</td>
+          <td class="products__table-cell">Común</td>
+          <td class="products__table-cell">#1</td>
+          <td class="products__table-cell">#1</td>
+          <td class="products__table-cell">
+            <button class="products__btn">Deshabilitar</button>
+          </td>
         </tr>
-        <tr>
-          <td>#2</td>
-          <td>Común</td>
-          <td>#2</td>
-          <td>#2</td>
-          <td><button class="products__btn">Deshabilitar</button></td>
+
+        <!-- 7️ Fila 2 -->
+        <tr class="products__table-row">
+          <td class="products__table-cell">#2</td>
+          <td class="products__table-cell">Común</td>
+          <td class="products__table-cell">#2</td>
+          <td class="products__table-cell">#2</td>
+          <td class="products__table-cell">
+            <button class="products__btn">Deshabilitar</button>
+          </td>
         </tr>
-        <tr>
-          <td>#3</td>
-          <td>Común</td>
-          <td>#3</td>
-          <td>#3</td>
-          <td><button class="products__btn">Deshabilitar</button></td>
+
+        <!-- 8️ Fila 3 -->
+        <tr class="products__table-row">
+          <td class="products__table-cell">#3</td>
+          <td class="products__table-cell">Común</td>
+          <td class="products__table-cell">#3</td>
+          <td class="products__table-cell">#3</td>
+          <td class="products__table-cell">
+            <button class="products__btn">Deshabilitar</button>
+          </td>
         </tr>
-        <tr>
-          <td>#4</td>
-          <td>Transportador</td>
-          <td>#4</td>
-          <td>#4</td>
-          <td><button class="products__btn">Deshabilitar</button></td>
+
+        <!-- 9️ Fila 4 -->
+        <tr class="products__table-row">
+          <td class="products__table-cell">#4</td>
+          <td class="products__table-cell">Transportador</td>
+          <td class="products__table-cell">#4</td>
+          <td class="products__table-cell">#4</td>
+          <td class="products__table-cell">
+            <button class="products__btn">Deshabilitar</button>
+          </td>
         </tr>
+
       </tbody>
     </table>
   </div>
