@@ -1,20 +1,18 @@
-/* ===== Edit page (uses your :root variables) ===== */
-
-/* Centering container (NO body changes) */
 .edit {
   display: flex;
   justify-content: center;
   align-items: center;
-  min-height: 100vh;           /* ocupa la ventana pero solo dentro del layout */
-  padding: var(--gap-lg);
+  padding: var(--gap-sm);
   background-color: var(--primary-50);
+  width: 100%;
+  height: 100h; /* hace que ocupe toda la pantalla visible */
+  box-sizing: border-box;
+  overflow: hidden; /* evita cualquier scroll */
 }
-
-/* Card / container */
 .edit__container {
   width: 100%;
-  max-width: 520px;
-  background-color: var(--primary-100);
+  max-width: 920px; 
+  background-color: var(--white);
   padding: var(--gap-lg);
   border-radius: 1rem;
   box-shadow: 0 8px 24px rgba(16,16,16,0.12);
@@ -22,39 +20,44 @@
   flex-direction: column;
   gap: var(--gap-md);
   font-family: var(--font-primary);
+  max-height: calc(100vh - var(--gap-lg) * 2);
+  overflow: auto;
+  scrollbar-width: none; /* Oculta la barra de scroll en Firefox */
+  -ms-overflow-style: none; /* Oculta en IE/Edge */
+}
+.edit__container::-webkit-scrollbar {
+  display: none; /* Oculta la barra en Chrome/Safari */
 }
 
-/* Title */
 .edit__title {
   margin: 0;
   text-align: center;
   font-family: var(--font-primary-semibold);
-  font-size: var(--fs-sm);
+  font-size: var(--fs-md);
   color: var(--black);
 }
 
-/* Avatar / image centered inside the card */
 .edit__image {
   display: flex;
   justify-content: center;
   align-items: center;
-  margin-top: calc(var(--gap-md) / 2);
-  margin-bottom: var(--gap-md);
+  margin-top: calc(var(--gap-xxs) / 2);
+  margin-bottom: var(--gap-xxs);
 }
 .edit__image img {
-  width: 150px;
-  height: 150px;
+  width: 120px;
+  height: 120px;
   border-radius: 50%;
   object-fit: cover;
   border: 3px solid var(--primary-300);
   display: block;
 }
 
-/* Form */
 .edit__form {
-  display: flex;
-  flex-direction: column;
-  gap: var(--gap-md);
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: var(--gap-lg);
+  align-items: start;
 }
 
 .edit__field {
@@ -72,54 +75,66 @@
 .edit__input,
 .edit__textarea {
   padding: var(--padding-top) var(--padding-right);
-  border: 1px solid var(--black);
+  border: 1px solid var(--gray-200);
   border-radius: 0.6rem;
   font-size: var(--fs-xs);
   font-family: var(--font-primary);
   background-color: var(--white);
   color: var(--gray-900);
 }
-
 .edit__input:focus,
 .edit__textarea:focus {
   outline: none;
   border-color: var(--primary-500);
-  box-shadow: 0 0 0 6px rgba(166,140,105,0.06); /* subtle focus ring */
+  box-shadow: 0 0 0 6px rgba(166,140,105,0.06);
 }
 
-/* ================== Botones Edit ================== */
 .edit__actions {
+  grid-column: 1 / -1; 
   display: flex;
-  justify-content: space-between;   /* centrar horizontalmente */
-  gap: var(--gap-md);
+  justify-content: center;
   margin-top: var(--gap-lg);
 }
 .edit__actions .btn {
-  align-self: center; 
-}
-.edit__actions .btn--variant2 {
-  align-self: center; 
-}
-.edit__actions .btn {
-  padding: var(--button-padding-top) var(--button-padding-right) 
+  padding: var(--button-padding-top) var(--button-padding-right)
            var(--button-padding-bottom) var(--button-padding-left);
+  font-family: var(--font-primary-regular);
 }
-/* Responsive tweaks */
-@media (max-width: 1024px) {
+
+/* ==== Responsivo ==== */
+@media (max-width: 768px) {
   .edit__container {
-    max-width: 92%;
     padding: var(--gap-md);
+    max-height: calc(100vh - var(--gap-md) * 2);
+  }
+
+  .edit__form {
+    grid-template-columns: 1fr; 
+    gap: var(--gap-md);
+  }
+  .edit__image img {
+    width: 130px;
+    height: 130px;
+  }
+  .edit__actions {
+    flex-direction: column;
+    gap: var(--gap-md);
+  }
+  .edit__actions .btn {
+    width: 100%;
   }
 }
 
-@media (max-width: 768px) {
-  .edit__image img { width: 130px; height: 130px; }
-  .edit__actions { flex-direction: column; }
-  .edit__btn { width: 100%; }
-}
-
 @media (max-width: 480px) {
-  .edit__image img { width: 110px; height: 110px; }
-  .edit__title { font-size: var(--fs-sm); }
-  .edit__btn { padding: 10px 12px; font-size: var(--fs-xxxs); }
+  .edit__title {
+    font-size: var(--fs-sm);
+  }
+  .edit__image img {
+    width: 110px;
+    height: 110px;
+  }
+  .edit__actions .btn {
+    padding: 10px 12px;
+    font-size: var(--fs-xxxs);
+  }
 }

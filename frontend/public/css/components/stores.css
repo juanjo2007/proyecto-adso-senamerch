@@ -1,0 +1,106 @@
+/* ==============================
+   Componente Tiendas (BEM)
+============================== */
+
+.stores {
+  text-align: center;
+  padding: var(--gap-lg);
+  font-family: var(--font-primary);
+  background-color: var(--primary-50);
+}
+
+/* Títulos */
+.stores__title {
+  font-size: var(--fs-sm); /* h1 */
+  font-family: var(--font-primary-bold);
+  color: var(--primary-950);
+  margin-bottom: var(--gap-md);
+}
+
+.stores__subtitle {
+  font-size: var(--fs-md); /* h2 */
+  color: var(--gray-700);
+  margin-bottom: var(--gap-lg);
+}
+
+
+/* 📦 Tabla */
+.stores__table-wrapper {
+  overflow-x: auto;
+}
+
+.stores__table {
+  display: inline-block;
+  min-width: 800px;
+  background-color: var(--white);
+  border-radius: var(--gap-xs);
+  box-shadow: 0 2px 8px rgba(0,0,0,0.05);
+  overflow: hidden;
+}
+
+/* Filas alternadas */
+.stores__row:nth-child(even):not(.stores__row--header) {
+  background-color: var(--gray-50);
+}
+
+.stores__row {
+  display: grid;
+  grid-template-columns: repeat(7, 1fr);
+  align-items: center;
+  padding: var(--gap-sm);
+  border-bottom: 1px solid var(--gray-200);
+}
+
+.stores__row--header {
+  font-weight: bold;
+  font-family: var(--font-primary-semibold);
+  font-size: var(--fs-sm);
+  background-color: var(--primary-200);
+  color: var(--gray-950);
+}
+
+.stores__cell {
+  text-align: center;
+  color: var(--gray-900);
+  font-size: var(--fs-xs);
+}
+
+
+.stores__btn .btn {
+  font-family: var(--font-primary-regular);
+  font-weight: 400;
+}
+
+.stores__btn .btn {
+  align-self: flex-start; 
+}
+.stores__btn .btn {
+  padding: var(--button-padding-top) var(--button-padding-right) 
+           var(--button-padding-bottom) var(--button-padding-left);
+}
+
+/* =======================
+   Responsive breakpoints
+======================= */
+@media (max-width: 1024px) { /* lg */
+  .stores__row {
+    grid-template-columns: repeat(4, 1fr);
+    font-size: var(--fs-xxs);
+  }
+}
+
+@media (max-width: 768px) { /* md */
+  .stores__table {
+    min-width: 100%;
+  }
+
+  .stores__row {
+    grid-template-columns: 1fr 1fr;
+    gap: var(--gap-sm);
+  }
+
+  .stores__cell {
+    text-align: left;
+    font-size: var(--fs-xxxs);
+  }
+}

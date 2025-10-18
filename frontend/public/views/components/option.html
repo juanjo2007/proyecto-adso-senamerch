@@ -1,4 +1,12 @@
-<section class="page-center">
+<section class="page-center"> 
+
+  <!-- 🔹 Título del producto -->
+  <header class="product">
+    <h1 class="product__title">Tomate</h1>
+    <p class="product__subtitle">Selecciona la unidad y cantidad que deseas</p>
+  </header>
+
+  <!-- Opciones de unidad -->
   <div class="unit-options">
     <div class="unit-options__container">
 
@@ -6,7 +14,7 @@
         <input type="radio" name="unit" class="unit-options__input" />
         <img src="/frontend/public/assets/icons/icon_payment_method.svg" 
              alt="Kilogramo" 
-             class="unit-option__icon">
+             class="unit-options__icon">
         <span class="unit-options__label">Kilogramo</span>
       </label>
 
@@ -14,7 +22,7 @@
         <input type="radio" name="unit" class="unit-options__input" />
         <img src="/frontend/public/assets/icons/icon_payment_method.svg" 
              alt="Arroba" 
-             class="unit-option__icon">
+             class="unit-options__icon">
         <span class="unit-options__label">Arroba</span>
       </label>
 
@@ -22,37 +30,57 @@
         <input type="radio" name="unit" class="unit-options__input" />
         <img src="/frontend/public/assets/icons/icon_payment_method.svg" 
              alt="Libra" 
-             class="unit-option__icon">
+             class="unit-options__icon">
         <span class="unit-options__label">Libra</span>
       </label>
 
       <label class="unit-options__item">
-      <input type="radio" name="unit" class="unit-options__input" />
-      <img src="/frontend/public/assets/icons/icon_payment_method.svg" 
-           alt="Libra" 
-           class="unit-option__icon">
-      <span class="unit-options__label">Tonelada</span>
-    </label>
+        <input type="radio" name="unit" class="unit-options__input" />
+        <img src="/frontend/public/assets/icons/icon_payment_method.svg" 
+             alt="Tonelada" 
+             class="unit-options__icon">
+        <span class="unit-options__label">Tonelada</span>
+      </label>
 
-    <label class="unit-options__item">
-      <input type="radio" name="unit" class="unit-options__input" />
-      <img src="/frontend/public/assets/icons/icon_payment_method.svg" 
-           alt="Libra" 
-           class="unit-option__icon">
-      <span class="unit-options__label">Mililitro</span>
-    </label>
+      <label class="unit-options__item">
+        <input type="radio" name="unit" class="unit-options__input" />
+        <img src="/frontend/public/assets/icons/icon_payment_method.svg" 
+             alt="Mililitro" 
+             class="unit-options__icon">
+        <span class="unit-options__label">Mililitro</span>
+      </label>
 
-    <label class="unit-options__item">
-      <input type="radio" name="unit" class="unit-options__input" />
-      <img src="/frontend/public/assets/icons/icon_payment_method.svg" 
-           alt="Libra" 
-           class="unit-option__icon">
-      <span class="unit-options__label">Litro</span>
-    </label>
-
-      <!-- más opciones aquí -->
+      <label class="unit-options__item">
+        <input type="radio" name="unit" class="unit-options__input" />
+        <img src="/frontend/public/assets/icons/icon_payment_method.svg" 
+             alt="Litro" 
+             class="unit-options__icon">
+        <span class="unit-options__label">Litro</span>
+      </label>
 
     </div>
   </div>
-</section>
 
+  <!-- Contenedor cantidad -->
+  <div class="quantity">
+    <label class="quantity__label">
+      Selecciona una unidad de medida
+    </label>
+
+    <input 
+      type="number" 
+      class="quantity__field" 
+      placeholder="Introduce la cantidad que deseas" 
+      min="1"
+    >
+
+    <small class="quantity__helper">
+      Máximo según la disponibilidad.
+    </small>
+  </div>
+
+  <!-- Botón -->
+  <div class="page-center__buttons">
+    <a href="viwe_car.html" class="btn btn--primary">Agregar al carrito de compras</a>
+  </div>
+</section>

@@ -1,136 +1,103 @@
-/* ================== FORM ================== */
-.form-container {
-  /* Centrado desde el inicio, sin márgenes fijos */
-  margin: var(--gap-xl) auto;                  /* separación vertical principal */
-  padding: 0 1rem;                             
-  max-width: 60rem;                            /* ~600px */
-}
 
+/* ====== CONTENEDOR PRINCIPAL ====== */
 .form-content {
-  max-width: 50rem;                            /* ~500px */
-  margin: 0 auto;
-  padding: var(--padding-top) var(--padding-right) var(--padding-bottom) var(--padding-left);
-  background-color: var(--white);
-  border-radius: 1.2rem;
+  max-width: 1000px;
+  margin: 2rem auto;
+  padding: var(--gap-lg);
+  background: var(--white);
+  border-radius: 12px;
   box-shadow: 0 4px 12px rgba(0,0,0,0.08);
-  font-family: var(--font-primary);
+  display: flex;
+  flex-direction: column;
+  gap: var(--gap-lg);
+  box-sizing: border-box;
 }
 
+/* ====== TÍTULO ====== */
 .form__title {
-  margin-top: 0.5rem;
-  margin-bottom: var(--gap-md);                /* espacio con el resto del formulario */
   text-align: center;
-  font-size: var(--fs-md);
+  font-size: var(--fs-sm);
+  font-family: var(--font-primary-bold);
+  color: var(--primary-950);
+  margin-bottom: var(--gap-md);
+}
+
+/* ====== GRID (2 columnas con 24px de separación) ====== */
+.form__grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  column-gap: var(--gap-lg); /* 🔹 Distancia entre columnas (24px) */
+  row-gap: var(--gap-md);    /* 🔹 Espaciado vertical más corto */
+}
+
+/* ====== COLUMNA ====== */
+.form__column {
+  display: flex;
+  flex-direction: column;
+  gap: var(--gap-md);
+}
+
+/* ====== GRUPO ====== */
+.form__group {
+  display: flex;
+  flex-direction: column;
+  gap: var(--gap-xs);
+}
+
+/* ====== LABEL ====== */
+.form__label {
+  font-size: var(--fs-xs);
+  font-family: var(--font-primary-bold);
   color: var(--black);
 }
 
-.form__label {
-  display: block;
-  margin-top: var(--gap-md);                   /* separación entre campos */
-  font-size: var(--fs-xs);
-  font-weight: 600;
-  color: var(--gray-800);
-}
-
+/* ====== INPUTS Y SELECTS ====== */
 .form__input {
-  width: 100%;
   padding: var(--padding-top) var(--padding-right) var(--padding-bottom) var(--padding-left);
-  margin-top: var(--gap-xxs);                  /* espacio entre label e input */
-  border: 1px solid var(--gray-200);
-  border-radius: 0.6rem;
-  background-color: var(--white);
+  border: 1px solid var(--gray-300);
+  border-radius: 8px;
   font-size: var(--fs-xs);
-  font-family: var(--font-secondary);
-  color: var(--gray-900);
-  transition: all 0.3s ease;
+  font-family: var(--font-primary);
+  color: var(--black);
+  background: var(--white);
+  outline: none;
+  transition: border-color 0.2s ease, box-shadow 0.2s ease;
 }
 
 .form__input:focus {
-  outline: none;
-  border-color: var(--secundary-700);
-  box-shadow: 0 0 0 3px var(--secundary-100);
+  border-color: var(--primary-600);
+  box-shadow: 0 0 4px var(--primary-600);
 }
 
+/* ====== TEXTO DE AYUDA ====== */
 .form__text {
-  display: block;
-  margin-top: var(--gap-xxs);                  /* texto de ayuda compacto */
+  font-size: var(--fs-xxxs);
+  color: var(--gray-900);
+}
+
+/* ====== ENLACE ====== */
+.form__link {
   font-size: var(--fs-xs);
-  color: var(--gray-600);
+  color: var(--secundary-900);
+  text-decoration: underline;
+  align-self: flex-start;
+  transition: color 0.2s ease;
+}
+.form__link:hover {
+  color: var(--secundary-500);
 }
 
-a {
-  display: inline-block;
-  margin-top: var(--gap-xs);                   /* separación con el input */
-  font-size: var(--fs-xs);
-  color: var(--secundary-700);
-  font-weight: 500;
-  text-decoration: none;
-}
-
-a:hover {
-  text-decoration: dotted;
-}
-
-.form-content .btn {
+/* ====== ACCIONES ====== */
+.form__actions {
+  display: flex;
   justify-content: center;
-}
-.form-content .btn {
-  padding: var(--button-padding-top) var(--button-padding-right) 
-           var(--button-padding-bottom) var(--button-padding-left);
+  margin-top: var(--gap-md);
 }
 
-/* ================== MEDIA QUERIES ================== */
-
-/* Pantallas medianas (laptops pequeñas) */
-@media (max-width: 1024px) {
-  .form-container {
-    max-width: 50rem;
-  }
-  .form-content {
-    max-width: 90%;
-  }
-}
-
-/* Tablets */
+/* ====== RESPONSIVE ====== */
 @media (max-width: 768px) {
-  .form-container {
-    margin: var(--gap-lg) auto;
-    padding: 0 1rem;
-  }
-
-  .form-content {
-    max-width: 95%;
-    border-radius: 0.8rem;
-    box-shadow: 0 2px 8px rgba(0,0,0,0.06);
-  }
-
-  .form__title {
-    font-size: var(--fs-sm);
-  }
-
-  .form__button {
-    font-size: var(--fs-xs);
-  }
-}
-
-/* Móviles */
-@media (max-width: 480px) {
-  .form-container {
-    margin: var(--gap-md) auto;
-    padding: 0 0.8rem;
-  }
-
-  .form-content {
-    max-width: 100%;
-    padding: 1rem;
-    border-radius: 0.6rem;
-  }
-
-  .form__input {
-    padding: 0.6rem 0.8rem; /* Inputs más compactos */
-  }
-
-  .form__button {
-    padding: 0.8rem;
+  .form__grid {
+    grid-template-columns: 1fr;
+    gap: var(--gap-md);
   }
 }
