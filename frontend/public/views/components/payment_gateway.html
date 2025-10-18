@@ -1,64 +1,60 @@
 <main class="payment-gateway">
-    <!-- >>> Section Navbar -->
-    <section class="navbar-payment-gateway">
-        <div class="navbar-container"></div>
-    </section>
+  <!-- >>> Section Navbar -->
+  <section class="payment-gateway__navbar">
+  </section>
 
-    <!-- >>> Section Pasarela de Pago -->
-    <section class="payment-gateway__wrapper">
-        <h1 class="payment-gateway__title">Pasarela de Pago</h1>
+  <!-- >>> Section Pasarela de Pago -->
+  <section class="payment-gateway__wrapper">
+    <h1 class="payment-gateway__title">Pasarela de Pago</h1>
 
-        <!-- Tabla -->
-        <div class="payment-gateway__table table">
-        <table class="table__content">
-            <thead>
-            <tr>
-                <th>#Pago</th>
-                <th>#Documento de venta</th>
-                <th>#Usuario</th>
-                <th>#Tienda</th>
-                <th>Acción</th>
-            </tr>
-            </thead>
-            <tbody>
-            <tr>
-                <td>#1</td>
-                <td>#1</td>
-                <td>#1</td>
-                <td>#1</td>
-                <td><button class="btn btn--black">Deshabilitar</button></td>
-            </tr>
-            <tr>
-                <td class="table__disabled">#2</td>
-                <td class="table__disabled">#2</td>
-                <td class="table__disabled">#2</td>
-                <td class="table__disabled">#2</td>
-                <td><button class="btn btn--black">Deshabilitar</button></td>
-            </tr>
-            <tr>
-                <td>#3</td>
-                <td>#3</td>
-                <td>#3</td>
-                <td>#3</td>
-                <td><button class="btn btn--black">Deshabilitar</button></td>
-            </tr>
-            <tr>
-                <td class="table__disabled">#4</td>
-                <td class="table__disabled">#4</td>
-                <td class="table__disabled">#4</td>
-                <td class="table__disabled">#4</td>
-                <td><button class="btn btn--black">Deshabilitar</button></td>
-            </tr>
-            </tbody>
-        </table>
-        </div>
+    <!-- Tabla -->
+    <div class="payment-gateway__table">
+      <table class="table">
+        <thead class="table__head">
+          <tr class="table__row table__row--header">
+            <th class="table__cell">#Pago</th>
+            <th class="table__cell">#Documento de venta</th>
+            <th class="table__cell">#Usuario</th>
+            <th class="table__cell">#Tienda</th>
+            <th class="table__cell">Acción</th>
+          </tr>
+        </thead>
+        <tbody class="table__body">
+          <tr class="table__row">
+            <td class="table__cell">#1</td>
+            <td class="table__cell">#1</td>
+            <td class="table__cell">#1</td>
+            <td class="table__cell">#1</td>
+            <td class="table__cell"><button class="btn btn--black">Deshabilitar</button></td>
+          </tr>
+          <tr class="table__row">
+            <td class="table__cell table__cell--disabled">#2</td>
+            <td class="table__cell table__cell--disabled">#2</td>
+            <td class="table__cell table__cell--disabled">#2</td>
+            <td class="table__cell table__cell--disabled">#2</td>
+            <td class="table__cell"><button class="btn btn--black">Deshabilitar</button></td>
+          </tr>
+          <tr class="table__row">
+            <td class="table__cell">#3</td>
+            <td class="table__cell">#3</td>
+            <td class="table__cell">#3</td>
+            <td class="table__cell">#3</td>
+            <td class="table__cell"><button class="btn btn--black">Deshabilitar</button></td>
+          </tr>
+          <tr class="table__row">
+            <td class="table__cell table__cell--disabled">#4</td>
+            <td class="table__cell table__cell--disabled">#4</td>
+            <td class="table__cell table__cell--disabled">#4</td>
+            <td class="table__cell table__cell--disabled">#4</td>
+            <td class="table__cell"><button class="btn btn--black">Deshabilitar</button></td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
 
-        <!-- Botón de navegación -->
-        <div class="payment-gateway__navigation">
-        <a href="documento.html" class="btn btn--black">Documento de venta</a>
-        </div>
-    </section>
+    <!-- Botón de navegación -->
+    <div class="payment-gateway__navigation">
+      <a href="documento.html" class="btn btn--black">Documento de venta</a>
+    </div>
+  </section>
 </main>
-
-</body>
-</html>

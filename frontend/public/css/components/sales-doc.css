@@ -2,8 +2,6 @@
    Componente Documento de Venta (BEM con grid)
    ============================== */
 
-
-
 /* ======= BLOQUE PRINCIPAL ======= */
 .sales-doc {
   text-align: center;
@@ -17,13 +15,11 @@
 
 /* ======= TITULO ======= */
 .sales-doc__title {
-  font-size: var(--fs-sm); /* h1 */
+  font-size: var(--fs-sm);
   font-family: var(--font-primary-bold);
   margin-bottom: var(--gap-lg);
   color: var(--primary-950);
 }
-
-
 
 /* ======= TABLA GRID ======= */
 .sales-doc__table-wrapper {
