@@ -71,6 +71,7 @@ TABLA (Bloque independiente)
 /* =========================================
 BOTONES
 ========================================= */
+<<<<<<< HEAD
 .btn {
   padding: var(--button-padding-top) var(--button-padding-right);
   border: none;
@@ -91,6 +92,19 @@ BOTONES
 .btn--black:hover {
   background-color: var(--secundary-700);
   transform: translateY(-2px);
+=======
+.payment-gateway .btn {
+  font-size: var(--fs-xs);
+  font-weight: 400;
+}
+
+.payment-gateway .btn {
+  align-self: flex-start; 
+}
+.payment-gateway .btn {
+  padding: var(--button-padding-top) var(--button-padding-right) 
+           var(--button-padding-bottom) var(--button-padding-left);
+>>>>>>> 2066834d3ee5e210abe215735683178e1521f9da
 }
 
 /* =========================================
@@ -108,9 +122,12 @@ RESPONSIVE
     font-size: var(--fs-xxs);
     padding: var(--gap-xxs);
   }
+<<<<<<< HEAD
 
   .btn {
     font-size: var(--fs-xs);
     padding: var(--gap-xs) var(--gap-sm);
   }
+=======
+>>>>>>> 2066834d3ee5e210abe215735683178e1521f9da
 }

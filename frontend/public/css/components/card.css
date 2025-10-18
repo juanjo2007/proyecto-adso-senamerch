@@ -1,103 +1,113 @@
-.products__container {
+.cards__container {
   display: grid;
-  gap: var(--gap-md);
-  margin-top: 1rem;
-  margin-bottom: 1rem;
-}
-.card-container {
-  display: grid;
-  gap: var(--gap-md); 
+  gap: var(--gap-lg);
   width: 100%;
-  max-width: 1200px;
-  margin: 0 auto;
-  padding: 0 var(--padding-right);
   box-sizing: border-box;
+  margin: var(--gap-md) auto;
+  padding-inline: var(--gap-sm);
   justify-content: center;
-  justify-items: start;
+  justify-items: center;
 }
-
 @media (width > 640px) {
-  .card-container {
-    grid-template-columns: repeat(3, minmax(180px, 1fr));
-    justify-self: center;
-  }
-}
-
-@media (max-width > 760px) {
-  .card-container {
-    grid-template-columns: repeat(1, minmax(160px, 1fr));
-    justify-content: center;  
-    justify-items: center;
-  }
+    .cards__container {
+        grid-template-columns: repeat(2, 1fr);
+        gap: var(--gap-lg);
+        max-width: 90%;
+    }
 }
 
 @media (width > 1024px) {
-  .card-container {
-    grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
-    justify-content: center;  
-    justify-items: center;
-  }
+    .cards__container {
+        grid-template-columns: repeat(4, 1fr);
+        gap: var(--gap-lg);
+        max-width: 90%;
+    }
 }
-.product {
-  width: 100%;
-  max-width: 180px;
-  border-radius: 0.5rem;
-  background-color: var(--primary-100);
-  box-shadow: 0 2px 4px var(--black);
+
+/* ====== CARD BASE ====== */
+.card {
+  border: 1px solid var(--secundary-900);
+  border-radius: 12px;
+  padding: 24px;
+  text-align: center;
+  background-color: var(--secundary-100);
+  min-width: 200px;
+  max-width: 320px;
+  box-shadow: 0 2px 4px var(--secundary-900);
   overflow: hidden;
   display: flex;
   flex-direction: column;
-  justify-content: space-between;
-  transition: all 0.3s ease;
+  align-items: center;
+  justify-content: center;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
   cursor: pointer;
 }
-.product__image {
-  width: 100%;
-  height: 150px;
-  object-fit: cover;
-  display: block;
+
+.card:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 6px 14px rgba(0, 0, 0, 0.15);
 }
-.product__information {
-  padding: var(--padding-top) var(--padding-right) var(--padding-bottom) var(--padding-left);
+
+/* ====== CONTENIDO DE LA CARD ====== */
+.card__image {
+  width: 100%;
+  height: 200px;
+  object-fit: cover;
+  border-radius: 8px;
+}
+
+.card__info {
   display: flex;
   flex-direction: column;
-  gap: var(--gap-xs); 
-  background-color: var(--white);
+  width: 100%;
+  gap: 8px;
+  margin-top: 16px;
 }
-.product__information .btn {
-  align-self: flex-start; 
-}
-.product__information .btn {
-  padding: var(--button-padding-top) var(--button-padding-right) 
+
+.card__info .btn{
+  font-family: var(--font-primary-regular);
+  font-weight: 400;
+  align-self: flex-end;
+  padding: var(--button-padding-top) var(--button-padding-right)
            var(--button-padding-bottom) var(--button-padding-left);
 }
-.product__name {
+
+.card__title {
   font-size: var(--fs-xs);
   color: var(--tertiary-500);
-  font-weight: 500;
+  display: flex;
+  align-items: flex-start;
+  font-weight: 100;
   margin: 0;
   order: -1;
 }
-.product__price {
+
+.card__price {
   font-size: var(--fs-sm);
   color: var(--tertiary-900);
-  font-weight: bold;
+  display: flex;
+  align-items: flex-start;
+  font-weight: 900;
   margin: 0;
   order: -1;
 }
-.product:hover {
-  transform: translateY(-5px) scale(1.02);
-  box-shadow: 0 6px 12px var(--gray-700);
-}
-.product__information:hover {
-  background-color: var(--secundary-100);
-}
-.product:active {
-  transform: scale(0.98);
-  box-shadow: 0 2px 6px var(--gray-600);
-}
-.product--active {
-  transform: scale(1.02);
-  box-shadow: 0 4px 10px var(--gray-700);
-  transition: all 0.2s ease;
+
+/* ====== RESPONSIVE CARD ====== */
+@media (max-width: 480px) {
+  .card {
+    padding: 1rem;
+    max-width: 100%;
+  }
+
+  .card__image {
+    height: 140px;
+  }
+
+  .card__title {
+    font-size: var(--fs-xs);
+  }
+
+  .card__price {
+    font-size: var(--fs-xxs);
+  }
 }

@@ -1,19 +1,10 @@
-/* ================== CREATE POST ================== */
 .create-post {
-  min-height: 100vh;                 /* para centrar verticalmente en pantalla */
   display: flex;
-  justify-content: center;
-  align-items: center;
-  padding: var(--gap-xl);
-  background: var(--primary-50);
-  font-family: var(--font-primary);
-  background: var(--primary-50);
-  border: 1px solid var(--gray-300);
+  justify-content: center; 
   padding: var(--gap-lg);
-  border-radius: 12px;
-  box-shadow: 0 2px 6px rgba(0,0,0,0.05);
+  width: fit-content;        
+  margin: 0 auto;           
 }
-
 .create-post__title {
   font-size: var(--fs-sm);
   font-weight: bold;
@@ -28,9 +19,8 @@
   flex-direction: column;
   gap: var(--gap-md);
   width: 100%;
-  max-width: 50rem; /* ~500px */
+  max-width: 50rem; 
 }
-
 .create-post__title {
   text-align: center;
   font-size: var(--fs-md);
@@ -48,7 +38,6 @@
   font-family: var(--font-primary-semibold);
   color: var(--black);
 }
-
 .create-post__input,
 .create-post__textarea,
 .create-post__select {
@@ -62,7 +51,6 @@
   background: var(--white);
   transition: border 0.3s;
 }
-
 .create-post__input:focus,
 .create-post__textarea:focus,
 .create-post__select:focus {
@@ -74,7 +62,6 @@
   min-height: 12rem;
   resize: vertical;
 }
-
 .create-post__input--file {
   padding: var(--gap-xxs);
 }
@@ -84,8 +71,6 @@
 .create-post__input {
   font-size: var(--fs-xxs);
 }
-
-/* ================== Media Queries ================== */
 @media (max-width: 1024px) {
   .create-post {
     padding: var(--gap-lg);

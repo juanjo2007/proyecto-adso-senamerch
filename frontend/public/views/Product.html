@@ -7,17 +7,19 @@
   <link rel="stylesheet" href="/frontend/public/css/main.css">
   <script type="module">
     import { loadCards } from "/frontend/public/js/components/card.js";
-    document.addEventListener("DOMContentLoaded", () => { loadCards(".card-container"); });
+    document.addEventListener("DOMContentLoaded", () => {
+      loadCards(".cards__container");
+    });
   </script>
   <script src="/frontend/public/js/components/search-bar.js" defer></script>
-  <script src="/frontend/public/js/components/navbar_edit_store_seller.js" defer></script>
+  <script src="/frontend/public/js/components/navbar_seller_view.js" defer></script>
   <script src="/frontend/public/js/components/footer.js" defer></script>
   <script src="/frontend/public/js/components/payment_method.js" defer></script>
 </head>
 <body>
   <main>
     <!-- >>> Section Navbar -->
-    <section class="navbar_edit_store_seller">
+    <section class="navbar_seller_view">
       <div class="navbar-container"></div>
     </section>
     <!-- >>> Section Search-bar -->
@@ -25,14 +27,12 @@
       <div class="search-bar-container"></div>
     </section>
     <!-- >>> Section cards -->
-    <section class="cards-products">
-      <div class="card-container"></div>
+    <section class="products-cards">
+      <div class="cards__container"></div>
     </section>
   </main>
   <!-- >>> Section Footer -->
   <footer class="footer-container"></footer>
 </body>
-<!-- >>> Section Section method-payment -->
-  <!-- <section class="pay">
-    <div class="payment-method-container"></div>
-  </section> -->
+
+

@@ -4,13 +4,21 @@
     <figure class="user-profile__image">
       <img src="/frontend/public/assets/img/client_photo_profile.jpg" alt="Photo_client">
     </figure>
+
     <h2 class="user-profile__name">Juan Pérez</h2>
     <p class="user-profile__role">Cliente</p>
     <hr>
-    <p><strong>Correo:</strong> juanperez@email.com</p>
-    <p><strong>Teléfono:</strong> +57 300 456 7890</p>
-    <p><strong>Dirección:</strong> Calle 123, Bogotá</p>
+
+    <p class="user-profile__info"><strong>Correo:</strong> juanperez@email.com</p>
+    <p class="user-profile__info"><strong>Teléfono:</strong> +57 300 456 7890</p>
+    
+
+    <!-- Botón secundario movido al fondo -->
+    <div class="user-profile__actions-secundary">
+      <a href="index.html" class="btn btn-variant2--secondary">Cerrar sesión</a>
+    </div>
   </aside>
+
 
   <!-- Contenido con detalles -->
   <div class="user-profile__content">
@@ -19,9 +27,13 @@
     <!-- Info personal -->
     <section class="user-profile__section">
       <h3 class="user-profile__subtitle">Información personal</h3>
-      <p><strong>Nombre completo:</strong> Juan Alberto Pérez</p>
-      <p><strong>Documento:</strong> CC 123456789</p>
-      <p><strong>Fecha de nacimiento:</strong> 15/08/1990</p>
+
+      <div class="user-profile__grid">
+        <p><strong>Nombre completo:</strong> Juan Alberto Pérez</p>
+        <p><strong>Documento:</strong> CC 123456789</p>
+        <p><strong>Fecha de nacimiento:</strong> 15/08/1990</p>
+        <p><strong>Dirección:</strong> Calle 123, Bogotá</p>
+      </div>
     </section>
 
     <!-- Actividad -->
@@ -36,10 +48,13 @@
 
     <!-- Configuración -->
     <section class="user-profile__section">
-      <h3 class="user-profile__subtitle">Configuración</h3>
-      <div class="user-profile__buttons">
-        <a href="edit_profile_client.html" class="btn btn--primary shopping-cart__checkout">Editar perfil</a>
-        <a href="profile_client.html" class="btn--variant2 btn--variant2--secondary shopping-cart__continue">Cerrar sesión</a>
+      <h3 class="user-profile__subtitle">Configuración</h3>  
+      <div class="user-profile__actions">
+        <a href="edit_profile_client.html" class="btn btn--primary">Editar perfil</a>
       </div>
     </section>
+  </div>
+</section>
+
+    
 </section>

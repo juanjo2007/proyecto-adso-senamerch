@@ -64,20 +64,13 @@
   font-size: var(--fs-xs);
 }
 
-/* Botones */
-.stores__btn {
-  padding: var(--button-padding-top) var(--button-padding-right);
-  border: none;
-  cursor: pointer;
-  font-family: var(--font-primary-semibold);
-  border-radius: var(--gap-xs);
-  font-size: var(--fs-xs);
-  background-color: var(--black);
-  color: var(--white);
-  transition: background 0.3s ease, transform 0.2s ease;
-  box-shadow: 0 2px 5px rgba(0,0,0,0.15);
+
+.stores__btn .btn {
+  font-family: var(--font-primary-regular);
+  font-weight: 400;
 }
 
+<<<<<<< HEAD
 .stores__btn:hover {
   background-color: var(--secondary-700); /* corregido */
   transform: translateY(-2px);
@@ -91,6 +84,14 @@
 /* Footer */
 .stores__footer {
   margin-top: var(--gap-lg);
+=======
+.stores__btn .btn {
+  align-self: flex-start; 
+}
+.stores__btn .btn {
+  padding: var(--button-padding-top) var(--button-padding-right) 
+           var(--button-padding-bottom) var(--button-padding-left);
+>>>>>>> 2066834d3ee5e210abe215735683178e1521f9da
 }
 
 /* =======================

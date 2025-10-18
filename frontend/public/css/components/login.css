@@ -49,7 +49,10 @@
 .login__input:focus {
   border-color: var(--secundary-700);
 }
-
+.login .btn {
+  font-family: var(--font-primary-regular);
+  font-weight: 400;
+}
 .login .btn {
   align-self: center; 
 }

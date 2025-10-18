@@ -15,7 +15,6 @@
   max-width: none; /* quita la limitación */
 }
 
-
 .footer-container__text {
   font-size: var(--fs-xs);
   color: var(--white);
@@ -35,6 +34,11 @@
 }
 @media (max-width: 768px) {
   .footer-container__container {
+    flex-direction: column;
+    gap: var(--gap-xs);
+    text-align: center;
+  }
+  .footer-container__icon img {
     flex-direction: column;
     gap: var(--gap-xs);
     text-align: center;
