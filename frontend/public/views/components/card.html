@@ -1,12 +1,8 @@
-<main class="products">
-  <div class="products__container">
-    <div class="products__item">
-      <img class="products__item-image" src="{{image}}" >
-      <div class="products__item-information">
-        <h2 class="products__item-name">{{name}}</h2>
-        <p class="products__item-price">${{price}}</p>
-        <a href="product_description.html" class="btn btn--primary">Comprar</a>
-      </div>
-    </div>
+<article class="card">
+  <img class="card__image" src="{{image}}" alt="Imagen de {{name}}">
+  <div class="card__info">
+    <h2 class="card__title">{{name}}</h2>
+    <p class="card__price">${{price}}</p>
+    <a href="product_description.html" class="btn btn--primary">Comprar</a>
   </div>
-</main>
+</article>

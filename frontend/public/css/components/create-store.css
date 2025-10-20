@@ -1,10 +1,10 @@
 .create-store {
-  margin-top: 2rem;
-  margin-bottom: 5rem;
+  margin-top: var(--gap-xs);
+  margin-bottom: var(--gap-xs);
   max-width: 900px;
   margin-left: auto;
   margin-right: auto;
-  padding: var(--gap-lg);
+  padding: var(--gap-xs);
   background: var(--white);
   box-sizing: border-box;
   border-radius: 10px;
@@ -81,13 +81,15 @@
 .create-store__buttons {
   display: flex;
   width: 100%;
-  justify-content: flex-start; /* uno a la izquierda y otro a la derecha */
+  order: 2; 
+  justify-content: flex-end; 
   gap: var(--gap-md);
   margin-top: var(--gap-md);
 }
 .create-store__buttons-secondary{
   display: flex;
-  justify-content: flex-end; 
+  order: 1; 
+  justify-content: flex-start; 
   align-items: center;
 }
 .create-store__buttons .btn {

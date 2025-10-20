@@ -15,17 +15,17 @@ export async function loadCards(containerSelector) {
     const template = await templateRes.text();
     const products = await dataRes.json();
 
-    products.forEach(product => {
+    products.forEach(card => {
       let html = template
-        .replace("{{image}}", product.image)
-        .replace("{{name}}", product.name)
-        .replace("{{price}}", product.price);
+        .replaceAll("{{image}}", card.image)
+        .replaceAll("{{name}}", card.name)
+        .replaceAll("{{price}}", card.price);
 
       container.insertAdjacentHTML("beforeend", html);
     });
 
   } catch (error) {
-    console.error("Error cargando los cards:", error);
+    console.error("Error cargando las cards:", error);
   }
 }
 

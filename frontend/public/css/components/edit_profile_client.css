@@ -2,9 +2,12 @@
   display: flex;
   justify-content: center;
   align-items: center;
-  min-height: 100vh;
   padding: var(--gap-sm);
   background-color: var(--primary-50);
+  width: 100%;
+  height: 100h; /* hace que ocupe toda la pantalla visible */
+  box-sizing: border-box;
+  overflow: hidden; /* evita cualquier scroll */
 }
 .edit__container {
   width: 100%;
@@ -17,9 +20,15 @@
   flex-direction: column;
   gap: var(--gap-md);
   font-family: var(--font-primary);
+  max-height: calc(100vh - var(--gap-lg) * 2);
+  overflow: auto;
+  scrollbar-width: none; /* Oculta la barra de scroll en Firefox */
+  -ms-overflow-style: none; /* Oculta en IE/Edge */
+}
+.edit__container::-webkit-scrollbar {
+  display: none; /* Oculta la barra en Chrome/Safari */
 }
 
-/* ===== Title ===== */
 .edit__title {
   margin: 0;
   text-align: center;
@@ -28,32 +37,29 @@
   color: var(--black);
 }
 
-/* ===== Image (Profile photo) ===== */
 .edit__image {
   display: flex;
   justify-content: center;
   align-items: center;
-  margin-top: calc(var(--gap-md) / 2);
-  margin-bottom: var(--gap-md);
+  margin-top: calc(var(--gap-xxs) / 2);
+  margin-bottom: var(--gap-xxs);
 }
 .edit__image img {
-  width: 160px;
-  height: 160px;
+  width: 120px;
+  height: 120px;
   border-radius: 50%;
   object-fit: cover;
   border: 3px solid var(--primary-300);
   display: block;
 }
 
-/* ===== Form ===== */
 .edit__form {
   display: grid;
-  grid-template-columns: 1fr 1fr; /* Dos columnas */
+  grid-template-columns: 1fr 1fr;
   gap: var(--gap-lg);
   align-items: start;
 }
 
-/* Campos */
 .edit__field {
   display: flex;
   flex-direction: column;
@@ -76,7 +82,6 @@
   background-color: var(--white);
   color: var(--gray-900);
 }
-
 .edit__input:focus,
 .edit__textarea:focus {
   outline: none;
@@ -84,9 +89,8 @@
   box-shadow: 0 0 0 6px rgba(166,140,105,0.06);
 }
 
-/* ===== Actions (Botones) ===== */
 .edit__actions {
-  grid-column: 1 / -1; /* ocupa todo el ancho en grid */
+  grid-column: 1 / -1; 
   display: flex;
   justify-content: center;
   margin-top: var(--gap-lg);
@@ -97,46 +101,38 @@
   font-family: var(--font-primary-regular);
 }
 
-/* ===== Responsive ===== */
-
-/* Tablets y menores */
+/* ==== Responsivo ==== */
 @media (max-width: 768px) {
   .edit__container {
-    max-width: 100%;
     padding: var(--gap-md);
+    max-height: calc(100vh - var(--gap-md) * 2);
   }
 
   .edit__form {
-    grid-template-columns: 1fr; /* una sola columna */
+    grid-template-columns: 1fr; 
     gap: var(--gap-md);
   }
-
   .edit__image img {
     width: 130px;
     height: 130px;
   }
-
   .edit__actions {
     flex-direction: column;
     gap: var(--gap-md);
   }
-
   .edit__actions .btn {
     width: 100%;
   }
 }
 
-/* Teléfonos pequeños */
 @media (max-width: 480px) {
   .edit__title {
     font-size: var(--fs-sm);
   }
-
   .edit__image img {
     width: 110px;
     height: 110px;
   }
-
   .edit__actions .btn {
     padding: 10px 12px;
     font-size: var(--fs-xxxs);

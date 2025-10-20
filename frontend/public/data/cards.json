@@ -31,7 +31,19 @@
   },
   {
     "id": "zanahoria",
-    "name": "Zanahoria",
+    "name": "Pimenton",
+    "price": 2800,
+    "image": "/frontend/public/assets/img/pimenton_image.jpg"
+  },
+  {
+    "id": "zanahoria",
+    "name": "Pimenton",
+    "price": 2800,
+    "image": "/frontend/public/assets/img/pimenton_image.jpg"
+  },
+  {
+    "id": "zanahoria",
+    "name": "Pimenton",
     "price": 2800,
     "image": "/frontend/public/assets/img/pimenton_image.jpg"
   }
