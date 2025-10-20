@@ -49,16 +49,29 @@
 .login__input:focus {
   border-color: var(--secundary-700);
 }
+
 .login .btn {
   font-family: var(--font-primary-regular);
   font-weight: 400;
-}
-.login .btn {
   align-self: center; 
-}
-.login .btn {
   padding: var(--button-padding-top) var(--button-padding-right) 
            var(--button-padding-bottom) var(--button-padding-left);
+}
+
+/* ====== ENLACE “Olvidé mi contraseña” ====== */
+.login__field .login__link {
+  color: var(--secundary-700);
+  font-size: var(--fs-xxs);
+  text-decoration: none;
+  transition: color 0.3s;
+  display: inline-block;
+  margin-top: 4px;
+  text-align: right;
+}
+
+.login__field .login__link:hover {
+  color: var(--secundary-900);
+  text-decoration: underline;
 }
 
 /* ====== Mobile (≤ 640px) ====== */
@@ -78,6 +91,10 @@
   .login__input {
     font-size: var(--fs-xxs);    
     padding: 0.5rem 0.75rem;     
+  }
+
+  .login__field .login__link {
+    font-size: var(--fs-xxs);
   }
 }
 
@@ -172,5 +189,8 @@
     padding: 10px 12px;
     font-size: var(--fs-xxs);
   }
-}
 
+  .login__field .login__link {
+    font-size: var(--fs-xxs);
+  }
+}

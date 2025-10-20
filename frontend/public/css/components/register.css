@@ -1,103 +1,121 @@
-
-/* ====== CONTENEDOR PRINCIPAL ====== */
-.form-content {
-  max-width: 1000px;
-  margin: 2rem auto;
+.register {
+  background-color: var(--white);
   padding: var(--gap-lg);
-  background: var(--white);
-  border-radius: 12px;
-  box-shadow: 0 4px 12px rgba(0,0,0,0.08);
-  display: flex;
-  flex-direction: column;
-  gap: var(--gap-lg);
+  width: 900px;
+  margin: 5rem auto 2rem auto;
+  border-radius: 8px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+  font-family: var(--font-primary);
   box-sizing: border-box;
 }
 
-/* ====== TÍTULO ====== */
-.form__title {
+/* ====== Título ====== */
+.register__title {
   text-align: center;
   font-size: var(--fs-sm);
-  font-family: var(--font-primary-bold);
-  color: var(--primary-950);
-  margin-bottom: var(--gap-md);
+  font-weight: 600;
+  color: var(--black);
+  margin-bottom: var(--gap-lg);
 }
 
-/* ====== GRID (2 columnas con 24px de separación) ====== */
-.form__grid {
+/* ====== Formulario ====== */
+.register__form {
+  display: flex;
+  flex-direction: column;
+  gap: var(--gap-lg);
+}
+
+/* ====== Grid ====== */
+.register__grid {
   display: grid;
   grid-template-columns: 1fr 1fr;
-  column-gap: var(--gap-lg); /* 🔹 Distancia entre columnas (24px) */
-  row-gap: var(--gap-md);    /* 🔹 Espaciado vertical más corto */
+  column-gap: var(--gap-lg);
+  row-gap: var(--gap-md);
 }
 
-/* ====== COLUMNA ====== */
-.form__column {
+/* ====== Columnas ====== */
+.register__column {
   display: flex;
   flex-direction: column;
   gap: var(--gap-md);
 }
 
-/* ====== GRUPO ====== */
-.form__group {
+/* ====== Campos ====== */
+.register__field {
   display: flex;
   flex-direction: column;
   gap: var(--gap-xs);
 }
 
-/* ====== LABEL ====== */
-.form__label {
+/* ====== Labels ====== */
+.register__label {
   font-size: var(--fs-xs);
-  font-family: var(--font-primary-bold);
-  color: var(--black);
+  color: var(--gray-700);
+  font-weight: 500;
 }
 
-/* ====== INPUTS Y SELECTS ====== */
-.form__input {
+/* ====== Inputs y selects ====== */
+.register__input {
   padding: var(--padding-top) var(--padding-right) var(--padding-bottom) var(--padding-left);
   border: 1px solid var(--gray-300);
-  border-radius: 8px;
+  border-radius: 6px;
   font-size: var(--fs-xs);
-  font-family: var(--font-primary);
-  color: var(--black);
-  background: var(--white);
   outline: none;
-  transition: border-color 0.2s ease, box-shadow 0.2s ease;
+  transition: border 0.3s, box-shadow 0.3s;
 }
 
-.form__input:focus {
-  border-color: var(--primary-600);
-  box-shadow: 0 0 4px var(--primary-600);
+.register__input:focus {
+  border-color: var(--secundary-700);
+  box-shadow: 0 0 4px var(--secundary-700);
 }
 
-/* ====== TEXTO DE AYUDA ====== */
-.form__text {
+/* ====== Texto pequeño ====== */
+.register__text {
   font-size: var(--fs-xxxs);
-  color: var(--gray-900);
+  color: var(--gray-700);
 }
 
-/* ====== ENLACE ====== */
-.form__link {
+/* ====== Enlace ====== */
+.register__link {
   font-size: var(--fs-xs);
+  color: var(--secundary-700);
+  text-decoration: none;
+  transition: color 0.3s;
+}
+
+.register__link:hover {
   color: var(--secundary-900);
   text-decoration: underline;
-  align-self: flex-start;
-  transition: color 0.2s ease;
-}
-.form__link:hover {
-  color: var(--secundary-500);
 }
 
-/* ====== ACCIONES ====== */
-.form__actions {
+/* ====== Botón ====== */
+.register__actions {
   display: flex;
   justify-content: center;
   margin-top: var(--gap-md);
 }
 
-/* ====== RESPONSIVE ====== */
+/* ====== Responsivo ====== */
 @media (max-width: 768px) {
-  .form__grid {
+  .register {
+    width: 90%;
+    padding: var(--gap-md);
+  }
+
+  .register__grid {
     grid-template-columns: 1fr;
     gap: var(--gap-md);
+  }
+
+  .register__title {
+    font-size: var(--fs-xs);
+  }
+
+  .register__input {
+    font-size: var(--fs-xxs);
+  }
+
+  .register__link {
+    font-size: var(--fs-xxs);
   }
 }

@@ -34,11 +34,5 @@
     "name": "Pimenton",
     "price": 2800,
     "image": "/frontend/public/assets/img/pimenton_image.jpg"
-  },
-  {
-    "id": "lechuga",
-    "name": "Lechuga",
-    "price": 1800,
-    "image": "/frontend/public/assets/img/lettuce__image.jpg"
   }
 ]

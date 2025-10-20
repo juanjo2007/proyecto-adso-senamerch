@@ -151,7 +151,6 @@
   }
 }
 
-/* Mobile (<= 480px) */
 @media (max-width: 640px) {
   .client {
     padding: var(--gap-md);
