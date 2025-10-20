@@ -1,0 +1,44 @@
+<section class="store-form">
+  <h2 class="store-form__title">Información del Administrador de la Tienda</h2>
+
+  <form class="store-form__fields">
+    <!-- Nombre completo -->
+    <div class="store-form__group">
+      <label class="store-form__label">Nombre completo</label>
+      <input type="text" name="full-name" class="store-form__input" placeholder="Ingresa tu nombre completo" required>
+    </div>
+
+    <!-- Documento / NIT / RUT -->
+    <div class="store-form__group">
+      <label class="store-form__label">Documento / NIT / RUT</label>
+      <input type="text" name="document-id" class="store-form__input" placeholder="Ingresa el número de documento" required>
+    </div>
+
+    <!-- Correo electrónico -->
+    <div class="store-form__group">
+      <label class="store-form__label">Correo electrónico</label>
+      <input type="email" name="email" class="store-form__input" placeholder="Ingresa tu correo electrónico" required>
+    </div>
+
+    <!-- Teléfono / WhatsApp -->
+    <div class="store-form__group">
+      <label class="store-form__label">Teléfono / WhatsApp</label>
+      <input type="tel" name="phone" class="store-form__input" placeholder="Ingresa tu número de teléfono o WhatsApp" required>
+    </div>
+
+    <!-- Rol en la empresa -->
+    <div class="store-form__group">
+      <label class="store-form__label">Rol en la empresa</label>
+      <select name="role" class="store-form__select" required>
+        <option value="">Selecciona un rol</option>
+        <option value="owner">Propietario</option>
+        <option value="manager">Gerente</option>
+        <option value="legal-representative">Representante legal</option>
+      </select>
+    </div>
+    
+    <div class="store-form__actions">
+        <a href="store.html" class="btn btn--primary">Guardar información</a>
+    </div>
+  </form>
+</section>
