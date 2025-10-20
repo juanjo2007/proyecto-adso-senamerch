@@ -2,7 +2,7 @@
 .admin-layout {
   display: flex;
   width: 100%;
-  min-height: 100%;
+  min-height: 100vh; 
   background: var(--gray-800);
 }
 .admin-container {

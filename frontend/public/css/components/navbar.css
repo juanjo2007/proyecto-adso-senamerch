@@ -4,6 +4,7 @@
   justify-content: flex-end;          /* Links a la derecha */
   align-items: center;
   width: 100%;
+  height: 40px;
   background-color: var(--secundary-700);
   padding: var(--gap-xxs) var(--gap-sm); /* contenedor más limpio */
   font-family: var(--font-primary);

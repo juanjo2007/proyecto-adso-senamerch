@@ -2,35 +2,104 @@
   <form class="create-post__form">
     <h2 class="create-post__title">Crear publicación</h2>
 
+    <!-- Título -->
     <div class="create-post__field">
-      <label class="create-post__label">Título de la publicación</label>
-      <input type="text" class="create-post__input create-post__input--text" placeholder="Escribe un título atractivo" required>
+      <label class="create-post__label">Título del producto</label>
+      <input
+        type="text"
+        class="create-post__input create-post__input--text"
+        placeholder="Ej: Tomate del Valle"
+        required
+      >
     </div>
 
+    <!-- Precio -->
     <div class="create-post__field">
-      <label class="create-post__label">Descripción</label>
-      <textarea class="create-post__textarea" placeholder="Describe tu publicación" required></textarea>
+      <label class="create-post__label">Precio</label>
+      <input
+        type="number"
+        class="create-post__input create-post__input--text"
+        placeholder="Ej: 3000"
+        min="0"
+        required
+      >
     </div>
 
+    <!-- Galería de imágenes -->
     <div class="create-post__field">
-      <label class="create-post__label">Subir imagen</label>
-      <input type="file" class="create-post__input create-post__input--file" accept="image/*" required>
+      <label class="create-post__label">Imágenes del producto</label>
+      <input
+        type="file"
+        class="create-post__input create-post__input--file"
+        accept="image/*"
+        multiple
+        required
+      >
+      <small class="create-post__hint">Puedes subir hasta 5 imágenes.</small>
+    </div>
+    <!-- Unidad de medida -->
+    <div class="create-post__field">
+      <label class="create-post__label">Unidad de medida</label>
+      <select class="create-post__select" required>
+        <option value="" disabled selected>Selecciona una unidad</option>
+        <option value="kg">Solidos</option>
+          <option value="kg">Kilogramo (kg)</option>
+          <option value="lb">Libra (lb)</option>
+          <option value="unidad">Unidad</option>
+        <option value="kg">Liquidos</option>
+          <option value="litro">Litro (L)</option>
+      </select>
     </div>
 
+    <!-- Tipo de garantía -->
+    <div class="create-post__field">
+      <label class="create-post__label">Tipo de garantía</label>
+      <select class="create-post__select" required>
+        <option value="" disabled selected>Selecciona una opción</option>
+        <option value="frescura">Garantía de frescura</option>
+        <option value="devolucion">Garantía de devolución</option>
+        <option value="no_aplica">No aplica</option>
+      </select>
+    </div>
+
+    <!-- Categoría -->
     <div class="create-post__field">
       <label class="create-post__label">Categoría</label>
       <select class="create-post__select" required>
         <option value="" disabled selected>Selecciona una categoría</option>
-        <option value="tecnologia">Lácteos</option>
-        <option value="hogar">Granos</option>
-        <option value="moda">Ganadería</option>
-        <option value="alimentos">Frutas</option>
-        <option value="alimentos">Verduras</option>
+        <option value="lacteos">Lácteos</option>
+        <option value="granos">Granos</option>
+        <option value="ganaderia">Ganadería</option>
+        <option value="frutas">Frutas</option>
+        <option value="verduras">Verduras</option>
       </select>
     </div>
 
-    <div class="create-post__actions">
-      <a href="/frontend/public/views/seller_view.html" class="btn btn--primary">Publicar</a>
+    <!-- Descripción corta -->
+    <div class="create-post__field">
+      <label class="create-post__label">Descripción breve</label>
+      <textarea
+        class="create-post__textarea"
+        placeholder="Ej: Fruto fresco, rojo y jugoso ideal para ensaladas."
+        required
+      ></textarea>
     </div>
+
+    <!-- Características o puntos clave -->
+    <div class="create-post__field">
+      <label class="create-post__label">Características destacadas</label>
+      <textarea
+        class="create-post__textarea"
+        placeholder="Ej: Fruto maduro, firme, rico en vitaminas A y C, bajo en calorías."
+      ></textarea>
+    </div>
+
+    <div class="create-post__actions">
+        <a href="seller_view.html" class="btn btn--primary">Publicar</a>
+      </div>
+      <div class="create-post__actions-secondary">
+          <a href="seller_view.html" class="btn btn-variant2--secondary">Cancelar</a>
+        </div>
+      
   </form>
 </section>
