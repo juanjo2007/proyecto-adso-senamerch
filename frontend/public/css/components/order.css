@@ -39,15 +39,13 @@
   margin-top: var(--gap-sm);
 }
 
-/* Filas alteradas (zebra) */
-.table__content tbody tr:nth-child(odd) {
-  background-color: var(--gray-50); /* Color claro */
+/* Zebra striping */
+.order__table-body tr:nth-child(odd) {
+  background-color: var(--gray-50);
 }
-
-.table__content tbody tr:nth-child(even) {
-  background-color: var(--white); /* Color base */
+.order__table-body tr:nth-child(even) {
+  background-color: var(--white);
 }
-
 
 .order__table-row--header {
   background: var(--primary-200);
