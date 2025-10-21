@@ -5,35 +5,35 @@
     <form class="edit__form">
       <div class="edit__field">
         <label for="name" class="edit__label">Nombre</label>
-        <input type="text" name="name" class="edit__input" placeholder="Ingresa tu nombre">
+        <input type="text" id="name" name="name" class="edit__input" placeholder="Ingresa tu nombre">
       </div>
 
       <div class="edit__field">
         <label for="birthdate" class="edit__label">Fecha de nacimiento</label>
-        <input type="text" name="birthdate" class="edit__input" placeholder="Ingresa tu fecha de nacimiento">
+        <input type="text" id="birthdate" name="birthdate" class="edit__input" placeholder="Ingresa tu fecha de nacimiento">
       </div>
       
       <div class="edit__field">
         <label for="document" class="edit__label">Documento de identidad</label>
-        <input type="text" name="document" class="edit__input" placeholder="Ingresa tu documento de identidad">
+        <input type="text" id="document" name="document" class="edit__input" placeholder="Ingresa tu documento de identidad">
       </div>
 
       <div class="edit__field">
         <label for="email" class="edit__label">Correo electrónico</label>
-        <input type="email" name="email" class="edit__input" placeholder="Ingresa tu correo electrónico">
+        <input type="email" id="email" name="email" class="edit__input" placeholder="Ingresa tu correo electrónico">
       </div>
 
       <div class="edit__field">
         <label for="location" class="edit__label">Dirección</label>
-        <input type="text" name="location" class="edit__input" placeholder="Ingresa tu dirección">
+        <input type="text" id="location" name="location" class="edit__input" placeholder="Ingresa tu dirección">
       </div>
 
       <div class="edit__image">
-        <img src="/frontend/public/assets/img/client_photo_profile.jpg" alt="Foto de perfil" />
+        <img src="/frontend/public/assets/img/client_photo_profile.jpg" alt="Foto de perfil" class="edit__photo">
       </div>
 
       <div class="edit__actions">
-        <a href="profile_user.html" class="btn btn--primary">Guardar cambios</a>
+        <button type="submit" class="edit__button edit__button--primary">Guardar cambios</button>
       </div>
     </form>
   </div>

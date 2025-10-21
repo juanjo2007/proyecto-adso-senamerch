@@ -1,9 +1,10 @@
 /* ================== NAVBAR ================== */
-.navbar_edit_profile_client {
+.navbar_create_store {
   display: flex;
   justify-content: flex-end;          /* Links a la derecha */
   align-items: center;
   width: 100%;
+  height: 40px;
   background-color: var(--secundary-700);
   padding: var(--gap-xxs) var(--gap-sm); /* contenedor más limpio */
   font-family: var(--font-primary);
@@ -30,13 +31,13 @@
   color: var(--secundary-500);
 }
 
-/* ================== RESPONSIVE ================== */
+/* ================== MEDIA QUERIES ================== */
 
-/* Tablets grandes o laptops pequeñas */
+/* Pantallas grandes (≤1024px) */
 @media (max-width: 1024px) {
-  .navbar_edit_profile_client {
+  .navbar_create_store {
     justify-content: center;
-    padding: var(--gap-xs) var(--gap-md);
+    padding: var(--gap-xs) var(--gap-sm);
   }
 
   .navbar__list {
@@ -44,15 +45,18 @@
   }
 
   .navbar__link {
-    font-size: var(--fs-xxs);
+    font-size: var(--fs-xs);
+    padding: var(--gap-xxs) var(--gap-xs);
   }
 }
 
-/* Tablets verticales o pantallas medianas */
+/* Tablets (≤768px) */
 @media (max-width: 768px) {
-  .navbar_edit_profile_client {
+  .navbar_create_store {
     justify-content: center;
-    padding: var(--gap-xs) var(--gap-xs);
+    flex-direction: column;
+    padding: var(--gap-xs);
+    height: auto;
   }
 
   .navbar__list {
@@ -63,26 +67,23 @@
 
   .navbar__link {
     font-size: var(--fs-xxs);
-    padding: var(--gap-xxs) var(--gap-xxs);
-  }
-}
-
-/* Móviles pequeños */
-@media (max-width: 640px) {
-  .navbar_edit_profile_client {
-    flex-direction: column;
-    align-items: center;
     padding: var(--gap-xxs);
   }
+}
+
+/* Móviles (≤640px) */
+@media (max-width: 640px) {
+  .navbar_create_store {
+    padding: var(--gap-xxs);
+    height: auto;
+  }
 
   .navbar__list {
-    flex-direction: column;
-    align-items: center;
     gap: var(--gap-xxs);
   }
 
   .navbar__link {
-    font-size: var(--fs-xxxs);
+    font-size: var(--fs-xxs);
     padding: var(--gap-xxs);
   }
 }

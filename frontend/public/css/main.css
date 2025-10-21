@@ -23,6 +23,8 @@
 @import url('components/navbar_viwe_car.css');
 @import url('components/navbar_payment_method.css');
 @import url('components/navbar_details.css');
+@import url('components/navbar_create_store.css');
+@import url('components/navbar_add_adress.css');
 @import url('components/footer.css');
 @import url('components/forms.css');
 @import url('components/add_adress.css');
@@ -37,6 +39,8 @@
 @import url('components/edit_store_seller.css');
 @import url('components/store_admin_form.css');
 @import url('components/view_car.css');
+@import url('components/forgot_password.css');
+@import url('components/code_verify.css');
 
 /* Importaciones de SenaMerch Mateo */
 @import url('components/car.css'); 
