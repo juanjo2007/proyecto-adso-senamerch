@@ -1,24 +1,29 @@
 /* ================== ADDRESS FORM ================== */
 .address-form {
-  max-width: 50rem; /* ~500px */
-  margin: var(--gap-xl) auto; /* Centrado horizontal y separación vertical */
-  padding: var(--padding-top) var(--padding-right) var(--padding-bottom) var(--padding-left);
+  max-width: min(90%, 50rem); /* evita desbordes en pantallas pequeñas */
+  margin: 2rem auto; /* centrado vertical y horizontal */
+  padding: 2rem 1.5rem;
   background-color: var(--white);
   border-radius: 1.2rem;
   box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
   font-family: var(--font-primary);
+  box-sizing: border-box;
+  overflow: hidden; /* evita scroll interno si algo se sale */
 }
 
+/* ====== Título ====== */
 .address-form__title {
   text-align: center;
-  margin-bottom: var(--gap-md); /* espacio consistente antes de los inputs */
+  margin-bottom: var(--gap-md);
   font-size: var(--fs-sm);
   font-weight: 600;
-  font-family: var(--font-primary);
+  color: var(--black);
 }
 
+/* ====== Inputs ====== */
 .address-form__input {
   width: 100%;
+  max-width: 100%; /* evita que los inputs se salgan */
   padding: var(--padding-top) var(--padding-right) var(--padding-bottom) var(--padding-left);
   margin-bottom: var(--gap-sm);
   border: 1px solid var(--gray-200);
@@ -28,6 +33,7 @@
   font-family: var(--font-primary);
 }
 
+/* ====== Botón ====== */
 .address-form__button {
   display: inline-block;
   width: 100%;
@@ -49,25 +55,23 @@
 
 /* ================== MEDIA QUERIES ================== */
 
-/* Laptops medianas */
+/* 💻 1024px */
 @media (max-width: 1024px) {
   .address-form {
-    max-width: 90%;
-    margin: var(--gap-lg) auto;
+    max-width: 85%;
+    margin: 4rem auto;
+    padding: 1.8rem;
   }
 }
 
-/* Tablets */
+/* 📱 768px */
 @media (max-width: 768px) {
   .address-form {
-    max-width: 95%;
-    margin: var(--gap-md) auto;
+    max-width: 92%;
+    margin: 5rem auto;
+    padding: 1.6rem 1.2rem;
     border-radius: 0.8rem;
-    box-shadow: 0 2px 8px rgba(0,0,0,0.06);
-    padding: calc(var(--padding-top) - 4px)
-             calc(var(--padding-right) - 4px)
-             calc(var(--padding-bottom) - 4px)
-             calc(var(--padding-left) - 4px);
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.06);
   }
 
   .address-form__title {
@@ -75,33 +79,21 @@
   }
 }
 
-.address-form .btn {
-  font-size: var(--fs-xs);
-  font-weight: 400;
-  align-self: flex-start; 
-  padding: var(--button-padding-top) var(--button-padding-right) 
-           var(--button-padding-bottom) var(--button-padding-left);
-}
-
-/* Móviles */
+/* 📱 640px */
 @media (max-width: 640px) {
   .address-form {
-    max-width: 100%;
-    margin: var(--gap-sm) auto;
-    padding: 1rem; /* padding más compacto */
-    border-radius: 0.6rem;
-  }
-
-  .address-form__title {
-    font-size: var(--fs-xxs);
+    max-width: 94%; /* asegura espacio lateral */
+    margin: 6rem auto;
+    padding: 1.4rem;
+    border-radius: 0.8rem;
   }
 
   .address-form__input {
-    padding: 0.6rem 0.8rem; /* Inputs más compactos */
+    padding: 0.7rem 0.9rem;
   }
 
   .address-form__button {
     font-size: var(--fs-xs);
-    padding: 0.6rem 0.8rem;
+    padding: 0.8rem;
   }
 }
