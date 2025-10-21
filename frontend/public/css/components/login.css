@@ -38,12 +38,12 @@
 }
 
 .login__input {
-  padding: var(--padding-top) var(--padding-right) var(--padding-bottom) var(--padding-left);
-  font-size: var(--fs-xs);
+    padding: var(--padding-top) var(--padding-right) var(--padding-bottom) var(--padding-left);
   border: 1px solid var(--gray-300);
-  border-radius: 4px;
+  border-radius: 6px;
+  font-size: var(--fs-xs);
   outline: none;
-  transition: border 0.3s;
+  transition: border 0.3s, box-shadow 0.3s;
 }
 
 .login__input:focus {

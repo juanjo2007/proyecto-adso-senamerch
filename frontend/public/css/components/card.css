@@ -27,7 +27,7 @@
   border-radius: 12px;
   padding: 24px;
   text-align: center;
-  background-color: var(--secundary-100);
+  background-color: var(--secundary-50);
   min-width: 200px;
   max-width: 320px;
   box-shadow: 0 2px 4px var(--secundary-900);
@@ -65,7 +65,7 @@
 }
 .card__title {
   font-size: var(--fs-xs);
-  color: var(--tertiary-500);
+  color: var(--secundary-900);
   display: flex;
   align-items: flex-start;
   font-weight: 100;
@@ -74,10 +74,10 @@
 }
 .card__price {
   font-size: var(--fs-sm);
-  color: var(--tertiary-900);
+  color: var(--black);
   display: flex;
   align-items: flex-start;
-  font-weight: 900;
+  font-weight: 800;
   margin: 0;
   order: -1;
 }
