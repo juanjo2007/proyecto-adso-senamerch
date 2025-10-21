@@ -94,7 +94,7 @@
   display: inline-block;
   margin-top: var(--gap-md);
   color: var(--tertiary-600);
-  font-size: var(--fs-xxs);
+  font-size: var(--fs-xs);
   text-decoration: none;
   font-family: var(--font-secondary-medium);
   transition: color 0.3s ease;
