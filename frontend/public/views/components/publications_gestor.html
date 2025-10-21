@@ -31,19 +31,19 @@
         <small class="create-post__helper">Puedes subir hasta 5 imágenes.</small>
     </div>
 
-
-
     <!-- Unidad de medida -->
     <div class="create-post__field">
       <label class="create-post__label">Unidad de medida</label>
       <select class="create-post__select" required>
         <option value="" disabled selected>Selecciona una unidad</option>
-        <option value="kg">Solidos</option>
+        <optgroup label="Sólidos">
           <option value="kg">Kilogramo (kg)</option>
           <option value="lb">Libra (lb)</option>
           <option value="unidad">Unidad</option>
-        <option value="kg">Liquidos</option>
+        </optgroup>
+        <optgroup label="Líquidos">
           <option value="litro">Litro (L)</option>
+        </optgroup>
       </select>
     </div>
 
@@ -65,7 +65,6 @@
         <option value="" disabled selected>Selecciona una categoría</option>
         <option value="lacteos">Lácteos</option>
         <option value="granos">Granos</option>
-        <option value="ganaderia">Ganadería</option>
         <option value="frutas">Frutas</option>
         <option value="verduras">Verduras</option>
       </select>
@@ -81,7 +80,7 @@
       ></textarea>
     </div>
 
-    <!-- Características o puntos clave -->
+    <!-- Características -->
     <div class="create-post__field">
       <label class="create-post__label">Características destacadas</label>
       <textarea
@@ -90,12 +89,10 @@
       ></textarea>
     </div>
 
+    <!-- Botones de acción -->
     <div class="create-post__actions">
-        <a href="seller_view.html" class="btn btn--primary">Publicar</a>
-      </div>
-      <div class="create-post__actions-secondary">
-          <a href="seller_view.html" class="btn btn-variant2--secondary">Cancelar</a>
-        </div>
-      
+      <a href="seller_view.html" class="btn btn--primary">Publicar</a>
+      <a href="seller_view.html" class="btn btn--secondary">Cancelar</a>
+    </div>
   </form>
 </section>

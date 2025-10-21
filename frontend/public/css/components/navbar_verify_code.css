@@ -1,5 +1,5 @@
 /* ================== NAVBAR ================== */
-.navbar_edit_profile_client {
+.navbar_verify_code {
   display: flex;
   justify-content: flex-end;          /* Links a la derecha */
   align-items: center;
@@ -22,7 +22,7 @@
   color: var(--white);
   text-decoration: none;
   padding: var(--gap-xs) var(--gap-xxs); /* padding interno compacto */
-  font-size: var(--fs-xs);               /* texto 1.6rem */
+  font-size: var(--fs-xs);
   transition: color 0.2s ease;
 }
 
@@ -32,9 +32,9 @@
 
 /* ================== RESPONSIVE ================== */
 
-/* Tablets grandes o laptops pequeñas */
+/* 💻 1024px (laptops pequeñas) */
 @media (max-width: 1024px) {
-  .navbar_edit_profile_client {
+  .navbar_verify_code {
     justify-content: center;
     padding: var(--gap-xs) var(--gap-md);
   }
@@ -48,11 +48,11 @@
   }
 }
 
-/* Tablets verticales o pantallas medianas */
+/* 📱 768px (tablets verticales) */
 @media (max-width: 768px) {
-  .navbar_edit_profile_client {
+  .navbar_verify_code {
     justify-content: center;
-    padding: var(--gap-xs) var(--gap-xs);
+    padding: var(--gap-xs);
   }
 
   .navbar__list {
@@ -63,13 +63,13 @@
 
   .navbar__link {
     font-size: var(--fs-xxs);
-    padding: var(--gap-xxs) var(--gap-xxs);
+    padding: var(--gap-xxs);
   }
 }
 
-/* Móviles pequeños */
+/* 📱 640px (móviles pequeños) */
 @media (max-width: 640px) {
-  .navbar_edit_profile_client {
+  .navbar_verify_code {
     flex-direction: column;
     align-items: center;
     padding: var(--gap-xxs);
@@ -77,7 +77,6 @@
 
   .navbar__list {
     flex-direction: column;
-    align-items: center;
     gap: var(--gap-xxs);
   }
 

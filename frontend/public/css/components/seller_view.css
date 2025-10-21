@@ -20,7 +20,7 @@
 }
 
 /* Media Query ≤ 486px */
-@media (max-width: 486px) {
+@media (max-width: 640px) {
   .title_seller_view {
     font-size: var(--fs-xs);
   }
