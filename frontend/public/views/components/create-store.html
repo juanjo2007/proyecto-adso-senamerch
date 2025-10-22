@@ -16,22 +16,12 @@
 
       <div class="create-store__group">
         <label class="create-store__label">Correo electrónico</label>
-        <input type="email" class="edit-store__input" placeholder="correo@tienda.com" required>
+        <input type="email" class="create-store__input" placeholder="correo@tienda.com" required>
       </div>
 
       <div class="create-store__group">
         <label class="create-store__label">Teléfono</label>
-        <input type="tel" class="edit-store__input" placeholder="+57 300 000 0000" required>
-      </div>
-
-      <div class="create-store__group">
-        <label class="create-store__label">Dirección de la tienda</label>
-        <a href="add_adress.html" class="form__link">Agregar dirección</a>
-      </div>
-
-      <div class="create-store__group">
-        <label class="create-store__label">información propietario</label>
-        <a href="view_store_admin_form.html" class="form__link">Agregar La información del propietario</a>
+        <input type="tel" class="create-store__input" placeholder="+57 300 000 0000" required>
       </div>
 
       <div class="create-store__group">
@@ -45,25 +35,35 @@
         </select>
       </div>
 
+      <div class="create-store__group">
+        <label class="create-store__label">Dirección de la tienda</label>
+        <a href="add_adress.html" class="form__link">Agregar dirección</a>
+      </div>
+
+      <div class="create-store__group">
+        <label class="create-store__label">Información propietario</label>
+        <a href="view_store_admin_form.html" class="form__link">Agregar La información del propietario</a>
+      </div>
+
+
       <div class="create-store__group create-store__group--full">
         <label class="create-store__label">Descripción</label>
         <textarea class="create-store__input" rows="4" placeholder="Escribe una breve descripción de tu tienda..." required></textarea>
+      </div>
+
+      <div class="create-store__group create-store__group--full">
+        <label class="create-store__label">Imagen de portada</label>
+        <input type="file" class="create-store__input" accept="image/*">
+        <small class="create-store__helper">Formatos aceptados: JPG, PNG. Tamaño máximo: 2MB.</small>
       </div>
 
       <div class="create-store__secondary">
         <a href="seller_view.html" class="btn btn-variant2--secondary">Cancelar</a>
       </div>
 
-      <div class="create-store__group">
-        <label class="create-store__label">Imagen de portada</label>
-        <input type="file" class="create-store__input" accept="image/*">
-        <small class="create-store__helper">Formatos aceptados: JPG, PNG. Tamaño máximo: 2MB.</small>
-      </div>
-
       <div class="create-store__buttons">
         <a href="profile_store_seller.html" class="btn btn--primary">Crear Tienda</a>
       </div>
-        
     </form>
   </div>
 </section>

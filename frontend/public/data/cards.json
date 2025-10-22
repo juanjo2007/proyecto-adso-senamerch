@@ -29,6 +29,18 @@
     "price": 2800,
     "image": "/frontend/public/assets/img/pimenton_image.jpg"
   },
+    {
+    "id": "cebolla",
+    "name": "Cebolla",
+    "price": 2500,
+    "image": "/frontend/public/assets/img/onion__image.jpg"
+  },
+  {
+    "id": "papa",
+    "name": "Papa",
+    "price": 2000,
+    "image": "/frontend/public/assets/img/potato__image.jpg"
+  },
   {
     "id": "zanahoria",
     "name": "Pimenton",
