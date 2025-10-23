@@ -3,7 +3,7 @@
     "liveServer.settings.CustomBrowser": "chrome",
     "liveServer.settings.showOnStatusbar": true,
     "liveServer.settings.statusBarButton": "alwaysShow",
-    "liveServer.settings.port": 5500,
+    "liveServer.settings.port": 5501,
     "editor.suggest.showStatusBar": true,
     "debug.showInStatusBar": "always",
     "telemetry.editStats.showStatusBar": true,
