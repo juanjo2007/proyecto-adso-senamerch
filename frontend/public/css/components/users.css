@@ -1,69 +1,27 @@
+/* ==============================
+   Componente Usuarios (Administrador)
+   Metodología: BEM
+   ============================== */
+
 /* ================== Contenedor principal ================== */
 .users {
   max-width: 1000px;
   margin: 40px auto;
-  padding: 20px;
+  padding: var(--gap-md);
   background: var(--white);
   border: 1px solid var(--gray-200);
   border-radius: 8px;
   color: var(--gray-950);
+  font-family: var(--font-primary);
 }
 
 /* ================== Título ================== */
 .users__title {
   text-align: center;
-  font-size: var(--fs-sm); /* 20px */
+  font-size: var(--fs-sm);
   margin-bottom: var(--gap-lg);
   color: var(--primary-950);
   font-family: var(--font-primary-semibold);
-}
-
-
-
-.users__search-input {
-  padding: var(--padding-top) var(--padding-right);
-  border: 1px solid var(--gray-300);
-  border-radius: 4px;
-  width: 250px;
-  font-size: var(--fs-xs);
-}
-
-.users__search-btn {
-  background: var(--primary-950);
-  color: var(--white);
-  border: none;
-  padding: var(--button-padding-top) var(--button-padding-right);
-  border-radius: 4px;
-  cursor: pointer;
-  font-size: var(--fs-xxs);
-}
-
-.users__search-btn:hover {
-  opacity: 0.9;
-}
-
-/* ================== Texto debajo de búsqueda ================== */
-.users__search-info {
-  text-align: center;
-  margin-bottom: var(--gap-md);
-  font-size: var(--fs-xs);
-  color: var(--gray-600);
-}
-
-
-
-.users__export-btn {
-  background: var(--primary-950);
-  color: var(--white);
-  border: none;
-  padding: var(--button-padding-top) var(--button-padding-right);
-  border-radius: 4px;
-  cursor: pointer;
-  font-size: var(--fs-xxs);
-}
-
-.users__export-btn:hover {
-  opacity: 0.9;
 }
 
 /* ================== Tabla ================== */
@@ -71,6 +29,11 @@
   width: 100%;
   border-collapse: collapse;
   font-size: var(--fs-xs);
+  color: var(--gray-900);
+  background-color: var(--white);
+  box-shadow: 0 2px 6px var(--gray-200);
+  border-radius: 6px;
+  overflow: hidden;
 }
 
 .users__table-header {
@@ -79,6 +42,7 @@
   padding: var(--gap-xs);
   border: 1px solid var(--gray-300);
   color: var(--primary-950);
+  text-align: center;
 }
 
 .users__table-cell {
@@ -88,27 +52,46 @@
   color: var(--gray-800);
 }
 
-/* ================== Botón Deshabilitar ================== */
-.users__disable-btn {
-  background: var(--black);
-  color: var(--white);
+/* ================== BOTONES (VARIANTES) ================== */
+
+/* Variante base */
+.btn--variant2 {
+  display: inline-block;
+  font-size: var(--fs-xxs);
+  padding: 16px; /* 🔹 Padding actualizado */
   border: none;
-  padding: var(--button-padding-top) var(--button-padding-right);
-  border-radius: 4px;
+  border-radius: 6px;
+  font-weight: bold;
+  text-align: center;
   cursor: pointer;
-  font-size: var(--fs-xxxs);
+  text-decoration: none;
+  transition: all 0.3s ease;
 }
 
-.users__disable-btn:hover {
-  background: var(--secundary-900);
+/* Variante secundaria (botón negro) */
+.btn--variant2--secondary {
+  background-color: var(--black);
+  color: var(--white);
+  box-shadow: 2px 2px 5px var(--gray-600);
 }
 
-.users__disable-btn:disabled {
-  background: var(--gray-500);
+.btn--variant2--secondary:hover {
+  background-color: var(--gray-900);
+  transform: scale(1.03);
+}
+
+/* Variante deshabilitada */
+.btn--variant2--secondary:disabled,
+.btn--variant2--secondary[disabled] {
+  background-color: var(--gray-400);
+  color: var(--gray-100);
   cursor: not-allowed;
+  box-shadow: none;
+  transform: none;
+  opacity: 0.7;
 }
 
-/* ================== RESPONSIVE ================== */
+/* ================== Responsive ================== */
 @media (max-width: 768px) {
   .users {
     padding: var(--gap-sm);
@@ -116,28 +99,7 @@
   }
 
   .users__title {
-    font-size: var(--fs-sm); /* 24px */
-  }
-
-  .users__search {
-    flex-direction: column;
-    align-items: center;
-  }
-
-  .users__search-input,
-  .users__search-btn {
-    width: 100%;
-    max-width: 300px;
-  }
-
-  .users__export {
-    flex-direction: column;
-    align-items: flex-start;
-  }
-
-  .users__export-btn {
-    width: 100%;
-    max-width: 300px;
+    font-size: var(--fs-xs);
   }
 
   .users__table {
@@ -145,15 +107,21 @@
     overflow-x: auto;
     white-space: nowrap;
   }
+
+  .btn--variant2 {
+    width: 100%;
+    max-width: 250px;
+    margin: var(--gap-xs) auto;
+  }
 }
 
 @media (max-width: 480px) {
   .users__title {
-    font-size: var(--fs-sm); /* 20px */
+    font-size: var(--fs-xxs);
   }
 
-  .users__disable-btn {
-    width: 100%;
+  .btn--variant2 {
     font-size: var(--fs-xxxs);
+    padding: var(--gap-xxs);
   }
 }

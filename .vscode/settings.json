@@ -1,0 +1,16 @@
+{
+    
+    "liveServer.settings.CustomBrowser": "chrome",
+    "liveServer.settings.showOnStatusbar": true,
+    "liveServer.settings.statusBarButton": "alwaysShow",
+    "liveServer.settings.port": 5501,
+    "editor.suggest.showStatusBar": true,
+    "debug.showInStatusBar": "always",
+    "telemetry.editStats.showStatusBar": true,
+    "json.schemas": [
+        // Aquí seguirán tus otros valores
+    ],
+    "zenMode.hideStatusBar": false
+}
+
+    

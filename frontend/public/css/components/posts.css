@@ -20,7 +20,7 @@
 
 /* ================== TITLE ================== */
 .posts__title {
-  font-size: var(--fs-sm); /* 32px */
+  font-size: var(--fs-sm); /* 20px */
   font-weight: bold;
   margin-bottom: var(--gap-lg);
   color: var(--primary-950);
