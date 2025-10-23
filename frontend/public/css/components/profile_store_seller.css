@@ -1,24 +1,27 @@
-.store-profile {
+.store-profile { 
   width: 100%;
   display: flex;
   justify-content: center;
   padding: var(--gap-xl);
   box-sizing: border-box;
-  background-color: var(--gray-50);
 }
+
 .store-profile__wrapper {
   width: 100%;
-  max-width: 1280px; 
+  max-width: 700px;
+  margin: 0 auto;
   background-color: var(--white);
   border-radius: 16px;
-  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.05);
-  padding: var(--gap-xs) var(--gap-xs);
+  box-shadow: 0 4px 10px var(--black); 
+  padding: var(--gap-md);
   box-sizing: border-box;
 }
+
 .store-profile__header {
   text-align: center;
   margin-bottom: var(--gap-md);
 }
+
 .store-profile__cover {
   width: 100%;
   height: 140px;
@@ -26,74 +29,85 @@
   border-radius: 12px;
   margin-bottom: var(--gap-md);
 }
+
 .store-profile__cover img {
   width: 100%;
   height: 100%;
   object-fit: cover;
 }
+
 .store-profile__title {
   font-size: var(--fs-md);
   font-weight: 600;
   color: var(--secundary-900);
   margin-bottom: var(--gap-xs);
 }
-.store-profile__category {
-  font-size: var(--fs-xs);
-  color: var(--gray-700);
-}
 .store-profile__info {
   display: grid;
-  grid-template-columns: repeat(3, 1fr); 
+  grid-template-columns: repeat(2, 1fr);
   gap: var(--gap-md);
   margin-bottom: var(--gap-lg);
 }
+
 .store-profile__group--full {
-  grid-column: 1 / -1;
+  grid-column: 1 / -1; /* ocupa ambas columnas */
 }
+
 .store-profile__label {
   font-size: var(--fs-xs);
   font-weight: 600;
   color: var(--secundary-800);
   margin-bottom: var(--gap-xs);
 }
+
 .store-profile__data {
   font-size: var(--fs-xs);
   color: var(--gray-900);
   line-height: 1.5;
 }
+
 .store-profile__actions {
   display: flex;
-  justify-content: flex-end; 
+  justify-content: flex-s; 
   align-items: center;
   gap: var(--gap-md);
   margin-top: var(--gap-md);
 }
-.store-profile__actions-secundary{
+
+.secundary {
   display: flex;
-  justify-content: flex-start; 
+  justify-content: flex-end; 
   align-items: center;
 }
+
 .store-profile__actions.btn {
   font-family: var(--font-primary-regular);
   font-weight: 400;
   padding: var(--button-padding-top) var(--button-padding-right)
            var(--button-padding-bottom) var(--button-padding-left);
 }
+
+/* ✅ sigue en 2 columnas hasta pantallas medianas */
 @media (max-width: 1024px) {
   .store-profile__info {
     grid-template-columns: 1fr 1fr;
   }
 }
+
+/* ✅ en móvil 1 columna */
 @media (max-width: 768px) {
   .store-profile__wrapper {
     padding: var(--gap-lg);
   }
+
   .store-profile__info {
     grid-template-columns: 1fr;
   }
+
   .store-profile__actions {
     flex-direction: column;
   }
+
   .store-profile__actions .btn {
     width: 100%;
   }

@@ -4,7 +4,7 @@
   max-width: 700px;
   margin: var(--gap-xl) auto;
   padding: var(--gap-lg);
-  background-color: var(--primary-50);
+  background-color: var(--white);
   border-radius: 12px;
   box-shadow: 0 2px 8px rgba(0,0,0,0.1);
   font-family: var(--font-primary);
@@ -12,7 +12,7 @@
 
 /* ===== TITLE ===== */
 .store-form__title {
-  font-size: var(--fs-md);
+  font-size: var(--fs-sm);
   font-weight: 600;
   color: var(--black);
   text-align: center;
@@ -40,8 +40,7 @@
 }
 .store-form__label {
   font-size: var(--fs-xs);
-  font-weight: 600;
-  color: var(--gray-800);
+  color: var(--black);
 }
 .store-form__input,
 .store-form__select {
