@@ -18,12 +18,6 @@
     "image": "/frontend/public/assets/img/potato__image.jpg"
   },
   {
-    "id": "lechuga",
-    "name": "Lechuga",
-    "price": 1800,
-    "image": "/frontend/public/assets/img/lettuce__image.jpg"
-  },
-  {
     "id": "pimenton",
     "name": "Pimenton",
     "price": 3500,
@@ -35,11 +29,17 @@
     "price": 2800,
     "image": "/frontend/public/assets/img/pimenton_image.jpg"
   },
+    {
+    "id": "cebolla",
+    "name": "Cebolla",
+    "price": 2500,
+    "image": "/frontend/public/assets/img/onion__image.jpg"
+  },
   {
-    "id": "zanahoria",
-    "name": "Pimenton",
-    "price": 2800,
-    "image": "/frontend/public/assets/img/pimenton_image.jpg"
+    "id": "papa",
+    "name": "Papa",
+    "price": 2000,
+    "image": "/frontend/public/assets/img/potato__image.jpg"
   },
   {
     "id": "zanahoria",

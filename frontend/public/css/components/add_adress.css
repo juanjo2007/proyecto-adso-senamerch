@@ -1,23 +1,29 @@
-/* ================== DIRECTION CONTENT ================== */
-.direction-content {
-  max-width: 50rem; /* ~500px, controlado */
-  margin: var(--gap-xl) auto; /* Centrado horizontal y separación vertical */
-  padding: var(--padding-top) var(--padding-right) var(--padding-bottom) var(--padding-left);
+/* ================== ADDRESS FORM ================== */
+.address-form {
+  max-width: min(90%, 50rem); /* evita desbordes en pantallas pequeñas */
+  margin: 2rem auto; /* centrado vertical y horizontal */
+  padding: 2rem 1.5rem;
   background-color: var(--white);
   border-radius: 1.2rem;
   box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
   font-family: var(--font-primary);
+  box-sizing: border-box;
+  overflow: hidden; /* evita scroll interno si algo se sale */
 }
 
-.direction-content h2 {
+/* ====== Título ====== */
+.address-form__title {
   text-align: center;
-  margin-bottom: var(--gap-md); /* espacio consistente antes del formulario */
-  font-size: var(--fs-sm);      /* ligeramente más legible que xs */
-  font-family: var(--font-primary);
+  margin-bottom: var(--gap-md);
+  font-size: var(--fs-sm);
+  font-weight: 600;
+  color: var(--black);
 }
 
-.formulario__input {
+/* ====== Inputs ====== */
+.address-form__input {
   width: 100%;
+  max-width: 100%; /* evita que los inputs se salgan */
   padding: var(--padding-top) var(--padding-right) var(--padding-bottom) var(--padding-left);
   margin-bottom: var(--gap-sm);
   border: 1px solid var(--gray-200);
@@ -27,48 +33,67 @@
   font-family: var(--font-primary);
 }
 
+/* ====== Botón ====== */
+.address-form__button {
+  display: inline-block;
+  width: 100%;
+  text-align: center;
+  padding: 0.8rem 1rem;
+  margin-top: var(--gap-sm);
+  background-color: var(--primary-500);
+  color: var(--white);
+  text-decoration: none;
+  font-size: var(--fs-sm);
+  font-weight: 600;
+  border-radius: 0.6rem;
+  transition: background-color 0.3s ease;
+}
+
+.address-form__button:hover {
+  background-color: var(--primary-600);
+}
+
 /* ================== MEDIA QUERIES ================== */
 
-/* Laptops medianas */
+/* 💻 1024px */
 @media (max-width: 1024px) {
-  .direction-content {
-    max-width: 90%;
-    margin: var(--gap-lg) auto;
+  .address-form {
+    max-width: 85%;
+    margin: 4rem auto;
+    padding: 1.8rem;
   }
 }
 
-/* Tablets */
+/* 📱 768px */
 @media (max-width: 768px) {
-  .direction-content {
-    max-width: 95%;
-    margin: var(--gap-md) auto;
+  .address-form {
+    max-width: 92%;
+    margin: 5rem auto;
+    padding: 1.6rem 1.2rem;
     border-radius: 0.8rem;
-    box-shadow: 0 2px 8px rgba(0,0,0,0.06);
-    padding: calc(var(--padding-top) - 4px)
-             calc(var(--padding-right) - 4px)
-             calc(var(--padding-bottom) - 4px)
-             calc(var(--padding-left) - 4px);
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.06);
   }
 
-  .direction-content h2 {
+  .address-form__title {
     font-size: var(--fs-xs);
   }
 }
 
-/* Móviles */
-@media (max-width: 480px) {
-  .direction-content {
-    max-width: 100%;
-    margin: var(--gap-sm) auto;
-    padding: 1rem; /* padding más compacto */
-    border-radius: 0.6rem;
+/* 📱 640px */
+@media (max-width: 640px) {
+  .address-form {
+    max-width: 94%; /* asegura espacio lateral */
+    margin: 6rem auto;
+    padding: 1.4rem;
+    border-radius: 0.8rem;
   }
 
-  .direction-content h2 {
-    font-size: var(--fs-xxs);
+  .address-form__input {
+    padding: 0.7rem 0.9rem;
   }
 
-  .formulario__input {
-    padding: 0.6rem 0.8rem; /* Inputs más compactos */
+  .address-form__button {
+    font-size: var(--fs-xs);
+    padding: 0.8rem;
   }
 }

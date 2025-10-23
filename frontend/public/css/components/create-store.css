@@ -1,19 +1,24 @@
-.create-store {
-  margin-top: var(--gap-xs);
+.create-store { 
+  margin-top: var(--gap-xxs);
   margin-bottom: var(--gap-xs);
-  max-width: 900px;
-  margin-left: auto;
-  margin-right: auto;
-  padding: var(--gap-xs);
-  background: var(--white);
-  box-sizing: border-box;
-  border-radius: 10px;
-  box-shadow: 0 2px 8px rgba(0,0,0,0.08);
+  display: flex;
+  justify-content: center;
+  padding: var(--gap-md);
 }
 
-/* ====== Encabezado ====== */
+.create-store__wrapper {
+  width: 100%;
+  max-width: 700px;
+  background-color: var(--white);
+  border-radius: 12px;
+  box-shadow: 0 4px 10px var(--black); /* ✅ una sola caja con sombra */
+  padding: var(--gap-md);
+  box-sizing: border-box;
+}
+
 .create-store__header {
   text-align: center;
+  margin-bottom: var(--gap-md);
 }
 
 .create-store__title {
@@ -26,13 +31,12 @@
 .create-store__subtitle {
   font-size: var(--fs-xs);
   font-family: var(--font-primary);
-  color: var(--gray-700);
+  color: var(--black);
 }
 
-/* ====== Formulario (2 columnas como editar tienda) ====== */
 .create-store__form {
   display: grid;
-  grid-template-columns: repeat(2, 1fr);
+  grid-template-columns: repeat(2, 1fr); /* ✅ Dos columnas */
   gap: var(--gap-md);
   margin-top: var(--gap-md);
 }
@@ -44,14 +48,13 @@
 }
 
 .create-store__group--full {
-  grid-column: 1 / -1;
+  grid-column: 1 / -1; /* ✅ ocupa ambas columnas */
 }
 
-/* ====== Labels e inputs ====== */
 .create-store__label {
   font-size: var(--fs-xs);
   font-family: var(--font-primary-bold);
-  color: var(--primary-900);
+  color: var(--black);
 }
 
 .create-store__input {
@@ -60,7 +63,7 @@
   border-radius: 8px;
   font-size: var(--fs-xs);
   font-family: var(--font-primary);
-  color: var(--gray-900);
+  color: var(--black);
   background: var(--white);
   outline: none;
   transition: border-color 0.2s ease-in-out, box-shadow 0.2s ease-in-out;
@@ -69,8 +72,8 @@
 }
 
 .create-store__input:focus {
-  border-color: var(--primary-600);
-  box-shadow: 0 0 4px var(--primary-600);
+  border-color: var(--secundary-900);
+  box-shadow: 0 0 4px var(--secundary-900);
 }
 
 .create-store__helper {
@@ -78,20 +81,21 @@
   color: var(--gray-600);
   margin-top: var(--gap-xxs);
 }
+
 .create-store__buttons {
   display: flex;
-  width: 100%;
-  order: 2; 
   justify-content: flex-end; 
+  align-items: center;
   gap: var(--gap-md);
   margin-top: var(--gap-md);
 }
-.create-store__buttons-secondary{
+
+.create-store__secondary {
   display: flex;
-  order: 1; 
   justify-content: flex-start; 
   align-items: center;
 }
+
 .create-store__buttons .btn {
   font-family: var(--font-primary-regular);
   font-weight: 400;
@@ -99,11 +103,9 @@
            var(--button-padding-bottom) var(--button-padding-left);
 }
 
-
-/* ====== Responsividad ====== */
 @media (max-width: 768px) {
   .create-store__form {
-    grid-template-columns: 1fr;
+    grid-template-columns: 1fr; /* ✅ Una columna en móvil */
     gap: var(--gap-sm);
   }
 
