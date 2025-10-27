@@ -1,61 +1,62 @@
-<div class="register">
-  <h1 class="register__title">Completa los datos para crear tu cuenta</h1>
+  <div class="register">
+    <h1 class="register__title">Completa los datos para crear tu cuenta</h1>
 
-  <form class="register__form" action="#" method="POST">
-    <div class="register__grid">
-      <div class="register__column">
-        <div class="register__field">
-          <label class="register__label">Correo electrónico</label>
-          <input class="register__input" type="email" name="email" required />
-          <small class="register__text">Recibirás información de tu cuenta.</small>
+    <form class="register__form" action="#" method="POST">
+      <div class="register__grid">
+        <div class="register__column">
+          <div class="register__field">
+            <label class="register__label">Correo electrónico</label>
+            <input class="register__input" type="email" name="email" required />
+            <small class="register__text">Recibirás información de tu cuenta.</small>
+          </div>
+
+          <div class="register__field">
+            <label class="register__label">Nombre</label>
+            <input class="register__input" type="text" name="name" required />
+            <small class="register__text">Se mostrará a las personas que interactúen contigo.</small>
+          </div>
+
+          <div class="register__field">
+            <label class="register__label">Tipo de usuario</label>
+            <select class="register__input" name="user-type" required>
+              <option value="">Selecciona...</option>
+              <option value="client">Cliente</option>
+              <option value="seller">Vendedor</option>
+              <option value="distributor">Distribuidor</option>
+            </select>
+            <small class="register__text">Selecciona el tipo de usuario que serás.</small>
+          </div>
         </div>
 
-        <div class="register__field">
-          <label class="register__label">Nombre</label>
-          <input class="register__input" type="text" name="name" required />
-          <small class="register__text">Se mostrará a las personas que interactúen contigo.</small>
-        </div>
+        <div class="register__column">
+          <div class="register__field">
+            <label class="register__label">Departamento</label>
+            <select class="register__input" name="department" required>
+              <option value="">Selecciona...</option>
+              <option value="Risaralda">Risaralda</option>
+              <option value="Quindio">Quindío</option>
+              <option value="Caldas">Caldas</option>
+            </select>
+            <small class="register__text">Así podrás interactuar con locales de tu zona.</small>
+          </div>
 
-        <div class="register__field">
-          <label class="register__label">Tipo de usuario</label>
-          <select class="register__input" name="user-type" required>
-            <option value="">Selecciona...</option>
-            <option value="client">Cliente</option>
-            <option value="seller">Vendedor</option>
-            <option value="distributor">Distribuidor</option>
-          </select>
-          <small class="register__text">Selecciona el tipo de usuario que serás.</small>
+          <div class="register__field">
+            <label class="register__label">Dirección</label>
+            <a href="/frontend/public/views/add_adress.html" class="register__link">Agregar dirección</a>
+            <small class="register__text">Los clientes estarán más cerca de ti.</small>
+          </div>
+
+          <div class="register__field">
+            <label class="register__label">Contraseña</label>
+            <input class="register__input" type="password" name="password" required />
+            <small class="register__text">Mantén tu cuenta segura con una buena contraseña.</small>
+          </div>
         </div>
       </div>
 
-      <div class="register__column">
-        <div class="register__field">
-          <label class="register__label">Departamento</label>
-          <select class="register__input" name="department" required>
-            <option value="">Selecciona...</option>
-            <option value="Risaralda">Risaralda</option>
-            <option value="Quindio">Quindío</option>
-            <option value="Caldas">Caldas</option>
-          </select>
-          <small class="register__text">Así podrás interactuar con locales de tu zona.</small>
-        </div>
-
-        <div class="register__field">
-          <label class="register__label">Dirección</label>
-          <a href="/frontend/public/views/add_adress.html" class="register__link">Agregar dirección</a>
-          <small class="register__text">Los clientes estarán más cerca de ti.</small>
-        </div>
-
-        <div class="register__field">
-          <label class="register__label">Contraseña</label>
-          <input class="register__input" type="password" name="password" required />
-          <small class="register__text">Mantén tu cuenta segura con una buena contraseña.</small>
-        </div>
+      <div class="register__actions">
+        <button type="submit" class="btn btn--primary">Registrar</button>
       </div>
-    </div>
-
-    <div class="register__actions">
-      <button type="submit" class="btn btn--primary">Registrar</button>
-    </div>
-  </form>
-</div>
+    </form>
+    
+  </div>

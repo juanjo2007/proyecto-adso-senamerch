@@ -1,67 +1,57 @@
-<section class="order order--admin">
-  <h1 class="order__title">Pedidos</h1>
+<!-- ================== Componente Pedidos (Administrador) ================== -->
+<main class="orders-admin">
+  <!-- Título principal -->
+  <h1 class="orders-admin__title">Pedidos</h1>
 
   <!-- Tabla de pedidos -->
-  <div class="order__table">
-    <div class="order__row order__row--header">
-      <div class="order__cell">#Pedido</div>
-      <div class="order__cell">#Usuario</div>
-      <div class="order__cell">#Tienda</div>
-      <div class="order__cell">Acción</div>
-    </div>
+  <section class="orders-admin__section">
+    <table class="orders-admin__table">
+      <thead class="orders-admin__table-head">
+        <tr class="orders-admin__table-row">
+          <th class="orders-admin__table-header">Fecha Pedido</th>
+          <th class="orders-admin__table-header">Nombre Usuario</th>
+          <th class="orders-admin__table-header">Nombre Tienda</th>
+          <th class="orders-admin__table-header">Acción</th>
+        </tr>
+      </thead>
 
-    <div class="order__row">
-      <div class="order__cell">#1</div>
-      <div class="order__cell">#1</div>
-      <div class="order__cell">#1</div>
-      <div class="order__cell">
-        <a href="profile_client.html" class="btn--variant2 btn--variant2--secondary shopping-cart__continue">Deshabilitar</a>
-      </div>
-    </div>
+      <tbody class="orders-admin__table-body">
+        <!-- Pedido 1 -->
+        <tr class="orders-admin__table-row">
+          <td class="orders-admin__table-cell" data-label="Fecha Pedido: ">2025-10-25</td>
+          <td class="orders-admin__table-cell" data-label="Nombre Usuario: ">Laura Gómez</td>
+          <td class="orders-admin__table-cell" data-label="Nombre Tienda: ">Frutos del Valle</td>
+          <td class="orders-admin__table-cell" data-label="Acción: ">
+            <div class="orders-admin__actions">
+              <a href="#" class="btn btn-variant2--secondary">Ver Detalles</a>
+            </div>
+          </td>
+        </tr>
 
-    <div class="order__row">
-      <div class="order__cell">#2</div>
-      <div class="order__cell">#2</div>
-      <div class="order__cell">#2</div>
-      <div class="order__cell">
-        <a href="profile_client.html" class="btn--variant2 btn--variant2--secondary shopping-cart__continue">Deshabilitar</a>
-      </div>
-    </div>
+        <!-- Pedido 2 -->
+        <tr class="orders-admin__table-row">
+          <td class="orders-admin__table-cell" data-label="Fecha Pedido: ">2025-10-22</td>
+          <td class="orders-admin__table-cell" data-label="Nombre Usuario: ">Carlos López</td>
+          <td class="orders-admin__table-cell" data-label="Nombre Tienda: ">La Despensa Verde</td>
+          <td class="orders-admin__table-cell" data-label="Acción: ">
+            <div class="orders-admin__actions">
+              <a href="#" class="btn btn-variant2--secondary">Ver Detalles</a>
+            </div>
+          </td>
+        </tr>
 
-    <div class="order__row">
-      <div class="order__cell">#1</div>
-      <div class="order__cell">#1</div>
-      <div class="order__cell">#1</div>
-      <div class="order__cell">
-        <a href="profile_client.html" class="btn--variant2 btn--variant2--secondary shopping-cart__continue">Deshabilitar</a>
-      </div>
-    </div>
-
-    <div class="order__row">
-      <div class="order__cell">#2</div>
-      <div class="order__cell">#2</div>
-      <div class="order__cell">#2</div>
-      <div class="order__cell">
-        <a href="profile_client.html" class="btn--variant2 btn--variant2--secondary shopping-cart__continue">Deshabilitar</a>
-      </div>
-    </div>
-
-    <div class="order__row">
-      <div class="order__cell">#1</div>
-      <div class="order__cell">#1</div>
-      <div class="order__cell">#1</div>
-      <div class="order__cell">
-        <a href="profile_client.html" class="btn--variant2 btn--variant2--secondary shopping-cart__continue">Deshabilitar</a>
-      </div>
-    </div>
-
-    <div class="order__row">
-      <div class="order__cell">#2</div>
-      <div class="order__cell">#2</div>
-      <div class="order__cell">#2</div>
-      <div class="order__cell">
-        <a href="profile_client.html" class="btn--variant2 btn--variant2--secondary shopping-cart__continue">Deshabilitar</a>
-      </div>
-    </div>
-  </div>
-</section>
+        <!-- Pedido 3 -->
+        <tr class="orders-admin__table-row">
+          <td class="orders-admin__table-cell" data-label="Fecha Pedido: ">2025-10-19</td>
+          <td class="orders-admin__table-cell" data-label="Nombre Usuario: ">Juliana Restrepo</td>
+          <td class="orders-admin__table-cell" data-label="Nombre Tienda: ">El Campesino Feliz</td>
+          <td class="orders-admin__table-cell" data-label="Acción: ">
+            <div class="orders-admin__actions">
+              <a href="#" class="btn btn-variant2--secondary">Ver Detalles</a>
+            </div>
+          </td>
+        </tr>
+      </tbody>
+    </table>
+  </section>
+</main>

@@ -1,6 +1,10 @@
+<!-- ================== Componente Productos (Administrador) ================== -->
 <main class="products">
+  <!-- Título principal -->
   <h1 class="products__title">Productos</h1>
-  <div class="products__table-wrapper">
+
+  <!-- Tabla de productos -->
+  <section class="products__section">
     <table class="products__table">
       <thead class="products__table-head">
         <tr class="products__table-row">
@@ -11,49 +15,60 @@
           <th class="products__table-header">Acción</th>
         </tr>
       </thead>
+
       <tbody class="products__table-body">
+        <!-- Producto 1 -->
         <tr class="products__table-row">
-          <td class="products__table-cell">Tomate</td>
-          <td class="products__table-cell">Juan jose</td>
-          <td class="products__table-cell"> 4 </td>
-          <td class="products__table-cell"> Revolteria la Cachona</td>
-          <td class="products__table-cell">
-              <div class="products__secondary">
-                <a href="seller_view.html" class="btn btn-variant2--secondary">Deshabilitar</a>
-              </div></td>
-        </tr>
-        <tr class="products__table-row">
-          <td class="products__table-cell">Zanahoria</td>
-          <td class="products__table-cell">Mateo</td>
-          <td class="products__table-cell"> 2</td>
-          <td class="products__table-cell"> Donde don pastor</td>
-          <td class="products__table-cell">
+          <td class="products__table-cell" data-label="Producto (Nombre): ">Tomate</td>
+          <td class="products__table-cell" data-label="Usuario (Nombre): ">Juan José</td>
+          <td class="products__table-cell" data-label="Calificación (1 a 5): ">4</td>
+          <td class="products__table-cell" data-label="Tienda (Nombre): ">Revoltería la Cachona</td>
+          <td class="products__table-cell" data-label="Acción">
             <div class="products__secondary">
               <a href="seller_view.html" class="btn btn-variant2--secondary">Deshabilitar</a>
-            </div></td>
-        </tr>
-        <tr class="products__table-row">
-          <td class="products__table-cell">limón</td>
-          <td class="products__table-cell">Jefferson</td>
-          <td class="products__table-cell"> 1 </td>
-          <td class="products__table-cell"> Con Cociaca </td>
-          <td class="products__table-cell">
-            <div class="products__secondary">
-              <a href="seller_view.html" class="btn btn-variant2--secondary">Deshabilitar</a>
-            </div></td>
-        </tr>
-        <tr class="products__table-row">
-          <td class="products__table-cell">Espinacas</td>
-          <td class="products__table-cell">Emanuel</td>
-          <td class="products__table-cell"> 5</td>
-          <td class="products__table-cell"> El bosque</td>
-          <td class="products__table-cell">
-            <div class="products__secondary">
-              <a href="seller_view.html" class="btn btn-variant2--secondary">Deshabilitar</a>
-            </div></td>
+            </div>
+          </td>
         </tr>
 
+        <!-- Producto 2 -->
+        <tr class="products__table-row">
+          <td class="products__table-cell" data-label="Producto (Nombre): ">Zanahoria</td>
+          <td class="products__table-cell" data-label="Usuario (Nombre): ">Mateo</td>
+          <td class="products__table-cell" data-label="Calificación (1 a 5): ">2</td>
+          <td class="products__table-cell" data-label="Tienda (Nombre): ">Donde Don Pastor</td>
+          <td class="products__table-cell" data-label="Acción">
+            <div class="products__secondary">
+              <a href="seller_view.html" class="btn btn-variant2--secondary">Deshabilitar</a>
+            </div>
+          </td>
+        </tr>
+
+        <!-- Producto 3 -->
+        <tr class="products__table-row">
+          <td class="products__table-cell" data-label="Producto (Nombre): ">Limón</td>
+          <td class="products__table-cell" data-label="Usuario (Nombre): ">Jefferson</td>
+          <td class="products__table-cell" data-label="Calificación (1 a 5): ">1</td>
+          <td class="products__table-cell" data-label="Tienda (Nombre): ">Con Cociaca</td>
+          <td class="products__table-cell" data-label="Acción">
+            <div class="products__secondary">
+              <a href="seller_view.html" class="btn btn-variant2--secondary">Deshabilitar</a>
+            </div>
+          </td>
+        </tr>
+
+        <!-- Producto 4 -->
+        <tr class="products__table-row">
+          <td class="products__table-cell" data-label="Producto (Nombre): ">Espinacas</td>
+          <td class="products__table-cell" data-label="Usuario (Nombre): ">Emanuel</td>
+          <td class="products__table-cell" data-label="Calificación (1 a 5): ">5</td>
+          <td class="products__table-cell" data-label="Tienda (Nombre): ">El Bosque</td>
+          <td class="products__table-cell" data-label="Acción">
+            <div class="products__secondary">
+              <a href="seller_view.html" class="btn btn-variant2--secondary">Deshabilitar</a>
+            </div>
+          </td>
+        </tr>
       </tbody>
     </table>
-  </div>
+  </section>
 </main>

@@ -1,0 +1,130 @@
+.seller-cards__container {
+  display: grid;
+  gap: var(--gap-lg);
+  width: 100%;
+  box-sizing: border-box;
+  margin: var(--gap-md) auto;
+  padding-inline: var(--gap-sm);
+  justify-content: center;
+  justify-items: center;
+}
+
+@media (width > 640px) {
+  .seller-cards__container {
+    grid-template-columns: repeat(2, 1fr);
+    gap: var(--gap-lg);
+    max-width: 90%;
+  }
+}
+
+@media (width > 1024px) {
+  .seller-cards__container {
+    grid-template-columns: repeat(4, 1fr);
+    gap: var(--gap-lg);
+    max-width: 90%;
+  }
+}
+
+.card-seller {
+  border: 1px solid var(--secundary-900);
+  border-radius: 12px;
+  padding: 24px;
+  text-align: center;
+  background-color: var(--secundary-50);
+  min-width: 200px;
+  max-width: 320px;
+  box-shadow: 0 2px 4px var(--secundary-900);
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  cursor: pointer;
+}
+
+.card-seller:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 6px 14px rgba(0, 0, 0, 0.15);
+}
+
+.card-seller__image {
+  width: 100%;
+  height: 200px;
+  object-fit: cover;
+  border-radius: 8px;
+}
+
+/* === GRID 2x2 PARA INFO === */
+.card-seller__info {
+  display: grid;
+  grid-template-columns: 1fr 1fr; /* dos columnas */
+  grid-template-rows: auto auto;  /* dos filas */
+  gap: 12px 10px;
+  width: 100%;
+  margin-top: 16px;
+  align-items: center;
+}
+
+/* Primera fila */
+.card-seller__title {
+  grid-column: 1 / 2;
+  grid-row: 1 / 2;
+  text-align: left;
+  font-size: var(--fs-xs);
+  color: var(--secundary-900);
+  margin: 0;
+  font-weight: 400;
+}
+
+.card-seller__price {
+  grid-column: 2 / 3;
+  grid-row: 1 / 2;
+  text-align: right;
+  font-size: var(--fs-sm);
+  color: var(--black);
+  font-weight: 800;
+  margin: 0;
+}
+
+/* Segunda fila */
+.card-seller__secondary {
+  grid-column: 1 / 2;
+  grid-row: 2 / 3;
+  display: flex;
+  justify-content: flex-start;
+}
+
+.card-seller__primary {
+  grid-column: 2 / 3;
+  grid-row: 2 / 3;
+  display: flex;
+  justify-content: flex-end;
+}
+
+/* Botones conservan su tamaño natural */
+.card-seller__primary .btn {
+  font-family: var(--font-primary-regular);
+  font-weight: 400;
+  padding: var(--button-padding-top) var(--button-padding-right)
+           var(--button-padding-bottom) var(--button-padding-left);
+  border-radius: 8px;
+}
+
+/* === Responsivo === */
+@media (max-width: 480px) {
+  .card-seller__info {
+    grid-template-columns: 1fr;
+    grid-template-rows: repeat(4, auto);
+    text-align: center;
+  }
+
+  .card-seller__title,
+  .card-seller__price {
+    text-align: center;
+  }
+
+  .card-seller__secondary,
+  .card-seller__primary {
+    justify-content: center;
+  }
+}

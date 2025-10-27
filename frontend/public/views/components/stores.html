@@ -1,95 +1,79 @@
-<main class="stores">
+<!-- ================== Componente Tiendas (Administrador) ================== -->
+<main class="stores-admin">
+  <!-- Título principal -->
+  <h1 class="stores-admin__title">Tiendas</h1>
 
-  <!-- 📌 Título -->
-  <h1 class="stores__title">Tiendas</h1>
+  <!-- Tabla de tiendas -->
+  <section class="stores-admin__section">
+    <table class="stores-admin__table">
+      <thead class="stores-admin__table-head">
+        <tr class="stores-admin__table-row">
+          <th class="stores-admin__table-header">Nombre Tienda</th>
+          <th class="stores-admin__table-header">Número de Registro</th>
+          <th class="stores-admin__table-header">Actividad Económica</th>
+          <th class="stores-admin__table-header">Departamento</th>
+          <th class="stores-admin__table-header">Nombre Usuario</th>
+          <th class="stores-admin__table-header">Acción</th>
+        </tr>
+      </thead>
 
-  <!-- 📦 Tabla de tiendas -->
-  <div class="stores__table-wrapper">
-    <div class="stores__table">
-      <!-- Encabezado -->
-      <div class="stores__row stores__row--header">
-        <div class="stores__cell">#Tienda</div>
-        <div class="stores__cell">Nombre</div>
-        <div class="stores__cell">Número de registro</div>
-        <div class="stores__cell">Actividad económica</div>
-        <div class="stores__cell">Departamento</div>
-        <div class="stores__cell">#Usuario</div>
-        <div class="stores__cell">Acción</div>
-      </div>
+      <tbody class="stores-admin-admin__table-body">
+        <!-- Tienda 1 -->
+        <tr class="stores-admin__table-row">
+          <td class="stores-admin__table-cell" data-label="Nombre Tienda: ">El Campesino Feliz</td>
+          <td class="stores-admin__table-cell" data-label="Número de Registro: ">987654</td>
+          <td class="stores-admin__table-cell" data-label="Actividad Económica: ">Comercio de frutas</td>
+          <td class="stores-admin__table-cell" data-label="Departamento: ">Quindío</td>
+          <td class="stores-admin__table-cell" data-label="Nombre Usuario: ">Juliana Restrepo</td>
+          <td class="stores-admin__table-cell" data-label="Acción: ">
+            <div class="stores-admin__secondary">
+              <a href="seller_view.html" class="btn btn-variant2--secondary">Deshabilitar</a>
+            </div>
+          </td>
+        </tr>
 
-      <!-- Filas de datos -->
-      <div class="stores__row">
-        <div class="stores__cell">#1</div>
-        <div class="stores__cell">El As de la Papa</div>
-        <div class="stores__cell">4721</div>
-        <div class="stores__cell">Restauración</div>
-        <div class="stores__cell">Risaralda</div>
-        <div class="stores__cell">#1</div>
-        <div class="stores__cell">
-          <button class="stores__btn">Deshabilitar</button>
-=======
-        <!-- Filas de datos -->
-        <div class="stores__row">
-            <span class="stores__cell">#1</span>
-            <span class="stores__cell">El As de la Papa</span>
-            <span class="stores__cell">4721</span>
-            <span class="stores__cell">Restauración</span>
-            <span class="stores__cell">Risaralda</span>
-            <span class="stores__cell">#1</span>
-            <span><a href="profile_client.html" class="btn--variant2 btn--variant2--secondary shopping-cart__continue">Exportar PDF</a></span>
-        </div>
+        <!-- Tienda 2 -->
+        <tr class="stores-admin__table-row">
+          <td class="stores-admin__table-cell" data-label="Nombre Tienda: ">El Campesino Feliz</td>
+          <td class="stores-admin__table-cell" data-label="Número de Registro: ">987654</td>
+          <td class="stores-admin__table-cell" data-label="Actividad Económica: ">Comercio de frutas</td>
+          <td class="stores-admin__table-cell" data-label="Departamento: ">Quindío</td>
+          <td class="stores-admin__table-cell" data-label="Nombre Usuario: ">Juliana Restrepo</td>
+          <td class="stores-admin__table-cell" data-label="Acción: ">
+            <div class="stores-admin__secondary">
+              <a href="seller_view.html" class="btn btn-variant2--secondary">Deshabilitar</a>
+            </div>
+          </td>
+        </tr>
 
-        <div class="stores__row">
-            <span class="stores__cell">#2</span>
-            <span class="stores__cell">Fruver del Campo</span>
-            <span class="stores__cell">5839</span>
-            <span class="stores__cell">Comercio</span>
-            <span class="stores__cell">Quindío</span>
-            <span class="stores__cell">#2</span>
-            <span><a href="profile_client.html" class="btn--variant2 btn--variant2--secondary shopping-cart__continue">Exportar PDF</a></span>
->>>>>>> 2066834d3ee5e210abe215735683178e1521f9da
-        </div>
-      </div>
-      <div class="stores__row">
-        <div class="stores__cell">#2</div>
-        <div class="stores__cell">Fruver del Campo</div>
-        <div class="stores__cell">5839</div>
-        <div class="stores__cell">Comercio</div>
-        <div class="stores__cell">Quindío</div>
-        <div class="stores__cell">#2</div>
-        <div class="stores__cell">
-          <button class="stores__btn">Deshabilitar</button>
-        <div class="stores__row">
-            <span class="stores__cell">#3</span>
-            <span class="stores__cell">Donde Don Jorge</span>
-            <span class="stores__cell">6910</span>
-            <span class="stores__cell">Alimentos</span>
-            <span class="stores__cell">Caldas</span>
-            <span class="stores__cell">#3</span>
-            <span><a href="profile_client.html" class="btn--variant2 btn--variant2--secondary shopping-cart__continue">Exportar PDF</a></span>
-        </div>
-      </div>
+        <!-- Tienda 3 -->
+        <tr class="stores-admin__table-row">
+          <td class="stores-admin__table-cell" data-label="Nombre Tienda: ">Frutos del Valle</td>
+          <td class="stores-admin__table-cell" data-label="Número de Registro: ">456789</td>
+          <td class="stores-admin__table-cell" data-label="Actividad Económica: ">Venta de verduras frescas</td>
+          <td class="stores-admin__table-cell" data-label="Departamento: ">Caldas</td>
+          <td class="stores-admin__table-cell" data-label="Nombre Usuario: ">Emanuel Ríos</td>
+          <td class="stores-admin__table-cell" data-label="Acción: ">
+            <div class="stores-admin__secondary">
+              <a href="seller_view.html" class="btn btn-variant2--secondary">Deshabilitar</a>
+            </div>
+          </td>
+        </tr>
 
-      <div class="stores__row">
-        <div class="stores__cell">#3</div>
-        <div class="stores__cell">Donde Don Jorge</div>
-        <div class="stores__cell">6910</div>
-        <div class="stores__cell">Alimentos</div>
-        <div class="stores__cell">Caldas</div>
-        <div class="stores__cell">#3</div>
-        <div class="stores__cell">
-          <button class="stores__btn">Deshabilitar</button>
-        </div>
-      </div>
-
-    </div>
-  </div>
-  <!-- Botón final -->
-  <div class="stores__footer">
-    <button class="stores__btn stores__btn--primary">Pasarela de pago</button>
-  </div>
-<!-- Botón final -->
-<div class="stores__footer">
-    <a href="product_description.html" class="btn btn--primary">Pasarela de pago</a>
-    </div>
+        <!-- Tienda 4 -->
+        <tr class="stores-admin__table-row">
+          <td class="stores-admin__table-cell" data-label="Nombre Tienda: ">Mercado Central</td>
+          <td class="stores-admin__table-cell" data-label="Número de Registro: ">741852</td>
+          <td class="stores-admin__table-cell" data-label="Actividad Económica: ">Comercio de abarrotes</td>
+          <td class="stores-admin__table-cell" data-label="Departamento: ">Risaralda</td>
+          <td class="stores-admin__table-cell" data-label="Nombre Usuario: ">Daniela Arango</td>
+          <td class="stores-admin__table-cell" data-label="Acción: ">
+            <div class="stores-admin__secondary">
+              <a href="seller_view.html" class="btn btn-variant2--secondary">Deshabilitar</a>
+            </div>
+          </td>
+        </tr>
+      </tbody>
+    </table>
+  </section>
 </main>
