@@ -1,0 +1,13 @@
+.content-seeker-and-users {
+  display: grid;
+  grid-template-columns: 300px 1fr; /* izquierda fija, derecha flexible */
+  gap: var(--gap-lg);
+  width: 100%;
+  align-items: start;
+}
+
+.right-panel {
+  display: flex;
+  flex-direction: column;
+  gap: var(--gap-md);
+}

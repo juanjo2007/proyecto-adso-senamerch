@@ -1,0 +1,104 @@
+.store-orders {
+  width: 100%;
+  background-color: var(--white);
+  border-radius: 12px;
+  padding: var(--gap-lg);
+  box-shadow: 0 2px 8px rgba(0,0,0,0.08);
+  font-family: var(--font-primary);
+}
+.store-orders__header {
+  display: flex;
+  flex-direction: column;
+  gap: var(--gap-sm);
+  margin-bottom: var(--gap-md);
+}
+.store-orders__title {
+  font-size: var(--fs-sm);
+  font-weight: 600;
+  color: var(--primary-950);
+}
+.store-orders__filters {
+  display: flex;
+  justify-content: flex-start;
+}
+.store-orders__filter {
+  padding: var(--padding-top) var(--padding-right);
+  border: 1px solid var(--gray-200);
+  border-radius: 8px;
+  background-color: var(--white);
+  font-size: var(--fs-xs);
+  color: var(--gray-800);
+}
+.store-orders__list {
+  display: grid;
+  gap: var(--gap-md);
+}
+.store-orders__item {
+  display: grid;
+  grid-template-columns: 1fr auto auto;
+  align-items: center;
+  background-color: var(--primary-50);
+  border: 1px solid var(--primary-200);
+  border-radius: 10px;
+  padding: var(--gap-md);
+  transition: background-color 0.3s ease;
+}
+.store-orders__item:hover {
+  background-color: var(--primary-100);
+}
+.store-orders__info {
+  display: flex;
+  flex-direction: column;
+  gap: var(--gap-xxs);
+}
+.store-orders__id {
+  font-size: var(--fs-xs);
+  font-weight: 600;
+  color: var(--black);
+}
+.store-orders__client,
+.store-orders__date {
+  font-size: var(--fs-xxs);
+  color: var(--gray-700);
+}
+.store-orders__status {
+  font-size: var(--fs-xxs);
+  font-weight: 600;
+  text-align: center;
+  padding: 4px 10px;
+  border-radius: 8px;
+}
+.store-orders__status--pending {
+  background-color: var(--secundary-800);
+  color: var(--white);
+}
+.store-orders__status--delivered {
+  background-color: var(--secundary-100);
+  color: var(--secundary-700);
+}
+.store-orders__status--in-process {
+  background-color: var(--primary-100);
+  color: var(--primary-800);
+}
+.store-orders__total {
+  font-size: var(--fs-xs);
+  font-weight: 600;
+  color: var(--gray-900);
+  text-align: right;
+}
+.store-orders__secondary {
+  display: flex;
+  justify-content: center;
+  text-align: right;
+  padding-right: var(--gap-sm); 
+}
+@media (width < 768px) {
+  .store-orders__item {
+    grid-template-columns: 1fr;
+    text-align: left;
+    gap: var(--gap-sm);
+  }
+  .store-orders__actions {
+    text-align: left;
+  }
+}

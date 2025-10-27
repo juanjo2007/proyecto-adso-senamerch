@@ -8,18 +8,30 @@
   <script src="/frontend/public/js/components/navbar.js" defer></script>
   <script src="/frontend/public/js/components/footer.js" defer></script>
   <script src="/frontend/public/js/components/admin.js" defer></script>
+  <script src="/frontend/public/js/components/search-bar.js" defer></script>
 </head>
 <body>
   <main>
+    <!-- >>> Navbar -->
     <section class="navbar-admin">
       <div class="navbar-container"></div>
     </section>
 
-    <section class="admin-dashboard">
-      <div class="admin-container"></div>
-    </section>
+    <!-- >>> Grid principal -->
+    <div class="content-admin-and-search">
+      <!-- Columna izquierda -->
+      <section class="admin-dashboard">
+        <div class="admin-container"></div>
+      </section>
+
+      <!-- Columna derecha -->
+      <section class="seeker">
+        <div class="search-bar-container"></div>
+      </section>
+    </div>
   </main>
 
+  <!-- >>> Footer -->
   <section class="footer-sdfg">
     <footer class="footer-container"></footer>
   </section>

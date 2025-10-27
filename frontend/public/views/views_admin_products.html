@@ -7,6 +7,7 @@
   <link rel="stylesheet" href="/frontend/public/css/main.css">
   <script src="/frontend/public/js/components/navbar.js" defer></script>
   <script src="/frontend/public/js/components/products.js" defer></script>
+  <script src="/frontend/public/js/components/search-bar.js" defer></script>
   <script src="/frontend/public/js/components/footer.js" defer></script>
   <script src="/frontend/public/js/components/admin.js" defer></script>
 </head>
@@ -17,18 +18,25 @@
       <div class="navbar-container"></div>
     </section>
 
-    <section class="admin-dashboard">
-      <div class="admin-container"></div>
-    </section>
+    <!-- >>> Contenedor con dos columnas -->
+    <div class="content-seeker-and-products">
+      <!-- Columna izquierda -->
+      <section class="admin-dashboard">
+        <div class="admin-container"></div>
+      </section>
 
-    <section class="seeker">
-        <div class="search-bar-container"></div>
-    </section>
+      <!-- Columna derecha -->
+      <div class="right-panel">
+        <section class="seeker">
+          <div class="search-bar-container"></div>
+        </section>
 
-    <!-- >>> Section Products -->
-    <section class="products-section">
-      <div class="products-container"></div>
-    </section>
+        <!-- >>> Section Products -->
+        <section class="products-section">
+          <div class="products-container"></div>
+        </section>
+      </div>
+    </div>
   </main>
 
   <!-- >>> Section Footer -->

@@ -70,6 +70,12 @@
 @import url('components/contact1.css');
 @import url('components/create-store.css');
 @import url('components/admin.css');
+@import url('components/store_orders.css');
+@import url('components/store_order_detail.css');
+@import url('components/wiews_users_admin.css');
+@import url('components/views_admin_products.css');
+@import url('components/views_admin_posts.css');
+@import url('components/admin_index.css');
 
 
 /* Importaciones de SenaMerch Jeferson */
