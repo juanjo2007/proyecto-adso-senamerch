@@ -1,50 +1,39 @@
-/* ================== ADMIN LAYOUT ================== */
 .admin-layout {
   display: flex;
   width: fit-content;
-  min-height: 100vh;
+  min-height: 90vh;
   background: var(--white);
   font-family: var(--font-primary);
 }
-
-/* ===== Contenedor principal ===== */
 .admin-layout__container {
   display: grid;
   grid-template-columns: 240px 1fr;
   width: 100%;
 }
-
-/* ===== Sidebar ===== */
 .admin-layout__sidebar {
   background: var(--gray-900);
   color: var(--white);
   padding: var(--gap-lg);
   display: flex;
   flex-direction: column;
-  align-items: center; /* Centra horizontalmente */
+  align-items: center; 
   gap: var(--gap-md);
 }
-
-/* ===== Título del sidebar ===== */
 .admin-layout__sidebar-title {
   font-family: var(--font-primary-bold);
   font-size: var(--fs-sm);
   margin-bottom: var(--gap-md);
   text-align: center;
 }
-
-/* ===== Menú ===== */
 .admin-layout__menu {
   list-style: none;
   padding: 0;
   margin: 0;
   display: flex;
   flex-direction: column;
-  align-items: center; /* Centra los links */
+  align-items: center; 
   gap: var(--gap-sm);
 }
-
-/* ===== Links ===== */
 .admin-layout__menu-link {
   color: var(--white);
   text-decoration: none;
@@ -56,9 +45,13 @@
   display: block;
   text-align: center;
 }
-
 .admin-layout__menu-link:hover,
 .admin-layout__menu-link--active {
   background: var(--secundary-700);
   color: var(--white);
+}
+@media (max-width: 768px) {
+  .admin-layout {
+    min-height: 100%;
+  }
 }

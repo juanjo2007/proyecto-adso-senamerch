@@ -36,7 +36,7 @@
 
 .create-store__form {
   display: grid;
-  grid-template-columns: repeat(2, 1fr); /* ✅ Dos columnas */
+  grid-template-columns: repeat(2, 1fr); 
   gap: var(--gap-md);
   margin-top: var(--gap-md);
 }
@@ -48,7 +48,7 @@
 }
 
 .create-store__group--full {
-  grid-column: 1 / -1; /* ✅ ocupa ambas columnas */
+  grid-column: 1 / -1; 
 }
 
 .create-store__label {
@@ -74,6 +74,12 @@
 .create-store__input:focus {
   border-color: var(--secundary-900);
   box-shadow: 0 0 4px var(--secundary-900);
+}
+.create-store__link{
+  font-size: var(--fs-xs);
+  color: var(--secundary-700);
+  text-decoration: underline;
+  transition: color 0.3s;
 }
 
 .create-store__helper {

@@ -1,0 +1,14 @@
+.content-admin-and-search {
+  display: grid;
+  grid-template-columns: 300px 1fr; /* Panel izquierdo fijo, derecho flexible */
+  gap: var(--gap-lg);
+  width: 100%;
+  align-items: start;
+}
+
+/* 📱 Responsive */
+@media (max-width: 768px) {
+  .content-admin-and-search {
+    grid-template-columns: 1fr;
+  }
+}

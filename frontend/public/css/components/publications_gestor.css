@@ -100,25 +100,50 @@
   margin-top: var(--gap-md);
 }
 
-/* botón secundario (izquierda, columna 1) */
-.create-post__field-secundary {
-  display: flex;
-  grid-column: 1;
-  justify-content: flex-start; 
+/* ====== GRID de botones ====== */
+.create-post__actions-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr; /* dos columnas iguales */
   align-items: center;
-  gap: var(--gap-md);
-  margin-top: var(--gap-md);
+  margin-top: var(--gap-xl);
+  width: 100%;
 }
 
-.create-post__field-actions .btn,
-.create-post__field-secundary .btn {
+/* Botón secundario: izquierda */
+.create-post__field-secundary {
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+}
+
+/* Botón primario: derecha */
+.create-post__field-actions {
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+}
+
+/* Espaciado uniforme en ambos botones */
+.create-post__field-actions .btn{
   font-family: var(--font-primary-regular);
   font-weight: 400;
   padding: var(--button-padding-top) var(--button-padding-right)
            var(--button-padding-bottom) var(--button-padding-left);
 }
 
-/* ==== RESPONSIVO ==== */
+/* ====== RESPONSIVO ====== */
+@media (max-width: 768px) {
+  .create-post__actions-grid {
+    grid-template-columns: 1fr; /* una columna */
+    gap: var(--gap-md);
+  }
+
+  .create-post__field-secundary,
+  .create-post__field-actions {
+    justify-content: center; /* centrados en móvil */
+  }
+}
+
 
 /* Tablets: 2 columnas */
 @media (max-width: 1024px) {

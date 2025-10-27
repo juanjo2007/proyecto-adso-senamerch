@@ -15,9 +15,9 @@
   overflow-y: auto; 
 }
 .shopping-cart__title {
-  font-size: var(--fs-md);
+  font-size: var(--fs-sm);
   font-weight: bold;
-  color: var(--secondary-950); /* corregido */
+  color: var(--secondary-950); 
 }
 .shopping-cart__list {
   display: flex;
@@ -46,7 +46,7 @@
   gap: var(--gap-xxs);
 }
 .shopping-cart__item-name {
-  font-size: var(--fs-sm);
+  font-size: var(--fs-xs);
   font-weight: 600;
   color: var(--secondary-950);
 }

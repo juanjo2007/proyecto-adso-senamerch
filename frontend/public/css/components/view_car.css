@@ -1,38 +1,49 @@
 .view_car_pay_method {
-  display: grid;
-  grid-template-columns: 1fr; 
-  gap: var(--gap-lg);
+  display: flex;
+  justify-content: center;   
+  align-items: center;         
   width: 100%;
-  max-width: 1280px; 
+  background-color: var(--gray-50);
+  box-sizing: border-box;
+  overflow-x: hidden;
+}
+.car-pay-grid {
+  display: grid;
+  grid-template-columns: 2fr 1fr;
+  gap: var(--gap-lg);
+  max-width: 1200px;         
+  width: 100%;
   margin: 0 auto;
   padding: var(--gap-lg);
   box-sizing: border-box;
 }
-@media (min-width: 1024px) {
-  .view_car_pay_method {
-    grid-template-columns: 2fr 1fr; 
-    align-items: start;
-  }
+.pay-method-product {
+  display: grid;
+  place-items: center;
 }
-.car-buys,
-.pay {
+.payment-method-container {
   width: 100%;
-  box-sizing: border-box;
+  max-width: 400px;
 }
 @media (max-width: 768px) {
-  .view_car_pay_method {
+  .car-pay-grid {
     grid-template-columns: 1fr;
+  }
+
+  .pay-method-product {
+    justify-content: center;
+  }
+}
+@media (max-width: 768px) {
+  .car-pay-grid {
+    grid-template-columns: 1fr;
+    max-width: 100%;
+    padding: var(--gap-md);
   }
 }
 @media (min-width: 1024px) {
   .pay {
-    display: flex;
-    justify-content: center;
     align-items: center;
-    height: 100%;
-  }
-  .payment-method {
-    width: 100%;
-    max-width: 100%; 
   }
 }
+
