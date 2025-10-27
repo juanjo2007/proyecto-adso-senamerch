@@ -3,7 +3,7 @@
   background-color: var(--white);
   padding: var(--gap-lg);
   width: 900px;
-  margin: 5rem auto 2rem auto;
+  margin: 2rem auto 2rem auto;
   border-radius: 8px;
   box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
   font-family: var(--font-primary);

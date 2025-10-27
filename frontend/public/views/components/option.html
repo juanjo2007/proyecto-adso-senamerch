@@ -1,86 +1,58 @@
-<section class="page-center"> 
+<section class="product-purchase">
+  <h2 class="product-purchase__title">Selecciona las opciones de compra</h2>
 
-  <!-- 🔹 Título del producto -->
-  <header class="product">
-    <h1 class="product__title">Tomate</h1>
-    <p class="product__subtitle">Selecciona la unidad y cantidad que deseas</p>
-  </header>
-
-  <!-- Opciones de unidad -->
-  <div class="unit-options">
-    <div class="unit-options__container">
-
-      <label class="unit-options__item">
-        <input type="radio" name="unit" class="unit-options__input" />
-        <img src="/frontend/public/assets/icons/icon_payment_method.svg" 
-             alt="Kilogramo" 
-             class="unit-options__icon">
-        <span class="unit-options__label">Kilogramo</span>
+  <!-- Tipo de producto -->
+  <div class="product-purchase__group">
+    <label class="product-purchase__label">Tipo de producto:</label>
+    <div class="product-purchase__options">
+      <label class="product-purchase__option">
+        <input type="radio" name="productType" value="solid" class="product-purchase__radio" checked>
+        Sólido
       </label>
-
-      <label class="unit-options__item">
-        <input type="radio" name="unit" class="unit-options__input" />
-        <img src="/frontend/public/assets/icons/icon_payment_method.svg" 
-             alt="Arroba" 
-             class="unit-options__icon">
-        <span class="unit-options__label">Arroba</span>
+      <label class="product-purchase__option">
+        <input type="radio" name="productType" value="liquid" class="product-purchase__radio">
+        Líquido
       </label>
-
-      <label class="unit-options__item">
-        <input type="radio" name="unit" class="unit-options__input" />
-        <img src="/frontend/public/assets/icons/icon_payment_method.svg" 
-             alt="Libra" 
-             class="unit-options__icon">
-        <span class="unit-options__label">Libra</span>
-      </label>
-
-      <label class="unit-options__item">
-        <input type="radio" name="unit" class="unit-options__input" />
-        <img src="/frontend/public/assets/icons/icon_payment_method.svg" 
-             alt="Tonelada" 
-             class="unit-options__icon">
-        <span class="unit-options__label">Tonelada</span>
-      </label>
-
-      <label class="unit-options__item">
-        <input type="radio" name="unit" class="unit-options__input" />
-        <img src="/frontend/public/assets/icons/icon_payment_method.svg" 
-             alt="Mililitro" 
-             class="unit-options__icon">
-        <span class="unit-options__label">Mililitro</span>
-      </label>
-
-      <label class="unit-options__item">
-        <input type="radio" name="unit" class="unit-options__input" />
-        <img src="/frontend/public/assets/icons/icon_payment_method.svg" 
-             alt="Litro" 
-             class="unit-options__icon">
-        <span class="unit-options__label">Litro</span>
-      </label>
-
     </div>
   </div>
 
-  <!-- Contenedor cantidad -->
-  <div class="quantity">
-    <label class="quantity__label">
-      Selecciona una unidad de medida
+  <!-- Tipo de medida -->
+  <div class="product-purchase__group">
+    <label class="product-purchase__label">Unidad de medida:</label>
+    <select class="product-purchase__select">
+
+      <!-- Opciones para productos sólidos -->
+      <optgroup label="Sólido">
+        <option value="kg" data-unit="kilogramos">Kilogramo (kg)</option>
+        <option value="g" data-unit="gramos">Gramo (g)</option>
+        <option value="halfkg" data-unit="medios kilos">Medio kilo (500g)</option>
+        <option value="quarterkg" data-unit="cuartos de kilo">Cuarto kilo (250g)</option>
+        <option value="ton" data-unit="toneladas">Tonelada (t)</option>
+        <option value="arroba" data-unit="arrobas">Arroba (Arb)</option>
+      </optgroup>
+
+      <!-- Opciones para productos líquidos -->
+      <optgroup label="Líquido">
+        <option value="ml" data-unit="mililitros">Mililitro (mL)</option>
+        <option value="dl" data-unit="decilitros">Decilitro (dL)</option>
+        <option value="l" data-unit="litros">Litro (L)</option>
+        <option value="hl" data-unit="hectolitros">Hectolitro (hL)</option>
+        <option value="kl" data-unit="kilolitros">Kilolitro (kL)</option>
+      </optgroup>
+
+    </select>
+  </div>
+
+  <!-- Cantidad -->
+  <div class="product-purchase__group">
+    <label class="product-purchase__label">
+      Cantidad (en <span class="product-purchase__unit">kilogramos</span>):
     </label>
-
-    <input 
-      type="number" 
-      class="quantity__field" 
-      placeholder="Introduce la cantidad que deseas" 
-      min="1"
-    >
-
-    <small class="quantity__helper">
-      Máximo según la disponibilidad.
-    </small>
+    <input type="number" min="1" class="product-purchase__input" placeholder="Ejemplo: 2">
   </div>
 
   <!-- Botón -->
-  <div class="page-center__buttons">
-    <a href="viwe_car.html" class="btn btn--primary">Agregar al carrito de compras</a>
+  <div class="product-purchase__actions">
+    <a href="viwe_car.html" class="btn btn--primary">Agregar al carrito</a>
   </div>
 </section>

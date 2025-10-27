@@ -4,6 +4,7 @@
   border: 1px solid var(--gray-100);
   border-radius: 8px;
   padding: var(--gap-lg);
+  width: 100%;
 }
 .payment-method__title {
   font-size: var(--fs-sm);
@@ -28,8 +29,8 @@
   transition: all 0.2s ease-in-out;
 }
 .payment-method__option:hover {
-  border-color: var(--primary-400);
-  background-color: var(--primary-100);
+  border-color: var(--secundary-500);
+  background-color: var(--white);
 }
 .payment-method__input {
   accent-color: var(--secundary-500);
