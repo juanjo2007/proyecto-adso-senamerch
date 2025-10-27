@@ -9,12 +9,11 @@
 }
 .footer-container__container {
   display: flex;
-  justify-content: space-between; /* reparte izquierda - derecha */
+  justify-content: space-between; 
   align-items: center;
-  width: 100%;    /* ocupa todo el ancho */
-  max-width: none; /* quita la limitación */
+  width: 100%;    
+  max-width: none;
 }
-
 .footer-container__text {
   font-size: var(--fs-xs);
   color: var(--white);

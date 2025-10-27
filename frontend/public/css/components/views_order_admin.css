@@ -1,16 +1,23 @@
-.content-admin-and-search {
+.content-orders {
   display: grid;
   grid-template-columns: 300px 1fr; 
   gap: var(--gap-lg);
   width: 100%;
   align-items: start;
 }
+.right-panel {
+  display: flex;
+  flex-direction: column;
+  gap: var(--gap-md);
+}
 @media (max-width: 768px) {
-  .content-admin-and-search {
+  .content-orders {
     grid-template-columns: 1fr;
+  }
+  .seeker {
     order: 1;
   }
-  .seeker{
+  .order-0 {
     order: 2;
   }
 }

@@ -1,9 +1,9 @@
 <section class="posts">
   <h1 class="posts__title">Publicaciones</h1>
 
-  <div class="posts__card">
+  <div class="posts__table-wrapper">
     <table class="posts__table">
-      <thead>
+      <thead class="posts__table-head">
         <tr class="posts__table-row posts__table-row--header">
           <th class="posts__table-header">Fecha (Publicación)</th>
           <th class="posts__table-header">Usuario (Nombre)</th>
@@ -11,33 +11,38 @@
           <th class="posts__table-header">Acción</th>
         </tr>
       </thead>
-      <tbody>
+      <tbody class="posts__table-body">
         <tr class="posts__table-row">
-          <td class="posts__table-cell">1/12/2025</td>
-          <td class="posts__table-cell">Juan Pérez</td>
-          <td class="posts__table-cell">Tienda Central</td>
-          <td class="posts__table-cell">
+          <td class="posts__table-cell" data-label="Fecha: ">01/12/2025</td>
+          <td class="posts__table-cell" data-label="Usuario: ">Juan Pérez</td>
+          <td class="posts__table-cell" data-label="Tienda: ">Tienda Central</td>
+          <td class="posts__table-cell" data-label="Acción">
             <div class="posts__secondary">
               <a href="seller_view.html" class="btn btn-variant2--secondary">Deshabilitar</a>
-            </div></td>
+            </div>
+          </td>
         </tr>
+
         <tr class="posts__table-row">
-          <td class="posts__table-cell">02/11/2025</td>
-          <td class="posts__table-cell">Ana López</td>
-          <td class="posts__table-cell">Market Express</td>
-          <td class="posts__table-cell">
+          <td class="posts__table-cell" data-label="Fecha: ">02/11/2025</td>
+          <td class="posts__table-cell" data-label="Usuario: ">Ana López</td>
+          <td class="posts__table-cell" data-label="Tienda: ">Market Express</td>
+          <td class="posts__table-cell" data-label="Acción">
             <div class="posts__secondary">
               <a href="seller_view.html" class="btn btn-variant2--secondary">Deshabilitar</a>
-            </div></td>
+            </div>
+          </td>
         </tr>
+
         <tr class="posts__table-row">
-          <td class="posts__table-cell">16/10/2025</td>
-          <td class="posts__table-cell">Carlos Gómez</td>
-          <td class="posts__table-cell">Shop Online</td>
-          <td class="posts__table-cell">
+          <td class="posts__table-cell" data-label="Fecha: ">16/10/2025</td>
+          <td class="posts__table-cell" data-label="Usuario: ">Carlos Gómez</td>
+          <td class="posts__table-cell" data-label="Tienda: ">Shop Online</td>
+          <td class="posts__table-cell" data-label="Acción">
             <div class="posts__secondary">
               <a href="seller_view.html" class="btn btn-variant2--secondary">Deshabilitar</a>
-            </div></td>
+            </div>
+          </td>
         </tr>
       </tbody>
     </table>

@@ -1,0 +1,108 @@
+<section class="edit-post">
+  <form class="edit-post__form">
+    <div class="edit-post__fields-wrapper">
+      <h2 class="edit-post__title">Editar producto</h2>
+
+      <!-- Campo: Título -->
+      <div class="edit-post__field">
+        <label class="edit-post__label">Título del producto</label>
+        <input 
+          type="text" 
+          class="edit-post__input edit-post__input--text" 
+          value="Tomate del Valle" 
+          required
+        >
+      </div>
+
+      <!-- Campo: Precio -->
+      <div class="edit-post__field">
+        <label class="edit-post__label">Precio</label>
+        <input 
+          type="number" 
+          class="edit-post__input edit-post__input--text" 
+          value="3000" 
+          min="0" 
+          required
+        >
+      </div>
+
+      <!-- Campo: Categoría -->
+      <div class="edit-post__field">
+        <label class="edit-post__label">Categoría</label>
+        <select class="edit-post__select" required>
+          <option value="" disabled>Selecciona una categoría</option>
+          <option value="frutas" selected>Frutas</option>
+          <option value="verduras">Verduras</option>
+          <option value="carnes">Carnes</option>
+          <option value="bebidas">Bebidas</option>
+          <option value="otros">Otros</option>
+        </select>
+      </div>
+
+      <!-- Campo: Cantidad disponible -->
+      <div class="edit-post__field">
+        <label class="edit-post__label">Cantidad disponible</label>
+        <input 
+          type="number" 
+          class="edit-post__input" 
+          value="50" 
+          min="1" 
+          required
+        >
+      </div>
+
+      <!-- Campo: Unidad de medida -->
+      <div class="edit-post__field">
+        <label class="edit-post__label">Unidad de medida</label>
+        <select class="edit-post__select" required>
+          <option value="" disabled>Selecciona una unidad</option>
+          <option value="kg" selected>Kilogramos (kg)</option>
+          <option value="lb">Libras (lb)</option>
+          <option value="unidad">Unidad</option>
+          <option value="litro">Litros (L)</option>
+          <option value="mililitro">Mililitros (mL)</option>
+        </select>
+      </div>
+
+      <!-- Campo: Descuento -->
+      <div class="edit-post__field">
+        <label class="edit-post__label">Descuento (%)</label>
+        <input 
+          type="number" 
+          class="edit-post__input" 
+          value="10" 
+          min="0" 
+          max="100"
+        >
+      </div>
+
+      <!-- Campo: Descripción -->
+      <div class="edit-post__field edit-post__field--full">
+        <label class="edit-post__label">Descripción</label>
+        <textarea 
+          class="edit-post__textarea"
+        >Tomates frescos del Valle, cultivados sin pesticidas.</textarea>
+      </div>
+
+      <!-- Campo: Imagen -->
+      <div class="edit-post__field edit-post__field--full">
+        <label class="edit-post__label">Imagen del producto</label>
+        <input 
+          type="file" 
+          class="edit-post__input" 
+          accept="image/*"
+        >
+      </div>
+    </div>
+
+    <div class="edit-post__actions-grid">
+      <div class="edit-post__field-secundary">
+        <a href="view_seller_cards.html" class="btn btn-variant2--secondary">Cancelar</a>
+      </div>
+
+      <div class="edit-post__field-actions">
+        <a href="seller_view.html" class="btn btn--primary">Guardar cambios</a>
+      </div>
+    </div>
+  </form>
+</section>

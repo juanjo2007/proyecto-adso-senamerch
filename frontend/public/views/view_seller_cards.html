@@ -6,34 +6,30 @@
     <link rel="stylesheet" href="/frontend/public/css/main.css">
     
     <script type="module">
-      import { loadCards } from "/frontend/public/js/components/card.js";
+      import { loadSellercards } from "/frontend/public/js/components/seller_card.js";
       document.addEventListener("DOMContentLoaded", () => {
-        loadCards(".cards__container");
+        loadSellercards(".seller-cards__container");
       });
     </script>
-    <script src="/frontend/public/js/components/navbar_client_view.js"></script>
+    <script src="/frontend/public/js/components/navbar_profile_store_seller.js"></script>
     <script src="/frontend/public/js/components/search-bar.js"></script>
     <script src="/frontend/public/js/components/client_view.js"></script>
     <script src="/frontend/public/js/components/footer.js"></script>
     
-    <title>Sena Merch Cliente</title>
+    <title>Tienda Vendedor</title>
 </head>
 <body>
     <main>
-      <section>
-        <div class="navbar_client_view"></div>
-      </section>
+    <section>
+        <div class="navbar_profile_store_seller"></div>
+    </section>
 
       <section class="seeker">
         <div class="search-bar-container"></div>
       </section>
-
-      <section class="client-users">
-        <div class="client-view"></div>  
-      </section>
       
       <section class="products-cards">
-        <div class="cards__container"></div>
+        <div class="seller-cards__container"></div>
       </section>
     </main>
     <section>

@@ -14,10 +14,10 @@
   .content-seeker-and-products {
     grid-template-columns: 1fr;
   }
-  .admin-dashboard {
-    order: 1; 
+  .seeker{
+    order: 1;
   }
-  .right-panel {
+  .products-section{
     order: 2;
   }
 }

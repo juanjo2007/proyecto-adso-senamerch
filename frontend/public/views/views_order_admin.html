@@ -3,36 +3,48 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title> Pedidos </title>
+  <title>Pedidos</title>
+
+  <!-- CSS principal -->
   <link rel="stylesheet" href="/frontend/public/css/main.css">
+  <!-- CSS del componente -->
+  <link rel="stylesheet" href="/frontend/public/css/components/orders.css">
+
+  <!-- JS de componentes -->
   <script src="/frontend/public/js/components/order_admin.js" defer></script>
   <script src="/frontend/public/js/components/navbar.js" defer></script>
   <script src="/frontend/public/js/components/footer.js" defer></script>
   <script src="/frontend/public/js/components/search-bar.js" defer></script>
   <script src="/frontend/public/js/components/admin.js" defer></script>
 </head>
-<body>
 
-  
+<body>
   <main>
-    <!-- >>> Section Navbar -->
+    <!-- >>> Navbar -->
     <section class="navbar-order">
       <div class="navbar-container"></div>
     </section>
-  
-  <section class="admin-dashboard">
-    <div class="admin-container"></div>
-  </section>
 
-    <section class="seeker">
-      <div class="search-bar-container"></div>
-    </section>
-    <!-- >>> Section order_admin -->
-    <section class="order-0">
-      <div class="order-0-container"></div>
-    </section>
+    <!-- >>> Contenedor principal con 2 columnas -->
+    <div class="content-orders">
+      <!-- Columna izquierda -->
+      <section class="admin-dashboard">
+        <div class="admin-container"></div>
+      </section>
+
+      <!-- Columna derecha -->
+      <div class="right-panel">
+        <section class="seeker">
+          <div class="search-bar-container"></div>
+        </section>
+        <section class="order-0">
+          <div class="order-0-container"></div>
+        </section>
+      </div>
+    </div>
   </main>
-  <!-- >>> Section Footer -->
+
+  <!-- >>> Footer -->
   <footer class="footer-container"></footer>
 </body>
 </html>
