@@ -19,18 +19,15 @@
   text-align: center;
   border-right: 1px solid var(--gray-200);
   padding-right: var(--gap-lg);
-  height: 100%; /* Importante para usar el espacio vertical */
+  height: 100%;
 }
-
-/* Mantiene el botón en la parte inferior del sidebar */
 .user-profile__actions-secundary {
-  margin-top: auto; /* Empuja el botón hacia abajo */
+  margin-top: auto; 
   padding-top: var(--gap-md);
   width: 100%;
   display: flex;
   justify-content: center;
 }
-
 .user-profile__image {
   width: 120px;
   height: 120px;
@@ -39,67 +36,55 @@
   border: 3px solid var(--primary-300);
   margin-bottom: var(--gap-sm);
 }
-
 .user-profile__image img {
   width: 100%;
   height: 100%;
   object-fit: cover;
 }
-
 .user-profile__name {
   font-size: var(--fs-xs);
   font-family: var(--font-primary-semibold);
   color: var(--black);
   margin-bottom: var(--gap-xxs);
 }
-
 .user-profile__role {
   font-size: var(--fs-xxs);
   color: var(--gray-700);
   margin-bottom: var(--gap-sm);
 }
-
 .user-profile__sidebar hr {
   width: 100%;
   border: none;
   border-top: 1px solid var(--gray-200);
   margin: var(--gap-sm) 0;
 }
-
 .user-profile__info {
   font-size: var(--fs-xxs);
   color: var(--gray-800);
   margin-bottom: var(--gap-xxs);
 }
-
-/* === Content === */
 .user-profile__content {
   display: flex;
   flex-direction: column;
   gap: var(--gap-lg);
 }
-
 .user-profile__title {
   font-size: var(--fs-md);
   text-align: center;
   color: var(--black);
   margin-bottom: var(--gap-sm);
 }
-
 .user-profile__subtitle {
   font-size: var(--fs-xs);
   font-family: var(--font-primary-semibold);
   color: var(--black);
   margin-bottom: var(--gap-sm);
 }
-
-/* GRID INTERNO para los datos personales */
 .user-profile__grid {
   display: grid;
   grid-template-columns: repeat(2, 1fr);
   gap: var(--gap-xxs) var(--gap-xxs);
 }
-
 .user-profile__grid p {
   font-size: var(--fs-xxs);
   color: var(--gray-800);
@@ -109,25 +94,19 @@
   border-radius: 6px;
   box-shadow: 0 2px 4px rgba(0,0,0,0.02);
 }
-
-/* === Listas === */
 .user-profile__list {
   font-size: var(--fs-xxs);
   color: var(--gray-800);
   padding-left: 1.5rem;
   list-style: disc;
 }
-
-/* === Configuración === */
 .user-profile__section {
   border-bottom: 1px solid var(--gray-100);
   padding-bottom: var(--gap-md);
 }
-
 .user-profile__section--config {
   border-bottom: none;
 }
-
 .user-profile__actions {
   display: flex;
   width: 100%;
@@ -143,30 +122,37 @@
   min-width: 140px;
   text-align: center;
 }
-
-/* === Responsivo === */
+.user-profile__link {
+  text-decoration: none;
+  color: var(--primary-950);
+  transition: color 0.3s ease;
+}
+.user-profile__link:hover {
+  color: var(--primary-700);
+}
+.user-profile__subtitle {
+  font-family: var(--font-primary-semibold);
+  font-size: var(--fs-xs);
+  margin-bottom: var(--gap-xs);
+}
 @media (max-width: 768px) {
   .user-profile {
     grid-template-columns: 1fr;
     padding: var(--gap-md);
   }
-
   .user-profile__sidebar {
     border-right: none;
     border-bottom: 1px solid var(--gray-200);
     padding-bottom: var(--gap-md);
     margin-bottom: var(--gap-md);
   }
-
   .user-profile__grid {
     grid-template-columns: 1fr;
   }
-
   .user-profile__actions {
     flex-direction: column;
     align-items: center;
   }
-
   .user-profile__actions .btn {
     width: 100%;
     text-align: center;

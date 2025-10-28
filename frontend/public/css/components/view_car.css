@@ -5,8 +5,7 @@
   width: 100%;
   background-color: var(--gray-50);
   box-sizing: border-box;
-  overflow-x: hidden;
-}
+} 
 .car-pay-grid {
   display: grid;
   grid-template-columns: 2fr 1fr;
