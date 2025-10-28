@@ -13,7 +13,7 @@
   line-height: 1.5;
   box-shadow: var(--gap-xxs) var(--gap-xxs) var(--gap-sm) var(--black);
 
-  width: 100%;
+  width: 95%;
   margin: var(--gap-md) auto;
   max-width: 72rem; 
 }
