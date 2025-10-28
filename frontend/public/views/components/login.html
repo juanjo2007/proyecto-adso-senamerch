@@ -1,28 +1,33 @@
-<div class="login">
-  <h1 class="login__title">Iniciar Sesión</h1>
-  <form class="login__form">
-    <div class="login__field">
-      <label class="login__label" for="email">Utiliza tu correo electrónico</label>
-      <input class="login__input" type="email" placeholder="Correo electrónico" required>
-    </div>
+<main class="site-main">
+  <div class="login">
+    <h1 class="login__title">Iniciar Sesión</h1>
 
-    <div class="login__field">
-      <label class="login__label" for="user-type">Tipo de usuario</label>
-      <select class="login__input" required>
-        <option value="">Selecciona tipo de usuario</option>
-        <option value="admin">Administrador</option>
-        <option value="client">Cliente</option>
-        <option value="seller">Vendedor</option>
-      </select>
-    </div>
+    <form class="login__form">
 
-    <div class="login__field">
-      <label class="login__label" for="password">Escribe tu contraseña</label>
-      <input class="login__input" type="password" placeholder="Contraseña" required>
-      <!-- 🔹 Enlace de recuperar contraseña -->
-      <a href="forgot_password.html" class="login__link">¿Olvidaste tu contraseña?</a>
-    </div>
+      <div class="login__field">
+        <label class="login__label">Utiliza tu correo electrónico</label>
+        <input class="login__input login__input--email" type="email" placeholder="Correo electrónico" required>
+      </div>
 
-    <a href="profile_store_seller.html" class="btn btn--primary shopping-cart__checkout">Ingresar</a>
-  </form>
-</div>
+      <div class="login__field">
+        <label class="login__label">Tipo de usuario</label>
+        <select class="login__input login__input--user-type" required>
+          <option value="">Selecciona tipo de usuario</option>
+          <option value="admin">Administrador</option>
+          <option value="client">Cliente</option>
+          <option value="seller">Vendedor</option>
+        </select>
+      </div>
+
+      <div class="login__field">
+        <label class="login__label">Escribe tu contraseña</label>
+        <input class="login__input login__input--password" type="password" placeholder="Contraseña" required>
+        
+        <a href="forgot_password.html" class="login__link">¿Olvidaste tu contraseña?</a>
+      </div>
+
+      <button type="submit" class="btn btn--primary login__button">Ingresar</button>
+
+    </form>
+  </div>
+</main>  
