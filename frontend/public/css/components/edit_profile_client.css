@@ -5,7 +5,6 @@
   padding: var(--gap-sm);
   background-color: var(--primary-50);
   width: 100%;
-  height: 100h; 
   box-sizing: border-box;
   overflow: hidden;
 }
@@ -32,7 +31,7 @@
   margin: 0;
   text-align: center;
   font-family: var(--font-primary-semibold);
-  font-size: var(--fs-md);
+  font-size: var(--fs-sm);
   color: var(--black);
 }
 .edit__image {
@@ -60,11 +59,16 @@
   display: flex;
   flex-direction: column;
   gap: var(--gap-xs);
+  min-width: 0;
+  box-sizing: border-box;
 }
 .edit__label {
   font-size: var(--fs-xs);
-  color: var(--black);
   font-family: var(--font-primary-semibold);
+  color: var(--black);
+  word-wrap: break-word;
+  overflow-wrap: break-word;
+  white-space: normal;
 }
 .edit__input,
 .edit__textarea {

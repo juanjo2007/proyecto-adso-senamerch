@@ -19,15 +19,15 @@
   },
   {
     "id": "pimenton",
-    "name": "Pimenton",
+    "name": "Lechuga",
     "price": 3500,
-    "image": "/frontend/public/assets/img/pimenton_image.jpg"
+    "image": "/frontend/public/assets/img/lettuce__image.jpg"
   },
   {
     "id": "zanahoria",
-    "name": "Pimenton",
+    "name": "Lechuga",
     "price": 2800,
-    "image": "/frontend/public/assets/img/pimenton_image.jpg"
+    "image": "/frontend/public/assets/img/lettuce__image.jpg"
   },
     {
     "id": "cebolla",
@@ -43,8 +43,8 @@
   },
   {
     "id": "zanahoria",
-    "name": "Pimenton",
+    "name": "Lechuga",
     "price": 2800,
-    "image": "/frontend/public/assets/img/pimenton_image.jpg"
+    "image": "/frontend/public/assets/img/lettuce__image.jpg"
   }
 ]

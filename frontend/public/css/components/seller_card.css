@@ -25,6 +25,7 @@
   }
 }
 
+/* ================= CARD SELLER ================= */
 .card-seller {
   border: 1px solid var(--secundary-900);
   border-radius: 12px;
@@ -47,6 +48,7 @@
   box-shadow: 0 6px 14px rgba(0, 0, 0, 0.15);
 }
 
+/* Imagen */
 .card-seller__image {
   width: 100%;
   height: 200px;
@@ -54,11 +56,11 @@
   border-radius: 8px;
 }
 
-/* === GRID 2x2 PARA INFO === */
+/* === INFO GRID === */
 .card-seller__info {
   display: grid;
-  grid-template-columns: 1fr 1fr; /* dos columnas */
-  grid-template-rows: auto auto;  /* dos filas */
+  grid-template-columns: 1fr 1fr; 
+  grid-template-rows: auto auto;
   gap: 12px 10px;
   width: 100%;
   margin-top: 16px;
@@ -101,7 +103,7 @@
   justify-content: flex-end;
 }
 
-/* Botones conservan su tamaño natural */
+/* Botones */
 .card-seller__primary .btn {
   font-family: var(--font-primary-regular);
   font-weight: 400;
@@ -110,21 +112,34 @@
   border-radius: 8px;
 }
 
-/* === Responsivo === */
-@media (max-width: 480px) {
+/* =========================================================
+   📱 RESPONSIVE (Celulares y pantallas pequeñas)
+   ========================================================= */
+@media (max-width: 640px) {
+  .card-seller {
+    text-align: left; /* ✅ Alineación general izquierda */
+    align-items: flex-start;
+    padding: var(--gap-md);
+  }
+
   .card-seller__info {
     grid-template-columns: 1fr;
     grid-template-rows: repeat(4, auto);
-    text-align: center;
+    text-align: left; /* ✅ Mantener alineado */
+    gap: var(--gap-xs);
   }
 
   .card-seller__title,
   .card-seller__price {
-    text-align: center;
+    text-align: left; /* ✅ Título y precio alineados a la izquierda */
   }
 
   .card-seller__secondary,
   .card-seller__primary {
-    justify-content: center;
+    justify-content: flex-start; /* ✅ Botones alineados a la izquierda */
+  }
+
+  .card-seller__image {
+    height: 180px;
   }
 }

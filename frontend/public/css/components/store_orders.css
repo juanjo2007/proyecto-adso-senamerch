@@ -1,11 +1,13 @@
 .store-orders {
-  width: 100%;
+  width: 80%;
+  margin: 2rem auto 0; /* top | left/right | bottom */
   background-color: var(--white);
   border-radius: 12px;
   padding: var(--gap-lg);
   box-shadow: 0 2px 8px rgba(0,0,0,0.08);
   font-family: var(--font-primary);
 }
+
 .store-orders__header {
   display: flex;
   flex-direction: column;
