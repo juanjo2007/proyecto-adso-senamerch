@@ -43,6 +43,7 @@
 @import url('components/view_car.css');
 @import url('components/forgot_password.css');
 @import url('components/code_verify.css');
+@import url('components/reset_password.css');
 
 /* Importaciones de SenaMerch Mateo */
 @import url('components/car.css'); 
