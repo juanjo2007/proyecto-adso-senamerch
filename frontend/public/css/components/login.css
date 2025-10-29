@@ -12,7 +12,7 @@
 .login {
   border: 1px solid var(--secundary-900);
   background-color: var(--white);
-  padding: var(--gap-lg);
+  padding: var(--gap-md);
   width: 400px;
   border-radius: 8px;
   font-family: var(--font-primary);
@@ -22,14 +22,13 @@
   justify-content: center;
   margin: auto; /* centra dentro del flujo */
   box-sizing: border-box;
-  margin: 0 auto;
 }
 
 /* === TITULO === */
 .login__title {
   font-size: var(--fs-sm);
   text-align: center;
-  margin-bottom: var(--gap-lg);
+  margin-bottom: var(--gap-md);
   color: var(--black);
 }
 
@@ -37,7 +36,7 @@
 .login__form {
   display: flex;
   flex-direction: column;
-  gap: var(--gap-sm);
+  gap: var(--gap-md);
   width: 100%;
 }
 
@@ -52,6 +51,8 @@
   color: var(--gray-950);
 }
 
+
+
 .login__input {
   padding: var(--padding-top) var(--padding-right) var(--padding-bottom) var(--padding-left);
   border: 1px solid var(--secundary-900);
@@ -61,11 +62,28 @@
   transition: border 0.3s, box-shadow 0.3s;
   width: 100%;
   box-sizing: border-box;
+  color: var(--gray-600);
 }
 
 .login__input:focus {
-  border-color: var(--secundary-700);
+  border-color: var(--secundary-900);
+  color: var(--gray-950);
 }
+
+/* === BOTÓN === */
+.login__button {
+  display: flex;
+  justify-content: center;
+  margin-top: var(--gap-md);
+}
+
+.login__button .btn {
+  font-family: var(--font-primary-regular);
+  font-weight: 400;
+  padding: var(--button-padding-top) var(--button-padding-right) 
+           var(--button-padding-bottom) var(--button-padding-left);
+}
+
 
 .login__password-wrapper {
   position: relative;
@@ -93,35 +111,68 @@
   transform: scale(0.95);
 }
 
-.login__button {
-  display: flex;
-  justify-content: center;
-  margin-top: var(--gap-md);
-}
 
-.login__button .btn {
-  font-family: var(--font-primary-regular);
-  font-weight: 400;
-  padding: var(--button-padding-top) var(--button-padding-right) 
-           var(--button-padding-bottom) var(--button-padding-left);
-  width: 100%;
-}
-
-/* === ENLACE === */
 .login__link {
   color: var(--secundary-700);
   font-size: var(--fs-xxs);
   text-decoration: none;
   transition: color 0.3s;
   display: inline-block;
-  margin-top: 4px;
-  text-align: left;
+  margin-top: var(--gap-md);
+  text-align: center;
 }
 
 .login__link:hover {
   color: var(--secundary-950);
   text-decoration: underline;
 }
+
+/* === RESPONSIVO === */
+
+/* ✅ Laptop / escritorio medio */
+@media (max-width: 1024px) {
+  .login {
+    width: 100%;
+    min-width: 320px;
+    padding: var(--gap-md);
+  }
+}
+
+/* ✅ Tablet */
+@media (max-width: 768px) {
+  .site-main {
+    padding-block: 4rem; /* espacio vertical sin usar vh */
+  }
+
+  .login {
+    width: 100%;
+    max-width: 360px;
+    min-width: 320px;
+    margin: 0 auto;
+  }
+}
+
+/* ✅ Móvil */
+@media (max-width: 640px) {
+  .site-main {
+    width: 100%;
+    padding-block: 16rem; /* centrado vertical sin scroll */
+  }
+
+  .login {
+    width: 100%;
+    min-width: 320px;  /* mantiene buena legibilidad en pantallas pequeñas */
+    max-width: 100%;   /* evita desbordes */
+    padding: var(--gap-md);
+    margin: 0 auto;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.15);
+  }
+
+  .login__title {
+    font-size: var(--fs-xs);
+  }
+}
+
 
 .alert {
   position: fixed;
@@ -175,65 +226,3 @@
   background-color: #ffecec;
 }
 
-/* ✅ Tablet */
-@media (max-width: 768px) {
-  .site-main {
-    padding-block: 4rem; /* espacio vertical sin usar vh */
-  }
-
-  .login__toggle-password {
-    font-size: var(--fs-xxxs);
-    padding: 3px 8px;
-  }
-
-  .alert {
-    width: 90%;
-    padding: 1.5rem;
-  }
-
-  .alert__message {
-    font-size: var(--fs-xxs);
-  }
-}
-
-/* ✅ Móvil */
-@media (max-width: 640px) {
-  .site-main {
-    width: 100%;
-    padding-block: 12rem; /* centrado vertical sin scroll */
-  }
-
-  .login {
-    width: 100%;
-    min-width: 320px;  /* mantiene buena legibilidad en pantallas pequeñas */
-    max-width: 100%;   /* evita desbordes */
-    padding: var(--gap-md);
-    margin: 0 auto;
-    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.15);
-  }
-
-  .login__title {
-    font-size: var(--fs-xxs);
-  }
-
-  .login__input {
-    padding: 0.7rem;
-  }
-
-  .login__form {
-    gap: var(--gap-xs);
-  }
-
-  .alert {
-    width: 85%;
-    padding: 1.2rem;
-  }
-
-  .alert__message {
-    font-size: var(--fs-xxxs);
-  }
-
-  .alert__icon {
-    font-size: 1.8rem;
-  }
-}
