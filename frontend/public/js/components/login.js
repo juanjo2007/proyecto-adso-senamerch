@@ -40,12 +40,12 @@ function attachLoginEvents() {
 
     const userType = userTypeSelect.value;
     if (!userType) {
-      showCustomAlert("⚠️ Debes seleccionar un tipo de usuario.", "error");
+      showCustomAlert(" Debes seleccionar un tipo de usuario.", "error");
       return;
     }
 
     // ✅ Mostrar alerta de bienvenida
-    showCustomAlert("✅ ¡Bienvenido! Iniciaste sesión correctamente.", "success");
+    showCustomAlert("¡Bienvenido! Iniciaste sesión correctamente.", "success");
 
     // ⏳ Tiempo antes de redirigir
     const redirectDelay = 2500;

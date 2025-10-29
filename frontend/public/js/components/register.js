@@ -1,7 +1,12 @@
 document.addEventListener("DOMContentLoaded", () => {
   const container = document.querySelector(".form-container");
 
-  // ✅ Inserta dinámicamente el formulario
+  if (!container) {
+    console.error("❌ No se encontró el contenedor .form-container");
+    return;
+  }
+
+  // Inserta el formulario y la alerta
   container.innerHTML = `
     <div class="register">
       <h1 class="register__title">Completa los datos para crear tu cuenta</h1>
@@ -11,13 +16,13 @@ document.addEventListener("DOMContentLoaded", () => {
           <div class="register__column">
             <div class="register__field">
               <label class="register__label">Correo electrónico</label>
-              <input class="register__input" type="email" name="email" required />
+              <input class="register__input" type="email" name="email" autocomplete="email" required />
               <small class="register__text">Recibirás información de tu cuenta.</small>
             </div>
 
             <div class="register__field">
               <label class="register__label">Nombre</label>
-              <input class="register__input" type="text" name="name" required />
+              <input class="register__input" type="text" name="name" autocomplete="name" required />
               <small class="register__text">Se mostrará a las personas que interactúen contigo.</small>
             </div>
 
@@ -54,7 +59,7 @@ document.addEventListener("DOMContentLoaded", () => {
             <div class="register__field register__field--password">
               <label class="register__label">Contraseña</label>
               <div class="register__password-wrapper">
-                <input class="register__input" type="password" name="password" required />
+                <input class="register__input" type="password" name="password" autocomplete="current-password" required />
                 <button type="button" class="register__toggle-password">Mostrar</button>
               </div>
               <small class="register__text">Mantén tu cuenta segura con una buena contraseña.</small>
@@ -67,44 +72,41 @@ document.addEventListener("DOMContentLoaded", () => {
         </div>
       </form>
     </div>
+
+    <!-- Contenedor de alerta fuera del formulario -->
+    <div class="alert"></div>
   `;
 
-  // ✅ Variables
-  const form = document.querySelector(".register__form");
+  // Variables
+  const form = container.querySelector(".register__form");
   const userType = form.querySelector("select[name='user-type']");
   const passwordInput = form.querySelector("input[name='password']");
   const togglePasswordBtn = form.querySelector(".register__toggle-password");
+  const alertContainer = container.querySelector(".alert");
 
-  // ✅ Mostrar / Ocultar contraseña
+  // Mostrar / ocultar contraseña
   togglePasswordBtn.addEventListener("click", () => {
     const isHidden = passwordInput.type === "password";
     passwordInput.type = isHidden ? "text" : "password";
     togglePasswordBtn.textContent = isHidden ? "Ocultar" : "Mostrar";
   });
 
-  // ✅ Alerta negra profesional (centrada y animada)
+  // Función de alerta centrada
   function showAlert(message, duration = 2500) {
-    const alert = document.createElement("div");
-    alert.classList.add("alert");
-    alert.innerHTML = `
+    if (!alertContainer) return; // seguridad
+
+    alertContainer.innerHTML = `
       <p class="alert__message">${message}</p>
       <div class="alert__progress"></div>
     `;
-    document.body.appendChild(alert);
+    alertContainer.classList.add("alert--show");
 
-    // Mostrar animación
-    requestAnimationFrame(() => {
-      alert.classList.add("alert--show");
-    });
-
-    // Ocultar después del tiempo definido
     setTimeout(() => {
-      alert.classList.remove("alert--show");
-      setTimeout(() => alert.remove(), 400);
+      alertContainer.classList.remove("alert--show");
     }, duration);
   }
 
-  // ✅ Evento de envío
+  // Submit del formulario
   form.addEventListener("submit", (e) => {
     e.preventDefault();
 
