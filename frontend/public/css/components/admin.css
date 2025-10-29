@@ -9,8 +9,10 @@
   display: grid;
   grid-template-columns: 240px 1fr;
   width: 100%;
+  
 }
 .admin-layout__sidebar {
+  flex: content;
   background: var(--gray-900);
   color: var(--white);
   padding: var(--gap-lg);

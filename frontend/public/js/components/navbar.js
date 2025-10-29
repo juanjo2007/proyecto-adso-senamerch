@@ -1,29 +1,37 @@
-document.addEventListener("DOMContentLoaded", function(){
-    const navbarElement = document.querySelector(".navbar-container");
+document.addEventListener("DOMContentLoaded", () => {
+  const navbarElement = document.querySelector(".navbar-container");
 
-    if(navbarElement){
-        fetch("/frontend/public/views/components/navbar.html")
-        .then(response => response.text())
-        .then(data => {
-            navbarElement.innerHTML = data;
-        //===lógica para resaltar el enlace que esta activo en el navbar
+  // Verifica que el contenedor exista antes de continuar
+  if (navbarElement) {
+    fetch("/frontend/public/views/components/navbar.html")
+      .then(response => {
+        if (!response.ok) {
+          throw new Error(`Error HTTP: ${response.status}`);
+        }
+        return response.text();
+      })
+      .then(data => {
+        // Inserta el contenido del navbar en el contenedor
+        navbarElement.innerHTML = data;
 
-        //Obtener la ruta actual
-        //Si no hay un archivo específico se asume que es el index
+        // === Lógica para resaltar el enlace activo ===
+        // Obtiene la ruta actual (ejemplo: "pago.html" o "index.html")
         const currentPage = window.location.pathname.split("/").pop() || "index.html";
 
-        //Selecciona todos los enlaces del navbar que usaran la clase personalizada
+        // Selecciona todos los enlaces del navbar
         const navLinks = navbarElement.querySelectorAll(".navbar__link");
 
-        //Recorre cada enlace del navbar
+        // Recorre cada enlace del navbar
         navLinks.forEach(link => {
-            //Verifica si el href del enlace incluye el nombre de la página actual
-            if(link.getAttribute("href").includes(currentPage)){
-                //Si es la página actual se le asigna la clase 'active' para destacarla visualmente
-                link.classList.add ("active");
-            }
+          const linkHref = link.getAttribute("href");
+
+          // Verifica si el href del enlace incluye el nombre de la página actual
+          if (linkHref && linkHref.includes(currentPage)) {
+            // Agrega la clase "active" al enlace actual
+            link.classList.add("active");
+          }
         });
-    })
-    .catch(error => console.error("Error cargando el navbar", error));
-    }
+      })
+      .catch(error => console.error("Error cargando el navbar:", error));
+  }
 });
