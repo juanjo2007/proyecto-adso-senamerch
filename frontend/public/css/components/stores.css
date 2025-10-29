@@ -33,7 +33,7 @@
   min-width: 800px;
   background-color: var(--white);
   border-radius: var(--gap-xs);
-  box-shadow: 0 2px 8px rgba(0,0,0,0.05);
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.05);
   overflow: hidden;
 }
 
@@ -64,34 +64,37 @@
   font-size: var(--fs-xs);
 }
 
-
-.stores__btn .btn {
+/* 🖱️ Botones */
+.stores__btn {
   font-family: var(--font-primary-regular);
   font-weight: 400;
+  background-color: var(--primary-600);
+  color: var(--white);
+  border: none;
+  border-radius: var(--gap-xxs);
+  padding: 0.4rem 0.8rem;
+  cursor: pointer;
+  transition: all 0.3s ease;
 }
 
-<<<<<<< HEAD
 .stores__btn:hover {
-  background-color: var(--secondary-700); /* corregido */
+  background-color: var(--secondary-700);
   transform: translateY(-2px);
 }
 
+/* 🎯 Botón primario */
 .stores__btn--primary {
   background-color: var(--primary-600);
   color: var(--white);
 }
 
+.stores__btn--primary:hover {
+  background-color: var(--primary-700);
+}
+
 /* Footer */
 .stores__footer {
   margin-top: var(--gap-lg);
-=======
-.stores__btn .btn {
-  align-self: flex-start; 
-}
-.stores__btn .btn {
-  padding: var(--button-padding-top) var(--button-padding-right) 
-           var(--button-padding-bottom) var(--button-padding-left);
->>>>>>> 2066834d3ee5e210abe215735683178e1521f9da
 }
 
 /* =======================
