@@ -1,58 +1,42 @@
-<section class="product-purchase">
-  <h2 class="product-purchase__title">Selecciona las opciones de compra</h2>
-
-  <!-- Tipo de producto -->
-  <div class="product-purchase__group">
-    <label class="product-purchase__label">Tipo de producto:</label>
-    <div class="product-purchase__options">
-      <label class="product-purchase__option">
-        <input type="radio" name="productType" value="solid" class="product-purchase__radio" checked>
-        Sólido
-      </label>
-      <label class="product-purchase__option">
-        <input type="radio" name="productType" value="liquid" class="product-purchase__radio">
-        Líquido
-      </label>
+<!-- Contenedor de contenido (reserva espacio debajo del header) -->
+<main class="page-content">
+  <!-- tu sección product-purchase -->
+  <section class="product-purchase">
+    <h2 class="product-purchase__title">Selecciona las opciones de compra</h2>
+    <!-- ... resto del formulario ... -->
+    <div class="product-purchase__group">
+      <label class="product-purchase__label">Tipo de producto:</label>
+      <div class="product-purchase__options">
+        <label class="product-purchase__option">
+          <input type="radio" name="productType" value="solid" class="product-purchase__radio" checked> Sólido
+        </label>
+        <label class="product-purchase__option">
+          <input type="radio" name="productType" value="liquid" class="product-purchase__radio"> Líquido
+        </label>
+      </div>
     </div>
-  </div>
 
-  <!-- Tipo de medida -->
-  <div class="product-purchase__group">
-    <label class="product-purchase__label">Unidad de medida:</label>
-    <select class="product-purchase__select">
+    <div class="product-purchase__group">
+      <label class="product-purchase__label">Unidad de medida:</label>
+      <select class="product-purchase__select">
+        <optgroup label="Sólido">
+          <option value="kg">Kilogramo (kg)</option>
+          <option value="g">Gramo (g)</option>
+        </optgroup>
+        <optgroup label="Líquido">
+          <option value="l">Litro (L)</option>
+          <option value="ml">Mililitro (mL)</option>
+        </optgroup>
+      </select>
+    </div>
 
-      <!-- Opciones para productos sólidos -->
-      <optgroup label="Sólido">
-        <option value="kg" data-unit="kilogramos">Kilogramo (kg)</option>
-        <option value="g" data-unit="gramos">Gramo (g)</option>
-        <option value="halfkg" data-unit="medios kilos">Medio kilo (500g)</option>
-        <option value="quarterkg" data-unit="cuartos de kilo">Cuarto kilo (250g)</option>
-        <option value="ton" data-unit="toneladas">Tonelada (t)</option>
-        <option value="arroba" data-unit="arrobas">Arroba (Arb)</option>
-      </optgroup>
+    <div class="product-purchase__group">
+      <label class="product-purchase__label">Cantidad (en <span class="product-purchase__unit">kilogramos</span>):</label>
+      <input type="number" min="1" class="product-purchase__input" placeholder="Ejemplo: 2">
+    </div>
 
-      <!-- Opciones para productos líquidos -->
-      <optgroup label="Líquido">
-        <option value="ml" data-unit="mililitros">Mililitro (mL)</option>
-        <option value="dl" data-unit="decilitros">Decilitro (dL)</option>
-        <option value="l" data-unit="litros">Litro (L)</option>
-        <option value="hl" data-unit="hectolitros">Hectolitro (hL)</option>
-        <option value="kl" data-unit="kilolitros">Kilolitro (kL)</option>
-      </optgroup>
-
-    </select>
-  </div>
-
-  <!-- Cantidad -->
-  <div class="product-purchase__group">
-    <label class="product-purchase__label">
-      Cantidad (en <span class="product-purchase__unit">kilogramos</span>):
-    </label>
-    <input type="number" min="1" class="product-purchase__input" placeholder="Ejemplo: 2">
-  </div>
-
-  <!-- Botón -->
-  <div class="product-purchase__actions">
-    <a href="viwe_car.html" class="btn btn--primary">Agregar al carrito</a>
-  </div>
-</section>
+    <div class="product-purchase__actions">
+      <a href="/frontend/public/views/viwe_car.html" class="btn btn--primary">Agregar al carrito</a>
+    </div>
+  </section>
+</main>

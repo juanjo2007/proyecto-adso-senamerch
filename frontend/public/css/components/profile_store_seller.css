@@ -7,12 +7,13 @@
 }
 
 .store-profile__wrapper {
+  border: 1px solid var(--secundary-900);
   width: 100%;
   max-width: 700px;
   margin: 0 auto;
   background-color: var(--white);
   border-radius: 16px;
-  box-shadow: 0 4px 10px var(--black); 
+  box-shadow: 0 1px 2px var(--black); 
   padding: var(--gap-md);
   box-sizing: border-box;
 }

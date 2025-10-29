@@ -1,15 +1,17 @@
 .edit-post {
   display: flex;
   justify-content: center;
-  padding: var(--gap-lg);
+  padding: var(--gap-xs);
   width: 100%;
 }
 
 .edit-post__form {
+  background-color: var(--white);
   background: var(--white);
-  padding: var(--gap-lg);
+  padding: var(--gap-md);
   border-radius: 1.2rem;
   box-shadow: 0 4px 10px rgba(0, 0, 0, 0.15);
+  border: 1px solid var(--secundary-900);
   width: 100%;
   max-width: 1100px;
   display: flex;
@@ -21,7 +23,7 @@
 .edit-post__fields-wrapper {
   display: grid;
   grid-template-columns: repeat(3, 1fr);
-  gap: var(--gap-md);
+  gap: var(--gap-xs);
   width: 100%;
   box-sizing: border-box;
 }
@@ -29,9 +31,9 @@
 .edit-post__title {
   grid-column: 1 / -1;
   text-align: center;
-  font-size: var(--fs-md);
+  font-size: var(--fs-sm);
   font-weight: 600;
-  margin-bottom: var(--gap-md);
+  margin-bottom: var(--gap-xxs);
   color: var(--black);
   font-family: var(--font-primary-semibold);
 }
@@ -39,7 +41,7 @@
 .edit-post__field {
   display: flex;
   flex-direction: column;
-  gap: var(--gap-xs);
+  gap: var(--gap-xxs);
   min-width: 0;
   box-sizing: border-box;
 }
@@ -50,11 +52,8 @@
 
 .edit-post__label {
   font-size: var(--fs-xxs);
+  color: var(--gray-900);
   font-family: var(--font-primary-semibold);
-  color: var(--black);
-  word-wrap: break-word;
-  overflow-wrap: break-word;
-  white-space: normal;
 }
 
 .edit-post__input,
@@ -62,7 +61,7 @@
 .edit-post__select {
   padding: var(--padding-top) var(--padding-right)
            var(--padding-bottom) var(--padding-left);
-  border: 1px solid var(--gray-300);
+  border: 1px solid var(--secundary-900);
   border-radius: 0.6rem;
   font-size: var(--fs-xs);
   font-family: var(--font-primary);

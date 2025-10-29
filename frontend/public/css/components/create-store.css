@@ -13,6 +13,7 @@
   box-shadow: 0 4px 10px var(--black); 
   padding: var(--gap-md);
   box-sizing: border-box;
+  border: 1px solid var(--secundary-900);
 }
 .create-store__header {
   text-align: center;
@@ -38,19 +39,19 @@
 .create-store__group {
   display: flex;
   flex-direction: column;
-  gap: var(--gap-xs);
+  gap: var(--gap-xxs);
 }
 .create-store__group--full {
   grid-column: 1 / -1; 
 }
 .create-store__label {
-  font-size: var(--fs-xs);
+  font-size: var(--fs-xxs);
   font-family: var(--font-primary-bold);
   color: var(--black);
 }
 .create-store__input {
   padding: var(--padding-top) var(--padding-right) var(--padding-bottom) var(--padding-left);
-  border: 1px solid var(--gray-300);
+  border: 1px solid var(--secundary-900);
   border-radius: 8px;
   font-size: var(--fs-xs);
   font-family: var(--font-primary);
