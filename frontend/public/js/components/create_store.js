@@ -3,9 +3,9 @@ document.addEventListener('DOMContentLoaded', function () {
   const createStoreContainer = document.querySelector('.create-store-container');
 
   if (createStoreContainer) {
-    fetch("/frontend/public/views/components/create-store.html")
+    fetch("/frontend/public/views/components/create_store.html")
       .then(response => {
-        if (!response.ok) throw new Error("Error al cargar create-store.html");
+        if (!response.ok) throw new Error("Error al cargar create_store.html");
         return response.text();
       })
       .then(data => {
