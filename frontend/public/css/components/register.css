@@ -96,6 +96,7 @@
   margin-top: var(--gap-md);
 }
 
+
 /* ================== CORRECCIONES GLOBALES ================== */
 html,
 body {
@@ -103,6 +104,84 @@ body {
   padding: 0;
   overflow-x: hidden; /* evita scroll lateral */
 }
+
+/* ================================
+   ALERTA NEGRA PROFESIONAL
+==================================*/
+.alert {
+  position: fixed;
+  top: 30px;
+  left: 50%;
+  transform: translateX(-50%) translateY(-20px);
+  background-color: #111;
+  color: #fff;
+  padding: 1rem 2rem;
+  border-radius: 0.5rem;
+  font-size: 0.95rem;
+  font-weight: 500;
+  opacity: 0;
+  visibility: hidden;
+  transition: all 0.4s ease;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.4);
+  z-index: 9999;
+  text-align: center;
+}
+
+.alert--show {
+  opacity: 1;
+  visibility: visible;
+  transform: translateX(-50%) translateY(0);
+}
+
+.alert__message {
+  margin: 0;
+  letter-spacing: 0.3px;
+}
+
+/* Línea de progreso (barra inferior) */
+.alert__progress {
+  width: 100%;
+  height: 3px;
+  background: linear-gradient(to right, #fff, #555);
+  border-radius: 2px;
+  margin-top: 0.5rem;
+  animation: alertProgress 2.5s linear forwards;
+}
+
+@keyframes alertProgress {
+  from {
+    width: 100%;
+  }
+  to {
+    width: 0%;
+  }
+}
+
+
+/* ========= MOSTRAR/OCULTAR CONTRASEÑA ========= */
+.register__password-wrapper {
+  display: flex;
+  align-items: center;
+  gap: var(--gap-xs);
+}
+
+.register__toggle-password {
+  background-color: var(--secundary-600);
+  color: var(--white);
+  border: none;
+  border-radius: 0.6rem;
+  padding: 0.6rem 1.2rem;
+  font-family: var(--font-primary-semibold);
+  font-size: var(--fs-xxs);
+  cursor: pointer;
+  transition: background 0.2s ease, transform 0.2s;
+}
+
+.register__toggle-password:hover {
+  background-color: var(--secundary-700);
+  transform: scale(1.03);
+}
+
 
 /* ================== RESPONSIVE ================== */
 @media (max-width: 1024px) {
