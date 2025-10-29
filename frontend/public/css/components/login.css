@@ -22,6 +22,7 @@
   justify-content: center;
   margin: auto; /* centra dentro del flujo */
   box-sizing: border-box;
+  margin: 0 auto;
 }
 
 /* === TITULO === */
@@ -63,10 +64,35 @@
 }
 
 .login__input:focus {
-  border-color: var(--secundary-900);
+  border-color: var(--secundary-700);
 }
 
-/* === BOTÓN === */
+.login__password-wrapper {
+  position: relative;
+  display: flex;
+  align-items: center;
+}
+
+.login__toggle-password {
+  background-color: var(--secundary-600);
+  border: none;
+  padding: 4px 10px;
+  border-radius: 4px;
+  font-size: var(--fs-xxs);
+  cursor: pointer;
+  transition: background 0.3s, border-color 0.3s, transform 0.15s;
+  margin-left: 8px;
+  color: var(--white);
+}
+
+.login__toggle-password:hover {
+  background-color: var(--secundary-700);
+}
+
+.login__toggle-password:active {
+  transform: scale(0.95);
+}
+
 .login__button {
   display: flex;
   justify-content: center;
@@ -78,6 +104,7 @@
   font-weight: 400;
   padding: var(--button-padding-top) var(--button-padding-right) 
            var(--button-padding-bottom) var(--button-padding-left);
+  width: 100%;
 }
 
 /* === ENLACE === */
@@ -96,15 +123,56 @@
   text-decoration: underline;
 }
 
-/* === RESPONSIVO === */
+.alert {
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%) scale(0.8);
+  background-color: var(--white);
+  border: 2px solid var(--primary-900);
+  color: var(--primary-950);
+  padding: 1.8rem 2.5rem;
+  border-radius: 12px;
+  font-family: var(--font-primary);
+  font-size: var(--fs-sm);
+  text-align: center;
+  box-shadow: 0 8px 30px rgba(0, 0, 0, 0.25);
+  z-index: 9999;
+  opacity: 0;
+  transition: opacity 0.4s ease, transform 0.4s ease;
+}
 
-/* ✅ Laptop / escritorio medio */
-@media (max-width: 1024px) {
-  .login {
-    width: 100%;
-    min-width: 320px;
-    padding: var(--gap-md);
-  }
+.alert.show {
+  opacity: 1;
+  transform: translate(-50%, -50%) scale(1);
+}
+
+.alert__content {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.8rem;
+}
+
+.alert__icon {
+  font-size: 1.5rem;
+}
+
+.alert__message {
+  margin: 0;
+  font-weight: 500;
+  color: var(--primary-950);
+}
+
+/* Colores según tipo */
+.alert--success {
+  border-color: var(--secundary-700);
+  background-color: #e8fff1;
+}
+
+.alert--error {
+  border-color: #c0392b;
+  background-color: #ffecec;
 }
 
 /* ✅ Tablet */
@@ -113,11 +181,18 @@
     padding-block: 4rem; /* espacio vertical sin usar vh */
   }
 
-  .login {
-    width: 100%;
-    max-width: 360px;
-    min-width: 320px;
-    margin: 0 auto;
+  .login__toggle-password {
+    font-size: var(--fs-xxxs);
+    padding: 3px 8px;
+  }
+
+  .alert {
+    width: 90%;
+    padding: 1.5rem;
+  }
+
+  .alert__message {
+    font-size: var(--fs-xxs);
   }
 }
 
@@ -138,6 +213,27 @@
   }
 
   .login__title {
-    font-size: var(--fs-xs);
+    font-size: var(--fs-xxs);
+  }
+
+  .login__input {
+    padding: 0.7rem;
+  }
+
+  .login__form {
+    gap: var(--gap-xs);
+  }
+
+  .alert {
+    width: 85%;
+    padding: 1.2rem;
+  }
+
+  .alert__message {
+    font-size: var(--fs-xxxs);
+  }
+
+  .alert__icon {
+    font-size: 1.8rem;
   }
 }
