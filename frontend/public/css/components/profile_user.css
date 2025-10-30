@@ -135,6 +135,8 @@
   font-size: var(--fs-xs);
   margin-bottom: var(--gap-xs);
 }
+
+
 @media (max-width: 768px) {
   .user-profile {
     grid-template-columns: 1fr;
