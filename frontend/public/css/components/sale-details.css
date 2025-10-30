@@ -92,6 +92,7 @@
 .sale-details__actions {
   display: flex;
   justify-content: center;
+  gap: var(--gap-md); /* 🔹 separación entre los botones */
   margin-top: var(--gap-md);
 }
 .sale-details__actions .btn {
@@ -100,6 +101,22 @@
   align-self: center;
   padding: var(--button-padding-top) var(--button-padding-right)
            var(--button-padding-bottom) var(--button-padding-left);
+}
+/* Botón de descarga PDF */
+.sale-details__download {
+  background-color: var(--white); 
+  color: var(--black);
+  border: none;
+  border-radius: 8px;
+  font-size: var(--fs-xxs);
+  padding: var(--button-padding-top) var(--button-padding-right)
+           var(--button-padding-bottom) var(--button-padding-left);
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.sale-details__download:hover {
+  background-color: var(--white);
 }
 
 /* ===== Responsivo ===== */
