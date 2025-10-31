@@ -87,9 +87,9 @@
 
     /* ================== Button Secundary ================== */
     --secundary-padding-top:10px;
-    --secundary-padding-right:10px;
+    --secundary-padding-right:8px;
     --secundary-padding-bottom:12px;
-    --secundary-padding-left:12px;
+    --secundary-padding-left:8px;
 
     /* ================== Label / Input ================== */
     --padding-top:14px;

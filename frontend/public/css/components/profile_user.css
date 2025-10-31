@@ -2,7 +2,7 @@
   display: grid;
   grid-template-columns: 0.8fr 1.6fr;
   gap: var(--gap-xs);
-  border: 1px solid var(--gray-200);
+  border: 1px solid var(--secundary-900);
   border-radius: 1rem;
   padding: var(--gap-xs);
   background: var(--white);
@@ -17,7 +17,7 @@
   flex-direction: column;
   align-items: center;
   text-align: center;
-  border-right: 1px solid var(--gray-200);
+  border-right: 1px solid var(--secundary-900);
   padding-right: var(--gap-lg);
   height: 100%;
 }
@@ -33,7 +33,7 @@
   height: 120px;
   border-radius: 50%;
   overflow: hidden;
-  border: 3px solid var(--primary-300);
+  border: 1px solid var(--secundary-900);
   margin-bottom: var(--gap-sm);
 }
 .user-profile__image img {
@@ -89,7 +89,7 @@
   font-size: var(--fs-xxs);
   color: var(--gray-800);
   background-color: var(--white);
-  border: 1px solid var(--gray-100);
+  border: 1px solid var(--secundary-900);
   padding: var(--gap-xs) var(--gap-xs);
   border-radius: 6px;
   box-shadow: 0 2px 4px rgba(0,0,0,0.02);
@@ -101,7 +101,7 @@
   list-style: disc;
 }
 .user-profile__section {
-  border-bottom: 1px solid var(--gray-100);
+  border-bottom: 1px solid var(--secundary-900);
   padding-bottom: var(--gap-md);
 }
 .user-profile__section--config {
@@ -109,18 +109,13 @@
 }
 .user-profile__actions {
   display: flex;
-  width: 100%;
-  gap: var(--gap-sm);
   justify-content: flex-end;
-  flex-wrap: wrap;
 }
 .store-profile__actions .btn {
   font-family: var(--font-primary-regular);
   font-weight: 400;
   padding: var(--button-padding-top) var(--button-padding-right)
-           var(--button-padding-bottom) var(--button-padding-left);
-  min-width: 140px;
-  text-align: center;
+           var(--button-padding-bottom) var(--button-padding-left) !important;
 }
 .user-profile__link {
   text-decoration: none;
@@ -148,14 +143,6 @@
   }
   .user-profile__grid {
     grid-template-columns: 1fr;
-  }
-  .user-profile__actions {
-    flex-direction: column;
-    align-items: center;
-  }
-  .user-profile__actions .btn {
-    width: 100%;
-    text-align: center;
   }
 }
 

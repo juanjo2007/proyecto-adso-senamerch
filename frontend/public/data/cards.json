@@ -2,31 +2,31 @@
   {
     "id": "tomate",
     "name": "Tomate",
-    "price": 3000,
+    "price": "3000 * Kilo",
     "image": "/frontend/public/assets/img/tomato_image.png"
   },
   {
     "id": "cebolla",
     "name": "Cebolla",
-    "price": 2500,
+    "price": "2500 * Kilo",
     "image": "/frontend/public/assets/img/onion__image.jpg"
   },
   {
     "id": "papa",
     "name": "Papa",
-    "price": 2000,
+    "price": "2000 * Kilo",
     "image": "/frontend/public/assets/img/potato__image.jpg"
   },
   {
     "id": "pimenton",
     "name": "Pimenton",
-    "price": 3500,
+    "price": "3500 * Kilo",
     "image": "/frontend/public/assets/img/pimenton_image.jpg"
   },
   {
     "id": "zanahoria",
     "name": "Pimenton",
-    "price": 2800,
+    "price": "2800 * Kilo",
     "image": "/frontend/public/assets/img/pimenton_image.jpg"
   },
     {
@@ -38,13 +38,13 @@
   {
     "id": "papa",
     "name": "Papa",
-    "price": 2000,
+    "price": "2800 * Kilo",
     "image": "/frontend/public/assets/img/potato__image.jpg"
   },
   {
     "id": "zanahoria",
     "name": "Pimenton",
-    "price": 2800,
+    "price": "2800 * Kilo",
     "image": "/frontend/public/assets/img/pimenton_image.jpg"
   }
 ]

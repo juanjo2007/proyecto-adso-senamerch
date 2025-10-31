@@ -3,9 +3,9 @@ document.addEventListener('DOMContentLoaded', function () {
   const buttonContainer = document.querySelector('.secondary-button-container');
 
   if (buttonContainer) {
-    fetch("/frontend/public/views/components/secondary-button.html")
+    fetch("/frontend/public/views/components/secondary_button.html")
       .then(response => {
-        if (!response.ok) throw new Error("Error al cargar secondary-button.html");
+        if (!response.ok) throw new Error("Error al cargar secondary_button.html");
         return response.text();
       })
       .then(data => {

@@ -1,16 +1,13 @@
-.create-store { 
-  margin-top: var(--gap-xxs);
-  margin-bottom: var(--gap-xs);
+.create-store {
   display: flex;
   justify-content: center;
-  padding: var(--gap-md);
+  padding-block: 2.2rem;
 }
 .create-store__wrapper {
   width: 100%;
   max-width: 700px;
   background-color: var(--white);
   border-radius: 12px;
-  box-shadow: 0 4px 10px var(--black); 
   padding: var(--gap-md);
   box-sizing: border-box;
   border: 1px solid var(--secundary-900);
@@ -22,7 +19,7 @@
 .create-store__title {
   font-size: var(--fs-sm);
   font-family: var(--font-primary-bold);
-  color: var(--primary-950);
+  color: var(--black);
   margin-bottom: var(--gap-xs);
 }
 .create-store__subtitle {
@@ -34,12 +31,11 @@
   display: grid;
   grid-template-columns: repeat(2, 1fr); 
   gap: var(--gap-md);
-  margin-top: var(--gap-md);
 }
 .create-store__group {
   display: flex;
   flex-direction: column;
-  gap: var(--gap-xxs);
+  gap: var(--gap-xxxs);
 }
 .create-store__group--full {
   grid-column: 1 / -1; 
@@ -55,7 +51,7 @@
   border-radius: 8px;
   font-size: var(--fs-xs);
   font-family: var(--font-primary);
-  color: var(--black);
+  color: var(--gray-600);
   background: var(--white);
   outline: none;
   transition: border-color 0.2s ease-in-out, box-shadow 0.2s ease-in-out;
@@ -81,8 +77,8 @@
   display: flex;
   justify-content: flex-end; 
   align-items: center;
-  gap: var(--gap-md);
-  margin-top: var(--gap-md);
+  gap: var(--gap-xxs);
+  margin-top: var(--gap-xxs);
 }
 .create-store__secondary {
   display: flex;
@@ -100,20 +96,37 @@
   .create-store__form {
     grid-template-columns: 1fr; 
     gap: var(--gap-sm);
-  }
-  .create-store__buttons .btn {
-    font-family: var(--font-primary-regular);
-    font-weight: 400;
-    padding: var(--button-padding-top) var(--button-padding-right)
-            var(--button-padding-bottom) var(--button-padding-left);
-  }   
+  }  
   .create-store__buttons {
     flex-direction: column;
     justify-content: flex-start;
   }
 }
+@media (max-width: 640px) {
+  .create-store {
+    width: 100%;
+    padding-block: 10rem;
+  }
+
+  .create-store__wrapper {
+    width: 100%;
+    max-width: 100%;
+    border-radius: 8px;
+    padding: var(--gap-sm);
+  }
+
+  .create-store__form {
+    grid-template-columns: 1fr;
+    gap: var(--gap-sm);
+  }
+
+  .create-store__buttons {
+    flex-direction: column;
+    align-items: start;
+  }
+
+}
 /* Intento de Script */
-/* ===== Mensaje centrado en pantalla ===== */
 .create-store__overlay {
   position: fixed;
   inset: 0;
