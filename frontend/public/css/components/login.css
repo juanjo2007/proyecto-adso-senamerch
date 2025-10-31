@@ -3,7 +3,7 @@
   justify-content: center;
   align-items: center;
   box-sizing: border-box;
-  padding-block: 4.8rem; /* 🔹 margen natural arriba y abajo */
+  padding-block: 8.6rem; /* 🔹 margen natural arriba y abajo */
   overflow: hidden; /* evita desbordes */
   min-height: 100%; /* usa el flujo normal del documento */
 }

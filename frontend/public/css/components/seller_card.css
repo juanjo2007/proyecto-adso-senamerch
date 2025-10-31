@@ -1,7 +1,7 @@
 .seller-cards__container {
   display: grid;
-  gap: var(--gap-lg);
-  width: 100%;
+  gap: var(--gap-md);
+  width: fit-content;
   box-sizing: border-box;
   margin: var(--gap-md) auto;
   padding-inline: var(--gap-sm);

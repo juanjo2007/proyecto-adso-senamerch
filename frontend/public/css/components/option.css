@@ -3,11 +3,10 @@
   display: flex;
   justify-content: center;
   align-items: center;
-  padding-block: 6rem; /* 🔹 espacio arriba y abajo sin vh */
+  padding-block: 10rem; /* 🔹 espacio arriba y abajo sin vh */
   width: 100%;
   min-width: 320px;
   box-sizing: border-box;
-  background-color: var(--gray-50);
   overflow: hidden; /* evita desbordes verticales */
 }
 
