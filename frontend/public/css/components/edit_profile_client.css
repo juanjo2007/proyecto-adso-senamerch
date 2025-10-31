@@ -97,6 +97,54 @@
            var(--button-padding-bottom) var(--button-padding-left);
   font-family: var(--font-primary-regular);
 }
+
+.alert {
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%) scale(0.8);
+  background-color: var(--white);
+  border: 2px solid var(--primary-900);
+  color: var(--primary-950);
+  padding: 1.8rem 2.5rem;
+  border-radius: 12px;
+  font-family: var(--font-primary);
+  font-size: var(--fs-sm);
+  text-align: center;
+  box-shadow: 0 8px 30px rgba(0, 0, 0, 0.25);
+  z-index: 9999;
+  opacity: 0;
+  transition: opacity 0.4s ease, transform 0.4s ease;
+}
+
+.alert.show {
+  opacity: 1;
+  transform: translate(-50%, -50%) scale(1);
+}
+
+.alert__content {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.alert__message {
+  margin: 0;
+  font-weight: 500;
+  color: var(--primary-950);
+}
+
+/* ===== Tipos ===== */
+.alert--success {
+  border-color: var(--secundary-700);
+  background-color: var(--secundary-50);
+}
+
+.alert--error {
+  border-color: var(--tertiary-700);
+  background-color: var(--tertiary-100);
+}
+
 @media (max-width: 768px) {
   .edit__container {
     padding: var(--gap-md);

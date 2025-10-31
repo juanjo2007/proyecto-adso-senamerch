@@ -9,7 +9,15 @@ document.addEventListener('DOMContentLoaded', function () {
       })
       .then(data => {
         saleDetailsContainer.innerHTML = data;
+
+        const downloadBtn = saleDetailsContainer.querySelector('.sale-details__download');
+        if (downloadBtn) {
+          downloadBtn.addEventListener('click', () => {
+            const element = saleDetailsContainer.querySelector('.sale-details');
+            html2pdf().from(element).save('detalle_venta.pdf');
+          });
+        }
       })
-      .catch(error => console.error("Error:", error));
+      .catch(error => console.error("Error al cargar sale-details.html:", error));
   }
 });

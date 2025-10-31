@@ -8,7 +8,7 @@ document.addEventListener("DOMContentLoaded", function () {
         formContainer.innerHTML = data;
         attachLoginEvents();
       })
-      .catch(error => console.log("Error", error));
+      .catch(error => console.error("Error al cargar login.html:", error));
   }
 });
 
@@ -21,16 +21,12 @@ function attachLoginEvents() {
   const passwordInput = document.querySelector(".login__input--password");
   const togglePasswordBtn = document.querySelector(".login__toggle-password");
 
-  // ✅ Mostrar/Ocultar contraseña
+  // ✅ Mostrar / ocultar contraseña
   if (togglePasswordBtn) {
     togglePasswordBtn.addEventListener("click", function () {
-      if (passwordInput.type === "password") {
-        passwordInput.type = "text";
-        togglePasswordBtn.textContent = "Ocultar";
-      } else {
-        passwordInput.type = "password";
-        togglePasswordBtn.textContent = "Mostrar";
-      }
+      const isHidden = passwordInput.type === "password";
+      passwordInput.type = isHidden ? "text" : "password";
+      togglePasswordBtn.textContent = isHidden ? "Ocultar" : "Mostrar";
     });
   }
 
@@ -39,49 +35,48 @@ function attachLoginEvents() {
     event.preventDefault();
 
     const userType = userTypeSelect.value;
+
     if (!userType) {
-      showCustomAlert(" Debes seleccionar un tipo de usuario.", "error");
+      showCustomAlert("Debes seleccionar un tipo de usuario.", "error");
       return;
     }
 
     // ✅ Mostrar alerta de bienvenida
     showCustomAlert("¡Bienvenido! Iniciaste sesión correctamente.", "success");
 
-    // ⏳ Tiempo antes de redirigir
-    const redirectDelay = 2500;
-
+    // ⏳ Redirección con retardo
     setTimeout(() => {
       if (userType === "admin") {
-        window.location.href = "/frontend/public/views/admin_index.html";
+        window.location.href = "/frontend/public/views/admin_validation.html";
       } else if (userType === "client") {
         window.location.href = "/frontend/public/views/client_view.html";
       } else if (userType === "seller") {
         window.location.href = "/frontend/public/views/create_store.html";
       }
-    }, redirectDelay);
+    }, 2000);
   });
 }
 
-// ✅ Alerta visual coherente con el diseño del register
+// ✅ Alerta visual sin iconos
 function showCustomAlert(message, type = "success") {
   const alert = document.createElement("div");
   alert.classList.add("alert", `alert--${type}`);
   alert.innerHTML = `
     <div class="alert__content">
-      <span class="alert__icon">${type === "success" ? "✔️" : "⚠️"}</span>
       <p class="alert__message">${message}</p>
     </div>
   `;
+
   document.body.appendChild(alert);
 
+  // Animación de aparición
   setTimeout(() => {
     alert.classList.add("show");
   }, 50);
 
-  // Duración visible
-  const visibleTime = 2000;
+  // Tiempo visible
   setTimeout(() => {
     alert.classList.remove("show");
-    setTimeout(() => alert.remove(), 400);
-  }, visibleTime);
+    setTimeout(() => alert.remove(), 300);
+  }, 1500);
 }
