@@ -16,6 +16,14 @@
   width: 95%;
   margin: var(--gap-md) auto;
   max-width: 72rem; 
+  /* 🔹 Asegurar que la barra esté más arriba (debajo del navbar) */
+.search-bar {
+  margin-top: -2rem !important;  /* Sube la barra */
+  margin-bottom: 2rem;           /* Espacio con el contenido */
+  position: relative;
+  z-index: 10;                   /* Evita que quede tapada */
+}
+
 }
 .search-bar__input {
   border: none;

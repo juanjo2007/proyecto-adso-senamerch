@@ -1,50 +1,59 @@
-<section class="posts">
+<!-- ================== Componente Publicaciones (Administrador) ================== -->
+<main class="posts">
+  <!-- Título principal -->
   <h1 class="posts__title">Publicaciones</h1>
 
-  <div class="posts__table-wrapper">
-    <table class="posts__table">
-      <thead class="posts__table-head">
-        <tr class="posts__table-row posts__table-row--header">
-          <th class="posts__table-header">Fecha (Publicación)</th>
-          <th class="posts__table-header">Usuario (Nombre)</th>
-          <th class="posts__table-header">Tienda (Nombre)</th>
-          <th class="posts__table-header">Acción</th>
-        </tr>
-      </thead>
-      <tbody class="posts__table-body">
-        <tr class="posts__table-row">
-          <td class="posts__table-cell" data-label="Fecha: ">01/12/2025</td>
-          <td class="posts__table-cell" data-label="Usuario: ">Juan Pérez</td>
-          <td class="posts__table-cell" data-label="Tienda: ">Tienda Central</td>
-          <td class="posts__table-cell" data-label="Acción">
-            <div class="posts__secondary">
-              <a href="seller_view.html" class="btn btn-variant2--secondary">Deshabilitar</a>
-            </div>
-          </td>
-        </tr>
+  <!-- Tabla de publicaciones -->
+  <section class="posts__section">
+    <div class="posts__table-wrapper">
+      <table class="posts__table">
+        <thead class="posts__table-head">
+          <tr class="posts__table-row posts__table-row--header">
+            <th class="posts__table-header">Fecha (Publicación)</th>
+            <th class="posts__table-header">Usuario (Nombre)</th>
+            <th class="posts__table-header">Tienda (Nombre)</th>
+            <th class="posts__table-header">Acción</th>
+          </tr>
+        </thead>
 
-        <tr class="posts__table-row">
-          <td class="posts__table-cell" data-label="Fecha: ">02/11/2025</td>
-          <td class="posts__table-cell" data-label="Usuario: ">Ana López</td>
-          <td class="posts__table-cell" data-label="Tienda: ">Market Express</td>
-          <td class="posts__table-cell" data-label="Acción">
-            <div class="posts__secondary">
-              <a href="seller_view.html" class="btn btn-variant2--secondary">Deshabilitar</a>
-            </div>
-          </td>
-        </tr>
+        <tbody class="posts__table-body">
+          <!-- Publicación 1 -->
+          <tr class="posts__table-row">
+            <td class="posts__table-cell" data-label="Fecha: ">01/12/2025</td>
+            <td class="posts__table-cell" data-label="Usuario: ">Juan Pérez</td>
+            <td class="posts__table-cell" data-label="Tienda: ">Tienda Central</td>
+            <td class="posts__table-cell" data-label="Acción">
+              <div class="posts__secondary">
+                <a href="seller_view.html" class="btn btn-variant2--secondary">Deshabilitar</a>
+              </div>
+            </td>
+          </tr>
 
-        <tr class="posts__table-row">
-          <td class="posts__table-cell" data-label="Fecha: ">16/10/2025</td>
-          <td class="posts__table-cell" data-label="Usuario: ">Carlos Gómez</td>
-          <td class="posts__table-cell" data-label="Tienda: ">Shop Online</td>
-          <td class="posts__table-cell" data-label="Acción">
-            <div class="posts__secondary">
-              <a href="seller_view.html" class="btn btn-variant2--secondary">Deshabilitar</a>
-            </div>
-          </td>
-        </tr>
-      </tbody>
-    </table>
-  </div>
-</section>
+          <!-- Publicación 2 -->
+          <tr class="posts__table-row">
+            <td class="posts__table-cell" data-label="Fecha: ">02/11/2025</td>
+            <td class="posts__table-cell" data-label="Usuario: ">Ana López</td>
+            <td class="posts__table-cell" data-label="Tienda: ">Market Express</td>
+            <td class="posts__table-cell" data-label="Acción">
+              <div class="posts__secondary">
+                <a href="seller_view.html" class="btn btn-variant2--secondary">Deshabilitar</a>
+              </div>
+            </td>
+          </tr>
+
+          <!-- Publicación 3 -->
+          <tr class="posts__table-row">
+            <td class="posts__table-cell" data-label="Fecha: ">16/10/2025</td>
+            <td class="posts__table-cell" data-label="Usuario: ">Carlos Gómez</td>
+            <td class="posts__table-cell" data-label="Tienda: ">Shop Online</td>
+            <td class="posts__table-cell" data-label="Acción">
+              <div class="posts__secondary">
+                <a href="seller_view.html" class="btn btn-variant2--secondary">Deshabilitar</a>
+              </div>
+            </td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+  </section>
+</main>

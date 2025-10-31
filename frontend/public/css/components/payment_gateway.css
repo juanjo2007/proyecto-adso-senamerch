@@ -40,7 +40,7 @@ TABLA (Bloque independiente)
   background-color: var(--primary-50);
   box-shadow: 0 2px 8px rgba(0,0,0,0.05);
   overflow: hidden;
-  border: none; /* sin borde externo */
+  border: none;
 }
 
 .table__row:nth-child(even):not(.table__row--header) {
@@ -61,7 +61,7 @@ TABLA (Bloque independiente)
   font-size: var(--fs-xs);
   font-family: var(--font-primary);
   color: var(--gray-900);
-  border: none; /* sin líneas de separación */
+  border: none;
 }
 
 .table__cell--disabled {
@@ -71,9 +71,9 @@ TABLA (Bloque independiente)
 /* =========================================
 BOTONES
 ========================================= */
-<<<<<<< HEAD
 .btn {
-  padding: var(--button-padding-top) var(--button-padding-right);
+  padding: var(--button-padding-top) var(--button-padding-right)
+           var(--button-padding-bottom) var(--button-padding-left);
   border: none;
   cursor: pointer;
   font-family: var(--font-primary-semibold);
@@ -92,19 +92,12 @@ BOTONES
 .btn--black:hover {
   background-color: var(--secundary-700);
   transform: translateY(-2px);
-=======
-.payment-gateway .btn {
-  font-size: var(--fs-xs);
-  font-weight: 400;
 }
 
+/* Ajustes de botón dentro del bloque */
 .payment-gateway .btn {
-  align-self: flex-start; 
-}
-.payment-gateway .btn {
-  padding: var(--button-padding-top) var(--button-padding-right) 
-           var(--button-padding-bottom) var(--button-padding-left);
->>>>>>> 2066834d3ee5e210abe215735683178e1521f9da
+  align-self: flex-start;
+  font-weight: 400;
 }
 
 /* =========================================
@@ -122,12 +115,9 @@ RESPONSIVE
     font-size: var(--fs-xxs);
     padding: var(--gap-xxs);
   }
-<<<<<<< HEAD
 
   .btn {
     font-size: var(--fs-xs);
     padding: var(--gap-xs) var(--gap-sm);
   }
-=======
->>>>>>> 2066834d3ee5e210abe215735683178e1521f9da
 }

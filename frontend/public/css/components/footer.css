@@ -37,10 +37,14 @@
     gap: var(--gap-xs);
     text-align: center;
   }
+
+  .footer-container__social {
+    justify-content: center; /* Centra los íconos sociales */
+  }
+
   .footer-container__icon img {
-    flex-direction: column;
-    gap: var(--gap-xs);
-    text-align: center;
+    margin: 0 auto; /* Centra visualmente cada ícono */
   }
 }
+
 

@@ -1,24 +1,34 @@
+/* ================== ESTRUCTURA PRINCIPAL DE ADMIN POSTS ================== */
+
+/* Contenedor principal que divide el panel admin (izquierda)
+   y la parte de publicaciones (derecha) */
 .content-seeker-and-posts {
   display: grid;
-  grid-template-columns: 300px 1fr; 
-  gap: var(--gap-lg);
+  grid-template-columns: 300px 1fr; /* Panel izquierdo fijo, parte derecha flexible */
+  gap: var(--gap-lg); /* Espacio entre columnas */
   width: 100%;
-  align-items: start;
+  align-items: start; /* Alinea la parte superior de ambos paneles */
 }
+
+/* Panel derecho que contiene el buscador y las publicaciones */
 .right-panel {
   display: flex;
   flex-direction: column;
-  gap: var(--gap-md);
+  gap: var(--gap-md); /* Espacio entre buscador y publicaciones */
 }
+
+/* ================== RESPONSIVE DESIGN ================== */
 @media (max-width: 768px) {
   .content-seeker-and-posts {
-    grid-template-columns: 1fr;
+    grid-template-columns: 1fr; /* Una sola columna en pantallas pequeñas */
   }
 
-  .admin-dashboard {
-    order: 1; 
+  /* Ordena las secciones en modo móvil */
+  .seeker {
+    order: 1;
   }
-  .right-panel {
+
+  .posts-section {
     order: 2;
   }
 }
