@@ -8,7 +8,7 @@
   box-shadow: 0 2px 8px rgba(0,0,0,0.08);
   font-family: var(--font-primary);
   color: var(--gray-900);
-  margin-block: 10rem;
+  margin-block: 16rem;
 }
 .edit-store-seller-one__title {
   text-align: center;

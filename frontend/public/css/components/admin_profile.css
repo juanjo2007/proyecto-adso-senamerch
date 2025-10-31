@@ -1,9 +1,8 @@
 .admin-profile {
   width: 100%;
   margin: 0 auto;
-  background: var(--gray-50);
   box-sizing: border-box;
-  padding-block: 4rem;
+  padding-block: 8rem;
   display: flex;
   justify-content: center;
 }

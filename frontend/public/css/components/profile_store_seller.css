@@ -1,8 +1,7 @@
 .store-profile {
   display: flex;
   justify-content: center;
-  padding-block: 1.4rem;
-  background-color: var(--primary-50);
+  padding-block: 4rem;
 }
 .store-profile__container {
   width: 100%;
