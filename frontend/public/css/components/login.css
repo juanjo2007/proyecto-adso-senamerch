@@ -2,7 +2,6 @@
   display: flex;
   justify-content: center;
   align-items: center;
-  background-color: var(--gray-50);
   box-sizing: border-box;
   padding-block: 4.8rem; /* 🔹 margen natural arriba y abajo */
   overflow: hidden; /* evita desbordes */
