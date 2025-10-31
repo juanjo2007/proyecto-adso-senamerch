@@ -9,22 +9,22 @@
 
 .create-post__form {
   background: var(--white);
-  padding: var(--gap-lg);
+  padding: var(--gap-sm);
   border-radius: 1.2rem;
   box-shadow: 0 4px 10px rgba(0, 0, 0, 0.15);
+  border: 1px solid var(--secundary-900);
   width: 100%;
   max-width: 1100px;
   display: flex;
   flex-direction: column;
   justify-content: space-between;
   box-sizing: border-box;
-  min-height: 100vh;
 }
 
 .create-post__fields-wrapper {
   display: grid;
-  grid-template-columns: repeat(3, 1fr);
-  gap: var(--gap-md);
+  grid-template-columns: repeat(2, 1fr);
+  gap: var(--gap-xs);
   width: 100%;
   box-sizing: border-box;
 }
@@ -32,9 +32,9 @@
 .create-post__title {
   grid-column: 1 / -1;
   text-align: center;
-  font-size: var(--fs-md);
+  font-size: var(--fs-sm);
   font-weight: 600;
-  margin-bottom: var(--gap-md);
+  margin-bottom: var(--gap-xs);
   color: var(--black);
   font-family: var(--font-primary-semibold);
 }
@@ -65,7 +65,7 @@
 .create-post__select {
   padding: var(--padding-top) var(--padding-right)
            var(--padding-bottom) var(--padding-left);
-  border: 1px solid var(--gray-300);
+  border: 1px solid var(--secundary-900);
   border-radius: 0.6rem;
   font-size: var(--fs-xs);
   font-family: var(--font-primary);
@@ -88,43 +88,40 @@
   resize: vertical;
 }
 
-/* === BOTONES === */
-
-/* botón primario (derecha, columna 3) */
-.create-post__field-actions {
-  display: flex;
-  grid-column: 3;
-  justify-content: flex-end; 
-  align-items: center;
-  gap: var(--gap-md);
-  margin-top: var(--gap-md);
-}
-
-/* ====== GRID de botones ====== */
+/* === BOTONES EN DOS COLUMNAS === */
 .create-post__actions-grid {
   display: grid;
   grid-template-columns: 1fr 1fr; /* dos columnas iguales */
-  align-items: center;
-  margin-top: var(--gap-xl);
+  gap: var(--gap-sm);
   width: 100%;
+  margin-top: 1.2rem;
 }
+
+/* === BOTONES === */
 
 /* Botón secundario: izquierda */
 .create-post__field-secundary {
   display: flex;
-  justify-content: flex-start;
+  justify-content: flex-start; /* alineado a la izquierda */
   align-items: center;
+  margin: 1.2rem 0; /* espacio arriba y abajo */
+  float: left; /* 🔥 ubica en la columna izquierda */
+  box-sizing: border-box;
 }
 
 /* Botón primario: derecha */
 .create-post__field-actions {
   display: flex;
-  justify-content: flex-end;
+  justify-content: flex-end; /* alineado a la derecha */
   align-items: center;
+  margin: 1.2rem 0; /* espacio arriba y abajo */
+  float: right; /* 🔥 ubica en la columna derecha */
+  box-sizing: border-box;
 }
 
-/* Espaciado uniforme en ambos botones */
-.create-post__field-actions .btn{
+/* Estilo base de botones */
+.create-post__field-secundary .btn,
+.create-post__field-actions .btn {
   font-family: var(--font-primary-regular);
   font-weight: 400;
   padding: var(--button-padding-top) var(--button-padding-right)
@@ -181,47 +178,19 @@
 
 /* ====== RESPONSIVO ====== */
 @media (max-width: 768px) {
-  .create-post__actions-grid {
-    grid-template-columns: 1fr; /* una columna */
-    gap: var(--gap-md);
-  }
-
   .create-post__field-secundary,
   .create-post__field-actions {
-    justify-content: center; /* centrados en móvil */
+    width: 100%; /* cada uno ocupa toda la fila */
+    float: none;
+    justify-content: center; /* centrados */
   }
 }
+
 
 
 /* Tablets: 2 columnas */
 @media (max-width: 1024px) {
   .create-post__fields-wrapper {
     grid-template-columns: repeat(2, 1fr);
-  }
-
-  .create-post__field-actions {
-    grid-column: 2;
-    justify-content: flex-end;
-  }
-
-  .create-post__field-secundary {
-    grid-column: 1;
-    justify-content: flex-start;
-  }
-}
-
-/* Móviles: 1 columna */
-@media (max-width: 768px) {
-  .create-post__fields-wrapper {
-    grid-template-columns: 1fr;
-  }
-
-  .create-post__form {
-    padding: var(--gap-md);
-    min-height: auto;
-  }
-
-  .create-post__field {
-    width: 100%;
   }
 }

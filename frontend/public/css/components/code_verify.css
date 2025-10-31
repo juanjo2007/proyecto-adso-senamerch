@@ -3,19 +3,20 @@
   display: flex;
   justify-content: center;
   align-items: center;
-  margin-top: 8%;
-  height: 100%;
-  font-family: var(--font-primary);
-  padding: 0 var(--gap-md);
-  overflow: hidden;
+  background-color: var(--gray-50);
+  box-sizing: border-box;
+  padding-block: 10rem; /* 🔹 margen natural arriba y abajo */
+  overflow: hidden; /* evita desbordes */
+  min-height: 100%; /* usa el flujo normal del documento */
 }
 
 .verify__container {
+  border: 1px solid var(--secundary-900);
   background-color: var(--white);
   border-radius: var(--gap-xs);
-  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
   width: 100%;
   max-width: 420px;
+  min-width: 320px;
   padding: var(--gap-lg);
   display: flex;
   flex-direction: column;
@@ -34,7 +35,7 @@
 
 .verify__text {
   font-size: var(--fs-xs);
-  color: var(--gray-700);
+  color: var(--gray-900);
   margin-bottom: var(--gap-lg);
   line-height: 1.5;
   max-width: 90%;
@@ -59,7 +60,7 @@
   height: 50px;
   text-align: center;
   font-size: var(--fs-md);
-  border: 1px solid var(--gray-200);
+  border: 1px solid var(--secundary-900);
   border-radius: var(--gap-xxs);
   color: var(--gray-900);
   font-family: var(--font-primary-semibold);
@@ -73,39 +74,36 @@
 }
 
 .verify__button {
-  background-color: var(--secundary-600);
-  color: var(--white);
-  border: none;
-  border-radius: var(--gap-xxs);
-  padding: var(--button-padding-top) var(--button-padding-right);
-  font-size: var(--fs-xs);
-  font-family: var(--font-primary-semibold);
-  cursor: pointer;
-  transition: background-color 0.3s ease;
-  width: 100%;
+  display: flex;
+  justify-content: center;
+  margin-top: var(--gap-md);
 }
 
-.verify__button:hover {
-  background-color: var(--secundary-700);
+.verify__button .btn {
+  font-family: var(--font-primary-regular);
+  font-weight: 400;
+  padding: var(--button-padding-top) var(--button-padding-right)
+           var(--button-padding-bottom) var(--button-padding-left);
 }
 
 .verify__link {
   display: inline-block;
   margin-top: var(--gap-md);
-  color: var(--tertiary-600);
-  font-size: var(--fs-xs);
+  color: var(--secundary-700);
+  font-size: var(--fs-xxs);
   text-decoration: none;
   font-family: var(--font-secondary-medium);
   transition: color 0.3s ease;
 }
 
 .verify__link:hover {
-  color: var(--tertiary-700);
+  color: var(--secundary-950);
+  text-decoration: underline;
 }
 
 /* ===================== Media Queries ===================== */
 
-/* Laptop ≤ 1024px */
+/* ✅ Laptop ≤ 1024px */
 @media (max-width: 1024px) {
   .verify__container {
     max-width: 380px;
@@ -117,10 +115,16 @@
   }
 }
 
-/* Tablet ≤ 768px */
+/* ✅ Tablet ≤ 768px */
 @media (max-width: 768px) {
+  .verify {
+    padding-block: 4rem; /* 🔹 centrado sin vh */
+  }
+
   .verify__container {
+    width: 100%;
     max-width: 340px;
+    min-width: 320px;
     padding: var(--gap-md);
   }
 
@@ -133,16 +137,18 @@
   .verify__text {
     font-size: var(--fs-xxs);
   }
-
-  .verify__button {
-    font-size: var(--fs-xxs);
-  }
 }
 
-/* Mobile ≤ 640px */
+/* ✅ Móvil ≤ 640px */
 @media (max-width: 640px) {
+  .verify {
+    padding-block: 24rem; /* 🔹 espacio vertical sin usar vh */
+  }
+
   .verify__container {
-    max-width: 300px;
+    width: 100%;
+    min-width: 320px;
+    max-width: 100%;
     padding: var(--gap-sm);
   }
 
