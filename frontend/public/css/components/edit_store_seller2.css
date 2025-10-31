@@ -97,6 +97,7 @@
 @media (max-width: 640px) {
   .edit-store-seller {
     padding: var(--gap-sm);
+    margin-block: 12rem;
   }
   .edit-store-seller__input,
   .edit-store-seller__textarea {

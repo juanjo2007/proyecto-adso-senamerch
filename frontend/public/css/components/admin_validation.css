@@ -5,7 +5,7 @@
   display: flex;
   justify-content: center;
   align-items: center;
-  min-height: 100vh;
+  margin-block: 4.8rem;
   font-family: var(--font-primary);
   padding: var(--gap-lg);
   overflow: hidden; /* evita scroll */
@@ -24,6 +24,7 @@
   align-items: center;
   gap: var(--gap-md);
   transition: all 0.3s ease;
+  border: 1px solid var(--secundary-700);
 }
 
 .admin-panel__title {
@@ -50,15 +51,12 @@
 }
 
 .admin-panel__input {
-  width: 100%;
-  padding: var(--padding-top) var(--padding-right)
-           var(--padding-bottom) var(--padding-left);
-  border: 1px solid var(--gray-300);
-  border-radius: 10px;
+  padding: var(--padding-top) var(--padding-right);
+  border: 1px solid var(--secundary-900);
+  border-radius: 0.6rem;
+  font-family: var(--font-secondary);
   font-size: var(--fs-xs);
-  background-color: var(--gray-50);
-  outline: none;
-  transition: border-color 0.3s ease, box-shadow 0.3s ease, background-color 0.3s ease;
+  color: var(--gray-600);
 }
 
 .admin-panel__input:focus {
@@ -145,8 +143,9 @@
 /* 640px */
 @media (max-width: 640px) {
   .admin-panel__content {
-    max-width: 90%;
+    max-width: 100%;
     padding: var(--gap-md);
+    margin-block: 12rem;
   }
 
   .admin-panel__title {
@@ -157,10 +156,4 @@
     font-size: var(--fs-xxs);
   }
 
-  .admin-panel__input,
-  .admin-panel__btn {
-    font-size: var(--fs-xxs);
-    padding: var(--padding-top) var(--padding-right)
-             var(--padding-bottom) var(--padding-left);
-  }
 }
