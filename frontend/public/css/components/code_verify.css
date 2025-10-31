@@ -1,21 +1,19 @@
-/* ===================== Verify Code Page ===================== */
 .verify {
   display: flex;
   justify-content: center;
   align-items: center;
   background-color: var(--gray-50);
   box-sizing: border-box;
-  padding-block: 10rem; /* 🔹 margen natural arriba y abajo */
-  overflow: hidden; /* evita desbordes */
-  min-height: 100%; /* usa el flujo normal del documento */
+  padding-block: 10rem; 
+  overflow: hidden; 
+  min-height: 100%; 
 }
-
 .verify__container {
   border: 1px solid var(--secundary-900);
   background-color: var(--white);
   border-radius: var(--gap-xs);
   width: 100%;
-  max-width: 420px;
+  max-width: 500px;
   min-width: 320px;
   padding: var(--gap-lg);
   display: flex;
@@ -25,14 +23,12 @@
   justify-content: center;
   box-sizing: border-box;
 }
-
 .verify__title {
-  font-size: var(--fs-md);
+  font-size: var(--fs-sm);
   color: var(--black);
   font-family: var(--font-primary-semibold);
   margin-bottom: var(--gap-sm);
 }
-
 .verify__text {
   font-size: var(--fs-xs);
   color: var(--gray-900);
@@ -40,7 +36,6 @@
   line-height: 1.5;
   max-width: 90%;
 }
-
 .verify__form {
   width: 100%;
   display: flex;
@@ -48,13 +43,11 @@
   align-items: center;
   gap: var(--gap-md);
 }
-
 .verify__fields {
   display: flex;
   justify-content: center;
-  gap: var(--gap-sm);
+  gap: var(--gap-lg);
 }
-
 .verify__input {
   width: 45px;
   height: 50px;
@@ -66,26 +59,22 @@
   font-family: var(--font-primary-semibold);
   transition: border-color 0.3s ease, box-shadow 0.3s ease;
 }
-
 .verify__input:focus {
   border-color: var(--secundary-600);
   box-shadow: 0 0 0 3px var(--secundary-100);
   outline: none;
 }
-
 .verify__button {
   display: flex;
   justify-content: center;
   margin-top: var(--gap-md);
 }
-
 .verify__button .btn {
   font-family: var(--font-primary-regular);
   font-weight: 400;
   padding: var(--button-padding-top) var(--button-padding-right)
            var(--button-padding-bottom) var(--button-padding-left);
 }
-
 .verify__link {
   display: inline-block;
   margin-top: var(--gap-md);
@@ -95,73 +84,56 @@
   font-family: var(--font-secondary-medium);
   transition: color 0.3s ease;
 }
-
 .verify__link:hover {
   color: var(--secundary-950);
   text-decoration: underline;
 }
-
-/* ===================== Media Queries ===================== */
-
-/* ✅ Laptop ≤ 1024px */
 @media (max-width: 1024px) {
   .verify__container {
     max-width: 380px;
     padding: var(--gap-md);
   }
-
   .verify__title {
     font-size: var(--fs-md);
   }
 }
-
-/* ✅ Tablet ≤ 768px */
 @media (max-width: 768px) {
   .verify {
-    padding-block: 4rem; /* 🔹 centrado sin vh */
+    padding-block: 4rem; 
   }
-
   .verify__container {
     width: 100%;
     max-width: 340px;
     min-width: 320px;
     padding: var(--gap-md);
   }
-
   .verify__input {
     width: 40px;
     height: 45px;
     font-size: var(--fs-sm);
   }
-
   .verify__text {
     font-size: var(--fs-xxs);
   }
 }
-
-/* ✅ Móvil ≤ 640px */
 @media (max-width: 640px) {
   .verify {
-    padding-block: 24rem; /* 🔹 espacio vertical sin usar vh */
+    padding-block: 24rem; 
   }
-
   .verify__container {
     width: 100%;
     min-width: 320px;
     max-width: 100%;
     padding: var(--gap-sm);
   }
-
   .verify__input {
     width: 35px;
     height: 40px;
     font-size: var(--fs-xs);
   }
-
   .verify__title {
-    font-size: var(--fs-sm);
+    font-size: var(--fs-xs);
   }
-
   .verify__text {
     font-size: var(--fs-xxs);
   }

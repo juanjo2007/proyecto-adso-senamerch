@@ -3,9 +3,9 @@ document.addEventListener('DOMContentLoaded', function () {
   const searchBarContainer = document.querySelector('.search-bar-container');
 
   if (searchBarContainer) {
-    fetch("/frontend/public/views/components/search-bar.html")
+    fetch("/frontend/public/views/components/search_bar.html")
       .then(response => {
-        if (!response.ok) throw new Error("Error al cargar search-bar.html");
+        if (!response.ok) throw new Error("Error al cargar search_bar.html");
         return response.text();
       })
       .then(data => {

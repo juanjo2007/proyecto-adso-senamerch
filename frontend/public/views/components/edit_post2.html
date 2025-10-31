@@ -1,0 +1,73 @@
+<section class="edit-post">
+  <form class="edit-post__form">
+    <div class="edit-post__fields-wrapper">
+      <h2 class="edit-post__title">Editar producto</h2>
+
+      <div class="edit-post__field">
+        <label class="edit-post__label">Precio * Unidad de medida</label>
+        <select class="edit-post__select" required>
+          <option value="" disabled>Selecciona una unidad</option>
+          <option value="kg" selected>Kilogramos (kg)</option>
+          <option value="lb">Libra (lb)</option>
+          <option value="unidad">Unidad</option>
+          <option value="litro">Litro (L)</option>
+          <option value="litro">Mediolitro (Ml)</option>
+        </select>
+      </div>
+
+      <!-- Campo: Unidad de medida -->
+      <div class="edit-post__field">
+        <label class="edit-post__label">Unidad de medida</label>
+        <select class="edit-post__select" required>
+          <option value="" disabled>Selecciona una unidad</option>
+          <option value="kg" selected>Kilogramos (kg)</option>
+          <option value="lb">Libras (lb)</option>
+          <option value="unidad">Unidad</option>
+          <option value="litro">Litros (L)</option>
+          <option value="mililitro">Mililitros (mL)</option>
+        </select>
+      </div>
+
+      <!-- Campo: Descuento -->
+      <div class="edit-post__field">
+        <label class="edit-post__label">Descuento (%)</label>
+        <input 
+          type="number" 
+          class="edit-post__input" 
+          value="10" 
+          min="0" 
+          max="100"
+        >
+      </div>
+
+      <!-- Campo: Imagen -->
+      <div class="edit-post__field">
+        <label class="edit-post__label">Imagen del producto</label>
+        <input 
+          type="file" 
+          class="edit-post__input" 
+          accept="image/*"
+        >
+      </div>
+    </div>
+
+      <!-- Campo: Descripción -->
+      <div class="edit-post__field edit-post__field--full">
+        <label class="edit-post__label">Descripción</label>
+        <textarea 
+          class="edit-post__textarea"
+        >Tomates frescos del Valle, cultivados sin pesticidas.</textarea>
+      </div>
+
+
+    <div class="edit-post__actions-grid">
+      <div class="edit-post__field-secundary">
+        <a href="view_seller_cards.html" class="btn btn-variant2--secondary">Cancelar</a>
+      </div>
+
+      <div class="edit-post__field-actions">
+        <a href="profile_store_seller.html" class="btn btn--primary">Guardar cambios</a>
+      </div>
+    </div>
+  </form>
+</section>

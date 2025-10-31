@@ -1,52 +1,107 @@
 <section class="store-profile">
-  <div class="store-profile__wrapper">
-    <header class="store-profile__header">
-      <figure class="store-profile__cover">
-        <img src="/frontend/public/assets/img/store_seller.jpg" alt="Logo de la tienda" class="store-profile__logo"/>
-      </figure>      
-    </header>
-    
-    <div class="store-profile__info">
-      <div class="store-profile__group">
-        <h2 class="store-profile__label">Categoría</h2>
-        <p class="store-profile__data">Frutas</p>
+  <div class="store-profile__container">
+    <h1 class="store-profile__title">Perfil de la Tienda</h1>
+
+    <div class="store-profile__grid">
+
+      <!-- === Caja 1: Información de la Tienda === -->
+      <div class="store-profile__card">
+        <h2 class="store-profile__subtitle">Información de la Tienda</h2>
+        <div class="store-profile__info">
+          <div class="store-profile__item">
+            <span class="store-profile__label">Nombre de la tienda:</span>
+            <p class="store-profile__text">Frutas La Esperanza</p>
+          </div>
+          <div class="store-profile__item">
+            <span class="store-profile__label">Correo electrónico:</span>
+            <p class="store-profile__text">contacto@frutaslaesperanza.com</p>
+          </div>
+          <div class="store-profile__item">
+            <span class="store-profile__label">Teléfono:</span>
+            <p class="store-profile__text">+57 310 456 7890</p>
+          </div>
+          <div class="store-profile__item">
+            <span class="store-profile__label">Categoría:</span>
+            <p class="store-profile__text">Frutas</p>
+          </div>
+          <div class="store-profile__item">
+            <span class="store-profile__label">Descripción:</span>
+            <p class="store-profile__text">
+              Tienda especializada en frutas frescas y productos agrícolas locales de alta calidad.
+            </p>
+          </div>
+          <div class="store-profile__item">
+            <span class="store-profile__label">Imagen de portada:</span>
+            <img src="/frontend/public/assets/img/store_seller.jpg" alt="Portada de Frutas La Esperanza" class="store-profile__image">
+          </div>
+        </div>
       </div>
 
-      <div class="store-profile__group">
-        <h2 class="store-profile__label">Correo electrónico</h2>
-        <p class="store-profile__data">frutasesperanza@gmail.com</p>
+      <!-- === Caja 2: Dirección === -->
+      <div class="store-profile__card">
+        <h2 class="store-profile__subtitle">Dirección de la Tienda</h2>
+        <div class="store-profile__info">
+          <div class="store-profile__item">
+            <span class="store-profile__label">Barrio:</span>
+            <p class="store-profile__text">Buenos Aires</p>
+          </div>
+          <div class="store-profile__item">
+            <span class="store-profile__label">Número de dirección:</span>
+            <p class="store-profile__text">10 #34-36 </p>
+          </div>
+          <div class="store-profile__item">
+            <span class="store-profile__label">Tipo de vía:</span>
+            <p class="store-profile__text">Carrera</p>
+          </div>
+          <div class="store-profile__item">
+            <span class="store-profile__label">Código postal:</span>
+            <p class="store-profile__text">110111</p>
+          </div>
+          <div class="store-profile__item">
+            <span class="store-profile__label">Departamento:</span>
+            <p class="store-profile__text">Risaralda</p>
+          </div>
+          <div class="store-profile__item">
+            <span class="store-profile__label">Municipio:</span>
+            <p class="store-profile__text">Pereira</p>
+          </div>
+          <div class="store-profile__item">
+            <span class="store-profile__label">Información adicional:</span>
+            <p class="store-profile__text">Local 2, frente al parque principal.</p>
+          </div>
+        </div>
       </div>
 
-      <div class="store-profile__group">
-        <h2 class="store-profile__label">Teléfono</h2>
-        <p class="store-profile__data">+57 300 123 4567</p>
+      <!-- === Caja 3: Administrador === -->
+      <div class="store-profile__card">
+        <h2 class="store-profile__subtitle">Administrador de la Tienda</h2>
+        <div class="store-profile__info">
+          <div class="store-profile__item">
+            <span class="store-profile__label">Nombre completo:</span>
+            <p class="store-profile__text">María Fernanda Gómez</p>
+          </div>
+          <div class="store-profile__item">
+            <span class="store-profile__label">Documento / NIT / RUT:</span>
+            <p class="store-profile__text">CC 1.234.567.890</p>
+          </div>
+          <div class="store-profile__item">
+            <span class="store-profile__label">Correo electrónico:</span>
+            <p class="store-profile__text">maria.gomez@frutaslaesperanza.com</p>
+          </div>
+          <div class="store-profile__item">
+            <span class="store-profile__label">Teléfono / WhatsApp:</span>
+            <p class="store-profile__text">+57 301 987 6543</p>
+          </div>
+          <div class="store-profile__item">
+            <span class="store-profile__label">Rol en la empresa:</span>
+            <p class="store-profile__text">Propietaria</p>
+          </div>
+        </div>
       </div>
+    </div>
 
-      <div class="store-profile__group">
-        <h2 class="store-profile__label">Dirección</h2>
-        <p class="store-profile__data">Carrera 10 # 25-30, Bogotá</p>
-      </div>
-
-      <div class="store-profile__group">
-        <h2 class="store-profile__label">Propietario</h2>
-        <p class="store-profile__data">Juan Pérez</p>
-      </div>
-
-      <div class="store-profile__group store-profile__group--full">
-        <h2 class="store-profile__label">Descripción</h2>
-        <p class="store-profile__data">
-          Ofrecemos las frutas más frescas del campo colombiano, cultivadas con dedicación
-          y entregadas directamente a tu mesa.
-        </p>
-      </div>
-
-      <div class="store-profile__group">
-        <a href="edit_store_seller.html" class="btn btn--primary">Editar datos de tienda</a>
-      </div>
-
-      <div class="store-profile__group secundary">
-        <a href="view_seller_cards.html" class="btn btn-variant2--secondary">Ver catálogo</a>
-      </div>
+    <div class="store-profile__actions">
+      <a href="edit_store_seller.html" class="btn btn--primary">Editar Perfil</a>
     </div>
   </div>
 </section>

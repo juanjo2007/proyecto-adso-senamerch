@@ -1,99 +1,84 @@
-/* ================== ADDRESS FORM ================== */
 .address-form {
-  max-width: min(90%, 50rem); /* evita desbordes en pantallas pequeñas */
-  margin: 2rem auto; /* centrado vertical y horizontal */
-  padding: 2rem 1.5rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding-block: 1.8rem;
+}
+.address-form__fields {
   background-color: var(--white);
+  padding: var(--gap-md);
   border-radius: 1.2rem;
-  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
-  font-family: var(--font-primary);
-  box-sizing: border-box;
-  overflow: hidden; /* evita scroll interno si algo se sale */
+  border: 1px solid var(--secundary-900);
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+  width: 100%;
+  max-width: 700px;
+  display: flex;
+  flex-direction: column;
+  gap: var(--gap-lg);
 }
-
-/* ====== Título ====== */
 .address-form__title {
-  text-align: center;
-  margin-bottom: var(--gap-md);
+  font-family: var(--font-primary-semibold);
   font-size: var(--fs-sm);
-  font-weight: 600;
   color: var(--black);
-}
-
-/* ====== Inputs ====== */
-.address-form__input {
-  width: 100%;
-  max-width: 100%; /* evita que los inputs se salgan */
-  padding: var(--padding-top) var(--padding-right) var(--padding-bottom) var(--padding-left);
-  margin-bottom: var(--gap-sm);
-  border: 1px solid var(--gray-200);
-  border-radius: 0.6rem;
-  box-sizing: border-box;
-  font-size: var(--fs-xs);
-  font-family: var(--font-primary);
-}
-
-/* ====== Botón ====== */
-.address-form__button {
-  display: inline-block;
-  width: 100%;
   text-align: center;
-  padding: 0.8rem 1rem;
-  margin-top: var(--gap-sm);
-  background-color: var(--primary-500);
-  color: var(--white);
-  text-decoration: none;
-  font-size: var(--fs-sm);
-  font-weight: 600;
+}
+.address-form__grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: var(--gap-md);
+}
+.address-form__group--full {
+  grid-column: 1 / -1;
+}
+.address-form__group {
+  display: flex;
+  flex-direction: column;
+  gap: var(--gap-xxs);
+}
+.address-form__label {
+  font-size: var(--fs-xxs);
+  color: var(--gray-950);
+}
+.address-form__input {
+  padding: var(--padding-top) var(--padding-right);
+  border: 1px solid var(--secundary-900);
   border-radius: 0.6rem;
-  transition: background-color 0.3s ease;
+  font-family: var(--font-secondary);
+  font-size: var(--fs-xs);
+  color: var(--gray-600);
 }
-
-.address-form__button:hover {
-  background-color: var(--primary-600);
+.address-form__input::placeholder {
+  color: var(--gray-400);
 }
-
-/* ================== MEDIA QUERIES ================== */
-
-/* 💻 1024px */
-@media (max-width: 1024px) {
-  .address-form {
-    max-width: 85%;
-    margin: 4rem auto;
-    padding: 1.8rem;
-  }
+.address-form__buttons{
+  display: flex;
+  justify-content: center; 
 }
-
-/* 📱 768px */
-@media (max-width: 768px) {
-  .address-form {
-    max-width: 92%;
-    margin: 5rem auto;
-    padding: 1.6rem 1.2rem;
-    border-radius: 0.8rem;
-    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.06);
-  }
-
-  .address-form__title {
-    font-size: var(--fs-xs);
-  }
+.address-form__buttons .btn {
+  font-family: var(--font-primary-regular);
+  font-weight: 400;
+  padding: var(--button-padding-top) var(--button-padding-right)
+           var(--button-padding-bottom) var(--button-padding-left);
 }
-
-/* 📱 640px */
 @media (max-width: 640px) {
   .address-form {
-    max-width: 94%; /* asegura espacio lateral */
-    margin: 6rem auto;
-    padding: 1.4rem;
-    border-radius: 0.8rem;
+    padding-block: 2rem;
   }
-
-  .address-form__input {
-    padding: 0.7rem 0.9rem;
+  .address-form__fields {
+    max-width: 100%;
+    width: 100%;
+    min-width: 320px;
+    padding: var(--gap-lg);
   }
-
-  .address-form__button {
-    font-size: var(--fs-xs);
-    padding: 0.8rem;
+  .address-form__grid {
+    grid-template-columns: 1fr; /* una sola columna */
+  }
+  .address-form__title {
+    font-size: var(--fs-sm);
+  }
+}
+@media (max-width: 768px) {
+  .address-form__fields {
+    max-width: 100%;
   }
 }

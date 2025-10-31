@@ -1,119 +1,106 @@
-.store-profile { 
-  width: 100%;
+.store-profile {
   display: flex;
   justify-content: center;
-  padding: var(--gap-xl);
-  box-sizing: border-box;
+  padding-block: 1.4rem;
+  background-color: var(--primary-50);
 }
-
-.store-profile__wrapper {
-  border: 1px solid var(--secundary-900);
+.store-profile__container {
   width: 100%;
-  max-width: 700px;
-  margin: 0 auto;
-  background-color: var(--white);
-  border-radius: 16px;
-  box-shadow: 0 1px 2px var(--black); 
-  padding: var(--gap-md);
-  box-sizing: border-box;
+  max-width: 1280px;
+  min-width: 320px;
+  display: flex;
+  flex-direction: column;
+  gap: var(--gap-sm);
 }
-
-.store-profile__header {
-  text-align: center;
-  margin-bottom: var(--gap-md);
-}
-
-.store-profile__cover {
-  width: 100%;
-  height: 140px;
-  overflow: hidden;
-  border-radius: 12px;
-  margin-bottom: var(--gap-md);
-}
-
-.store-profile__cover img {
-  width: 100%;
-  height: 100%;
-  object-fit: cover;
-}
-
 .store-profile__title {
-  font-size: var(--fs-md);
-  font-weight: 600;
-  color: var(--secundary-900);
-  margin-bottom: var(--gap-xs);
+  font-size: var(--fs-sm);
+  color: var(--black);
+  text-align: center;
+  font-family: var(--font-primary-semibold);
+}
+.store-profile__grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: var(--gap-md);
+}
+.store-profile__card {
+  background-color: var(--white);
+  border-radius: 1.2rem;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.08);
+  border: 1px solid var(--secundary-900);
+  padding: var(--gap-md);
+  display: flex;
+  flex-direction: column;
+  gap: var(--gap-md);
+  transition: transform 0.2s ease;
+}
+.store-profile__card:hover {
+  transform: translateY(-4px);
+}
+.store-profile__subtitle {
+  font-size: var(--fs-xs);
+  font-family: var(--font-primary-semibold);
+  color: var(--gray-900);
+  border-bottom: 1px solid var(--secundary-900);
+  padding-bottom: var(--gap-xs);
 }
 .store-profile__info {
-  display: grid;
-  grid-template-columns: repeat(2, 1fr);
-  gap: var(--gap-md);
-  margin-bottom: var(--gap-lg);
+  display: flex;
+  flex-direction: column;
+  gap: var(--gap-xxs);
 }
-
-.store-profile__group--full {
-  grid-column: 1 / -1; /* ocupa ambas columnas */
+.store-profile__item {
+  display: flex;
+  flex-direction: column;
+  gap: 0.3rem;
 }
-
 .store-profile__label {
-  font-size: var(--fs-xs);
-  font-weight: 600;
-  color: var(--secundary-800);
-  margin-bottom: var(--gap-xs);
+  font-size: var(--fs-xxs);
+  color: var(--gray-950);
+  font-family: var(--font-primary-semibold);
 }
-
-.store-profile__data {
+.store-profile__text {
   font-size: var(--fs-xs);
-  color: var(--gray-900);
-  line-height: 1.5;
+  color: var(--gray-700);
+  font-family: var(--font-secondary);
 }
-
+.store-profile__image {
+  width: 100%;
+  height: 50px;
+  border-radius: 0.8rem;
+  object-fit: cover;
+  border: 1px solid var(--gray-200);
+}
 .store-profile__actions {
   display: flex;
-  justify-content: flex-start; 
-  align-items: center;
-  gap: var(--gap-md);
-  margin-top: var(--gap-md);
-}
-
-.secundary {
-  display: flex;
-  justify-content: flex-end; 
+  justify-content: center; 
   align-items: center;
 }
-
-.store-profile__actions.btn {
+.store-profile__actions .btn {
   font-family: var(--font-primary-regular);
   font-weight: 400;
   padding: var(--button-padding-top) var(--button-padding-right)
            var(--button-padding-bottom) var(--button-padding-left);
 }
-
-/* ✅ sigue en 2 columnas hasta pantallas medianas */
 @media (max-width: 1024px) {
-  .store-profile__info {
-    grid-template-columns: 1fr 1fr;
+  .store-profile__grid {
+    grid-template-columns: repeat(2, 1fr);
   }
 }
-
-/* ✅ en móvil 1 columna */
-@media (max-width: 768px) {
-  .store-profile__wrapper {
-    padding: var(--gap-lg);
-  }
-
-  .store-profile__info {
+@media (max-width: 640px) {
+  .store-profile__grid {
     grid-template-columns: 1fr;
   }
-
-  .store-profile__actions {
-    flex-direction: column;
+  .store-profile {
+    padding-block: 2rem;
   }
-
-  .store-profile__actions .btn {
+  .store-profile__container {
     width: 100%;
   }
-  .secundary,
-  .store-profile__actions.btn{
-    justify-content: flex-start;
+  .store-profile__title {
+    font-size: var(--fs-md);
+  }
+  .store-profile__actions {
+    grid-template-columns: 1fr;
   }
 }

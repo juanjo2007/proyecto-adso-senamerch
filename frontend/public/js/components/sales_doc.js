@@ -6,9 +6,9 @@ document.addEventListener("DOMContentLoaded", () => {
   const salesDocContainer = document.querySelector(".sales-doc-container");
 
   if (salesDocContainer) {
-    fetch("/frontend/public/views/components/sales-doc.html")
+    fetch("/frontend/public/views/components/sales_doc.html")
       .then(response => {
-        if (!response.ok) throw new Error("Error al cargar sales-doc.html");
+        if (!response.ok) throw new Error("Error al cargar sales_doc.html");
         return response.text();
       })
       .then(data => {

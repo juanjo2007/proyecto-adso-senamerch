@@ -1,13 +1,13 @@
 .admin-layout {
   display: flex;
   width: fit-content;
-  min-height: 90vh;
+  min-height: 86vh;
   background: var(--white);
   font-family: var(--font-primary);
 }
 .admin-layout__container {
   display: grid;
-  grid-template-columns: 240px 1fr;
+  grid-template-columns: auto 1fr;
   width: 100%;
 }
 .admin-layout__sidebar {
@@ -48,10 +48,20 @@
 .admin-layout__menu-link:hover,
 .admin-layout__menu-link--active {
   background: var(--secundary-700);
+  border: 1px solid var(--secundary-100);
   color: var(--white);
 }
-@media (max-width: 768px) {
+@media (max-width: 640px) {
   .admin-layout {
-    min-height: 100%;
+    width: 100%;
+    height: fit-content;
+    min-height: fit-content;
+  }
+  .admin-layout__container {
+    grid-template-columns: 1fr;
+  }
+  .admin-layout__sidebar {
+    width: 100%;
+    align-items: center;
   }
 }
