@@ -51,7 +51,7 @@ function attachLoginEvents() {
       } else if (userType === "client") {
         window.location.href = "/frontend/public/views/client_view.html";
       } else if (userType === "seller") {
-        window.location.href = "/frontend/public/views/view_seller_cards.html";
+        window.location.href = "/frontend/public/views/create_store.html";
       }
     }, 2000);
   });

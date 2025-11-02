@@ -1,45 +1,47 @@
-<section class="store-order-detail">
-  <header class="store-order-detail__header">
-    <h2 class="store-order-detail__title">Detalle del pedido #ORD-0235</h2>
-    <p class="store-order-detail__status store-order-detail__status--pending">Pendiente</p>
-  </header>
+<main class="store-order-detail-content">
+  <section class="store-order-detail">
+    <header class="store-order-detail__header">
+      <h2 class="store-order-detail__title">Detalle del pedido #ORD-0235</h2>
+      <p class="store-order-detail__status store-order-detail__status--pending">Pendiente</p>
+    </header>
 
-  <div class="store-order-detail__info">
-    <div class="store-order-detail__client">
-      <h3 class="store-order-detail__products-header">Datos del cliente</h3>
-      <p><strong>Nombre:</strong> Juan Pérez</p>
-      <p><strong>Correo:</strong> juanperez@email.com</p>
-      <p><strong>Teléfono:</strong> 3104567890</p>
+    <div class="store-order-detail__info">
+      <div class="store-order-detail__client">
+        <h3 class="store-order-detail__products-header">Datos del cliente</h3>
+        <p><strong>Nombre:</strong> Juan Pérez</p>
+        <p><strong>Correo:</strong> juanperez@email.com</p>
+        <p><strong>Teléfono:</strong> 3104567890</p>
+      </div>
+
+      <div class="store-order-detail__summary">
+        <h3 class="store-order-detail__products-header">Resumen del pedido</h3>
+        <p><strong>Fecha:</strong> 25/10/2025</p>
+        <p><strong>Dirección:</strong> Calle 123 #45-67</p>
+        <p><strong>Total:</strong> $150.000</p>
+      </div>
     </div>
 
-    <div class="store-order-detail__summary">
-      <h3 class="store-order-detail__products-header">Resumen del pedido</h3>
-      <p><strong>Fecha:</strong> 25/10/2025</p>
-      <p><strong>Dirección:</strong> Calle 123 #45-67</p>
-      <p><strong>Total:</strong> $150.000</p>
-    </div>
-  </div>
+    <div class="store-order-detail__products">
+      <h3 class="store-order-detail__products-header">Productos</h3>
 
-  <div class="store-order-detail__products">
-    <h3 class="store-order-detail__products-header">Productos</h3>
+      <div class="store-order-detail__product">
+        <p><strong>Tomates chonto</strong> — 5 kg — $30.000</p>
+      </div>
 
-    <div class="store-order-detail__product">
-      <p><strong>Tomates chonto</strong> — 5 kg — $30.000</p>
+      <div class="store-order-detail__product">
+        <p><strong>Lechugas romana</strong> — 3 unidades — $15.000</p>
+      </div>
     </div>
-
-    <div class="store-order-detail__product">
-      <p><strong>Lechugas romana</strong> — 3 unidades — $15.000</p>
-    </div>
-  </div>
 
   <!-- Contenedor grid de botones -->
   <div class="store-order-detail__actions">
     <div class="store-order-detail__secondary">
-      <a href="store_orders_view.html" class="btn btn-variant2--secondary">Volver</a>
+      <a href="store_orders_view.html" class="btn btn-variant2--secondary">Cancelar pedido</a>
     </div>
 
-    <div class="store-order-detail__buttons">
-      <a href="store_orders_view.html" class="btn btn--primary">Entregar</a>
+      <div class="store-order-detail__buttons">
+        <a href="store_orders_view.html" class="btn btn--primary">Entregar pedido</a>
+      </div>
     </div>
-  </div>
-</section>
+  </section>
+</main>

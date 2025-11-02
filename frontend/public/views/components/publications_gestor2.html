@@ -1,0 +1,63 @@
+<section class="create-post">
+  <form class="create-post__form">
+    <div class="create-post__fields-wrapper">
+      <h2 class="create-post__title">Crear publicación</h2>
+
+      <!-- Campo: Unidad de medida -->
+      <div class="create-post__field">
+        <label class="create-post__label">Unidad de medida</label>
+        <select class="create-post__select" required>
+          <option value="" selected disabled>Selecciona una unidad</option>
+          <option value="kg">Kilogramos (kg)</option>
+          <option value="lb">Libras (lb)</option>
+          <option value="unidad">Unidad</option>
+          <option value="litro">Litros (L)</option>
+          <option value="mililitro">Mililitros (mL)</option>
+          <option value="todas">Todas las opciones (*)</option>
+        </select>
+      </div>
+
+      <!-- Campo: Descuento -->
+      <div class="create-post__field">
+        <label class="create-post__label">Descuento (%)</label>
+        <input 
+          type="number" 
+          class="create-post__input" 
+          placeholder="Ej: 10" 
+          min="0" 
+          max="100"
+        >
+      </div>
+
+      <!-- Campo: Descripción -->
+      <div class="create-post__field create-post__field--full">
+        <label class="create-post__label">Descripción</label>
+        <textarea 
+          class="create-post__textarea" 
+          placeholder="Describe brevemente el producto..."
+        ></textarea>
+      </div>
+
+      <!-- Campo: Imagen -->
+      <div class="create-post__field create-post__field--full">
+        <label class="create-post__label">Imagen del producto</label>
+        <input 
+          type="file" 
+          class="create-post__input" 
+          accept="image/*"
+        >
+      </div>
+    </div>
+
+    <!-- 🔥 CONTENEDOR DE BOTONES -->
+    <div class="create-post__actions-grid">
+      <div class="create-post__field-secundary">
+        <a href="publications_gestor.html" class="btn btn-variant2--secondary">Cancelar</a>
+      </div>
+
+      <div class="create-post__field-actions">
+        <a href="view_seller_cards.html" class="btn btn--primary">Publicar</a>
+      </div>
+    </div>
+  </form>
+</section>

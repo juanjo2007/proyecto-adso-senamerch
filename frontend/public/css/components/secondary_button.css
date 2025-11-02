@@ -1,14 +1,13 @@
-/* ====== BOTÓN VARIANTE 2 (más pequeño) ====== */
 .btn-variant2--secondary {
   display: inline-flex;
   align-items: center;
   justify-content: center;
-  font-size: var(--fs-xxs);             /* ~12px */
-  line-height: 1;                       /* control del alto */
+  font-size: var(--fs-xxs);          
+  line-height: 1;                      
   padding: var(--secundary-padding-top) 
-           var(--secundary-padding-right) 
+           var(--secundary-padding-right)
            var(--secundary-padding-bottom) 
-           var(--secundary-padding-left);
+           var(--secundary-padding-left) !important;
   gap: 6px;
   font-family: var(--font-secondary);
   border: none;
@@ -22,7 +21,6 @@
   background-color: var(--black);
   color: var(--white);
 }
-
 .btn-variant2__icon,
 .btn-variant2 img,
 .btn-variant2 svg {
@@ -30,23 +28,18 @@
   height: 16px;
   display: block;
 }
-
-/* ====== Estados ====== */
 .btn-variant2--secondary:hover {
-  background-color: var(--gray-950);
+  background-color: var(--gray-900);
   transform: translateY(-2px);
 }
-
 .btn-variant2--secondary:active {
   background-color: var(--gray-800);
   transform: translateY(0);
 }
-
 @media (max-width: 480px) {
   .btn-variant2--secondary {
-    font-size: 11px;
+    font-size: 14px;
   }
-
   .btn-variant2__icon,
   .btn-variant2 img,
   .btn-variant2 svg {

@@ -1,50 +1,43 @@
-<section class="edit-store-seller">
-  <h2 class="edit-store-seller__title">Editar datos de la tienda</h2>
+<section class="edit-store-seller-one">
+  <h2 class="edit-store-seller-one__title">Editar datos de la tienda</h2>
 
-  <form class="edit-store-seller__form">
+  <form class="edit-store-seller-one__form">
     <!-- Nombre de la tienda -->
-    <div class="edit-store-seller__field">
-      <label class="edit-store-seller__label">Nombre de la tienda</label>
-      <input type="text" class="edit-store-seller__input" placeholder="Ej: Tienda Verde" required>
+    <div class="edit-store-seller-one__field">
+      <label class="edit-store-seller-one__label">Nombre de la tienda</label>
+      <input type="text" class="edit-store-seller-one__input" placeholder="Ej: Tienda Verde" required>
     </div>
 
     <!-- Correo -->
-    <div class="edit-store-seller__field">
-      <label class="edit-store-seller__label">Correo electrónico</label>
-      <input type="email" class="edit-store-seller__input" placeholder="correo@tienda.com" required>
+    <div class="edit-store-seller-one__field">
+      <label class="edit-store-seller-one__label">Correo electrónico</label>
+      <input type="email" class="edit-store-seller-one__input" placeholder="correo@tienda.com" required>
     </div>
 
     <!-- Teléfono -->
-    <div class="edit-store-seller__field">
-      <label class="edit-store-seller__label">Teléfono</label>
-      <input type="tel" class="edit-store-seller__input" placeholder="+57 300 000 0000" required>
+    <div class="edit-store-seller-one__field">
+      <label class="edit-store-seller-one__label">Teléfono</label>
+      <input type="tel" class="edit-store-seller-one__input" placeholder="+57 300 000 0000" required>
     </div>
 
-    <!-- Dirección -->
-    <div class="edit-store-seller__field">
-      <label class="edit-store-seller__label">Dirección</label>
-      <input type="text" class="edit-store-seller__input" placeholder="Calle 123 #45-67" required>
+    <div class="edit-store-seller-one__field">
+      <label class="edit-store-seller-one__label">Categoría</label>
+      <select class="edit-store-seller-one__input" required>
+        <option value="">Selecciona una categoría</option>
+        <option value="Frutas">Frutas</option>
+        <option value="Verduras">Verduras</option>
+        <option value="Lácteos">Lácteos</option>
+        <option value="Lácteos">Granos</option>
+        <option value="Todas">Todas</option>
+      </select>
     </div>
-
-    <!-- Descripción -->
-    <div class="edit-store-seller__field edit-store-seller__field--full">
-      <label class="edit-store-seller__label">Descripción</label>
-      <textarea class="edit-store-seller__textarea" placeholder="Describe tu tienda" required></textarea>
-    </div>
-
-    <!-- Logo -->
-    <div class="edit-store-seller__field edit-store-seller__field--full">
-      <label class="edit-store-seller__label">Logo</label>
-      <input type="file" class="edit-store-seller__input edit-store-seller__input--file" accept="image/*">
-    </div>
-
     <!-- Botones -->
-    <div class="create-store__secondary">
-      <a href="seller_view.html" class="btn btn-variant2--secondary">Cancelar</a>
+    <div class="edit-store-seller-one__secondary">
+      <a href="profile_store_seller.html" class="btn btn-variant2--secondary">Cancelar</a>
     </div>
 
-    <div class="create-store__buttons">
-      <a href="profile_store_seller.html" class="btn btn--primary">Guardar cambios</a>
+    <div class="edit-store-seller-one__primary">
+      <a href="edit_store_seller2.html" class="btn btn--primary">Siguiente</a>
     </div>
   </form>
 </section>

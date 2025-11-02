@@ -1,38 +1,40 @@
-<section class="store-orders">
-  <header class="store-orders__header">
-    <h2 class="store-orders__title">Pedidos recientes</h2>
+<main class="store-content">
+  <section class="store-orders">
+    <header class="store-orders__header">
+      <h2 class="store-orders__title">Pedidos recientes</h2>
 
-    <div class="store-orders__filters">
-      <select class="store-orders__filter">
-        <option value="">Todos los estados</option>
-        <option value="pendiente">Pendientes</option>
-        <option value="en-proceso">En proceso</option>
-        <option value="entregado">Entregados</option>
-      </select>
+      <div class="store-orders__filters">
+        <select class="store-orders__filter">
+          <option value="">Todos los estados</option>
+          <option value="pendiente">Pendientes</option>
+          <option value="en-proceso">En proceso</option>
+          <option value="entregado">Entregados</option>
+        </select>
+      </div>
+    </header>
+
+    <div class="store-orders__list">
+      <article class="store-orders__item">
+        <div class="store-orders__info">
+          <h3 class="store-orders__id">#ORD-0235</h3>
+          <p class="store-orders__client">Cliente: Juan Pérez</p>
+          <p class="store-orders__date">Fecha: 25/10/2025</p>
+        </div>
+
+        <div class="store-orders__status store-orders__status--pending">
+          Pendiente
+        </div>
+
+        <div class="store-orders__total">
+          Total: <strong>$150.000</strong>
+        </div>
+
+        <div class="store-orders__secondary">
+          <a href="store_order_detail_view.html" class="btn btn--primary">Realizar</a>
+        </div>
+      </article>
+
+      <!-- Más artículos... -->
     </div>
-  </header>
-
-  <div class="store-orders__list">
-    <article class="store-orders__item">
-      <div class="store-orders__info">
-        <h3 class="store-orders__id">#ORD-0235</h3>
-        <p class="store-orders__client">Cliente: Juan Pérez</p>
-        <p class="store-orders__date">Fecha: 25/10/2025</p>
-      </div>
-
-      <div class="store-orders__status store-orders__status--pending">
-        Pendiente
-      </div>
-
-      <div class="store-orders__total">
-        Total: <strong>$150.000</strong>
-      </div>
-
-      <div class="store-orders__secondary">
-        <a href="store_order_detail_view.html" class="btn btn-variant2--secondary">Ver detalle</a>
-      </div>
-    </article>
-
-    <!-- Más artículos... -->
-  </div>
-</section>
+  </section>
+</main>

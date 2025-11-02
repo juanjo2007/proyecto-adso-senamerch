@@ -1,25 +1,25 @@
-<section class="create-post">
-  <form class="create-post__form">
-    <div class="create-post__fields-wrapper">
-      <h2 class="create-post__title">Crear publicación</h2>
+<section class="create-post-one">
+  <form class="create-post-one__form">
+    <div class="create-post-one__fields-wrapper">
+      <h2 class="create-post-one__title">Crear publicación</h2>
 
       <!-- Campo: Título -->
-      <div class="create-post__field">
-        <label class="create-post__label">Título del producto</label>
+      <div class="create-post-one__field">
+        <label class="create-post-one__label">Título del producto</label>
         <input 
           type="text" 
-          class="create-post__input create-post__input--text" 
+          class="create-post-one__input create-post-one__input--text" 
           placeholder="Ej: Tomate del Valle" 
           required
         >
       </div>
 
       <!-- Campo: Precio -->
-      <div class="create-post__field">
-        <label class="create-post__label">Precio</label>
+      <div class="create-post-one__field">
+        <label class="create-post-one__label">Precio</label>
         <input 
           type="number" 
-          class="create-post__input create-post__input--text" 
+          class="create-post-one__input create-post-one__input--text" 
           placeholder="Ej: 3000" 
           min="0" 
           required
@@ -27,84 +27,38 @@
       </div>
 
       <!-- Campo: Categoría -->
-      <div class="create-post__field">
-        <label class="create-post__label">Categoría</label>
-        <select class="create-post__select" required>
+      <div class="create-post-one__field">
+        <label class="create-post-one__label">Categoría</label>
+        <select class="create-post-one__select" required>
           <option value="" selected disabled>Selecciona una categoría</option>
           <option value="frutas">Frutas</option>
           <option value="verduras">Verduras</option>
           <option value="carnes">Carnes</option>
-          <option value="bebidas">Bebidas</option>
+          <option value="Granos">Bebidas</option>
           <option value="otros">Otros</option>
         </select>
       </div>
 
       <!-- Campo: Cantidad disponible -->
       <div class="create-post__field">
-        <label class="create-post__label">Cantidad disponible</label>
-        <input 
-          type="number" 
-          class="create-post__input" 
-          placeholder="Ej: 50" 
-          min="1" 
-          required
-        >
-      </div>
-
-      <!-- Campo: Unidad de medida -->
-      <div class="create-post__field">
-        <label class="create-post__label">Unidad de medida</label>
+        <label class="create-post__label">Precio * Unidad de medida</label>
         <select class="create-post__select" required>
-          <option value="" selected disabled>Selecciona una unidad</option>
+          <option value="" selected disabled>Selecciona una Unidad</option>
           <option value="kg">Kilogramos (kg)</option>
           <option value="lb">Libras (lb)</option>
           <option value="unidad">Unidad</option>
           <option value="litro">Litros (L)</option>
-          <option value="litro">Mililitros (L)</option>
-          <option value="litro">Todas las opciones (*)</option>x
+          <option value="mililitro">Mililitros (mL)</option>
         </select>
       </div>
 
-      <!-- Campo: Descuento -->
-      <div class="create-post__field">
-        <label class="create-post__label">Descuento (%)</label>
-        <input 
-          type="number" 
-          class="create-post__input" 
-          placeholder="Ej: 10" 
-          min="0" 
-          max="100"
-        >
-      </div>
-
-      <!-- Campo: Descripción -->
-      <div class="create-post__field create-post__field--full">
-        <label class="create-post__label">Descripción</label>
-        <textarea 
-          class="create-post__textarea" 
-          placeholder="Describe brevemente el producto..."
-        ></textarea>
-      </div>
-
-      <!-- Campo: Imagen -->
-      <div class="create-post__field create-post__field--full">
-        <label class="create-post__label">Imagen del producto</label>
-        <input 
-          type="file" 
-          class="create-post__input" 
-          accept="image/*"
-        >
-      </div>
+    <div class="create-post-one__field-secundary">
+      <a href="profile_store_seller.html" class="btn btn-variant2--secondary">Cancelar</a>
     </div>
 
-    <div class="create-post__actions-grid">
-      <div class="create-post__field-secundary">
-        <a href="view_seller_cards.html" class="btn btn-variant2--secondary">Cancelar</a>
-      </div>
-
-      <div class="create-post__field-actions">
-        <a href="view_seller_cards.html" class="btn btn--primary">Publicar</a>
-      </div>
+    <div class="create-post-one__field-actions">
+      <a href="view_publications_gestor2.html" class="btn btn--primary">Siguente</a>
+    </div>
     </div>
   </form>
 </section>

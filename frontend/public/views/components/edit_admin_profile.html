@@ -1,0 +1,63 @@
+<main class="edit-profile-admin">
+  <section class="edit-profile-admin__container">
+    <h1 class="edit-profile-admin__title">Editar perfil del administrador</h1>
+
+    <form class="edit-profile-admin__form">
+      <!-- 🖼️ Imagen (solo ocupa una columna) -->
+      <div class="edit-profile-admin__field">
+        <label class="edit-profile-admin__label">Foto de perfil</label>
+        <label class="edit-profile-admin__avatar">
+          <img
+            src="/frontend/public/assets/img/admin_profile.jpg"
+            alt="Foto del administrador"
+            class="edit-profile-admin__avatar-img"
+          />
+          <input type="file" class="edit-profile-admin__avatar-input" accept="image/*" />
+        </label>
+      </div>
+
+      <div class="edit-profile-admin__field">
+        <label class="edit-profile-admin__label">Correo electrónico</label>
+        <input type="email" class="edit-profile-admin__input" value="juanperez@empresa.com" />
+      </div>
+
+      <div class="edit-profile-admin__field">
+        <label class="edit-profile-admin__label">Nombre</label>
+        <input type="text" class="edit-profile-admin__input" value="Juan Pérez" />
+      </div>
+
+      <div class="edit-profile-admin__field">
+        <label class="edit-profile-admin__label">Departamento</label>
+        <select class="edit-profile-admin__input">
+          <option value="Risaralda" selected>Risaralda</option>
+          <option value="Quindío">Quindío</option>
+          <option value="Caldas">Caldas</option>
+        </select>
+      </div>
+
+      <div class="edit-profile-admin__field">
+        <label class="edit-profile-admin__label">Dirección</label>
+        <input type="text" class="edit-profile-admin__input" value="Calle 10 #15-23, Pereira" />
+      </div>
+
+      <div class="edit-profile-admin__field">
+        <label class="edit-profile-admin__label">Escribe tu contraseña</label>
+        
+        <div class="edit-profile-admin__password-wrapper">
+          <input class="edit-profile-admin__input edit-profile-admin__input--password" type="password" placeholder="Contraseña" required>
+          <button type="button" class="edit-profile-admin__toggle-password">Mostrar</button>
+        </div>
+      </div>
+
+      <div class="edit-profile-admin__actions-grid">
+        <div class="edit-profile-admin__actions-secondary">
+          <a href="admin_profile_view.html" class="btn btn-variant2--secondary">Cancelar</a>
+        </div>
+
+        <div class="edit-profile-admin__actions-primary">
+          <a href="admin_profile_view.html" class="btn btn--primary">Guardar cambios</a>
+        </div>
+      </div>  
+    </form>
+  </section>
+</main>

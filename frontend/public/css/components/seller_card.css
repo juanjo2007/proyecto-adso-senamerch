@@ -1,31 +1,27 @@
 .seller-cards__container {
   display: grid;
-  gap: var(--gap-lg);
-  width: 100%;
+  gap: var(--gap-md);
+  width: fit-content;
   box-sizing: border-box;
   margin: var(--gap-md) auto;
   padding-inline: var(--gap-sm);
   justify-content: center;
   justify-items: center;
 }
-
 @media (width > 640px) {
   .seller-cards__container {
     grid-template-columns: repeat(2, 1fr);
-    gap: var(--gap-lg);
-    max-width: 90%;
+    gap: var(--gap-md);
+    max-width: 100%;
   }
 }
-
 @media (width > 1024px) {
   .seller-cards__container {
     grid-template-columns: repeat(4, 1fr);
-    gap: var(--gap-lg);
-    max-width: 90%;
+    gap: var(--gap-md);
+    max-width: 100%;
   }
 }
-
-/* ================= CARD SELLER ================= */
 .card-seller {
   border: 1px solid var(--secundary-900);
   border-radius: 12px;
@@ -42,21 +38,16 @@
   transition: transform 0.3s ease, box-shadow 0.3s ease;
   cursor: pointer;
 }
-
 .card-seller:hover {
   transform: translateY(-4px);
   box-shadow: 0 6px 14px rgba(0, 0, 0, 0.15);
 }
-
-/* Imagen */
 .card-seller__image {
   width: 100%;
   height: 200px;
   object-fit: cover;
   border-radius: 8px;
 }
-
-/* === INFO GRID === */
 .card-seller__info {
   display: grid;
   grid-template-columns: 1fr 1fr; 
@@ -66,8 +57,6 @@
   margin-top: 16px;
   align-items: center;
 }
-
-/* Primera fila */
 .card-seller__title {
   grid-column: 1 / 2;
   grid-row: 1 / 2;
@@ -77,7 +66,6 @@
   margin: 0;
   font-weight: 400;
 }
-
 .card-seller__price {
   grid-column: 2 / 3;
   grid-row: 1 / 2;
@@ -87,23 +75,18 @@
   font-weight: 800;
   margin: 0;
 }
-
-/* Segunda fila */
 .card-seller__secondary {
   grid-column: 1 / 2;
   grid-row: 2 / 3;
   display: flex;
   justify-content: flex-start;
 }
-
 .card-seller__primary {
   grid-column: 2 / 3;
   grid-row: 2 / 3;
   display: flex;
   justify-content: flex-end;
 }
-
-/* Botones */
 .card-seller__primary .btn {
   font-family: var(--font-primary-regular);
   font-weight: 400;
@@ -111,34 +94,26 @@
            var(--button-padding-bottom) var(--button-padding-left);
   border-radius: 8px;
 }
-
-/* =========================================================
-   📱 RESPONSIVE (Celulares y pantallas pequeñas)
-   ========================================================= */
 @media (max-width: 640px) {
   .card-seller {
-    text-align: left; /* ✅ Alineación general izquierda */
+    text-align: left;
     align-items: flex-start;
     padding: var(--gap-md);
   }
-
   .card-seller__info {
     grid-template-columns: 1fr;
     grid-template-rows: repeat(4, auto);
-    text-align: left; /* ✅ Mantener alineado */
+    text-align: left;
     gap: var(--gap-xs);
   }
-
   .card-seller__title,
   .card-seller__price {
-    text-align: left; /* ✅ Título y precio alineados a la izquierda */
+    text-align: left; 
   }
-
   .card-seller__secondary,
   .card-seller__primary {
-    justify-content: flex-start; /* ✅ Botones alineados a la izquierda */
+    justify-content: flex-start; 
   }
-
   .card-seller__image {
     height: 180px;
   }

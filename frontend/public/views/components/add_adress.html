@@ -1,12 +1,46 @@
-<form class="address-form">
-  <h2 class="address-form__title">Añade tu dirección</h2>
+<section class="address-form">
+  <form class="address-form__fields">
+    <h2 class="address-form__title">Añade tu dirección</h2>
 
-  <input type="text" placeholder="Barrio" name="barrio" class="address-form__input">
-  <input type="text" placeholder="Número de dirección" name="numero" class="address-form__input">
-  <input type="text" placeholder="Tipo de vía" name="via" class="address-form__input">
-  <input type="text" placeholder="Código postal" name="codigo" class="address-form__input">
-  <input type="text" placeholder="Departamento" name="departamento" class="address-form__input">
-  <input type="text" placeholder="Municipio" name="municipio" class="address-form__input">
-  <input type="text" placeholder="Información adicional" name="info" class="address-form__input">
-  <a href="register.html" class="btn btn--primary">Registrar</a>
-</form>
+    <div class="address-form__grid">
+      <div class="address-form__group">
+        <label class="address-form__label">Barrio</label>
+        <input type="text" name="neighborhood" placeholder="Ingresa tu barrio" class="address-form__input">
+      </div>
+
+      <div class="address-form__group">
+        <label class="address-form__label">Número de dirección</label>
+        <input type="text" name="address-number" placeholder="Ej: #25A - 45" class="address-form__input">
+      </div>
+
+      <div class="address-form__group">
+        <label class="address-form__label">Tipo de vía</label>
+        <input type="text" name="street-type" placeholder="Ej: Calle, Carrera, Avenida" class="address-form__input">
+      </div>
+
+      <div class="address-form__group">
+        <label class="address-form__label">Código postal</label>
+        <input type="text" name="postal-code" placeholder="Ej: 110111" class="address-form__input">
+      </div>
+
+      <div class="address-form__group">
+        <label class="address-form__label">Departamento</label>
+        <input type="text" name="department" placeholder="Ej: Cundinamarca" class="address-form__input">
+      </div>
+
+      <div class="address-form__group">
+        <label class="address-form__label">Municipio</label>
+        <input type="text" name="city" placeholder="Ej: Bogotá" class="address-form__input">
+      </div>
+
+      <div class="address-form__group address-form__group--full">
+        <label class="address-form__label">Información adicional</label>
+        <input type="text" name="additional-info" placeholder="Apartamento, interior, referencias, etc." class="address-form__input">
+      </div>
+    </div>
+    
+    <div class="address-form__buttons">
+      <a href="register.html" class="btn btn--primary">Siguiente</a>
+    </div>
+  </form>
+</section>

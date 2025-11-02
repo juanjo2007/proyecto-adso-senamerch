@@ -4,14 +4,14 @@
   align-items: center;
   justify-content: flex-start;
   background: var(--white);
-  border: 1px solid var(--gray-200);
+  border: 1px solid var(--secundary-900);
   border-radius: var(--gap-xs);
   padding: var(--padding-top) var(--padding-right) var(--padding-bottom) var(--padding-left);
   gap: var(--gap-sm); 
   font-family: var(--font-primary);
   font-size: var(--fs-xs);
   line-height: 1.5;
-  box-shadow: var(--gap-xxs) var(--gap-xxs) var(--gap-sm) var(--black);
+  box-shadow: var(--gap-xxs) var(--gap-xxs) var(--gap-xxs) var(--black);
 
   width: 95%;
   margin: var(--gap-md) auto;

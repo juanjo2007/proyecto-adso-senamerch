@@ -1,7 +1,7 @@
 .cards__container {
   display: grid;
   gap: var(--gap-lg);
-  width: 100%;
+  width: fit-content;
   box-sizing: border-box;
   margin: var(--gap-md) auto;
   padding-inline: var(--gap-sm);
@@ -11,15 +11,15 @@
 @media (width > 640px) {
     .cards__container {
         grid-template-columns: repeat(2, 1fr);
-        gap: var(--gap-lg);
-        max-width: 90%;
+        gap: var(--gap-md);
+        max-width: 100%;
     }
 }
 @media (width > 1024px) {
     .cards__container {
         grid-template-columns: repeat(4, 1fr);
-        gap: var(--gap-lg);
-        max-width: 90%;
+        gap: var(--gap-md);
+        max-width: 100%;
     }
 }
 .card {

@@ -3,46 +3,33 @@
   justify-content: center;   
   align-items: center;         
   width: 100%;
-  background-color: var(--gray-50);
   box-sizing: border-box;
 } 
+
 .car-pay-grid {
   display: grid;
-  grid-template-columns: 2fr 1fr;
+  grid-template-columns: 1fr 1fr; /* 🔹 mitad y mitad */
   gap: var(--gap-lg);
-  max-width: 1200px;         
   width: 100%;
-  margin: 0 auto;
-  padding: var(--gap-lg);
   box-sizing: border-box;
 }
+
+/* Alineación del contenido */
 .pay-method-product {
-  display: grid;
-  place-items: center;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
 }
+
 .payment-method-container {
   width: 100%;
-  max-width: 400px;
 }
-@media (max-width: 768px) {
-  .car-pay-grid {
-    grid-template-columns: 1fr;
-  }
 
-  .pay-method-product {
-    justify-content: center;
-  }
-}
+/* === Responsivo === */
 @media (max-width: 768px) {
   .car-pay-grid {
-    grid-template-columns: 1fr;
+    grid-template-columns: 1fr; /* una sola columna en móvil */
     max-width: 100%;
-    padding: var(--gap-md);
   }
 }
-@media (min-width: 1024px) {
-  .pay {
-    align-items: center;
-  }
-}
-

@@ -1,7 +1,7 @@
 .content-seeker-and-users {
   display: grid;
-  grid-template-columns: 300px 1fr; 
-  gap: var(--gap-lg);
+  grid-template-columns: auto 1fr; 
+  gap: var(--gap-xxs);
   width: 100%;
   align-items: start;
 }
@@ -19,5 +19,9 @@
   }
   .view_users_admin{
     order: 2;   
+    gap: var(--gap-xxs);
+  }
+  .admin-container{
+    width: 100%;
   }
 }

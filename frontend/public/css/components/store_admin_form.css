@@ -1,12 +1,19 @@
+.main-store-form {
+  display: flex;
+  justify-content: center;
+  padding-block: 4rem; 
+  background-color: var(--gray-50); 
+}
 .store-form {
+  border: 1px solid var(--secundary-900);
   width: 100%;
   max-width: 700px;
-  margin: var(--gap-xl) auto;
   padding: var(--gap-lg);
   background-color: var(--white);
   border-radius: 12px;
   box-shadow: 0 2px 8px rgba(0,0,0,0.1);
   font-family: var(--font-primary);
+  box-sizing: border-box;
 }
 .store-form__title {
   font-size: var(--fs-sm);
@@ -33,18 +40,18 @@
 .store-form__group {
   display: flex;
   flex-direction: column;
-  gap: var(--gap-xs);
+  gap: var(--gap-xxxs);
 }
 .store-form__label {
-  font-size: var(--fs-xs);
-  color: var(--gray-800);
+  font-size: var(--fs-xxs);
+  color: var(--gray-950);
 }
 .store-form__input,
 .store-form__select {
   padding: var(--padding-top) var(--padding-right) var(--padding-bottom) var(--padding-left);
-  font-size: var(--fs-xxs);
-  color: var(--gray-900);
-  border: 1px solid var(--gray-300);
+  font-size: var(--fs-xs);
+  color: var(--gray-600);
+  border: 1px solid var(--secundary-900);
   border-radius: 8px;
   background-color: var(--white);
   transition: border-color 0.3s ease, box-shadow 0.3s ease;
@@ -57,7 +64,7 @@
 }
 .store-form__actions {
   display: flex;
-  justify-content: flex-end; 
+  justify-content: center; 
   align-items: center;
   gap: var(--gap-md);
   margin-top: var(--gap-md);
@@ -67,4 +74,28 @@
   font-weight: 400;
   padding: var(--button-padding-top) var(--button-padding-right)
            var(--button-padding-bottom) var(--button-padding-left);
+}
+@media (max-width: 640px) {
+  .main-store-form {
+    padding-block: 6rem; 
+  }
+  .store-form {
+    max-width: 100%;
+    padding: var(--gap-md);
+    border-radius: 8px;
+  }
+  .store-form__fields {
+    grid-template-columns: 1fr;
+    gap: var(--gap-sm);
+  }
+  .store-form__actions {
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: stretch;
+    gap: var(--gap-sm);
+  }
+  .store-form__actions .btn {
+    width: 100%;
+    text-align: center;
+  }
 }

@@ -1,0 +1,105 @@
+<main class="user-detail">
+
+  <!-- Encabezado principal -->
+  <header class="user-detail__header">
+    <h1 class="user-detail__title">Gestión del Usuario</h1>
+    <p class="user-detail__subtitle">
+      Aquí puedes visualizar la información completa de un usuario, actualizar su rol, revisar su historial de actividad
+      y exportar sus datos en formato PDF para control administrativo.
+    </p>
+  </header>
+
+  <!-- === Contenedor general de tarjetas === -->
+  <section class="user-detail__grid">
+
+    <!-- Card 1 -->
+    <article class="user-detail__card user-detail__card--info">
+      <h2 class="user-detail__card-title">Información del usuario</h2>
+
+      <div class="user-detail__card-grid">
+        <div class="user-detail__info">
+          <div class="user-detail__item">
+            <span class="user-detail__label">Nombre del usuario:</span>
+            <p class="user-detail__text">Emanuel</p>
+          </div>
+          <div class="user-detail__item">
+            <span class="user-detail__label">Correo electrónico:</span>
+            <p class="user-detail__text">emanuel@gmail.com</p>
+          </div>
+          <div class="user-detail__item">
+            <span class="user-detail__label">Teléfono:</span>
+            <p class="user-detail__text">+57 310 456 7890</p>
+          </div>
+          <div class="user-detail__item">
+            <span class="user-detail__label">Tipo de usuario:</span>
+            <p class="user-detail__text">Común</p>
+          </div>
+          <div class="user-detail__item">
+            <span class="user-detail__label">Fecha de registro:</span>
+            <p class="user-detail__text">15 de marzo de 2024</p>
+          </div>
+        </div>
+
+        <div class="user-detail__media">
+          <span class="user-detail__label">Imagen de perfil:</span>
+          <img src="/frontend/public/assets/img/admin_profile.jpg" alt="Imagen de perfil del usuario" class="user-detail__image">
+        </div>
+      </div>
+    </article>
+
+    <!-- Card 2 -->
+    <article class="user-detail__card user-detail__card--address">
+      <h2 class="user-detail__card-title">Dirección de la tienda</h2>
+
+      <div class="user-detail__card-grid">
+        <div class="user-detail__info">
+          <div class="user-detail__item">
+            <span class="user-detail__label">Barrio:</span>
+            <p class="user-detail__text">Buenos Aires</p>
+          </div>
+          <div class="user-detail__item">
+            <span class="user-detail__label">Número de dirección:</span>
+            <p class="user-detail__text">10 #34-36</p>
+          </div>
+          <div class="user-detail__item">
+            <span class="user-detail__label">Tipo de vía:</span>
+            <p class="user-detail__text">Carrera</p>
+          </div>
+          <div class="user-detail__item">
+            <span class="user-detail__label">Código postal:</span>
+            <p class="user-detail__text">110111</p>
+          </div>
+        </div>
+
+        <div class="user-detail__info">
+          <div class="user-detail__item">
+            <span class="user-detail__label">Departamento:</span>
+            <p class="user-detail__text">Risaralda</p>
+          </div>
+          <div class="user-detail__item">
+            <span class="user-detail__label">Municipio:</span>
+            <p class="user-detail__text">Pereira</p>
+          </div>
+          <div class="user-detail__item">
+            <span class="user-detail__label">Información adicional:</span>
+            <p class="user-detail__text">Local 2, frente al parque principal.</p>
+          </div>
+        </div>
+      </div>
+    </article>
+
+  </section>
+
+  <section class="user-detail__section user-detail__section--actions">
+    <h2 class="user-detail__section-title">Acciones administrativas</h2>
+    <div class="user-detail__actions-secondary">
+      <a href="#" class="btn btn-variant2--secondary">Exportar información en PDF</a>
+    </div>
+    <div class="user-detail__actions-primary">
+      <a href="#" class="btn btn--primary">Suspender usuario</a>
+    </div>
+    <div class="user-detail__actions-secondary">
+      <a href="admin_profile_view.html" class="btn btn-variant2--secondary">Volver al panel</a>
+    </div>
+  </section>
+</main>

@@ -2,29 +2,29 @@
   position: relative;
   background: url("/frontend/public/assets/img/img_contact.jpg") no-repeat center center/cover;
   width: 100%;
-  height: 100%; 
+  height: 88vh; 
   display: flex;
   align-items: center;
   justify-content: center;
   color: var(--white);
   font-family: var(--font-primary);
-  overflow: hidden;
 }
 .contact__overlay {
-  background:rgba(233, 233, 233, 0.5);
   width: 100%;
+  max-width: 700px;
   height: 100%;
-  padding: var(--gap-xl);
+  padding: var(--gap-md);
   display: flex;
   align-items: center;
   justify-content: center;
 }
 .contact__container {
+  border: 1px solid var(--secundary-900);
   background: var(--white);
   color: var(--gray-900);
   border-radius: 12px;
-  padding: var(--gap-xl);
-  max-width: 720px;
+  padding: var(--gap-md);
+  max-width: 700px;
   width: 100%;
   box-shadow: 0 4px 12px rgba(0,0,0,0.15);
 }
@@ -51,7 +51,7 @@
 .contact__group {
   display: flex;
   flex-direction: column;
-  gap: var(--gap-xxs);
+  gap: var(--gap-xxxs);
 }
 .contact__group label {
   font-size: var(--fs-xxs);
@@ -61,7 +61,7 @@
 .contact__group input,
 .contact__group textarea {
   padding: var(--padding-top) var(--padding-right) var(--padding-bottom) var(--padding-left);
-  border: 1px solid var(--gray-300);
+  border: 1px solid var(--secundary-900);
   border-radius: 8px;
   font-size: var(--fs-xs);
   font-family: var(--font-primary);
@@ -73,6 +73,11 @@
 .contact__group input:focus,
 .contact__group textarea:focus {
   border-color: var(--primary-600);
+}
+.contact__group textarea{
+  height: 80px;
+  min-height: 80px;
+  resize: vertical;
 }
 .contact__form  .btn {
   font-family: var(--font-primary-regular);

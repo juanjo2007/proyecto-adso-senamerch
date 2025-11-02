@@ -1,227 +1,128 @@
-.create-post {
+.create-post-one {
   display: flex;
   justify-content: center;
   padding: var(--gap-lg);
   width: 100%;
   margin: 0 auto;
   box-sizing: border-box;
+  padding-block: 14.8rem;
 }
-
-.create-post__form {
+.create-post-one__form {
   background: var(--white);
-  padding: var(--gap-lg);
+  padding: var(--gap-sm);
   border-radius: 1.2rem;
   box-shadow: 0 4px 10px rgba(0, 0, 0, 0.15);
+  border: 1px solid var(--secundary-900);
   width: 100%;
-  max-width: 1100px;
+  max-width: 700px;
   display: flex;
   flex-direction: column;
   justify-content: space-between;
   box-sizing: border-box;
-  min-height: 100vh;
 }
-
-.create-post__fields-wrapper {
+.create-post-one__fields-wrapper {
   display: grid;
-  grid-template-columns: repeat(3, 1fr);
+  grid-template-columns: repeat(2, 1fr);
   gap: var(--gap-md);
   width: 100%;
   box-sizing: border-box;
 }
-
-.create-post__title {
+.create-post-one__title {
   grid-column: 1 / -1;
   text-align: center;
-  font-size: var(--fs-md);
+  font-size: var(--fs-sm);
   font-weight: 600;
-  margin-bottom: var(--gap-md);
+  margin-bottom: var(--gap-xs);
   color: var(--black);
   font-family: var(--font-primary-semibold);
 }
-
-.create-post__field {
+.create-post-one__field {
   display: flex;
   flex-direction: column;
-  gap: var(--gap-xs);
-  min-width: 0; /* 🔥 evita que los labels se salgan del grid */
+  gap: var(--gap-xxxs);
+  min-width: 0; 
   box-sizing: border-box;
 }
-
-.create-post__field--full {
+.create-post-one__field--full {
   grid-column: 1 / -1;
 }
-
-.create-post__label {
+.create-post-one__label {
   font-size: var(--fs-xxs);
   font-family: var(--font-primary-semibold);
   color: var(--black);
-  word-wrap: break-word; /* 🔥 evita el desbordamiento */
+  word-wrap: break-word; 
   overflow-wrap: break-word;
   white-space: normal;
 }
-
-.create-post__input,
-.create-post__textarea,
-.create-post__select {
+.create-post-one__input,
+.create-post-one__textarea,
+.create-post-one__select {
   padding: var(--padding-top) var(--padding-right)
            var(--padding-bottom) var(--padding-left);
-  border: 1px solid var(--gray-300);
+  border: 1px solid var(--secundary-900);
   border-radius: 0.6rem;
   font-size: var(--fs-xs);
   font-family: var(--font-primary);
-  color: var(--gray-900);
+  color: var(--gray-600);
   background: var(--white);
   transition: border 0.3s;
-  width: 100%; /* 🔥 asegura que no se desborden */
+  width: 100%; 
   box-sizing: border-box;
 }
-
-.create-post__input:focus,
-.create-post__textarea:focus,
-.create-post__select:focus {
+.create-post-one__input:focus,
+.create-post-one__textarea:focus,
+.create-post-one__select:focus {
   border-color: var(--secundary-600);
   outline: none;
 }
-
-.create-post__textarea {
+.create-post-one__textarea {
   min-height: 12rem;
   resize: vertical;
 }
-
-/* === BOTONES === */
-
-/* botón primario (derecha, columna 3) */
-.create-post__field-actions {
+.create-post-one__actions-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: var(--gap-sm);
+  width: 100%;
+  margin-top: 1.2rem;
+}
+.create-post-one__field-secundary {
   display: flex;
-  grid-column: 3;
+  justify-content: flex-start; 
+  align-items: center;
+  margin: 1.2rem 0; 
+  float: left; 
+  box-sizing: border-box;
+}
+.create-post-one__field-actions {
+  display: flex;
   justify-content: flex-end; 
   align-items: center;
-  gap: var(--gap-md);
-  margin-top: var(--gap-md);
+  margin: 1.2rem 0;
+  float: right;
+  box-sizing: border-box;
 }
-
-/* ====== GRID de botones ====== */
-.create-post__actions-grid {
-  display: grid;
-  grid-template-columns: 1fr 1fr; /* dos columnas iguales */
-  align-items: center;
-  margin-top: var(--gap-xl);
-  width: 100%;
-}
-
-/* Botón secundario: izquierda */
-.create-post__field-secundary {
-  display: flex;
-  justify-content: flex-start;
-  align-items: center;
-}
-
-/* Botón primario: derecha */
-.create-post__field-actions {
-  display: flex;
-  justify-content: flex-end;
-  align-items: center;
-}
-
-/* Espaciado uniforme en ambos botones */
-.create-post__field-actions .btn{
+.create-post-one__field-secundary .btn,
+.create-post-one__field-actions .btn {
   font-family: var(--font-primary-regular);
   font-weight: 400;
   padding: var(--button-padding-top) var(--button-padding-right)
            var(--button-padding-bottom) var(--button-padding-left);
 }
-
-/* ===== ALERTA ===== */
-.alert {
-  position: fixed;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%) scale(0.8);
-  background-color: var(--white);
-  border: 2px solid var(--primary-900);
-  color: var(--primary-950);
-  padding: 1.8rem 2.5rem;
-  border-radius: 12px;
-  font-family: var(--font-primary);
-  font-size: var(--fs-sm);
-  text-align: center;
-  box-shadow: 0 8px 30px rgba(0, 0, 0, 0.25);
-  z-index: 9999;
-  opacity: 0;
-  transition: opacity 0.4s ease, transform 0.4s ease;
-}
-
-.alert.show {
-  opacity: 1;
-  transform: translate(-50%, -50%) scale(1);
-}
-
-.alert__content {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-}
-
-.alert__message {
-  margin: 0;
-  font-weight: 500;
-  color: var(--primary-950);
-}
-
-/* ===== Tipos ===== */
-.alert--success {
-  border-color: var(--secundary-700);
-  background-color: var(--secundary-50);
-}
-
-.alert--error {
-  border-color: var(--tertiary-700);
-  background-color: var(--tertiary-100);
-}
-
-/* ====== RESPONSIVO ====== */
 @media (max-width: 768px) {
-  .create-post__actions-grid {
-    grid-template-columns: 1fr; /* una columna */
-    gap: var(--gap-md);
-  }
-
-  .create-post__field-secundary,
-  .create-post__field-actions {
-    justify-content: center; /* centrados en móvil */
+  .create-post-one__field-secundary,
+  .create-post-one__field-actions {
+    width: 100%; 
+    float: none;
+    justify-content: center; 
   }
 }
+
 
 
 /* Tablets: 2 columnas */
 @media (max-width: 1024px) {
-  .create-post__fields-wrapper {
+  .create-post-one__fields-wrapper {
     grid-template-columns: repeat(2, 1fr);
-  }
-
-  .create-post__field-actions {
-    grid-column: 2;
-    justify-content: flex-end;
-  }
-
-  .create-post__field-secundary {
-    grid-column: 1;
-    justify-content: flex-start;
-  }
-}
-
-/* Móviles: 1 columna */
-@media (max-width: 768px) {
-  .create-post__fields-wrapper {
-    grid-template-columns: 1fr;
-  }
-
-  .create-post__form {
-    padding: var(--gap-md);
-    min-height: auto;
-  }
-
-  .create-post__field {
-    width: 100%;
   }
 }
