@@ -2,9 +2,29 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">    
+    <title>Tienda Vendedor</title>
+</head>
+<body>
+    <main>
+      <section>
+          <div class="navbar_seller_view"></div>
+      </section>
+      <section class="hero">
+        <div class="hero-seller__container"></div>
+      </section>
+      <section class="seeker">
+        <div class="search-bar-container"></div>
+      </section>
+      <section class="products-cards">
+        <div class="seller-cards__container"></div>
+      </section>
+    </main>
+    <section>
+        <footer class="footer-container"></footer>
+    </section>
+</body>
     <link rel="stylesheet" href="/frontend/public/css/main.css">
-    
     <script type="module">
       import { loadSellercards } from "/frontend/public/js/components/seller_card.js";
       document.addEventListener("DOMContentLoaded", () => {
@@ -15,26 +35,8 @@
     <script src="/frontend/public/js/components/search_bar.js"></script>
     <script src="/frontend/public/js/components/client_view.js"></script>
     <script src="/frontend/public/js/components/footer.js"></script>
-    
-    <title>Tienda Vendedor</title>
-</head>
-<body>
-    <main>
-    <section>
-        <div class="navbar_seller_view"></div>
-    </section>
-
-      <section class="seeker">
-        <div class="search-bar-container"></div>
-      </section>
-      
-      <section class="products-cards">
-        <div class="seller-cards__container"></div>
-      </section>
-    </main>
-    <section>
-        <footer class="footer-container"></footer>
-    </section>
-</body>
+    <script src="/frontend/public/js/components/hero_seller.js" defer></script>
 </html>
 
+    
+ 

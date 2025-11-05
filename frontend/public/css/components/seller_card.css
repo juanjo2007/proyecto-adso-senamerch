@@ -1,6 +1,6 @@
 .seller-cards__container {
   display: grid;
-  gap: var(--gap-md);
+  gap: var(--gap-lg);
   width: fit-content;
   box-sizing: border-box;
   margin: var(--gap-md) auto;
@@ -28,8 +28,8 @@
   padding: 24px;
   text-align: center;
   background-color: var(--secundary-50);
-  min-width: 200px;
-  max-width: 320px;
+  min-width: 320px;
+  max-width: 100%;
   box-shadow: 0 2px 4px var(--secundary-900);
   overflow: hidden;
   display: flex;

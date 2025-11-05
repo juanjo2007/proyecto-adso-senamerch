@@ -1,0 +1,171 @@
+<main class="sale-detail">
+
+  <!-- Encabezado principal -->
+  <header class="sale-detail__header">
+    <h1 class="sale-detail__title">Gestión de Ventas</h1>
+    <p class="sale-detail__subtitle">
+      Aquí puedes visualizar la información completa de cada venta, incluyendo los datos del vendedor, cliente,
+      producto y tienda. Además, puedes revisar el documento de venta o realizar acciones administrativas.
+    </p>
+  </header>
+
+  <!-- === Contenedor general de tarjetas === -->
+  <section class="sale-detail__grid">
+
+    <!-- Card 1: Información del documento de venta -->
+    <article class="sale-detail__card sale-detail__card--info">
+      <h2 class="sale-detail__card-title">Documento de venta</h2>
+
+      <div class="sale-detail__card-grid">
+        <div class="sale-detail__info">
+          <div class="sale-detail__item">
+            <span class="sale-detail__label">Número de documento:</span>
+            <p class="sale-detail__text">#VENTA-1024</p>
+          </div>
+
+          <div class="sale-detail__item">
+            <span class="sale-detail__label">Fecha de venta:</span>
+            <p class="sale-detail__text">4 de noviembre de 2025</p>
+          </div>
+
+          <div class="sale-detail__item">
+            <span class="sale-detail__label">Método de pago:</span>
+            <p class="sale-detail__text">Transferencia bancaria</p>
+          </div>
+
+          <div class="sale-detail__item">
+            <span class="sale-detail__label">Valor total:</span>
+            <p class="sale-detail__text">$150.000</p>
+          </div>
+        </div>
+
+        <div class="sale-detail__media">
+          <span class="sale-detail__label">Comprobante:</span>
+          <img src="/frontend/public/assets/img/orders.png"
+               alt="Comprobante de venta #VENTA-1024"
+               class="sale-detail__image">
+        </div>
+      </div>
+    </article>
+
+    <!-- Card 2: Información del vendedor -->
+    <article class="sale-detail__card sale-detail__card--seller">
+      <h2 class="sale-detail__card-title">Información del vendedor</h2>
+
+      <div class="sale-detail__card-grid">
+        <div class="sale-detail__info">
+          <div class="sale-detail__item">
+            <span class="sale-detail__label">Nombre del vendedor:</span>
+            <p class="sale-detail__text">Carlos Gómez</p>
+          </div>
+
+          <div class="sale-detail__item">
+            <span class="sale-detail__label">Correo electrónico:</span>
+            <p class="sale-detail__text">carlos.gomez@tienda.com</p>
+          </div>
+
+          <div class="sale-detail__item">
+            <span class="sale-detail__label">Teléfono:</span>
+            <p class="sale-detail__text">+57 312 555 1122</p>
+          </div>
+        </div>
+      </div>
+    </article>
+
+    <!-- Card 3: Información del cliente -->
+    <article class="sale-detail__card sale-detail__card--client">
+      <h2 class="sale-detail__card-title">Información del cliente</h2>
+
+      <div class="sale-detail__card-grid">
+        <div class="sale-detail__info">
+          <div class="sale-detail__item">
+            <span class="sale-detail__label">Nombre del cliente:</span>
+            <p class="sale-detail__text">María Rodríguez</p>
+          </div>
+
+          <div class="sale-detail__item">
+            <span class="sale-detail__label">Correo electrónico:</span>
+            <p class="sale-detail__text">maria.rodriguez@example.com</p>
+          </div>
+
+          <div class="sale-detail__item">
+            <span class="sale-detail__label">Teléfono:</span>
+            <p class="sale-detail__text">+57 310 789 4567</p>
+          </div>
+        </div>
+      </div>
+    </article>
+
+    <!-- Card 4: Información de la tienda -->
+    <article class="sale-detail__card sale-detail__card--store">
+      <h2 class="sale-detail__card-title">Información de la tienda</h2>
+
+      <div class="sale-detail__card-grid">
+        <div class="sale-detail__info">
+          <div class="sale-detail__item">
+            <span class="sale-detail__label">Nombre comercial:</span>
+            <p class="sale-detail__text">Frutas La Esperanza</p>
+          </div>
+
+          <div class="sale-detail__item">
+            <span class="sale-detail__label">Ubicación:</span>
+            <p class="sale-detail__text">Pereira, Risaralda</p>
+          </div>
+        </div>
+
+        <div class="sale-detail__media">
+          <span class="sale-detail__label">Imagen de la tienda:</span>
+          <img src="/frontend/public/assets/img/store_seller.jpg"
+               alt="Imagen de la tienda Frutas La Esperanza"
+               class="sale-detail__image">
+        </div>
+      </div>
+    </article>
+
+    <!-- Card 5: Información del producto -->
+    <article class="sale-detail__card sale-detail__card--product">
+      <h2 class="sale-detail__card-title">Información del producto</h2>
+
+      <div class="sale-detail__card-grid">
+        <div class="sale-detail__info">
+          <div class="sale-detail__item">
+            <span class="sale-detail__label">Nombre del producto:</span>
+            <p class="sale-detail__text">Tomate Del Valle</p>
+          </div>
+
+          <div class="sale-detail__item">
+            <span class="sale-detail__label">Cantidad vendida:</span>
+            <p class="sale-detail__text">10 kg</p>
+          </div>
+
+          <div class="sale-detail__item">
+            <span class="sale-detail__label">Precio unitario:</span>
+            <p class="sale-detail__text">$3.000</p>
+          </div>
+        </div>
+
+        <div class="sale-detail__media">
+          <span class="sale-detail__label">Imagen del producto:</span>
+          <img src="/frontend/public/assets/img/tomato_image.png"
+               alt="Imagen del producto Tomate Del Valle"
+               class="sale-detail__image">
+        </div>
+      </div>
+    </article>
+
+  </section>
+
+  <!-- Acciones administrativas -->
+  <section class="sale-detail__section sale-detail__section--actions">
+    <h2 class="sale-detail__section-title">Acciones administrativas</h2>
+
+    <div class="sale-detail__actions-secondary">
+      <a href="#" class="btn btn-variant2--secondary">Exportar documento PDF</a>
+    </div>
+
+    <div class="sale-detail__actions-secondary">
+      <a href="admin_dashboard.html" class="btn btn-variant2--secondary">Volver al panel</a>
+    </div>
+  </section>
+
+</main>

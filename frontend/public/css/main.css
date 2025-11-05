@@ -93,6 +93,11 @@
 @import url('components/edit_admin_profile.css');
 @import url('components/managed_user.css');
 @import url('components/managed_store.css');
+@import url('components/hero_seller.css');
+@import url('components/description_product_seller.css');
+@import url('components/managed_product.css');
+@import url('components/managed_orders.css');
+@import url('components/managed_sales.css');
 
 
 

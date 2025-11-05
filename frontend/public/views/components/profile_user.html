@@ -1,55 +1,80 @@
 <section class="user-profile">
-  <!-- Sidebar con avatar + datos básicos -->
-  <aside class="user-profile__sidebar">
-    <figure class="user-profile__image">
-      <img src="/frontend/public/assets/img/client_photo_profile.jpg" alt="Photo_client">
-    </figure>
-    <h2 class="user-profile__name">Juan Pérez</h2>
-    <p class="user-profile__role">Cliente</p>
-    <hr>
-    <p class="user-profile__info"><strong>Correo:</strong> juanperez@email.com</p>
-    <p class="user-profile__info"><strong>Teléfono:</strong> +57 300 456 7890</p> 
+  <div class="user-profile__container">
+    <h1 class="user-profile__title">Mi Perfil </h1>
 
-    <!-- Botón secundario movido al fondo -->
-    <div class="user-profile__actions-secundary">
-      <a href="index.html" class="btn btn-variant2--secondary">Cerrar sesión</a>
+    <div class="user-profile__grid">
+
+      <!-- === Caja 1: Información de la Tienda === -->
+      <div class="user-profile__card">
+        <h2 class="user-profile__subtitle">Información Personal</h2>
+        <div class="user-profile__info">
+          <div class="user-profile__item">
+            <span class="user-profile__label">Nombre:</span>
+            <p class="user-profile__text">Luis Antonio Castaño Ramirez</p>
+          </div>
+          <div class="user-profile__item">
+            <span class="user-profile__label">Correo electrónico:</span>
+            <p class="user-profile__text">AntonioCastañoRamirez@gmail.com</p>
+          </div>
+          <div class="user-profile__item">
+            <span class="user-profile__label">Teléfono:</span>
+            <p class="user-profile__text">+57 310 456 7890</p>
+          </div>
+          <div class="user-profile__field">
+            <span class="user-profile__label">Contraseña:</span>
+            <p class="user-profile__text">************</p>
+          </div>
+          <div class="user-profile__field">
+            <a href="view_purchases.html" class="user-profile__link">
+              <span class="user-profile__label">Actividad reciente</span>
+            </a>
+            <p class="user-profile__text">Compra 0124 - (22/09/2025)</p>
+            <p class="user-profile__text">Compra 0122 - (01/09/2025)</p>
+            <p class="user-profile__text">Compra 0121 - (03/09/2025)</p>
+          </div>  
+          <div class="user-profile__item">
+            <span class="user-profile__label">Imagen de portada:</span>
+            <img src="/frontend/public/assets/img/admin_profile.png" alt="Portada de Frutas La Esperanza" class="user-profile__image">
+          </div>
+        </div>
+      </div>
+      <!-- === Caja 2: Dirección === -->
+      <div class="user-profile__card">
+        <h2 class="user-profile__subtitle">Dirección</h2>
+        <div class="user-profile__info">
+          <div class="user-profile__item">
+            <span class="user-profile__label">Barrio:</span>
+            <p class="user-profile__text">Buenos Aires</p>
+          </div>
+          <div class="user-profile__item">
+            <span class="user-profile__label">Número de dirección:</span>
+            <p class="user-profile__text">10 #34-36 </p>
+          </div>
+          <div class="user-profile__item">
+            <span class="user-profile__label">Tipo de vía:</span>
+            <p class="user-profile__text">Carrera</p>
+          </div>
+          <div class="user-profile__item">
+            <span class="user-profile__label">Código postal:</span>
+            <p class="user-profile__text">110111</p>
+          </div>
+          <div class="user-profile__item">
+            <span class="store-profile__label">Departamento:</span>
+            <p class="store-profile__text">Risaralda</p>
+          </div>
+          <div class="user-profile__item">
+            <span class="user-profile__label">Municipio:</span>
+            <p class="user-profile__text">Pereira</p>
+          </div>
+          <div class="user-profile__item">
+            <span class="user-profile__label">Información adicional:</span>
+            <p class="user-profile__text">Local 2, frente al parque principal.</p>
+          </div>
+        </div>
+      </div>
+
+    <div class="user-profile__actions">
+      <a href="edit_profile_client.html" class="btn btn--primary">Editar Perfil</a>
     </div>
-  </aside>
-
-  <!-- Contenido con detalles -->
-  <div class="user-profile__content">
-    <h2 class="user-profile__title">Mi Perfil</h2>
-    <!-- Info personal -->
-    <section class="user-profile__section">
-      <h3 class="user-profile__subtitle">Información personal</h3>
-
-      <div class="user-profile__grid">
-        <p><strong>Nombre completo:</strong> Juan Alberto Pérez</p>
-        <p><strong>Documento:</strong> CC 123456789</p>
-        <p><strong>Fecha de nacimiento:</strong> 15/08/1990</p>
-        <p><strong>Dirección:</strong> Calle 123, Bogotá</p>
-      </div>
-    </section>
-    <!-- Actividad -->
-    <section class="user-profile__section">
-      <a href="view_purchases.html" class="user-profile__link">
-        <h3 class="user-profile__subtitle">Actividad reciente</h3>
-      </a>
-      <ul class="user-profile__list">
-        <li>Compra 0124 - (22/09/2025)</li>
-        <li>Compra 0125 - (20/09/2025)</li>
-        <li>Compra 0126 - (25/09/2025)</li>
-      </ul>
-    </section>  
-    <!-- Configuración -->
-    <section class="user-profile__section">
-      <h3 class="user-profile__subtitle">Configuración</h3>  
-      <div class="user-profile__actions">
-        <a href="edit_profile_client.html" class="btn btn--primary">Editar perfil</a>
-      </div>
-    </section>
   </div>
-</section>
-
-    
 </section>
