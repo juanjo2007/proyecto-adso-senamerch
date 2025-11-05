@@ -24,19 +24,6 @@ export async function loadSellercards(containerSelector) {
       container.insertAdjacentHTML("beforeend", html);
     });
 
-    // 🔁 Lógica para cambiar texto del botón "Desactivar" ↔ "Activar"
-    const toggleButtons = container.querySelectorAll(".btn--primary");
-    toggleButtons.forEach(button => {
-      button.addEventListener("click", (event) => {
-        event.preventDefault();
-        if (button.textContent.trim() === "Desactivar") {
-          button.textContent = "Activar";
-        } else {
-          button.textContent = "Desactivar";
-        }
-      });
-    });
-
   } catch (error) {
     console.error("Error cargando las cards:", error);
   }
