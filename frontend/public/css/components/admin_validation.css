@@ -51,12 +51,12 @@
 }
 
 .admin-panel__input {
-  padding: var(--padding-top) var(--padding-right);
+  padding: var(--padding-top) var(--padding-right) var(--padding-bottom) var(--padding-left);
   border: 1px solid var(--secundary-900);
-  border-radius: 0.6rem;
-  font-family: var(--font-secondary);
+  border-radius: 6px;
   font-size: var(--fs-xs);
-  color: var(--gray-600);
+  outline: none;
+  transition: border 0.3s, box-shadow 0.3s;
 }
 
 .admin-panel__input:focus {
@@ -65,29 +65,13 @@
   box-shadow: 0 0 0 3px var(--primary-100);
 }
 
-.admin-panel__btn {
-  background-color: var(--secundary-700);
-  color: var(--white);
-  border: none;
-  border-radius: 10px;
-  font-size: var(--fs-xs);
-  font-weight: var(--font-primary-semibold);
-  letter-spacing: 0.5px;
+.admin-panel__action .btn{
+  font-family: var(--font-primary-regular);
+  font-weight: 400;
+  align-self: flex-end;
   padding: var(--button-padding-top) var(--button-padding-right)
            var(--button-padding-bottom) var(--button-padding-left);
-  cursor: pointer;
-  transition: background-color 0.3s ease, transform 0.2s ease;
 }
-
-.admin-panel__btn:hover {
-  background-color: var(--secundary-600);
-  transform: translateY(-2px);
-}
-
-.admin-panel__btn:active {
-  transform: translateY(0);
-}
-
 .admin-panel__message {
   font-size: var(--fs-xs);
   font-family: var(--font-primary-semibold);
@@ -133,11 +117,6 @@
     padding: var(--gap-md);
     box-shadow: 0 4px 16px rgba(0, 0, 0, 0.05);
   }
-
-  .admin-panel__input,
-  .admin-panel__btn {
-    font-size: var(--fs-xs);
-  }
 }
 
 /* 640px */
@@ -150,10 +129,6 @@
 
   .admin-panel__title {
     font-size: var(--fs-sm);
-  }
-
-  .admin-panel__text {
-    font-size: var(--fs-xxs);
   }
 
 }

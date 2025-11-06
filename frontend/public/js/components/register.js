@@ -1,4 +1,4 @@
-document.addEventListener("DOMContentLoaded", () => {
+document.addEventListener("DOMContentLoaded", async () => {
   const container = document.querySelector(".form-container");
 
   if (!container) {
@@ -6,83 +6,21 @@ document.addEventListener("DOMContentLoaded", () => {
     return;
   }
 
-  // Inserta el formulario y la alerta
-  container.innerHTML = `
-    <div class="register">
-      <h1 class="register__title">Completa los datos para crear tu cuenta</h1>
+  // Cargar el formulario
+  try {
+    const response = await fetch("/frontend/public/views/components/register.html");
+    const html = await response.text();
+    container.innerHTML = html;
+  } catch (error) {
+    console.error("❌ Error al cargar el formulario de registro:", error);
+    return;
+  }
 
-      <form class="register__form">
-        <div class="register__grid">
-          <div class="register__column">
-            <div class="register__field">
-              <label class="register__label">Correo electrónico</label>
-              <input class="register__input" type="email" name="email" autocomplete="email" required />
-              <small class="register__text">Recibirás información de tu cuenta.</small>
-            </div>
-
-            <div class="register__field">
-              <label class="register__label">Nombre</label>
-              <input class="register__input" type="text" name="name" autocomplete="name" required />
-              <small class="register__text">Se mostrará a las personas que interactúen contigo.</small>
-            </div>
-
-            <div class="register__field">
-              <label class="register__label">Tipo de usuario</label>
-              <select class="register__input" name="user-type" required>
-                <option value="">Selecciona...</option>
-                <option value="client">Cliente</option>
-                <option value="seller">Vendedor</option>
-                <option value="admin">Administrador</option>
-              </select>
-              <small class="register__text">Selecciona el tipo de usuario que serás.</small>
-            </div>
-          </div>
-
-          <div class="register__column">
-            <div class="register__field">
-              <label class="register__label">Departamento</label>
-              <select class="register__input" name="department" required>
-                <option value="">Selecciona...</option>
-                <option value="Risaralda">Risaralda</option>
-                <option value="Quindio">Quindío</option>
-                <option value="Caldas">Caldas</option>
-              </select>
-              <small class="register__text">Así podrás interactuar con locales de tu zona.</small>
-            </div>
-
-            <div class="register__field">
-              <label class="register__label">Dirección</label>
-              <a href="/frontend/public/views/add_adress.html" class="register__link">Agregar dirección</a>
-              <small class="register__text">Los clientes estarán más cerca de ti.</small>
-            </div>
-
-            <div class="register__field register__field--password">
-              <label class="register__label">Contraseña</label>
-              <div class="register__password-wrapper">
-                <input class="register__input" type="password" name="password" autocomplete="current-password" required />
-                <button type="button" class="register__toggle-password">Mostrar</button>
-              </div>
-              <small class="register__text">Mantén tu cuenta segura con una buena contraseña.</small>
-            </div>
-          </div>
-        </div>
-
-        <div class="register__actions">
-          <button type="submit" class="btn btn--primary">Registrar</button>
-        </div>
-      </form>
-    </div>
-
-    <!-- Contenedor de alerta fuera del formulario -->
-    <div class="alert"></div>
-  `;
-
-  // Variables
+  // Variables del formulario
   const form = container.querySelector(".register__form");
   const userType = form.querySelector("select[name='user-type']");
   const passwordInput = form.querySelector("input[name='password']");
   const togglePasswordBtn = form.querySelector(".register__toggle-password");
-  const alertContainer = container.querySelector(".alert");
 
   // Mostrar / ocultar contraseña
   togglePasswordBtn.addEventListener("click", () => {
@@ -91,39 +29,53 @@ document.addEventListener("DOMContentLoaded", () => {
     togglePasswordBtn.textContent = isHidden ? "Ocultar" : "Mostrar";
   });
 
-  // Función de alerta centrada
-  function showAlert(message, duration = 2500) {
-    if (!alertContainer) return; // seguridad
+  // ===== ALERTA =====
+  function showAlert(message, type = "success", duration = 2000) {
+    const alert = document.createElement("div");
+    alert.classList.add("alert");
 
-    alertContainer.innerHTML = `
-      <p class="alert__message">${message}</p>
-      <div class="alert__progress"></div>
+    if (type === "success") {
+      alert.classList.add("alert--success");
+    } else if (type === "error") {
+      alert.classList.add("alert--error");
+    }
+
+    alert.innerHTML = `
+      <div class="alert__content">
+        <p class="alert__message">${message}</p>
+      </div>
     `;
-    alertContainer.classList.add("alert--show");
 
+    document.body.appendChild(alert);
+
+    // Mostrar animación
+    requestAnimationFrame(() => alert.classList.add("alert--show"));
+
+    // Ocultar después de un tiempo
     setTimeout(() => {
-      alertContainer.classList.remove("alert--show");
+      alert.classList.remove("alert--show");
+      setTimeout(() => alert.remove(), 400);
     }, duration);
   }
 
-  // Submit del formulario
+  // ===== SUBMIT =====
   form.addEventListener("submit", (e) => {
     e.preventDefault();
 
     if (!userType.value) {
-      showAlert("Selecciona un tipo de usuario.");
+      showAlert("Selecciona un tipo de usuario.", "error");
       return;
     }
 
-    showAlert("Cuenta creada satisfactoriamente");
+    showAlert("Registro completado correctamente.", "success");
 
     setTimeout(() => {
       const routes = {
-        client: "/frontend/public/views/client_view.html",
+        admin: "/frontend/public/views/admin_validation.html",
         seller: "/frontend/public/views/create_store.html",
-        admin: "/frontend/public/views/admin_index.html",
+        client: "/frontend/public/views/client_view.html",
       };
-      window.location.href = routes[userType.value] ?? "/frontend/public/views/login.html";
-    }, 2600);
+      window.location.href = routes[userType.value];
+    }, 2200);
   });
 });

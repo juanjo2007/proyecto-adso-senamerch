@@ -40,7 +40,7 @@
 }
 .products__secondary {
   display: flex;
-  justify-content: flex-end;
+  justify-content: center;
   align-items: center;
 }
 .products__table-row:nth-child(even) {

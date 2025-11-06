@@ -44,7 +44,7 @@
 .users__table-secondary {
   font-size: var(--fs-xxs);
   display: flex;
-  justify-content: flex-end;
+  justify-content: center;
   align-items: center;
 }
 @media (max-width: 768px) {
