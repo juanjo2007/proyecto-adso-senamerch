@@ -1,7 +1,7 @@
 .admin-layout {
   display: flex;
   width: fit-content;
-  min-height: 86vh;
+  min-height: 86.8vh;
   background: var(--white);
   font-family: var(--font-primary);
 }

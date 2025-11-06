@@ -40,7 +40,7 @@
 }
 .orders-admin__actions {
   display: flex;
-  justify-content: flex-end;
+  justify-content: center;
   align-items: center;
 }
 .orders-admin__table-row:nth-child(even) {

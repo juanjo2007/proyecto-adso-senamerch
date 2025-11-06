@@ -10,32 +10,42 @@ document.addEventListener("DOMContentLoaded", function () {
       .then((data) => {
         orderDetailContainer.innerHTML = data;
 
-        // === Esperar a que el contenido se cargue y agregar evento al botón ===
+        // === Botón ENTREGAR PEDIDO ===
         const deliverBtn = orderDetailContainer.querySelector(".btn--primary");
-
         if (deliverBtn) {
           deliverBtn.addEventListener("click", function (e) {
             e.preventDefault();
             showAlert("Pedido entregado, ¡felicidades!", "success");
 
-            // Redirección opcional después del mensaje
             setTimeout(() => {
               window.location.href = "store_orders_view.html";
-            }, 1500); // tiempo reducido a 1.5s
+            }, 1500);
+          });
+        }
+
+        // === Botón CANCELAR PEDIDO ===
+        const cancelBtn = orderDetailContainer.querySelector(".btn-variant2--secondary");
+        if (cancelBtn) {
+          cancelBtn.addEventListener("click", function (e) {
+            e.preventDefault();
+            showAlert("Pedido cancelado", "error");
+
+            setTimeout(() => {
+              window.location.href = "store_orders_view.html";
+            }, 1500);
           });
         }
       })
       .catch((error) => console.error("Error:", error));
   }
 
-  // === FUNCIÓN ALERTA ===
+  // === ALERTA CENTRADA, LIMPIA Y PROFESIONAL ===
   function showAlert(message, type = "success") {
     const existingAlert = document.querySelector(".alert");
     if (existingAlert) existingAlert.remove();
 
     const alert = document.createElement("div");
     alert.className = `alert alert--${type}`;
-
     alert.innerHTML = `
       <div class="alert__content">
         <p class="alert__message">${message}</p>
@@ -44,11 +54,13 @@ document.addEventListener("DOMContentLoaded", function () {
 
     document.body.appendChild(alert);
 
-    setTimeout(() => alert.classList.add("show"), 50);
+    // Mostrar animación
+    setTimeout(() => alert.classList.add("alert--show"), 50);
 
+    // Ocultar después de un tiempo
     setTimeout(() => {
-      alert.classList.remove("show");
+      alert.classList.remove("alert--show");
       setTimeout(() => alert.remove(), 300);
-    }, 1500); // duración total de la alerta
+    }, 1500);
   }
 });

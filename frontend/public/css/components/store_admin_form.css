@@ -1,8 +1,7 @@
 .main-store-form {
   display: flex;
   justify-content: center;
-  padding-block: 4rem; 
-  background-color: var(--gray-50); 
+  padding-block: 8rem; 
 }
 .store-form {
   border: 1px solid var(--secundary-900);
