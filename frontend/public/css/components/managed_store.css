@@ -1,7 +1,8 @@
+/* >>> SECCIÓN DE CONTENEDOR DE TIENDAS */
 .store-detail {
   display: flex;
   flex-direction: column;
-  align-items: center;
+  align-items: start;
   justify-content: center;
   margin-block: 2rem;              
   padding-block: 2rem;            
@@ -16,6 +17,7 @@
   color: var(--gray-950);
   gap: var(--gap-lg);
 }
+/* >>> SECCIÓN DE CONTENIDO DEL CONTENEDOR DE TIENDAS */
 .store-detail__header {
   margin-bottom: var(--gap-xs);
 }
@@ -29,6 +31,7 @@
   color: var(--gray-700);
   max-width: 70ch;
 }
+/* >>> SECCIÓN DE FILAS Y COLUMNAS DEL CONTENEDOR DE TIENDAS */
 .store-detail__grid {
   display: grid;
   grid-template-columns: 1fr;
@@ -50,6 +53,7 @@
     align-items: start;
   }
 }
+/* >>> SECCIÓN DE TARJETAS */
 .store-detail__card {
   background-color: var(--white);
   border-radius: 1.2rem;
@@ -64,6 +68,7 @@
 .store-detail__card:hover {
   transform: translateY(-4px);
 }
+/* >>> SECCIÓN DE CONTENIDO DE TARJETAS */
 .store-detail__card-title {
   font-size: var(--fs-xs);
   font-family: var(--font-primary-semibold);
@@ -91,6 +96,9 @@
   display: flex;
   flex-direction: column;
 }
+.store-detail__item-description{
+  grid-column: 1 / -1; 
+}
 .store-detail__label {
   font-size: var(--fs-xxs);
   color: var(--gray-950);
@@ -117,22 +125,19 @@
 .store-detail__section-title {
   font-size: var(--fs-xs);
 }
+/* >>> SECCIÓN DE ACCIONES ADMINISTRATIVAS */
 .store-detail__section--actions {
   display: grid;
-  grid-template-columns: 1fr; 
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
   gap: var(--gap-md);
   padding-block: var(--gap-md);
   border-top: 1px solid var(--secundary-900);
   width: 100%;
+  align-items: start;
 }
-@media (min-width: 1024px) {
-  .store-detail__section--actions {
-    grid-template-columns: repeat(3, 1fr); 
-    justify-items: center;
-  }
-}
+/* >>> SECCIÓN DE CONTEIDO EN LAS ACCIONES ADMINISTRATIVAS */
 .store-detail__section-title {
-  grid-column: 1 / -1; 
+  grid-column: 1 / -1;
   text-align: center;
   font-size: var(--fs-xs);
   margin-bottom: var(--gap-sm);
@@ -142,6 +147,42 @@
 .store-detail__actions-primary {
   display: flex;
   justify-content: center;
+  align-items: center;
+  align-self: start; 
+  height: auto;
+  width: 100%;
+}
+.store-detail__actions-primary .btn{
+  font-family: var(--font-primary-regular);
+  font-weight: 400;
+  align-self: flex-end; 
+  padding: var(--button-padding-top) var(--button-padding-right) 
+           var(--button-padding-bottom) var(--button-padding-left);
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem; 
+  text-decoration: none;
+}
+.store-detail__icon {
+  width: 2rem;
+  height: 2rem;
+  object-fit: contain;
+  display: inline-block;
+  margin-left: 0.25rem;
+}
+.store-detail__icon-secundary {
+  width: 1.6rem;
+  height: 1.6rem;
+  object-fit: contain;
+  display: inline-block;
+  margin-left: 0.25rem;
+}
+/* >>> SECCIÓN DE RESPONSIVIDAD */
+@media (min-width: 1024px) {
+  .store-detail__section--actions {
+    grid-template-columns: repeat(2, 1fr);
+    justify-items: center;
+  }
 }
 @media (min-width: 640px) {
   .store-detail {

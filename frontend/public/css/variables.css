@@ -80,15 +80,15 @@
     --fs-xxxs: 1.2rem;
 
      /* ================== Button Primary ================== */
-    --button-padding-top: 12px;
-    --button-padding-bottom: 12px;
-    --button-padding-right:14px;
-    --button-padding-left:14px;
+    --button-padding-top: 10px;
+    --button-padding-bottom: 10px;
+    --button-padding-right:12px;
+    --button-padding-left:12px;
 
     /* ================== Button Secundary ================== */
     --secundary-padding-top:10px;
     --secundary-padding-right:8px;
-    --secundary-padding-bottom:12px;
+    --secundary-padding-bottom:10px;
     --secundary-padding-left:8px;
 
     /* ================== Label / Input ================== */

@@ -1,3 +1,4 @@
+/* >>> SECCIÓN DE CONTENEDOR PARA SOLICITAR UNA CANTIDAD DE UN PRODUCTO  */
 .page-content {
   display: flex;
   justify-content: center;
@@ -8,6 +9,7 @@
   box-sizing: border-box;
   overflow: hidden; 
 }
+/* >>> SECCIÓN DE CONTENIDO DEL CONTENEDOR */
 .product-purchase {
   background: var(--white);
   border: 1px solid var(--secundary-900);
@@ -83,16 +85,30 @@
   font-weight: 600;
   color: var(--secundary-700);
 }
+/* >>> SECCIÓN DE ACCIONES DEL CONTENEDOR */
 .product-purchase__actions {
   display: flex;
   justify-content: center;
 }
 .product-purchase__actions .btn {
-  font-size: var(--fs-xs);
+  font-family: var(--font-primary-regular);
   font-weight: 400;
-  padding: var(--button-padding-top) var(--button-padding-right)
+  align-self: flex-start; 
+  padding: var(--button-padding-top) var(--button-padding-right) 
            var(--button-padding-bottom) var(--button-padding-left);
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+  text-decoration: none;
 }
+.product-purchase__icon {
+  width: 2rem;
+  height: 2rem;
+  object-fit: contain;
+  display: inline-block;
+  margin-left: 0.25rem;
+}
+/* >>> SECCIÓN DE RESPONSIVIDAD */
 @media (max-width: 768px) {
   .page-content {
     padding-block: 5rem;

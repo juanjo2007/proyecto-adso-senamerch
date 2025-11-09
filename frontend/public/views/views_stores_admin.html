@@ -3,48 +3,44 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Tiendas</title>
-
-  <!-- CSS principal -->
+  <title>Vista admin tiendas</title>
+  <!-- Sección CSS principal -->
   <link rel="stylesheet" href="/frontend/public/css/main.css">
-  <!-- CSS del componente -->
-  <link rel="stylesheet" href="/frontend/public/css/components/stores.css">
-
-  <!-- JS de componentes -->
+  <!-- Sección JS de componentes -->
   <script src="/frontend/public/js/components/stores.js" defer></script>
   <script src="/frontend/public/js/components/navbar_admin.js" defer></script>
   <script src="/frontend/public/js/components/footer.js" defer></script>
   <script src="/frontend/public/js/components/search_bar.js" defer></script>
   <script src="/frontend/public/js/components/admin.js" defer></script>
 </head>
-
 <body>
   <main>
-    <!-- >>> Navbar -->
-    <section class="navbar-stores">
+    <!-- >>> Sección Navbar -->
+    <nav class="navbar-stores">
       <div class="navbar-admin-container"></div>
-    </section>
-
+    </nav>
     <!-- >>> Contenedor principal en dos columnas -->
     <div class="content-stores">
-      <!-- Columna izquierda -->
+      <!-- >>>  Sección Columna izquierda -->
       <section class="admin-dashboard">
         <div class="admin-container"></div>
       </section>
-
-      <!-- Columna derecha -->
+      <!-- >>>  Sección Columna derecha-->
       <div class="right-panel">
+        <!-- >>>  Sección Barra de busqueda-->
         <section class="seeker">
           <div class="search-bar-container"></div>
         </section>
+        <!-- >>>  Sección Tabla de tiendas-->
         <section class="stores">
           <div class="stores-container"></div>
         </section>
       </div>
     </div>
   </main>
-
-  <!-- >>> Footer -->
-  <footer class="footer-container"></footer>
+  <!-- >>>  Sección footer-->
+  <footer class="footer-admin-store">
+    <div class="footer-container"></div>
+  </footer>
 </body>
 </html>

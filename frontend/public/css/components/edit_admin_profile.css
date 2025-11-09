@@ -1,3 +1,4 @@
+/* >>> SECCIÓN DE CONTENEDOR PARA EDITAR EL PERFIL DEL ADMINISTRADOR */
 .edit-profile-admin {
   display: flex;
   justify-content: center;
@@ -7,6 +8,7 @@
   box-sizing: border-box;
   padding-block: 10rem;
 }
+/* >>> SECCIÓN DE CONTENIDO DEL CONTENEDOR */
 .edit-profile-admin__container {
   width: 100%;
   max-width: 700px;
@@ -127,9 +129,36 @@
 .edit-profile-admin__actions-secondary {
   justify-self: start; 
 }
+/* Icono a la derecha */
 .edit-profile-admin__actions-primary {
   justify-self: end; 
 }
+.edit-profile-admin__actions-primary .btn{
+  font-family: var(--font-primary-regular);
+  font-weight: 400;
+  align-self: flex-end; 
+  padding: var(--button-padding-top) var(--button-padding-right) 
+           var(--button-padding-bottom) var(--button-padding-left);
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem; 
+  text-decoration: none;
+}
+.edit-profile-admin__icon {
+  width: 2rem;
+  height: 2rem;
+  object-fit: contain;
+  display: inline-block;
+  margin-left: 0.25rem;
+}
+.edit-profile-admin__icon-secundary {
+  width: 1.6rem;
+  height: 1.6rem;
+  object-fit: contain;
+  display: inline-block;
+  margin-left: 0.25rem;
+}
+/* >>> SECCIÓN DE RESPONSIVIDAD */
 @media(max-width: 640px) {
   .edit-profile-admin__form {
     grid-template-columns: 1fr !important;

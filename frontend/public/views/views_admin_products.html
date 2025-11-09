@@ -3,8 +3,10 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Productos</title>
+  <title>Vista admin productos</title>
+  <!-- >>> Sección CSS principal -->
   <link rel="stylesheet" href="/frontend/public/css/main.css">
+  <!-- >>> Sección JS componentes -->
   <script src="/frontend/public/js/components/navbar_admin.js" defer></script>
   <script src="/frontend/public/js/components/products.js" defer></script>
   <script src="/frontend/public/js/components/search_bar.js" defer></script>
@@ -13,33 +15,33 @@
 </head>
 <body>
   <main>
-    <!-- >>> Section Navbar -->
-    <section class="navbar-products">
+    <!-- >>> Sección Navbar -->
+    <nav class="navbar-products">
       <div class="navbar-admin-container"></div>
-    </section>
-
-    <!-- >>> Contenedor con dos columnas -->
+    </nav>
+    <!-- >>> Sección Contenedor con dos columnas -->
     <div class="content-seeker-and-products">
-      <!-- Columna izquierda -->
+      <!-- Sección Columna izquierda -->
       <section class="admin-dashboard">
         <div class="admin-container"></div>
       </section>
 
-      <!-- Columna derecha -->
+      <!-- Sección Columna derecha -->
       <div class="right-panel">
+        <!-- >>> Sección Barra de busqueda-->
         <section class="seeker">
           <div class="search-bar-container"></div>
         </section>
-
-        <!-- >>> Section Products -->
+        <!-- >>> Sección Tabla de productos -->
         <section class="products-section">
           <div class="products-container"></div>
         </section>
       </div>
     </div>
   </main>
-
-  <!-- >>> Section Footer -->
-  <footer class="footer-container"></footer>
+  <!-- >>> Sección Footer -->
+  <footer class="footer-admin-products">
+    <div class="footer-container"></div>
+  </footer>
 </body>
 </html>

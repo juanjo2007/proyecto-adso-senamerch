@@ -3,26 +3,28 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Panel Administrador</title>
+  <title>Vista gestión de productos</title>
+  <!-- >>> Sección CSS principal -->
   <link rel="stylesheet" href="/frontend/public/css/main.css">
+  <!-- >>> Sección JS componentes -->
   <script src="/frontend/public/js/components/navbar_admin.js" defer></script>
   <script src="/frontend/public/js/components/footer.js" defer></script>
   <script src="/frontend/public/js/components/managed_product.js" defer></script>
 </head>
 <body>
   <main>
-    <!-- >>> Navbar -->
-    <section class="navbar-admin">
+    <!-- >>> Sección Navbar -->
+    <nav class="navbar-admin">
       <div class="navbar-admin-container"></div>
+    </nav>
+    <!-- >>> Sección Gestión de productos -->
+    <section class="manage-admin-products">
+      <div class="managed-product-container"></div>
     </section>
-
-      <!-- Columna izquierda -->
-      <section class="manage-admin-users">
-        <div class="managed-product-container"></div>
-      </section>
-  <!-- >>> Footer -->
-  <section class="footer-sdfg">
-    <footer class="footer-container"></footer>
-  </section>
+  </main>
+  <!-- >>> Sección Footer -->
+  <footer class="footer-view-managed-product">
+    <div class="footer-container"></div>
+  </footer>
 </body>
 </html>

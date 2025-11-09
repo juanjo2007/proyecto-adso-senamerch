@@ -34,7 +34,7 @@
             <span class="store-detail__label">Categoría:</span>
             <p class="store-detail__text">Frutas y verduras</p>
           </div>
-          <div class="store-detail__item">
+          <div class="store-detail__item-description">
             <span class="store-detail__label">Descripción:</span>
             <p class="store-detail__text">
               Tienda especializada en frutas frescas, verduras orgánicas y productos agrícolas locales de alta calidad.
@@ -52,6 +52,37 @@
     </article>
 
     <!-- Card 2 -->
+    <article class="store-detail__card store-detail__card--admin">
+      <h2 class="store-detail__card-title">Administrador de la tienda</h2>
+
+      <div class="store-detail__card-grid">
+        <div class="store-detail__info">
+          <div class="store-detail__item">
+            <span class="store-detail__label">Nombre completo:</span>
+            <p class="store-detail__text">María Fernanda Gómez</p>
+          </div>
+          <div class="store-detail__item">
+            <span class="store-detail__label">Documento / NIT / RUT:</span>
+            <p class="store-detail__text">CC 1.234.567.890</p>
+          </div>
+          <div class="store-detail__item">
+            <span class="store-detail__label">Correo electrónico:</span>
+            <p class="store-detail__text">maria.gomez@frutaslaesperanza.com</p>
+          </div>
+          <div class="store-detail__item">
+            <span class="store-detail__label">Teléfono / WhatsApp:</span>
+            <p class="store-detail__text">+57 301 987 6543</p>
+          </div>
+          <div class="store-detail__item">
+            <span class="store-detail__label">Rol en la empresa:</span>
+            <p class="store-detail__text">Propietaria</p>
+          </div>
+        </div>
+      </div>
+    </article>
+    
+
+    <!-- Card 3 -->
     <article class="store-detail__card store-detail__card--address">
       <h2 class="store-detail__card-title">Dirección de la tienda</h2>
 
@@ -91,52 +122,22 @@
         </div>
       </div>
     </article>
-
-    <!-- Card 3 -->
-    <article class="store-detail__card store-detail__card--admin">
-      <h2 class="store-detail__card-title">Administrador de la tienda</h2>
-
-      <div class="store-detail__card-grid">
-        <div class="store-detail__info">
-          <div class="store-detail__item">
-            <span class="store-detail__label">Nombre completo:</span>
-            <p class="store-detail__text">María Fernanda Gómez</p>
-          </div>
-          <div class="store-detail__item">
-            <span class="store-detail__label">Documento / NIT / RUT:</span>
-            <p class="store-detail__text">CC 1.234.567.890</p>
-          </div>
-          <div class="store-detail__item">
-            <span class="store-detail__label">Correo electrónico:</span>
-            <p class="store-detail__text">maria.gomez@frutaslaesperanza.com</p>
-          </div>
-          <div class="store-detail__item">
-            <span class="store-detail__label">Teléfono / WhatsApp:</span>
-            <p class="store-detail__text">+57 301 987 6543</p>
-          </div>
-          <div class="store-detail__item">
-            <span class="store-detail__label">Rol en la empresa:</span>
-            <p class="store-detail__text">Propietaria</p>
-          </div>
-        </div>
-      </div>
-    </article>
-
   </section>
 
   <!-- === Sección de acciones === -->
   <section class="store-detail__section store-detail__section--actions">
-    <h2 class="store-detail__section-title">Acciones administrativas</h2>
+    <h2 class="user-detail__section-title">Acciones administrativas</h2>
 
     <div class="store-detail__actions-secondary">
-      <a href="#" class="btn btn-variant2--secondary">Exportar información en PDF</a>
+      <a href="#" class="btn btn-variant2--secondary store-detail__gestor">Exportar información en PDF
+        <img src="/frontend/public/assets/icons/export.svg" alt="Icono Comprar" class="store-detail__icon-secundary">
+      </a>
     </div>
+
     <div class="store-detail__actions-primary">
-      <a href="#" class="btn btn--primary">Suspender tienda</a>
-    </div>
-    <div class="store-detail__actions-secondary">
-      <a href="view_stores_admin.html" class="btn btn-variant2--secondary">Volver al panel</a>
+      <a href="#" class="btn btn--primary store-detail__suspend">Suspender Tienda
+        <img src="/frontend/public/assets/icons/off.svg" alt="Icono Comprar" class="store-detail__icon">
+      </a>
     </div>
   </section>
-
 </main>

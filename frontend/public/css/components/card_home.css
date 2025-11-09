@@ -1,3 +1,4 @@
+/* >>> SECCIÓN DE CONTENEDOR DE LAS TARJETAS DEL INICIO */
 .cards-home__container {
   display: grid;
   gap: var(--gap-lg);
@@ -8,6 +9,7 @@
   justify-content: center;
   justify-items: center;
 }
+/* >>> SECCIÓN DE RESPONSIVIDAD DE LAS TARJETAS */
 @media (width > 640px) {
     .cards-home__container {
         grid-template-columns: repeat(2, 1fr);
@@ -22,6 +24,7 @@
         max-width: 100%;
     }
 }
+/* >>> SECCIÓN DE CONTENIDO DE LAS TARJETAS */
 .card-home {
   border: 1px solid var(--secundary-900);
   border-radius: 12px;
@@ -59,9 +62,20 @@
 .card-home__info .btn{
   font-family: var(--font-primary-regular);
   font-weight: 400;
-  align-self: flex-end;
-  padding: var(--button-padding-top) var(--button-padding-right)
+  align-self: flex-end; 
+  padding: var(--button-padding-top) var(--button-padding-right) 
            var(--button-padding-bottom) var(--button-padding-left);
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem; 
+  text-decoration: none;
+}
+.card-home__icon {
+  width: 2rem;
+  height: 2rem;
+  object-fit: contain;
+  display: inline-block;
+  margin-left: 0.25rem;
 }
 .card-home__title {
   font-size: var(--fs-xs);

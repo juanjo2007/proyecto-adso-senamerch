@@ -1,3 +1,4 @@
+/* >>> SECCIÓN DE CONTENEDOR DE OPCION PARA PAGAR */
 .payment-method {
   font-family: var(--font-primary);
   background-color: var(--white);
@@ -10,6 +11,7 @@
   box-shadow: 0 2px 8px rgba(0, 0, 0, 0.08);
   box-sizing: border-box;
 }
+/* >>> SECCIÓN DE CONTENIDO DEL CONTENEDOR */
 .payment-method__title {
   font-size: var(--fs-sm);
   font-weight: 600;
@@ -47,6 +49,7 @@
   color: var(--gray-900);
   font-family: var(--font-primary-semibold);
 }
+/* >>> SECCIÓN DE ACCIONES DEL CONTENEDOR */
 .payment-method__actions {
   margin-top: var(--gap-lg);
   display: flex;
@@ -54,12 +57,24 @@
   width: 100%;
 }
 .payment-method__actions .btn {
-  font-size: var(--fs-xs);
+  font-family: var(--font-primary-regular);
   font-weight: 400;
-  align-self: flex-start;
-  padding: var(--button-padding-top) var(--button-padding-right)
+  align-self: flex-end; 
+  padding: var(--button-padding-top) var(--button-padding-right) 
            var(--button-padding-bottom) var(--button-padding-left);
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem; 
+  text-decoration: none;
 }
+.payment-method__icon {
+  width: 2rem;
+  height: 2rem;
+  object-fit: contain;
+  display: inline-block;
+  margin-left: 0.25rem;
+}
+/* >>> SECCIÓN DE RESPONSIVIDAD */
 @media (max-width: 768px) {
   .payment-method {
     width: 90%;

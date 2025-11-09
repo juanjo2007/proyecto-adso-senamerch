@@ -1,3 +1,4 @@
+/* >>> SECCIÓN DE CONTENEDOR DE VENTAS*/
 .sale-detail {
   display: flex;
   flex-direction: column;
@@ -16,6 +17,7 @@
   color: var(--gray-950);
   gap: var(--gap-lg);
 }
+/* >>> SECCIÓN DE CONTENIDO DEL CONTENEDOR DE VENTAS*/
 .sale-detail__header {
   margin-bottom: var(--gap-xs);
 }
@@ -30,6 +32,7 @@
   color: var(--gray-700);
   max-width: 70ch;
 }
+/* >>> SECCIÓN DE FILAS Y COLUMNAS DE CONTENEDOR DE VENTAS */
 .sale-detail__grid {
   display: grid;
   grid-template-columns: 1fr;
@@ -48,6 +51,7 @@
     align-items: start;
   }
 }
+/* >>> SECCIÓN DE LAS TARJETAS*/
 .sale-detail__card {
   background-color: var(--white);
   border-radius: 1.2rem;
@@ -80,6 +84,7 @@
     grid-template-columns: repeat(2, 1fr);
   }
 }
+/* >>> SECCIÓN CONTENIDO DE LAS TARJETAS */
 .sale-detail__info {
   display: flex;
   flex-direction: column;
@@ -104,7 +109,14 @@
   flex-direction: column;
   align-items: center;
   height: fit-content;
+  gap: var(--gap-md); /* 🔹 Espacio entre Valor total y Comprobante */
 }
+.sale-detail__text--total {
+  font-size: var(--fs-xs);
+  color: var(--gray-700);
+  font-family: var(--font-primary-semibold);
+}
+
 .sale-detail__image {
   width: 150px;
   height: 150px;
@@ -112,20 +124,6 @@
   object-fit: cover;
   border: 2px solid var(--gray-300);
   margin-top: var(--gap-xs);
-}
-.sale-detail__section--actions {
-  display: grid;
-  grid-template-columns: 1fr;
-  gap: var(--gap-md);
-  padding-block: var(--gap-md);
-  border-top: 1px solid var(--secundary-900);
-  width: 100%;
-}
-@media (min-width: 1024px) {
-  .sale-detail__section--actions {
-    grid-template-columns: repeat(3, 1fr);
-    justify-items: center;
-  }
 }
 .sale-detail__section-title {
   grid-column: 1 / -1;
@@ -135,18 +133,106 @@
   color: var(--gray-900);
   font-family: var(--font-primary-semibold);
 } 
-.sale-detail__actions-secondary {
+.sale-detail__link{
+  font-size: var(--fs-xs);
+  color: var(--secundary-700);
+  text-decoration: none;
+}
+.sale-detail__link:hover{
+  color: var(--secundary-900);
+  text-decoration: underline;
+}
+/* >>> SECCIÓN DE ACCIONES ADMINISTRATIVAS */
+.sale-detail__section--actions {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: var(--gap-md);
+  padding-block: var(--gap-md);
+  border-top: 1px solid var(--secundary-900);
+  width: 100%;
+  align-items: start;
+}
+.sale-detail__section-title {
+  grid-column: 1 / -1;
+  text-align: center;
+  font-size: var(--fs-xs);
+  margin-bottom: var(--gap-sm);
+  color: var(--gray-900);
+}
+.sale-detail__actions-secondary,
+.sale-detail__actions-primary {
   display: flex;
   justify-content: center;
+  align-items: center;
+  align-self: start; 
+  height: auto;
+  width: 100%;
 }
-.btn-variant2--secondary {
-  padding: var(--secundary-padding-top)
-          var(--secundary-padding-right)
-          var(--secundary-padding-bottom)
-          var(--secundary-padding-left) !important;
+.sale-detail__actions-primary .btn{
+  font-family: var(--font-primary-regular);
+  font-weight: 400;
+  align-self: flex-end; 
+  padding: var(--button-padding-top) var(--button-padding-right) 
+           var(--button-padding-bottom) var(--button-padding-left);
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem; 
+  text-decoration: none;
+}
+.sale-detail__icon {
+  width: 2rem;
+  height: 2rem;
+  object-fit: contain;
+  display: inline-block;
+  margin-left: 0.25rem;
+}
+.sale-detail__icon-secundary {
+  width: 1.6rem;
+  height: 1.6rem;
+  object-fit: contain;
+  display: inline-block;
+  margin-left: 0.25rem;
+}
+/* >>> SECCIÓN DE RESPONSIVIDAD */
+@media (min-width: 1024px) {
+  .sale-detail__section--actions {
+    grid-template-columns: repeat(2, 1fr);
+    justify-items: center;
+  }
 }
 @media (min-width: 640px) {
   .sale-detail {
     justify-content: center;
+  }
+}
+/* >>> SECCIÓN TARJETA DE PRODUCTOS OCUPANDO TODO EL ANCHO */
+.sale-detail__card--product {
+  grid-column: 1 / -1; 
+  max-width: 100%;   
+  width: 100%;       
+}
+/* >>> SECCIÓN CONTENEDOR DE LOS PRODUCTOS DENTRO DE LA CARD */
+.sale-detail__products {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr); 
+  gap: var(--gap-md);
+  width: 100%;
+}
+/* >>> SECCIÓN TARJETAS INDIVIDUALES DE PRODUCTOS */
+.sale-detail__product {
+  display: grid;
+  grid-template-columns: 2fr 1fr;
+  align-items: start;
+  gap: var(--gap-md);
+  border: 1px solid var(--secundary-900);
+  border-radius: 0.8rem;
+  padding: var(--gap-md);
+  background-color: var(--white);
+  width: 100%;
+}
+/* >>> SECCIÓN RESPONSIVIDAD DE TARJETAS DE PRODUCTOS */
+@media (max-width: 1024px) {
+  .sale-detail__products {
+    grid-template-columns: 1fr;
   }
 }

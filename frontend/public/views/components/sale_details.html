@@ -1,17 +1,21 @@
-<section class="sale-details">
+<section class="sale-details"> 
   <!-- Columna izquierda: info del agricultor y transporte -->
   <aside class="sale-details__sidebar">
-    <h3 class="sale-details__subtitle">Agricultor</h3>
-    <p><strong>Nombre:</strong> Emanuel Guerrero</p>
+    <h3 class="sale-details__subtitle">Tienda</h3>
+    <p><strong>Nombre Tienda:</strong> Donde Luis</p>
+    <p><strong>Teléfono Tienda:</strong> 310987654</p>
+    <p><strong>Correo Tienda:</strong> vendedor@email.com</p>
+    <hr>
+    <h3 class="sale-details__subtitle">Vendedor</h3>
+    <p><strong>Nombre :</strong> Emanuel Guerrero</p>
     <p><strong>Teléfono:</strong> 300 456 2340</p>
     <p><strong>NIT:</strong> 1234675</p>
     <p><strong>Correo:</strong> agricultorejemplo@email.com</p>
     <hr>
-    <p><strong>Vendedor:</strong> Juan Pérez</p>
-    <p><strong>Tienda:</strong> Frutas El Valle</p>
-    <p><strong>Teléfono:</strong> 310987654</p>
-    <p><strong>Correo:</strong> vendedor@email.com</p>
-    <hr>
+    <h3 class="sale-details__subtitle">Cliente</h3>
+    <p><strong>Nombre Cliente:</strong> Juan Pérez</p>
+    <p><strong>Teléfono Cliente:</strong> 310987654</p>
+    <p><strong>Correo Cliente:</strong> vendedor@email.com</p>
   </aside>
 
   <!-- Columna derecha: productos y totales -->
@@ -26,18 +30,16 @@
           <p><strong>Fecha:</strong> 23/09/2025</p>
           <p><strong>Producto:</strong> Tomate</p>
           <p><strong>Cantidad:</strong> 5 Kg</p>
-          <p><strong>Precio:</strong> $2.500</p>
+          <p><strong>Precio * kg:</strong> $2.500</p>
           <p><strong>Total:</strong> $12.500</p>
-          <p><strong>Stock:</strong> 122/150</p>
         </div>
 
         <div class="sale-details__product-card">
           <p><strong>Fecha:</strong> 23/09/2025</p>
           <p><strong>Producto:</strong> Manzana verde</p>
           <p><strong>Cantidad:</strong> 3 Kg</p>
-          <p><strong>Precio:</strong> $3.000</p>
+          <p><strong>Precio * kg:</strong> $3.000</p>
           <p><strong>Total:</strong> $9.000</p>
-          <p><strong>Stock:</strong> 90/120</p>
         </div>
       </div>
     </section>
@@ -50,9 +52,20 @@
     </div>
 
     <!-- Acciones -->
+    <!-- Acciones -->
     <div class="sale-details__actions">
-      <button class="btn btn--secondary sale-details__download">Descargar PDF</button>
-      <a href="client_view.html" class="btn btn--primary">Inicio</a>
+      <div class="sale-details__actions--left">
+        <a href="#" class="btn btn-variant2--secondary sale-details__download">Descargar PDF
+          <img src="/frontend/public/assets/icons/save.svg" alt="Icono Comprar" class="sale-details__icon-secundary">
+        </a>
+      </div>
+
+      <div class="sale-details__actions--right">
+        <a href="client_view.html" class="btn btn--primary sale-details__index">Inicio
+          <img src="/frontend/public/assets/icons/home.svg" alt="Icono Comprar" class="sale-details__icon">
+        </a>
+      </div>
     </div>
+
   </div>
 </section>
