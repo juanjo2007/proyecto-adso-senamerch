@@ -1,3 +1,4 @@
+/* >>> SECCIÓN DE CONTENEDOR PARA AÑADIR UN PRODUCTO A TU TIENDA*/
 .create-post {
   display: flex;
   justify-content: center;
@@ -7,6 +8,7 @@
   box-sizing: border-box;
   padding-block: 3.6rem;
 }
+/* >>> SECCIÓN DE CONTENIDO DEL CONTENEDOR */
 .create-post__form {
   background: var(--white);
   padding: var(--gap-sm);
@@ -79,6 +81,7 @@
   min-height: 12rem;
   resize: vertical;
 }
+/* >>> SECCIÓN DE ACCIONES DEL CONTENEDOR */
 .create-post__actions-grid {
   display: grid;
   grid-template-columns: 1fr 1fr; 
@@ -106,9 +109,29 @@
 .create-post__field-actions .btn {
   font-family: var(--font-primary-regular);
   font-weight: 400;
-  padding: var(--button-padding-top) var(--button-padding-right)
+  align-self: flex-end; 
+  padding: var(--button-padding-top) var(--button-padding-right) 
            var(--button-padding-bottom) var(--button-padding-left);
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem; 
+  text-decoration: none;
 }
+.create-post__icon {
+  width: 2rem;
+  height: 2rem;
+  object-fit: contain;
+  display: inline-block;
+  margin-left: 0.25rem;
+}
+.create-post__icon-secundary {
+  width: 1.6rem;
+  height: 1.6rem;
+  object-fit: contain;
+  display: inline-block;
+  margin-left: 0.25rem;
+}
+/* >>> SECCIÓN DE RESPONSIVIDAD */
 @media (max-width: 768px) {
   .create-post__field-secundary,
   .create-post__field-actions {

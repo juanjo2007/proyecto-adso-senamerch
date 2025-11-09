@@ -82,6 +82,13 @@
   justify-content: flex-start; 
   align-items: center;
 }
+.shopping-cart__icon-secundary {
+  width: 1.6rem;
+  height: 1.6rem;
+  object-fit: contain;
+  display: inline-block;
+  margin-left: 0.25rem;
+}
 
 .shopping-cart__delete-product {
   background: none;

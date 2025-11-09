@@ -1,6 +1,6 @@
 // ================== ORDER_0 COMPONENT ==================
 document.addEventListener('DOMContentLoaded', function () {
-  const order0Container = document.querySelector('.order-0-container');
+  const order0Container = document.querySelector('.order-table-container');
 
   if (order0Container) {
     fetch("/frontend/public/views/components/order_admin.html")

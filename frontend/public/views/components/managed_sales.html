@@ -2,13 +2,14 @@
 
   <!-- Encabezado principal -->
   <header class="sale-detail__header">
-    <h1 class="sale-detail__title">Gestión de Ventas</h1>
+    <h1 class="sale-detail__title">Gestión de Venta</h1>
     <p class="sale-detail__subtitle">
       Aquí puedes visualizar la información completa de cada venta, incluyendo los datos del vendedor, cliente,
       producto y tienda. Además, puedes revisar el documento de venta o realizar acciones administrativas.
     </p>
   </header>
 
+  <!-- === Contenedor general de tarjetas === -->
   <!-- === Contenedor general de tarjetas === -->
   <section class="sale-detail__grid">
 
@@ -17,9 +18,10 @@
       <h2 class="sale-detail__card-title">Documento de venta</h2>
 
       <div class="sale-detail__card-grid">
+        <!-- Columna izquierda -->
         <div class="sale-detail__info">
           <div class="sale-detail__item">
-            <span class="sale-detail__label">Número de documento:</span>
+            <span class="sale-detail__label">Número documento de venta:</span>
             <p class="sale-detail__text">#VENTA-1024</p>
           </div>
 
@@ -30,23 +32,25 @@
 
           <div class="sale-detail__item">
             <span class="sale-detail__label">Método de pago:</span>
-            <p class="sale-detail__text">Transferencia bancaria</p>
+            <p class="sale-detail__text">Efectivo</p>
+          </div>
+        </div>
+
+        <!-- Columna derecha -->
+        <div class="sale-detail__media">
+          <div class="sale-detail__item">
+            <span class="sale-detail__label">Valor total:</span>
+            <p class="sale-detail__text sale-detail__text--total">$150.000</p>
           </div>
 
           <div class="sale-detail__item">
-            <span class="sale-detail__label">Valor total:</span>
-            <p class="sale-detail__text">$150.000</p>
+            <span class="sale-detail__label">Comprobante:</span>
+            <a href="details.html" class="sale-detail__link">Descargar</a>
           </div>
-        </div>
-
-        <div class="sale-detail__media">
-          <span class="sale-detail__label">Comprobante:</span>
-          <img src="/frontend/public/assets/img/orders.png"
-               alt="Comprobante de venta #VENTA-1024"
-               class="sale-detail__image">
         </div>
       </div>
     </article>
+
 
     <!-- Card 2: Información del vendedor -->
     <article class="sale-detail__card sale-detail__card--seller">
@@ -73,7 +77,7 @@
     </article>
 
     <!-- Card 3: Información del cliente -->
-    <article class="sale-detail__card sale-detail__card--client">
+    <article class="sale-detail__card sale-detail__card--store">
       <h2 class="sale-detail__card-title">Información del cliente</h2>
 
       <div class="sale-detail__card-grid">
@@ -93,9 +97,16 @@
             <p class="sale-detail__text">+57 310 789 4567</p>
           </div>
         </div>
+
+          <div class="sale-detail__media">
+            <span class="sale-detail__label">Imagen de la tienda:</span>
+            <img src="/frontend/public/assets/img/admin_profile.png"
+                alt="Imagen de la tienda Frutas La Esperanza"
+                class="sale-detail__image">
+        </div>
       </div>
     </article>
-
+    
     <!-- Card 4: Información de la tienda -->
     <article class="sale-detail__card sale-detail__card--store">
       <h2 class="sale-detail__card-title">Información de la tienda</h2>
@@ -122,49 +133,80 @@
       </div>
     </article>
 
-    <!-- Card 5: Información del producto -->
     <article class="sale-detail__card sale-detail__card--product">
       <h2 class="sale-detail__card-title">Información del producto</h2>
 
-      <div class="sale-detail__card-grid">
-        <div class="sale-detail__info">
-          <div class="sale-detail__item">
-            <span class="sale-detail__label">Nombre del producto:</span>
-            <p class="sale-detail__text">Tomate Del Valle</p>
+      <div class="sale-detail__products">
+        <!-- Producto 1 -->
+        <div class="sale-detail__product">
+          <div class="sale-detail__info">
+            <div class="sale-detail__item">
+              <span class="sale-detail__label">Nombre del producto:</span>
+              <p class="sale-detail__text">Tomate Del Valle</p>
+            </div>
+            <div class="sale-detail__item">
+              <span class="sale-detail__label">Cantidad vendida:</span>
+              <p class="sale-detail__text">10 kg</p>
+            </div>
+            <div class="sale-detail__item">
+              <span class="sale-detail__label">Precio unitario:</span>
+              <p class="sale-detail__text">$3.000</p>
+            </div>
           </div>
 
-          <div class="sale-detail__item">
-            <span class="sale-detail__label">Cantidad vendida:</span>
-            <p class="sale-detail__text">10 kg</p>
-          </div>
-
-          <div class="sale-detail__item">
-            <span class="sale-detail__label">Precio unitario:</span>
-            <p class="sale-detail__text">$3.000</p>
+          <div class="sale-detail__media">
+            <span class="sale-detail__label">Imagen del producto:</span>
+            <img src="/frontend/public/assets/img/tomato_image.png"
+                alt="Imagen del producto Tomate Del Valle"
+                class="sale-detail__image">
           </div>
         </div>
 
-        <div class="sale-detail__media">
-          <span class="sale-detail__label">Imagen del producto:</span>
-          <img src="/frontend/public/assets/img/tomato_image.png"
-               alt="Imagen del producto Tomate Del Valle"
-               class="sale-detail__image">
+        <!-- Producto 2 -->
+        <div class="sale-detail__product">
+          <div class="sale-detail__info">
+            <div class="sale-detail__item">
+              <span class="sale-detail__label">Nombre del producto:</span>
+              <p class="sale-detail__text">Papa</p>
+            </div>
+            <div class="sale-detail__item">
+              <span class="sale-detail__label">Cantidad vendida:</span>
+              <p class="sale-detail__text">12 kg</p>
+            </div>
+            <div class="sale-detail__item">
+              <span class="sale-detail__label">Precio unitario:</span>
+              <p class="sale-detail__text">$30.000</p>
+            </div>
+          </div>
+
+          <div class="sale-detail__media">
+            <span class="sale-detail__label">Imagen del producto:</span>
+            <img src="/frontend/public/assets/img/potato_image.png"
+                alt="Imagen del producto Papa"
+                class="sale-detail__image">
+          </div>
         </div>
       </div>
     </article>
+
+
 
   </section>
 
   <!-- Acciones administrativas -->
   <section class="sale-detail__section sale-detail__section--actions">
-    <h2 class="sale-detail__section-title">Acciones administrativas</h2>
+    <h2 class="user-detail__section-title">Acciones administrativas</h2>
 
     <div class="sale-detail__actions-secondary">
-      <a href="#" class="btn btn-variant2--secondary">Exportar documento PDF</a>
+      <a href="#" class="btn btn-variant2--secondary sale-detail__gestor">Exportar información en PDF
+        <img src="/frontend/public/assets/icons/export.svg" alt="Icono Comprar" class="sale-detail__icon-secundary">
+      </a>
     </div>
 
-    <div class="sale-detail__actions-secondary">
-      <a href="admin_dashboard.html" class="btn btn-variant2--secondary">Volver al panel</a>
+    <div class="sale-detail__actions-primary">
+      <a href="#" class="btn btn--primary sale-detail__suspend">Suspender Usuario
+        <img src="/frontend/public/assets/icons/off.svg" alt="Icono Comprar" class="sale-detail__icon">
+      </a>
     </div>
   </section>
 

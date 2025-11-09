@@ -1,3 +1,4 @@
+/* >>> SECCIÓN DE CONTENEDOR DEL PERFIL DEL CLIENTE */
 .edit-profile-user {
   display: flex;
   justify-content: center;
@@ -7,6 +8,7 @@
   box-sizing: border-box;
   padding-block: 10rem;
 }
+/* >>> SECCIÓN DE CONTENIDO DEL CONTENEDOR */
 .edit-profile-user__container {
   width: 100%;
   max-width: 700px;
@@ -116,6 +118,17 @@
 .edit-profile-user__toggle-password:active {
   transform: scale(0.95);
 }
+.edit-profile-user__link {
+  font-size: var(--fs-xs);
+  color: var(--secundary-700);
+  text-decoration: none;
+}
+
+.edit-profile-user__link:hover {
+  color: var(--secundary-900);
+  text-decoration: underline;
+}
+/* >>> SECCIÓN DE ACCIONES DEL CONTENEDOR  */
 .edit-profile-user__actions-grid {
   grid-column: 1 / span 2; 
   display: grid;
@@ -130,16 +143,32 @@
 .edit-profile-user__actions-primary {
   justify-self: end; 
 }
-.edit-profile-user__link {
-  font-size: var(--fs-xs);
-  color: var(--secundary-700);
+.edit-profile-user__actions-primary .btn{
+  font-family: var(--font-primary-regular);
+  font-weight: 400;
+  align-self: flex-end; 
+  padding: var(--button-padding-top) var(--button-padding-right) 
+           var(--button-padding-bottom) var(--button-padding-left);
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem; 
   text-decoration: none;
 }
-
-.edit-profile-user__link:hover {
-  color: var(--secundary-900);
-  text-decoration: underline;
+.edit-profile-user__icon {
+  width: 2rem;
+  height: 2rem;
+  object-fit: contain;
+  display: inline-block;
+  margin-left: 0.25rem;
 }
+.edit-profile-user__icon-secundary {
+  width: 1.6rem;
+  height: 1.6rem;
+  object-fit: contain;
+  display: inline-block;
+  margin-left: 0.25rem;
+}
+/* >>> SECCIÓN DE RESPONSIVIDAD */
 @media(max-width: 640px) {
   .edit-profile-user__form {
     grid-template-columns: 1fr !important;

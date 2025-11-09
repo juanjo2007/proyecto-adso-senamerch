@@ -66,8 +66,22 @@
 .login__button .btn {
   font-family: var(--font-primary-regular);
   font-weight: 400;
+  align-self: flex-end; 
   padding: var(--button-padding-top) var(--button-padding-right) 
            var(--button-padding-bottom) var(--button-padding-left);
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem; /* espacio entre texto e icono */
+  text-decoration: none;
+}
+
+/* Icono a la derecha */
+.login__icon {
+  width: 2rem;
+  height: 2rem;
+  object-fit: contain;
+  display: inline-block;
+  margin-left: 0.25rem;
 }
 .login__password-wrapper {
   position: relative;

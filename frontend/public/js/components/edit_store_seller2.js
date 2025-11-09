@@ -1,5 +1,5 @@
 document.addEventListener("DOMContentLoaded", () => {
-  const formContainer = document.querySelector(".edit_store_seller-two");
+  const formContainer = document.querySelector(".edit-store-seller-two");
 
   if (!formContainer) {
     console.error("No se encontró el contenedor .edit_store_seller-two");

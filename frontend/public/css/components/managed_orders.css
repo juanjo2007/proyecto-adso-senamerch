@@ -1,3 +1,4 @@
+/* >>> SECCIÓN DE CONTENEDOR DE PEDIDOS */
 .order-detail {
   display: flex;
   flex-direction: column;
@@ -16,6 +17,7 @@
   color: var(--gray-950);
   gap: var(--gap-lg);
 }
+/* >>> SECCIÓN DE CONTENIDO EN EL CONTENEDOR DE PEDIDOS */
 .order-detail__header {
   margin-bottom: var(--gap-xs);
 }
@@ -30,6 +32,7 @@
   color: var(--gray-700);
   max-width: 70ch;
 }
+/* >>> SECCIÓN DE FILAS Y COLUMNAS EN CONTENEDOR DE PEDIDOS */
 .order-detail__grid {
   display: grid;
   grid-template-columns: 1fr;
@@ -48,6 +51,7 @@
     align-items: start;
   }
 }
+/* >>> SECCIÓN DE TARJETAS  */
 .order-detail__card {
   background-color: var(--white);
   border-radius: 1.2rem;
@@ -62,6 +66,7 @@
 .order-detail__card:hover {
   transform: translateY(-4px);
 }
+/* >>> SECCIÓN DE CONTENIDO DE LA TARJETA */
 .order-detail__card-title {
   font-size: var(--fs-xs);
   font-family: var(--font-primary-semibold);
@@ -70,6 +75,7 @@
   padding-bottom: var(--gap-xs);
   margin-bottom: var(--gap-sm);
 }
+/* >>> SECCIÓN DE FILAS Y COLUMNAS DE LAS TARJETAS */
 .order-detail__card-grid {
   display: grid;
   grid-template-columns: 1fr;
@@ -80,6 +86,7 @@
     grid-template-columns: repeat(2, 1fr);
   }
 }
+/* >>> SECCIÓN DE CONTEIDO DE LAS TARJETAS */
 .order-detail__info {
   display: flex;
   flex-direction: column;
@@ -117,38 +124,64 @@
   border: 2px solid var(--gray-300);
   margin-top: var(--gap-xs);
 }
+/* >>> SECCIÓN DE ACCIONES ADMINISTRATIVAS */
 .order-detail__section--actions {
   display: grid;
-  grid-template-columns: 1fr;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
   gap: var(--gap-md);
   padding-block: var(--gap-md);
   border-top: 1px solid var(--secundary-900);
   width: 100%;
+  align-items: start; 
 }
-@media (min-width: 1024px) {
-  .order-detail__section--actions {
-    grid-template-columns: repeat(3, 1fr);
-    justify-items: center;
-  }
-}
+/* >>> SECCIÓN DE CONTENIDO EN ACCIONES ADMINISTRATIVAS */
 .order-detail__section-title {
   grid-column: 1 / -1;
   text-align: center;
   font-size: var(--fs-xs);
   margin-bottom: var(--gap-sm);
   color: var(--gray-900);
-  font-family: var(--font-primary-semibold);
 }
-.order-detail__actions-primary,
-.order-detail__actions-secondary {
+.order-detail__actions-secondary,
+.order-detail__actions-primary {
   display: flex;
   justify-content: center;
+  align-items: center;
+  align-self: start; 
+  height: auto;
+  width: 100%;
 }
-.btn-variant2--secondary {
-  padding: var(--secundary-padding-top)
-          var(--secundary-padding-right)
-          var(--secundary-padding-bottom)
-          var(--secundary-padding-left) !important;
+.order-detail__actions-primary .btn{
+  font-family: var(--font-primary-regular);
+  font-weight: 400;
+  align-self: flex-end; 
+  padding: var(--button-padding-top) var(--button-padding-right) 
+           var(--button-padding-bottom) var(--button-padding-left);
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem; 
+  text-decoration: none;
+}
+.order-detail__icon {
+  width: 2rem;
+  height: 2rem;
+  object-fit: contain;
+  display: inline-block;
+  margin-left: 0.25rem;
+}
+.order-detail__icon-secundary {
+  width: 1.6rem;
+  height: 1.6rem;
+  object-fit: contain;
+  display: inline-block;
+  margin-left: 0.25rem;
+}
+/* >>> SECCIÓN DE RESPONSIVIDAD */
+@media (min-width: 1024px) {
+  .order-detail__section--actions {
+    grid-template-columns: repeat(2, 1fr);
+    justify-items: center;
+  }
 }
 @media (min-width: 640px) {
   .order-detail {

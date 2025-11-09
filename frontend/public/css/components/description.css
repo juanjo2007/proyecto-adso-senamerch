@@ -1,3 +1,4 @@
+/* >>> SECCIÓN DE CONTENEDOR DE DESCRIPCION DEL PRODCUTO DE LOS CLIENTES */
 .product-description {
   display: flex;
   justify-content: center;
@@ -12,13 +13,26 @@
   border-radius: 12px;
   box-shadow: 0 2px 6px rgba(0,0,0,0.05); 
 }
+/* >>> SECCIÓN DE ACCIONES DEL CONTENEDOR */
 .product-description .btn {
   font-family: var(--font-primary-regular);
   font-weight: 400;
   align-self: flex-start; 
   padding: var(--button-padding-top) var(--button-padding-right) 
            var(--button-padding-bottom) var(--button-padding-left);
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+  text-decoration: none;
 }
+.product-description__icon {
+  width: 2rem;
+  height: 2rem;
+  object-fit: contain;
+  display: inline-block;
+  margin-left: 0.25rem;
+}
+/* >>> SECCIÓN DE CONTENIDO DEL CONTENEDOR  */
 .product-description__gallery {
   flex: 1;
 }
@@ -184,6 +198,7 @@
   font-size: var(--fs-xs);
   margin-top: 1.2rem;
 }
+/* >>> SECCIÓN DE RESPONSIVIDAD */
 @media (max-width: 1024px) {
   .product-description {
     margin: 2rem auto;

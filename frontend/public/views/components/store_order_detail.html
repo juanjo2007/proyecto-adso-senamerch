@@ -1,10 +1,15 @@
 <main class="store-order-detail-content">
   <section class="store-order-detail">
+    <!-- >>> Cabecera principal -->
     <header class="store-order-detail__header">
-      <h2 class="store-order-detail__title">Detalle del pedido #ORD-0235</h2>
+      <div class="store-order-detail__title-group">
+        <h2 class="store-order-detail__title">Pedido #0235</h2>
+        <p class="store-order-detail__date">25 de octubre de 2025</p>
+      </div>
       <p class="store-order-detail__status store-order-detail__status--pending">Pendiente</p>
     </header>
 
+    <!-- >>> Información general -->
     <div class="store-order-detail__info">
       <div class="store-order-detail__client">
         <h3 class="store-order-detail__products-header">Datos del cliente</h3>
@@ -15,32 +20,57 @@
 
       <div class="store-order-detail__summary">
         <h3 class="store-order-detail__products-header">Resumen del pedido</h3>
-        <p><strong>Fecha:</strong> 25/10/2025</p>
         <p><strong>Dirección:</strong> Calle 123 #45-67</p>
-        <p><strong>Total:</strong> $150.000</p>
+        <p><strong>Método de pago:</strong> Efectivo </p>
       </div>
     </div>
 
+    <!-- >>> Productos -->
     <div class="store-order-detail__products">
       <h3 class="store-order-detail__products-header">Productos</h3>
 
       <div class="store-order-detail__product">
-        <p><strong>Tomates chonto</strong> — 5 kg — $30.000</p>
+        <div class="store-order-detail__product-info">
+          <p><strong>Tomates chonto</strong> — 5 kg — $30.000</p>
+        </div>
+        <div class="store-order-detail__product-action">
+          <a href="store_orders_view.html" class="btn btn-variant2--secondary store-order-detail__cancel">Cancelar producto
+            <img src="/frontend/public/assets/icons/cancel.svg" alt="Icono Comprar" class="store-order-detail__icon-secundary">
+          </a>
+        </div>
       </div>
 
       <div class="store-order-detail__product">
-        <p><strong>Lechugas romana</strong> — 3 unidades — $15.000</p>
+        <div class="store-order-detail__product-info">
+          <p><strong>Lechugas romana</strong> — 3 unidades — $15.000</p>
+        </div>
+        <div class="store-order-detail__product-action">
+          <a href="store_orders_view.html" class="btn btn-variant2--secondary store-order-detail__cancel">Cancelar producto
+            <img src="/frontend/public/assets/icons/cancel.svg" alt="Icono Comprar" class="store-order-detail__icon-secundary">
+          </a>
+        </div>
+      </div>
+
+      <div class="store-order-detail__product--total">
+        <div class="store-order-detail__product-info--total">
+          <p><strong>Total</strong> <strong>$45.000</strong></p>
+        </div>
       </div>
     </div>
 
-  <!-- Contenedor grid de botones -->
-  <div class="store-order-detail__actions">
-    <div class="store-order-detail__secondary">
-      <a href="store_orders_view.html" class="btn btn-variant2--secondary">Cancelar pedido</a>
-    </div>
+    <!-- >>> Botones de acción -->
+    <div class="store-order-detail__actions">
+      <div class="store-order-detail__secondary">
+        <a href="store_orders_view.html" class="btn btn-variant2--secondary store-order-detail__cancel">Cancelar producto
+          <img src="/frontend/public/assets/icons/cancel.svg" alt="Icono Comprar" class="store-order-detail__icon-secundary">
+        </a>
+      </div>
 
       <div class="store-order-detail__buttons">
-        <a href="store_orders_view.html" class="btn btn--primary">Entregar pedido</a>
+        <a href="store_orders_view.html" class="btn btn--primary store-order-detail__realiced">
+          Entregar pedido
+          <img src="/frontend/public/assets/icons/delivery.svg" alt="Icono de entrega" class="store-order-detail__icon">
+        </a>
       </div>
     </div>
   </section>

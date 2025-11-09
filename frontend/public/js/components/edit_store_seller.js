@@ -1,5 +1,5 @@
 document.addEventListener("DOMContentLoaded", function () {
-  const formContainer = document.querySelector(".edit_store_seller");
+  const formContainer = document.querySelector(".edit-store-seller-container");
 
   if (formContainer) {
     fetch("/frontend/public/views/components/edit_store_seller.html")

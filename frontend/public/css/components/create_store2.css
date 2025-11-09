@@ -86,13 +86,30 @@
   align-items: center;
 }
 .create-store__buttons .btn {
-  justify-content: flex-end; 
   font-family: var(--font-primary-regular);
   font-weight: 400;
-  padding: var(--button-padding-top) var(--button-padding-right)
+  align-self: flex-end; 
+  padding: var(--button-padding-top) var(--button-padding-right) 
            var(--button-padding-bottom) var(--button-padding-left);
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem; 
+  text-decoration: none;
 }
-
+.create-store__icon {
+  width: 2rem;
+  height: 2rem;
+  object-fit: contain;
+  display: inline-block;
+  margin-left: 0.25rem;
+}
+.create-store__icon-secundary {
+  width: 1.6rem;
+  height: 1.6rem;
+  object-fit: contain;
+  display: inline-block;
+  margin-left: 0.25rem;
+}
 /* ===== ALERT ===== */
 .alert {
   position: fixed;

@@ -3,48 +3,44 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Documento de Ventas</title>
-
-  <!-- CSS principal -->
+  <title>Vista admin ventas</title>
+  <!-- >>> Sección CSS principal -->
   <link rel="stylesheet" href="/frontend/public/css/main.css">
-  <!-- CSS del componente -->
-  <link rel="stylesheet" href="/frontend/public/css/components/sales-doc.css">
-
-  <!-- JS de componentes -->
+  <!-- >>> Sección JS de componentes -->
   <script src="/frontend/public/js/components/sales_doc.js" defer></script>
   <script src="/frontend/public/js/components/navbar_admin.js" defer></script>
   <script src="/frontend/public/js/components/footer.js" defer></script>
   <script src="/frontend/public/js/components/search_bar.js" defer></script>
   <script src="/frontend/public/js/components/admin.js" defer></script>
 </head>
-
 <body>
   <main>
-    <!-- >>> Navbar -->
-    <section class="navbar-sales-doc">
+    <!-- >>> Sección Navbar -->
+    <nav class="navbar-sales-doc">
       <div class="navbar-admin-container"></div>
-    </section>
-
-    <!-- >>> Contenedor principal con 2 columnas -->
+    </nav>
+    <!-- >>> Sección Contenedor principal con 2 columnas -->
     <div class="content-sales-doc">
-      <!-- Columna izquierda -->
+      <!-- >>> Sección Columna izquierda -->
       <section class="admin-dashboard">
         <div class="admin-container"></div>
       </section>
-
-      <!-- Columna derecha -->
+      <!-- >>> Sección Columna derecha-->
       <div class="right-panel">
+        <!-- >>> Sección Barra de busqueda-->
         <section class="seeker">
           <div class="search-bar-container"></div>
         </section>
+        <!-- >>> Sección Tabla de ventas-->
         <section class="sales-doc-section">
           <div class="sales-doc-container"></div>
         </section>
       </div>
     </div>
   </main>
-
-  <!-- >>> Footer -->
-  <footer class="footer-container"></footer>
+  <!-- >>> Sección Footer -->
+  <footer class="footer-admin-sales">
+    <div class="footer-container"></div>
+  </footer>
 </body>
 </html>

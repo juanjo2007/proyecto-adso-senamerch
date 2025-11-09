@@ -1,3 +1,4 @@
+/* >>> SECCIÓN DE CONTENEDOR PARA VER PEDIDOS PENDIENTES EN LA TIENDA */
 .store-content{
   display: flex;
   justify-content: center;
@@ -8,6 +9,7 @@
   box-sizing: border-box;
   overflow: hidden; 
 }
+/* >>> SECCIÓN DE CONTENIDO CONTENEDOR */
 .store-orders {
   border: 1px solid var(--secundary-900);
   width: 80%;
@@ -52,6 +54,7 @@
   background-color: var(--primary-50);
   border: 1px solid var(--secundary-900);
   border-radius: 10px;
+  gap: 10px;
   padding: var(--gap-md);
   transition: background-color 0.3s ease;
 }
@@ -98,18 +101,32 @@
   color: var(--gray-900);
   text-align: right;
 }
-.store-orders__secondary{
+/* >>> SECCIÓN DE ACCIONES DEL CONTENEDOR */
+.store-orders__primary{
   display: flex;
   justify-content: center;
   text-align: right;
   padding-right: var(--gap-sm);  
 }
-.store-orders__secondary .btn {
+.store-orders__primary .btn {
   font-family: var(--font-primary-regular);
   font-weight: 400;
-  padding: var(--button-padding-top) var(--button-padding-right)
+  align-self: flex-end; 
+  padding: var(--button-padding-top) var(--button-padding-right) 
            var(--button-padding-bottom) var(--button-padding-left);
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem; 
+  text-decoration: none;
 }
+.store-orders__icon {
+  width: 2rem;
+  height: 2rem;
+  object-fit: contain;
+  display: inline-block;
+  margin-left: 0.25rem;
+}
+/* >>> SECCIÓN DE RESPONSIVIDAD */
 @media (max-width: 640px) {
   .store-content {
     padding-block: 16rem;
