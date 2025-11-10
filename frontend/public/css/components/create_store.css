@@ -1,7 +1,7 @@
 .create-store-one {
   display: flex;
   justify-content: center;
-  padding-block: 6.8rem;
+  padding-block: 12rem;
 }
 .create-store-one__wrapper {
   width: 100%;
@@ -123,7 +123,7 @@
 @media (max-width: 640px) {
   .create-store-one {
     width: 100%;
-    padding-block: 2rem;
+    padding-block: 10rem;
   }
 
   .create-store-one__wrapper {
@@ -131,16 +131,17 @@
     max-width: 100%;
     border-radius: 8px;
     padding: var(--gap-sm);
+    justify-content: flex-start;
   }
 
   .create-store-one__form {
     grid-template-columns: 1fr;
     gap: var(--gap-sm);
+    align-items: flex-end; 
   }
 
   .create-store-one__buttons {
     flex-direction: column;
-    align-items: start;
+    align-self: flex-end; 
   }
-
 }
