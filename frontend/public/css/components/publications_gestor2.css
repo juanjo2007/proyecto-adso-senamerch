@@ -6,7 +6,7 @@
   width: 100%;
   margin: 0 auto;
   box-sizing: border-box;
-  padding-block: 3.6rem;
+  padding-block: 8rem;
 }
 /* >>> SECCIÓN DE CONTENIDO DEL CONTENEDOR */
 .create-post__form {
@@ -139,9 +139,20 @@
     float: none;
     justify-content: center; 
   }
+  .create-post {
+    padding-block: 10rem;
+}
 }
 @media (max-width: 1024px) {
   .create-post__fields-wrapper {
     grid-template-columns: repeat(2, 1fr);
+  }
+}
+@media (max-width: 640px) {
+  .create-post__fields-wrapper {
+    grid-template-columns: repeat(1, 1fr);
+  }
+  .create-post {
+    padding-block: 12rem;
   }
 }
