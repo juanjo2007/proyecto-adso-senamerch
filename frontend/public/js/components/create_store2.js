@@ -25,30 +25,38 @@ document.addEventListener('DOMContentLoaded', function () {
       }
 
       // Función alerta
-      function showAlert(message, duration = 1500, type = "success") {
+      function showAlert(message, duration = 2000, type = "success") {
         if (!alertContainer) return;
 
-        alertContainer.className = "alert"; // limpia clases previas
-        if (type === "error") alertContainer.classList.add("alert--error");
+        // Limpiar clases previas
+        alertContainer.className = "alert";
 
+        // Asignar color según tipo
+        alertContainer.classList.add(type === "error" ? "alert--error" : "alert--success");
+
+        // Mostrar mensaje
         alertContainer.innerHTML = `<p class="alert__message">${message}</p>`;
         alertContainer.classList.add("alert--show");
 
+        // Ocultar después del tiempo indicado
         setTimeout(() => {
           alertContainer.classList.remove("alert--show");
         }, duration);
       }
 
+      // Acción del botón
       if (createButton) {
         createButton.addEventListener("click", function (e) {
           e.preventDefault();
-          showAlert("Tienda creada exitosamente", 1500, "success");
+          showAlert("Tienda creada exitosamente", 2000, "success");
+
+          // Redirección después de la alerta
           setTimeout(() => {
             window.location.href = "profile_store_seller.html";
-          }, 2600);
+          }, 2500);
         });
       } else {
-        console.warn("No se encontró el botón 'Crear Tienda'.");
+        console.warn("⚠️ No se encontró el botón 'Crear Tienda'.");
       }
     })
     .catch(error => console.error("Error cargando el componente Create Store:", error));
