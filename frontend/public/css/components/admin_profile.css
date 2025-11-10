@@ -1,4 +1,7 @@
-/* >>> SECCIÓN DE CONTENEDOR DE PERFIL DEL ADMINISTRADOR */
+/* =========================================================
+   SECCIÓN DE PERFIL DEL ADMINISTRADOR
+   ========================================================= */
+
 .admin-profile {
   width: 100%;
   margin: 0 auto;
@@ -7,6 +10,7 @@
   display: flex;
   justify-content: center;
 }
+
 /* >>> SECCIÓN DE TARJETAS */
 .admin-profile__card {
   background: var(--white);
@@ -20,39 +24,53 @@
   flex-direction: column;
   gap: var(--gap-lg);
 }
-/* >>> SECCIÓN DE ACCIONES DE PERFIL DEL ADMINISTRADOR */
+
+/* >>> SECCIÓN DE ACCIONES DEL PERFIL DEL ADMINISTRADOR */
 .admin-profile__actions-grid {
   display: grid;
   grid-template-columns: 1fr 1fr;
-  align-items: center;
+  align-items: center; /* <-- clave: centra ambos botones verticalmente */
   width: 100%;
   margin-top: var(--gap-md);
+  gap: var(--gap-sm);
 }
-.admin-profile__actions-secondary {
-  justify-self: start;
-}
+
+.admin-profile__actions-secondary,
 .admin-profile__actions-primary {
-  justify-self: end;
+  display: flex;          /* <-- flex interno */
+  align-items: center;    /* <-- centra botón dentro de la celda */
 }
-.admin-profile__actions-primary .btn{
-  font-family: var(--font-primary-regular);
-  font-weight: 400;
-  align-self: flex-end; 
-  padding: var(--button-padding-top) var(--button-padding-right) 
-           var(--button-padding-bottom) var(--button-padding-left);
+
+.admin-profile__actions-secondary {
+  justify-content: flex-start;
+}
+
+.admin-profile__actions-primary {
+  justify-content: flex-end;
+}
+
+/* Ajuste visual para que el botón no “salte” */
+.admin-profile__actions-primary .btn,
+.admin-profile__actions-secondary .btn {
   display: inline-flex;
   align-items: center;
-  gap: 0.5rem; 
+  justify-content: center;
+  vertical-align: middle;
+  gap: 0.5rem;
   text-decoration: none;
+  font-family: var(--font-primary-regular);
+  font-weight: 400;
 }
-/* >>> SECCIÓN DE CONTENIDO DE LAS TARJETAS */
+
+/* >>> ICONOS DE LOS BOTONES */
 .admin-profile__icon {
-  width: 2rem;
-  height: 2rem;
+  width: 2.4rem;
+  height: 2.4rem;
   object-fit: contain;
   display: inline-block;
   margin-left: 0.25rem;
 }
+
 .admin-profile__icon-secundary {
   width: 1.6rem;
   height: 1.6rem;
@@ -60,20 +78,8 @@
   display: inline-block;
   margin-left: 0.25rem;
 }
-@media (max-width: 640px) {
-  .admin-profile__card {
-    width: 100%;
-    min-width: 320px; 
-  }
-  .admin-profile__actions-grid {
-    grid-template-columns: 1fr;
-    gap: var(--gap-sm);
-  }
-  .admin-profile__actions-secondary,
-  .admin-profile__actions-primary {
-    justify-self: self-start;
-  }
-}
+
+/* >>> CABECERA DEL PERFIL */
 .admin-profile__header {
   display: flex;
   align-items: center;
@@ -81,6 +87,7 @@
   border-bottom: 1px solid var(--gray-300);
   padding-bottom: var(--gap-md);
 }
+
 .admin-profile__avatar {
   width: 90px;
   height: 90px;
@@ -89,66 +96,93 @@
   border: 2px solid var(--secundary-700);
   flex-shrink: 0;
 }
+
 .admin-profile__avatar img {
   width: 100%;
   height: 100%;
   object-fit: cover;
 }
+
 .admin-profile__info {
   display: flex;
   flex-direction: column;
   justify-content: center;
 }
+
 .admin-profile__name {
   font-family: var(--font-primary-semibold);
   font-size: var(--fs-sm);
   color: var(--black);
   margin: 0;
 }
+
 .admin-profile__role {
   font-size: var(--fs-xs);
   color: var(--gray-950);
 }
+
+/* >>> DETALLES DEL PERFIL */
 .admin-profile__details {
   display: flex;
   flex-direction: column;
   gap: var(--gap-sm);
 }
+
 .admin-profile__field {
   display: flex;
   justify-content: space-between;
   border-bottom: 1px dashed var(--gray-300);
   padding-bottom: 0.4rem;
 }
+
 .admin-profile__label {
   font-family: var(--font-primary-semibold);
   font-size: var(--fs-xs);
   color: var(--gray-800);
 }
+
 .admin-profile__value {
   font-size: var(--fs-xs);
   color: var(--gray-900);
   text-align: right;
 }
+
+/* =========================================================
+   RESPONSIVE
+   ========================================================= */
 @media (max-width: 640px) {
   .admin-profile__card {
     padding: var(--gap-md);
+    width: 100%;
+    min-width: 320px;
+    max-width: 100%;
+    margin: 0;
   }
+
   .admin-profile__header {
     flex-direction: column;
     align-items: center;
     text-align: center;
   }
+
   .admin-profile__field {
     flex-direction: column;
     align-items: flex-start;
   }
-}
-@media (max-width: 640px) {
-  .admin-profile__card {
+
+  .admin-profile__actions-grid {
+    grid-template-columns: 1fr;
+    gap: var(--gap-sm);
+  }
+
+  .admin-profile__actions-primary,
+  .admin-profile__actions-secondary {
+    justify-content: center;
+  }
+
+  .admin-profile__actions-primary .btn,
+  .admin-profile__actions-secondary .btn {
     width: 100%;
-    min-width: 320px;
-    max-width: 100%;
-    margin: 0;
+    justify-content: center;
   }
 }

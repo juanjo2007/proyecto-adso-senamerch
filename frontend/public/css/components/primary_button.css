@@ -3,9 +3,9 @@
   display: inline-flex;
   align-items: center;
   justify-content: center;
-  font-size: var(--fs-xs);        /* 16px */
-  line-height: 1;                 /* asegura altura = font-size */
-  padding: var(--button-padding-top) var(--button-padding-right) 
+  font-size: var(--fs-xs);
+  line-height: 1;
+  padding: var(--button-padding-top) var(--button-padding-right)
            var(--button-padding-bottom) var(--button-padding-left);
   font-family: var(--font-primary-regular);
   font-weight: 400;
@@ -19,7 +19,7 @@
 
 /* ====== BOTÓN PRIMARIO ====== */
 .btn--primary {
-  background: var(--secundary-900);  
+  background: var(--secundary-900);
   color: var(--white);
 }
 
@@ -31,4 +31,22 @@
 .btn--primary:active {
   background: var(--secundary-900);
   transform: translateY(0);
+}
+
+/* ====== BOTÓN SECUNDARIO ====== */
+.btn--secondary {
+  background: transparent;
+  color: var(--secundary-900);
+  border: 1px solid var(--secundary-900);
+}
+
+/* ====== TAMAÑOS (MODIFICADORES) ====== */
+.btn--sm {
+  padding-top: 8px;
+  padding-bottom: 8px;
+}
+
+.btn--lg {
+  padding-top: 16px;
+  padding-bottom: 16px;
 }
