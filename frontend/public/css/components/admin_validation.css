@@ -64,26 +64,21 @@
   background-color: var(--white);
   box-shadow: 0 0 0 3px var(--primary-100);
 }
-
-.admin-panel__action .btn{
-  font-family: var(--font-primary-regular);
-  font-weight: 400;
-  align-self: flex-end; 
-  padding: var(--button-padding-top) var(--button-padding-right) 
-           var(--button-padding-bottom) var(--button-padding-left);
+.admin-panel__action .btn--primary {
+  padding-top: 8px !important;
+  padding-bottom: 8px !important;
+  min-height: 36px !important; /* altura estándar Material Design */
+  line-height: 1 !important;
   display: inline-flex;
   align-items: center;
-  gap: 0.5rem; /* espacio entre texto e icono */
-  text-decoration: none;
+  justify-content: center;
 }
-
-/* Icono a la derecha */
 .admin-panel__icon {
-  width: 2rem;
-  height: 2rem;
+  width: 2.4rem;
+  height: 2.4rem;
   object-fit: contain;
   display: inline-block;
-  margin-left: 0.25rem;
+  margin-left: 0.4rem;
 }
 .admin-panel__message {
   font-size: var(--fs-xs);

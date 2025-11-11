@@ -1,5 +1,5 @@
 /* ================== NAVBAR ================== */
-.navbar {
+.navbar-index {
   display: flex;
   justify-content: flex-end;          /* Links a la derecha */
   align-items: center;
@@ -12,7 +12,7 @@
 }
 
 /* Lista en fila */
-.navbar__list {
+.navbar-index__list {
   display: flex;
   list-style: none;
   margin: 0;
@@ -20,7 +20,7 @@
   gap: var(--gap-sm);                 /* separación uniforme entre enlaces */
 }
 
-.navbar__link {
+.navbar-index__link {
   color: var(--white);
   text-decoration: none;
   padding: var(--gap-xs) var(--gap-xxs);
@@ -28,27 +28,28 @@
   transition: color 0.2s ease;
 }
 
-.navbar__link:hover {
+.navbar-index__link:hover {
   color: var(--secundary-500);
 }
 
 /* ================== RESPONSIVE ================== */
 @media (max-width: 768px) {
-  .navbar {
+  .navbar-index {
     justify-content: center;
     padding: var(--gap-xs);
     flex-wrap: wrap;                  /* permite que los elementos bajen si no caben */
   }
 
-  .navbar__list {
+  .navbar-index__list {
     flex-direction: column;
     align-items: center;
     gap: var(--gap-xxs);
     width: 100%;                      /* ocupa todo el ancho */
   }
-
-  .navbar__link {
-    font-size: var(--fs-xxs);
+}
+@media (max-width: 640px) {
+  .navbar-index__link {
+    font-size: var(--fs-xs);
     padding: var(--gap-xxs);
   }
 }

@@ -134,6 +134,15 @@
   width: 100%;
   align-items: start; 
 }
+.order-detail__actions-primary .btn--primary {
+  padding-top: 8px !important;
+  padding-bottom: 8px !important;
+  min-height: 36px !important; /* altura estándar Material Design */
+  line-height: 1 !important;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+}
 /* >>> SECCIÓN DE CONTENIDO EN ACCIONES ADMINISTRATIVAS */
 .order-detail__section-title {
   grid-column: 1 / -1;
@@ -163,8 +172,8 @@
   text-decoration: none;
 }
 .order-detail__icon {
-  width: 2rem;
-  height: 2rem;
+  width: 2.4rem;
+  height: 2.4rem;
   object-fit: contain;
   display: inline-block;
   margin-left: 0.25rem;

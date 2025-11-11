@@ -1,7 +1,7 @@
 .create-store-one {
   display: flex;
   justify-content: center;
-  padding-block: 12rem;
+  padding-block: 6.6rem;
 }
 .create-store-one__wrapper {
   width: 100%;
@@ -85,31 +85,38 @@
   justify-content: flex-start; 
   align-items: center;
 }
-.create-store-one__buttons .btn {
-  font-family: var(--font-primary-regular);
-  font-weight: 400;
-  align-self: flex-end; 
-  padding: var(--button-padding-top) var(--button-padding-right) 
-           var(--button-padding-bottom) var(--button-padding-left);
+.create-store-one__buttons .btn--primary {
+  padding-top: 8px !important;
+  padding-bottom: 8px !important;
+  min-height: 36px !important; /* altura estándar Material Design */
+  line-height: 1 !important;
   display: inline-flex;
   align-items: center;
-  gap: 0.5rem; 
-  text-decoration: none;
+  justify-content: center;
 }
-.create-store-one__icon {
-  width: 2rem;
-  height: 2rem;
+.create-store-one__icon  {
+  width: 2.4rem !important;
+  height: 2.4rem !important;
   object-fit: contain;
-  display: inline-block;
-  margin-left: 0.25rem;
+  margin-left: 0.4rem;
+}
+.create-store-one__secondary .btn-variant2--secondary {
+  padding-top: 6px !important;
+  padding-bottom: 6px !important;
+  min-height: 36px !important; /* altura estándar Material Design */
+  line-height: 1 !important;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
 }
 .create-store-one__icon-secundary {
-  width: 1.6rem;
-  height: 1.6rem;
+  width: 1.8rem;
+  height: 1.8rem;
   object-fit: contain;
   display: inline-block;
-  margin-left: 0.25rem;
+  margin-left: 0.4rem;
 }
+
 @media (max-width: 768px) {
   .create-store-one__form {
     grid-template-columns: 1fr; 
@@ -124,24 +131,24 @@
   .create-store-one {
     width: 100%;
     padding-block: 10rem;
+    padding-inline: 24px;
   }
 
   .create-store-one__wrapper {
     width: 100%;
     max-width: 100%;
     border-radius: 8px;
-    padding: var(--gap-sm);
-    justify-content: flex-start;
+    padding: var(--gap-lg);
   }
 
   .create-store-one__form {
     grid-template-columns: 1fr;
     gap: var(--gap-sm);
-    align-items: flex-end; 
   }
 
   .create-store-one__buttons {
     flex-direction: column;
-    align-self: flex-end; 
+    align-items: start;
   }
+
 }

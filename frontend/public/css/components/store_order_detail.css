@@ -160,18 +160,44 @@
   align-items: center;
 }
 
+.store-order-detail__buttons .btn--primary {
+  padding-top: 8px !important;
+  padding-bottom: 8px !important;
+  min-height: 36px !important; /* altura estándar Material Design */
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+}
+.store-order-detail__secondary .btn-variant2--secondary {
+  padding-top: 6px !important;
+  padding-bottom: 6px !important;
+  min-height: 36px !important; /* altura estándar Material Design */
+  line-height: 1 !important;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+}
+.store-order-detail__product-action .btn-variant2--secondary {
+  padding-top: 6px !important;
+  padding-bottom: 6px !important;
+  min-height: 36px !important; /* altura estándar Material Design */
+  line-height: 1 !important;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+}
 .store-order-detail__icon {
-  width: 2rem;
-  height: 2rem;
-  margin-left: 0.4rem;
+  width: 2.4rem;
+  height: 2.4rem;
   object-fit: contain;
+  margin-left: 0.4rem;
 }
 .store-order-detail__icon-secundary {
-  width: 1.6rem;
-  height: 1.6rem;
+  width: 1.8rem;
+  height: 1.8rem;
   object-fit: contain;
   display: inline-block;
-  margin-left: 0.25rem;
+  margin-left: 0.4rem;
 }
 
 /* >>> MEDIA QUERIES */
@@ -195,7 +221,7 @@
 
   .store-order-detail__actions {
     grid-template-columns: 1fr;
-    gap: var(--gap-xs);
+    gap: var(--gap-lg);
   }
 
   .store-order-detail__buttons {
@@ -203,14 +229,18 @@
   }
 }
 
-@media (max-width: 480px) {
-  .store-order-detail {
-    padding: var(--gap-sm);
+/* >>> SECCIÓN DE RESPONSIVIDAD */
+@media (max-width: 640px) {
+  .store-order-detail-content {
+    padding-block: 16rem;
+    padding-inline: 12px;
   }
-  .store-order-detail__title {
+  .store-orders-detail {
+    width: 100%;
+    max-width: 100%;
+    padding: var(--gap-md);
+  }
+  .store-orders__title {
     font-size: var(--fs-xs);
-  }
-  .store-order-detail__products {
-    padding: var(--gap-sm);
   }
 }
