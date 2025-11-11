@@ -173,7 +173,7 @@
   align-items: center;
   justify-content: center;
 }
-.user-detail__actions-primary {
+.user-detail__icon {
   width: 2.4rem !important;
   height: 2.4rem !important;
   object-fit: contain;
@@ -188,13 +188,14 @@
   align-items: center;
   justify-content: center;
 }
-.user-detail__icon-secundary {
+.user-detail__icon-secondary {
   width: 1.8rem;
   height: 1.8rem;
   object-fit: contain;
   display: inline-block;
   margin-left: 0.4rem;
 }
+
 /* >>> SECCIÓN DE RESPONSIVIDAD  */
 @media (min-width: 1024px) {
   .user-detail__section--actions {

@@ -111,19 +111,12 @@
 .register__actions .btn--primary {
   padding-top: 8px !important;
   padding-bottom: 8px !important;
-  min-height: 36px !important; /* altura estándar Material Design */
+  min-height: 40px !important; /* altura estándar Material Design */
   line-height: 1 !important;
   display: inline-flex;
   align-items: center;
   justify-content: center;
 }
-.register__icon {
-  width: 2.4rem !important;
-  height: 2.4rem !important;
-  object-fit: contain;
-  margin-left: 0.4rem;
-}
-
 /* ===== ALERT ===== */
 .alert {
   position: fixed;
