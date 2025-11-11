@@ -101,7 +101,7 @@
   display: grid;
   grid-template-columns: 1fr auto; /* texto | botón */
   align-items: center;
-  background-color: var(--primary-50);
+  background-color: var(--primary-100);
   border: 1px solid var(--secundary-900);
   border-radius: 8px;
   padding: var(--gap-sm);
