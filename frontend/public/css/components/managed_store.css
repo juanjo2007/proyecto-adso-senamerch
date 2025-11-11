@@ -177,7 +177,7 @@
   align-items: center;
   justify-content: center;
 }
-.store-detail__icon-secundary {
+.store-detail__icon--secondary{
   width: 1.8rem;
   height: 1.8rem;
   object-fit: contain;
