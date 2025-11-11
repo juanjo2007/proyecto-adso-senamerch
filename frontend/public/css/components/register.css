@@ -117,12 +117,6 @@
   align-items: center;
   justify-content: center;
 }
-.register__icon {
-  width: 2.4rem !important;
-  height: 2.4rem !important;
-  object-fit: contain;
-  margin-left: 0.4rem;
-}
 
 /* ===== ALERT ===== */
 .alert {

@@ -6,7 +6,7 @@
   padding: 6rem 24px; /* Margen superior e inferior amplio y 24px laterales */
   width: 100%;
   box-sizing: border-box;
-  min-height: 100vh;
+  padding-block: 8.8rem;
   overflow-y: auto; /* Permite scroll si el contenido es largo */
   background-color: var(--background, transparent);
 }
