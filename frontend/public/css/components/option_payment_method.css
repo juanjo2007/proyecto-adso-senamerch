@@ -56,6 +56,15 @@
   justify-content: center;
   width: 100%;
 }
+.payment-method__actions .btn--primary {
+  padding-top: 8px !important;
+  padding-bottom: 8px !important;
+  min-height: 36px !important; /* altura estándar Material Design */
+  line-height: 1 !important;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+}
 .payment-method__actions .btn {
   font-family: var(--font-primary-regular);
   font-weight: 400;
@@ -68,8 +77,8 @@
   text-decoration: none;
 }
 .payment-method__icon {
-  width: 2rem;
-  height: 2rem;
+  width: 2.4rem;
+  height: 2.4rem;
   object-fit: contain;
   display: inline-block;
   margin-left: 0.25rem;

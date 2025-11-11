@@ -2,12 +2,15 @@
 .edit-profile-admin {
   display: flex;
   justify-content: center;
-  align-items: center;
-  padding: var(--gap-md);
+  align-items: flex-start; /* Evita el desborde vertical */
+  padding: 6rem 24px; /* Margen superior e inferior amplio y 24px laterales */
   width: 100%;
   box-sizing: border-box;
-  padding-block: 10rem;
+  min-height: 100vh;
+  overflow-y: auto; /* Permite scroll si el contenido es largo */
+  background-color: var(--background, transparent);
 }
+
 /* >>> SECCIÓN DE CONTENIDO DEL CONTENEDOR */
 .edit-profile-admin__container {
   width: 100%;
@@ -21,11 +24,15 @@
   flex-direction: column;
   gap: var(--gap-md);
   font-family: var(--font-primary);
-  max-height: calc(100vh - var(--gap-lg) * 2);
+  max-height: none; /* Se elimina el límite que causaba el desborde */
+  overflow: visible;
+  box-sizing: border-box;
 }
+
 .edit-profile-admin__container::-webkit-scrollbar {
   display: none;
 }
+
 .edit-profile-admin__title {
   margin: 0;
   text-align: center;
@@ -33,12 +40,14 @@
   font-size: var(--fs-sm);
   color: var(--black);
 }
+
 .edit-profile-admin__form {
   display: grid;
   grid-template-columns: 1fr 1fr;
-  gap: var(--gap-md);
+  gap: var(--gap-lg);
   align-items: start;
 }
+
 .edit-profile-admin__field {
   display: flex;
   flex-direction: column;
@@ -46,11 +55,13 @@
   min-width: 0;
   box-sizing: border-box;
 }
+
 .edit-profile-admin__label {
   font-size: var(--fs-xxs);
   font-family: var(--font-primary-semibold);
   color: var(--gray-950);
 }
+
 .edit-profile-admin__input {
   padding: var(--padding-top) var(--padding-right);
   border: 1px solid var(--secundary-900);
@@ -60,11 +71,14 @@
   background-color: var(--white);
   color: var(--gray-600);
 }
+
 .edit-profile-admin__input:focus {
   outline: none;
   border-color: var(--primary-500);
   box-shadow: 0 0 0 6px rgba(166,140,105,0.06);
 }
+
+/* >>> AVATAR */
 .edit-profile-admin__avatar {
   position: relative;
   display: inline-block;
@@ -72,6 +86,7 @@
   cursor: pointer;
   width: fit-content;
 }
+
 .edit-profile-admin__avatar-img {
   width: 80px;
   height: 80px;
@@ -80,9 +95,11 @@
   border: 2px solid var(--secundary-700);
   display: block;
 }
+
 .edit-profile-admin__avatar-input {
   display: none;
 }
+
 .edit-profile-admin__avatar::after {
   content: "📷";
   position: absolute;
@@ -95,11 +112,14 @@
   font-size: var(--fs-xs);
   color: var(--primary-700);
 }
+
+/* >>> CONTRASEÑA */
 .edit-profile-admin__password-wrapper {
   position: relative;
   display: flex;
   align-items: center;
 }
+
 .edit-profile-admin__toggle-password {
   background-color: var(--secundary-600);
   border: none;
@@ -111,6 +131,7 @@
   margin-left: 8px;
   color: var(--white);
 }
+
 .edit-profile-admin__toggle-password:hover {
   background-color: var(--secundary-700);
 }
@@ -118,6 +139,8 @@
 .edit-profile-admin__toggle-password:active {
   transform: scale(0.95);
 }
+
+/* >>> ACCIONES */
 .edit-profile-admin__actions-grid {
   grid-column: 1 / span 2; 
   display: grid;
@@ -126,13 +149,25 @@
   width: 100%;
   margin-top: var(--gap-md);
 }
+
+.edit-profile-admin__actions-grid .btn {
+  padding-top: 8px !important;
+  padding-bottom: 8px !important;
+  min-height: 36px;  /* altura estándar Material Design */
+  font-size: var(--fs-xs);
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+}
+
 .edit-profile-admin__actions-secondary {
   justify-self: start; 
 }
-/* Icono a la derecha */
+
 .edit-profile-admin__actions-primary {
   justify-self: end; 
 }
+
 .edit-profile-admin__actions-primary .btn{
   font-family: var(--font-primary-regular);
   font-weight: 400;
@@ -144,13 +179,15 @@
   gap: 0.5rem; 
   text-decoration: none;
 }
+
 .edit-profile-admin__icon {
-  width: 2rem;
-  height: 2rem;
+  width: 2.4rem;
+  height: 2.4rem;
   object-fit: contain;
   display: inline-block;
   margin-left: 0.25rem;
 }
+
 .edit-profile-admin__icon-secundary {
   width: 1.6rem;
   height: 1.6rem;
@@ -158,7 +195,8 @@
   display: inline-block;
   margin-left: 0.25rem;
 }
-/* ===== ALERT (mismo estilo que las anteriores) ===== */
+
+/* >>> ALERTAS */
 .alert {
   position: fixed;
   top: 50%;
@@ -195,7 +233,7 @@
   color: inherit;
 }
 
-/* ===== Tipos ===== */
+/* >>> Tipos de alerta */
 .alert--success {
   border-color: var(--secundary-700);
   background-color: var(--secundary-50);
@@ -208,22 +246,37 @@
   color: var(--tertiary-700);
 }
 
-
-/* >>> SECCIÓN DE RESPONSIVIDAD */
+/* >>> RESPONSIVIDAD */
 @media(max-width: 640px) {
+  .edit-profile-admin {
+    padding: 4rem 24px; /* 24px laterales también en móvil */
+    align-items: flex-start;
+  }
+
+  .edit-profile-admin__container {
+    padding: var(--gap-md);
+    border-radius: 0.8rem;
+  }
+
   .edit-profile-admin__form {
     grid-template-columns: 1fr !important;
-    gap: var(--gap-sm);
+    gap: var(--gap-lg);
   }
+
   .edit-profile-admin__field {
     grid-column: 1 / -1;
     width: 100%;
   }
+
   .edit-profile-admin__avatar {
     justify-self: center;
   }
+
   .edit-profile-admin__actions-grid {
     grid-template-columns: 1fr !important;
     gap: var(--gap-sm);
+  }
+  .edit-profile-admin__actions-primary {
+    justify-self: start; 
   }
 }

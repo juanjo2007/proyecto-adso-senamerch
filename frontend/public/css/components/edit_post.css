@@ -6,11 +6,11 @@
   width: 100%;
   padding-block: 8rem;
 }
-/* >>> SECCIÓN DE CONTENIDO DEL CONTENEDOR  */
+
+/* >>> SECCIÓN DE CONTENIDO DEL FORMULARIO */
 .edit-post-one__form {
   background-color: var(--white);
-  background: var(--white);
-  padding: var(--gap-md);
+  padding: var(--gap-lg);
   border-radius: 1.2rem;
   box-shadow: 0 4px 10px rgba(0, 0, 0, 0.15);
   border: 1px solid var(--secundary-900);
@@ -18,8 +18,8 @@
   max-width: 700px;
   display: flex;
   flex-direction: column;
-  justify-content: space-between;
 }
+
 .edit-post-one__fields-wrapper {
   display: grid;
   grid-template-columns: repeat(2, 1fr);
@@ -27,6 +27,7 @@
   width: 100%;
   box-sizing: border-box;
 }
+
 .edit-post-one__title {
   grid-column: 1 / -1;
   text-align: center;
@@ -36,6 +37,7 @@
   color: var(--black);
   font-family: var(--font-primary-semibold);
 }
+
 .edit-post-one__field {
   display: flex;
   flex-direction: column;
@@ -43,14 +45,17 @@
   min-width: 0;
   box-sizing: border-box;
 }
+
 .edit-post-one__field--full {
   grid-column: 1 / -1;
 }
+
 .edit-post-one__label {
   font-size: var(--fs-xxs);
   color: var(--gray-900);
   font-family: var(--font-primary-semibold);
 }
+
 .edit-post-one__input,
 .edit-post-one__textarea,
 .edit-post-one__select {
@@ -66,72 +71,89 @@
   width: 100%;
   box-sizing: border-box;
 }
+
 .edit-post-one__input:focus,
 .edit-post-one__textarea:focus,
 .edit-post-one__select:focus {
   border-color: var(--secundary-600);
   outline: none;
 }
+
 .edit-post-one__textarea {
   min-height: 12rem;
   resize: vertical;
 }
-/* >>> SECCIÓN DE ACCIONES DEL CONTENEDOR */
-.edit-post__field-secundary {
+
+/* >>> SECCIÓN DE ACCIONES (BOTONES) */
+.edit-post-one__field-secundary {
   display: flex;
   justify-content: flex-start;
   width: 100%;
 }
-.edit-post__field-primary {
+
+.edit-post-one__field-secundary .btn-variant2--secondary {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  padding-top: 6px;          
+  padding-bottom: 6px;
+  max-height: 36px;
+  line-height: 1;
+}
+.edit-post-one__icon-secundary {
+  width: 1.8rem;
+  height: 1.8rem;
+  object-fit: contain;
+  margin-left: 0.4rem;
+}
+
+/* --- BOTÓN PRIMARIO --- */
+.edit-post-one__field-primary {
   display: flex;
   justify-content: flex-end;
   width: 100%;
 }
-.edit-post__field-primary  .btn {
-  font-family: var(--font-primary-regular);
-  font-weight: 400;
-  align-self: flex-end; 
-  padding: var(--button-padding-top) var(--button-padding-right) 
-           var(--button-padding-bottom) var(--button-padding-left);
+
+.edit-post-one__field-primary .btn--primary {
   display: inline-flex;
   align-items: center;
-  gap: 0.5rem; 
-  text-decoration: none;
+  justify-content: center;
+  padding-top: 8px;          /* botón ligeramente más alto */
+  padding-bottom: 8px;
+  min-height: 40px;          /* sin forzar altura fija */
+  line-height: 1;
 }
-.edit-post__icon {
-  width: 2rem;
-  height: 2rem;
+
+.edit-post-one__icon-primary {
+  width: 2.4rem;
+  height: 2.4rem;
   object-fit: contain;
-  display: inline-block;
-  margin-left: 0.25rem;
+  margin-left: 0.4rem;
 }
-.edit-post__icon-secundary {
-  width: 1.6rem;
-  height: 1.6rem;
-  object-fit: contain;
-  display: inline-block;
-  margin-left: 0.25rem;
-}
-/* >>> SECCIÓN DE RESPONSIVIDAD */
+
+
+/* >>> RESPONSIVIDAD */
 @media (max-width: 1024px) {
   .edit-post-one__fields-wrapper {
     grid-template-columns: repeat(2, 1fr);
   }
 }
+
 @media (max-width: 768px) {
   .edit-post-one__fields-wrapper {
     grid-template-columns: 1fr;
+    justify-content: flex-start;
   }
+
   .edit-post-one__form {
-    padding: var(--gap-md);
+    padding: var(--gap-lg);
     min-height: auto;
   }
-  .edit-post-one__actions-grid {
-    grid-template-columns: 1fr;
-    gap: var(--gap-md);
+
+  .edit-post-one__field-secundary{
+    justify-content: flex-start;
   }
-  .edit-post-one__field-secundary,
-  .edit-post-one__field-actions {
-    justify-content: center;
+  .edit-post-one__field-primary {
+    justify-content: flex-start;
   }
 }

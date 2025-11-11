@@ -135,6 +135,15 @@
   width: 100%;
   align-items: start;
 }
+.store-detail__actions-primary .btn--primary {
+  padding-top: 8px !important;
+  padding-bottom: 8px !important;
+  min-height: 36px !important; /* altura estándar Material Design */
+  line-height: 1 !important;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+}
 /* >>> SECCIÓN DE CONTEIDO EN LAS ACCIONES ADMINISTRATIVAS */
 .store-detail__section-title {
   grid-column: 1 / -1;
@@ -152,30 +161,28 @@
   height: auto;
   width: 100%;
 }
-.store-detail__actions-primary .btn{
-  font-family: var(--font-primary-regular);
-  font-weight: 400;
-  align-self: flex-end; 
-  padding: var(--button-padding-top) var(--button-padding-right) 
-           var(--button-padding-bottom) var(--button-padding-left);
+.store-detail__icon {
+  width: 2.4rem;
+  height: 2.4rem;
+  object-fit: contain;
+  display: inline-block;
+  margin-left: 0.4rem;
+}
+.store-detail__actions-secondary .btn-variant2--secondary {
+  padding-top: 6px !important;
+  padding-bottom: 6px !important;
+  min-height: 36px !important; /* altura estándar Material Design */
+  line-height: 1 !important;
   display: inline-flex;
   align-items: center;
-  gap: 0.5rem; 
-  text-decoration: none;
-}
-.store-detail__icon {
-  width: 2rem;
-  height: 2rem;
-  object-fit: contain;
-  display: inline-block;
-  margin-left: 0.25rem;
+  justify-content: center;
 }
 .store-detail__icon-secundary {
-  width: 1.6rem;
-  height: 1.6rem;
+  width: 1.8rem;
+  height: 1.8rem;
   object-fit: contain;
   display: inline-block;
-  margin-left: 0.25rem;
+  margin-left: 0.4rem;
 }
 /* >>> SECCIÓN DE RESPONSIVIDAD */
 @media (min-width: 1024px) {

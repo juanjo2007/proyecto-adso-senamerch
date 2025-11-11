@@ -36,7 +36,7 @@
   justify-content: flex-start;
 }
 .store-orders__filter {
-  padding: var(--padding-top) var(--padding-right);
+  padding: var(--padding-top) var(--padding-right) var(--padding-bottom) var(--padding-left);
   border: 1px solid var(--secundary-900);
   border-radius: 8px;
   background-color: var(--white);
@@ -108,28 +108,25 @@
   text-align: right;
   padding-right: var(--gap-sm);  
 }
-.store-orders__primary .btn {
-  font-family: var(--font-primary-regular);
-  font-weight: 400;
-  align-self: flex-end; 
-  padding: var(--button-padding-top) var(--button-padding-right) 
-           var(--button-padding-bottom) var(--button-padding-left);
+.store-orders__primary .btn--primary {
+  padding-top: 8px !important;
+  padding-bottom: 8px !important;
+  min-height: 36px !important; /* altura estándar Material Design */
   display: inline-flex;
   align-items: center;
-  gap: 0.5rem; 
-  text-decoration: none;
+  justify-content: center;
 }
 .store-orders__icon {
-  width: 2rem;
-  height: 2rem;
+  width: 2.4rem;
+  height: 2.4rem;
   object-fit: contain;
-  display: inline-block;
-  margin-left: 0.25rem;
+  margin-left: 0.4rem;
 }
 /* >>> SECCIÓN DE RESPONSIVIDAD */
 @media (max-width: 640px) {
   .store-content {
     padding-block: 16rem;
+    padding-inline: 24px;
   }
   .store-orders {
     width: 100%;

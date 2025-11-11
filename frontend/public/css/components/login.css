@@ -11,7 +11,7 @@
 .login {
   border: 1px solid var(--secundary-900);
   background-color: var(--white);
-  padding: var(--gap-md);
+  padding: var(--gap-lg);
   width: 500px;
   border-radius: 8px;
   font-family: var(--font-primary);
@@ -31,7 +31,7 @@
 .login__form {
   display: flex;
   flex-direction: column;
-  gap: var(--gap-md);
+  gap: var(--gap-lg);
   width: 100%;
 }
 .login__field {
@@ -63,12 +63,21 @@
   justify-content: center;
   margin-top: var(--gap-md);
 }
+.login__button .btn--primary {
+  padding-top: 8px !important;
+  padding-bottom: 8px !important;
+  min-height: 36px !important; /* altura estándar Material Design */
+  line-height: 1 !important;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+}
 .login__button .btn {
   font-family: var(--font-primary-regular);
   font-weight: 400;
   align-self: flex-end; 
   padding: var(--button-padding-top) var(--button-padding-right) 
-           var(--button-padding-bottom) var(--button-padding-left);
+  var(--button-padding-bottom) var(--button-padding-left);
   display: inline-flex;
   align-items: center;
   gap: 0.5rem; /* espacio entre texto e icono */
@@ -77,8 +86,8 @@
 
 /* Icono a la derecha */
 .login__icon {
-  width: 2rem;
-  height: 2rem;
+  width: 2.4rem;
+  height: 2.4rem;
   object-fit: contain;
   display: inline-block;
   margin-left: 0.25rem;
@@ -118,90 +127,102 @@
   text-decoration: underline;
 }
 @media (max-width: 1024px) {
+  .site-main {
+    padding-inline: 24px;
+    box-sizing: border-box;
+  }
   .login {
     width: 100%;
     min-width: 320px;
+    max-width: 100%;
     padding: var(--gap-md);
+    margin: 0 auto;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.15);
   }
 }
 @media (max-width: 768px) {
   .site-main {
     padding-block: 4rem;
+    padding-inline: 24px;
+    box-sizing: border-box;
   }
   .login {
-    width: 100%;
-    max-width: 360px;
-    min-width: 320px;
-    margin: 0 auto;
+    width: 90%;
+    
   }
 }
 @media (max-width: 640px) {
   .site-main {
     width: 100%;
-    padding-block: 16rem; 
+    padding-block: 16rem;
+    padding-inline: 24px; /* ✅ 24px de separación lateral en celular */
+    box-sizing: border-box;
   }
+
   .login {
     width: 100%;
-    min-width: 320px;  
-    max-width: 100%;   
-    padding: var(--gap-md);
+    min-width: 320px;
+    max-width: 100%;
+    padding: var(--gap-lg);
     margin: 0 auto;
     box-shadow: 0 2px 8px rgba(0, 0, 0, 0.15);
   }
+
   .login__title {
-    font-size: var(--fs-xs);
+    font-size: var(--fs-sm);
   }
 }
+
 /* Scripts Alerta */
 .alert {
-  position: fixed;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%) scale(0.8);
-  background-color: var(--white);
-  border: 2px solid var(--primary-900);
-  color: var(--primary-950);
-  padding: 1.8rem 2.5rem;
-  border-radius: 12px;
-  font-family: var(--font-primary);
-  font-size: var(--fs-sm);
-  text-align: center;
-  box-shadow: 0 8px 30px rgba(0, 0, 0, 0.25);
-  z-index: 9999;
-  opacity: 0;
-  transition: opacity 0.4s ease, transform 0.4s ease;
+position: fixed;
+top: 50%;
+left: 50%;
+transform: translate(-50%, -50%) scale(0.8);
+background-color: var(--white);
+border: 2px solid var(--primary-900);
+color: var(--primary-950);
+padding: 1.8rem 2.5rem;
+border-radius: 12px;
+font-family: var(--font-primary);
+font-size: var(--fs-sm);
+text-align: center;
+box-shadow: 0 8px 30px rgba(0, 0, 0, 0.25);
+z-index: 9999;
+opacity: 0;
+transition: opacity 0.4s ease, transform 0.4s ease;
 }
 
 .alert.show {
-  opacity: 1;
-  transform: translate(-50%, -50%) scale(1);
+opacity: 1;
+transform: translate(-50%, -50%) scale(1);
 }
 
 .alert__content {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  gap: 0.8rem;
+display: flex;
+align-items: center;
+justify-content: center;
+gap: 0.8rem;
 }
 
 .alert__icon {
-  font-size: 1.5rem;
+font-size: 1.5rem;
 }
 
 .alert__message {
-  margin: 0;
-  font-weight: 500;
-  color: var(--primary-950);
+margin: 0;
+font-weight: 500;
+color: var(--primary-950);
 }
 
 /* Colores según tipo */
 .alert--success {
-  border-color: var(--secundary-700);
-  background-color: #e8fff1;
+border-color: var(--secundary-700);
+background-color: #e8fff1;
 }
 
 .alert--error {
-  border-color: #c0392b;
-  background-color: #ffecec;
+border-color: #c0392b;
+background-color: #ffecec;
 }
 
