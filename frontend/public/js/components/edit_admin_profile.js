@@ -28,9 +28,13 @@ document.addEventListener("DOMContentLoaded", function () {
 
         // === Función para mostrar alerta ===
         function showAlert(message, type = "success") {
-          alertContainer.className = "alert"; // resetea clases
+          alertContainer.className = "alert"; // reset
           alertContainer.classList.add(type === "error" ? "alert--error" : "alert--success");
-          alertContainer.innerHTML = `<div class="alert__content"><p class="alert__message">${message}</p></div>`;
+          alertContainer.innerHTML = `
+            <div class="alert__content">
+              <p class="alert__message">${message}</p>
+            </div>
+          `;
           alertContainer.classList.add("alert--show");
 
           setTimeout(() => {
@@ -39,8 +43,8 @@ document.addEventListener("DOMContentLoaded", function () {
         }
 
         // === Botones ===
-        const saveButton = document.querySelector(".edit-profile-admin__save");
-        const cancelButton = document.querySelector(".edit-profile-admin__gestor");
+        const saveButton = direction.querySelector(".edit-profile-admin__submit");
+        const cancelButton = direction.querySelector(".edit-profile-admin__cancel");
 
         if (saveButton) {
           saveButton.addEventListener("click", (e) => {
@@ -62,6 +66,7 @@ document.addEventListener("DOMContentLoaded", function () {
           });
         }
 
+        // === Mostrar / ocultar contraseña ===
         attachLoginEvents();
       })
       .catch(error => console.error("Error al cargar el componente:", error));

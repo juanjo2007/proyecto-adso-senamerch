@@ -13,34 +13,6 @@
   border-radius: 12px;
   box-shadow: 0 2px 6px rgba(0,0,0,0.05); 
 }
-/* >>> SECCIÓN DE ACCIONES DEL CONTENEDOR */
-.product-description .btn--primary {
-  padding-top: 8px !important;
-  padding-bottom: 8px !important;
-  min-height: 36px !important; /* altura estándar Material Design */
-  line-height: 1 !important;
-  display: inline-flex;
-  align-items: center;
-  justify-content: center;
-}
-.product-description .btn {
-  font-family: var(--font-primary-regular);
-  font-weight: 400;
-  align-self: flex-start; 
-  padding: var(--button-padding-top) var(--button-padding-right) 
-           var(--button-padding-bottom) var(--button-padding-left);
-  display: inline-flex;
-  align-items: center;
-  gap: 0.5rem;
-  text-decoration: none;
-}
-.product-description__icon {
-  width: 2.4rem;
-  height: 2.4rem;
-  object-fit: contain;
-  display: inline-block;
-  margin-left: 0.25rem;
-}
 /* >>> SECCIÓN DE CONTENIDO DEL CONTENEDOR  */
 .product-description__gallery {
   flex: 1;
@@ -136,6 +108,11 @@
   color: var(--gray-700);
   margin-top: var(--gap-xs);
 }
+
+.product-description__button{
+  align-self: flex-start;
+  margin-top: 1.2rem;
+}
 .product-comments {
   margin-top: var(--gap-lg);
   padding-top: var(--gap-md);
@@ -203,8 +180,7 @@
   border-color: var(--secundary-500);
 }
 .product-comments__button {
-  align-self: flex-end;
-  font-size: var(--fs-xs);
+  align-self: flex-start;
   margin-top: 1.2rem;
 }
 /* >>> SECCIÓN DE RESPONSIVIDAD */

@@ -10,6 +10,15 @@ document.addEventListener('DOMContentLoaded', function () {
       })
       .then(data => {
         usersContainer.innerHTML = data;
+
+        // ================== Evento para botones "Gestionar" ==================
+        const manageButtons = usersContainer.querySelectorAll('.users__gestor');
+
+        manageButtons.forEach(button => {
+          button.addEventListener('click', () => {
+            window.location.href = "view_managed_user.html";
+          });
+        });
       })
       .catch(error => console.error("Error cargando el componente Users:", error));
   } else {

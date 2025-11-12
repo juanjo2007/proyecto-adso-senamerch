@@ -1,4 +1,4 @@
-// ================== STORES COMPONENT ==================
+// ================== stores COMPONENT ================== 
 document.addEventListener('DOMContentLoaded', function () {
   const storesContainer = document.querySelector('.stores-container');
 
@@ -10,6 +10,15 @@ document.addEventListener('DOMContentLoaded', function () {
       })
       .then(data => {
         storesContainer.innerHTML = data;
+
+        // ================== Evento para botones "Gestionar" ==================
+        const manageButtons = storesContainer.querySelectorAll('.stores-admin__gestor');
+
+        manageButtons.forEach(button => {
+          button.addEventListener('click', () => {
+            window.location.href = "view_managed_store.html";
+          });
+        });
       })
       .catch(error => console.error("Error cargando el componente Stores:", error));
   } else {

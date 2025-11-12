@@ -127,71 +127,41 @@
 /* >>> SECCIÓN DE ACCIONES ADMINISTRATIVAS */
 .product-detail__section--actions {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  grid-template-columns: 1fr;
   gap: var(--gap-md);
   padding-block: var(--gap-md);
   border-top: 1px solid var(--secundary-900);
   width: 100%;
-  align-items: start; 
 }
-.product-detail__actions-primary .btn--primary {
-  padding-top: 8px !important;
-  padding-bottom: 8px !important;
-  min-height: 36px !important; /* altura estándar Material Design */
-  line-height: 1 !important;
-  display: inline-flex;
-  align-items: center;
-  justify-content: center;
-}
-/* >>> SECCIÓN DE CONTENIDO EN LAS ACCIONES ADMINISTRATIVAS */
+/* El título ocupa toda la fila */
 .product-detail__section-title {
   grid-column: 1 / -1;
   text-align: center;
   font-size: var(--fs-xs);
-  margin-bottom: var(--gap-sm);
-  color: var(--gray-900);
+  color: var(--black);
+  font-family: var(--font-primary-semibold);
 }
 .product-detail__actions-secondary,
 .product-detail__actions-primary {
   display: flex;
   justify-content: center;
   align-items: center;
-  align-self: start; 
-  height: auto;
-  width: 100%;
 }
-.product-detail__icon {
-  width: 2.4rem;
-  height: 2.4rem;
-  object-fit: contain;
-  display: inline-block;
-  margin-left: 0.4rem;
-}
-.product-detail__actions-secondary .btn-variant2--secondary {
-  padding-top: 6px !important;
-  padding-bottom: 6px !important;
-  min-height: 36px !important; /* altura estándar Material Design */
-  line-height: 1 !important;
-  display: inline-flex;
-  align-items: center;
-  justify-content: center;
-}
-.product-detail__icon-secundary {
-  width: 1.8rem;
-  height: 1.8rem;
-  object-fit: contain;
-  display: inline-block;
-  margin-left: 0.4rem;
-}
-/* >>> SECCIÓN DE RESPONSIVIDAD */
 @media (min-width: 1024px) {
   .product-detail__section--actions {
-    grid-template-columns: repeat(2, 1fr);
-    justify-items: center;
+    grid-template-columns: 1fr 1fr; 
+    align-items: start;
+  }
+  .product-detail__section-title {
+    grid-column: 1 / 3;
+    text-align: center;
+    margin-bottom: var(--gap-sm);
+  }
+  .product-detail__actions-secondary {
+    justify-content: flex-start;
+  }
+  .product-detail__actions-primary {
+    justify-content: flex-end;
   }
 }
-@media (min-width: 640px) {
-  .product-detail {
-    justify-content: center;
-  }
-}
+

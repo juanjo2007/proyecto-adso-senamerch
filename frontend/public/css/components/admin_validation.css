@@ -12,19 +12,18 @@
 }
 
 .admin-panel__content {
+  border: 1px solid var(--secundary-900);
   background-color: var(--white);
-  border-radius: 16px;
-  box-shadow: 0 6px 24px rgba(0, 0, 0, 0.08);
-  padding: var(--gap-xl);
-  width: 100%;
-  max-width: 420px;
-  text-align: center;
+  padding: var(--gap-lg);
+  width: 500px;
+  border-radius: 8px;
+  font-family: var(--font-primary);
   display: flex;
   flex-direction: column;
   align-items: center;
-  gap: var(--gap-md);
-  transition: all 0.3s ease;
-  border: 1px solid var(--secundary-700);
+  justify-content: center;
+  margin: auto; 
+  box-sizing: border-box;
 }
 
 .admin-panel__title {
@@ -35,28 +34,45 @@
   text-transform: uppercase;
   letter-spacing: 0.5px;
 }
-
+.admin-panel__form {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center; 
+  gap: var(--gap-lg) !important;
+  width: 100%;
+}
+.admin-panel__field {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: var(--gap-xxxs);
+  width: 100%;
+  max-width: 380px; 
+}
 .admin-panel__text {
   font-size: var(--fs-xs);
   color: var(--gray-700);
   margin-bottom: var(--gap-md);
   line-height: 1.5;
 }
-
-.admin-panel__form {
-  display: flex;
-  flex-direction: column;
-  gap: var(--gap-md);
-  width: 100%;
+.admin-panel__label {
+  font-size: var(--fs-xxxs);
+  color: var(--black);
+  font-family: var(--font-secondary-medium);
 }
-
 .admin-panel__input {
   padding: var(--padding-top) var(--padding-right) var(--padding-bottom) var(--padding-left);
   border: 1px solid var(--secundary-900);
-  border-radius: 6px;
+  border-radius: 8px;
   font-size: var(--fs-xs);
   outline: none;
   transition: border 0.3s, box-shadow 0.3s;
+  width: 100%;
+  max-width: 400px;
+  box-sizing: border-box;
+  color: var(--gray-600);
+  background-color: var(--white);
 }
 
 .admin-panel__input:focus {
@@ -129,14 +145,20 @@
 
 /* 640px */
 @media (max-width: 640px) {
+  .admin-panel {
+    width: 100%;
+    box-sizing: border-box;
+  }
+
   .admin-panel__content {
+    width: 100%;
+    min-width: 320px;
     max-width: 100%;
-    padding: var(--gap-md);
-    margin-block: 12rem;
+    padding: var(--gap-lg);
+    margin: 0 auto;
   }
 
   .admin-panel__title {
     font-size: var(--fs-sm);
   }
-
 }

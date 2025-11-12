@@ -1,28 +1,30 @@
-// ==============================
-//   Componente Documento de Venta
-// ==============================
+// ================== SALES COMPONENT ================== 
+document.addEventListener('DOMContentLoaded', function () {
+  const salesContainer = document.querySelector('.sales-doc-container');
 
-document.addEventListener("DOMContentLoaded", () => {
-  const salesDocContainer = document.querySelector(".sales-doc-container");
-
-  if (salesDocContainer) {
+  if (salesContainer) {
     fetch("/frontend/public/views/components/sales_doc.html")
       .then(response => {
         if (!response.ok) throw new Error("Error al cargar sales_doc.html");
         return response.text();
       })
       .then(data => {
-        salesDocContainer.innerHTML = data;
+        salesContainer.innerHTML = data;
 
-        // ✅ Inicializar funcionalidades internas
-        initSalesDocFeatures();
+        // ================== Evento para botones "Gestionar" ==================
+        const manageButtons = salesContainer.querySelectorAll('.sales-admin__gestor');
+
+        manageButtons.forEach(button => {
+          button.addEventListener('click', () => {
+            window.location.href = "view_managed_sales.html";
+          });
+        });
       })
-      .catch(error => console.error("Error cargando el componente Sales Doc:", error));
+      .catch(error => console.error("Error cargando el componente sales:", error));
   } else {
     console.warn("No se encontró '.sales-doc-container' en el HTML.");
   }
 });
-
 // ==============================
 //   Funciones internas
 // ==============================
