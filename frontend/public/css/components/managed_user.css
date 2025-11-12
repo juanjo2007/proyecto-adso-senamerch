@@ -1,11 +1,11 @@
-/* >>> SECCIÓN DE CONTENEDOR DE USUARIOS */
+/* >>> SECCIÓN DE CONTENEDOR DE PRODUCTOS*/
 .user-detail {
   display: flex;
   flex-direction: column;
   align-items: flex-start;
   justify-content: center;
-  margin-block: 2rem;            
-  padding-block: 2rem;           
+  margin-block: 2rem;
+  padding-block: 2rem;
   padding-inline: var(--gap-lg);
   margin-inline: auto;
   width: min(1300px, 95%);
@@ -17,7 +17,7 @@
   color: var(--gray-950);
   gap: var(--gap-lg);
 }
-/* >>> SECCIÓN DE CONTENIDO DEL CONTENEDOR DE USUARIOS */
+/* >>> SECCIÓN DE CONTENIDO DEL CONTENEDOR DE PRODUCTOS*/
 .user-detail__header {
   margin-bottom: var(--gap-xs);
 }
@@ -25,31 +25,20 @@
   font-size: var(--fs-sm);
   color: var(--black);
   margin-bottom: var(--gap-xs);
+  font-family: var(--font-primary-semibold);
 }
 .user-detail__subtitle {
   font-size: var(--fs-xs);
   color: var(--gray-700);
   max-width: 70ch;
 }
-/* >>> SECCIÓN DE FILAS Y COLUMNAS DEL CONTENEDOR DE USUARIOS */
+/* >>> SECCIÓN FILAS Y COLUMNAS DEL CONTENEDOR*/
 .user-detail__grid {
   display: grid;
   grid-template-columns: 1fr;
   gap: var(--gap-lg);
   justify-content: center;
-}
-@media (min-width: 1200px) {
-  .user-detail__grid {
-    grid-template-columns: repeat(2, 600px);
-    justify-content: center;
-  }
-}
-.user-detail__grid {
-  display: grid;
-  grid-template-columns: 1fr;
-  gap: var(--gap-lg);
-  justify-content: center;
-  justify-items: center; 
+  justify-items: center;
 }
 @media (min-width: 640px) {
   .user-detail__grid {
@@ -65,7 +54,7 @@
     align-items: start;
   }
 }
-/* >>> SECCIÓN DE TARJETAS */
+/* >>> SECCIÓN DE LA CARD*/
 .user-detail__card {
   background-color: var(--white);
   border-radius: 1.2rem;
@@ -80,7 +69,7 @@
 .user-detail__card:hover {
   transform: translateY(-4px);
 }
-/* >>> SECCIÓN DE CONTENIDO DE TARJETAS */
+/* >>> SECCIÓN CONTENIDO DE LA CARD*/
 .user-detail__card-title {
   font-size: var(--fs-xs);
   font-family: var(--font-primary-semibold);
@@ -89,6 +78,7 @@
   padding-bottom: var(--gap-xs);
   margin-bottom: var(--gap-sm);
 }
+/* >>> SECCIÓN COLUMNAS Y FILAS DE LA CARD*/
 .user-detail__card-grid {
   display: grid;
   grid-template-columns: 1fr;
@@ -97,9 +87,10 @@
 @media (min-width: 768px) {
   .user-detail__card-grid {
     grid-template-columns: repeat(2, 1fr);
+    
   }
 }
-/* >>> SECCIÓN DE CONTENIDO DE LAS TARJETAS */
+/* >>> SECCIÓN CONTENIDO DE LA CARD*/
 .user-detail__info {
   display: flex;
   flex-direction: column;
@@ -119,6 +110,10 @@
   color: var(--gray-700);
   font-family: var(--font-secondary);
 }
+.user-detail__text--status {
+  font-weight: 600;
+  color: var(--secundary-700);
+}
 .user-detail__media {
   display: flex;
   flex-direction: column;
@@ -126,15 +121,12 @@
   height: fit-content;
 }
 .user-detail__image {
-  width: 120px;
-  height: 120px;
-  border-radius: 50%;
+  width: 150px;
+  height: 150px;
+  border-radius: 0.8rem;
   object-fit: cover;
   border: 2px solid var(--gray-300);
   margin-top: var(--gap-xs);
-}
-.user-detail__section-title{
-  font-size: var(--fs-xs);
 }
 /* >>> SECCIÓN DE ACCIONES ADMINISTRATIVAS */
 .user-detail__section--actions {
@@ -146,7 +138,16 @@
   width: 100%;
   align-items: start; 
 }
-/* >>> SECCIÓN DE CONTENIDO DE ACCIONES ADMINISTRATIVAS  */
+.user-detail__actions-primary .btn--primary {
+  padding-top: 8px !important;
+  padding-bottom: 8px !important;
+  min-height: 36px !important; /* altura estándar Material Design */
+  line-height: 1 !important;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+}
+/* >>> SECCIÓN DE CONTENIDO EN LAS ACCIONES ADMINISTRATIVAS */
 .user-detail__section-title {
   grid-column: 1 / -1;
   text-align: center;
@@ -163,20 +164,11 @@
   height: auto;
   width: 100%;
 }
-/* 🔧 Corrección de altura para el botón primario en user-detail */
-.user-detail__actions-primary .btn--primary {
-  padding-top: 8px !important;
-  padding-bottom: 8px !important;
-  min-height: 36px !important; /* altura estándar Material Design */
-  line-height: 1 !important;
-  display: inline-flex;
-  align-items: center;
-  justify-content: center;
-}
 .user-detail__icon {
-  width: 2.4rem !important;
-  height: 2.4rem !important;
+  width: 2.4rem;
+  height: 2.4rem;
   object-fit: contain;
+  display: inline-block;
   margin-left: 0.4rem;
 }
 .user-detail__actions-secondary .btn-variant2--secondary {
@@ -195,11 +187,15 @@
   display: inline-block;
   margin-left: 0.4rem;
 }
-
-/* >>> SECCIÓN DE RESPONSIVIDAD  */
+/* >>> SECCIÓN DE RESPONSIVIDAD */
 @media (min-width: 1024px) {
   .user-detail__section--actions {
     grid-template-columns: repeat(2, 1fr);
     justify-items: center;
+  }
+}
+@media (min-width: 640px) {
+  .user-detail {
+    justify-content: center;
   }
 }

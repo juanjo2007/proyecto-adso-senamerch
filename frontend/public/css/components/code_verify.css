@@ -129,7 +129,6 @@
   .verify {
     padding-block: 24rem; 
     width: 100%;
-    padding-block: 16rem;
     padding-inline: 24px; /* ✅ 24px de separación lateral en celular */
     box-sizing: border-box;
   }
