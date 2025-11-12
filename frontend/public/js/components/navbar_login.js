@@ -1,5 +1,5 @@
 document.addEventListener("DOMContentLoaded", function(){
-    const navbarElement = document.querySelector(".navbar_login");
+    const navbarElement = document.querySelector(".navbar-login");
 
     if(navbarElement){
         fetch("/frontend/public/views/components/navbar_login.html")

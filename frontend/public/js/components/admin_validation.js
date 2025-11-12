@@ -38,7 +38,7 @@ document.addEventListener("DOMContentLoaded", function () {
             message.classList.add("admin-panel__message--error");
 
             setTimeout(() => {
-              window.location.href = "/frontend/public/views/pages/index.html";
+              window.location.href = "/frontend/public/views/index.html";
             }, 2000);
           }
         });

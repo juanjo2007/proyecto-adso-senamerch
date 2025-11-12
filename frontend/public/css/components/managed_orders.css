@@ -1,4 +1,4 @@
-/* >>> SECCIÓN DE CONTENEDOR DE PEDIDOS */
+/* >>> SECCIÓN DE CONTENEDOR DE PRODUCTOS*/
 .order-detail {
   display: flex;
   flex-direction: column;
@@ -17,7 +17,7 @@
   color: var(--gray-950);
   gap: var(--gap-lg);
 }
-/* >>> SECCIÓN DE CONTENIDO EN EL CONTENEDOR DE PEDIDOS */
+/* >>> SECCIÓN DE CONTENIDO DEL CONTENEDOR DE PRODUCTOS*/
 .order-detail__header {
   margin-bottom: var(--gap-xs);
 }
@@ -32,7 +32,7 @@
   color: var(--gray-700);
   max-width: 70ch;
 }
-/* >>> SECCIÓN DE FILAS Y COLUMNAS EN CONTENEDOR DE PEDIDOS */
+/* >>> SECCIÓN FILAS Y COLUMNAS DEL CONTENEDOR*/
 .order-detail__grid {
   display: grid;
   grid-template-columns: 1fr;
@@ -51,7 +51,7 @@
     align-items: start;
   }
 }
-/* >>> SECCIÓN DE TARJETAS  */
+/* >>> SECCIÓN DE LA CARD*/
 .order-detail__card {
   background-color: var(--white);
   border-radius: 1.2rem;
@@ -66,7 +66,7 @@
 .order-detail__card:hover {
   transform: translateY(-4px);
 }
-/* >>> SECCIÓN DE CONTENIDO DE LA TARJETA */
+/* >>> SECCIÓN CONTENIDO DE LA CARD*/
 .order-detail__card-title {
   font-size: var(--fs-xs);
   font-family: var(--font-primary-semibold);
@@ -75,7 +75,7 @@
   padding-bottom: var(--gap-xs);
   margin-bottom: var(--gap-sm);
 }
-/* >>> SECCIÓN DE FILAS Y COLUMNAS DE LAS TARJETAS */
+/* >>> SECCIÓN COLUMNAS Y FILAS DE LA CARD*/
 .order-detail__card-grid {
   display: grid;
   grid-template-columns: 1fr;
@@ -86,7 +86,7 @@
     grid-template-columns: repeat(2, 1fr);
   }
 }
-/* >>> SECCIÓN DE CONTEIDO DE LAS TARJETAS */
+/* >>> SECCIÓN CONTENIDO DE LA CARD*/
 .order-detail__info {
   display: flex;
   flex-direction: column;
@@ -132,18 +132,10 @@
   padding-block: var(--gap-md);
   border-top: 1px solid var(--secundary-900);
   width: 100%;
-  align-items: start; 
+  align-items: start;
 }
-.order-detail__actions-primary .btn--primary {
-  padding-top: 8px !important;
-  padding-bottom: 8px !important;
-  min-height: 36px !important; /* altura estándar Material Design */
-  line-height: 1 !important;
-  display: inline-flex;
-  align-items: center;
-  justify-content: center;
-}
-/* >>> SECCIÓN DE CONTENIDO EN ACCIONES ADMINISTRATIVAS */
+
+/* Título de la sección */
 .order-detail__section-title {
   grid-column: 1 / -1;
   text-align: center;
@@ -151,40 +143,58 @@
   margin-bottom: var(--gap-sm);
   color: var(--gray-900);
 }
+
+/* Contenedores de botones */
 .order-detail__actions-secondary,
 .order-detail__actions-primary {
   display: flex;
   justify-content: center;
   align-items: center;
-  align-self: start; 
+  align-self: start;
   height: auto;
   width: 100%;
 }
-.order-detail__actions-primary .btn{
-  font-family: var(--font-primary-regular);
-  font-weight: 400;
-  align-self: flex-end; 
-  padding: var(--button-padding-top) var(--button-padding-right) 
-           var(--button-padding-bottom) var(--button-padding-left);
+
+/* Botón primario */
+.order-detail__actions-primary .btn--primary {
+  padding-top: 8px !important;
+  padding-bottom: 8px !important;
+  min-height: 36px !important;
+  line-height: 1 !important;
   display: inline-flex;
   align-items: center;
-  gap: 0.5rem; 
-  text-decoration: none;
+  justify-content: center;
 }
+
+/* Icono del botón primario */
 .order-detail__icon {
   width: 2.4rem;
   height: 2.4rem;
   object-fit: contain;
   display: inline-block;
-  margin-left: 0.25rem;
+  margin-left: 0.4rem;
 }
+
+/* Botón secundario */
+.order-detail__actions-secondary .btn-variant2--secondary {
+  padding-top: 6px !important;
+  padding-bottom: 6px !important;
+  min-height: 36px !important;
+  line-height: 1 !important;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+}
+
+/* Icono del botón secundario */
 .order-detail__icon-secundary {
-  width: 1.6rem;
-  height: 1.6rem;
+  width: 1.8rem;
+  height: 1.8rem;
   object-fit: contain;
   display: inline-block;
-  margin-left: 0.25rem;
+  margin-left: 0.4rem;
 }
+
 /* >>> SECCIÓN DE RESPONSIVIDAD */
 @media (min-width: 1024px) {
   .order-detail__section--actions {
@@ -192,6 +202,7 @@
     justify-items: center;
   }
 }
+
 @media (min-width: 640px) {
   .order-detail {
     justify-content: center;
