@@ -6,64 +6,65 @@ document.addEventListener("DOMContentLoaded", function () {
       .then((response) => response.text())
       .then((data) => {
         container.innerHTML = data;
-        attachExportEvent(); // 👈 Ejecuta la función del PDF después de cargar
-      })
-      .catch((error) => console.error("Error cargando contacto:", error));
-  }
 
-  // >>> Función para exportar PDF
-  function attachExportEvent() {
-    const exportBtn = document.querySelector(".sale-detail__gestor");
+        // === Botón: Exportar información en PDF ===
+        const exportBtn = container.querySelector(".sale-detail__export");
+        if (exportBtn) {
+          exportBtn.addEventListener("click", function (e) {
+            e.preventDefault();
 
-    if (exportBtn) {
-      exportBtn.addEventListener("click", async (event) => {
-        event.preventDefault();
+            const element = document.querySelector(".sale-detail");
 
-        // Cargar librerías solo una vez
-        if (!window.html2canvas || !window.jspdf) {
-          await loadScripts();
+            // Cargar html2pdf dinámicamente
+            const script = document.createElement("script");
+            script.src = "https://cdnjs.cloudflare.com/ajax/libs/html2pdf.js/0.10.1/html2pdf.bundle.min.js";
+            script.onload = function () {
+              html2pdf()
+                .set({
+                  margin: 10,
+                  filename: "detalle_venta.pdf",
+                  image: { type: "jpeg", quality: 0.98 },
+                  html2canvas: { scale: 2 },
+                  jsPDF: { unit: "mm", format: "a4", orientation: "portrait" }
+                })
+                .from(element)
+                .save();
+            };
+            document.body.appendChild(script);
+          });
         }
 
-        const { jsPDF } = window.jspdf;
-        const content = document.querySelector(".sale-detail");
+        // === Botón: Cancelar pedido ===
+        const cancelBtn = container.querySelector(".sale-detail__suspend");
+        if (cancelBtn) {
+          cancelBtn.addEventListener("click", function (e) {
+            e.preventDefault();
 
-        html2canvas(content, { scale: 2 }).then((canvas) => {
-          const imgData = canvas.toDataURL("image/png");
-          const pdf = new jsPDF("p", "mm", "a4");
-          const imgWidth = 190;
-          const pageHeight = 295;
-          const imgHeight = (canvas.height * imgWidth) / canvas.width;
+            // Crear o reutilizar alerta global
+            let alertContainer = document.querySelector(".alert");
+            if (!alertContainer) {
+              alertContainer = document.createElement("div");
+              alertContainer.classList.add("alert");
+              document.body.appendChild(alertContainer);
+            }
 
-          let heightLeft = imgHeight;
-          let position = 10;
+            // Mostrar alerta
+            alertContainer.className = "alert alert--error alert--show";
+            alertContainer.innerHTML = `
+              <div class="alert__content">
+                <p class="alert__message">Usuario suspendido correctamente</p>
+              </div>
+            `;
 
-          pdf.addImage(imgData, "PNG", 10, position, imgWidth, imgHeight);
-          heightLeft -= pageHeight;
-
-          while (heightLeft >= 0) {
-            position = heightLeft - imgHeight;
-            pdf.addPage();
-            pdf.addImage(imgData, "PNG", 10, position, imgWidth, imgHeight);
-            heightLeft -= pageHeight;
-          }
-
-          pdf.save("detalle_venta.pdf");
-        });
-      });
-    }
-  }
-
-  // >>> Cargar scripts externos (solo una vez)
-  async function loadScripts() {
-    const html2canvasScript = document.createElement("script");
-    html2canvasScript.src = "https://cdnjs.cloudflare.com/ajax/libs/html2canvas/1.4.1/html2canvas.min.js";
-
-    const jsPDFScript = document.createElement("script");
-    jsPDFScript.src = "https://cdnjs.cloudflare.com/ajax/libs/jspdf/2.5.1/jspdf.umd.min.js";
-
-    document.body.appendChild(html2canvasScript);
-    await new Promise((res) => (html2canvasScript.onload = res));
-    document.body.appendChild(jsPDFScript);
-    await new Promise((res) => (jsPDFScript.onload = res));
+            setTimeout(() => {
+              alertContainer.classList.remove("alert--show");
+              window.location.href = "managed_products_view.html";
+            }, 2000);
+          });
+        }
+      })
+      .catch((error) => console.error("Error cargando componente de pedidos:", error));
+  } else {
+    console.warn("No se encontró '.managed-sales-container' en el HTML.");
   }
 });

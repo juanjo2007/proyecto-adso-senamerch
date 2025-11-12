@@ -11,9 +11,7 @@
   border: 1px solid var(--secundary-900);
   background-color: var(--white);
   border-radius: var(--gap-xs);
-  width: 100%;
-  max-width: 500px;
-  min-width: 320px;
+  width: 500px;
   padding: var(--gap-lg);
   display: flex;
   flex-direction: column;
@@ -40,7 +38,7 @@
   display: flex;
   flex-direction: column;
   align-items: center;
-  gap: var(--gap-md);
+  gap: var(--gap-lg);
 }
 .verify__fields {
   display: flex;
@@ -53,7 +51,7 @@
   text-align: center;
   font-size: var(--fs-md);
   border: 1px solid var(--secundary-900);
-  border-radius: var(--gap-xxs);
+  border-radius: 8px;
   color: var(--gray-900);
   font-family: var(--font-primary-semibold);
   transition: border-color 0.3s ease, box-shadow 0.3s ease;
@@ -63,30 +61,15 @@
   box-shadow: 0 0 0 3px var(--secundary-100);
   outline: none;
 }
-.verify__button {
-  display: flex;
-  justify-content: center;
-  margin-top: var(--gap-md);
+.verify__button{
+  align-self: center;
 }
-.verify__button .btn--primary {
-  padding-top: 8px !important;
-  padding-bottom: 8px !important;
-  min-height: 36px !important; /* altura estándar Material Design */
-  line-height: 1 !important;
-  display: inline-flex;
-  align-items: center;
-  justify-content: center;
-}
-.verify__icon {
-  width: 2.4rem;
-  height: 2.4rem;
-  object-fit: contain;
-  display: inline-block;
-  margin-left: 0.4rem;
+.verify__submit{
+  margin-left: var(--gap-xs);
 }
 .verify__link {
   display: inline-block;
-  margin-top: var(--gap-md);
+  margin-top: var(--gap-lg);
   color: var(--secundary-700);
   font-size: var(--fs-xxs);
   text-decoration: none;
@@ -129,7 +112,7 @@
   .verify {
     padding-block: 24rem; 
     width: 100%;
-    padding-inline: 24px; /* ✅ 24px de separación lateral en celular */
+    padding-inline: 24px; 
     box-sizing: border-box;
   }
   .verify__container {
@@ -145,6 +128,11 @@
     height: 40px;
     font-size: var(--fs-xs);
   }
+  .verify__fields {
+    display: flex;
+    justify-content: center;
+    gap: var(--gap-sm);
+}
   .verify__title {
     font-size: var(--fs-sm);
   }

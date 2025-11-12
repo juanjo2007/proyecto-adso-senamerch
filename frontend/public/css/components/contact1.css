@@ -85,29 +85,9 @@
   resize: vertical;
 }
 /* >>> SECCIÓN DE ACCIONES DEL CONTENEDOR DE CONTACTO */
-.contact__form .btn--primary {
-  padding-top: 8px !important;
-  padding-bottom: 8px !important;
-  min-height: 36px !important; /* altura estándar Material Design */
-  line-height: 1 !important;
-  display: inline-flex;
-  align-items: center;
+.contact__actions-primary{
+  display: flex;
   justify-content: center;
-}
-.contact__form  .btn {
-  font-family: var(--font-primary-regular);
-  font-weight: 400;
-}
-.contact__form  .btn {
-  align-self: center; 
-  gap: 0.5rem;
-}
-.contact__icon {
-  width: 2.4rem;
-  height: 2.4rem;
-  object-fit: contain;
-  display: inline-block;
-  margin-left: 0.25rem;
 }
 @media (max-width: 640px) {
   .contact__container {

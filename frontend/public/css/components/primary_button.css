@@ -1,52 +1,39 @@
-/* ====== BOTÓN BASE ====== */
 .btn {
   display: inline-flex;
   align-items: center;
   justify-content: center;
-  font-size: var(--fs-xs);
+  font-family: var(--font-primary);
+  font-size: 16px;     
   line-height: 1;
-  padding: var(--button-padding-top) var(--button-padding-right)
-           var(--button-padding-bottom) var(--button-padding-left);
-  font-family: var(--font-primary-regular);
-  font-weight: 400;
+  height: 40px;
+  padding: 12px 16px;     
+  border-radius: 8px;
+  box-sizing: border-box;
   border: none;
-  border-radius: 0.6rem;
   cursor: pointer;
-  transition: background 0.3s ease, transform 0.2s ease;
-  box-shadow: 2px 2px 6px var(--gray-900);
+  transition: background-color 0.25s ease, transform 0.1s ease;
   white-space: nowrap;
 }
-
-/* ====== BOTÓN PRIMARIO ====== */
 .btn--primary {
-  background: var(--secundary-900);
+  background-color: var(--secundary-900);
   color: var(--white);
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.3);
 }
-
 .btn--primary:hover {
-  background: var(--secundary-600);
-  transform: translateY(-2px);
+  background-color: var(--secundary-700);
 }
-
 .btn--primary:active {
-  background: var(--secundary-900);
-  transform: translateY(0);
+  background-color: var(--secundary-950);
+  transform: scale(0.98);
 }
-
-/* ====== BOTÓN SECUNDARIO ====== */
-.btn--secondary {
-  background: transparent;
-  color: var(--secundary-900);
-  border: 1px solid var(--secundary-900);
+.btn--primary:disabled {
+  background-color: var(--gray-300);
+  color: var(--gray-600);
+  cursor: not-allowed;
+  box-shadow: none;
 }
-
-/* ====== TAMAÑOS (MODIFICADORES) ====== */
-.btn--sm {
-  padding-top: 8px;
-  padding-bottom: 8px;
-}
-
-.btn--lg {
-  padding-top: 16px;
-  padding-bottom: 16px;
+.btn__icon {
+  width: 20px;
+  height: 20px;
+  margin-left: 8px;
 }

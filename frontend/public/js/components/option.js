@@ -18,6 +18,7 @@ document.addEventListener('DOMContentLoaded', function () {
         const select = section.querySelector('.product-purchase__select');
         const unitLabel = section.querySelector('.product-purchase__unit');
         const quantityInput = section.querySelector('.product-purchase__input');
+        const addToCartButton = section.querySelector('.product-purchase__button'); // 🔥 Botón agregar al carrito
 
         const solidOptions = [
           { value: 'kg', text: 'Kilogramo (kg)', unit: 'kilogramos' },
@@ -71,6 +72,14 @@ document.addEventListener('DOMContentLoaded', function () {
           const selected = e.target.options[e.target.selectedIndex];
           unitLabel.textContent = selected.dataset.unit;
         });
+
+        // === 🔥 Evento: botón “Agregar al carrito” va a login ===
+        if (addToCartButton) {
+          addToCartButton.addEventListener('click', () => {
+            window.location.href = "viwe_car.html";
+          });
+        }
+
       })
       .catch(error => console.error("Error cargando el componente Option:", error));
   } else {

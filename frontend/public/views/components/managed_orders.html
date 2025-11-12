@@ -147,17 +147,20 @@
   <section class="order-detail__section order-detail__section--actions">
     <h2 class="order-detail__section-title">Acciones administrativas</h2>
 
-
+    <!-- ✅ Botón secundario (exportar) -->
     <div class="order-detail__actions-secondary">
-      <a href="#" class="btn btn-variant2--secondary order-detail__gestor">Exportar información en PDF
-        <img src="/frontend/public/assets/icons/export.svg" alt="Icono Exportar" class="order-detail__icon-secundary">
-      </a>
+      <button class="btn-secundary btn-secundary-style order-detail__export">
+        Exportar información en PDF
+        <img src="/frontend/public/assets/icons/export.svg" alt="Icono exportar PDF" class="btn-secundary__icon">
+      </button>
     </div>
 
+    <!-- ✅ Botón primario (suspender usuario) -->
     <div class="order-detail__actions-primary">
-      <a href="#" class="btn btn--primary order-detail__suspend">Suspender producto
-        <img src="/frontend/public/assets/icons/off.svg" alt="Icono Suspender" class="order-detail__icon">
-      </a>
+      <button class="btn btn--primary order-detail__suspend">
+        Cancelar pedido
+        <img src="/frontend/public/assets/icons/cancel.svg" alt="Icono cancelar pedido" class="btn__icon">
+      </button>
     </div>
   </section>
 </main>

@@ -17,7 +17,7 @@
 }
 .users__table {
   width: 100%;
-  font-size: var(--fs-xxs);
+  font-size: var(--fs-xs);
   background-color: var(--white);
   border: 1px solid var(--secundary-900);
   box-shadow: 0 2px 6px var(--gray-200);
@@ -26,8 +26,8 @@
 }
 .users__table-header {
   background: var(--gray-500);
-  font-weight: bold;
-  padding: var(--gap-xs) var(--gap-xs);
+  font-weight: 600;
+  padding: var(--gap-xs);
   border: 1px solid var(--secundary-900);
   color: var(--gray-950);
   text-align: center;
@@ -38,30 +38,10 @@
   padding: var(--gap-xxs);
   text-align: center;
 }
-.users__table-row:nth-child(even) {
-  background-color: var(--gray-200);
-}
 .users__table-secondary {
-  font-size: var(--fs-xxs);
   display: flex;
   justify-content: center;
   align-items: center;
-}
-.users__table-secondary .btn-variant2--secondary {
-  padding-top: 6px !important;
-  padding-bottom: 6px !important;
-  min-height: 36px !important; /* altura estándar Material Design */
-  line-height: 1 !important;
-  display: inline-flex;
-  align-items: center;
-  justify-content: center;
-}
-.users__icon-secundary {
-  width: 1.8rem;
-  height: 1.8rem;
-  object-fit: contain;
-  display: inline-block;
-  margin-left: 0.4rem;
 }
 @media (max-width: 768px) {
   .users {
@@ -109,7 +89,7 @@
     color: var(--primary-950);
     text-transform: capitalize;
   }
-  .users__table-secondary .btn-variant2--secondary{
-    justify-content: end;
+  .users__table-secondary {
+    justify-content: flex-end;
   }
 }

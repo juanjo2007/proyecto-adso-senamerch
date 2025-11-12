@@ -75,26 +75,6 @@
   justify-content: flex-start;
   align-items: center;
 }
-
-.shopping-cart__actions-secundary .btn-variant2--secondary {
-  display: inline-flex;
-  align-items: center;
-  justify-content: center;
-  padding-top: 6px !important;
-  padding-bottom: 6px !important;
-  line-height: 1.1;
-  min-height: 36px !important;
-  font-size: var(--fs-xs);
-}
-
-.shopping-cart__icon-secundary {
-  width: 1.8rem;
-  height: 1.8rem;
-  object-fit: contain;
-  margin-left: 0.4rem;
-}
-
-
 .shopping-cart__delete-product {
   background: none;
   border: none;

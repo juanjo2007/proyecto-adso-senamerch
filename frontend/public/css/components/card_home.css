@@ -5,12 +5,11 @@
   width: 100%;
   box-sizing: border-box;
   margin: var(--gap-md) auto;
-  padding-inline: 24px; /* ✅ 24px de espacio a los lados en móvil */
+  padding-inline: 24px; 
   justify-content: center;
   justify-items: center;
-  grid-template-columns: 1fr; /* ✅ una columna por defecto */
+  grid-template-columns: 1fr; 
 }
-
 /* >>> SECCIÓN DE RESPONSIVIDAD DE LAS TARJETAS */
 @media (width > 640px) {
   .cards-home__container {
@@ -20,7 +19,6 @@
     padding-inline: var(--gap-sm); /* vuelve al padding anterior en tablets */
   }
 }
-
 @media (width > 1024px) {
   .cards-home__container {
     grid-template-columns: repeat(4, 1fr);
@@ -29,7 +27,6 @@
     padding-inline: var(--gap-sm);
   }
 }
-
 /* >>> SECCIÓN DE CONTENIDO DE LAS TARJETAS */
 .card-home {
   border: 1px solid var(--secundary-900);
@@ -37,8 +34,8 @@
   padding: 24px;
   text-align: center;
   background-color: var(--secundary-50);
-  width: 100%; /* ✅ ocupa todo el espacio disponible */
-  min-width: unset; /* ✅ evita romper el grid */
+  width: 100%;
+  min-width: unset; 
   box-shadow: 0 2px 4px var(--secundary-900);
   overflow: hidden;
   display: flex;
@@ -48,19 +45,16 @@
   transition: transform 0.3s ease, box-shadow 0.3s ease;
   cursor: pointer;
 }
-
 .card-home:hover {
   transform: translateY(-4px);
   box-shadow: 0 6px 14px rgba(0, 0, 0, 0.15);
 }
-
 .card-home__image {
   width: 100%;
   height: 200px;
   object-fit: cover;
   border-radius: 8px;
 }
-
 .card-home__info {
   display: flex;
   flex-direction: column;
@@ -68,37 +62,9 @@
   gap: 8px;
   margin-top: 16px;
 }
-
-.card-home__info .btn--primary {
-  padding-top: 8px !important;
-  padding-bottom: 8px !important;
-  min-height: 36px !important;
-  line-height: 1 !important;
-  display: inline-flex;
-  align-items: center;
-  justify-content: center;
+.card-home__pay {
+  align-self: end;
 }
-
-.card-home__info .btn {
-  font-family: var(--font-primary-regular);
-  font-weight: 400;
-  align-self: flex-end;
-  padding: var(--button-padding-top) var(--button-padding-right)
-           var(--button-padding-bottom) var(--button-padding-left);
-  display: inline-flex;
-  align-items: center;
-  gap: 0.5rem;
-  text-decoration: none;
-}
-
-.card-home__icon {
-  width: 2.4rem;
-  height: 2.4rem;
-  object-fit: contain;
-  display: inline-block;
-  margin-left: 0.25rem;
-}
-
 .card-home__title {
   font-size: var(--fs-xs);
   color: var(--secundary-900);
@@ -108,7 +74,6 @@
   margin: 0;
   order: -1;
 }
-
 .card-home__price {
   font-size: var(--fs-sm);
   color: var(--black);
@@ -118,7 +83,6 @@
   margin: 0;
   order: -1;
 }
-
 @media (min-width: 769px) {
   .card-home {
     justify-content: flex-start;

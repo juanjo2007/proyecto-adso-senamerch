@@ -48,22 +48,6 @@
   justify-content: center;
   align-items: center;
 }
-.stores-admin__secondary .btn-variant2--secondary {
-  padding-top: 6px !important;
-  padding-bottom: 6px !important;
-  min-height: 36px !important; /* altura estándar Material Design */
-  line-height: 1 !important;
-  display: inline-flex;
-  align-items: center;
-  justify-content: center;
-}
-.stores-admin__icon-secundary {
-  width: 1.8rem;
-  height: 1.8rem;
-  object-fit: contain;
-  display: inline-block;
-  margin-left: 0.4rem;
-}
 .stores-admin__table-row:nth-child(even) {
   background-color: var(--gray-200);
 }
