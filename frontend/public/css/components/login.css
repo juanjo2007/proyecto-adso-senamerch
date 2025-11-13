@@ -1,4 +1,4 @@
-.site-main { 
+  .site-main { 
   display: flex;
   justify-content: center;
   align-items: center;
@@ -11,7 +11,7 @@
   border: 1px solid var(--secundary-900);
   background-color: var(--white);
   padding: var(--gap-lg);
-  width: 500px;
+  width: fit-content;
   border-radius: 8px;
   font-family: var(--font-primary);
   display: flex;
@@ -56,7 +56,7 @@
   outline: none;
   transition: border 0.3s, box-shadow 0.3s;
   width: 100%;
-  max-width: 400px;
+  max-width: 320px;
   box-sizing: border-box;
   color: var(--gray-600);
   background-color: var(--white);
@@ -70,7 +70,7 @@
   position: relative;
   display: flex;
   align-items: center;
-  width: 380px;
+  width: 320px;
 }
 .login__toggle-password {
   background-color: var(--secundary-600);
@@ -108,15 +108,15 @@
   .login {
     width: 100%;
     min-width: 320px;
-    max-width: 100%;
-    padding: var(--gap-md);
+    max-width: fit-content;
+    padding: var(--gap-lg);
     margin: 0 auto;
     box-shadow: 0 2px 8px rgba(0, 0, 0, 0.15);
   }
 }
 @media (max-width: 768px) {
   .site-main {
-    padding-block: 4rem;
+    padding-block: 8rem;
     padding-inline: 24px;
     box-sizing: border-box;
   }
@@ -132,9 +132,8 @@
     box-sizing: border-box;
   }
   .login {
-    width: 100%;
+    width: fit-content;
     min-width: 320px;
-    max-width: 100%;
     padding: var(--gap-lg);
     margin: 0 auto;
   }
