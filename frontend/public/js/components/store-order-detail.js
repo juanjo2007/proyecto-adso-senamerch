@@ -11,35 +11,44 @@ document.addEventListener("DOMContentLoaded", function () {
         orderDetailContainer.innerHTML = data;
 
         // === Botón ENTREGAR PEDIDO ===
-        const deliverBtn = orderDetailContainer.querySelector(".btn--primary");
+        const deliverBtn = orderDetailContainer.querySelector(".store-order-detail__delivery");
         if (deliverBtn) {
           deliverBtn.addEventListener("click", function (e) {
             e.preventDefault();
-            showAlert("Pedido entregado, ¡felicidades!", "success");
+            showAlert("Pedido entregado correctamente", "success");
 
             setTimeout(() => {
               window.location.href = "store_orders_view.html";
-            }, 1500);
+            }, 1200);
           });
         }
 
         // === Botón CANCELAR PEDIDO ===
-        const cancelBtn = orderDetailContainer.querySelector(".btn-variant2--secondary");
-        if (cancelBtn) {
-          cancelBtn.addEventListener("click", function (e) {
+        const cancelOrderBtn = orderDetailContainer.querySelector(".store-order-detail__cancel-order");
+        if (cancelOrderBtn) {
+          cancelOrderBtn.addEventListener("click", function (e) {
             e.preventDefault();
             showAlert("Pedido cancelado", "error");
 
             setTimeout(() => {
               window.location.href = "store_orders_view.html";
-            }, 1500);
+            }, 1200);
           });
         }
+
+        // === Botones CANCELAR PRODUCTO ===
+        const cancelProductBtns = orderDetailContainer.querySelectorAll(".store-order-detail__cancel-product");
+        cancelProductBtns.forEach((btn) => {
+          btn.addEventListener("click", function () {
+            showAlert("Producto cancelado del pedido", "warning");
+            // Aquí puedes mantener su comportamiento HTML nativo o añadir lógica personalizada
+          });
+        });
       })
       .catch((error) => console.error("Error:", error));
   }
 
-  // === ALERTA CENTRADA, LIMPIA Y PROFESIONAL ===
+  // === ALERTA PROFESIONAL Y ANIMADA ===
   function showAlert(message, type = "success") {
     const existingAlert = document.querySelector(".alert");
     if (existingAlert) existingAlert.remove();
@@ -54,10 +63,10 @@ document.addEventListener("DOMContentLoaded", function () {
 
     document.body.appendChild(alert);
 
-    // Mostrar animación
+    // Animación de aparición
     setTimeout(() => alert.classList.add("alert--show"), 50);
 
-    // Ocultar después de un tiempo
+    // Desaparece automáticamente
     setTimeout(() => {
       alert.classList.remove("alert--show");
       setTimeout(() => alert.remove(), 300);

@@ -42,14 +42,11 @@
 @media (min-width: 640px) {
   .store-detail__grid {
     grid-template-columns: repeat(auto-fit, minmax(600px, 1fr));
-    justify-content: center;
-    justify-items: center;
   }
 }
-@media (min-width: 1200px) {
+@media (min-width: 1280px) {
   .store-detail__grid {
-    grid-template-columns: repeat(2, 600px);
-    justify-content: center;
+    grid-template-columns: repeat(1, 1fr);
     align-items: start;
   }
 }

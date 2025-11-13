@@ -5,28 +5,34 @@
   width: 100%;
   box-sizing: border-box;
   margin: var(--gap-md) auto;
-  padding-inline: 24px; /* ✅ 24px de margen lateral en móvil */
+  padding-inline: 24px; /* ✅ Margen lateral en móvil */
   justify-content: center;
   justify-items: center;
-  grid-template-columns: 1fr; /* ✅ una columna en móvil */
+  grid-template-columns: 1fr; /* ✅ Una columna por defecto (móvil) */
 }
 
-/* >>> SECCIÓN DE RESPONSIVIDAD DE LAS TARJETAS */
-@media (width > 640px) {
+/* >>> TABLET PEQUEÑA (≥640px) */
+@media (min-width: 640px) {
   .seller-cards__container {
     grid-template-columns: repeat(2, 1fr);
-    gap: var(--gap-md);
-    max-width: 100%;
-    padding-inline: var(--gap-sm); /* vuelve al valor original */
+    gap: var(--gap-lg);
+    padding-inline: var(--gap-sm);
   }
 }
 
-@media (width > 1024px) {
+/* >>> TABLET GRANDE (≥1024px) */
+@media (min-width: 1024px) {
+  .seller-cards__container {
+    grid-template-columns: repeat(3, 1fr);
+    gap: var(--gap-lg);
+  }
+}
+
+/* >>> DESKTOP GRANDE (≥1280px) */
+@media (min-width: 1280px) {
   .seller-cards__container {
     grid-template-columns: repeat(4, 1fr);
-    gap: var(--gap-md);
-    max-width: 100%;
-    padding-inline: var(--gap-sm);
+    gap: var(--gap-lg);
   }
 }
 
@@ -37,8 +43,7 @@
   padding: 24px;
   text-align: center;
   background-color: var(--secundary-50);
-  width: 100%; /* ✅ ocupa todo el ancho disponible */
-  min-width: unset; /* ✅ evita tamaños fijos en móvil */
+  width: 100%;
   max-width: 100%;
   box-shadow: 0 2px 4px var(--secundary-900);
   overflow: hidden;
@@ -63,7 +68,7 @@
 
 .card-seller__info {
   display: grid;
-  grid-template-columns: 1fr 1fr; 
+  grid-template-columns: 1fr 1fr;
   grid-template-rows: auto auto;
   gap: 12px 10px;
   width: 100%;
@@ -106,61 +111,30 @@
   justify-content: flex-end;
 }
 
-.card-seller__primary .btn--primary {
-  padding-top: 8px !important;
-  padding-bottom: 8px !important;
-  min-height: 36px !important;
-  display: inline-flex;
-  align-items: center;
-  justify-content: center;
-}
-
-.card-seller__secondary .btn-variant2--secondary {
-  padding-top: 6px !important;
-  padding-bottom: 6px !important;
-  min-height: 36px !important;
-  line-height: 1 !important;
-  display: inline-flex;
-  align-items: center;
-  justify-content: center;
-}
-
-.card-seller__icon {
-  width: 2.4rem;
-  height: 2.4rem;
-  object-fit: contain;
-  margin-left: 0.4rem;
-}
-
-.card-seller__icon-secundary {
-  width: 1.8rem;
-  height: 1.8rem;
-  object-fit: contain;
-  display: inline-block;
-  margin-left: 0.4rem;
-}
-
-/* >>> SECCIÓN DE RESPONSIVIDAD */
+/* >>> RESPONSIVIDAD MÓVIL */
 @media (max-width: 640px) {
   .card-seller {
     text-align: left;
     align-items: flex-start;
     padding: var(--gap-md);
   }
+
   .card-seller__info {
     grid-template-columns: 1fr;
     grid-template-rows: repeat(4, auto);
-    text-align: left;
     gap: var(--gap-xs);
   }
+
   .card-seller__title,
   .card-seller__price {
     text-align: left;
   }
+
   .card-seller__secondary,
   .card-seller__primary {
     justify-content: flex-start;
   }
+
   .card-seller__image {
     height: 180px;
   }

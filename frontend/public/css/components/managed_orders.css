@@ -45,10 +45,13 @@
     grid-template-columns: repeat(auto-fit, minmax(600px, 1fr));
   }
 }
-@media (min-width: 1200px) {
+@media (min-width: 1280px) {
   .order-detail__grid {
-    grid-template-columns: repeat(2, 600px);
-    align-items: start;
+    grid-template-columns: repeat(1, 1fr);
+    align-items: center;
+  }
+  .order-detail{
+    align-items: center;
   }
 }
 /* >>> SECCIÓN DE LA CARD*/

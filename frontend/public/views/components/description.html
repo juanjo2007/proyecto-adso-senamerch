@@ -1,87 +1,97 @@
 <section class="product-description">
-  <!-- Galería -->
-  <div class="product-description__gallery">
-    <img src="/frontend/public/assets/img/tomato_image.png" alt="Tomate fresco" class="product-description__image--main" />
 
+  <!-- GALERÍA -->
+  <div class="product-description__gallery">
+    <img src="/frontend/public/assets/img/tomato_image.png" 
+         alt="Tomate fresco" 
+         class="product-description__image product-description__image--main" />
     <div class="product-description__thumbnails">
-      <img src="/frontend/public/assets/img/tomato_image.png" alt="Tomate vista 1" class="product-description__thumbnail" />
-      <img src="/frontend/public/assets/img/tomato_image.png" alt="Tomate vista 2" class="product-description__thumbnail" />
-      <img src="/frontend/public/assets/img/tomato_image.png" alt="Tomate vista 3" class="product-description__thumbnail" />
-      <img src="/frontend/public/assets/img/tomato_image.png" alt="Tomate vista 4" class="product-description__thumbnail" />
-      <img src="/frontend/public/assets/img/tomato_image.png" alt="Tomate vista 5" class="product-description__thumbnail" />
+      <img src="/frontend/public/assets/img/tomato_image.png" 
+           alt="Tomate vista 1" 
+           class="product-description__thumbnail" />
+      <img src="/frontend/public/assets/img/tomato1_image.png" 
+           alt="Tomate vista 2" 
+           class="product-description__thumbnail" />
+      <img src="/frontend/public/assets/img/tomato2_image.png" 
+           alt="Tomate vista 3" 
+           class="product-description__thumbnail" />
+      <img src="/frontend/public/assets/img/tomato3_image.png" 
+           alt="Tomate vista 4" 
+           class="product-description__thumbnail" />
+      <img src="/frontend/public/assets/img/tomato4_image.png" 
+           alt="Tomate vista 5" 
+           class="product-description__thumbnail" />
     </div>
 
-    <!-- SECCIÓN DE COMENTARIOS -->
-    <div class="product-comments">
-      <h3 class="product-comments__title">Opiniones de los usuarios</h3>
+    <!-- BLOQUE DE COMENTARIOS DEBAJO DE LA GALERÍA -->
+    <div class="product-description__comments comments">
+      <h3 class="comments__title">Opiniones de los usuarios</h3>
 
-      <!-- Lista de comentarios -->
-      <div class="product-comments__list">
-        <div class="product-comments__item">
-          <p class="product-comments__user">María López <span>• Hace 2 días</span></p>
-          <p class="product-comments__text">Tomates muy frescos y de excelente tamaño. Recomendado 100%.</p>
+      <div class="comments__list">
+        <div class="comments__item">
+          <p class="comments__user">María López <span class="comments__date">• Hace 2 días</span></p>
+          <p class="comments__text">Tomates muy frescos y de excelente tamaño. Recomendado 100%.</p>
         </div>
-        <div class="product-comments__item">
-          <p class="product-comments__user">Carlos Pérez <span>• Hace 5 días</span></p>
-          <p class="product-comments__text">Buen sabor, llegaron rápido y en buen estado.</p>
+        <div class="comments__item">
+          <p class="comments__user">Carlos Pérez <span class="comments__date">• Hace 5 días</span></p>
+          <p class="comments__text">Buen sabor, llegaron rápido y en buen estado.</p>
         </div>
       </div>
 
-      <!-- Formulario para nuevo comentario -->
-      <form class="product-comments__form">
-        <label class="product-comments__label">Deja tu comentario:</label>
-        <textarea class="product-comments__textarea" rows="3" placeholder="Escribe tu opinión aquí..."></textarea>
-        <button type="button" class="btn btn--primary product-comments__button">
+      <form class="comments__form">
+        <label class="comments__label" for="comment-text">Deja tu comentario:</label>
+        <textarea id="comment-text" class="comments__textarea" rows="3" placeholder="Escribe tu opinión aquí..."></textarea>
+        <button type="button" class="comments__button btn btn--primary">
           Enviar comentario
-          <img src="/frontend/public/assets/icons/contact.svg" alt="Icono Comprar" class="btn__icon product-comments__icon" />
+          <img src="/frontend/public/assets/icons/contact.svg" 
+               alt="Icono Enviar" 
+               class="comments__icon btn__icon" />
         </button>
       </form>
     </div>
   </div>
 
-  <!-- Detalles -->
-  <div class="product-description__details">
-    <!-- Calificación promedio -->
-    <div class="product-description__rating">
-      <p class="product-description__rating-text">
-        ★ ★ ★ ★ ★ <span>(4.5/5 promedio por su frescura y versatilidad)</span>
+  <!-- DETALLES DEL PRODUCTO -->
+  <div class="product-description__details details">
+    <div class="details__rating rating">
+      <p class="rating__text">
+        ★ ★ ★ ★ ★ <span class="rating__score">(4.5/5 promedio por su frescura y versatilidad)</span>
       </p>
-
-      <!-- Formulario de calificación -->
-      <form class="product-description__rating-form">
-        <label class="product-description__rating-label">Califica el producto del 1 al 5:</label>
-        <div class="product-description__rating-stars">
-          <label><input type="radio" name="rating" value="5"><span>★</span></label>
-          <label><input type="radio" name="rating" value="4"><span>★</span></label>
-          <label><input type="radio" name="rating" value="3"><span>★</span></label>
-          <label><input type="radio" name="rating" value="2"><span>★</span></label>
-          <label><input type="radio" name="rating" value="1"><span>★</span></label>
+      <form class="rating__form">
+        <label class="rating__label">Califica el producto del 1 al 5:</label>
+        <div class="rating__stars">
+          <label class="rating__star"><input type="radio" name="rating" value="5"><span>★</span></label>
+          <label class="rating__star"><input type="radio" name="rating" value="4"><span>★</span></label>
+          <label class="rating__star"><input type="radio" name="rating" value="3"><span>★</span></label>
+          <label class="rating__star"><input type="radio" name="rating" value="2"><span>★</span></label>
+          <label class="rating__star"><input type="radio" name="rating" value="1"><span>★</span></label>
         </div>
       </form>
     </div>
 
-    <!-- Información principal -->
-    <h2 class="product-description__title">Tomate Del Valle</h2>
-    <p class="product-description__price">$3.000 Kilo</p>
-    <button type="button" class="btn btn--primary product-description__button">
+    <h2 class="details__title">Tomate Del Valle</h2>
+    <p class="details__price">$3.000 Kilo</p>
+    <button type="button" class="details__button btn btn--primary">
       Comprar
-      <img src="/frontend/public/assets/icons/cash-button.svg" alt="Icono Comprar" class="btn__icon product-description__icon" />
+      <img src="/frontend/public/assets/icons/cash-button.svg" 
+           alt="Icono Comprar" 
+           class="details__icon btn__icon" />
     </button>
-  
-    <!-- Info extendida -->
-    <div class="product-description__info">
-      <h3 class="product-description__subtitle">Características sobre este producto</h3>
+
+    <div class="details__info info">
+      <h3 class="info__subtitle">Características sobre este producto</h3>
       <p><strong>Unidad de medida:</strong> Kilogramo (kg) / libra (lb) / unidad.</p>
       <p><strong>Tipo de garantía:</strong> Garantía de frescura (solo aplica al momento de la entrega, reemplazo si llega en mal estado).</p>
       <p><strong>Descripción:</strong> El tomate es un fruto fresco, rojo, jugoso y de sabor ligeramente ácido, utilizado en ensaladas, salsas, guisos y múltiples preparaciones gastronómicas.</p>
       <p><strong>Descuento:</strong> 10%</p>
-      <ul class="product-description__list">
-        <li>Origen agrícola nacional/regional.</li>
-        <li>Fruto maduro, firme y fresco.</li>
-        <li>Rico en vitaminas A, C y antioxidantes.</li>
-        <li>Bajo en calorías.</li>
-        <li>Variedades comunes: chonto, cherry, perita, entre otros.</li>
+      <ul class="info__list">
+        <li class="info__item">Origen agrícola nacional/regional.</li>
+        <li class="info__item">Fruto maduro, firme y fresco.</li>
+        <li class="info__item">Rico en vitaminas A, C y antioxidantes.</li>
+        <li class="info__item">Bajo en calorías.</li>
+        <li class="info__item">Variedades comunes: chonto, cherry, perita, entre otros.</li>
       </ul>
     </div>
   </div>
+
 </section>

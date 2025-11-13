@@ -30,7 +30,7 @@ body {
   flex-direction: column;
 }
 
-section {
+.section-footer-content {
   flex: 1; /* Empuja el footer al fondo */
 }
 

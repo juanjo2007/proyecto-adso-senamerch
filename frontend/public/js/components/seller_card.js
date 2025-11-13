@@ -15,13 +15,31 @@ export async function loadSellercards(containerSelector) {
     const template = await templateRes.text();
     const products = await dataRes.json();
 
-    products.forEach(sellercard => {
+    products.forEach((sellercard) => {
       let html = template
         .replaceAll("{{image}}", sellercard.image)
         .replaceAll("{{name}}", sellercard.name)
         .replaceAll("{{price}}", sellercard.price);
 
       container.insertAdjacentHTML("beforeend", html);
+    });
+
+    // === Agregar eventos una vez insertadas las cards ===
+    const descriptionButtons = container.querySelectorAll(".card-seller__description");
+    const editButtons = container.querySelectorAll(".card-seller__edit");
+
+    // 🔹 Botón primario → Descripción
+    descriptionButtons.forEach((btn) => {
+      btn.addEventListener("click", () => {
+        window.location.href = "view_description_product_seller.html";
+      });
+    });
+
+    // 🔹 Botón secundario → Gestor de publicaciones
+    editButtons.forEach((btn) => {
+      btn.addEventListener("click", () => {
+        window.location.href = "view_edit_post.html";
+      });
     });
 
   } catch (error) {
