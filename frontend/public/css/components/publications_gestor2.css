@@ -100,51 +100,14 @@
   align-items: center;
   margin: 1.2rem 0;
 }
-
 .create-post__field-secundary {
   grid-column: 1 / 2;
   justify-self: start;
 }
-
 .create-post__field-actions {
   grid-column: 2 / 3;
   justify-self: end;
 }
-
-.create-post__field-actions .btn--primary {
-  padding-top: 8px !important;
-  padding-bottom: 8px !important;
-  min-height: 36px !important;
-  display: inline-flex;
-  align-items: center;
-  justify-content: center;
-}
-
-.create-post__field-secundary .btn-variant2--secondary {
-  padding-top: 6px !important;
-  padding-bottom: 6px !important;
-  min-height: 36px !important;
-  line-height: 1 !important;
-  display: inline-flex;
-  align-items: center;
-  justify-content: center;
-}
-
-.create-post__icon {
-  width: 2.4rem;
-  height: 2.4rem;
-  object-fit: contain;
-  margin-left: 0.4rem;
-}
-
-.create-post__icon-secundary {
-  width: 1.8rem;
-  height: 1.8rem;
-  object-fit: contain;
-  display: inline-block;
-  margin-left: 0.4rem;
-}
-
 /* >>> SECCIÓN DE RESPONSIVIDAD */
 @media (max-width: 1024px) {
   .create-post__fields-wrapper {

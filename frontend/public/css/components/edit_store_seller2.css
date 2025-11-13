@@ -89,42 +89,6 @@
   justify-content: flex-end;
   align-items: flex-start;
 }
-
-.edit-store-seller__primary .btn--primary {
-  padding-top: 8px !important;
-  padding-bottom: 8px !important;
-  min-height: 36px !important; /* altura estándar Material Design */
-  display: inline-flex;
-  align-items: center;
-  justify-content: center;
-}
-
-.edit-store-seller__secondary .btn-variant2--secondary {
-  padding-top: 6px !important;
-  padding-bottom: 6px !important;
-  min-height: 36px !important;
-  line-height: 1 !important;
-  display: inline-flex;
-  align-items: center;
-  justify-content: center;
-}
-
-.edit-store-seller__icon {
-  width: 2.4rem;
-  height: 2.4rem;
-  object-fit: contain;
-  display: inline-block;
-  margin-left: 0.4rem;
-}
-
-.edit-store-seller__icon-secundary {
-  width: 1.8rem;
-  height: 1.8rem;
-  object-fit: contain;
-  display: inline-block;
-  margin-left: 0.4rem;
-}
-
 /* >>> SECCIÓN DE CONTENEDOR DE ALERTAS JS  */
 .alert {
   position: fixed;

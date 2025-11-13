@@ -2,16 +2,14 @@
 .edit-post {
   display: flex;
   justify-content: center;
-  padding: var(--gap-md);
-  gap: var(--gap-md);
+  padding: var(--gap-xs);
   width: 100%;
-  padding-block: 6.8rem;
+  padding-block: 10rem;
 }
 
-/* >>> SECCIÓN DE CONTENIDO DEL CONTENEDOR  */
+/* >>> SECCIÓN DE CONTENIDO DEL FORMULARIO */
 .edit-post__form {
   background-color: var(--white);
-  background: var(--white);
   padding: var(--gap-lg);
   border-radius: 1.2rem;
   box-shadow: 0 4px 10px rgba(0, 0, 0, 0.15);
@@ -20,7 +18,6 @@
   max-width: 700px;
   display: flex;
   flex-direction: column;
-  justify-content: space-between;
 }
 
 .edit-post__fields-wrapper {
@@ -44,14 +41,13 @@
 .edit-post__field {
   display: flex;
   flex-direction: column;
-  gap: var(--gap-xxxs);
+  gap: var(--gap-xxs);
   min-width: 0;
   box-sizing: border-box;
 }
 
 .edit-post__field--full {
   grid-column: 1 / -1;
-  margin-top: var(--gap-md);
 }
 
 .edit-post__label {
@@ -82,149 +78,38 @@
   border-color: var(--secundary-600);
   outline: none;
 }
-
 .edit-post__textarea {
   min-height: 12rem;
   resize: vertical;
 }
-
-/* >>> SECCIÓN DE ACCIONES DEL CONTENEDOR */
-.edit-post__actions-grid {
+/* >>> SECCIÓN DE ACCIONES (BOTONES) */
+/* >>> CONTENEDOR DE ACCIONES (BOTONES) */
+.edit-post__actions {
   display: grid;
-  grid-template-columns: 1fr 1fr;
-  align-items: center;
-  margin-top: var(--gap-xl);
+  grid-template-columns: repeat(2, 1fr);
+  grid-column: 1 / -1; /* ocupa todo el ancho */
   width: 100%;
+  gap: var(--gap-md);
+  margin-top: var(--gap-md);
 }
 
-/* >>> SECCIÓN DE ACCIONES (BOTONES) */
 .edit-post__field-secundary {
   display: flex;
   justify-content: flex-start;
-  width: 100%;
 }
 
-.edit-post__field-secundary .btn-variant2--secondary {
-  display: inline-flex;
-  align-items: center;
-  justify-content: center;
-  padding-top: 6px;          
-  padding-bottom: 6px;
-  max-height: 36px;
-  line-height: 1;
-}
-
-.edit-post__icon-secundary {
-  width: 1.8rem;
-  height: 1.8rem;
-  object-fit: contain;
-  margin-left: 0.4rem;
-}
-
-/* --- BOTÓN PRIMARIO --- */
-.edit-post__field-actions {
+.edit-post__field-primary {
   display: flex;
   justify-content: flex-end;
 }
 
-.edit-post__field-actions .btn--primary {
-  display: inline-flex;
-  align-items: center;
-  justify-content: center;
-  padding-top: 8px;
-  padding-bottom: 8px;
-  min-height: 40px;
-  line-height: 1;
-}
-
-.edit-post__icon {
-  width: 2.4rem;
-  height: 2.4rem;
-  object-fit: contain;
-  margin-left: 0.4rem;
-}
-
-/* >>> SECCIÓN DE CONTENEDOR DE LAS ALERTAS JS*/
-.alert {
-  position: fixed;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%) scale(0.8);
-  background-color: var(--white);
-  border: 2px solid var(--primary-900);
-  color: var(--primary-950);
-  padding: 1.8rem 2.5rem;
-  border-radius: 12px;
-  font-family: var(--font-primary);
-  font-size: var(--fs-sm);
-  text-align: center;
-  box-shadow: 0 8px 30px rgba(0, 0, 0, 0.25);
-  z-index: 9999;
-  opacity: 0;
-  transition: opacity 0.4s ease, transform 0.4s ease;
-}
-
-.alert--show {
-  opacity: 1;
-  transform: translate(-50%, -50%) scale(1);
-}
-
-.alert__content {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  gap: 0.8rem;
-}
-
-.alert__message {
-  margin: 0;
-  font-weight: 500;
-  color: var(--primary-950);
-}
-
-.alert--success {
-  border-color: var(--secundary-700);
-  background-color: #e8fff1;
-}
-
-.alert--error {
-  border-color: #c0392b;
-  background-color: #ffecec;
-}
-
-/* >>> SECCIÓN DE RESPONSIVIDAD */
-@media (max-width: 1024px) {
-  .edit-post__fields-wrapper {
-    grid-template-columns: repeat(2, 1fr);
-  }
-}
-
+/* >>> RESPONSIVO */
 @media (max-width: 768px) {
-  .edit-post__fields-wrapper {
+  .edit-post__actions {
     grid-template-columns: 1fr;
   }
-
-  .edit-post__form {
-    padding: var(--gap-lg);
-    min-height: auto;
-  }
-
-  .edit-post__actions-grid {
-    grid-template-columns: 1fr;
-    gap: var(--gap-lg);
-  }
-
-  .edit-post__field-secundary {
+  .edit-post__field-secundary,
+  .edit-post__field-primary {
     justify-content: flex-start;
-  }
-
-  .edit-post__field-actions {
-    justify-content: flex-start;
-  }
-}
-
-@media (max-width: 640px) {
-  .edit-post {
-    padding-inline: 24px; /* 👈 distancia lateral en móvil */
   }
 }

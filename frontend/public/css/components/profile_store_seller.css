@@ -78,21 +78,6 @@
   justify-content: center; 
   align-items: center;
 }
-.store-profile__actions .btn--primary {
-  padding-top: 8px !important;
-  padding-bottom: 8px !important;
-  min-height: 36px !important; /* altura estándar Material Design */
-  display: inline-flex;
-  align-items: center;
-  justify-content: center;
-}
-.store-profile__icon {
-  width: 2.4rem;
-  height: 2.4rem;
-  object-fit: contain;
-  display: inline-block;
-  margin-left: 0.4rem;
-}
 /* >>> SECCIÓN DE RESPONSIVIDAD */
 @media (max-width: 1024px) {
   .store-profile__grid {

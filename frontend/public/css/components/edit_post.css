@@ -78,60 +78,20 @@
   border-color: var(--secundary-600);
   outline: none;
 }
-
 .edit-post-one__textarea {
   min-height: 12rem;
   resize: vertical;
 }
-
 /* >>> SECCIÓN DE ACCIONES (BOTONES) */
 .edit-post-one__field-secundary {
   display: flex;
   justify-content: flex-start;
   width: 100%;
 }
-
-.edit-post-one__field-secundary .btn-variant2--secondary {
-  display: inline-flex;
-  align-items: center;
-  justify-content: center;
-  padding-top: 6px;          
-  padding-bottom: 6px;
-  max-height: 36px;
-  line-height: 1;
-}
-.edit-post-one__icon-secundary {
-  width: 1.8rem;
-  height: 1.8rem;
-  object-fit: contain;
-  margin-left: 0.4rem;
-}
-
-/* --- BOTÓN PRIMARIO --- */
 .edit-post-one__field-primary {
   display: flex;
   justify-content: flex-end;
-  width: 100%;
 }
-
-.edit-post-one__field-primary .btn--primary {
-  display: inline-flex;
-  align-items: center;
-  justify-content: center;
-  padding-top: 8px;          /* botón ligeramente más alto */
-  padding-bottom: 8px;
-  min-height: 40px;          /* sin forzar altura fija */
-  line-height: 1;
-}
-
-.edit-post-one__icon-primary {
-  width: 2.4rem;
-  height: 2.4rem;
-  object-fit: contain;
-  margin-left: 0.4rem;
-}
-
-
 /* >>> RESPONSIVIDAD */
 @media (max-width: 1024px) {
   .edit-post-one__fields-wrapper {

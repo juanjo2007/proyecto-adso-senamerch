@@ -14,7 +14,7 @@
 @media (width > 640px) {
   .cards-home__container {
     grid-template-columns: repeat(2, 1fr);
-    gap: var(--gap-md);
+    gap: var(--gap-lg);
     max-width: 90%;
     padding-inline: var(--gap-sm); /* vuelve al padding anterior en tablets */
   }
