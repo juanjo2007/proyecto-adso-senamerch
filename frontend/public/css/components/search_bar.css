@@ -62,11 +62,11 @@
 }
 @media (max-width: 1280px) {
   .search-bar {
-    max-width: 72rem;
+    max-width: 400px;
   }
 }
 @media (min-width: 1536px) {
   .search-bar {
-    max-width: 80rem; 
+    max-width: 400px; 
   }
 }
