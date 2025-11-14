@@ -3,10 +3,10 @@
 /* ===================================================== */
 .site-main-login { 
   display: flex;
-  justify-content: center;
+  /* justify-content: center; */
   align-items: center;
   box-sizing: border-box;
-  padding-block: 8.6rem; 
+  padding-block: 8.4rem; 
   overflow: hidden;
   min-height: 100%;
 }
@@ -18,14 +18,14 @@
   background-color: var(--white);
   padding: var(--gap-lg);
   width: 100%;
-  max-width: fit-content;
+  /* max-width: fit-content; */
   border-radius: 8px;
   font-family: var(--font-primary);
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  margin: auto; 
+  margin: 24px; 
   box-sizing: border-box;
 }
 .login__title {
@@ -37,7 +37,7 @@
 .login__form {
   display: flex;
   flex-direction: column;
-  justify-content: center;
+  /* justify-content: center; */
   align-items: center; 
   gap: var(--gap-lg) !important;
   width: 100%;
@@ -51,7 +51,7 @@
   align-items: flex-start;
   gap: var(--gap-xxxs);
   width: 100%;
-  max-width: 360px; 
+  /* max-width: 360px;  */
 }
 .login__label {
   font-size: var(--fs-xxxs);
@@ -66,7 +66,7 @@
   outline: none;
   transition: border 0.3s, box-shadow 0.3s;
   width: 100%;
-  min-width: 360px !important; 
+  /* min-width: 320px !important;  */
   box-sizing: border-box;
   color: var(--gray-600);
   background-color: var(--white);
@@ -79,7 +79,7 @@
 .login__password-wrapper {
   position: relative;
   width: 100%;      
-  max-width: 360px; 
+  /* max-width: 360px;   */
 }
 .login__toggle-password {
   position: absolute;
@@ -113,44 +113,19 @@
   color: var(--secundary-950);
   text-decoration: underline;
 }
-@media (max-width: 1024px) {
+@media (width > 640px) {
   .login {
     width: fit-content;
     padding: var(--gap-lg);
     margin: 0 auto;
     box-shadow: 0 2px 8px rgba(0, 0, 0, 0.15);
   }
-}
-@media (max-width: 768px) {
-  .site-main-login {
-    padding-block: 8rem;
-  }
-  .login {
-    width: fit-content;
-    padding: var(--gap-lg);
+  .login__input{
+    width: 360px;
   }
 }
-@media (max-width: 640px) {
-  .login {
-    width: 100%;
-    padding-top: var(--gap-lg);
-    padding-bottom: var(--gap-lg);
-    padding-left: 0;
-    padding-right: 0;
-  }
-  .login__form {
-    width: 100%;
-    padding-inline: var(--gap-lg); 
-    box-sizing: border-box;
-  }
-  .login__input,
-  .login__password-wrapper,
-  .login__input--password {
-    width: 100%;
-    min-width: 0 !important;
-    max-width: 100% !important;
-  }
-}
+
+
 /* ===================================================== */
 /*                ALERTAS (JS)                           */
 /* ===================================================== */
