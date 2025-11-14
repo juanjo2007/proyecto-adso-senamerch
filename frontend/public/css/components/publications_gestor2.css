@@ -16,24 +16,29 @@
   border-radius: 1.2rem;
   box-shadow: 0 4px 10px rgba(0, 0, 0, 0.15);
   border: 1px solid var(--secundary-900);
-  width: 100%;
-  max-width: 700px;
+
+  width: fit-content;
+  max-width: 100%;
+
   display: grid;
-  grid-template-columns: repeat(2, 1fr);
+  grid-template-columns: repeat(2, minmax(0, 360px));
   grid-auto-rows: auto;
-  justify-content: space-between;
+  justify-content: center;
   box-sizing: border-box;
 }
 
+/* >>> GRID INTERNO */
 .create-post__fields-wrapper {
   grid-column: 1 / -1;
   display: grid;
-  grid-template-columns: repeat(2, 1fr);
+  grid-template-columns: repeat(2, minmax(0, 360px));
   gap: var(--gap-md);
   width: 100%;
+  justify-content: center;
   box-sizing: border-box;
 }
 
+/* >>> TÍTULO */
 .create-post__title {
   grid-column: 1 / -1;
   text-align: center;
@@ -44,29 +49,34 @@
   font-family: var(--font-primary-semibold);
 }
 
+/* >>> FIELD */
 .create-post__field {
   display: flex;
   flex-direction: column;
   gap: var(--gap-xxxs);
-  min-width: 0; 
+  width: 100%;
+  max-width: 360px;
   box-sizing: border-box;
 }
 
+/* >>> FIELDS FULL WIDTH */
 .create-post__field--full {
   grid-column: 1 / -1;
+  max-width: 100% !important; /* 🔥 Permite usar las dos columnas */
 }
 
+/* >>> LABEL */
 .create-post__label {
-  font-size: var(--fs-xxs);
+  font-size: var(--fs-xxxs);
   font-family: var(--font-primary-semibold);
   color: var(--black);
-  word-wrap: break-word; 
+  word-wrap: break-word;
   overflow-wrap: break-word;
   white-space: normal;
 }
 
+/* >>> INPUTS / SELECT */
 .create-post__input,
-.create-post__textarea,
 .create-post__select {
   padding: var(--padding-top) var(--padding-right)
            var(--padding-bottom) var(--padding-left);
@@ -77,10 +87,34 @@
   color: var(--gray-600);
   background: var(--white);
   transition: border 0.3s;
-  width: 100%; 
+  width: 100%;
+  max-width: 360px;
   box-sizing: border-box;
 }
 
+/* >>> TEXTAREA */
+.create-post__textarea {
+  padding: var(--padding-top) var(--padding-right)
+           var(--padding-bottom) var(--padding-left);
+  border: 1px solid var(--secundary-900);
+  border-radius: 8px;
+  font-size: var(--fs-xs);
+  font-family: var(--font-primary);
+  color: var(--gray-600);
+  background: var(--white);
+  outline: none;
+  width: 100%;
+  box-sizing: border-box;
+  min-height: 12rem;
+  resize: vertical;
+}
+
+/* >>> TEXTAREA FULL WIDTH (🔥 Solución final) */
+.create-post__field--full .create-post__textarea {
+  max-width: 100% !important;
+}
+
+/* >>> FOCUS */
 .create-post__input:focus,
 .create-post__textarea:focus,
 .create-post__select:focus {
@@ -88,30 +122,37 @@
   outline: none;
 }
 
-.create-post__textarea {
-  min-height: 12rem;
-  resize: vertical;
-}
-
-/* >>> SECCIÓN DE ACCIONES (BOTONES) */
+/* >>> BOTONES */
 .create-post__field-secundary,
 .create-post__field-actions {
   display: flex;
   align-items: center;
   margin: 1.2rem 0;
 }
+
 .create-post__field-secundary {
   grid-column: 1 / 2;
   justify-self: start;
 }
+
 .create-post__field-actions {
   grid-column: 2 / 3;
   justify-self: end;
 }
-/* >>> SECCIÓN DE RESPONSIVIDAD */
+
+/* >>> RESPONSIVE */
 @media (max-width: 1024px) {
   .create-post__fields-wrapper {
-    grid-template-columns: repeat(1, 1fr);
+    grid-template-columns: 1fr;
+    justify-content: stretch;
+  }
+  .create-post__form {
+    grid-template-columns: 1fr;
+  }
+  .create-post__field-secundary,
+  .create-post__field-actions {
+    grid-column: 1 / -1;
+    justify-self: start;
   }
 }
 

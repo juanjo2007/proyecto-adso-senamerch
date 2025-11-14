@@ -1,17 +1,24 @@
-  .site-main { 
+/* ===================================================== */
+/*                     SITE MAIN                         */
+/* ===================================================== */
+.site-main-login { 
   display: flex;
   justify-content: center;
   align-items: center;
   box-sizing: border-box;
-  padding-block: 8.6rem; /* 🔹 margen natural arriba y abajo */
-  overflow: hidden; /* evita desbordes */
-  min-height: 100%; /* usa el flujo normal del documento */
+  padding-block: 8.6rem; 
+  overflow: hidden;
+  min-height: 100%;
 }
+/* ===================================================== */
+/*                       LOGIN                           */
+/* ===================================================== */
 .login {
   border: 1px solid var(--secundary-900);
   background-color: var(--white);
   padding: var(--gap-lg);
-  width: fit-content;
+  width: 100%;
+  max-width: fit-content;
   border-radius: 8px;
   font-family: var(--font-primary);
   display: flex;
@@ -24,7 +31,7 @@
 .login__title {
   font-size: var(--fs-sm);
   text-align: center;
-  margin-bottom: var(--gap-md);
+  margin-bottom: var(--gap-lg);
   color: var(--black);
 }
 .login__form {
@@ -35,15 +42,18 @@
   gap: var(--gap-lg) !important;
   width: 100%;
 }
+/* ===================================================== */
+/*                CAMPOS E INPUTS                        */
+/* ===================================================== */
 .login__field {
   display: flex;
   flex-direction: column;
   align-items: flex-start;
   gap: var(--gap-xxxs);
   width: 100%;
-  max-width: 380px; 
+  max-width: 360px; 
 }
-.login__label{
+.login__label {
   font-size: var(--fs-xxxs);
   color: var(--black);
   font-family: var(--font-secondary-medium);
@@ -56,23 +66,26 @@
   outline: none;
   transition: border 0.3s, box-shadow 0.3s;
   width: 100%;
-  max-width: 320px;
+  min-width: 360px !important; 
   box-sizing: border-box;
   color: var(--gray-600);
   background-color: var(--white);
 }
+
 .login__input:focus {
   border-color: var(--secundary-600);
   box-shadow: 0 0 0 3px var(--secundary-100);
-  outline: none;
 }
 .login__password-wrapper {
   position: relative;
-  display: flex;
-  align-items: center;
-  width: 320px;
+  width: 100%;      
+  max-width: 360px; 
 }
 .login__toggle-password {
+  position: absolute;
+  right: 12px;      
+  top: 50%;
+  transform: translateY(-50%);
   background-color: var(--secundary-600);
   border: none;
   padding: 4px 10px;
@@ -80,14 +93,14 @@
   font-size: var(--fs-xxs);
   cursor: pointer;
   transition: background 0.3s, border-color 0.3s, transform 0.15s;
-  margin-left: 8px;
   color: var(--white);
+  margin-left: 0;
 }
 .login__toggle-password:hover {
   background-color: var(--secundary-700);
 }
 .login__toggle-password:active {
-  transform: scale(0.95);
+  transform: translateY(-50%) scale(0.95);
 }
 .login__link {
   color: var(--secundary-700);
@@ -101,99 +114,94 @@
   text-decoration: underline;
 }
 @media (max-width: 1024px) {
-  .site-main {
-    padding-inline: 24px;
-    box-sizing: border-box;
-  }
   .login {
-    width: 100%;
-    min-width: 320px;
-    max-width: fit-content;
+    width: fit-content;
     padding: var(--gap-lg);
     margin: 0 auto;
     box-shadow: 0 2px 8px rgba(0, 0, 0, 0.15);
   }
 }
 @media (max-width: 768px) {
-  .site-main {
+  .site-main-login {
     padding-block: 8rem;
-    padding-inline: 24px;
-    box-sizing: border-box;
-  }
-  .login {
-    width: 90%;
-  }
-}
-@media (max-width: 640px) {
-  .site-main {
-    width: 100%;
-    padding-block: 16rem;
-    padding-inline: 24px ;
-    box-sizing: border-box;
   }
   .login {
     width: fit-content;
-    min-width: 320px;
     padding: var(--gap-lg);
-    margin: 0 auto;
-  }
-  .login__password-wrapper{
-    width: 100%;
-    max-width: 320px;
-  }
-  .login__title {
-    font-size: var(--fs-sm);
   }
 }
-/* Scripts Alerta */
+@media (max-width: 640px) {
+  .login {
+    width: 100%;
+    padding-top: var(--gap-lg);
+    padding-bottom: var(--gap-lg);
+    padding-left: 0;
+    padding-right: 0;
+  }
+  .login__form {
+    width: 100%;
+    padding-inline: var(--gap-lg); 
+    box-sizing: border-box;
+  }
+  .login__input,
+  .login__password-wrapper,
+  .login__input--password {
+    width: 100%;
+    min-width: 0 !important;
+    max-width: 100% !important;
+  }
+}
+/* ===================================================== */
+/*                ALERTAS (JS)                           */
+/* ===================================================== */
+
 .alert {
-position: fixed;
-top: 50%;
-left: 50%;
-transform: translate(-50%, -50%) scale(0.8);
-background-color: var(--white);
-border: 2px solid var(--primary-900);
-color: var(--primary-950);
-padding: 1.8rem 2.5rem;
-border-radius: 12px;
-font-family: var(--font-primary);
-font-size: var(--fs-sm);
-text-align: center;
-box-shadow: 0 8px 30px rgba(0, 0, 0, 0.25);
-z-index: 9999;
-opacity: 0;
-transition: opacity 0.4s ease, transform 0.4s ease;
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%) scale(0.8);
+  background-color: var(--white);
+  border: 2px solid var(--primary-900);
+  color: var(--primary-950);
+  padding: 1.8rem 2.5rem;
+  border-radius: 12px;
+  font-family: var(--font-primary);
+  font-size: var(--fs-sm);
+  text-align: center;
+  box-shadow: 0 8px 30px rgba(0, 0, 0, 0.25);
+  z-index: 9999;
+  opacity: 0;
+  transition: opacity 0.4s ease, transform 0.4s ease;
 }
 
 .alert.show {
-opacity: 1;
-transform: translate(-50%, -50%) scale(1);
+  opacity: 1;
+  transform: translate(-50%, -50%) scale(1);
 }
 
 .alert__content {
-display: flex;
-align-items: center;
-justify-content: center;
-gap: 0.8rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.8rem;
 }
 
 .alert__icon {
-font-size: 1.5rem;
+  font-size: 1.5rem;
 }
 
 .alert__message {
-margin: 0;
-font-weight: 500;
-color: var(--primary-950);
+  margin: 0;
+  font-weight: 500;
+  color: var(--primary-950);
 }
 
-/* Colores según tipo */
 .alert--success {
-border-color: var(--secundary-700);
-background-color: #e8fff1;
+  border-color: var(--secundary-700);
+  background-color: #e8fff1;
 }
 
 .alert--error {
-border-color: #c0392b;
-background-color: #ffecec;
+  border-color: #c0392b;
+  background-color: #ffecec;
 }

@@ -65,3 +65,17 @@
     align-items: center;
   }
 }
+@media (max-width: 760px) {
+  .admin-layout {
+    width: 100%;
+    height: fit-content;
+    min-height: fit-content;
+  }
+  .admin-layout__container {
+    grid-template-columns: 1fr;
+  }
+  .admin-layout__sidebar {
+    width: 100%;
+    align-items: center;
+  }
+}
