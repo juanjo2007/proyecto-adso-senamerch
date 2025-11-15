@@ -1,5 +1,5 @@
 <!-- Contenedor de contenido (reserva espacio debajo del header) -->
-<main class="page-content">
+<section class="page-content">
   <!-- tu sección product-purchase -->
   <section class="product-purchase">
     <h2 class="product-purchase__title">Selecciona las opciones de compra</h2>
@@ -36,9 +36,10 @@
     </div>
 
     <div class="product-purchase__actions">
-      <a href="/frontend/public/views/viwe_car.html" class="btn btn--primary product-purchase__add">Agregar al carrito
-        <img src="/frontend/public/assets/icons/shopping-cart-dollar.svg" alt="Icono Comprar" class="product-purchase__icon">
-      </a>
+      <button type="button" class="btn btn--primary product-purchase__button">
+        Agregar al carrito
+        <img src="/frontend/public/assets/icons/shopping-cart-dollar.svg" alt="Icono Comprar" class="btn__icon product-purchase__icon" />
+      </button>
     </div>
   </section>
-</main>
+</section>

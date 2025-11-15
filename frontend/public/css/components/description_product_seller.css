@@ -77,7 +77,10 @@
   font-size: var(--fs-xxs);
   color: var(--gray-800);
 }
-
+.product-admin-description__price--name{
+  font-size: var(--fs-xs);
+  color: var(--secundary-900);
+}
 .product-admin-description__status--active {
   color: var(--secundary-600);
   font-weight: 600;

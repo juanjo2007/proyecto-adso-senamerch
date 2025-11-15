@@ -2,16 +2,15 @@
 .edit-post {
   display: flex;
   justify-content: center;
-  padding: var(--gap-md);
-  gap: var(--gap-md);
+  padding: var(--gap-xs);
   width: 100%;
-  padding-block: 3.8rem;
+  padding-block: 10rem;
 }
-/* >>> SECCIÓN DE CONTENIDO DEL CONTENEDOR  */
+
+/* >>> SECCIÓN DE CONTENIDO DEL FORMULARIO */
 .edit-post__form {
   background-color: var(--white);
-  background: var(--white);
-  padding: var(--gap-md);
+  padding: var(--gap-lg);
   border-radius: 1.2rem;
   box-shadow: 0 4px 10px rgba(0, 0, 0, 0.15);
   border: 1px solid var(--secundary-900);
@@ -19,8 +18,8 @@
   max-width: 700px;
   display: flex;
   flex-direction: column;
-  justify-content: space-between;
 }
+
 .edit-post__fields-wrapper {
   display: grid;
   grid-template-columns: repeat(2, 1fr);
@@ -28,6 +27,7 @@
   width: 100%;
   box-sizing: border-box;
 }
+
 .edit-post__title {
   grid-column: 1 / -1;
   text-align: center;
@@ -37,22 +37,25 @@
   color: var(--black);
   font-family: var(--font-primary-semibold);
 }
+
 .edit-post__field {
   display: flex;
   flex-direction: column;
-  gap: var(--gap-xxxs);
+  gap: var(--gap-xxs);
   min-width: 0;
   box-sizing: border-box;
 }
+
 .edit-post__field--full {
   grid-column: 1 / -1;
-  margin-top: var(--gap-md);
 }
+
 .edit-post__label {
   font-size: var(--fs-xxs);
   color: var(--gray-900);
   font-family: var(--font-primary-semibold);
 }
+
 .edit-post__input,
 .edit-post__textarea,
 .edit-post__select {
@@ -68,6 +71,7 @@
   width: 100%;
   box-sizing: border-box;
 }
+
 .edit-post__input:focus,
 .edit-post__textarea:focus,
 .edit-post__select:focus {
@@ -78,111 +82,34 @@
   min-height: 12rem;
   resize: vertical;
 }
-/* >>> SECCIÓN DE ACCIONES DEL CONTENEDOR */
-.edit-post__actions-grid {
+/* >>> SECCIÓN DE ACCIONES (BOTONES) */
+/* >>> CONTENEDOR DE ACCIONES (BOTONES) */
+.edit-post__actions {
   display: grid;
-  grid-template-columns: 1fr 1fr;
-  align-items: center;
-  margin-top: var(--gap-xl);
+  grid-template-columns: repeat(2, 1fr);
+  grid-column: 1 / -1; /* ocupa todo el ancho */
   width: 100%;
+  gap: var(--gap-md);
+  margin-top: var(--gap-md);
 }
+
 .edit-post__field-secundary {
   display: flex;
   justify-content: flex-start;
-  align-items: center;
 }
-.edit-post__field-actions {
+
+.edit-post__field-primary {
   display: flex;
   justify-content: flex-end;
-  align-items: center;
 }
-.edit-post__field-actions .btn {
-  font-family: var(--font-primary-regular);
-  font-weight: 400;
-  align-self: flex-end; 
-  padding: var(--button-padding-top) var(--button-padding-right) 
-           var(--button-padding-bottom) var(--button-padding-left);
-  display: inline-flex;
-  align-items: center;
-  gap: 0.5rem; 
-  text-decoration: none;
-}
-.edit-post__icon {
-  width: 2rem;
-  height: 2rem;
-  object-fit: contain;
-  display: inline-block;
-  margin-left: 0.25rem;
-}
-.edit-post__icon-secundary {
-  width: 1.6rem;
-  height: 1.6rem;
-  object-fit: contain;
-  display: inline-block;
-  margin-left: 0.25rem;
-}
-/* >>> SECCIÓN DE CONTENEDOR DE LAS ALERTAS JS*/
-.alert {
-  position: fixed;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%) scale(0.8);
-  background-color: var(--white);
-  border: 2px solid var(--primary-900);
-  color: var(--primary-950);
-  padding: 1.8rem 2.5rem;
-  border-radius: 12px;
-  font-family: var(--font-primary);
-  font-size: var(--fs-sm);
-  text-align: center;
-  box-shadow: 0 8px 30px rgba(0, 0, 0, 0.25);
-  z-index: 9999;
-  opacity: 0;
-  transition: opacity 0.4s ease, transform 0.4s ease;
-}
-.alert--show {
-  opacity: 1;
-  transform: translate(-50%, -50%) scale(1);
-}
-.alert__content {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  gap: 0.8rem;
-}
-.alert__message {
-  margin: 0;
-  font-weight: 500;
-  color: var(--primary-950);
-}
-.alert--success {
-  border-color: var(--secundary-700);
-  background-color: #e8fff1;
-}
-.alert--error {
-  border-color: #c0392b;
-  background-color: #ffecec;
-}
-/* >>> SECCIÓN DE RESPONSIVIDAD DE LAS ALERTAS JS*/
-@media (max-width: 1024px) {
-  .edit-post__fields-wrapper {
-    grid-template-columns: repeat(2, 1fr);
-  }
-}
+
+/* >>> RESPONSIVO */
 @media (max-width: 768px) {
-  .edit-post__fields-wrapper {
+  .edit-post__actions {
     grid-template-columns: 1fr;
-  }
-  .edit-post__form {
-    padding: var(--gap-md);
-    min-height: auto;
-  }
-  .edit-post__actions-grid {
-    grid-template-columns: 1fr;
-    gap: var(--gap-md);
   }
   .edit-post__field-secundary,
-  .edit-post__field-actions {
-    justify-content: center;
+  .edit-post__field-primary {
+    justify-content: flex-start;
   }
 }

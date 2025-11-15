@@ -5,11 +5,14 @@
       <p class="admin-panel__text">Introduce el código secreto de administrador para continuar.</p>
 
       <form class="admin-panel__form">
-        <input type="password" class="admin-panel__input" placeholder="Ingresa el código" required>
+        <div class="admin-panel__field">
+          <label class="admin-panel__label">Código de ingreso</label>
+          <input type="password" class="admin-panel__input" placeholder="Ingresa el código" required>
+        </div>
         <div class="admin-panel__action">
-        <button type="submit" class="btn btn--primary admin-panel__get-into ">Validar código
-          <img src="/frontend/public/assets/icons/validation-check.svg" alt="Icono Comprar" class="admin-panel__icon">
-        </button>
+          <button type="submit" class="btn btn--primary admin-panel__get-into ">Validar código
+            <img src="/frontend/public/assets/icons/validation-check.svg" alt="Icono Comprar" class="admin-panel__icon">
+          </button>
         </div>
       </form>
 

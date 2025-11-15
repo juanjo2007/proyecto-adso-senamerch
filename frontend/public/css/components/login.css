@@ -1,94 +1,91 @@
-.site-main { 
+/* ===================================================== */
+/*                     SITE MAIN                         */
+/* ===================================================== */
+.site-main-login { 
   display: flex;
-  justify-content: center;
+  /* justify-content: center; */
   align-items: center;
   box-sizing: border-box;
-  padding-block: 8.6rem; /* 🔹 margen natural arriba y abajo */
-  overflow: hidden; /* evita desbordes */
-  min-height: 100%; /* usa el flujo normal del documento */
+  padding-block: 8.4rem; 
+  overflow: hidden;
+  min-height: 100%;
 }
-
+/* ===================================================== */
+/*                       LOGIN                           */
+/* ===================================================== */
 .login {
   border: 1px solid var(--secundary-900);
   background-color: var(--white);
-  padding: var(--gap-md);
-  width: 500px;
+  padding: var(--gap-lg);
+  width: 100%;
+  /* max-width: fit-content; */
   border-radius: 8px;
   font-family: var(--font-primary);
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  margin: auto; 
+  margin: 24px; 
   box-sizing: border-box;
 }
 .login__title {
   font-size: var(--fs-sm);
   text-align: center;
-  margin-bottom: var(--gap-md);
+  margin-bottom: var(--gap-lg);
   color: var(--black);
 }
 .login__form {
   display: flex;
   flex-direction: column;
-  gap: var(--gap-md);
+  /* justify-content: center; */
+  align-items: center; 
+  gap: var(--gap-lg) !important;
   width: 100%;
 }
+/* ===================================================== */
+/*                CAMPOS E INPUTS                        */
+/* ===================================================== */
 .login__field {
   display: flex;
   flex-direction: column;
+  align-items: flex-start;
   gap: var(--gap-xxxs);
+  width: 100%;
+  /* max-width: 360px;  */
 }
 .login__label {
-  font-size: var(--fs-xxs);
-  color: var(--gray-950);
+  font-size: var(--fs-xxxs);
+  color: var(--black);
+  font-family: var(--font-secondary-medium);
 }
 .login__input {
   padding: var(--padding-top) var(--padding-right) var(--padding-bottom) var(--padding-left);
   border: 1px solid var(--secundary-900);
-  border-radius: 6px;
+  border-radius: 8px;
   font-size: var(--fs-xs);
   outline: none;
   transition: border 0.3s, box-shadow 0.3s;
   width: 100%;
+  /* min-width: 320px !important;  */
   box-sizing: border-box;
   color: var(--gray-600);
-}
-.login__input:focus {
-  border-color: var(--secundary-900);
-  color: var(--gray-950);
-}
-.login__button {
-  display: flex;
-  justify-content: center;
-  margin-top: var(--gap-md);
-}
-.login__button .btn {
-  font-family: var(--font-primary-regular);
-  font-weight: 400;
-  align-self: flex-end; 
-  padding: var(--button-padding-top) var(--button-padding-right) 
-           var(--button-padding-bottom) var(--button-padding-left);
-  display: inline-flex;
-  align-items: center;
-  gap: 0.5rem; /* espacio entre texto e icono */
-  text-decoration: none;
+  background-color: var(--white);
 }
 
-/* Icono a la derecha */
-.login__icon {
-  width: 2rem;
-  height: 2rem;
-  object-fit: contain;
-  display: inline-block;
-  margin-left: 0.25rem;
+.login__input:focus {
+  border-color: var(--secundary-600);
+  box-shadow: 0 0 0 3px var(--secundary-100);
 }
 .login__password-wrapper {
   position: relative;
-  display: flex;
-  align-items: center;
+  width: 100%;      
+  /* max-width: 360px;   */
 }
 .login__toggle-password {
+  position: absolute;
+  right: 12px;      
+  top: 50%;
+  transform: translateY(-50%);
   background-color: var(--secundary-600);
   border: none;
   padding: 4px 10px;
@@ -96,14 +93,14 @@
   font-size: var(--fs-xxs);
   cursor: pointer;
   transition: background 0.3s, border-color 0.3s, transform 0.15s;
-  margin-left: 8px;
   color: var(--white);
+  margin-left: 0;
 }
 .login__toggle-password:hover {
   background-color: var(--secundary-700);
 }
 .login__toggle-password:active {
-  transform: scale(0.95);
+  transform: translateY(-50%) scale(0.95);
 }
 .login__link {
   color: var(--secundary-700);
@@ -112,47 +109,27 @@
   transition: color 0.3s;
   text-align: center;
 }
-
 .login__link:hover {
   color: var(--secundary-950);
   text-decoration: underline;
 }
-@media (max-width: 1024px) {
+@media (width > 640px) {
   .login {
-    width: 100%;
-    min-width: 320px;
-    padding: var(--gap-md);
-  }
-}
-@media (max-width: 768px) {
-  .site-main {
-    padding-block: 4rem;
-  }
-  .login {
-    width: 100%;
-    max-width: 360px;
-    min-width: 320px;
-    margin: 0 auto;
-  }
-}
-@media (max-width: 640px) {
-  .site-main {
-    width: 100%;
-    padding-block: 16rem; 
-  }
-  .login {
-    width: 100%;
-    min-width: 320px;  
-    max-width: 100%;   
-    padding: var(--gap-md);
+    width: fit-content;
+    padding: var(--gap-lg);
     margin: 0 auto;
     box-shadow: 0 2px 8px rgba(0, 0, 0, 0.15);
   }
-  .login__title {
-    font-size: var(--fs-xs);
+  .login__input{
+    width: 360px;
   }
 }
-/* Scripts Alerta */
+
+
+/* ===================================================== */
+/*                ALERTAS (JS)                           */
+/* ===================================================== */
+
 .alert {
   position: fixed;
   top: 50%;
@@ -194,7 +171,6 @@
   color: var(--primary-950);
 }
 
-/* Colores según tipo */
 .alert--success {
   border-color: var(--secundary-700);
   background-color: #e8fff1;
@@ -204,4 +180,3 @@
   border-color: #c0392b;
   background-color: #ffecec;
 }
-

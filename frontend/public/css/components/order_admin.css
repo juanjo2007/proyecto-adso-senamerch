@@ -43,13 +43,6 @@
   justify-content: center;
   align-items: center;
 }
-.orders-admin__icon-secundary {
-  width: 1.6rem;
-  height: 1.6rem;
-  object-fit: contain;
-  display: inline-block;
-  margin-left: 0.25rem;
-}
 .orders-admin__table-row:nth-child(even) {
   background-color: var(--gray-200);
 }

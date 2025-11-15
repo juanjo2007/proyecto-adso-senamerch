@@ -1,17 +1,17 @@
-document.addEventListener("DOMContentLoaded", function (){
+document.addEventListener("DOMContentLoaded", function () {
   const form = document.querySelector(".edit-post-two");
 
-  if(form){
+  if (form) {
     fetch("/frontend/public/views/components/edit_post2.html")
       .then(response => response.text())
       .then(data => {
         form.innerHTML = data;
 
         // === Seleccionar botones ===
-        const btnSave = form.querySelector(".btn--primary");
-        const btnCancel = form.querySelector(".btn-variant2--secondary");
+        const btnSave = form.querySelector(".btn--primary"); // Guardar cambios
+        const btnCancel = form.querySelector(".btn-secundary"); // Cancelar producto
 
-        // === FUNCIÓN ALERTA (mismo diseño de las anteriores) ===
+        // === FUNCIÓN ALERTA ===
         function showAlert(message, type = "success") {
           const existingAlert = document.querySelector(".alert");
           if (existingAlert) existingAlert.remove();
@@ -38,7 +38,7 @@ document.addEventListener("DOMContentLoaded", function (){
 
         // === Evento: Guardar cambios ===
         if (btnSave) {
-          btnSave.addEventListener("click", function(e) {
+          btnSave.addEventListener("click", function (e) {
             e.preventDefault();
             showAlert("Producto editado correctamente", "success");
             setTimeout(() => {
@@ -49,16 +49,15 @@ document.addEventListener("DOMContentLoaded", function (){
 
         // === Evento: Cancelar ===
         if (btnCancel) {
-          btnCancel.addEventListener("click", function(e) {
+          btnCancel.addEventListener("click", function (e) {
             e.preventDefault();
             showAlert("Cambios cancelados", "error");
             setTimeout(() => {
-              window.location.href = "view_seller_cards.html";
+              window.location.href = "view_edit_post.html";
             }, 1500);
           });
         }
-
       })
-      .catch(error => console.log("Error", error));
-  } 
+      .catch(error => console.log("Error:", error));
+  }
 });

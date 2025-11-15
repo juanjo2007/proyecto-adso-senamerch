@@ -5,6 +5,7 @@
   width: 100%;
   height: 88vh; 
   display: flex;
+  padding-block: 2rem;
   align-items: center;
   justify-content: center;
   color: var(--white);
@@ -84,20 +85,9 @@
   resize: vertical;
 }
 /* >>> SECCIÓN DE ACCIONES DEL CONTENEDOR DE CONTACTO */
-.contact__form  .btn {
-  font-family: var(--font-primary-regular);
-  font-weight: 400;
-}
-.contact__form  .btn {
-  align-self: center; 
-  gap: 0.5rem;
-}
-.contact__icon {
-  width: 2rem;
-  height: 2rem;
-  object-fit: contain;
-  display: inline-block;
-  margin-left: 0.25rem;
+.contact__actions-primary{
+  display: flex;
+  justify-content: center;
 }
 @media (max-width: 640px) {
   .contact__container {

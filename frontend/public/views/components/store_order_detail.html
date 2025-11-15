@@ -1,4 +1,4 @@
-<main class="store-order-detail-content">
+<section class="store-order-detail-content">
   <section class="store-order-detail">
     <!-- >>> Cabecera principal -->
     <header class="store-order-detail__header">
@@ -34,9 +34,10 @@
           <p><strong>Tomates chonto</strong> — 5 kg — $30.000</p>
         </div>
         <div class="store-order-detail__product-action">
-          <a href="store_orders_view.html" class="btn btn-variant2--secondary store-order-detail__cancel">Cancelar producto
-            <img src="/frontend/public/assets/icons/cancel.svg" alt="Icono Comprar" class="store-order-detail__icon-secundary">
-          </a>
+          <button class="btn-secundary btn-secundary-style store-order-detail__cancel-product">
+            Cancelar Producto
+            <img src="/frontend/public/assets/icons/cancel.svg" alt="Icono exportar PDF" class="btn-secundary__icon">
+          </button>
         </div>
       </div>
 
@@ -45,9 +46,10 @@
           <p><strong>Lechugas romana</strong> — 3 unidades — $15.000</p>
         </div>
         <div class="store-order-detail__product-action">
-          <a href="store_orders_view.html" class="btn btn-variant2--secondary store-order-detail__cancel">Cancelar producto
-            <img src="/frontend/public/assets/icons/cancel.svg" alt="Icono Comprar" class="store-order-detail__icon-secundary">
-          </a>
+          <button class="btn-secundary btn-secundary-style store-order-detail__cancel-product">
+            Cancelar producto
+            <img src="/frontend/public/assets/icons/cancel.svg" alt="Icono exportar PDF" class="btn-secundary__icon">
+          </button>
         </div>
       </div>
 
@@ -61,17 +63,19 @@
     <!-- >>> Botones de acción -->
     <div class="store-order-detail__actions">
       <div class="store-order-detail__secondary">
-        <a href="store_orders_view.html" class="btn btn-variant2--secondary store-order-detail__cancel">Cancelar producto
-          <img src="/frontend/public/assets/icons/cancel.svg" alt="Icono Comprar" class="store-order-detail__icon-secundary">
-        </a>
+        <button class="btn-secundary btn-secundary-style store-order-detail__cancel-order">
+          Cancelar pedido
+          <img src="/frontend/public/assets/icons/cancel.svg" alt="Icono exportar PDF" class="btn-secundary__icon">
+        </button>
       </div>
 
+      <!-- ✅ Botón primario (suspender usuario) -->
       <div class="store-order-detail__buttons">
-        <a href="store_orders_view.html" class="btn btn--primary store-order-detail__realiced">
+        <button class="btn btn--primary  store-order-detail__delivery">
           Entregar pedido
-          <img src="/frontend/public/assets/icons/delivery.svg" alt="Icono de entrega" class="store-order-detail__icon">
-        </a>
+          <img src="/frontend/public/assets/icons/delivery.svg" alt="Icono entregar pedido" class="btn__icon">
+        </button>
       </div>
     </div>
   </section>
-</main>
+</section>

@@ -2,28 +2,34 @@
 .cards__container {
   display: grid;
   gap: var(--gap-lg);
-  width: fit-content;
+  width: 100%;
   box-sizing: border-box;
   margin: var(--gap-md) auto;
-  padding-inline: var(--gap-sm);
+  padding-inline: 24px; /* ✅ 24px de espacio lateral en móvil */
   justify-content: center;
   justify-items: center;
+  grid-template-columns: 1fr; /* ✅ una columna en móvil */
 }
+
 /* >>> SECCIÓN DE RESPONSIVIDAD DE LAS TARJETAS */
 @media (width > 640px) {
-    .cards__container {
-        grid-template-columns: repeat(2, 1fr);
-        gap: var(--gap-md); 
-        max-width: 100%;
-    }
+  .cards__container {
+    grid-template-columns: repeat(2, 1fr);
+    gap: var(--gap-md);
+    max-width: 100%;
+    padding-inline: var(--gap-sm); /* vuelve al valor anterior */
+  }
 }
+
 @media (width > 1024px) {
-    .cards__container {
-        grid-template-columns: repeat(4, 1fr);
-        gap: var(--gap-lg);
-        max-width: 100%;
-    }
+  .cards__container {
+    grid-template-columns: repeat(4, 1fr);
+    gap: var(--gap-lg);
+    max-width: 100%;
+    padding-inline: var(--gap-sm);
+  }
 }
+
 /* >>> SECCIÓN DE CONTENIDO DE LAS TARJETAS */
 .card {
   border: 1px solid var(--secundary-900);
@@ -31,7 +37,8 @@
   padding: 24px;
   text-align: center;
   background-color: var(--secundary-50);
-  min-width: 320px;
+  width: 100%; /* ✅ ocupa todo el espacio disponible */
+  min-width: unset; /* ✅ evita forzar tamaño mínimo */
   max-width: 100%;
   box-shadow: 0 2px 4px var(--secundary-900);
   overflow: hidden;
@@ -42,15 +49,18 @@
   transition: transform 0.3s ease, box-shadow 0.3s ease;
   cursor: pointer;
 }
+
 .card:hover {
   transform: translateY(-4px);
   box-shadow: 0 6px 14px rgba(0, 0, 0, 0.15);
 }
+
 .card__image {
   width: 100%;
   height: 200px;
   object-fit: cover;
   border-radius: 8px;
+  border: 1px solid var(--secundary-400);
 }
 .card__info {
   display: flex;
@@ -59,25 +69,8 @@
   gap: 8px;
   margin-top: 16px;
 }
-.card .btn {
-  font-family: var(--font-primary-regular);
-  font-weight: 400;
-  align-self: flex-end; 
-  padding: var(--button-padding-top) var(--button-padding-right) 
-           var(--button-padding-bottom) var(--button-padding-left);
-  display: inline-flex;
-  align-items: center;
-  gap: 0.5rem; /* espacio entre texto e icono */
-  text-decoration: none;
-}
-
-/* Icono a la derecha */
-.card__icon {
-  width: 2rem;
-  height: 2rem;
-  object-fit: contain;
-  display: inline-block;
-  margin-left: 0.25rem;
+.card__pay {
+  align-self: end;
 }
 .card__title {
   font-size: var(--fs-xs);
@@ -88,6 +81,7 @@
   margin: 0;
   order: -1;
 }
+
 .card__price {
   font-size: var(--fs-sm);
   color: var(--black);
@@ -97,4 +91,3 @@
   margin: 0;
   order: -1;
 }
-

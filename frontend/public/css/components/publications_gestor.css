@@ -1,4 +1,4 @@
-/* >>> SECCIÓN DE CONTENEDOR PARA SUBIR UN PRODUCTO A TU TIENDA*/
+/* >>> SECCIÓN DE CONTENEDOR PARA SUBIR UN PRODUCTO A TU TIENDA*/ 
 .create-post-one {
   display: flex;
   justify-content: center;
@@ -6,58 +6,82 @@
   width: 100%;
   margin: 0 auto;
   box-sizing: border-box;
-  padding-block: 14.8rem;
+  padding-block: 14rem;
 }
-/* >>> SECCIÓN DE CONTENIDO DEL CONTENEDOR */
+
+/* >>> FORMULARIO */
 .create-post-one__form {
   background: var(--white);
-  padding: var(--gap-sm);
+  padding: var(--gap-lg);
   border-radius: 1.2rem;
   box-shadow: 0 4px 10px rgba(0, 0, 0, 0.15);
   border: 1px solid var(--secundary-900);
-  width: 100%;
-  max-width: 700px;
-  display: flex;
-  flex-direction: column;
-  justify-content: space-between;
+
+  width: fit-content;
+  max-width: 100%;
+
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 360px));
+  grid-auto-rows: auto;
+  justify-content: center;
   box-sizing: border-box;
 }
+
+/* >>> GRID INTERNO */
 .create-post-one__fields-wrapper {
+  grid-column: 1 / -1;
   display: grid;
-  grid-template-columns: repeat(2, 1fr);
+  grid-template-columns: repeat(2, minmax(0, 360px));
   gap: var(--gap-md);
   width: 100%;
+  justify-content: center;
   box-sizing: border-box;
 }
+
+/* >>> TÍTULO (YA NO ENTRA EN COLUMNAS) */
 .create-post-one__title {
-  grid-column: 1 / -1;
+  display: block;
+  width: 100%;
   text-align: center;
+  margin: 0 auto var(--gap-xs);
   font-size: var(--fs-sm);
   font-weight: 600;
-  margin-bottom: var(--gap-xs);
   color: var(--black);
   font-family: var(--font-primary-semibold);
+
+  /* Fuerza a NO quedar dentro de columnas */
+  grid-column: 1 / -1 !important;
+  justify-self: center !important;
 }
+
+/* >>> FIELD */
 .create-post-one__field {
   display: flex;
   flex-direction: column;
   gap: var(--gap-xxxs);
-  min-width: 0; 
+  width: 100%;
+  max-width: 360px;
   box-sizing: border-box;
 }
+
+/* >>> FIELD FULL WIDTH */
 .create-post-one__field--full {
   grid-column: 1 / -1;
+  max-width: 100% !important;
 }
+
+/* >>> LABEL */
 .create-post-one__label {
-  font-size: var(--fs-xxs);
+  font-size: var(--fs-xxxs);
   font-family: var(--font-primary-semibold);
   color: var(--black);
-  word-wrap: break-word; 
+  word-wrap: break-word;
   overflow-wrap: break-word;
   white-space: normal;
 }
+
+/* >>> INPUTS / SELECT */
 .create-post-one__input,
-.create-post-one__textarea,
 .create-post-one__select {
   padding: var(--padding-top) var(--padding-right)
            var(--padding-bottom) var(--padding-left);
@@ -65,83 +89,83 @@
   border-radius: 0.6rem;
   font-size: var(--fs-xs);
   font-family: var(--font-primary);
-  color: var(--gray-600);
+  color: var(--gray-950);
   background: var(--white);
   transition: border 0.3s;
-  width: 100%; 
+  width: 100%;
+  max-width: 360px;
   box-sizing: border-box;
 }
+
+/* >>> TEXTAREA */
+.create-post-one__textarea {
+  padding: var(--padding-top) var(--padding-right)
+           var(--padding-bottom) var(--padding-left);
+  border: 1px solid var(--secundary-900);
+  border-radius: 8px;
+  font-size: var(--fs-xs);
+  font-family: var(--font-primary);
+  color: var(--gray-950);
+  background: var(--white);
+  outline: none;
+  width: 100%;
+  box-sizing: border-box;
+  min-height: 12rem;
+  resize: vertical;
+}
+
+/* >>> TEXTAREA FULL WIDTH */
+.create-post-one__field--full .create-post__textarea {
+  max-width: 100% !important;
+}
+
+/* >>> FOCUS */
 .create-post-one__input:focus,
 .create-post-one__textarea:focus,
 .create-post-one__select:focus {
   border-color: var(--secundary-600);
   outline: none;
 }
-.create-post-one__textarea {
-  min-height: 12rem;
-  resize: vertical;
-}
-/* >>> SECCIÓN DE ACCIONES DEL CONTENEDOR */
-.create-post-one__actions-grid {
-  display: grid;
-  grid-template-columns: 1fr 1fr;
-  gap: var(--gap-sm);
-  width: 100%;
-  margin-top: 1.2rem;
-}
-.create-post-one__field-secundary {
-  display: flex;
-  justify-content: flex-start; 
-  align-items: center;
-  margin: 1.2rem 0; 
-  float: left; 
-  box-sizing: border-box;
-}
+
+/* >>> BOTONES */
+.create-post-one__field-secundary,
 .create-post-one__field-actions {
   display: flex;
-  justify-content: flex-end; 
   align-items: center;
   margin: 1.2rem 0;
-  float: right;
-  box-sizing: border-box;
 }
-.create-post-one__field-secundary .btn,
-.create-post-one__field-actions .btn {
-  font-family: var(--font-primary-regular);
-  font-weight: 400;
-  align-self: flex-end; 
-  padding: var(--button-padding-top) var(--button-padding-right) 
-           var(--button-padding-bottom) var(--button-padding-left);
-  display: inline-flex;
-  align-items: center;
-  gap: 0.5rem; 
-  text-decoration: none;
+
+.create-post-one__field-secundary {
+  grid-column: 1 / 2;
+  justify-self: start;
 }
-.create-post-one__icon {
-  width: 2rem;
-  height: 2rem;
-  object-fit: contain;
-  display: inline-block;
-  margin-left: 0.25rem;
+
+.create-post-one__field-actions {
+  grid-column: 2 / 3;
+  justify-self: end;
 }
-.create-post-one__icon-secundary {
-  width: 1.6rem;
-  height: 1.6rem;
-  object-fit: contain;
-  display: inline-block;
-  margin-left: 0.25rem;
+
+/* >>> RESPONSIVE */
+@media (max-width: 1024px) {
+  .create-post-one__form {
+    grid-template-columns: 1fr;
+  }
 }
-/* >>> SECCIÓN DE RESPONSIVIDAD*/
-@media (max-width: 768px) {
+
+@media (max-width: 640px) {
+  .create-post-one__form {
+    grid-template-columns: 1fr;
+  }
+  .create-post-one__fields-wrapper {
+    grid-template-columns: 1fr;
+    justify-content: stretch;
+  }
   .create-post-one__field-secundary,
   .create-post-one__field-actions {
-    width: 100%; 
-    float: none;
-    justify-content: center; 
+    grid-column: 1 / -1;
+  }
+  .create-post-one__field-actions{
+     justify-self: start;
   }
 }
-@media (max-width: 1024px) {
-  .create-post-one__fields-wrapper {
-    grid-template-columns: repeat(2, 1fr);
-  }
-}
+

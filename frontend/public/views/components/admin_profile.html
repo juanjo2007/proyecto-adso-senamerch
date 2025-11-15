@@ -1,4 +1,4 @@
-<main class="admin-profile">
+<section class="admin-profile">
   <section class="admin-profile__card">
     <div class="admin-profile__header">
       <div class="admin-profile__avatar">
@@ -39,16 +39,18 @@
 
     <div class="admin-profile__actions-grid">
       <div class="admin-profile__actions-secondary">
-        <a href="login.html" class="btn btn-variant2--secondary admin-profile__gestor">Cerrar Sesión
-          <img src="/frontend/public/assets/icons/home.svg" alt="Icono Comprar" class="admin-profile__icon-secundary">
-        </a>
+        <button type="button" class="btn-secundary btn-secundary-style admin-profile__session" aria-label="Exportar información en PDF">
+          Cerrar Sessión
+          <img src="/frontend/public/assets/icons/home.svg" alt="" class="btn-secundary__icon">
+        </button>
       </div>
 
       <div class="admin-profile__actions-primary">
-        <a href="edit_admin_profile_view.html" class="btn btn--primary admin-profile__save">Editar datos
-          <img src="/frontend/public/assets/icons/edit.svg" alt="Icono Comprar" class="admin-profile__icon">
-        </a>
+        <button type="button" class="btn btn--primary admin-profile__submit" aria-label="Editar datos del administrador">
+          Editar datos
+          <img src="/frontend/public/assets/icons/edit.svg" alt="" class="btn__icon admin-profile__icon" aria-hidden="true">
+        </button>
       </div>
     </div>
   </section>
-</main>
+</section>

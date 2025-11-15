@@ -1,9 +1,8 @@
-/* >>> SECCIÓN DE CONTENEDOR DE PERFIL DEL ADMINISTRADOR */
 .admin-profile {
   width: 100%;
   margin: 0 auto;
   box-sizing: border-box;
-  padding-block: 8rem;
+  padding-block: 8.8rem;
   display: flex;
   justify-content: center;
 }
@@ -20,58 +19,33 @@
   flex-direction: column;
   gap: var(--gap-lg);
 }
-/* >>> SECCIÓN DE ACCIONES DE PERFIL DEL ADMINISTRADOR */
+/* >>> SECCIÓN DE ACCIONES DEL PERFIL DEL ADMINISTRADOR */
 .admin-profile__actions-grid {
   display: grid;
-  grid-template-columns: 1fr 1fr;
+  grid-template-columns: 1fr 1fr; 
+  gap: var(--gap-sm);
   align-items: center;
   width: 100%;
   margin-top: var(--gap-md);
 }
+.admin-profile__actions-secondary,
+.admin-profile__actions-primary {
+  display: flex;
+  align-items: center;
+}
 .admin-profile__actions-secondary {
-  justify-self: start;
+  justify-content: flex-start;
 }
 .admin-profile__actions-primary {
-  justify-self: end;
-}
-.admin-profile__actions-primary .btn{
-  font-family: var(--font-primary-regular);
-  font-weight: 400;
-  align-self: flex-end; 
-  padding: var(--button-padding-top) var(--button-padding-right) 
-           var(--button-padding-bottom) var(--button-padding-left);
-  display: inline-flex;
-  align-items: center;
-  gap: 0.5rem; 
-  text-decoration: none;
-}
-/* >>> SECCIÓN DE CONTENIDO DE LAS TARJETAS */
-.admin-profile__icon {
-  width: 2rem;
-  height: 2rem;
-  object-fit: contain;
-  display: inline-block;
-  margin-left: 0.25rem;
-}
-.admin-profile__icon-secundary {
-  width: 1.6rem;
-  height: 1.6rem;
-  object-fit: contain;
-  display: inline-block;
-  margin-left: 0.25rem;
+  justify-content: flex-end;
 }
 @media (max-width: 640px) {
-  .admin-profile__card {
-    width: 100%;
-    min-width: 320px; 
-  }
   .admin-profile__actions-grid {
     grid-template-columns: 1fr;
-    gap: var(--gap-sm);
   }
   .admin-profile__actions-secondary,
   .admin-profile__actions-primary {
-    justify-self: self-start;
+    justify-content: center; 
   }
 }
 .admin-profile__header {
@@ -129,26 +103,4 @@
   font-size: var(--fs-xs);
   color: var(--gray-900);
   text-align: right;
-}
-@media (max-width: 640px) {
-  .admin-profile__card {
-    padding: var(--gap-md);
-  }
-  .admin-profile__header {
-    flex-direction: column;
-    align-items: center;
-    text-align: center;
-  }
-  .admin-profile__field {
-    flex-direction: column;
-    align-items: flex-start;
-  }
-}
-@media (max-width: 640px) {
-  .admin-profile__card {
-    width: 100%;
-    min-width: 320px;
-    max-width: 100%;
-    margin: 0;
-  }
 }

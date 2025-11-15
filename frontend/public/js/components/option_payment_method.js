@@ -10,9 +10,9 @@ document.addEventListener('DOMContentLoaded', function () {
       .then(data => {
         methodContainer.innerHTML = data;
 
-        // Ahora que ya está cargado el componente,
-        // seleccionamos las opciones y agregamos la lógica de selección
+        // === Opciones de método de pago ===
         const options = methodContainer.querySelectorAll(".payment-method__option");
+        const payButton = methodContainer.querySelector(".payment-method__pay"); // 🔥 Botón pagar
 
         options.forEach(option => {
           option.addEventListener("click", () => {
@@ -22,6 +22,14 @@ document.addEventListener('DOMContentLoaded', function () {
             option.classList.add("selected");
           });
         });
+
+        // === 🔥 Evento: botón "Pagar" redirige a details.html ===
+        if (payButton) {
+          payButton.addEventListener("click", () => {
+            window.location.href = "details.html";
+          });
+        }
+
       })
       .catch(error => console.error("Error cargando el componente Payment Method:", error));
   } else {

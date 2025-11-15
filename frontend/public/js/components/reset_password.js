@@ -7,7 +7,37 @@ document.addEventListener("DOMContentLoaded", function () {
       .then(data => {
         direction.innerHTML = data;
 
-        // Crear contenedor de alerta (si no existe)
+        // =====================================================
+        //            SELECCIÓN DE ELEMENTOS DEL RESET
+        // =====================================================
+
+        const form = direction.querySelector(".reset__form");
+        const passwordInputs = direction.querySelectorAll(".reset__input--password");
+        const toggleButtons = direction.querySelectorAll(".reset__toggle-password");
+
+        // =====================================================
+        //       FUNCIÓN PARA MOSTRAR / OCULTAR CONTRASEÑA
+        // =====================================================
+        toggleButtons.forEach((btn, index) => {
+          // ⚠️ Muy importante: evitar que el botón envíe el formulario
+          btn.type = "button";
+
+          btn.addEventListener("click", (e) => {
+            e.preventDefault(); // <-- evita submit accidental
+
+            const input = passwordInputs[index];
+            if (!input) return;
+
+            const isHidden = input.type === "password";
+            input.type = isHidden ? "text" : "password";
+            btn.textContent = isHidden ? "Ocultar" : "Mostrar";
+          });
+        });
+
+        // =====================================================
+        //            ALERTAS (MISMA LÓGICA LOGIN)
+        // =====================================================
+
         let alertContainer = document.querySelector(".alert");
         if (!alertContainer) {
           alertContainer = document.createElement("div");
@@ -15,13 +45,18 @@ document.addEventListener("DOMContentLoaded", function () {
           document.body.appendChild(alertContainer);
         }
 
-        // === Función alerta estilo igual que las anteriores ===
         function showAlert(message, duration = 2000, type = "success") {
           alertContainer.className = "alert";
+
           if (type === "success") alertContainer.classList.add("alert--success");
           if (type === "error") alertContainer.classList.add("alert--error");
 
-          alertContainer.innerHTML = `<p class="alert__message">${message}</p>`;
+          alertContainer.innerHTML = `
+            <div class="alert__content">
+              <p class="alert__message">${message}</p>
+            </div>
+          `;
+
           alertContainer.classList.add("alert--show");
 
           setTimeout(() => {
@@ -29,13 +64,15 @@ document.addEventListener("DOMContentLoaded", function () {
           }, duration);
         }
 
-        // === Evento para el botón "Restablecer" ===
-        const resetButton = direction.querySelector(".btn--primary");
-        if (resetButton) {
-          resetButton.addEventListener("click", function (e) {
+        // =====================================================
+        //                   VALIDACIÓN RESET
+        // =====================================================
+
+        if (form) {
+          form.addEventListener("submit", function (e) {
             e.preventDefault();
 
-            const inputs = direction.querySelectorAll(".reset__input");
+            const inputs = form.querySelectorAll(".reset__input--password");
             const newPassword = inputs[0]?.value.trim();
             const confirmPassword = inputs[1]?.value.trim();
 
@@ -57,6 +94,6 @@ document.addEventListener("DOMContentLoaded", function () {
           });
         }
       })
-      .catch(error => console.log("Error al cargar el componente:", error));
+      .catch(error => console.error("Error al cargar el componente:", error));
   }
 });

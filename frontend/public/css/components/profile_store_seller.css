@@ -11,7 +11,7 @@
   min-width: 320px;
   display: flex;
   flex-direction: column;
-  gap: var(--gap-sm);
+  gap: var(--gap-lg);
 }
 .store-profile__title {
   font-size: var(--fs-sm);
@@ -78,24 +78,6 @@
   justify-content: center; 
   align-items: center;
 }
-.store-profile__actions .btn {
-  font-family: var(--font-primary-regular);
-  font-weight: 400;
-  align-self: flex-end; 
-  padding: var(--button-padding-top) var(--button-padding-right) 
-           var(--button-padding-bottom) var(--button-padding-left);
-  display: inline-flex;
-  align-items: center;
-  gap: 0.5rem; 
-  text-decoration: none;
-}
-.store-profile__icon {
-  width: 2rem;
-  height: 2rem;
-  object-fit: contain;
-  display: inline-block;
-  margin-left: 0.25rem;
-}
 /* >>> SECCIÓN DE RESPONSIVIDAD */
 @media (max-width: 1024px) {
   .store-profile__grid {
@@ -111,9 +93,10 @@
   }
   .store-profile__container {
     width: 100%;
+    padding-inline: 24px;
   }
   .store-profile__title {
-    font-size: var(--fs-md);
+    font-size: var(--fs-sm);
   }
   .store-profile__actions {
     grid-template-columns: 1fr;

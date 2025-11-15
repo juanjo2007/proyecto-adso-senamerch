@@ -6,8 +6,7 @@
 
       <!-- === Caja 1: Información Personal === -->
       <div class="user-profile__card">
-        <h2 class="user-profile__subtitle">Información Personal</h2>
-
+        <h2 class="user-profile__subtitle">Información del usuario</h2>
         <div class="user-profile__info">
           <div class="user-profile__item">
             <span class="user-profile__label">Nombre:</span>
@@ -26,7 +25,7 @@
 
           <div class="user-profile__item">
             <span class="user-profile__label">Contraseña:</span>
-            <p class="user-profile__text">************</p>
+            <p class="user-profile__text">******** (oculta por seguridad)</p>
           </div>
 
           <div class="user-profile__item user-profile__item--activity">
@@ -38,7 +37,7 @@
           </div>
 
           <div class="user-profile__item user-profile__item--image">
-            <span class="user-profile__label">Imagen de portada:</span>
+            <span class="user-profile__label">Imagen de perfil:</span>
             <img
               src="/frontend/public/assets/img/admin_profile.png"
               alt="Portada de perfil del usuario"
@@ -91,17 +90,12 @@
       </div>
 
       <!-- === Acciones === -->
-      <div class="user-profile__actions">
-        <a href="edit_profile_client.html" class="btn btn--primary user-profile__edit">
-          Editar perfil
-          <img
-            src="/frontend/public/assets/icons/edit.svg"
-            alt="Icono Editar"
-            class="user-profile__icon"
-          >
-        </a>
+      <div class="user-profile__actions-primary">
+        <button class="btn btn--primary user-profile__send">
+          Editar datos
+          <img src="/frontend/public/assets/icons/edit.svg" alt="Icono editar" class="btn__icon user-profile__icon">
+        </button>
       </div>
-
     </div>
   </div>
 </section>

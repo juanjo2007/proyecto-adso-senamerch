@@ -101,7 +101,7 @@
   display: grid;
   grid-template-columns: 1fr auto; /* texto | botón */
   align-items: center;
-  background-color: var(--primary-500);
+  background-color: var(--primary-100);
   border: 1px solid var(--secundary-900);
   border-radius: 8px;
   padding: var(--gap-sm);
@@ -130,17 +130,7 @@
     text-align: center;
     justify-items: start;
   }
-
-  .store-order-detail__product-action {
-    margin-top: var(--gap-xs);
-  }
 }
-
-
-.store-order-detail__product:hover {
-  transform: translateY(-2px);
-}
-
 /* >>> BOTONES DE ACCIÓN */
 .store-order-detail__actions {
   display: grid;
@@ -159,21 +149,6 @@
   justify-content: flex-end;
   align-items: center;
 }
-
-.store-order-detail__icon {
-  width: 2rem;
-  height: 2rem;
-  margin-left: 0.4rem;
-  object-fit: contain;
-}
-.store-order-detail__icon-secundary {
-  width: 1.6rem;
-  height: 1.6rem;
-  object-fit: contain;
-  display: inline-block;
-  margin-left: 0.25rem;
-}
-
 /* >>> MEDIA QUERIES */
 @media (max-width: 1024px) {
   .store-order-detail {
@@ -195,7 +170,7 @@
 
   .store-order-detail__actions {
     grid-template-columns: 1fr;
-    gap: var(--gap-xs);
+    gap: var(--gap-lg);
   }
 
   .store-order-detail__buttons {
@@ -203,14 +178,18 @@
   }
 }
 
-@media (max-width: 480px) {
-  .store-order-detail {
-    padding: var(--gap-sm);
+/* >>> SECCIÓN DE RESPONSIVIDAD */
+@media (max-width: 640px) {
+  .store-order-detail-content {
+    padding-block: 16rem;
+    padding-inline: 12px;
   }
-  .store-order-detail__title {
+  .store-orders-detail {
+    width: 100%;
+    max-width: 100%;
+    padding: var(--gap-md);
+  }
+  .store-orders__title {
     font-size: var(--fs-xs);
-  }
-  .store-order-detail__products {
-    padding: var(--gap-sm);
   }
 }

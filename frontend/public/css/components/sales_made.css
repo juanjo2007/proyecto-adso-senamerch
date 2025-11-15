@@ -124,12 +124,21 @@
   justify-content: center;
   align-items: center;
 }
+.sales-made-details .btn-variant2--secondary {
+  padding-top: 6px !important;
+  padding-bottom: 6px !important;
+  min-height: 36px !important; /* altura estándar Material Design */
+  line-height: 1 !important;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+}
 .sales-made-details__icon-secundary {
-  width: 1.6rem;
-  height: 1.6rem;
+  width: 1.8rem;
+  height: 1.8rem;
   object-fit: contain;
   display: inline-block;
-  margin-left: 0.25rem;
+  margin-left: 0.4rem;
 }
 /* >>> SECCIÓN DE RESPONSIVIDAD */
 @media (max-width: 768px) {

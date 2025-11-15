@@ -1,15 +1,18 @@
 /* ================== REGISTER ================== */
 .register {
-  background-color: var(--white);
-  padding: var(--gap-md);
-  width: 700px;
-  margin: 2rem auto;
-  border-radius: 8px;
-  margin-block: 8rem;
   border: 1px solid var(--secundary-900);
-  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+  background-color: var(--white);
+  padding: var(--gap-lg);
+  width: fit-content;
+  border-radius: 8px;
   font-family: var(--font-primary);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  margin: auto; 
   box-sizing: border-box;
+  margin-block: 6.8rem;
 }
 
 .register__title {
@@ -30,7 +33,7 @@
   display: grid;
   grid-template-columns: 1fr 1fr;
   column-gap: var(--gap-lg);
-  row-gap: var(--gap-md);
+  row-gap: var(--gap-lg);
 }
 
 .register__column {
@@ -46,7 +49,7 @@
 }
 
 .register__label {
-  font-size: var(--fs-xxs);
+  font-size: var(--fs-xxxs);
   color: var(--gray-950);
   font-weight: 500;
 }
@@ -54,10 +57,30 @@
 .register__input {
   padding: var(--padding-top) var(--padding-right) var(--padding-bottom) var(--padding-left);
   border: 1px solid var(--secundary-900);
-  border-radius: 6px;
+  border-radius: 8px;
   font-size: var(--fs-xs);
   outline: none;
   transition: border 0.3s, box-shadow 0.3s;
+  width: 100%;
+  max-width: 320px;
+  box-sizing: border-box;
+  color: var(--gray-600);
+  background-color: var(--white);
+}
+.register__input--ubication{
+  padding: var(--padding-top) var(--padding-right) var(--padding-bottom) var(--padding-left);
+  height: 54px;
+  border: 1px solid var(--secundary-900);
+  border-radius: 8px;
+  font-size: var(--fs-xs);
+  outline: none;
+  transition: border 0.3s, box-shadow 0.3s;
+  width: 100%;
+  max-width: 320px;
+  box-sizing: border-box;
+  color: var(--gray-600);
+  background-color: var(--white);
+  margin-bottom: var(--gap-xxxs);
 }
 
 .register__input:focus {
@@ -67,7 +90,7 @@
 
 .register__text {
   font-size: var(--fs-xxxs);
-  color: var(--gray-700);
+  color: var(--gray-700);margin-bottom: 1.1rem;
 }
 
 .register__link {
@@ -108,7 +131,15 @@
   background-color: var(--secundary-700);
   transform: scale(1.03);
 }
-
+.register__actions .btn--primary {
+  padding-top: 8px !important;
+  padding-bottom: 8px !important;
+  min-height: 40px !important; /* altura estándar Material Design */
+  line-height: 1 !important;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+}
 /* ===== ALERT ===== */
 .alert {
   position: fixed;

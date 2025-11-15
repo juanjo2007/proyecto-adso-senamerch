@@ -2,7 +2,7 @@ document.addEventListener("DOMContentLoaded", () => {
   const formContainer = document.querySelector(".edit-store-seller-two");
 
   if (!formContainer) {
-    console.error("No se encontró el contenedor .edit_store_seller-two");
+    console.error("No se encontró el contenedor .edit-store-seller-two");
     return;
   }
 
@@ -39,13 +39,14 @@ document.addEventListener("DOMContentLoaded", () => {
   // 🔹 Eventos de los botones
   function attachEditStoreEvents() {
     const saveBtn = document.querySelector(".btn--primary");
-    const cancelBtn = document.querySelector(".btn-variant2--secondary");
+    const cancelBtn = document.querySelector(".btn-secundary");
 
     if (!saveBtn || !cancelBtn) {
       console.error("No se encontraron los botones de acción");
       return;
     }
 
+    // ✅ Evento GUARDAR
     saveBtn.addEventListener("click", (e) => {
       e.preventDefault();
       showAlert("Cambios guardados correctamente.", "success");
@@ -54,6 +55,7 @@ document.addEventListener("DOMContentLoaded", () => {
       }, 2000);
     });
 
+    // ✅ Evento CANCELAR
     cancelBtn.addEventListener("click", (e) => {
       e.preventDefault();
       showAlert("Cambios cancelados.", "error");

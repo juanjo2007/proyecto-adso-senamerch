@@ -1,7 +1,7 @@
 <section class="edit-post">
   <form class="edit-post__form">
     <div class="edit-post__fields-wrapper">
-      <h2 class="edit-post__title">Editar producto</h2>
+      <h2 class="edit-post__title">Sigue Editando el producto</h2>
 
       <div class="edit-post__field">
         <label class="edit-post__label">Precio * Unidad de medida</label>
@@ -11,11 +11,10 @@
           <option value="lb">Libra (lb)</option>
           <option value="unidad">Unidad</option>
           <option value="litro">Litro (L)</option>
-          <option value="litro">Mediolitro (Ml)</option>
+          <option value="mililitro">Mililitro (mL)</option>
         </select>
       </div>
 
-      <!-- Campo: Unidad de medida -->
       <div class="edit-post__field">
         <label class="edit-post__label">Unidad de medida</label>
         <select class="edit-post__select" required>
@@ -28,7 +27,6 @@
         </select>
       </div>
 
-      <!-- Campo: Descuento -->
       <div class="edit-post__field">
         <label class="edit-post__label">Descuento (%)</label>
         <input 
@@ -40,7 +38,6 @@
         >
       </div>
 
-      <!-- Campo: Imagen -->
       <div class="edit-post__field">
         <label class="edit-post__label">Imagen del producto</label>
         <input 
@@ -49,28 +46,29 @@
           accept="image/*"
         >
       </div>
-    </div>
 
-      <!-- Campo: Descripción -->
       <div class="edit-post__field edit-post__field--full">
         <label class="edit-post__label">Descripción</label>
-        <textarea 
-          class="edit-post__textarea"
-        >Tomates frescos del Valle, cultivados sin pesticidas.</textarea>
+        <textarea class="edit-post__textarea">
+Tomates frescos del Valle, cultivados sin pesticidas.
+        </textarea>
       </div>
 
+      <!-- 🔽 CONTENEDOR DE BOTONES (alineados por columnas) -->
+      <div class="edit-post__actions">
+        <div class="edit-post__field-secundary">
+          <button class="btn-secundary btn-secundary-style edit-post__cancel">
+            Cancelar producto
+            <img src="/frontend/public/assets/icons/cancel.svg" alt="Icono cancelar" class="btn-secundary__icon">
+          </button>
+        </div>
 
-    <div class="edit-post__actions-grid">
-      <div class="edit-post__field-secundary">
-        <a href="view_seller_cards.html" class="btn btn-variant2--secondary edit-post__cancel">Cancelar producto
-          <img src="/frontend/public/assets/icons/cancel.svg" alt="Icono Comprar" class="edit-post__icon-secundary">
-        </a>
-      </div>
-
-      <div class="edit-post__field-actions">
-        <a href="view_seller_cards.html" class="btn btn--primary edit-post__save">Guardar cambios
-          <img src="/frontend/public/assets/icons/save.svg" alt="Icono Comprar" class="edit-post__icon">
-        </a>
+        <div class="edit-post__field-primary">
+          <button type="button" class="btn btn--primary edit-post__save">
+            Guardar cambios
+            <img src="/frontend/public/assets/icons/save.svg" alt="Icono guardar" class="btn__icon"/>
+          </button>
+        </div>
       </div>
     </div>
   </form>

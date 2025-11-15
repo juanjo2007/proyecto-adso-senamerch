@@ -1,7 +1,7 @@
 <section class="create-post">
   <form class="create-post__form">
     <div class="create-post__fields-wrapper">
-      <h2 class="create-post__title">Crear publicación</h2>
+      <h2 class="create-post__title">Sigue creando el producto</h2>
 
       <!-- Campo: Unidad de medida -->
       <div class="create-post__field">
@@ -49,19 +49,36 @@
       </div>
     </div>
 
-    <!-- 🔥 CONTENEDOR DE BOTONES -->
-    <div class="create-post__actions-grid">
-      <div class="create-post__field-secundary">
-        <a href="publications_gestor.html" class="btn btn-variant2--secondary create-post__cancel">Cancelar producto
-          <img src="/frontend/public/assets/icons/cancel.svg" alt="Icono Comprar" class="create-post__icon-secundary">
-        </a>
-      </div>
+    <div class="create-post__field-secundary">
+      <button
+        type="button"
+        class="btn-secundary btn-secundary-style create-post__cancel"
+        aria-label="Cancelar edición"
+      >
+        Cancelar
+        <img
+          src="/frontend/public/assets/icons/cancel.svg"
+          alt=""
+          class="btn-secundary__icon"
+          aria-hidden="true"
+        />
+      </button>
+    </div>
 
-      <div class="create-post__field-actions">
-        <a href="view_seller_cards.html" class="btn btn--primary create-post__continue">Publicar
-          <img src="/frontend/public/assets/icons/world.svg" alt="Icono Comprar" class="create-post__icon">
-        </a>
-      </div>
+    <div class="create-post__field-actions">
+      <button
+        type="submit"
+        class="btn btn--primary create-post__continue"
+        aria-label="Guardar datos del administrador"
+      >
+        Crear producto
+        <img
+          src="/frontend/public/assets/icons/continue.svg"
+          alt=""
+          class="btn__icon"
+          aria-hidden="true"
+        />
+      </button>
     </div>
   </form>
 </section>

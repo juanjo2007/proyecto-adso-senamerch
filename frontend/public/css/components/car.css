@@ -70,26 +70,11 @@
   font-family: var(--font-primary-bold);
   color: var(--black);
 }
-.shopping-cart__actions {
+.shopping-cart__actions-secundary {
   display: flex;
-  width: 100%;
-  gap: var(--gap-sm);
-  justify-content: flex-end;
-  flex-wrap: wrap;
-}
-.shopping-cart__actions-secundary{
-  display: flex;
-  justify-content: flex-start; 
+  justify-content: flex-start;
   align-items: center;
 }
-.shopping-cart__icon-secundary {
-  width: 1.6rem;
-  height: 1.6rem;
-  object-fit: contain;
-  display: inline-block;
-  margin-left: 0.25rem;
-}
-
 .shopping-cart__delete-product {
   background: none;
   border: none;

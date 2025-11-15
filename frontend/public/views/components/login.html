@@ -1,4 +1,4 @@
-<main class="site-main">
+<section class="site-main-login">
   <div class="login">
     <h1 class="login__title">Iniciar Sesión</h1>
 
@@ -6,12 +6,20 @@
 
       <div class="login__field">
         <label class="login__label">Utiliza tu correo electrónico</label>
-        <input class="login__input login__input--email" type="email" placeholder="Correo electrónico" required>
+        <input
+          class="login__input login__input--email"
+          type="email"
+          placeholder="Correo electrónico"
+          required
+        >
       </div>
 
       <div class="login__field">
         <label class="login__label">Tipo de usuario</label>
-        <select class="login__input login__input--user-type" required>
+        <select
+          class="login__input login__input--user-type"
+          required
+        >
           <option value="">Selecciona tipo de usuario</option>
           <option value="admin">Administrador</option>
           <option value="client">Cliente</option>
@@ -23,17 +31,37 @@
         <label class="login__label">Escribe tu contraseña</label>
 
         <div class="login__password-wrapper">
-          <input class="login__input login__input--password" type="password" placeholder="Contraseña" required>
+          <input
+            class="login__input login__input--password"
+            type="password"
+            placeholder="Contraseña"
+            required
+          >
           <button type="button" class="login__toggle-password">Mostrar</button>
         </div>
       </div>
 
-      <div class="login__button">
-        <button type="submit" class="btn btn--primary login__get-into ">Ingresar
-          <img src="/frontend/public/assets/icons/get_into.svg" alt="Icono Comprar" class="login__icon">
+      <!-- 🔹 Aquí el botón sigue la metodología BEM combinada -->
+      <div class="login__actions">
+        <button
+          type="submit"
+          class="btn btn--primary login__btn"
+        >
+          Ingresar
+          <img
+            src="/frontend/public/assets/icons/get_into.svg"
+            alt="Icono ingresar"
+            class="btn__icon login__btn-icon"
+          >
         </button>
       </div>
-      <a href="forgot_password.html" class="login__link">¿Olvidaste tu contraseña?</a>
+
+      <a href="forgot_password.html" class="login__link">
+        ¿Olvidaste tu contraseña?
+      </a>
     </form>
   </div>
-</main>
+</section>
+ 
+
+

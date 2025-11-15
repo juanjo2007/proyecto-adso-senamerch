@@ -2,28 +2,40 @@
 .seller-cards__container {
   display: grid;
   gap: var(--gap-lg);
-  width: fit-content;
+  width: 100%;
   box-sizing: border-box;
   margin: var(--gap-md) auto;
-  padding-inline: var(--gap-sm);
+  padding-inline: 24px; /* ✅ Margen lateral en móvil */
   justify-content: center;
   justify-items: center;
+  grid-template-columns: 1fr; /* ✅ Una columna por defecto (móvil) */
 }
-/* >>> SECCIÓN DE RESPONSIVIDAD DE LAS TARJETAS */
-@media (width > 640px) {
+
+/* >>> TABLET PEQUEÑA (≥640px) */
+@media (min-width: 640px) {
   .seller-cards__container {
     grid-template-columns: repeat(2, 1fr);
-    gap: var(--gap-md);
-    max-width: 100%;
+    gap: var(--gap-lg);
+    padding-inline: var(--gap-sm);
   }
 }
-@media (width > 1024px) {
+
+/* >>> TABLET GRANDE (≥1024px) */
+@media (min-width: 1024px) {
+  .seller-cards__container {
+    grid-template-columns: repeat(3, 1fr);
+    gap: var(--gap-lg);
+  }
+}
+
+/* >>> DESKTOP GRANDE (≥1280px) */
+@media (min-width: 1280px) {
   .seller-cards__container {
     grid-template-columns: repeat(4, 1fr);
-    gap: var(--gap-md);
-    max-width: 100%;
+    gap: var(--gap-lg);
   }
 }
+
 /* >>> SECCIÓN DE CONTENIDO DE LAS TARJETAS */
 .card-seller {
   border: 1px solid var(--secundary-900);
@@ -31,7 +43,7 @@
   padding: 24px;
   text-align: center;
   background-color: var(--secundary-50);
-  min-width: 320px;
+  width: 100%;
   max-width: 100%;
   box-shadow: 0 2px 4px var(--secundary-900);
   overflow: hidden;
@@ -41,25 +53,29 @@
   transition: transform 0.3s ease, box-shadow 0.3s ease;
   cursor: pointer;
 }
+
 .card-seller:hover {
   transform: translateY(-4px);
   box-shadow: 0 6px 14px rgba(0, 0, 0, 0.15);
 }
+
 .card-seller__image {
   width: 100%;
   height: 200px;
   object-fit: cover;
   border-radius: 8px;
 }
+
 .card-seller__info {
   display: grid;
-  grid-template-columns: 1fr 1fr; 
+  grid-template-columns: 1fr 1fr;
   grid-template-rows: auto auto;
   gap: 12px 10px;
   width: 100%;
   margin-top: 16px;
   align-items: center;
 }
+
 .card-seller__title {
   grid-column: 1 / 2;
   grid-row: 1 / 2;
@@ -69,6 +85,7 @@
   margin: 0;
   font-weight: 400;
 }
+
 .card-seller__price {
   grid-column: 2 / 3;
   grid-row: 1 / 2;
@@ -78,6 +95,7 @@
   font-weight: 800;
   margin: 0;
 }
+
 /* >>> SECCIÓN DE ACCIONES DE LAS TARJETAS */
 .card-seller__secondary {
   grid-column: 1 / 2;
@@ -85,58 +103,38 @@
   display: flex;
   justify-content: flex-start;
 }
+
 .card-seller__primary {
   grid-column: 2 / 3;
   grid-row: 2 / 3;
   display: flex;
   justify-content: flex-end;
 }
-.card-seller__primary .btn {
-  font-family: var(--font-primary-regular);
-  font-weight: 400;
-  align-self: flex-end; 
-  padding: var(--button-padding-top) var(--button-padding-right) 
-           var(--button-padding-bottom) var(--button-padding-left);
-  display: inline-flex;
-  align-items: center;
-  gap: 0.5rem; 
-  text-decoration: none;
-}
-.card-seller__icon-primary {
-  width: 2rem;
-  height: 2rem;
-  object-fit: contain;
-  display: inline-block;
-  margin-left: 0.25rem;
-}
-.card-seller__icon-secundary {
-  width: 1.6rem;
-  height: 1.6rem;
-  object-fit: contain;
-  display: inline-block;
-  margin-left: 0.25rem;
-}
-/* >>> SECCIÓN DE CONTENIDO DEL CONTENEDOR */
+
+/* >>> RESPONSIVIDAD MÓVIL */
 @media (max-width: 640px) {
   .card-seller {
     text-align: left;
     align-items: flex-start;
     padding: var(--gap-md);
   }
+
   .card-seller__info {
     grid-template-columns: 1fr;
     grid-template-rows: repeat(4, auto);
-    text-align: left;
     gap: var(--gap-xs);
   }
+
   .card-seller__title,
   .card-seller__price {
-    text-align: left; 
+    text-align: left;
   }
+
   .card-seller__secondary,
   .card-seller__primary {
-    justify-content: flex-start; 
+    justify-content: flex-start;
   }
+
   .card-seller__image {
     height: 180px;
   }

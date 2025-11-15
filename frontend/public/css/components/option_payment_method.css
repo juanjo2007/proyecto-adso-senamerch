@@ -56,24 +56,6 @@
   justify-content: center;
   width: 100%;
 }
-.payment-method__actions .btn {
-  font-family: var(--font-primary-regular);
-  font-weight: 400;
-  align-self: flex-end; 
-  padding: var(--button-padding-top) var(--button-padding-right) 
-           var(--button-padding-bottom) var(--button-padding-left);
-  display: inline-flex;
-  align-items: center;
-  gap: 0.5rem; 
-  text-decoration: none;
-}
-.payment-method__icon {
-  width: 2rem;
-  height: 2rem;
-  object-fit: contain;
-  display: inline-block;
-  margin-left: 0.25rem;
-}
 /* >>> SECCIÓN DE RESPONSIVIDAD */
 @media (max-width: 768px) {
   .payment-method {

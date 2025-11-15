@@ -24,8 +24,14 @@ export async function loadCards(containerSelector) {
       container.insertAdjacentHTML("beforeend", html);
     });
 
+    // === Agregar redirección de los botones "Comprar" ===
+    const buyButtons = container.querySelectorAll(".card__pay");
+    buyButtons.forEach(btn => {
+      btn.addEventListener("click", () => {
+        window.location.href = "product_description.html";
+      });
+    });
   } catch (error) {
     console.error("Error cargando las cards:", error);
   }
 }
-
