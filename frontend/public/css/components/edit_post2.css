@@ -1,3 +1,4 @@
+/* >>> SECCIÓN DE CONTENEDOR DE EDITAR DATOS DE UN PRODUCTO */
 .edit-post {
   display: flex;
   justify-content: center;
@@ -6,6 +7,7 @@
   width: 100%;
   padding-block: 3.8rem;
 }
+/* >>> SECCIÓN DE CONTENIDO DEL CONTENEDOR  */
 .edit-post__form {
   background-color: var(--white);
   background: var(--white);
@@ -75,8 +77,8 @@
 .edit-post__textarea {
   min-height: 12rem;
   resize: vertical;
-
 }
+/* >>> SECCIÓN DE ACCIONES DEL CONTENEDOR */
 .edit-post__actions-grid {
   display: grid;
   grid-template-columns: 1fr 1fr;
@@ -97,9 +99,71 @@
 .edit-post__field-actions .btn {
   font-family: var(--font-primary-regular);
   font-weight: 400;
-  padding: var(--button-padding-top) var(--button-padding-right)
+  align-self: flex-end; 
+  padding: var(--button-padding-top) var(--button-padding-right) 
            var(--button-padding-bottom) var(--button-padding-left);
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem; 
+  text-decoration: none;
 }
+.edit-post__icon {
+  width: 2rem;
+  height: 2rem;
+  object-fit: contain;
+  display: inline-block;
+  margin-left: 0.25rem;
+}
+.edit-post__icon-secundary {
+  width: 1.6rem;
+  height: 1.6rem;
+  object-fit: contain;
+  display: inline-block;
+  margin-left: 0.25rem;
+}
+/* >>> SECCIÓN DE CONTENEDOR DE LAS ALERTAS JS*/
+.alert {
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%) scale(0.8);
+  background-color: var(--white);
+  border: 2px solid var(--primary-900);
+  color: var(--primary-950);
+  padding: 1.8rem 2.5rem;
+  border-radius: 12px;
+  font-family: var(--font-primary);
+  font-size: var(--fs-sm);
+  text-align: center;
+  box-shadow: 0 8px 30px rgba(0, 0, 0, 0.25);
+  z-index: 9999;
+  opacity: 0;
+  transition: opacity 0.4s ease, transform 0.4s ease;
+}
+.alert--show {
+  opacity: 1;
+  transform: translate(-50%, -50%) scale(1);
+}
+.alert__content {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.8rem;
+}
+.alert__message {
+  margin: 0;
+  font-weight: 500;
+  color: var(--primary-950);
+}
+.alert--success {
+  border-color: var(--secundary-700);
+  background-color: #e8fff1;
+}
+.alert--error {
+  border-color: #c0392b;
+  background-color: #ffecec;
+}
+/* >>> SECCIÓN DE RESPONSIVIDAD DE LAS ALERTAS JS*/
 @media (max-width: 1024px) {
   .edit-post__fields-wrapper {
     grid-template-columns: repeat(2, 1fr);

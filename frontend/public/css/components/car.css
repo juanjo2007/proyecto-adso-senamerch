@@ -82,6 +82,13 @@
   justify-content: flex-start; 
   align-items: center;
 }
+.shopping-cart__icon-secundary {
+  width: 1.6rem;
+  height: 1.6rem;
+  object-fit: contain;
+  display: inline-block;
+  margin-left: 0.25rem;
+}
 
 .shopping-cart__delete-product {
   background: none;
@@ -110,14 +117,13 @@
   .shopping-cart {
     width: 95%;
     margin: 2rem auto;
-    max-height: none; /* unificado */
+    max-height: none; 
     padding: var(--gap-md);
   }
-
 }
 @media (max-width: 640px) {
   .shopping-cart {
-    width: 100%;
+    width: 90%;
     border-radius: 8px;
     padding: var(--gap-sm);
     margin: 1.5rem auto;

@@ -21,9 +21,9 @@ document.addEventListener('DOMContentLoaded', function () {
 
         const solidOptions = [
           { value: 'kg', text: 'Kilogramo (kg)', unit: 'kilogramos' },
-          { value: 'g', text: 'Gramo (g)', unit: 'gramos' },
-          { value: 'halfkg', text: 'Medio kilo (500g)', unit: 'medios kilos' },
-          { value: 'quarterkg', text: 'Cuarto kilo (250g)', unit: 'cuartos de kilo' },
+          { value: 'g', text: 'Libra (Lib)', unit: 'gramos' },
+          { value: 'halfkg', text: 'Medio kilogramo (500gr)', unit: 'medios kilos' },
+          { value: 'quarterkg', text: 'Media Libra (250gr)', unit: 'cuartos de kilo' },
           { value: 'ton', text: 'Tonelada (t)', unit: 'toneladas' },
           { value: 'arroba', text: 'Arroba (Arb)', unit: 'arrobas' }
         ];

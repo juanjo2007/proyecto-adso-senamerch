@@ -1,0 +1,163 @@
+<main class="order-detail">
+
+  <!-- Encabezado principal -->
+  <header class="order-detail__header">
+    <h1 class="order-detail__title">Gestión de Pedidos</h1>
+    <p class="order-detail__subtitle">
+      Aquí puedes visualizar la información completa de cada pedido, revisar detalles del usuario, producto y tienda,
+      además de actualizar su estado o realizar acciones administrativas.
+    </p>
+  </header>
+
+  <!-- === Contenedor general de tarjetas === -->
+  <section class="order-detail__grid">
+
+    <!-- Card 1: Información del pedido -->
+    <article class="order-detail__card order-detail__card--info">
+      <h2 class="order-detail__card-title">Información del pedido</h2>
+
+      <div class="order-detail__card-grid">
+        <div class="order-detail__info">
+          <div class="order-detail__item">
+            <span class="order-detail__label">Número de pedido:</span>
+            <p class="order-detail__text">#ORD-2458</p>
+          </div>
+
+          <div class="order-detail__item">
+            <span class="order-detail__label">Fecha del pedido:</span>
+            <p class="order-detail__text">3 de noviembre de 2025</p>
+          </div>
+
+          <div class="order-detail__item">
+            <span class="order-detail__label">Estado del pedido:</span>
+            <p class="order-detail__text order-detail__text--status">En proceso</p>
+          </div>
+
+          <div class="order-detail__item">
+            <span class="order-detail__label">Método de pago:</span>
+            <p class="order-detail__text">Efectivo</p>
+          </div>
+
+          <div class="order-detail__item">
+            <span class="order-detail__label">Total:</span>
+            <p class="order-detail__text">$45.000</p>
+          </div>
+        </div>
+
+        <div class="order-detail__media">
+          <span class="order-detail__label">Comprobante:</span>
+          <img src="/frontend/public/assets/img/orders.png"
+               alt="Comprobante del pedido #ORD-2458"
+               class="order-detail__image">
+        </div>
+      </div>
+    </article>
+
+    <!-- Card 2: Información del usuario -->
+    <article class="order-detail__card order-detail__card--user">
+      <h2 class="order-detail__card-title">Información del usuario</h2>
+
+      <div class="order-detail__card-grid">
+        <div class="order-detail__info">
+          <div class="order-detail__item">
+            <span class="order-detail__label">Nombre del usuario:</span>
+            <p class="order-detail__text">María López</p>
+          </div>
+          <div class="order-detail__item">
+            <span class="order-detail__label">Correo electrónico:</span>
+            <p class="order-detail__text">maria.lopez@example.com</p>
+          </div>
+          <div class="order-detail__item">
+            <span class="order-detail__label">Teléfono:</span>
+            <p class="order-detail__text">+57 312 987 6543</p>
+          </div>
+          <div class="order-detail__item">
+            <span class="order-detail__label">Dirección de entrega:</span>
+            <p class="order-detail__text">Calle 10 #23-45, Pereira</p>
+          </div>
+        </div>
+      </div>
+    </article>
+
+    <!-- Card 3: Información del producto -->
+    <article class="order-detail__card order-detail__card--product">
+      <h2 class="order-detail__card-title">Información del producto</h2>
+
+      <div class="order-detail__card-grid">
+        <div class="order-detail__info">
+          <div class="order-detail__item">
+            <span class="order-detail__label">Nombre del producto:</span>
+            <p class="order-detail__text">Tomate Del Valle</p>
+          </div>
+          <div class="order-detail__item">
+            <span class="order-detail__label">Cantidad:</span>
+            <p class="order-detail__text">5 kg</p>
+          </div>
+          <div class="order-detail__item">
+            <span class="order-detail__label">Precio unitario:</span>
+            <p class="order-detail__text">$3.000</p>
+          </div>
+        </div>
+
+        <div class="order-detail__media">
+          <span class="order-detail__label">Imagen del producto:</span>
+          <img src="/frontend/public/assets/img/tomato_image.png"
+               alt="Producto Tomate Del Valle"
+               class="order-detail__image">
+        </div>
+      </div>
+    </article>
+
+    <!-- Card 4: Información de la tienda -->
+    <article class="order-detail__card order-detail__card--store">
+      <h2 class="order-detail__card-title">Información de la tienda</h2>
+
+      <div class="order-detail__card-grid">
+        <div class="order-detail__info">
+          <div class="order-detail__item">
+            <span class="order-detail__label">Nombre comercial:</span>
+            <p class="order-detail__text">Frutas La Esperanza</p>
+          </div>
+          <div class="order-detail__item">
+            <span class="order-detail__label">Correo de contacto:</span>
+            <p class="order-detail__text">contacto@frutaslaesperanza.com</p>
+          </div>
+          <div class="order-detail__item">
+            <span class="order-detail__label">Teléfono:</span>
+            <p class="order-detail__text">+57 310 456 7890</p>
+          </div>
+          <div class="order-detail__item">
+            <span class="order-detail__label">Ubicación:</span>
+            <p class="order-detail__text">Pereira, Risaralda</p>
+          </div>
+        </div>
+
+        <div class="order-detail__media">
+          <span class="order-detail__label">Imagen de la tienda:</span>
+          <img src="/frontend/public/assets/img/store_seller.jpg"
+               alt="Portada de Frutas La Esperanza"
+               class="order-detail__image">
+        </div>
+      </div>
+    </article>
+
+  </section>
+
+  <!-- Acciones administrativas -->
+  <section class="order-detail__section order-detail__section--actions">
+    <h2 class="user-detail__section-title">Acciones administrativas</h2>
+
+    <div class="order-detail__actions-secondary">
+      <a href="#" class="btn btn-variant2--secondary order-detail__gestor">Exportar información en PDF
+        <img src="/frontend/public/assets/icons/export.svg" alt="Icono Comprar" class="order-detail__icon-secundary">
+      </a>
+    </div>
+
+    <div class="order-detail__actions-primary">
+      <a href="#" class="btn btn--primary order-detail__suspend">Cancelar pedido
+        <img src="/frontend/public/assets/icons/off.svg" alt="Icono Comprar" class="order-detail__icon">
+      </a>
+    </div>
+  </section>
+
+</main>

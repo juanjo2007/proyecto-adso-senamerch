@@ -1,0 +1,163 @@
+<main class="product-detail">
+
+  <!-- Encabezado principal -->
+  <header class="product-detail__header">
+    <h1 class="product-detail__title">Gestión del Producto</h1>
+    <p class="product-detail__subtitle">
+      Aquí puedes visualizar la información completa de un producto, editar su estado, revisar quién lo publicó
+      y realizar acciones administrativas como suspenderlo o eliminarlo del catálogo.
+    </p>
+  </header>
+
+  <!-- === Contenedor general de tarjetas === -->
+  <section class="product-detail__grid">
+
+    <!-- Card 1: Información del producto -->
+    <article class="product-detail__card product-detail__card--info">
+      <h2 class="product-detail__card-title">Información del producto</h2>
+
+      <div class="product-detail__card-grid">
+        <div class="product-detail__info">
+          <div class="product-detail__item">
+            <span class="product-detail__label">Nombre del producto:</span>
+            <p class="product-detail__text">Tomate Del Valle</p>
+          </div>
+
+          <div class="product-detail__item">
+            <span class="product-detail__label">Descripción:</span>
+            <p class="product-detail__text">
+              El tomate es un fruto fresco, rojo, jugoso y de sabor ligeramente ácido,
+              utilizado en ensaladas, salsas y múltiples preparaciones gastronómicas.
+            </p>
+          </div>
+
+          <div class="product-detail__item">
+            <span class="product-detail__label">Unidad de medida:</span>
+            <p class="product-detail__text">Kilogramo (kg)</p>
+          </div>
+
+          <div class="product-detail__item">
+            <span class="product-detail__label">Precio:</span>
+            <p class="product-detail__text">$3.000 Kilo</p>
+          </div>
+
+          <div class="product-detail__item">
+            <span class="product-detail__label">Estado:</span>
+            <p class="product-detail__text product-detail__text--status">Activo</p>
+          </div>
+        </div>
+
+        <div class="product-detail__media">
+          <span class="product-detail__label">Imagen del producto:</span>
+          <img src="/frontend/public/assets/img/tomato_image.png"
+               alt="Imagen del producto Tomate Del Valle"
+               class="product-detail__image">
+        </div>
+      </div>
+    </article>
+
+        <!-- Card 3: Información de la tienda -->
+    <article class="product-detail__card product-detail__card--store">
+      <h2 class="product-detail__card-title">Información de la tienda</h2>
+
+      <div class="product-detail__card-grid">
+        <!-- Columna izquierda -->
+        <div class="product-detail__info">
+          <div class="product-detail__item">
+            <span class="product-detail__label">Nombre comercial:</span>
+            <p class="product-detail__text">Frutas La Esperanza</p>
+          </div>
+          <div class="product-detail__item">
+            <span class="product-detail__label">Correo de contacto:</span>
+            <p class="product-detail__text">contacto@frutaslaesperanza.com</p>
+          </div>
+          <div class="product-detail__item">
+            <span class="product-detail__label">Teléfono:</span>
+            <p class="product-detail__text">+57 310 456 7890</p>
+          </div>
+          <div class="product-detail__item">
+            <span class="product-detail__label">Categoría:</span>
+            <p class="product-detail__text">Frutas y verduras</p>
+          </div>
+          <div class="product-detail__item">
+            <span class="product-detail__label">Descripción:</span>
+            <p class="product-detail__text">
+              Tienda especializada en frutas frescas, verduras orgánicas y productos agrícolas locales de alta calidad.
+            </p>
+          </div>
+        </div>
+
+        <!-- Columna derecha -->
+        <div class="product-detail__media">
+          <span class="product-detail__label">Imagen de portada:</span>
+          <img src="/frontend/public/assets/img/store_seller.jpg"
+               alt="Portada de Frutas La Esperanza"
+               class="product-detail__image">
+        </div>
+      </div>
+    </article>
+
+    <!-- Card 2: Información del usuario -->
+    <article class="product-detail__card product-detail__card--user">
+      <h2 class="product-detail__card-title">Información del vendedor</h2>
+
+      <div class="product-detail__card-grid">
+        <div class="product-detail__info">
+          <div class="product-detail__item">
+            <span class="product-detail__label">Nombre del usuario:</span>
+            <p class="product-detail__text">María López</p>
+          </div>
+
+          <div class="product-detail__item">
+            <span class="product-detail__label">Correo electrónico:</span>
+            <p class="product-detail__text">maria.lopez@example.com</p>
+          </div>
+
+          <div class="product-detail__item">
+            <span class="product-detail__label">Teléfono:</span>
+            <p class="product-detail__text">+57 312 987 6543</p>
+          </div>
+
+          <div class="product-detail__item">
+            <span class="product-detail__label">Rol del usuario:</span>
+            <p class="product-detail__text">Gerente</p>
+          </div>
+        </div>
+
+        <div class="product-detail__info">
+          <div class="product-detail__item">
+            <span class="product-detail__label">Tienda:</span>
+            <p class="product-detail__text">Productos El Valle</p>
+          </div>
+
+          <div class="product-detail__item">
+            <span class="product-detail__label">Ubicación:</span>
+            <p class="product-detail__text">Pereira, Risaralda</p>
+          </div>
+
+          <div class="product-detail__item">
+            <span class="product-detail__label">Fecha de publicación:</span>
+            <p class="product-detail__text">10 de octubre de 2025</p>
+          </div>
+        </div>
+      </div>
+    </article>
+  </section>
+
+  <!-- Acciones administrativas -->
+  <section class="product-detail__section product-detail__section--actions">
+    <h2 class="user-detail__section-title">Acciones administrativas</h2>
+
+    <div class="product-detail__actions-secondary">
+      <a href="#" class="btn btn-variant2--secondary product-detail__gestor">Exportar información en PDF
+        <img src="/frontend/public/assets/icons/export.svg" alt="Icono Comprar" class="product-detail__icon-secundary">
+      </a>
+    </div>
+
+    <div class="product-detail__actions-primary">
+      <a href="#" class="btn btn--primary product-detail__suspend">Suspender producto
+        <img src="/frontend/public/assets/icons/off.svg" alt="Icono Comprar" class="product-detail__icon">
+      </a>
+    </div>
+  </section>
+</main>

@@ -3,26 +3,28 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Vista Editar Perfil</title>
+    <!-- >>> Sección CSS principal -->
     <link rel="stylesheet" href="/frontend/public/css/main.css">
-
+    <!-- >>> Sección JS componentes -->
     <script src="/frontend/public/js/components/navbar_edit_profile_client.js"></script>
     <script src="/frontend/public/js/components/edit_profile_client.js"></script>
     <script src="/frontend/public/js/components/footer.js"></script>
-    <title>Editar Perfil</title>
 </head>
 <body>
-    <section>
-        <div class="navbar_edit_profile_client"></div>
-    </section>
-
-
-    <main class="edit_profile_client">
-        <div class="edit"></div>
+    <main>
+        <!-- >>> Sección Navbar -->
+        <nav class="navbar-edit_profile_client-view">
+            <div class="navbar_edit_profile_client"></div>
+        </nav>
+        <!-- >>> Sección Editar perfil cliente -->
+        <section class="edit_profile_client-view">
+            <div class="edit-profile-client-container"></div>
+        </section>
     </main>
-
-
-    <section>
+    <!-- >>> Sección Footer -->
+    <footer class="footer-edit_profile_client-view">
         <footer class="footer-container"></footer>
-    </section>
+    </footer>
 </body>
 </html>

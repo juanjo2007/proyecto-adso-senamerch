@@ -1,42 +1,63 @@
-<section class="edit">
-  <div class="edit__container">
-    <h1 class="edit__title">Editar Perfil</h1>
+<main class="edit-profile-user">
+  <section class="edit-profile-user__container">
+    <h1 class="edit-profile-user__title">Editar perfil</h1>
 
-    <form class="edit__form">
-      <div class="edit__field">
-        <label for="name" class="edit__label">Nombre</label>
-        <input type="text" name="name" class="edit__input" placeholder="Ingresa tu nombre">
-      </div>
-
-      <div class="edit__field">
-        <label for="birthdate" class="edit__label">Fecha de nacimiento</label>
-        <input type="text" name="birthdate" class="edit__input" placeholder="Ingresa tu fecha de nacimiento">
-      </div>
-      
-      <div class="edit__field">
-        <label for="document" class="edit__label">Documento de identidad</label>
-        <input type="text" name="document" class="edit__input" placeholder="Ingresa tu documento de identidad">
+    <form class="edit-profile-user__form">
+      <!-- 🖼️ Imagen (solo ocupa una columna) -->
+      <div class="edit-profile-user__field">
+        <label class="edit-profile-user__label">Foto de perfil</label>
+        <label class="edit-profile-user__avatar">
+          <img
+            src="/frontend/public/assets/img/admin_profile.png"
+            alt="Foto del administrador"
+            class="edit-profile-user__avatar-img"
+          />
+          <input type="file" class="edit-profile-user__avatar-input" accept="image/*" />
+        </label>
       </div>
 
-      <div class="edit__field">
-        <label for="email" class="edit__label">Correo electrónico</label>
-        <input type="email" name="email" class="edit__input" placeholder="Ingresa tu correo electrónico">
+      <div class="edit-profile-user__field">
+        <label class="edit-profile-user__label">Dirección</label>
+        <a href="/frontend/public/views/add_adress.html" class="edit-profile-user__link">Agregar dirección</a>
       </div>
 
-      <div class="edit__field">
-        <label for="location" class="edit__label">Dirección</label>
-        <input type="text" name="location" class="edit__input" placeholder="Ingresa tu dirección">
-      </div>
-      
-      <div class="edit__field">
-        <label class="edit__label">Imagen del producto</label>
-        <input type="file" class="edit__input" accept="image/*">
+      <div class="edit-profile-user__field">
+        <label class="edit-profile-user__label">Correo electrónico</label>
+        <input type="email" class="edit-profile-user__input" value="juanperez@empresa.com" />
       </div>
 
-
-      <div class="edit__actions">
-        <a href="profile_user.html" class="btn btn--primary">Guardar cambios</a>
+      <div class="edit-profile-user__field">
+        <label class="edit-profile-user__label">Nombre</label>
+        <input type="text" class="edit-profile-user__input" value="Juan Pérez" />
       </div>
+
+      <div class="edit-profile-user__field">
+        <label class="edit-profile-user__label">Teléfono</label>
+        <input type="tel" class="edit-profile-user__input" value="+57 300 000 0000" required>
+      </div>
+
+      <div class="edit-profile-user__field">
+        <label class="edit-profile-user__label">Escribe tu contraseña</label>
+        
+        <div class="edit-profile-user__password-wrapper">
+          <input class="edit-profile-user__input edit-profile-user__input--password" type="password" placeholder="Contraseña" required>
+          <button type="button" class="edit-profile-user__toggle-password">Mostrar</button>
+        </div>
+      </div>
+
+      <div class="edit-profile-user__actions-grid">
+        <div class="edit-profile-user__actions-secondary">
+          <a href="admin_profile_view.html" class="btn btn-variant2--secondary edit-profile-user__cancel">Cancelar
+            <img src="/frontend/public/assets/icons/cancel.svg" alt="Icono Comprar" class="edit-profile-user__icon-secundary">
+          </a>
+        </div>
+
+        <div class="edit-profile-user__actions-primary">
+          <a href="admin_profile_view.html" class="btn btn--primary edit-profile-user__save">Guardar cambios
+            <img src="/frontend/public/assets/icons/save.svg" alt="Icono Comprar" class="edit-profile-user__icon">
+          </a>
+        </div>
+      </div>  
     </form>
-  </div>
-</section>
+  </section>
+</main>

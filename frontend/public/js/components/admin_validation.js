@@ -31,7 +31,7 @@ document.addEventListener("DOMContentLoaded", function () {
             message.classList.add("admin-panel__message--success");
 
             setTimeout(() => {
-              window.location.href = "/frontend/public/views/admin_index.html";
+              window.location.href = "/frontend/public/views/wiews_users_admin.html";
             }, 1500);
           } else {
             message.textContent = "Código incorrecto. Redirigiendo a inicio...";

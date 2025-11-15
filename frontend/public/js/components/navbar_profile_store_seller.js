@@ -1,5 +1,5 @@
 document.addEventListener("DOMContentLoaded", function(){
-    const navbarElement = document.querySelector(".navbar_profile_store_seller");
+    const navbarElement = document.querySelector(".navbar-profile-store-seller");
 
     if(navbarElement){
         fetch("/frontend/public/views/components/navbar_profile_store_seller.html")

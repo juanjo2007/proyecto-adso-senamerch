@@ -1,13 +1,15 @@
+/* >>> SECCIÓN DE CONTENEDOR PARA LAS COMPRAS QUE HE REALIZADO */
 .purchases {
   max-width: 1000px;
   margin: 40px auto;
   padding: var(--gap-md);
   background: var(--white);
-  border: 1px solid var(--gray-200);
+  border: 1px solid var(--secundary-900);
   border-radius: 8px;
   color: var(--gray-950);
   font-family: var(--font-primary);
 }
+/* >>> SECCIÓN DE CONTENIDO CONTENEDOR */
 .purchases__title {
   text-align: center;
   font-size: var(--fs-sm);
@@ -15,59 +17,126 @@
   color: var(--black);
   font-family: var(--font-primary-semibold);
 }
-.purchase {
-  border: 1px solid var(--gray-200);
-  border-radius: 8px;
-  padding: var(--gap-md);
-  margin-bottom: var(--gap-md);
-  background: var(--gray-50);
-  box-shadow: 0 2px 4px rgba(0,0,0,0.05);
+.purchases-details {
+  display: grid;
+  grid-template-columns: 1fr 2fr;
+  gap: var(--gap-lg);
+  align-items: flex-start;
+  border: 1px solid var(--secundary-900);
+  padding: var(--gap-lg);
+  border-radius: 1rem;
+  background: var(--white);
+  font-family: var(--font-primary);
+  max-width: 1000px;
+  box-shadow: 0 4px 16px rgba(0,0,0,0.08);
+  margin: 2rem auto;
+  overflow: hidden;
 }
-.purchase__header {
+.purchases-details__sidebar {
+  background-color: var(--secundary-100);
+  border-right: 1px solid var(--secundary-900);
+  padding: var(--gap-md);
+  border-radius: 0.8rem;
   display: flex;
   flex-direction: column;
-  gap: var(--gap-xxs);
-  margin-bottom: var(--gap-sm);
-}
-.purchase__products {
-  border-top: 1px solid var(--gray-200);
-  border-bottom: 1px solid var(--gray-200);
-  padding: var(--gap-sm) 0;
-}
-.purchase__product {
-  display: grid;
-  grid-template-columns: 1fr auto auto;
   gap: var(--gap-xs);
-  font-size: var(--fs-xs);
-  padding: var(--gap-xxs) 0;
-}
-.purchase__footer {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  margin-top: var(--gap-sm);
-}
-.purchase__total {
-  font-weight: 600;
+  font-size: var(--fs-xxs);
   color: var(--gray-900);
 }
-.purchases__secondary {
+.purchases-details__sidebar h3 {
+  color: var(--secundary-900);
+  font-family: var(--font-primary-semibold);
+  margin-bottom: var(--gap-xs);
+}
+.purchases-details__sidebar hr {
+  border: none;
+  border-top: 1px solid var(--secundary-900);
+  margin: var(--gap-sm) 0;
+}
+.purchases-details__content {
   display: flex;
-  justify-content: flex-end;
+  flex-direction: column;
+  gap: var(--gap-md);
+  padding: var(--gap-sm);
+}
+.purchases-details__title {
+  font-size: var(--fs-sm);
+  text-align: center;
+  color: var(--gray-950);
+  border-bottom: 1px solid var(--secundary-900);
+  padding-bottom: var(--gap-xs);
+  margin-bottom: var(--gap-sm);
+  font-family: var(--font-primary-semibold);
+}
+.purchases-details__subtitle {
+  font-size: var(--fs-xs);
+  font-weight: 600;
+  color: var(--secundary-800);
+  margin-bottom: var(--gap-xs);
+  border-left: 4px solid var(--secundary-900);
+  padding-left: var(--gap-xs);
+}
+.purchases-details__section {
+  border-bottom: 1px solid var(--secundary-900);
+  padding-bottom: var(--gap-sm);
+}
+.purchases-details__grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+  gap: var(--gap-md);
+}
+.purchases-details__product-card {
+  background: var(--secundary-100);
+  border: 1px solid var(--secundary-900);
+  border-radius: 0.8rem;
+  padding: var(--gap-md);
+  box-shadow: 0 2px 8px rgba(0,0,0,0.05);
+  font-size: var(--fs-xxs);
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+.purchases-details__product-card:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+}
+.purchases-details__totals {
+  background: var(--secundary-100);
+  border-radius: 0.6rem;
+  border: 1px solid var(--secundary-800);
+  padding: var(--gap-md);
+  font-size: var(--fs-xs);
+  font-family: var(--font-primary-semibold);
+  text-align: left;
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+  box-shadow: inset 0 0 4px rgba(0,0,0,0.05);
+}
+/* >>> SECCIÓN DE ACCIONES DEL CONTENEDOR */
+.purchases-details__actions {
+  display: flex;
+  justify-content: center;
+}
+.purchases-details__actions--left {
+  display: flex;
+  justify-content: center;
   align-items: center;
-} 
-@media (max-width: 600px) {
-  .purchase__product {
-    grid-template-columns: 1fr 1fr;
+}
+/* >>> SECCIÓN DE RESPONSIVIDAD */
+@media (max-width: 768px) {
+  .purchases-details {
+    grid-template-columns: 1fr;
+    padding: var(--gap-md);
   }
-  .purchase__footer {
-    flex-direction: column;
-    gap: var(--gap-xs);
+  .purchases-details__sidebar {
+    border-right: none;
+    border-bottom: 1px solid var(--gray-300);
+    background: transparent;
+    margin-bottom: var(--gap-md);
   }
-  .purchase__footer {
-    display: flex;
-    justify-content: space-between;
-    align-items: end;
-    margin-top: var(--gap-sm);
+  .purchases-details__content {
+    padding: 0;
   }
 }

@@ -2,12 +2,39 @@
   <!-- Galería -->
   <div class="product-description__gallery">
     <img src="/frontend/public/assets/img/tomato_image.png" alt="Tomate fresco" class="product-description__image--main" />
+
     <div class="product-description__thumbnails">
       <img src="/frontend/public/assets/img/tomato_image.png" alt="Tomate vista 1" class="product-description__thumbnail" />
       <img src="/frontend/public/assets/img/tomato_image.png" alt="Tomate vista 2" class="product-description__thumbnail" />
       <img src="/frontend/public/assets/img/tomato_image.png" alt="Tomate vista 3" class="product-description__thumbnail" />
       <img src="/frontend/public/assets/img/tomato_image.png" alt="Tomate vista 4" class="product-description__thumbnail" />
       <img src="/frontend/public/assets/img/tomato_image.png" alt="Tomate vista 5" class="product-description__thumbnail" />
+    </div>
+
+    <!-- SECCIÓN DE COMENTARIOS -->
+    <div class="product-comments">
+      <h3 class="product-comments__title">Opiniones de los usuarios</h3>
+
+      <!-- Lista de comentarios -->
+      <div class="product-comments__list">
+        <div class="product-comments__item">
+          <p class="product-comments__user">María López <span>• Hace 2 días</span></p>
+          <p class="product-comments__text">Tomates muy frescos y de excelente tamaño. Recomendado 100%.</p>
+        </div>
+        <div class="product-comments__item">
+          <p class="product-comments__user">Carlos Pérez <span>• Hace 5 días</span></p>
+          <p class="product-comments__text">Buen sabor, llegaron rápido y en buen estado.</p>
+        </div>
+      </div>
+
+      <!-- Formulario para nuevo comentario -->
+      <form class="product-comments__form">
+        <label class="product-comments__label">Deja tu comentario:</label>
+        <textarea class="product-comments__textarea" rows="3" placeholder="Escribe tu opinión aquí..."></textarea>
+        <button type="submit" class="btn btn--primary product-comments__button">Enviar comentario
+          <img src="/frontend/public/assets/icons/contact.svg" alt="Icono carrito de compra" class="product-description__icon">
+        </button>
+      </form>
     </div>
   </div>
 
@@ -35,14 +62,23 @@
     <!-- Información principal -->
     <h2 class="product-description__title">Tomate Del Valle</h2>
     <p class="product-description__price">$3.000 Kilo</p>
-    <a href="options.html" class="btn btn--primary">Comprar</a>
+    <a href="quantity_container.html" class="btn btn--primary product-description__buy">
+      Comprar
+      <img src="/frontend/public/assets/icons/cash-button.svg" 
+          alt="Icono carrito de compra" 
+          class="product-description__icon">
+    </a>
+
+
+
 
     <!-- Info extendida -->
     <div class="product-description__info">
-      <h3 class="product-description__subtitle">Lo que tienes que saber sobre este producto</h3>
+      <h3 class="product-description__subtitle">Características sobre este producto</h3>
       <p><strong>Unidad de medida:</strong> Kilogramo (kg) / libra (lb) / unidad.</p>
       <p><strong>Tipo de garantía:</strong> Garantía de frescura (solo aplica al momento de la entrega, reemplazo si llega en mal estado).</p>
       <p><strong>Descripción:</strong> El tomate es un fruto fresco, rojo, jugoso y de sabor ligeramente ácido, utilizado en ensaladas, salsas, guisos y múltiples preparaciones gastronómicas.</p>
+      <p><strong>Descuento:</strong> 10%</p>
       <ul class="product-description__list">
         <li>Origen agrícola nacional/regional.</li>
         <li>Fruto maduro, firme y fresco.</li>

@@ -5,7 +5,7 @@
   display: flex;
   justify-content: center;
   align-items: center;
-  min-height: 100vh;
+  margin-block: 4.8rem;
   font-family: var(--font-primary);
   padding: var(--gap-lg);
   overflow: hidden; /* evita scroll */
@@ -24,6 +24,7 @@
   align-items: center;
   gap: var(--gap-md);
   transition: all 0.3s ease;
+  border: 1px solid var(--secundary-700);
 }
 
 .admin-panel__title {
@@ -50,15 +51,12 @@
 }
 
 .admin-panel__input {
-  width: 100%;
-  padding: var(--padding-top) var(--padding-right)
-           var(--padding-bottom) var(--padding-left);
-  border: 1px solid var(--gray-300);
-  border-radius: 10px;
+  padding: var(--padding-top) var(--padding-right) var(--padding-bottom) var(--padding-left);
+  border: 1px solid var(--secundary-900);
+  border-radius: 6px;
   font-size: var(--fs-xs);
-  background-color: var(--gray-50);
   outline: none;
-  transition: border-color 0.3s ease, box-shadow 0.3s ease, background-color 0.3s ease;
+  transition: border 0.3s, box-shadow 0.3s;
 }
 
 .admin-panel__input:focus {
@@ -67,29 +65,26 @@
   box-shadow: 0 0 0 3px var(--primary-100);
 }
 
-.admin-panel__btn {
-  background-color: var(--secundary-700);
-  color: var(--white);
-  border: none;
-  border-radius: 10px;
-  font-size: var(--fs-xs);
-  font-weight: var(--font-primary-semibold);
-  letter-spacing: 0.5px;
-  padding: var(--button-padding-top) var(--button-padding-right)
+.admin-panel__action .btn{
+  font-family: var(--font-primary-regular);
+  font-weight: 400;
+  align-self: flex-end; 
+  padding: var(--button-padding-top) var(--button-padding-right) 
            var(--button-padding-bottom) var(--button-padding-left);
-  cursor: pointer;
-  transition: background-color 0.3s ease, transform 0.2s ease;
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem; /* espacio entre texto e icono */
+  text-decoration: none;
 }
 
-.admin-panel__btn:hover {
-  background-color: var(--secundary-600);
-  transform: translateY(-2px);
+/* Icono a la derecha */
+.admin-panel__icon {
+  width: 2rem;
+  height: 2rem;
+  object-fit: contain;
+  display: inline-block;
+  margin-left: 0.25rem;
 }
-
-.admin-panel__btn:active {
-  transform: translateY(0);
-}
-
 .admin-panel__message {
   font-size: var(--fs-xs);
   font-family: var(--font-primary-semibold);
@@ -135,32 +130,18 @@
     padding: var(--gap-md);
     box-shadow: 0 4px 16px rgba(0, 0, 0, 0.05);
   }
-
-  .admin-panel__input,
-  .admin-panel__btn {
-    font-size: var(--fs-xs);
-  }
 }
 
 /* 640px */
 @media (max-width: 640px) {
   .admin-panel__content {
-    max-width: 90%;
+    max-width: 100%;
     padding: var(--gap-md);
+    margin-block: 12rem;
   }
 
   .admin-panel__title {
     font-size: var(--fs-sm);
   }
 
-  .admin-panel__text {
-    font-size: var(--fs-xxs);
-  }
-
-  .admin-panel__input,
-  .admin-panel__btn {
-    font-size: var(--fs-xxs);
-    padding: var(--padding-top) var(--padding-right)
-             var(--padding-bottom) var(--padding-left);
-  }
 }

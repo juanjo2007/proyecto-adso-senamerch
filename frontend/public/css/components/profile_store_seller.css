@@ -1,8 +1,10 @@
+/* >>> SECCIÓN DE CONTENEDOR DEL PERFIL DE LA TIENDA  */
 .store-profile {
   display: flex;
   justify-content: center;
   padding-block: 4rem;
 }
+/* >>> SECCIÓN DE CONTENIDO DEL CONTENEDOR  */
 .store-profile__container {
   width: 100%;
   max-width: 1280px;
@@ -70,6 +72,7 @@
   object-fit: cover;
   border: 1px solid var(--gray-200);
 }
+/* >>> SECCIÓN DE ACCIONES DEL CONTENEDOR  */
 .store-profile__actions {
   display: flex;
   justify-content: center; 
@@ -78,9 +81,22 @@
 .store-profile__actions .btn {
   font-family: var(--font-primary-regular);
   font-weight: 400;
-  padding: var(--button-padding-top) var(--button-padding-right)
+  align-self: flex-end; 
+  padding: var(--button-padding-top) var(--button-padding-right) 
            var(--button-padding-bottom) var(--button-padding-left);
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem; 
+  text-decoration: none;
 }
+.store-profile__icon {
+  width: 2rem;
+  height: 2rem;
+  object-fit: contain;
+  display: inline-block;
+  margin-left: 0.25rem;
+}
+/* >>> SECCIÓN DE RESPONSIVIDAD */
 @media (max-width: 1024px) {
   .store-profile__grid {
     grid-template-columns: repeat(2, 1fr);

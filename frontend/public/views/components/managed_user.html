@@ -34,15 +34,22 @@
             <span class="user-detail__label">Tipo de usuario:</span>
             <p class="user-detail__text">Común</p>
           </div>
+          <div class="user-detail__field">
+            <a href="view_purchases.html" class="user-profile__link">
+              <span class="user-profile__label">Actividad reciente</span>
+            </a>
+            <p class="user-detail__text">Compra 0124 - (22/09/2025)</p>
+            <p class="user-detail__text">Compra 0122 - (01/09/2025)</p>
+            <p class="user-detail__text">Compra 0121 - (03/09/2025)</p>
+          </div> 
           <div class="user-detail__item">
             <span class="user-detail__label">Fecha de registro:</span>
             <p class="user-detail__text">15 de marzo de 2024</p>
           </div>
         </div>
-
         <div class="user-detail__media">
           <span class="user-detail__label">Imagen de perfil:</span>
-          <img src="/frontend/public/assets/img/admin_profile.jpg" alt="Imagen de perfil del usuario" class="user-detail__image">
+          <img src="/frontend/public/assets/img/admin_profile.png" alt="Imagen de perfil del usuario" class="user-detail__image">
         </div>
       </div>
     </article>
@@ -92,14 +99,19 @@
 
   <section class="user-detail__section user-detail__section--actions">
     <h2 class="user-detail__section-title">Acciones administrativas</h2>
+
     <div class="user-detail__actions-secondary">
-      <a href="#" class="btn btn-variant2--secondary">Exportar información en PDF</a>
+      <a href="#" class="btn btn-variant2--secondary store-detail__gestor">Exportar información en PDF
+        <img src="/frontend/public/assets/icons/export.svg" alt="Icono Comprar" class="user-detail__icon-secundary">
+      </a>
     </div>
+
     <div class="user-detail__actions-primary">
-      <a href="#" class="btn btn--primary">Suspender usuario</a>
-    </div>
-    <div class="user-detail__actions-secondary">
-      <a href="admin_profile_view.html" class="btn btn-variant2--secondary">Volver al panel</a>
+      <a href="#" class="btn btn--primary user-detail__suspend">Suspender usuario
+        <img src="/frontend/public/assets/icons/user-off.svg" alt="Icono Comprar" class="sale-details__icon">
+      </a>
     </div>
   </section>
+
+  
 </main>

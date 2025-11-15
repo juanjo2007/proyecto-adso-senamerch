@@ -5,31 +5,25 @@
   width: 100%;
   box-sizing: border-box;
 } 
-
 .car-pay-grid {
   display: grid;
-  grid-template-columns: 1fr 1fr; /* 🔹 mitad y mitad */
+  grid-template-columns: 1fr 1fr; 
   gap: var(--gap-lg);
   width: 100%;
   box-sizing: border-box;
 }
-
-/* Alineación del contenido */
 .pay-method-product {
   display: flex;
   justify-content: center;
   align-items: center;
   width: 100%;
 }
-
 .payment-method-container {
-  width: 100%;
+  width: 90%;
 }
-
-/* === Responsivo === */
 @media (max-width: 768px) {
   .car-pay-grid {
-    grid-template-columns: 1fr; /* una sola columna en móvil */
+    grid-template-columns: 1fr; 
     max-width: 100%;
   }
 }

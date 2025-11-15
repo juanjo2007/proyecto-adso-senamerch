@@ -1,5 +1,5 @@
 document.addEventListener("DOMContentLoaded", function () {
-  const formContainer = document.querySelector(".edit_profile_client");
+  const formContainer = document.querySelector(".edit-profile-client-container");
 
   if (formContainer) {
     fetch("/frontend/public/views/components/edit_profile_client.html")

@@ -40,8 +40,15 @@
 }
 .sales-admin__actions {
   display: flex;
-  justify-content: flex-end;
+  justify-content: center;
   align-items: center;
+}
+.sales-admin__icon-secundary {
+  width: 1.6rem;
+  height: 1.6rem;
+  object-fit: contain;
+  display: inline-block;
+  margin-left: 0.25rem;
 }
 .sales-admin__table-row:nth-child(even) {
   background-color: var(--gray-200);

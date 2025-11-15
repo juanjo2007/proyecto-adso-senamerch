@@ -3,13 +3,11 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- >>> Sección CSS principal -->
     <link rel="stylesheet" href="/frontend/public/css/main.css">
-    
-    <script type="module">
-      import { loadCards } from "/frontend/public/js/components/card.js";
-      document.addEventListener("DOMContentLoaded", () => {
-        loadCards(".cards__container");
-      });
+    <!-- >>> Sección JS componentes -->
+    <script type="module"> import { loadCards } from "/frontend/public/js/components/card.js";
+      document.addEventListener("DOMContentLoaded", () => {loadCards(".cards__container");});
     </script>
     <script src="/frontend/public/js/components/navbar_client_view.js"></script>
     <script src="/frontend/public/js/components/search_bar.js"></script>
@@ -20,25 +18,27 @@
 </head>
 <body>
     <main>
-      <section>
+      <!-- >>> Sección Navbar -->
+      <nav>
         <div class="navbar_client_view"></div>
-      </section>
-
+      </nav>
+      <!-- >>> Sección Barra de busqueda -->
       <section class="seeker">
         <div class="search-bar-container"></div>
       </section>
-
+      <!-- >>> Sección recibimiento al clinete a la página -->
       <section class="client-users">
         <div class="client-view"></div>  
       </section>
-      
-      <section class="products-cards">
+      <!-- >>> Sección Trajetas de productos del cliente-->
+      <section class="products-cards-clients-viwes">
         <div class="cards__container"></div>
       </section>
     </main>
-    <section>
-        <footer class="footer-container"></footer>
-    </section>
+    <!-- >>> Sección Footer -->
+    <footer class="footer-client-views">
+      <div class="footer-container"></div>
+    </footer>
 </body>
 </html>
 

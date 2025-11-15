@@ -2,7 +2,7 @@
   <section class="admin-profile__card">
     <div class="admin-profile__header">
       <div class="admin-profile__avatar">
-        <img src="/frontend/public/assets/img/admin_profile.jpg" alt="Foto del administrador">
+        <img src="/frontend/public/assets/img/admin_profile.png" alt="Foto del administrador">
       </div>
       <div class="admin-profile__info">
         <h1 class="admin-profile__name">Juan Pérez</h1>
@@ -39,11 +39,15 @@
 
     <div class="admin-profile__actions-grid">
       <div class="admin-profile__actions-secondary">
-        <a href="login.html" class="btn btn-variant2--secondary">Cerrar Sesión</a>
+        <a href="login.html" class="btn btn-variant2--secondary admin-profile__gestor">Cerrar Sesión
+          <img src="/frontend/public/assets/icons/home.svg" alt="Icono Comprar" class="admin-profile__icon-secundary">
+        </a>
       </div>
 
       <div class="admin-profile__actions-primary">
-        <a href="/frontend/public/views/edit_admin_profile_view.html" class="btn btn--primary">Editar datos</a>
+        <a href="edit_admin_profile_view.html" class="btn btn--primary admin-profile__save">Editar datos
+          <img src="/frontend/public/assets/icons/edit.svg" alt="Icono Comprar" class="admin-profile__icon">
+        </a>
       </div>
     </div>
   </section>

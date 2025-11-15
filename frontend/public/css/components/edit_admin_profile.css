@@ -1,3 +1,4 @@
+/* >>> SECCIÓN DE CONTENEDOR PARA EDITAR EL PERFIL DEL ADMINISTRADOR */
 .edit-profile-admin {
   display: flex;
   justify-content: center;
@@ -7,6 +8,7 @@
   box-sizing: border-box;
   padding-block: 10rem;
 }
+/* >>> SECCIÓN DE CONTENIDO DEL CONTENEDOR */
 .edit-profile-admin__container {
   width: 100%;
   max-width: 700px;
@@ -127,9 +129,87 @@
 .edit-profile-admin__actions-secondary {
   justify-self: start; 
 }
+/* Icono a la derecha */
 .edit-profile-admin__actions-primary {
   justify-self: end; 
 }
+.edit-profile-admin__actions-primary .btn{
+  font-family: var(--font-primary-regular);
+  font-weight: 400;
+  align-self: flex-end; 
+  padding: var(--button-padding-top) var(--button-padding-right) 
+           var(--button-padding-bottom) var(--button-padding-left);
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem; 
+  text-decoration: none;
+}
+.edit-profile-admin__icon {
+  width: 2rem;
+  height: 2rem;
+  object-fit: contain;
+  display: inline-block;
+  margin-left: 0.25rem;
+}
+.edit-profile-admin__icon-secundary {
+  width: 1.6rem;
+  height: 1.6rem;
+  object-fit: contain;
+  display: inline-block;
+  margin-left: 0.25rem;
+}
+/* ===== ALERT (mismo estilo que las anteriores) ===== */
+.alert {
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%) scale(0.8);
+  background-color: var(--white);
+  border: 2px solid var(--secundary-700);
+  color: var(--secundary-700);
+  padding: 1.8rem 2.5rem;
+  border-radius: 12px;
+  font-family: var(--font-primary);
+  font-size: var(--fs-sm);
+  text-align: center;
+  box-shadow: 0 8px 30px rgba(0, 0, 0, 0.25);
+  z-index: 9999;
+  opacity: 0;
+  transition: opacity 0.4s ease, transform 0.4s ease;
+}
+
+.alert--show {
+  opacity: 1;
+  transform: translate(-50%, -50%) scale(1);
+}
+
+.alert__content {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.alert__message {
+  margin: 0;
+  font-weight: 500;
+  color: inherit;
+}
+
+/* ===== Tipos ===== */
+.alert--success {
+  border-color: var(--secundary-700);
+  background-color: var(--secundary-50);
+  color: var(--secundary-700);
+}
+
+.alert--error {
+  border-color: var(--tertiary-700);
+  background-color: var(--tertiary-100);
+  color: var(--tertiary-700);
+}
+
+
+/* >>> SECCIÓN DE RESPONSIVIDAD */
 @media(max-width: 640px) {
   .edit-profile-admin__form {
     grid-template-columns: 1fr !important;

@@ -1,16 +1,17 @@
+/* >>> SECCIÓN DE CONTENEDOR DE OPCION PARA PAGAR */
 .payment-method {
   font-family: var(--font-primary);
   background-color: var(--white);
   border: 1px solid var(--secundary-900);
   border-radius: 8px;
   padding: var(--gap-lg);
-  width: 100%;
+  width: 90%;
   max-width: 500px;
-  margin: 0 auto; /* Centra horizontalmente */
+  margin: 0 auto; 
   box-shadow: 0 2px 8px rgba(0, 0, 0, 0.08);
   box-sizing: border-box;
 }
-
+/* >>> SECCIÓN DE CONTENIDO DEL CONTENEDOR */
 .payment-method__title {
   font-size: var(--fs-sm);
   font-weight: 600;
@@ -18,13 +19,11 @@
   margin-bottom: var(--gap-md);
   text-align: center;
 }
-
 .payment-method__options {
   display: flex;
   flex-direction: column;
   gap: var(--gap-md);
 }
-
 .payment-method__option {
   display: flex;
   align-items: center;
@@ -36,42 +35,46 @@
   cursor: pointer;
   transition: all 0.2s ease-in-out;
 }
-
 .payment-method__option:hover {
   border-color: var(--secundary-500);
   background-color: var(--white);
 }
-
 .payment-method__input {
   accent-color: var(--secundary-500);
   width: 20px;
   height: 20px;
 }
-
 .payment-method__label {
   font-size: var(--fs-xxs);
   color: var(--gray-900);
   font-family: var(--font-primary-semibold);
 }
-
+/* >>> SECCIÓN DE ACCIONES DEL CONTENEDOR */
 .payment-method__actions {
   margin-top: var(--gap-lg);
   display: flex;
   justify-content: center;
   width: 100%;
 }
-
 .payment-method__actions .btn {
-  font-size: var(--fs-xs);
+  font-family: var(--font-primary-regular);
   font-weight: 400;
-  align-self: flex-start;
-  padding: var(--button-padding-top) var(--button-padding-right)
+  align-self: flex-end; 
+  padding: var(--button-padding-top) var(--button-padding-right) 
            var(--button-padding-bottom) var(--button-padding-left);
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem; 
+  text-decoration: none;
 }
-
-/* ===== Responsividad ===== */
-
-/* ✅ Tablet */
+.payment-method__icon {
+  width: 2rem;
+  height: 2rem;
+  object-fit: contain;
+  display: inline-block;
+  margin-left: 0.25rem;
+}
+/* >>> SECCIÓN DE RESPONSIVIDAD */
 @media (max-width: 768px) {
   .payment-method {
     width: 90%;
@@ -88,7 +91,7 @@
     padding: var(--gap-lg);
     width: 100%;
     max-width: 500px;
-    margin: 0 auto 2rem; /* Centra horizontalmente */
+    margin: 0 auto 2rem; 
     box-shadow: 0 2px 8px rgba(0, 0, 0, 0.08);
     box-sizing: border-box;
   }

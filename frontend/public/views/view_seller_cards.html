@@ -2,39 +2,45 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">    
+    <title>Vista tienda Vendedor</title>
+    <!-- >>> Sección CSS principal -->
     <link rel="stylesheet" href="/frontend/public/css/main.css">
-    
-    <script type="module">
-      import { loadSellercards } from "/frontend/public/js/components/seller_card.js";
-      document.addEventListener("DOMContentLoaded", () => {
-        loadSellercards(".seller-cards__container");
-      });
+    <!-- >>> Sección JS componentes -->
+    <script type="module"> import { loadSellercards } from "/frontend/public/js/components/seller_card.js";
+      document.addEventListener("DOMContentLoaded", () => {loadSellercards(".seller-cards__container");});
     </script>
     <script src="/frontend/public/js/components/navbar_seller_view.js"></script>
     <script src="/frontend/public/js/components/search_bar.js"></script>
     <script src="/frontend/public/js/components/client_view.js"></script>
     <script src="/frontend/public/js/components/footer.js"></script>
-    
-    <title>Tienda Vendedor</title>
+    <script src="/frontend/public/js/components/hero_seller.js" defer></script> 
 </head>
 <body>
-    <main>
-    <section>
+  <main>
+    <!-- >>> Sección Navbar-->
+    <nav class="navbar-seller-cards-view">
         <div class="navbar_seller_view"></div>
+    </nav>
+    <!-- >>> Sección Imagen principal de la tienda -->
+    <section class="hero">
+      <div class="hero-seller__container"></div>
     </section>
-
-      <section class="seeker">
-        <div class="search-bar-container"></div>
-      </section>
-      
-      <section class="products-cards">
-        <div class="seller-cards__container"></div>
-      </section>
-    </main>
-    <section>
-        <footer class="footer-container"></footer>
+    <!-- >>> Sección Barra de busqueda -->
+    <section class="seeker">
+      <div class="search-bar-container"></div>
     </section>
+    <!-- >>> Sección Tarjetas de productos de la tienda -->
+    <section class="products-cards">
+      <div class="seller-cards__container"></div>
+    </section>
+  </main>
+  <!-- >>> Sección Footer -->
+  <footer class="footer-seller-cards-view">
+      <div class="footer-container"></div>
+  </footer>
 </body>
 </html>
 
+    
+ 

@@ -1,6 +1,7 @@
+/* >>> SECCIÓN DE CONTENEDOR DE LAS TARJETAS DE LA TIENDA  */
 .seller-cards__container {
   display: grid;
-  gap: var(--gap-md);
+  gap: var(--gap-lg);
   width: fit-content;
   box-sizing: border-box;
   margin: var(--gap-md) auto;
@@ -8,6 +9,7 @@
   justify-content: center;
   justify-items: center;
 }
+/* >>> SECCIÓN DE RESPONSIVIDAD DE LAS TARJETAS */
 @media (width > 640px) {
   .seller-cards__container {
     grid-template-columns: repeat(2, 1fr);
@@ -22,14 +24,15 @@
     max-width: 100%;
   }
 }
+/* >>> SECCIÓN DE CONTENIDO DE LAS TARJETAS */
 .card-seller {
   border: 1px solid var(--secundary-900);
   border-radius: 12px;
   padding: 24px;
   text-align: center;
   background-color: var(--secundary-50);
-  min-width: 200px;
-  max-width: 320px;
+  min-width: 320px;
+  max-width: 100%;
   box-shadow: 0 2px 4px var(--secundary-900);
   overflow: hidden;
   display: flex;
@@ -75,6 +78,7 @@
   font-weight: 800;
   margin: 0;
 }
+/* >>> SECCIÓN DE ACCIONES DE LAS TARJETAS */
 .card-seller__secondary {
   grid-column: 1 / 2;
   grid-row: 2 / 3;
@@ -90,10 +94,29 @@
 .card-seller__primary .btn {
   font-family: var(--font-primary-regular);
   font-weight: 400;
-  padding: var(--button-padding-top) var(--button-padding-right)
+  align-self: flex-end; 
+  padding: var(--button-padding-top) var(--button-padding-right) 
            var(--button-padding-bottom) var(--button-padding-left);
-  border-radius: 8px;
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem; 
+  text-decoration: none;
 }
+.card-seller__icon-primary {
+  width: 2rem;
+  height: 2rem;
+  object-fit: contain;
+  display: inline-block;
+  margin-left: 0.25rem;
+}
+.card-seller__icon-secundary {
+  width: 1.6rem;
+  height: 1.6rem;
+  object-fit: contain;
+  display: inline-block;
+  margin-left: 0.25rem;
+}
+/* >>> SECCIÓN DE CONTENIDO DEL CONTENEDOR */
 @media (max-width: 640px) {
   .card-seller {
     text-align: left;
