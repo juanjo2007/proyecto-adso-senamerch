@@ -1,35 +1,45 @@
 <section class="create-post-one">
-  <form class="create-post-one__form">
-    <div class="create-post-one__fields-wrapper">
-      <h2 class="create-post-one__title">Crear Producto</h2>
+  <div class="create-post-one__wrapper">
+    
+    <!-- Encabezado igual que el create-store-one -->
+    <header class="create-post-one__header">
+      <h1 class="create-post-one__title">Crear Producto</h1>
+      <p class="create-post-one__subtitle">
+        Este formulario es para registrar<br> tu producto en <strong>SENA MERCH</strong>.
+        Podrás publicarlo y gestionarlo fácilmente.
+      </p>
+    </header>
+
+    <!-- FORMULARIO -->
+    <form class="create-post-one__form">
 
       <!-- Campo: Título -->
-      <div class="create-post-one__field">
+      <div class="create-post-one__group">
         <label class="create-post-one__label">Título del producto</label>
         <input 
-          type="text" 
-          class="create-post-one__input create-post-one__input--text" 
-          placeholder="Ej: Tomate del Valle" 
+          type="text"
+          class="create-post-one__input"
+          placeholder="Ej: Tomate del Valle"
           required
         >
       </div>
 
       <!-- Campo: Precio -->
-      <div class="create-post-one__field">
+      <div class="create-post-one__group">
         <label class="create-post-one__label">Precio</label>
         <input 
-          type="number" 
-          class="create-post-one__input create-post-one__input--text" 
-          placeholder="Ej: 3000" 
-          min="0" 
+          type="number"
+          class="create-post-one__input"
+          placeholder="Ej: 3000"
+          min="0"
           required
         >
       </div>
 
       <!-- Campo: Categoría -->
-      <div class="create-post-one__field">
+      <div class="create-post-one__group">
         <label class="create-post-one__label">Categoría</label>
-        <select class="create-post-one__select" required>
+        <select class="create-post-one__input" required>
           <option value="" selected disabled>Selecciona una categoría</option>
           <option value="frutas">Frutas</option>
           <option value="verduras">Verduras</option>
@@ -39,10 +49,10 @@
         </select>
       </div>
 
-      <!-- Campo: Cantidad disponible -->
-      <div class="create-post-one__field">
+      <!-- Campo: Unidad -->
+      <div class="create-post-one__group">
         <label class="create-post-one__label">Precio * Unidad de medida</label>
-        <select class="create-post-one__select" required>
+        <select class="create-post-one__input" required>
           <option value="" selected disabled>Selecciona una Unidad</option>
           <option value="kg">Kilogramos (kg)</option>
           <option value="lb">Libras (lb)</option>
@@ -51,8 +61,9 @@
           <option value="mililitro">Mililitros (mL)</option>
         </select>
       </div>
-      
-      <div class="create-post-one__field-secundary">
+
+      <!-- Botón secundario -->
+      <div class="create-post-one__secondary">
         <button
           type="button"
           class="btn-secundary btn-secundary-style create-post-one__cancel"
@@ -68,7 +79,8 @@
         </button>
       </div>
 
-      <div class="create-post-one__field-actions">
+      <!-- Botón principal -->
+      <div class="create-post-one__buttons">
         <button
           type="submit"
           class="btn btn--primary create-post-one__continue"
@@ -83,5 +95,7 @@
           />
         </button>
       </div>
-  </form>
+
+    </form>
+  </div>
 </section>

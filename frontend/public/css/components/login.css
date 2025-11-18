@@ -1,24 +1,16 @@
-/* ===================================================== */
-/*                     SITE MAIN                         */
-/* ===================================================== */
 .site-main-login { 
   display: flex;
-  /* justify-content: center; */
   align-items: center;
   box-sizing: border-box;
   padding-block: 8.4rem; 
   overflow: hidden;
   min-height: 100%;
 }
-/* ===================================================== */
-/*                       LOGIN                           */
-/* ===================================================== */
 .login {
   border: 1px solid var(--secundary-900);
   background-color: var(--white);
   padding: var(--gap-lg);
   width: 100%;
-  /* max-width: fit-content; */
   border-radius: 8px;
   font-family: var(--font-primary);
   display: flex;
@@ -37,21 +29,16 @@
 .login__form {
   display: flex;
   flex-direction: column;
-  /* justify-content: center; */
   align-items: center; 
   gap: var(--gap-lg) !important;
   width: 100%;
 }
-/* ===================================================== */
-/*                CAMPOS E INPUTS                        */
-/* ===================================================== */
 .login__field {
   display: flex;
   flex-direction: column;
   align-items: flex-start;
-  gap: var(--gap-xxxs);
+  gap: var(--gap-xs);
   width: 100%;
-  /* max-width: 360px;  */
 }
 .login__label {
   font-size: var(--fs-xxxs);
@@ -66,12 +53,10 @@
   outline: none;
   transition: border 0.3s, box-shadow 0.3s;
   width: 100%;
-  /* min-width: 320px !important;  */
   box-sizing: border-box;
   color: var(--gray-600);
   background-color: var(--white);
 }
-
 .login__input:focus {
   border-color: var(--secundary-600);
   box-shadow: 0 0 0 3px var(--secundary-100);
@@ -79,7 +64,6 @@
 .login__password-wrapper {
   position: relative;
   width: 100%;      
-  /* max-width: 360px;   */
 }
 .login__toggle-password {
   position: absolute;
@@ -88,13 +72,13 @@
   transform: translateY(-50%);
   background-color: var(--secundary-600);
   border: none;
-  padding: 4px 10px;
+  padding: 6px 10px;
   border-radius: 4px;
   font-size: var(--fs-xxs);
   cursor: pointer;
   transition: background 0.3s, border-color 0.3s, transform 0.15s;
   color: var(--white);
-  margin-left: 0;
+  margin-right: 8px;
 }
 .login__toggle-password:hover {
   background-color: var(--secundary-700);
@@ -124,12 +108,6 @@
     width: 360px;
   }
 }
-
-
-/* ===================================================== */
-/*                ALERTAS (JS)                           */
-/* ===================================================== */
-
 .alert {
   position: fixed;
   top: 50%;

@@ -1,11 +1,21 @@
-<section class="edit-post">
-  <form class="edit-post__form">
-    <div class="edit-post__fields-wrapper">
-      <h2 class="edit-post__title">Sigue Editando el producto</h2>
+<section class="edit-post-two">
+  <div class="edit-post-two__wrapper">
 
-      <div class="edit-post__field">
-        <label class="edit-post__label">Precio * Unidad de medida</label>
-        <select class="edit-post__select" required>
+    <!-- HEADER -->
+    <header class="edit-post-two__header">
+      <h1 class="edit-post-two__title">Sigue Editando el producto</h1>
+      <p class="edit-post-two__subtitle">
+        Completa o modifica la información de tu producto en <strong>SENA MERCH</strong>.
+      </p>
+    </header>
+
+    <!-- FORMULARIO -->
+    <form class="edit-post-two__form">
+
+      <!-- Grupo: Precio * Unidad -->
+      <div class="edit-post-two__group">
+        <label class="edit-post-two__label">Precio * Unidad de medida</label>
+        <select class="edit-post-two__input" required>
           <option value="" disabled>Selecciona una unidad</option>
           <option value="kg" selected>Kilogramos (kg)</option>
           <option value="lb">Libra (lb)</option>
@@ -15,9 +25,10 @@
         </select>
       </div>
 
-      <div class="edit-post__field">
-        <label class="edit-post__label">Unidad de medida</label>
-        <select class="edit-post__select" required>
+      <!-- Grupo: Unidad de medida -->
+      <div class="edit-post-two__group">
+        <label class="edit-post-two__label">Unidad de medida</label>
+        <select class="edit-post-two__input" required>
           <option value="" disabled>Selecciona una unidad</option>
           <option value="kg" selected>Kilogramos (kg)</option>
           <option value="lb">Libras (lb)</option>
@@ -27,49 +38,54 @@
         </select>
       </div>
 
-      <div class="edit-post__field">
-        <label class="edit-post__label">Descuento (%)</label>
+      <!-- Grupo: Descuento -->
+      <div class="edit-post-two__group">
+        <label class="edit-post-two__label">Descuento (%)</label>
         <input 
-          type="number" 
-          class="edit-post__input" 
-          value="10" 
-          min="0" 
+          type="number"
+          class="edit-post-two__input"
+          value="10"
+          min="0"
           max="100"
         >
       </div>
 
-      <div class="edit-post__field">
-        <label class="edit-post__label">Imagen del producto</label>
+      <!-- Grupo: Imagen -->
+      <div class="edit-post-two__group">
+        <label class="edit-post-two__label">Imagen del producto</label>
         <input 
-          type="file" 
-          class="edit-post__input" 
+          type="file"
+          class="edit-post-two__input"
           accept="image/*"
         >
       </div>
 
-      <div class="edit-post__field edit-post__field--full">
-        <label class="edit-post__label">Descripción</label>
-        <textarea class="edit-post__textarea">
-Tomates frescos del Valle, cultivados sin pesticidas.
-        </textarea>
+      <!-- Grupo: Descripción -->
+      <div class="edit-post-two__group edit-post-two__group--full">
+        <label class="edit-post-two__label">Descripción</label>
+        <textarea class="edit-post-two__textarea">Tomates frescos del Valle, cultivados sin pesticidas.</textarea>
       </div>
 
-      <!-- 🔽 CONTENEDOR DE BOTONES (alineados por columnas) -->
-      <div class="edit-post__actions">
-        <div class="edit-post__field-secundary">
-          <button class="btn-secundary btn-secundary-style edit-post__cancel">
+      <!-- Grupo Botón cancelar -->
+      <div class="edit-post-two__group ">
+        <div class="edit-post-two__secondary">
+          <button class="btn-secundary btn-secundary-style edit-post-two__cancel">
             Cancelar producto
             <img src="/frontend/public/assets/icons/cancel.svg" alt="Icono cancelar" class="btn-secundary__icon">
           </button>
         </div>
+      </div>
 
-        <div class="edit-post__field-primary">
-          <button type="button" class="btn btn--primary edit-post__save">
+      <!-- Grupo Botón guardar -->
+      <div class="edit-post-two__group ">
+        <div class="edit-post-two__buttons">
+          <button type="button" class="btn btn--primary edit-post-two__save">
             Guardar cambios
             <img src="/frontend/public/assets/icons/save.svg" alt="Icono guardar" class="btn__icon"/>
           </button>
         </div>
       </div>
-    </div>
-  </form>
+
+    </form>
+  </div>
 </section>

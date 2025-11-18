@@ -1,55 +1,51 @@
-/* >>> SECCIÓN DE CONTENEDOR DE LAS TARJETAS DEL CLIENTE */
 .cards__container {
   display: grid;
   gap: var(--gap-lg);
   width: 100%;
   box-sizing: border-box;
   margin: var(--gap-md) auto;
-  padding-inline: 24px; /* ✅ 24px de espacio lateral en móvil */
+  padding-inline: 24px;
   justify-content: center;
   justify-items: center;
-  grid-template-columns: 1fr; /* ✅ una columna en móvil */
+  grid-template-columns: 1fr;
 }
-
-/* >>> SECCIÓN DE RESPONSIVIDAD DE LAS TARJETAS */
-@media (width > 640px) {
+@media (min-width: 640px) {
   .cards__container {
     grid-template-columns: repeat(2, 1fr);
-    gap: var(--gap-md);
-    max-width: 100%;
-    padding-inline: var(--gap-sm); /* vuelve al valor anterior */
+    gap: var(--gap-lg);
+    padding-inline: var(--gap-lg);
   }
 }
-
-@media (width > 1024px) {
+@media (min-width: 1024px) {
+  .cards__container {
+    grid-template-columns: repeat(3, 1fr);
+    gap: var(--gap-lg);
+    padding-inline: var(--gap-lg);
+  }
+}
+@media (min-width: 1280px) {
   .cards__container {
     grid-template-columns: repeat(4, 1fr);
     gap: var(--gap-lg);
-    max-width: 100%;
-    padding-inline: var(--gap-sm);
+    padding-inline: var(--gap-lg);
   }
 }
-
-/* >>> SECCIÓN DE CONTENIDO DE LAS TARJETAS */
 .card {
   border: 1px solid var(--secundary-900);
   border-radius: 12px;
   padding: 24px;
   text-align: center;
   background-color: var(--secundary-50);
-  width: 100%; /* ✅ ocupa todo el espacio disponible */
-  min-width: unset; /* ✅ evita forzar tamaño mínimo */
+  width: 100%;
   max-width: 100%;
   box-shadow: 0 2px 4px var(--secundary-900);
   overflow: hidden;
   display: flex;
   flex-direction: column;
   align-items: center;
-  justify-content: center;
   transition: transform 0.3s ease, box-shadow 0.3s ease;
   cursor: pointer;
 }
-
 .card:hover {
   transform: translateY(-4px);
   box-shadow: 0 6px 14px rgba(0, 0, 0, 0.15);

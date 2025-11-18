@@ -33,7 +33,7 @@
 .address-form__group {
   display: flex;
   flex-direction: column;
-  gap: var(--gap-xxs);
+  gap: var(--gap-xs);
 }
 .address-form__label {
   font-size: var(--fs-xxs);

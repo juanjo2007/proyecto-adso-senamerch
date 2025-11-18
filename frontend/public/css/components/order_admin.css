@@ -93,11 +93,9 @@
     text-transform: capitalize;
   }
 }
-@media (max-width: 480px) {
-  .orders-admin__title {
-    font-size: var(--fs-xxs);
-  }
-  .orders-admin__table-cell {
-    font-size: var(--fs-xxxs);
+@media (max-width: 640px) {
+  .orders-admin__table-secondary {
+    justify-content: end;
+    text-align: right;
   }
 }

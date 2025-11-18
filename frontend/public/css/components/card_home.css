@@ -1,33 +1,35 @@
-/* >>> SECCIÓN DE CONTENEDOR DE LAS TARJETAS DEL INICIO */
 .cards-home__container {
   display: grid;
   gap: var(--gap-lg);
   width: 100%;
   box-sizing: border-box;
   margin: var(--gap-md) auto;
-  padding-inline: 24px; 
+  padding-inline: 24px;
   justify-content: center;
   justify-items: center;
-  grid-template-columns: 1fr; 
+  grid-template-columns: 1fr;
 }
-/* >>> SECCIÓN DE RESPONSIVIDAD DE LAS TARJETAS */
-@media (width > 640px) {
+@media (min-width: 640px) {
   .cards-home__container {
     grid-template-columns: repeat(2, 1fr);
     gap: var(--gap-lg);
-    max-width: 90%;
-    padding-inline: var(--gap-sm); /* vuelve al padding anterior en tablets */
+    padding-inline: var(--gap-lg);
   }
 }
-@media (width > 1024px) {
+@media (min-width: 1024px) {
+  .cards-home__container {
+    grid-template-columns: repeat(3, 1fr);
+    gap: var(--gap-lg);
+    padding-inline: var(--gap-lg);
+  }
+}
+@media (min-width: 1280px) {
   .cards-home__container {
     grid-template-columns: repeat(4, 1fr);
     gap: var(--gap-lg);
-    max-width: 100%;
-    padding-inline: var(--gap-sm);
+    padding-inline: var(--gap-lg);
   }
 }
-/* >>> SECCIÓN DE CONTENIDO DE LAS TARJETAS */
 .card-home {
   border: 1px solid var(--secundary-900);
   border-radius: 12px;
@@ -35,13 +37,12 @@
   text-align: center;
   background-color: var(--secundary-50);
   width: 100%;
-  min-width: unset; 
+  max-width: 100%;
   box-shadow: 0 2px 4px var(--secundary-900);
   overflow: hidden;
   display: flex;
   flex-direction: column;
   align-items: center;
-  justify-content: center;
   transition: transform 0.3s ease, box-shadow 0.3s ease;
   cursor: pointer;
 }

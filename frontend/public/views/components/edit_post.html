@@ -1,37 +1,47 @@
 <section class="edit-post-one">
-  <form class="edit-post-one__form">
-    <div class="edit-post-one__fields-wrapper">
-      <h2 class="edit-post-one__title">Editar producto</h2>
+  <div class="edit-post-one__wrapper">
+
+    <!-- HEADER -->
+    <header class="edit-post-one__header">
+      <h1 class="edit-post-one__title">Editar producto</h1>
+      <p class="edit-post-one__subtitle">
+        Este formulario es para registrar<br> tu tienda en <strong>SENA MERCH</strong>.
+        Con tu perfil podrás publicar productos y gestionar tus ventas fácilmente.
+      </p>
+    </header>
+
+    <!-- FORMULARIO -->
+    <form class="edit-post-one__form">
 
       <!-- Campo: Título -->
-      <div class="edit-post-one__field">
+      <div class="edit-post-one__group">
         <label class="edit-post-one__label">Título del producto</label>
         <input 
-          type="text" 
-          class="edit-post-one__input edit-post-one__input--text" 
-          value="Tomate del Valle" 
+          type="text"
+          class="edit-post-one__input"
+          placeholder="Ejemplo: Tomate del Valle"
           required
         >
       </div>
 
       <!-- Campo: Precio -->
-      <div class="edit-post-one__field">
+      <div class="edit-post-one__group">
         <label class="edit-post-one__label">Precio</label>
         <input 
-          type="number" 
-          class="edit-post-one__input edit-post-one__input--text" 
-          value="3000" 
-          min="0" 
+          type="number"
+          class="edit-post-one__input"
+          placeholder="3000"
+          min="0"
           required
         >
       </div>
 
       <!-- Campo: Categoría -->
-      <div class="edit-post-one__field">
+      <div class="edit-post-one__group">
         <label class="edit-post-one__label">Categoría</label>
-        <select class="edit-post-one__select" required>
-          <option value="" disabled>Selecciona una categoría</option>
-          <option value="frutas" selected>Frutas</option>
+        <select class="edit-post-one__input" required>
+          <option value="" disabled selected>Selecciona una categoría</option>
+          <option value="frutas">Frutas</option>
           <option value="verduras">Verduras</option>
           <option value="granos">Granos</option>
           <option value="carnes">Carnes</option>
@@ -40,31 +50,33 @@
         </select>
       </div>
 
-      <!-- Campo: Cantidad disponible -->
-      <div class="edit-post-one__field">
+      <!-- Campo: Stock -->
+      <div class="edit-post-one__group">
         <label class="edit-post-one__label">Stock disponible</label>
         <input 
-          type="number" 
-          class="edit-post-one__input" 
-          value="50" 
-          min="1" 
+          type="number"
+          class="edit-post-one__input"
+          placeholder="50"
+          min="1"
           required
         >
       </div>
 
-      <div class="edit-post-one__field-secundary">
-        <button class="btn-secundary btn-secundary-style edit-post-one__cancel">
-          Editar
-          <img src="/frontend/public/assets/icons/edit.svg" alt="Icono exportar PDF" class="btn-secundary__icon">
+      <!-- Botón secundario -->
+      <div class="edit-post-one__secondary">
+        <button type="button" class="btn-secundary btn-secundary-style edit-post-one__cancel">
+          Cancelar
+          <img src="/frontend/public/assets/icons/cancel.svg" alt="" class="btn-secundary__icon">
         </button>
       </div>
 
-      <div class="edit-post-one__field-primary">
+      <!-- Botones -->
+      <div class="edit-post-one__buttons">
         <button type="button" class="btn btn--primary edit-post-one__save">
           Siguiente
-          <img src="/frontend/public/assets/icons/continue.svg" alt="Icono Comprar" class="btn__icon"/>
+          <img src="/frontend/public/assets/icons/continue.svg" alt="" class="btn__icon"/>
         </button>
       </div>
-    </div>
-  </form>
+    </form>
+  </div>
 </section>
