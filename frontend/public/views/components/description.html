@@ -21,6 +21,9 @@
       <img src="/frontend/public/assets/img/tomato4_image.png" 
            alt="Tomate vista 5" 
            class="product-description__thumbnail" />
+      <img src="/frontend/public/assets/img/tomato2_image.png" 
+           alt="Tomate vista 5" 
+           class="product-description__thumbnail" />
     </div>
 
     <!-- BLOQUE DE COMENTARIOS DEBAJO DE LA GALERÍA -->
@@ -41,7 +44,7 @@
       <form class="comments__form">
         <label class="comments__label" for="comment-text">Deja tu comentario:</label>
         <textarea id="comment-text" class="comments__textarea" rows="3" placeholder="Escribe tu opinión aquí..."></textarea>
-        <button type="button" class="comments__button btn btn--primary">
+        <button type="button" class="btn btn--primary comments__button">
           Enviar comentario
           <img src="/frontend/public/assets/icons/contact.svg" 
                alt="Icono Enviar" 
@@ -71,13 +74,14 @@
 
     <h2 class="details__title">Tomate Del Valle</h2>
     <p class="details__price">$3.000 Kilo</p>
-    <button type="button" class="details__button btn btn--primary">
+    <button type="button" class="btn btn--primary details__button">
       Comprar
       <img src="/frontend/public/assets/icons/cash-button.svg" 
            alt="Icono Comprar" 
            class="details__icon btn__icon" />
     </button>
 
+     <!-- SECCIÓN DE INFORMACIÓN DEL PRODUCTO-->
     <div class="details__info info">
       <h3 class="info__subtitle">Características sobre este producto</h3>
       <p><strong>Unidad de medida:</strong> Kilogramo (kg) / libra (lb) / unidad.</p>
@@ -92,6 +96,30 @@
         <li class="info__item">Variedades comunes: chonto, cherry, perita, entre otros.</li>
       </ul>
     </div>
+     <!-- SECCIÓN DE MÁS PRODUCTOS -->
+    <h3 class="info__subtitle">Más Productos</h3>
+
+    <div class="product-description__more-products">
+      <article class="product-description__item">
+        <img class="product-description__item-image" src="{{image}}" alt="Imagen de {{name}}">
+        
+        <div class="product-description__item-info">
+          <h2 class="product-description__item-title">{{name}}</h2>
+          <p class="product-description__item-price">${{price}}</p>
+
+          <button type="button" class="btn btn--primary product-description__item-pay">
+            Vizualizar
+            <img src="/frontend/public/assets/icons/cash-button.svg" 
+                alt="Icono Comprar" 
+                class="btn__icon product-description__item-icon" />
+          </button>
+        </div>
+      </article>
+    </div>
+
+
+
   </div>
+
 
 </section>

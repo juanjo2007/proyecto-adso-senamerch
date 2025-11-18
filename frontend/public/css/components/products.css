@@ -93,9 +93,9 @@
     text-transform: capitalize;
   }
 }
-@media (max-width: 480px) {
-  .products__title {
-    font-size: var(--fs-xxs);
+@media (max-width: 640px) {
+  .products__table-secondary {
+    justify-content: end;
+    text-align: right;
   }
-
 }

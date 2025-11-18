@@ -16,18 +16,22 @@ document.addEventListener("DOMContentLoaded", async () => {
     return;
   }
 
-  // Variables del formulario
+  // ====== Seleccionar elementos DESPUÉS de cargar el HTML ======
   const form = container.querySelector(".register__form");
   const userType = form.querySelector("select[name='user-type']");
   const passwordInput = form.querySelector("input[name='password']");
   const togglePasswordBtn = form.querySelector(".register__toggle-password");
 
-  // Mostrar / ocultar contraseña
-  togglePasswordBtn.addEventListener("click", () => {
-    const isHidden = passwordInput.type === "password";
-    passwordInput.type = isHidden ? "text" : "password";
-    togglePasswordBtn.textContent = isHidden ? "Ocultar" : "Mostrar";
-  });
+  // ====== Mostrar / Ocultar contraseña ======
+  if (togglePasswordBtn && passwordInput) {
+    togglePasswordBtn.addEventListener("click", () => {
+      const isHidden = passwordInput.type === "password";
+      passwordInput.type = isHidden ? "text" : "password";
+      togglePasswordBtn.textContent = isHidden ? "Ocultar" : "Mostrar";
+    });
+  } else {
+    console.warn("⚠ No se encontró el botón o el campo de contraseña.");
+  }
 
   // ===== ALERTA =====
   function showAlert(message, type = "success", duration = 2000) {
@@ -48,10 +52,8 @@ document.addEventListener("DOMContentLoaded", async () => {
 
     document.body.appendChild(alert);
 
-    // Mostrar animación
     requestAnimationFrame(() => alert.classList.add("alert--show"));
 
-    // Ocultar después de un tiempo
     setTimeout(() => {
       alert.classList.remove("alert--show");
       setTimeout(() => alert.remove(), 400);

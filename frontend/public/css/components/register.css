@@ -1,201 +1,200 @@
-/* ================== REGISTER ================== */
 .register {
+  display: flex;
+  align-items: center;
+  box-sizing: border-box;
+  padding-block: 1.2 rem;
+  overflow: hidden;
+  min-height: 100%;
+}
+
+.register__wrapper {
   border: 1px solid var(--secundary-900);
   background-color: var(--white);
   padding: var(--gap-lg);
-  width: fit-content;
+  width: 100%;
   border-radius: 8px;
   font-family: var(--font-primary);
   display: flex;
   flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  margin: auto; 
+  margin: 24px;
   box-sizing: border-box;
-  margin-block: 6.8rem;
+}
+
+@media (width > 640px) {
+  .register {
+    margin: var(--gap-lg);
+  }
+  .register__wrapper {
+    width: fit-content;
+    padding: var(--gap-lg);
+    margin: 0 auto;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.15);
+  }
+  .register__input {
+    width: 360px;
+    max-width: 360px;
+    min-width: 360px;
+  }
+}
+
+@media (width < 1024px) {
+  .register__wrapper {
+    width: 100%;
+    max-width: fit-content;
+    margin: 0 auto;
+  }
+  .register__form {
+    width: 100%;
+    grid-template-columns: repeat(2, 1fr);
+    gap: var(--gap-lg);
+  }
+  .register__group {
+    width: 100%;
+  }
+  .register__input {
+    width: 100%;
+    max-width: none;
+    min-width: 0;
+    box-sizing: border-box;
+  }
+  .register__buttons {
+    width: 100%;
+    max-width: none;
+    justify-content: flex-end;
+    flex-wrap: wrap;
+    gap: var(--gap-xxs);
+  }
+}
+
+.register__header {
+  text-align: center;
+  margin-bottom: var(--gap-lg);
 }
 
 .register__title {
-  text-align: center;
   font-size: var(--fs-sm);
-  font-weight: 600;
+  font-family: var(--font-primary-bold);
   color: var(--black);
   margin-bottom: var(--gap-lg);
 }
 
+.register__subtitle {
+  font-size: var(--fs-xs);
+  font-family: var(--font-primary);
+  color: var(--black);
+}
+
 .register__form {
-  display: flex;
-  flex-direction: column;
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
   gap: var(--gap-lg);
 }
 
-.register__grid {
-  display: grid;
-  grid-template-columns: 1fr 1fr;
-  column-gap: var(--gap-lg);
-  row-gap: var(--gap-lg);
-}
-
-.register__column {
+.register__group {
   display: flex;
   flex-direction: column;
-  gap: var(--gap-md);
+  align-items: flex-start;
+  gap: var(--gap-xs);
+  width: 100%;
 }
 
-.register__field {
-  display: flex;
-  flex-direction: column;
-  gap: var(--gap-xxxs);
+.register__group--full {
+  grid-column: 1 / -1;
 }
 
 .register__label {
   font-size: var(--fs-xxxs);
-  color: var(--gray-950);
-  font-weight: 500;
+  font-family: var(--font-primary-bold);
+  color: var(--black);
 }
 
 .register__input {
-  padding: var(--padding-top) var(--padding-right) var(--padding-bottom) var(--padding-left);
+  padding: var(--padding-top) var(--padding-right)
+          var(--padding-bottom) var(--padding-left);
   border: 1px solid var(--secundary-900);
   border-radius: 8px;
   font-size: var(--fs-xs);
   outline: none;
   transition: border 0.3s, box-shadow 0.3s;
   width: 100%;
-  max-width: 320px;
   box-sizing: border-box;
   color: var(--gray-600);
   background-color: var(--white);
-}
-.register__input--ubication{
-  padding: var(--padding-top) var(--padding-right) var(--padding-bottom) var(--padding-left);
-  height: 54px;
-  border: 1px solid var(--secundary-900);
-  border-radius: 8px;
-  font-size: var(--fs-xs);
-  outline: none;
-  transition: border 0.3s, box-shadow 0.3s;
-  width: 100%;
-  max-width: 320px;
-  box-sizing: border-box;
-  color: var(--gray-600);
-  background-color: var(--white);
-  margin-bottom: var(--gap-xxxs);
 }
 
 .register__input:focus {
-  border-color: var(--secundary-700);
-  box-shadow: 0 0 4px var(--secundary-700);
+  border-color: var(--secundary-900);
+  box-shadow: 0 0 4px var(--secundary-900);
 }
 
-.register__text {
-  font-size: var(--fs-xxxs);
-  color: var(--gray-700);margin-bottom: 1.1rem;
+.register__buttons {
+  grid-column: 1 / -1;     /* ⬅ OCUPA LAS 2 COLUMNAS */
+  display: flex;
+  justify-content: center; /* ⬅ CENTRADO */
+  align-items: center;
+  gap: var(--gap-xxs);
+  margin-top: var(--gap-xxs);
 }
 
 .register__link {
-  font-size: var(--fs-xs);
   color: var(--secundary-700);
+  font-size: var(--fs-xxs);
   text-decoration: none;
+  transition: color 0.3s;
+  text-align: center;
 }
-
 .register__link:hover {
-  color: var(--secundary-900);
+  color: var(--secundary-950);
   text-decoration: underline;
 }
-
-.register__actions {
-  display: flex;
-  justify-content: center;
-  margin-top: var(--gap-md);
-}
-
 .register__password-wrapper {
-  display: flex;
-  align-items: center;
-  gap: var(--gap-xs);
+  position: relative;
+  width: 100%;      
 }
-
 .register__toggle-password {
+  position: absolute;
+  right: 12px;      
+  top: 50%;
+  transform: translateY(-50%);
   background-color: var(--secundary-600);
-  color: var(--white);
   border: none;
-  border-radius: 0.6rem;
-  padding: 0.6rem 1.2rem;
-  font-family: var(--font-primary-semibold);
+  padding: 4px 10px;
+  border-radius: 4px;
   font-size: var(--fs-xxs);
   cursor: pointer;
+  transition: background 0.3s, border-color 0.3s, transform 0.15s;
+  color: var(--white);
+  margin-left: 0;
 }
-
 .register__toggle-password:hover {
   background-color: var(--secundary-700);
-  transform: scale(1.03);
 }
-.register__actions .btn--primary {
-  padding-top: 8px !important;
-  padding-bottom: 8px !important;
-  min-height: 40px !important; /* altura estándar Material Design */
-  line-height: 1 !important;
-  display: inline-flex;
-  align-items: center;
-  justify-content: center;
-}
-/* ===== ALERT ===== */
-.alert {
-  position: fixed;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%) scale(0.8);
-  background-color: var(--white);
-  border: 2px solid var(--secundary-700);
-  color: var(--primary-950);
-  padding: 1.8rem 2.5rem;
-  border-radius: 12px;
-  font-family: var(--font-primary);
-  font-size: var(--fs-sm);
-  text-align: center;
-  box-shadow: 0 8px 30px rgba(0, 0, 0, 0.25);
-  z-index: 9999;
-  opacity: 0;
-  transition: opacity 0.4s ease, transform 0.4s ease;
+.register__toggle-password:active {
+  transform: translateY(-50%) scale(0.95);
 }
 
-.alert--show {
-  opacity: 1;
-  transform: translate(-50%, -50%) scale(1);
-}
-
-.alert__content {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-}
-
-.alert__message {
-  margin: 0;
-  font-weight: 500;
-  color: var(--secundary-700);
-}
-
-/* ===== Tipos ===== */
-.alert--success {
-  border-color: var(--secundary-700);
-  background-color: var(--secundary-50);
-}
-
-.alert--error {
-  border-color: var(--tertiary-700);
-  background-color: var(--tertiary-100);
-}
-
-
-
-/* ===== Responsive ===== */
-@media (max-width: 1024px) {
-  .register { width: 80%; }
-  .register__grid { grid-template-columns: 1fr; }
-}
-
-@media (max-width: 640px) {
-  .register { width: 95%; padding: var(--gap-sm); }
+@media (width < 640px) {
+  .register__wrapper {
+    width: 100%;
+    margin: 2.4rem;
+  }
+  .register {
+    width: 100%;
+    padding-block: 10rem;
+  }
+  .register__input {
+    width: 100%;
+  }
+  .register__subtitle {
+    grid-template-columns: 1fr;
+  }
+  .register__form {
+    width: 100%;
+    grid-template-columns: 1fr;
+    gap: var(--gap-lg);
+  }
+  .register__buttons {
+    flex-direction: column;
+    align-items: start;
+  }
 }

@@ -93,11 +93,9 @@
     text-transform: capitalize;
   }
 }
-@media (max-width: 480px) {
-  .sales-admin__title {
-    font-size: var(--fs-xxs);
-  }
-  .sales-admin__table-cell {
-    font-size: var(--fs-xxxs);
+@media (max-width: 640px) {
+  .sales-admin__table-secondary {
+    justify-content: end;
+    text-align: right;
   }
 }

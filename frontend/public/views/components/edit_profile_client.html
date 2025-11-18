@@ -1,83 +1,77 @@
 <section class="edit-profile-user">
-  <section class="edit-profile-user__container">
-    <h1 class="edit-profile-user__title">Editar perfil</h1>
+  <div class="edit-profile-user__wrapper">
 
+    <!-- Header -->
+    <header class="edit-profile-user__header">
+      <h1 class="edit-profile-user__title">Editar perfil</h1>
+      <p class="edit-profile-user__subtitle">
+        Actualiza tu información personal y mantén tu cuenta al día.
+      </p>
+    </header>
+
+    <!-- Form -->
     <form class="edit-profile-user__form">
-      <!-- 🖼️ Imagen (solo ocupa una columna) -->
-      <div class="edit-profile-user__field">
-        <label class="edit-profile-user__label">Foto de perfil</label>
-        <label class="edit-profile-user__avatar">
-          <img
-            src="/frontend/public/assets/img/admin_profile.png"
-            alt="Foto del administrador"
-            class="edit-profile-user__avatar-img"
-          />
-          <input type="file" class="edit-profile-user__avatar-input" accept="image/*" />
-        </label>
+
+      <!-- Foto de perfil -->
+      <div class="edit-profile-user__group ">
+        <label class="edit-profile-user__label">Imagen de portada</label>
+        <input type="file" class="edit-profile-user__input" accept="image/*">
       </div>
 
-      <div class="edit-profile-user__field">
+      <!-- Dirección -->
+      <div class="edit-profile-user__group">
         <label class="edit-profile-user__label">Dirección</label>
-        <a href="/frontend/public/views/add_adress.html" class="edit-profile-user__link">Agregar dirección</a>
+        <a href="/frontend/public/views/add_adress.html" class="edit-profile-user__link">
+          Agregar dirección
+        </a>
+        <span class="edit-profile-user__label">Si tuviste un error puedes corregir tu dirección</span>
       </div>
 
-      <div class="edit-profile-user__field">
+      <!-- Correo -->
+      <div class="edit-profile-user__group">
         <label class="edit-profile-user__label">Correo electrónico</label>
-        <input type="email" class="edit-profile-user__input" value="juanperez@empresa.com" />
+        <input type="email" class="edit-profile-user__input" value="juanperez@empresa.com">
       </div>
 
-      <div class="edit-profile-user__field">
+      <!-- Nombre -->
+      <div class="edit-profile-user__group">
         <label class="edit-profile-user__label">Nombre</label>
-        <input type="text" class="edit-profile-user__input" value="Juan Pérez" />
+        <input type="text" class="edit-profile-user__input" value="Juan Pérez">
       </div>
 
-      <div class="edit-profile-user__field">
-        <label class="edit-profile-user__label">Teléfono</label>
-        <input type="tel" class="edit-profile-user__input" value="+57 300 000 0000" required>
+      <!-- Botón secundario -->
+      <div class="edit-profile-user__secondary">
+        <button
+          type="button"
+          class="btn-secundary btn-secundary-style edit-profile-user__cancel"
+          aria-label="Cancelar edición"
+        >
+          Cancelar
+          <img
+            src="/frontend/public/assets/icons/cancel.svg"
+            alt=""
+            class="btn-secundary__icon"
+            aria-hidden="true"
+          />
+        </button>
       </div>
 
-      <div class="edit-profile-user__field">
-        <label class="edit-profile-user__label">Escribe tu contraseña</label>
-        
-        <div class="edit-profile-user__password-wrapper">
-          <input class="edit-profile-user__input edit-profile-user__input--password" type="password" placeholder="Contraseña" required>
-          <button type="button" class="edit-profile-user__toggle-password">Mostrar</button>
-        </div>
+      <!-- Botón principal -->
+      <div class="edit-profile-user__buttons">
+        <button
+          type="submit"
+          class="btn btn--primary edit-profile-user__submit"
+          aria-label="Guardar datos del administrador"
+        >
+          Siguiente 
+          <img
+            src="/frontend/public/assets/icons/save.svg"
+            alt=""
+            class="btn__icon edit-profile-user__icon"
+          />
+        </button>
       </div>
-      
-      <div class="edit-profile-user__actions-grid">
-        <div class="edit-profile-user__actions-secondary">
-          <button
-            type="button"
-            class="btn-secundary btn-secundary-style edit-profile-user__cancel"
-            aria-label="Cancelar edición"
-          >
-            Cancelar
-            <img
-              src="/frontend/public/assets/icons/cancel.svg"
-              alt=""
-              class="btn-secundary__icon"
-              aria-hidden="true"
-            />
-          </button>
-        </div>
 
-        <div class="edit-profile-user__actions-primary">
-          <button
-            type="submit"
-            class="btn btn--primary edit-profile-user__submit"
-            aria-label="Guardar datos del administrador"
-          >
-            Guardar cambios
-            <img
-              src="/frontend/public/assets/icons/save.svg"
-              alt=""
-              class="btn__icon edit-profile-user__icon"
-              aria-hidden="true"
-            />
-          </button>
-        </div>
-      </div>
     </form>
-  </section>
+  </div>
 </section>
