@@ -3,9 +3,9 @@
   justify-content: center;
   align-items: center;
   box-sizing: border-box;
-  padding-block: 1.6rem;
+  padding-block: 2.4rem;
   min-height: 100%;
-  margin: var(--gap-lg);
+  margin-inline: var(--gap-lg);
 }
 .create-post__wrapper {
   width: 100%;
@@ -15,7 +15,7 @@
   padding: var(--gap-lg);
   box-sizing: border-box;
   border: 1px solid var(--secundary-900);
-  margin: 24px auto;
+  margin: 0 auto;
   display: flex;
   flex-direction: column;
   box-shadow: 0 2px 8px rgba(0,0,0,0.15);
@@ -43,7 +43,7 @@
 .create-post__group {
   display: flex;
   flex-direction: column;
-  gap: var(--gap-xs);
+  gap: var(--gap-xxs);
   width: 100%;
 }
 .create-post__group--full {

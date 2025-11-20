@@ -2,7 +2,7 @@
   display: flex;
   align-items: center;
   box-sizing: border-box;
-  padding-block: 8.4rem;
+  padding-block: 6rem;
   overflow: hidden;
   min-height: 100%;
 }
@@ -20,7 +20,7 @@
 }
 @media (width > 640px) {
   .edit-profile-admin {
-    margin: var(--gap-lg);
+    margin-inline: var(--gap-lg);
   }
   .edit-profile-admin__wrapper {
     width: fit-content;
@@ -91,7 +91,7 @@
   display: flex;
   flex-direction: column;
   align-items: flex-start;
-  gap: var(--gap-xs);
+  gap: var(--gap-xxs);
   width: 100%;
 }
 .edit-profile-admin__group--full {
@@ -162,7 +162,7 @@
   }
   .edit-profile-admin {
     width: 100%;
-    padding-block: 10rem;
+    padding-block: 2.4rem;
   }
   .edit-profile-admin__input {
     width: 100%;

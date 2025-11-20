@@ -2,7 +2,7 @@
 .store-profile {
   display: flex;
   justify-content: center;
-  padding-block: 4rem;
+  padding-block: 2.4rem;
 }
 /* >>> SECCIÓN DE CONTENIDO DEL CONTENEDOR  */
 .store-profile__container {

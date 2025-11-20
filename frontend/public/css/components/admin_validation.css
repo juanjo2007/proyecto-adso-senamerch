@@ -5,7 +5,6 @@
   display: flex;
   justify-content: center;
   align-items: center;
-  margin-block: 4.8rem;
   font-family: var(--font-primary);
   padding: var(--gap-lg);
   overflow: hidden; /* evita scroll */
@@ -47,7 +46,7 @@
   display: flex;
   flex-direction: column;
   align-items: flex-start;
-  gap: var(--gap-xxxs);
+  gap: var(--gap-xxs);
   width: 100%;
   max-width: 380px; 
 }

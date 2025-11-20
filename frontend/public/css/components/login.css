@@ -2,7 +2,7 @@
   display: flex;
   align-items: center;
   box-sizing: border-box;
-  padding-block: 8.4rem; 
+  padding-block: 2.4rem; 
   overflow: hidden;
   min-height: 100%;
 }
@@ -37,7 +37,7 @@
   display: flex;
   flex-direction: column;
   align-items: flex-start;
-  gap: var(--gap-xs);
+  gap: var(--gap-xxs);
   width: 100%;
 }
 .login__label {

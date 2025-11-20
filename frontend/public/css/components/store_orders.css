@@ -1,21 +1,19 @@
-/* >>> SECCIÓN DE CONTENEDOR PARA VER PEDIDOS PENDIENTES EN LA TIENDA */
 .store-content{
   display: flex;
   justify-content: center;
   align-items: center;
-  padding-block: 4rem; 
+  padding-block: 2.4rem; 
   width: 100%;
-  max-width: 800px;
+  max-width: 100%;
   margin: 0 auto;
   min-width: 320px;
   box-sizing: border-box;
   overflow: hidden; 
 }
-/* >>> SECCIÓN DE CONTENIDO CONTENEDOR */
 .store-orders {
   border: 1px solid var(--secundary-900);
   width: 80%;
-  margin: 2rem auto 0; 
+  margin: auto 0; 
   background-color: var(--white);
   border-radius: 12px;
   padding: var(--gap-lg);
@@ -49,11 +47,16 @@
   display: grid;
   gap: var(--gap-md);
 }
+@media (min-width: 1024px) {
+  .store-orders__list {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
 .store-orders__item {
   display: grid;
   grid-template-columns: 1fr auto auto;
   align-items: center;
-  background-color: var(--primary-50);
+  background-color: var(--gray-100);
   border: 1px solid var(--secundary-900);
   border-radius: 10px;
   gap: 10px;
@@ -61,7 +64,7 @@
   transition: background-color 0.3s ease;
 }
 .store-orders__item:hover {
-  background-color: var(--primary-100);
+  background-color: var(--secundary-200);
 }
 .store-orders__info {
   display: flex;
@@ -94,7 +97,7 @@
   color: var(--secundary-700);
 }
 .store-orders__status--in-process {
-  background-color: var(--primary-100);
+  background-color: var(--primary-200);
   color: var(--primary-800);
 }
 .store-orders__total {
@@ -103,17 +106,15 @@
   color: var(--gray-900);
   text-align: right;
 }
-/* >>> SECCIÓN DE ACCIONES DEL CONTENEDOR */
 .store-orders__primary{
   display: flex;
   justify-content: center;
   text-align: right;
   padding-right: var(--gap-sm);  
 }
-/* >>> SECCIÓN DE RESPONSIVIDAD */
 @media (max-width: 640px) {
   .store-content {
-    padding-block: 16rem;
+    padding-block: 2.4rem;
     padding-inline: 24px;
   }
   .store-orders {
