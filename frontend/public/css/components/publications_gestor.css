@@ -116,6 +116,17 @@
   border-color: var(--secundary-900);
   box-shadow: 0 0 4px var(--secundary-900);
 }
+.create-post-one__link {
+  color: var(--secundary-700);
+  font-size: var(--fs-xxs);
+  text-decoration: none;
+  transition: color 0.3s;
+  text-align: center;
+}
+.create-post-one__link:hover {
+  color: var(--secundary-950);
+  text-decoration: underline;
+}
 .create-post-one__buttons {
   display: flex;
   justify-content: flex-end;

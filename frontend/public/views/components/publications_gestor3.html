@@ -1,9 +1,9 @@
-<section class="create-post">
-  <div class="create-post__wrapper">
+<section class="create-post-one">
+  <div class="create-post-one__wrapper">
 
     <!-- HEADER -->
     <header class="create-post__header">
-      <h1 class="create-post__title">Sigue creando el producto</h1>
+      <h1 class="create-post__title">Información del producto</h1>
       <p class="create-post__subtitle">
         Este formulario es para registrar tu producto.<br>
         Podrás publicarlo y gestionarlo fácilmente.
@@ -11,43 +11,36 @@
     </header>
     <!-- FORMULARIO -->
     <form class="create-post__form">
-
       <!-- Campo: Unidad de medida -->
-      <div class="create-post__group">
-        <label class="create-post__label">Unidad de medida</label>
-        <select class="create-post__input" required>
-          <option value="" selected disabled>Selecciona una unidad</option>
-          <option value="kg">Kilogramos (kg)</option>
-          <option value="lb">Libras (lb)</option>
-          <option value="unidad">Unidad</option>
-          <option value="litro">Litros (L)</option>
-          <option value="mililitro">Mililitros (mL)</option>
-          <option value="todas">Todas las opciones (*)</option>
-        </select>
-      </div>
-
-      <!-- Campo: Descuento -->
-      <div class="create-post__group">
-        <label class="create-post__label">Descuento (%)</label>
-        <input 
-          type="number"
-          class="create-post__input"
-          placeholder="Ej: 10"
-          min="0"
-          max="100"
-        >
-      </div>
-
-      <!-- Campo: Imagen (2 columnas) -->
       <div class="create-post__group ">
-        <label class="create-post__label">Imagen del producto</label>
-        <input 
-          type="file"
-          class="create-post__input"
-          accept="image/*"
-        >
+        <label class="create-post__label">Lo que tendrias que saber</label>
+        <textarea 
+          class="create-post__textarea"
+          placeholder="Describe brevemente el producto..."
+        ></textarea>
       </div>
-
+      <div class="create-post__group ">
+        <label class="create-post__label">Información escencial</label>
+        <textarea 
+          class="create-post__textarea"
+          placeholder="Describe brevemente el producto..."
+        ></textarea>
+      </div>
+      <div class="create-post__group ">
+        <label class="create-post__label">contenido nutritivo</label>
+        <textarea 
+          class="create-post__textarea"
+          placeholder="Describe brevemente el producto..."
+        ></textarea>
+      </div>
+      <div class="create-post__group ">
+        <label class="create-post__label">Variedades comunes</label>
+        <textarea 
+          class="create-post__textarea"
+          placeholder="Describe brevemente el producto..."
+        ></textarea>
+      </div>
+    
       <!-- Botón secundario -->
       <div class="create-post__secondary">
         <button
@@ -72,7 +65,7 @@
           class="btn btn--primary create-post__continue"
           aria-label="Guardar datos del administrador"
         >
-          Crear producto
+          Siguiente
           <img
             src="/frontend/public/assets/icons/continue.svg"
             alt=""

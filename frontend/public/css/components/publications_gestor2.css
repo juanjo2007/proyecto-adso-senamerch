@@ -96,28 +96,20 @@
 }
 @media (width > 640px) {
   .create-post__input,
-  .create-post__select {
+  .create-post__select,
+  .create-post__textarea {
     width: 360px;
     max-width: 360px;
-    min-width: 360px;
+    min-width: 100%;
   }
 }
 @media (width < 1024px) {
-  .create-post__wrapper {
-    width: 100%;
-    max-width: 100%;
-    margin: 0 auto;
-  }
-  .create-post__form {
-    grid-template-columns: repeat(2, 1fr);
-    width: 100%;
-  }
   .create-post__input,
   .create-post__select,
   .create-post__textarea {
     width: 100%;
-    max-width: none;
-    min-width: 0;
+    max-width: 360px;
+    min-width: 100%;
   }
 }
 @media (width < 640px) {

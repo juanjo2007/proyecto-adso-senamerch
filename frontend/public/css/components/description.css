@@ -127,7 +127,7 @@
   flex-direction: column;
   width: 100%;
   gap: 8px;
-  margin-top: 16px;
+  margin: 2.4rem;
 }
 .product-description__item-title {
   font-size: var(--fs-xs);
@@ -150,7 +150,7 @@
   gap: 8px;
 }
 .details__title {
-  font-size: var(--fs-md);
+  font-size: var(--fs-sm);
   font-weight: 600;
   color: var(--gray-900);
 }
@@ -170,6 +170,11 @@
   font-size: var(--fs-xxs);
   font-weight: 600;
   margin-bottom: var(--gap-xs);
+}
+.info__text {
+  font-size: var(--fs-xxs);
+  color: var(--gray-700);
+  line-height: 1.4;
 }
 .info__list {
   margin-top: var(--gap-xs);
