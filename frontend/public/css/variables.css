@@ -94,8 +94,8 @@
     /* ================== Label / Input ================== */
     --padding-top:14px;
     --padding-right:16px;
-    --padding-bottom:14px;
-    --padding-left:16px;
+    --padding-bottom:20px;
+    --padding-left:14px;
 
     /* ================== Spacing / Gap ================== */
     --gap-xxs: 4px;  /* 4px  - Extra extra small */

@@ -11,9 +11,9 @@ document.addEventListener("DOMContentLoaded", function () {
         adminContainer.innerHTML = html;
 
         // === Lógica de validación ===
-        const form = adminContainer.querySelector(".admin-panel__form");
-        const input = adminContainer.querySelector(".admin-panel__input");
-        const message = adminContainer.querySelector(".admin-panel__message");
+        const form = adminContainer.querySelector(".admin-code-panel__form");
+        const input = adminContainer.querySelector(".admin-code-panel__input");
+        const message = adminContainer.querySelector(".admin-code-panel__message");
 
         form.addEventListener("submit", (e) => {
           e.preventDefault();
@@ -21,21 +21,21 @@ document.addEventListener("DOMContentLoaded", function () {
           const validCode = "1234"; // 🔐 Código secreto real
 
           message.classList.remove(
-            "admin-panel__message--hidden",
-            "admin-panel__message--error",
-            "admin-panel__message--success"
+            "admin-code-panel__message--hidden",
+            "admin-code-panel__message--error",
+            "admin-code-panel__message--success"
           );
 
           if (code === validCode) {
             message.textContent = "Código correcto. Redirigiendo al panel...";
-            message.classList.add("admin-panel__message--success");
+            message.classList.add("admin-code-panel__message--success");
 
             setTimeout(() => {
               window.location.href = "/frontend/public/views/wiews_users_admin.html";
             }, 1500);
           } else {
             message.textContent = "Código incorrecto. Redirigiendo a inicio...";
-            message.classList.add("admin-panel__message--error");
+            message.classList.add("admin-code-panel__message--error");
 
             setTimeout(() => {
               window.location.href = "/frontend/public/views/index.html";
