@@ -1,6 +1,5 @@
 <section class="store-order-detail-content">
   <section class="store-order-detail">
-
     <!-- >>> Cabecera principal -->
     <header class="store-order-detail__header">
       <div class="store-order-detail__title-group">
@@ -8,42 +7,78 @@
         <p class="store-order-detail__date">25 de octubre de 2025</p>
       </div>
 
-      <p class="store-order-detail__status store-order-detail__status--pending">Pendiente</p>
+      <p class="store-order-detail__status store-order-detail__status--pending">
+        Pendiente
+      </p>
     </header>
 
-    <!-- >>> Información del cliente -->
+    <!-- >>> MINI CARDS: Información del cliente y dirección -->
     <div class="store-order-detail__info">
-      <div class="store-order-detail__client">
-        <h3 class="store-order-detail__section-title">Datos del cliente</h3>
-        <p class="store-order-detail__info-item"><strong>Nombre:</strong> Juan Pérez</p>
-        <p class="store-order-detail__info-item"><strong>Correo:</strong> juanperez@email.com</p>
-        <p class="store-order-detail__info-item"><strong>Teléfono:</strong> 3104567890</p>
+      <!-- === CARD: Datos del cliente === -->
+      <div class="store-order-detail__card store-order-detail__card--client">
+        <h3 class="store-order-detail__card-title">Información del cliente</h3>
+
+        <p class="store-order-detail__card-item">
+          <strong>Nombre:</strong> Juan Pérez
+        </p>
+        <p class="store-order-detail__card-item">
+          <strong>Correo:</strong> juanperez@email.com
+        </p>
+        <p class="store-order-detail__card-item">
+          <strong>Teléfono:</strong> 3104567890
+        </p>
       </div>
 
-      <div class="store-order-detail__summary">
-        <h3 class="store-order-detail__section-title">Resumen del pedido</h3>
-        <p class="store-order-detail__info-item"><strong>Dirección:</strong> Calle 123 #45-67</p>
-        <p class="store-order-detail__info-item"><strong>Método de pago:</strong> Efectivo</p>
+      <!-- === CARD: Dirección del cliente === -->
+      <div class="store-order-detail__card store-order-detail__card--address">
+        <h3 class="store-order-detail__card-title">Dirección del cliente</h3>
+
+        <p class="store-order-detail__card-item">
+          <strong>Barrio:</strong> Buenos Aires
+        </p>
+        <p class="store-order-detail__card-item">
+          <strong>Dirección:</strong> Calle 123 #45-67
+        </p>
+        <p class="store-order-detail__card-item">
+          <strong>Tipo de vía:</strong> Carrera
+        </p>
+        <p class="store-order-detail__card-item">
+          <strong>Código postal:</strong> 101010101
+        </p>
+        <p class="store-order-detail__card-item">
+          <strong>Departamento:</strong> Cundinamarca
+        </p>
+        <p class="store-order-detail__card-item">
+          <strong>Municipio:</strong> Bogotá D.C.
+        </p>
       </div>
     </div>
 
     <!-- >>> Productos -->
     <div class="store-order-detail__products">
-      <h3 class="store-order-detail__section--title">Productos</h3>
+      <h3 class="store-order-detail__section-title">Productos</h3>
 
       <!-- PRODUCTO -->
       <div class="store-order-detail__product">
         <div class="store-order-detail__product-info">
           <p class="store-order-detail__product-text">
-            <strong class="store-order-detail__product-name">Tomates chonto</strong> —
-            5 kg — $30.000
+            <strong class="store-order-detail__product-name"
+              >Tomates chonto</strong
+            >
+            — 5 kg — $30.000
           </p>
         </div>
 
         <div class="store-order-detail__product-actions">
-          <button class="btn-secundary btn-secundary-style store-order-detail__cancel-product">
+          <button
+            class="btn-secundary btn-secundary-style store-order-detail__cancel-product"
+          >
             Cancelar producto
-            <img src="/frontend/public/assets/icons/cancel.svg" alt="Cancelar producto" class="btn-secundary__icon">
+            <img
+              src="/frontend/public/assets/icons/cancel.svg"
+              alt="Cancelar producto"
+              class="btn-secundary__icon"
+            />
           </button>
         </div>
       </div>
@@ -52,22 +87,34 @@
       <div class="store-order-detail__product">
         <div class="store-order-detail__product-info">
           <p class="store-order-detail__product-text">
-            <strong class="store-order-detail__product-name">Lechuga romana</strong> —
-            3 unidades — $15.000
+            <strong class="store-order-detail__product-name"
+              >Lechuga romana</strong
+            >
+            — 3 unidades — $15.000
           </p>
         </div>
 
         <div class="store-order-detail__product-actions">
-          <button class="btn-secundary btn-secundary-style store-order-detail__cancel-product">
+          <button
+            class="btn-secundary btn-secundary-style store-order-detail__cancel-product"
+          >
             Cancelar producto
-            <img src="/frontend/public/assets/icons/cancel.svg" alt="Cancelar producto" class="btn-secundary__icon">
+            <img
+              src="/frontend/public/assets/icons/cancel.svg"
+              alt="Cancelar producto"
+              class="btn-secundary__icon"
+            />
           </button>
         </div>
       </div>
 
       <!-- TOTAL -->
-      <div class="store-order-detail__product store-order-detail__product--total">
-        <div class="store-order-detail__product-info store-order-detail__product-info--total">
+      <div
+        class="store-order-detail__product store-order-detail__product--total"
+      >
+        <div
+          class="store-order-detail__product-info store-order-detail__product-info--total"
+        >
           <p class="store-order-detail__product-total">
             <strong>Total</strong> — <strong>$45.000</strong>
           </p>
@@ -77,22 +124,29 @@
 
     <!-- >>> Acciones -->
     <div class="store-order-detail__actions">
-
       <div class="store-order-detail__secondary">
-        <button class="btn-secundary btn-secundary-style store-order-detail__cancel-order">
+        <button
+          class="btn-secundary btn-secundary-style store-order-detail__cancel-order"
+        >
           Cancelar pedido
-          <img src="/frontend/public/assets/icons/cancel.svg" alt="Cancelar pedido" class="btn-secundary__icon">
+          <img
+            src="/frontend/public/assets/icons/cancel.svg"
+            alt="Cancelar pedido"
+            class="btn-secundary__icon"
+          />
         </button>
       </div>
 
       <div class="store-order-detail__primary">
         <button class="btn btn--primary store-order-detail__delivery">
           Entregar pedido
-          <img src="/frontend/public/assets/icons/delivery.svg" alt="Entregar pedido" class="btn__icon">
+          <img
+            src="/frontend/public/assets/icons/delivery.svg"
+            alt="Entregar pedido"
+            class="btn__icon"
+          />
         </button>
       </div>
-
     </div>
-
   </section>
 </section>

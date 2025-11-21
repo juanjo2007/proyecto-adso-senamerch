@@ -13,96 +13,133 @@
     </header>
 
     <div class="store-orders__list">
+      <!-- ===== ITEM DE PEDIDO ===== -->
       <article class="store-orders__item">
-        <div class="store-orders__info">
-          <h3 class="store-orders__id">Pedido #0235</h3>
-          <p class="store-orders__client">Cliente: Juan Pérez</p>
-          <p class="store-orders__date">Fecha: 25/10/2025</p>
-        </div>
+        <!-- ===== INFO DEL PEDIDO (SIN CARD) ===== -->
+        <h3 class="store-orders__id">Pedido #0235</h3>
+        <p class="store-orders__date"><strong>Fecha:</strong> 25/10/2025</p>
 
         <div class="store-orders__status store-orders__status--pending">
           Pendiente
         </div>
 
-        <div class="store-orders__total">
-          Total: <strong>$150.000</strong>
+        <div class="store-orders__total">Total: <strong>$150.000</strong></div>
+
+        <!-- ===== CARD 2: INFO DEL CLIENTE ===== -->
+        <div class="store-orders__card store-orders__card--client">
+          <h3 class="store-orders__subtitle">Información del cliente</h3>
+
+          <p class="store-orders__client">
+            <strong>Nombre:</strong> Juan Pérez
+          </p>
+          <p class="store-orders__client">
+            <strong>Correo:</strong> JuanPérez12@gmail.com
+          </p>
+          <p class="store-orders__client">
+            <strong>Teléfono:</strong> 3102873825
+          </p>
         </div>
 
+        <!-- ===== CARD 3: DIRECCIÓN ===== -->
+        <div class="store-orders__card store-orders__card--address">
+          <h3 class="store-orders__subtitle">Dirección del cliente</h3>
+
+          <p class="store-orders__client">
+            <strong>Barrio:</strong> Buenos Aires
+          </p>
+          <p class="store-orders__client">
+            <strong>Dirección:</strong> 10 #34-36
+          </p>
+          <p class="store-orders__client">
+            <strong>Tipo de vía:</strong> Carrera
+          </p>
+          <p class="store-orders__client">
+            <strong>Código postal:</strong> 101010101
+          </p>
+          <p class="store-orders__client">
+            <strong>Departamento:</strong> Información adicional
+          </p>
+          <p class="store-orders__client">
+            <strong>Municipio:</strong> Frente al parque principal
+          </p>
+        </div>
+
+        <!-- ===== BOTÓN ===== -->
         <div class="store-orders__primary">
           <button type="submit" class="btn btn--primary store-orders__delivery">
             Realizar
-            <img src="/frontend/public/assets/icons/perform.svg" alt="Icono Enviar" class="btn__icon">
+            <img
+              src="/frontend/public/assets/icons/perform.svg"
+              alt="Icono Enviar"
+              class="btn__icon"
+            />
           </button>
         </div>
       </article>
+
+      <!-- ===== DUPLICADO (SEGUNDO PEDIDO) ===== -->
       <article class="store-orders__item">
-        <div class="store-orders__info">
-          <h3 class="store-orders__id">Pedido #0235</h3>
-          <p class="store-orders__client">Cliente: Juan Pérez</p>
-          <p class="store-orders__date">Fecha: 25/10/2025</p>
-        </div>
+        <!-- ===== INFO DEL PEDIDO (SIN CARD) ===== -->
+        <h3 class="store-orders__id">Pedido #0235</h3>
+        <p class="store-orders__date"><strong>Fecha:</strong> 25/10/2025</p>
 
         <div class="store-orders__status store-orders__status--pending">
           Pendiente
         </div>
 
-        <div class="store-orders__total">
-          Total: <strong>$150.000</strong>
+        <div class="store-orders__total">Total: <strong>$150.000</strong></div>
+
+        <!-- ===== CARD 2: INFO DEL CLIENTE ===== -->
+        <div class="store-orders__card store-orders__card--client">
+          <h3 class="store-orders__subtitle">Información del cliente</h3>
+
+          <p class="store-orders__client">
+            <strong>Nombre:</strong> Juan Pérez
+          </p>
+          <p class="store-orders__client">
+            <strong>Correo:</strong> JuanPérez12@gmail.com
+          </p>
+          <p class="store-orders__client">
+            <strong>Teléfono:</strong> 3102873825
+          </p>
         </div>
 
+        <!-- ===== CARD 3: DIRECCIÓN ===== -->
+        <div class="store-orders__card store-orders__card--address">
+          <h3 class="store-orders__subtitle">Dirección del cliente</h3>
+
+          <p class="store-orders__client">
+            <strong>Barrio:</strong> Buenos Aires
+          </p>
+          <p class="store-orders__client">
+            <strong>Dirección:</strong> 10 #34-36
+          </p>
+          <p class="store-orders__client">
+            <strong>Tipo de vía:</strong> Carrera
+          </p>
+          <p class="store-orders__client">
+            <strong>Código postal:</strong> 101010101
+          </p>
+          <p class="store-orders__client">
+            <strong>Departamento:</strong> Información adicional
+          </p>
+          <p class="store-orders__client">
+            <strong>Municipio:</strong> Frente al parque principal
+          </p>
+        </div>
+
+        <!-- ===== BOTÓN ===== -->
         <div class="store-orders__primary">
           <button type="submit" class="btn btn--primary store-orders__delivery">
             Realizar
-            <img src="/frontend/public/assets/icons/perform.svg" alt="Icono Enviar" class="btn__icon">
+            <img
+              src="/frontend/public/assets/icons/perform.svg"
+              alt="Icono Enviar"
+              class="btn__icon"
+            />
           </button>
         </div>
       </article>
-      <article class="store-orders__item">
-        <div class="store-orders__info">
-          <h3 class="store-orders__id">Pedido #0235</h3>
-          <p class="store-orders__client">Cliente: Juan Pérez</p>
-          <p class="store-orders__date">Fecha: 25/10/2025</p>
-        </div>
-
-        <div class="store-orders__status store-orders__status--pending">
-          Pendiente
-        </div>
-
-        <div class="store-orders__total">
-          Total: <strong>$150.000</strong>
-        </div>
-
-        <div class="store-orders__primary">
-          <button type="submit" class="btn btn--primary store-orders__delivery">
-            Realizar
-            <img src="/frontend/public/assets/icons/perform.svg" alt="Icono Enviar" class="btn__icon">
-          </button>
-        </div>
-      </article>
-      <article class="store-orders__item">
-        <div class="store-orders__info">
-          <h3 class="store-orders__id">Pedido #0235</h3>
-          <p class="store-orders__client">Cliente: Juan Pérez</p>
-          <p class="store-orders__date">Fecha: 25/10/2025</p>
-        </div>
-
-        <div class="store-orders__status store-orders__status--pending">
-          Pendiente
-        </div>
-
-        <div class="store-orders__total">
-          Total: <strong>$150.000</strong>
-        </div>
-
-        <div class="store-orders__primary">
-          <button type="submit" class="btn btn--primary store-orders__delivery">
-            Realizar
-            <img src="/frontend/public/assets/icons/perform.svg" alt="Icono Enviar" class="btn__icon">
-          </button>
-        </div>
-      </article>
-
-      <!-- Más artículos... -->
     </div>
   </section>
 </section>

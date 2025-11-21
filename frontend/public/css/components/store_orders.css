@@ -1,86 +1,142 @@
-.store-content{
+/* =========================================================
+   CONTENEDOR PRINCIPAL
+========================================================= */
+.store-content {
   display: flex;
   justify-content: center;
   align-items: center;
-  padding-block: 2.4rem; 
+  padding-block: 2.4rem;
   width: 100%;
   max-width: 100%;
   margin: 0 auto;
   min-width: 320px;
   box-sizing: border-box;
-  overflow: hidden; 
+  overflow: hidden;
 }
+
+/* =========================================================
+   CONTENEDOR DE PEDIDOS
+========================================================= */
 .store-orders {
   border: 1px solid var(--secundary-900);
   width: 80%;
-  margin: auto 0; 
+  margin: auto 0;
   background-color: var(--white);
   border-radius: 12px;
   padding: var(--gap-lg);
-  box-shadow: 0 2px 8px rgba(0,0,0,0.08);
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.08);
   font-family: var(--font-primary);
 }
+
 .store-orders__header {
   display: flex;
   flex-direction: column;
   gap: var(--gap-sm);
   margin-bottom: var(--gap-md);
 }
+
 .store-orders__title {
   font-size: var(--fs-sm);
   font-weight: 600;
   color: var(--black);
 }
+
 .store-orders__filters {
   display: flex;
   justify-content: flex-start;
 }
+
 .store-orders__filter {
-  padding: var(--padding-top) var(--padding-right) var(--padding-bottom) var(--padding-left);
+  padding: var(--padding-top) var(--padding-right) var(--padding-bottom)
+    var(--padding-left);
   border: 1px solid var(--secundary-900);
   border-radius: 8px;
-  background-color: var(--white);
+  background-color: var(--gray-950);
   font-size: var(--fs-xs);
-  color: var(--gray-800);
+  color: var(--white);
 }
+
+/* =========================================================
+   LISTA DE PEDIDOS
+========================================================= */
 .store-orders__list {
   display: grid;
   gap: var(--gap-md);
 }
+
 @media (min-width: 1024px) {
   .store-orders__list {
     grid-template-columns: repeat(2, 1fr);
   }
 }
+
+/* =========================================================
+   ITEM DEL PEDIDO (CARD GLOBAL)
+========================================================= */
 .store-orders__item {
   display: grid;
   grid-template-columns: 1fr auto auto;
   align-items: center;
-  background-color: var(--gray-100);
+  background-color: var(--gray-950);
   border: 1px solid var(--secundary-900);
   border-radius: 10px;
   gap: 10px;
-  padding: var(--gap-md);
+  padding: var(--gap-lg);
   transition: background-color 0.3s ease;
+
+  /* 🔹 NUEVO: Permitimos apilar las mini-cards */
+  grid-template-areas:
+    'id status total'
+    'date status total'
+    'client client client'
+    'address address address'
+    'btn btn btn';
 }
-.store-orders__item:hover {
-  background-color: var(--secundary-200);
+
+.store-orders__id {
+  grid-area: id;
 }
-.store-orders__info {
-  display: flex;
-  flex-direction: column;
-  gap: var(--gap-xxs);
+.store-orders__date {
+  grid-area: date;
 }
+.store-orders__status {
+  grid-area: status;
+}
+.store-orders__total {
+  grid-area: total;
+}
+.store-orders__card--client {
+  grid-area: client;
+}
+.store-orders__card--address {
+  grid-area: address;
+}
+.store-orders__primary {
+  grid-area: btn;
+}
+
+/* =========================================================
+   INFORMACIÓN DEL PEDIDO (NO VA EN CARD)
+========================================================= */
 .store-orders__id {
   font-size: var(--fs-xs);
   font-weight: 600;
-  color: var(--black);
+  color: var(--white);
 }
-.store-orders__client,
+
 .store-orders__date {
   font-size: var(--fs-xxs);
-  color: var(--gray-700);
+  color: var(--gray-100);
 }
+
+.store-orders__total {
+  font-size: var(--fs-xs);
+  font-weight: 600;
+  color: var(--white);
+  text-align: right;
+}
+
+/* Estados */
 .store-orders__status {
   font-size: var(--fs-xxs);
   font-weight: 600;
@@ -88,51 +144,97 @@
   padding: 4px 10px;
   border-radius: 8px;
 }
+
 .store-orders__status--pending {
   background-color: var(--secundary-800);
   color: var(--white);
 }
+
 .store-orders__status--delivered {
   background-color: var(--secundary-100);
   color: var(--secundary-700);
 }
+
 .store-orders__status--in-process {
   background-color: var(--primary-200);
   color: var(--primary-800);
 }
-.store-orders__total {
+
+/* =========================================================
+   MINI-CARDS INTERNAS
+========================================================= */
+.store-orders__card {
+  background-color: var(--secundary-100);
+  border: 1px solid var(--secundary-900);
+  border-radius: 8px;
+  padding: var(--gap-lg);
+  display: flex;
+  flex-direction: column;
+  gap: var(--gap-xxs);
+  margin-top: var(--gap-lg);
+  width: 100%;
+  box-sizing: border-box;
+}
+
+.store-orders__subtitle {
   font-size: var(--fs-xs);
   font-weight: 600;
-  color: var(--gray-900);
-  text-align: right;
+  color: var(--secundary-900);
+  margin-bottom: var(--gap-xxs);
 }
-.store-orders__primary{
+
+.store-orders__client {
+  font-size: var(--fs-xxs);
+  color: var(--secundary-700);
+}
+
+/* =========================================================
+   BOTÓN
+========================================================= */
+.store-orders__primary {
   display: flex;
   justify-content: center;
   text-align: right;
-  padding-right: var(--gap-sm);  
+  padding-right: var(--gap-sm);
 }
+
+/* =========================================================
+   RESPONSIVE
+========================================================= */
 @media (max-width: 640px) {
   .store-content {
     padding-block: 2.4rem;
     padding-inline: 24px;
   }
+
   .store-orders {
     width: 100%;
     max-width: 100%;
     padding: var(--gap-md);
   }
+
   .store-orders__title {
     font-size: var(--fs-xs);
   }
 }
+
 @media (width < 768px) {
+  /* 🔥 APILAR TODO EN UNA COLUMNA */
   .store-orders__item {
     grid-template-columns: 1fr;
+    grid-template-areas:
+      'id'
+      'date'
+      'status'
+      'total'
+      'client'
+      'address'
+      'btn';
     text-align: left;
     gap: var(--gap-sm);
   }
-  .store-orders__actions {
-    text-align: left;
+
+  .store-orders__card {
+    width: 100%;
   }
 }
