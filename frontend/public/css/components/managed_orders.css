@@ -50,7 +50,7 @@
 .order-detail__card {
   background-color: var(--white);
   border-radius: 1.2rem;
-  box-shadow: 0 4px 12px rgba(0,0,0,0.08);
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
   border: 1px solid var(--secundary-900);
   padding: var(--gap-md);
   width: 100%;
@@ -155,4 +155,9 @@
   .order-detail__actions-primary {
     justify-content: flex-end;
   }
+}
+.btn--disabled {
+  background: var(--tertiary-600);
+  cursor: not-allowed;
+  opacity: 0.7;
 }

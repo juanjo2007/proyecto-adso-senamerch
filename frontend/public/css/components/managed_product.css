@@ -9,7 +9,7 @@
   background-color: var(--white);
   border: 1px solid var(--secundary-900);
   border-radius: 1rem;
-  box-shadow: 0 4px 20px rgba(0,0,0,0.08);
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.08);
   font-family: var(--font-primary);
   color: var(--gray-950);
   gap: var(--gap-lg);
@@ -52,7 +52,7 @@
   background-color: var(--white);
   border-radius: 1.2rem;
   border: 1px solid var(--secundary-900);
-  box-shadow: 0 4px 12px rgba(0,0,0,0.08);
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
   padding: var(--gap-md);
   width: 100%;
   height: fit-content;
@@ -156,4 +156,21 @@
   .product-detail__actions-primary {
     justify-content: flex-end;
   }
+}
+/* === ESTADO: DESHABILITAR (advertencia) === */
+.btn--warning {
+  background-color: var(--tertiary-600);
+  color: var(--white);
+}
+.btn--warning:hover {
+  background-color: var(--tertiary-700);
+}
+
+/* === ESTADO: HABILITAR (éxito) === */
+.btn--success {
+  background-color: var(--secundary-900);
+  color: var(--white);
+}
+.btn--success:hover {
+  background-color: var(--secundary-700);
 }

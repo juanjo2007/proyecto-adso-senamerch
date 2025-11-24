@@ -2,7 +2,7 @@
   display: flex;
   align-items: center;
   box-sizing: border-box;
-  overflow: hidden; 
+  overflow: hidden;
   min-height: 100%;
 }
 .verify__container {
@@ -16,7 +16,7 @@
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  margin: 24px; 
+  margin: 24px;
   box-sizing: border-box;
 }
 .login__field {
@@ -38,7 +38,7 @@
 .verify__form {
   display: flex;
   flex-direction: column;
-  align-items: center; 
+  align-items: center;
   gap: var(--gap-lg) !important;
   width: 100%;
 }
@@ -59,10 +59,10 @@
   box-shadow: 0 0 0 3px var(--secundary-100);
   outline: none;
 }
-.verify__button{
+.verify__button {
   align-self: center;
 }
-.verify__submit{
+.verify__submit {
   margin-left: var(--gap-xs);
 }
 .verify__link {
@@ -73,12 +73,12 @@
   text-decoration: none;
   font-family: var(--font-secondary-medium);
   transition: color 0.3s ease;
-} 
+}
 @media (width > 640px) {
   .verify {
     width: 100%;
     padding-block: 2.4rem;
-    padding-inline: 24px ;
+    padding-inline: 24px;
     box-sizing: border-box;
   }
   .verify__container {

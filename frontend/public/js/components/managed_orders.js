@@ -34,7 +34,7 @@ document.addEventListener("DOMContentLoaded", function () {
           });
         }
 
-        // === Botón: Cancelar pedido ===
+        // === Botón: Cancelar pedido (SIN CAMBIAR DE PÁGINA) ===
         const cancelBtn = container.querySelector(".order-detail__suspend");
         if (cancelBtn) {
           cancelBtn.addEventListener("click", function (e) {
@@ -56,9 +56,13 @@ document.addEventListener("DOMContentLoaded", function () {
               </div>
             `;
 
+            // Cambiar color del botón después de cancelar
+            cancelBtn.classList.add("btn--disabled");
+            cancelBtn.textContent = "Pedido cancelado";
+
+            // Ocultar alerta después de 2 segundos (pero NO recargar página)
             setTimeout(() => {
               alertContainer.classList.remove("alert--show");
-              window.location.href = "managed_orders_view.html";
             }, 2000);
           });
         }

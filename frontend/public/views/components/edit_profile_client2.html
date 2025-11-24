@@ -1,6 +1,5 @@
 <section class="edit-profile-user">
   <div class="edit-profile-user__wrapper">
-
     <!-- Header -->
     <header class="edit-profile-user__header">
       <h1 class="edit-profile-user__title">Editar perfil</h1>
@@ -12,10 +11,26 @@
     <!-- Form -->
     <form class="edit-profile-user__form">
 
+      <!-- Tipo de usuario (nuevo campo SOLO VISUAL) -->
+      <div class="edit-profile-user__group">
+        <label class="edit-profile-user__label">Tipo de usuario</label>
+        <input
+          type="text"
+          class="edit-profile-user__input edit-profile-user__input--readonly"
+          value="Cliente"
+          readonly
+        />
+      </div>
+
       <!-- Teléfono -->
       <div class="edit-profile-user__group">
         <label class="edit-profile-user__label">Teléfono</label>
-        <input type="tel" class="edit-profile-user__input" value="+57 300 000 0000" required>
+        <input
+          type="tel"
+          class="edit-profile-user__input"
+          value="+57 300 000 0000"
+          required
+        />
       </div>
 
       <!-- Contraseña -->
@@ -28,8 +43,26 @@
             type="password"
             placeholder="Contraseña"
             required
-          >
-          <button type="button" class="edit-profile-user__toggle-password">Mostrar</button>
+          />
+          <button type="button" class="edit-profile-user__toggle-password">
+            Mostrar
+          </button>
+        </div>
+      </div>
+
+      <div class="edit-profile-user__group">
+        <label class="edit-profile-user__label">Confirma tu contraseña</label>
+
+        <div class="edit-profile-user__password-wrapper">
+          <input
+            class="edit-profile-user__input edit-profile-user__input--password"
+            type="password"
+            placeholder="Contraseña"
+            required
+          />
+          <button type="button" class="edit-profile-user__toggle-password">
+            Mostrar
+          </button>
         </div>
       </div>
 
@@ -65,7 +98,6 @@
           />
         </button>
       </div>
-
     </form>
   </div>
 </section>

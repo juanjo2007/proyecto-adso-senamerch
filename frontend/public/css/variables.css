@@ -98,7 +98,7 @@
     --padding-left:16px;
 
     /* ================== Spacing / Gap ================== */
-    --gap-xxs: 4px;  /* 4px  - Extra extra small */
+    --gap-xxs: 0px;  /* 4px  - Extra extra small */
     --gap-xs:  8px;  /* 8px  - Extra small */
     --gap-sm:  12px;  /* 12px - Small */
     --gap-md:  16px;  /* 16px - Medium (default recommended) */

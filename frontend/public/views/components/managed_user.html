@@ -1,17 +1,16 @@
 <section class="user-detail">
-
   <!-- Encabezado principal -->
   <header class="user-detail__header">
     <h1 class="user-detail__title">Gestión del usuario</h1>
     <p class="user-detail__subtitle">
-      Aquí puedes visualizar la información completa de un usuario, actualizar su rol, revisar su historial de actividad
-      y exportar sus datos en formato PDF para control administrativo.
+      Aquí puedes visualizar la información completa de un usuario, actualizar
+      su rol, revisar su historial de actividad y exportar sus datos en formato
+      PDF para control administrativo.
     </p>
   </header>
 
   <!-- Contenedor general de tarjetas -->
   <section class="user-detail__grid">
-
     <!-- Card 1 -->
     <article class="user-detail__card user-detail__card--info">
       <h2 class="user-detail__card-title">Información del usuario</h2>
@@ -41,7 +40,7 @@
             <p class="user-detail__text">Compra 0124 - (22/09/2025)</p>
             <p class="user-detail__text">Compra 0122 - (01/09/2025)</p>
             <p class="user-detail__text">Compra 0121 - (03/09/2025)</p>
-          </div> 
+          </div>
           <div class="user-detail__item">
             <span class="user-detail__label">Fecha de registro:</span>
             <p class="user-detail__text">15 de marzo de 2024</p>
@@ -49,7 +48,11 @@
         </div>
         <div class="user-detail__media">
           <span class="user-detail__label">Imagen de perfil:</span>
-          <img src="/frontend/public/assets/img/admin_profile.png" alt="Imagen de perfil del usuario" class="user-detail__image">
+          <img
+            src="/frontend/public/assets/img/admin_profile.png"
+            alt="Imagen de perfil del usuario"
+            class="user-detail__image"
+          />
         </div>
       </div>
     </article>
@@ -89,12 +92,13 @@
           </div>
           <div class="user-detail__item">
             <span class="user-detail__label">Información adicional:</span>
-            <p class="user-detail__text">Local 2, frente al parque principal.</p>
+            <p class="user-detail__text">
+              Local 2, frente al parque principal.
+            </p>
           </div>
         </div>
       </div>
     </article>
-
   </section>
 
   <section class="user-detail__section user-detail__section--actions">
@@ -103,14 +107,22 @@
     <div class="user-detail__actions-secondary">
       <button class="btn-secundary btn-secundary-style user-detail__export">
         Exportar información en PDF
-        <img src="/frontend/public/assets/icons/export.svg" alt="Icono exportar PDF" class="btn-secundary__icon">
+        <img
+          src="/frontend/public/assets/icons/export.svg"
+          alt="Icono exportar PDF"
+          class="btn-secundary__icon"
+        />
       </button>
     </div>
 
     <div class="user-detail__actions-primary">
       <button class="btn btn--primary user-detail__suspend">
-        Suspender usuario
-        <img src="/frontend/public/assets/icons/user-off.svg" alt="Icono suspender usuario" class="btn__icon user-detail__icon">
+        Deshabilitar usuario
+        <img
+          src="/frontend/public/assets/icons/user-off.svg"
+          alt="Icono suspender usuario"
+          class="btn__icon user-detail__icon"
+        />
       </button>
     </div>
   </section>
