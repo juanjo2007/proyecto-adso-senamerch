@@ -15,8 +15,8 @@ document.addEventListener("DOMContentLoaded", function () {
 
   // === Función que agrega los eventos ===
   function attachEditPostEvents() {
-    const cancelBtn = document.querySelector(".edit-post-one__cancel");
-    const saveBtn = document.querySelector(".edit-post-one__save");
+    const cancelBtn = document.querySelector(".edit-product-one__cancel");
+    const saveBtn = document.querySelector(".edit-product-one__buttons");
 
     // 🟢 Botón secundario → ir a view_seller_cards.html
     if (cancelBtn) {
@@ -30,7 +30,7 @@ document.addEventListener("DOMContentLoaded", function () {
     if (saveBtn) {
       saveBtn.addEventListener("click", (e) => {
         e.preventDefault();
-        window.location.href = "view_edit_post2.html";
+        window.location.href = "view_edit_post3.html";
       });
     }
   }

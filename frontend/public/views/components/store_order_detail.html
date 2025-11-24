@@ -1,81 +1,164 @@
 <section class="store-order-detail-content">
   <section class="store-order-detail">
+
     <!-- >>> Cabecera principal -->
     <header class="store-order-detail__header">
       <div class="store-order-detail__title-group">
         <h2 class="store-order-detail__title">Pedido #0235</h2>
         <p class="store-order-detail__date">25 de octubre de 2025</p>
       </div>
-      <p class="store-order-detail__status store-order-detail__status--pending">Pendiente</p>
+
+      <p class="store-order-detail__status store-order-detail__status--pending">
+        Pendiente
+      </p>
     </header>
 
-    <!-- >>> Información general -->
+    <!-- >>> MINI CARDS -->
     <div class="store-order-detail__info">
-      <div class="store-order-detail__client">
-        <h3 class="store-order-detail__products-header">Datos del cliente</h3>
-        <p><strong>Nombre:</strong> Juan Pérez</p>
-        <p><strong>Correo:</strong> juanperez@email.com</p>
-        <p><strong>Teléfono:</strong> 3104567890</p>
+
+      <!-- CARD: CLIENTE -->
+      <div class="store-order-detail__card store-order-detail__card--client">
+        <h3 class="store-order-detail__card-title">Información del cliente</h3>
+
+        <p class="store-order-detail__card-item"><strong>Nombre:</strong> Juan Pérez</p>
+        <p class="store-order-detail__card-item"><strong>Correo:</strong> juanperez@email.com</p>
+        <p class="store-order-detail__card-item"><strong>Teléfono:</strong> 3104567890</p>
       </div>
 
-      <div class="store-order-detail__summary">
-        <h3 class="store-order-detail__products-header">Resumen del pedido</h3>
-        <p><strong>Dirección:</strong> Calle 123 #45-67</p>
-        <p><strong>Método de pago:</strong> Efectivo </p>
+      <!-- CARD: DIRECCIÓN -->
+      <div class="store-order-detail__card store-order-detail__card--address">
+        <h3 class="store-order-detail__card-title">Dirección del cliente</h3>
+
+        <p class="store-order-detail__card-item"><strong>Barrio:</strong> Buenos Aires</p>
+        <p class="store-order-detail__card-item"><strong>Dirección:</strong> Calle 123 #45-67</p>
+        <p class="store-order-detail__card-item"><strong>Tipo de vía:</strong> Carrera</p>
+        <p class="store-order-detail__card-item"><strong>Código postal:</strong> 101010101</p>
+        <p class="store-order-detail__card-item"><strong>Departamento:</strong> Cundinamarca</p>
+        <p class="store-order-detail__card-item"><strong>Municipio:</strong> Bogotá D.C.</p>
       </div>
+
     </div>
 
-    <!-- >>> Productos -->
+    <!-- >>> PRODUCTOS -->
     <div class="store-order-detail__products">
-      <h3 class="store-order-detail__products-header">Productos</h3>
+      <h3 class="store-order-detail__section-title">Productos</h3>
 
-      <div class="store-order-detail__product">
-        <div class="store-order-detail__product-info">
-          <p><strong>Tomates chonto</strong> — 5 kg — $30.000</p>
-        </div>
-        <div class="store-order-detail__product-action">
-          <button class="btn-secundary btn-secundary-style store-order-detail__cancel-product">
-            Cancelar Producto
-            <img src="/frontend/public/assets/icons/cancel.svg" alt="Icono exportar PDF" class="btn-secundary__icon">
-          </button>
-        </div>
-      </div>
+      <div class="store-order-detail__products-grid">
 
-      <div class="store-order-detail__product">
-        <div class="store-order-detail__product-info">
-          <p><strong>Lechugas romana</strong> — 3 unidades — $15.000</p>
-        </div>
-        <div class="store-order-detail__product-action">
-          <button class="btn-secundary btn-secundary-style store-order-detail__cancel-product">
-            Cancelar producto
-            <img src="/frontend/public/assets/icons/cancel.svg" alt="Icono exportar PDF" class="btn-secundary__icon">
-          </button>
-        </div>
-      </div>
+        <!-- PRODUCTO -->
+        <div class="store-order-detail__product-card">
+          <p class="store-order-detail__product-title">Tomates chonto</p>
+          <p class="store-order-detail__product-item"><strong>Cantidad:</strong> 5 kg</p>
+          <p class="store-order-detail__product-item"><strong>Precio:</strong> $30.000</p>
 
-      <div class="store-order-detail__product--total">
-        <div class="store-order-detail__product-info--total">
-          <p><strong>Total</strong> <strong>$45.000</strong></p>
+          <div class="store-order-detail__product-actions">
+            <button
+              class="btn-secundary btn-secundary-style store-order-detail__cancel-product"
+            >
+              Cancelar producto
+              <img
+                src="/frontend/public/assets/icons/cancel.svg"
+                alt="Cancelar producto"
+                class="btn-secundary__icon"
+              />
+            </button>
+          </div>
         </div>
+
+        <!-- PRODUCTO -->
+        <div class="store-order-detail__product-card">
+          <p class="store-order-detail__product-title">Lechuga romana</p>
+          <p class="store-order-detail__product-item"><strong>Cantidad:</strong> 3 unidades</p>
+          <p class="store-order-detail__product-item"><strong>Precio:</strong> $15.000</p>
+
+          <div class="store-order-detail__product-actions">
+            <button
+              class="btn-secundary btn-secundary-style store-order-detail__cancel-product"
+            >
+              Cancelar producto
+              <img
+                src="/frontend/public/assets/icons/cancel.svg"
+                alt="Cancelar producto"
+                class="btn-secundary__icon"
+              />
+            </button>
+          </div>
+        </div>
+        
+        <!-- PRODUCTO -->
+        <div class="store-order-detail__product-card">
+          <p class="store-order-detail__product-title">Lechuga romana</p>
+          <p class="store-order-detail__product-item"><strong>Cantidad:</strong> 3 unidades</p>
+          <p class="store-order-detail__product-item"><strong>Precio:</strong> $15.000</p>
+
+          <div class="store-order-detail__product-actions">
+            <button
+              class="btn-secundary btn-secundary-style store-order-detail__cancel-product"
+            >
+              Cancelar producto
+              <img
+                src="/frontend/public/assets/icons/cancel.svg"
+                alt="Cancelar producto"
+                class="btn-secundary__icon"
+              />
+            </button>
+          </div>
+        </div>
+
+        <!-- PRODUCTO -->
+        <div class="store-order-detail__product-card">
+          <p class="store-order-detail__product-title">Papa criolla</p>
+          <p class="store-order-detail__product-item"><strong>Cantidad:</strong> 4 kg</p>
+          <p class="store-order-detail__product-item"><strong>Precio:</strong> $18.000</p>
+
+          <div class="store-order-detail__product-actions">
+            <button
+              class="btn-secundary btn-secundary-style store-order-detail__cancel-product"
+            >
+              Cancelar producto
+              <img
+                src="/frontend/public/assets/icons/cancel.svg"
+                alt="Cancelar producto"
+                class="btn-secundary__icon"
+              />
+            </button>
+          </div>
+        </div>
+
+        <!-- TOTAL -->
+        <div class="store-order-detail__product-total">
+          <p><strong>Total: $155.000</strong></p>
+        </div>
+
       </div>
     </div>
 
-    <!-- >>> Botones de acción -->
+    <!-- >>> ACCIONES -->
     <div class="store-order-detail__actions">
+
       <div class="store-order-detail__secondary">
         <button class="btn-secundary btn-secundary-style store-order-detail__cancel-order">
           Cancelar pedido
-          <img src="/frontend/public/assets/icons/cancel.svg" alt="Icono exportar PDF" class="btn-secundary__icon">
+          <img
+            src="/frontend/public/assets/icons/cancel.svg"
+            alt="Cancelar pedido"
+            class="btn-secundary__icon"
+          />
         </button>
       </div>
 
-      <!-- ✅ Botón primario (suspender usuario) -->
-      <div class="store-order-detail__buttons">
-        <button class="btn btn--primary  store-order-detail__delivery">
+      <div class="store-order-detail__primary">
+        <button class="btn btn--primary store-order-detail__delivery">
           Entregar pedido
-          <img src="/frontend/public/assets/icons/delivery.svg" alt="Icono entregar pedido" class="btn__icon">
+          <img
+            src="/frontend/public/assets/icons/delivery.svg"
+            alt="Entregar pedido"
+            class="btn__icon"
+          />
         </button>
       </div>
+
     </div>
+
   </section>
 </section>

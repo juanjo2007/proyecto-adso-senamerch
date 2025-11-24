@@ -1,52 +1,27 @@
-document.addEventListener("DOMContentLoaded", function () {
-  const direction = document.querySelector(".add-adress-store");
+document.addEventListener("DOMContentLoaded", function () { 
+  const form = document.querySelector(".add-adress-store");
 
-  if (direction) {
+  if (form) {
     fetch("/frontend/public/views/components/add_adress_store.html")
       .then(response => response.text())
       .then(data => {
-        direction.innerHTML = data;
-        attachAddressEvents(); // ✅ Se agregan los eventos después de cargar el HTML
+        form.innerHTML = data;
+
+        // ✅ Agregar eventos después de insertar el contenido
+        attachEditPostEvents();
       })
-      .catch(error => console.log("Error", error));
+      .catch(error => console.log("Error al cargar el componente:", error));
   }
 
-  // 🔹 Función para mostrar la alerta (con mismo diseño que las anteriores)
-  function showAlert(message, type = "success", duration = 1500) {
-    const alert = document.createElement("div");
-    alert.classList.add("alert", `alert--${type}`);
-    alert.innerHTML = `
-      <div class="alert__content">
-        <p class="alert__message">${message}</p>
-      </div>
-    `;
-    document.body.appendChild(alert);
-
-    // Animación de aparición
-    requestAnimationFrame(() => alert.classList.add("alert--show"));
-
-    // Ocultar después del tiempo definido
-    setTimeout(() => {
-      alert.classList.remove("alert--show");
-      setTimeout(() => alert.remove(), 400);
-    }, duration);
-  }
-
-  // 🔹 Función para manejar el botón "Guardar"
-  function attachAddressEvents() {
+  // === Función que agrega los eventos ===
+  function attachEditPostEvents() {
     const saveBtn = document.querySelector(".btn--primary");
-
-    if (!saveBtn) {
-      console.error("No se encontró el botón de guardar");
-      return;
+    // 🔵 Botón primario → ir a view_edit_post2.html
+    if (saveBtn) {
+      saveBtn.addEventListener("click", (e) => {
+        e.preventDefault();
+        window.location.href = "view_add_adress_store2.html";
+      });
     }
-
-    saveBtn.addEventListener("click", (e) => {
-      e.preventDefault();
-      showAlert("Dirección añadida correctamente.", "success");
-      setTimeout(() => {
-        window.location.href = "create_store2.html";
-      }, 2000);
-    });
   }
 });

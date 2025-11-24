@@ -20,15 +20,10 @@
       </div>
 
       <div class="register__group">
-        <label class="register__label">Tipo de usuario</label>
-        <select name="user-type" class="register__input" required>
-          <option value="">Selecciona...</option>
-          <option value="client">Cliente</option>
-          <option value="seller">Vendedor</option>
-          <option value="admin">Administrador</option>
-        </select>
+        <label class="register__label">Dirección</label>
+        <a href="/frontend/public/views/add_adress.html" class="register__link">Agregar dirección</a>
+        <small class="register__text">Todo estará más cerca de ti.</small>
       </div>
-
 
       <div class="register__group">
         <label class="register__label">Departamento</label>
@@ -40,31 +35,10 @@
         </select>
       </div>
 
-      <div class="register__group">
-        <label class="register__label">Dirección</label>
-        <a href="/frontend/public/views/add_adress.html" class="register__link">Agregar dirección</a>
-        <small class="register__text">Todo estará más cerca de ti.</small>
-      </div>
-
-      <div class="register__group">
-        <label class="register__label">Confirma tu contraseña</label>
-        <div class="register__password-wrapper">
-          <input 
-            class="register__input register__input--password"
-            type="password"
-            name="password"
-            autocomplete="new-password"
-            required
-          >
-          <button type="button" class="register__toggle-password">Mostrar</button>
-        </div>
-      </div>
-
-
       <div class="register__buttons">
         <button type="submit" class="btn btn--primary register__button-register">
-          Registrar
-          <img src="/frontend/public/assets/icons/contact.svg" alt="" class="btn__icon">
+          Siguiente
+          <img src="/frontend/public/assets/icons/continue.svg" alt="" class="btn__icon">
         </button>
       </div>
     </form>

@@ -1,12 +1,12 @@
-.create-post-one {
+.create-product-post-one {
   display: flex;
   align-items: center;
   box-sizing: border-box;
-  padding-block: 8.4rem;
+  padding-block: 2.4rem;
   overflow: hidden;
   min-height: 100%;
 }
-.create-post-one__wrapper {
+.create-product-post-one__wrapper {
   border: 1px solid var(--secundary-900);
   background-color: var(--white);
   padding: var(--gap-lg);
@@ -19,87 +19,87 @@
   box-sizing: border-box;
 }
 @media (width > 640px) {
-  .create-post-one {
-    margin: var(--gap-lg);
+  .create-product-post-one {
+    margin-inline: var(--gap-lg);
   }
-  .create-post-one__wrapper {
+  .create-product-post-one__wrapper {
     width: fit-content;
     padding: var(--gap-lg);
     margin: 0 auto;
     box-shadow: 0 2px 8px rgba(0, 0, 0, 0.15);
   }
-  .create-post-one__input {
+  .create-product-post-one__input {
     width: 360px;
     max-width: 360px;
     min-width: 360px;
   }
 }
 @media (width < 1024px) {
-  .create-post-one__wrapper {
+  .create-product-post-one__wrapper {
     width: 100%;
     max-width: fit-content;
     margin: 0 auto;
   }
-  .create-post-one__form {
+  .create-product-post-one__form {
     grid-template-columns: repeat(2, 1fr);
     gap: var(--gap-lg);
   }
-  .create-post-one__group {
+  .create-product-post-one__group {
     width: 100%;
   }
-  .create-post-one__input {
+  .create-product-post-one__input {
     width: 100%;
     max-width: none;
     min-width: 0;
     box-sizing: border-box;
   }
-  .create-post-one__buttons {
+  .create-product-post-one__buttons {
     width: 100%;
     justify-content: flex-end;
     flex-wrap: wrap;
     gap: var(--gap-xxs);
   }
-  .create-post-one__secondary {
+  .create-product-post-one__secondary {
     width: 100%;
     justify-content: flex-start;
   }
 }
-.create-post-one__header {
+.create-product-post-one__header {
   text-align: center;
   margin-bottom: var(--gap-lg);
 }
-.create-post-one__title {
+.create-product-post-one__title {
   font-size: var(--fs-sm);
   font-family: var(--font-primary-bold);
   color: var(--black);
   margin-bottom: var(--gap-lg);
 }
-.create-post-one__subtitle {
+.create-product-post-one__subtitle {
   font-size: var(--fs-xs);
   font-family: var(--font-primary);
   color: var(--black);
 }
-.create-post-one__form {
+.create-product-post-one__form {
   display: grid;
   grid-template-columns: repeat(2, 1fr);
   gap: var(--gap-lg);
 }
-.create-post-one__group {
+.create-product-post-one__group {
   display: flex;
   flex-direction: column;
   align-items: flex-start;
-  gap: var(--gap-xs);
+  gap: var(--gap-xxs);
   width: 100%;
 }
-.create-post-one__group--full {
+.create-product-post-one__group--full {
   grid-column: 1 / -1;
 }
-.create-post-one__label {
+.create-product-post-one__label {
   font-size: var(--fs-xxxs);
   font-family: var(--font-primary-bold);
   color: var(--black);
 }
-.create-post-one__input {
+.create-product-post-one__input {
   padding: var(--padding-top) var(--padding-right) var(--padding-bottom) var(--padding-left);
   border: 1px solid var(--secundary-900);
   border-radius: 8px;
@@ -112,11 +112,22 @@
   background-color: var(--white);
 }
 
-.create-post-one__input:focus {
+.create-product-post-one__input:focus {
   border-color: var(--secundary-900);
   box-shadow: 0 0 4px var(--secundary-900);
 }
-.create-post-one__buttons {
+.create-product-post-one__link {
+  color: var(--secundary-700);
+  font-size: var(--fs-xxs);
+  text-decoration: none;
+  transition: color 0.3s;
+  text-align: center;
+}
+.create-product-post-one__link:hover {
+  color: var(--secundary-950);
+  text-decoration: underline;
+}
+.create-product-post-one__buttons {
   display: flex;
   justify-content: flex-end;
   align-items: center;
@@ -124,26 +135,26 @@
   margin-top: var(--gap-xxs);
 }
 
-.create-post-one__secondary {
+.create-product-post-one__secondary {
   display: flex;
   justify-content: flex-start;
   align-items: center;
 }
 @media (width < 640px) {
-  .create-post-one {
+  .create-product-post-one {
     width: 100%;
-    padding-block: 10rem;
+    padding-block: 2.4rem;
   }
-  .create-post-one__wrapper {
+  .create-product-post-one__wrapper {
     width: 100%;
     margin: 2.4rem;
   }
-  .create-post-one__form {
+  .create-product-post-one__form {
     grid-template-columns: 1fr;
     width: 100%;
     gap: var(--gap-lg);
   }
-  .create-post-one__buttons {
+  .create-product-post-one__buttons {
     flex-direction: column;
     align-items: start;
   }

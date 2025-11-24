@@ -1,96 +1,80 @@
 <section class="address-store-form">
-  <form class="address-store-form__fields">
+  <div class="address-store-form__wrapper">
+
+    <!-- Encabezado -->
     <header class="address-store-form__header">
-      <h2 class="address-store-form__title">Añade la dirección de la Tienda</h2>
+      <h2 class="address-store-form__title">Añade la dirección de la tienda</h2>
       <p class="address-store-form__subtitle">
-          Este formulario es para registrar<br> tu tienda en <strong>SENA MERCH</strong>.
-          Con tu perfil podrás publicar productos y gestionar tus ventas fácilmente.
+        Este formulario es para registrar <br>
+        tu tienda en <strong>SENA MERCH</strong>.
+        Con tu perfil podrás publicar productos y gestionar tus ventas fácilmente.
       </p>
     </header>
-    <!-- GRID DE INPUTS -->
-    <div class="address-store-form__grid">
 
+    <!-- FORMULARIO -->
+    <form class="address-store-form__form">
+
+      <!-- Barrio -->
       <div class="address-store-form__group">
         <label class="address-store-form__label">Barrio</label>
         <input 
           type="text"
-          name="neighborhood"
           placeholder="Ingresa tu barrio"
           class="address-store-form__input"
           required
         >
       </div>
 
+      <!-- Número de dirección -->
       <div class="address-store-form__group">
         <label class="address-store-form__label">Número de dirección</label>
         <input 
           type="text"
-          name="address-number"
-          placeholder="Ej: #25A - 45"
+          placeholder="Ejemplo: #25A - 45"
           class="address-store-form__input"
           required
         >
       </div>
 
+      <!-- Tipo de vía -->
       <div class="address-store-form__group">
         <label class="address-store-form__label">Tipo de vía</label>
         <input 
           type="text"
-          name="street-type"
-          placeholder="Ej: Calle, Carrera, Avenida"
+          placeholder="Ejemplo: Calle, Carrera, Avenida"
           class="address-store-form__input"
         >
       </div>
 
+      <!-- Código postal -->
       <div class="address-store-form__group">
         <label class="address-store-form__label">Código postal</label>
         <input 
           type="text"
-          name="postal-code"
-          placeholder="Ej: 110111"
+          placeholder="Ejemplo: 110111"
           class="address-store-form__input"
         >
       </div>
 
-      <div class="address-store-form__group">
-        <label class="address-store-form__label">Departamento</label>
-        <input 
-          type="text"
-          name="department"
-          placeholder="Ej: Cundinamarca"
-          class="address-store-form__input"
+      <!-- Botón Volver -->
+      <div class="address-store-form__secondary">
+        <button
+          type="button"
+          class="btn-secundary btn-secundary-style"
         >
+          Volver
+          <img src="/frontend/public/assets/icons/edit.svg" class="btn-secundary__icon">
+        </button>
       </div>
 
-      <div class="address-store-form__group">
-        <label class="address-store-form__label">Municipio</label>
-        <input 
-          type="text"
-          name="city"
-          placeholder="Ej: Bogotá"
-          class="address-store-form__input"
-        >
+      <!-- Botón Siguiente -->
+      <div class="address-store-form__buttons">
+        <button type="submit" class="btn btn--primary">
+          Siguiente
+          <img src="/frontend/public/assets/icons/save.svg" class="btn__icon">
+        </button>
       </div>
 
-      <div class="address-store-form__group address-store-form__group--full">
-        <label class="address-store-form__label">Información adicional</label>
-        <input 
-          type="text"
-          name="additional-info"
-          placeholder="Apartamento, interior, referencias, etc."
-          class="address-store-form__input"
-        >
-      </div>
-
-    </div>
-
-    <!-- BOTÓN -->
-    <div class="address-store-form__buttons">
-      <button type="submit" class="btn btn--primary add-adress-store-form__pay">
-        Guardar
-        <img src="/frontend/public/assets/icons/save.svg" alt="Icono Comprar" class="btn__icon add-adress-store-form__icon" />
-      </button>
-    </div>
-
-  </form>
+    </form>
+  </div>
 </section>
