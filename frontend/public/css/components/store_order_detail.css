@@ -48,22 +48,17 @@
 .store-order-detail__title {
   font-size: var(--fs-sm);
   font-family: var(--font-primary-semibold);
-  margin: 0;
 }
 
 .store-order-detail__date {
   font-size: var(--fs-xs);
   color: var(--gray-700);
-  margin: 0;
 }
 
 .store-order-detail__status {
   font-size: var(--fs-xxs);
-  font-family: var(--font-primary-semibold);
   padding: 0.45rem 0.9rem;
   border-radius: 999px;
-  text-transform: capitalize;
-  white-space: nowrap;
 }
 
 .store-order-detail__status--pending {
@@ -94,66 +89,50 @@
 .store-order-detail__card-title {
   font-size: var(--fs-xs);
   font-family: var(--font-primary-semibold);
-  color: var(--secundary-900);
-  padding-bottom: var(--gap-xs);
   border-bottom: 1px solid var(--secundary-900);
+  padding-bottom: var(--gap-xs);
   margin-bottom: var(--gap-sm);
-}
-
-.store-order-detail__card-item {
-  font-size: var(--fs-xxs);
-  color: var(--secundary-700);
-  margin: 0;
-  line-height: 1.35;
 }
 
 /* ============================
-   PRODUCTOS
+   PRODUCTOS COMO CARDS
 =============================== */
 
-.store-order-detail__products {
+.store-order-detail__products-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(230px, 1fr));
+  gap: var(--gap-md);
+}
+
+.store-order-detail__product-card {
+  background: var(--secundary-900);
+  border: 1px solid var(--secundary-900);
+  border-radius: 8px;
+  padding: var(--gap-md);
+  color: var(--white);
   display: flex;
   flex-direction: column;
-  gap: var(--gap-md);
+  gap: var(--gap-xxs);
 }
 
-.store-order-detail__section-title {
+.store-order-detail__product-title {
   font-size: var(--fs-xs);
-  font-family: var(--font-primary-semibold);
-  color: var(--black);
-  padding-bottom: var(--gap-xs);
-  border-bottom: 1px solid var(--secundary-900);
-  margin-bottom: var(--gap-sm);
+  font-weight: 600;
 }
 
-.store-order-detail__product {
-  display: grid;
-  grid-template-columns: 1fr auto;
-  align-items: center;
-  gap: var(--gap-md);
-  padding: var(--gap-md);
-  border-radius: 0.8rem;
-  background-color: var(--gray-900);
+.store-order-detail__product-item {
+  font-size: var(--fs-xxs);
+}
+
+.store-order-detail__product-total {
+  
   border: 1px solid var(--secundary-900);
-}
-
-.store-order-detail__product-text {
-  margin: 0;
-  font-size: var(--fs-xs);
-  color: var(--gray-100);
-  line-height: 1.3;
-}
-
-.store-order-detail__product--total {
-  display: flex;
-  justify-content: flex-end;
-  background-color: var(--gray-950);
-}
-
-.store-order-detail__product-info--total p {
-  margin: 0;
+  grid-column: 1 / -1;
+  background: var(--gray-950);
+  padding: var(--gap-md);
+  border-radius: 8px;
+  text-align: right;
   font-size: var(--fs-sm);
-  font-family: var(--font-primary-semibold);
   color: var(--white);
 }
 
@@ -190,12 +169,6 @@
     grid-template-columns: 1fr;
   }
 
-  .store-order-detail__header {
-    flex-direction: column;
-    align-items: flex-start;
-    gap: var(--gap-xs);
-  }
-
   .store-order-detail__actions {
     grid-template-columns: 1fr;
   }
@@ -204,10 +177,5 @@
 @media (max-width: 640px) {
   .store-order-detail-content {
     padding-inline: 16px;
-  }
-
-  .store-order-detail__product {
-    grid-template-columns: 1fr;
-    text-align: left;
   }
 }

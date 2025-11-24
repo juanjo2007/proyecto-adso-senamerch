@@ -3,28 +3,15 @@
 
     <!-- HEADER -->
     <header class="create-post__header">
-      <h1 class="create-post__title">Sigue creando el producto</h1>
+      <h1 class="create-post__title">Termina de crear el producto</h1>
       <p class="create-post__subtitle">
-        Este formulario es para registrar tu producto.<br>
+        Este formulario es para registrar<br> tu producto en <strong>SENA MERCH</strong>.
         Podrás publicarlo y gestionarlo fácilmente.
       </p>
     </header>
+
     <!-- FORMULARIO -->
     <form class="create-post__form">
-
-      <!-- Campo: Unidad de medida -->
-      <div class="create-post__group">
-        <label class="create-post__label">Unidad de medida</label>
-        <select class="create-post__input" required>
-          <option value="" selected disabled>Selecciona una unidad</option>
-          <option value="kg">Kilogramos (kg)</option>
-          <option value="lb">Libras (lb)</option>
-          <option value="unidad">Unidad</option>
-          <option value="litro">Litros (L)</option>
-          <option value="mililitro">Mililitros (mL)</option>
-          <option value="todas">Todas las opciones (*)</option>
-        </select>
-      </div>
 
       <!-- Campo: Descuento -->
       <div class="create-post__group">
@@ -38,14 +25,20 @@
         >
       </div>
 
-      <!-- Campo: Imagen (2 columnas) -->
+      <!-- Campo: Imagen (3 entradas) -->
       <div class="create-post__group ">
         <label class="create-post__label">Imagen del producto</label>
-        <input 
-          type="file"
-          class="create-post__input"
-          accept="image/*"
-        >
+        <input type="file" class="create-post__input" accept="image/*">
+      </div>
+
+      <div class="create-post__group ">
+        <label class="create-post__label">Imagen del producto</label>
+        <input type="file" class="create-post__input" accept="image/*">
+      </div>
+
+      <div class="create-post__group ">
+        <label class="create-post__label">Imagen del producto</label>
+        <input type="file" class="create-post__input" accept="image/*">
       </div>
 
       <!-- Botón secundario -->
@@ -56,12 +49,7 @@
           aria-label="Cancelar edición"
         >
           Cancelar
-          <img
-            src="/frontend/public/assets/icons/cancel.svg"
-            alt=""
-            class="btn-secundary__icon"
-            aria-hidden="true"
-          />
+          <img src="/frontend/public/assets/icons/cancel.svg" alt="" class="btn-secundary__icon" aria-hidden="true"/>
         </button>
       </div>
 
@@ -73,15 +61,11 @@
           aria-label="Guardar datos del administrador"
         >
           Crear producto
-          <img
-            src="/frontend/public/assets/icons/continue.svg"
-            alt=""
-            class="btn__icon"
-            aria-hidden="true"
-          />
+          <img src="/frontend/public/assets/icons/continue.svg" alt="" class="btn__icon" aria-hidden="true"/>
         </button>
       </div>
 
     </form>
+
   </div>
 </section>

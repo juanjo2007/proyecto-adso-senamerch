@@ -8,8 +8,8 @@
   padding-block: 2.4rem;
   width: 100%;
   max-width: 100%;
-  margin: 0 auto;
   min-width: 320px;
+  margin: 0 auto;
   box-sizing: border-box;
   overflow: hidden;
 }
@@ -47,8 +47,7 @@
 }
 
 .store-orders__filter {
-  padding: var(--padding-top) var(--padding-right) var(--padding-bottom)
-    var(--padding-left);
+  padding: var(--padding-top) var(--padding-right) var(--padding-bottom) var(--padding-left);
   border: 1px solid var(--secundary-900);
   border-radius: 8px;
   background-color: var(--gray-950);
@@ -64,59 +63,39 @@
   gap: var(--gap-md);
 }
 
-@media (min-width: 1024px) {
-  .store-orders__list {
-    grid-template-columns: repeat(2, 1fr);
-  }
-}
-
 /* =========================================================
-   ITEM DEL PEDIDO (CARD GLOBAL)
+   ITEM DEL PEDIDO
 ========================================================= */
 .store-orders__item {
   display: grid;
   grid-template-columns: 1fr auto auto;
-  align-items: center;
   background-color: var(--gray-950);
-  border: 1px solid var(--secundary-900);
   border-radius: 10px;
-  gap: 10px;
   padding: var(--gap-lg);
-  transition: background-color 0.3s ease;
+  border: 1px solid var(--secundary-900);
 
-  /* 🔹 NUEVO: Permitimos apilar las mini-cards */
   grid-template-areas:
-    'id status total'
-    'date status total'
-    'client client client'
-    'address address address'
-    'btn btn btn';
+    "id status total"
+    "date status total"
+    "client client client"
+    "address address address"
+    "products products products"
+    "btn btn btn";
+  gap: var(--gap-xs);
 }
 
-.store-orders__id {
-  grid-area: id;
-}
-.store-orders__date {
-  grid-area: date;
-}
-.store-orders__status {
-  grid-area: status;
-}
-.store-orders__total {
-  grid-area: total;
-}
-.store-orders__card--client {
-  grid-area: client;
-}
-.store-orders__card--address {
-  grid-area: address;
-}
-.store-orders__primary {
-  grid-area: btn;
-}
+/* GRID ÁREAS */
+.store-orders__id { grid-area: id; }
+.store-orders__date { grid-area: date; }
+.store-orders__status { grid-area: status; }
+.store-orders__total { grid-area: total; }
+.store-orders__card--client { grid-area: client; }
+.store-orders__card--address { grid-area: address; }
+.store-orders__products { grid-area: products; }
+.store-orders__primary { grid-area: btn; }
 
 /* =========================================================
-   INFORMACIÓN DEL PEDIDO (NO VA EN CARD)
+   INFO PRINCIPAL
 ========================================================= */
 .store-orders__id {
   font-size: var(--fs-xs);
@@ -133,16 +112,14 @@
   font-size: var(--fs-xs);
   font-weight: 600;
   color: var(--white);
-  text-align: right;
 }
 
-/* Estados */
 .store-orders__status {
   font-size: var(--fs-xxs);
-  font-weight: 600;
-  text-align: center;
-  padding: 4px 10px;
+  font-weight: 700;
+  padding: 6px 14px;
   border-radius: 8px;
+  text-align: center;
 }
 
 .store-orders__status--pending {
@@ -150,91 +127,119 @@
   color: var(--white);
 }
 
-.store-orders__status--delivered {
-  background-color: var(--secundary-100);
-  color: var(--secundary-700);
-}
-
 .store-orders__status--in-process {
   background-color: var(--primary-200);
   color: var(--primary-800);
 }
 
+.store-orders__status--delivered {
+  background-color: var(--secundary-100);
+  color: var(--secundary-700);
+}
+
 /* =========================================================
-   MINI-CARDS INTERNAS
+   MINI-CARDS GENERALES
 ========================================================= */
 .store-orders__card {
   background-color: var(--secundary-100);
   border: 1px solid var(--secundary-900);
   border-radius: 8px;
-  padding: var(--gap-lg);
+  padding: var(--gap-md);
   display: flex;
   flex-direction: column;
   gap: var(--gap-xxs);
-  margin-top: var(--gap-lg);
-  width: 100%;
-  box-sizing: border-box;
 }
 
 .store-orders__subtitle {
   font-size: var(--fs-xs);
   font-weight: 600;
-  color: var(--secundary-900);
+  color: var(--black);
   margin-bottom: var(--gap-xxs);
 }
 
 .store-orders__client {
   font-size: var(--fs-xxs);
-  color: var(--secundary-700);
+  color: var(--gray-950);
+}
+.store-orders__product {
+  font-size: var(--fs-xxs);
+  color: var(--white);
+}
+
+/* =========================================================
+   PRODUCTS GRID
+========================================================= */
+.store-orders__products {
+  display: grid;
+  gap: var(--gap-md);
+  margin-top: var(--gap-md);
+  grid-template-columns: 1fr;
+}
+
+/* CARD PRODUCTO */
+.store-orders__card--product {
+  background-color: var(--primary-950);
+  border: 1px solid var(--primary-900);
+  border-radius: 8px;
+  padding: var(--gap-md);
+}
+
+.store-orders__product-name {
+  font-size: var(--fs-xxs);
+  color: var(--gray-100);
+}
+
+.store-orders__product-detail {
+  font-size: var(--fs-xxs);
+  color: var(--gray-100);
 }
 
 /* =========================================================
    BOTÓN
 ========================================================= */
 .store-orders__primary {
+  margin-top: var(--gap-md);
   display: flex;
   justify-content: center;
-  text-align: right;
-  padding-right: var(--gap-sm);
 }
 
 /* =========================================================
-   RESPONSIVE
+   RESPONSIVE MOBILE
 ========================================================= */
-@media (max-width: 640px) {
-  .store-content {
-    padding-block: 2.4rem;
-    padding-inline: 24px;
-  }
-
-  .store-orders {
-    width: 100%;
-    max-width: 100%;
-    padding: var(--gap-md);
-  }
-
-  .store-orders__title {
-    font-size: var(--fs-xs);
-  }
-}
-
-@media (width < 768px) {
-  /* 🔥 APILAR TODO EN UNA COLUMNA */
+@media (max-width: 768px) {
   .store-orders__item {
     grid-template-columns: 1fr;
     grid-template-areas:
-      'id'
-      'date'
-      'status'
-      'total'
-      'client'
-      'address'
-      'btn';
-    text-align: left;
-    gap: var(--gap-sm);
+      "id"
+      "date"
+      "status"
+      "total"
+      "client"
+      "address"
+      "products"
+      "btn";
   }
 
-  .store-orders__card {
-    width: 100%;
+  .store-orders__products {
+    grid-template-columns: 1fr;
+  }
+}
+
+/* =========================================================
+   RESPONSIVE DESKTOP ≥1024px
+========================================================= */
+@media (min-width: 1024px) {
+  .store-orders__item {
+    grid-template-columns: 1fr 1fr;
+    grid-template-areas:
+      "id status"
+      "date total"
+      "client address"
+      "products products"
+      "btn btn";
+  }
+
+  .store-orders__products {
+    grid-template-columns: repeat(4, 1fr); /* 4 productos máximo */
   }
 }

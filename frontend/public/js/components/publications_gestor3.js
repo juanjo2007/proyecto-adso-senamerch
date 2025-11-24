@@ -22,7 +22,7 @@ document.addEventListener("DOMContentLoaded", function () {
     if (cancelBtn) {
       cancelBtn.addEventListener("click", (e) => {
         e.preventDefault();
-        window.location.href = "view_publications_gestor4.html";
+        window.location.href = "publications_gestor.html";
       });
     }
 

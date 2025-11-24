@@ -3,7 +3,7 @@
 
     <!-- HEADER -->
     <header class="edit-post-two__header">
-      <h1 class="edit-post-two__title">Sigue Editando el producto</h1>
+      <h1 class="edit-post-two__title">Continúa editando la información del producto</h1>
       <p class="edit-post-two__subtitle">
         Completa o modifica la información de tu producto en <strong>SENA MERCH</strong>.
       </p>
@@ -12,33 +12,7 @@
     <!-- FORMULARIO -->
     <form class="edit-post-two__form">
 
-      <!-- Grupo: Precio * Unidad -->
-      <div class="edit-post-two__group">
-        <label class="edit-post-two__label">Precio * Unidad de medida</label>
-        <select class="edit-post-two__input" required>
-          <option value="" disabled>Selecciona una unidad</option>
-          <option value="kg" selected>Kilogramos (kg)</option>
-          <option value="lb">Libra (lb)</option>
-          <option value="unidad">Unidad</option>
-          <option value="litro">Litro (L)</option>
-          <option value="mililitro">Mililitro (mL)</option>
-        </select>
-      </div>
-
-      <!-- Grupo: Unidad de medida -->
-      <div class="edit-post-two__group">
-        <label class="edit-post-two__label">Unidad de medida</label>
-        <select class="edit-post-two__input" required>
-          <option value="" disabled>Selecciona una unidad</option>
-          <option value="kg" selected>Kilogramos (kg)</option>
-          <option value="lb">Libras (lb)</option>
-          <option value="unidad">Unidad</option>
-          <option value="litro">Litros (L)</option>
-          <option value="mililitro">Mililitros (mL)</option>
-        </select>
-      </div>
-
-      <!-- Grupo: Descuento -->
+      <!-- Descuento -->
       <div class="edit-post-two__group">
         <label class="edit-post-two__label">Descuento (%)</label>
         <input 
@@ -50,7 +24,7 @@
         >
       </div>
 
-      <!-- Grupo: Imagen -->
+      <!-- Imágenes -->
       <div class="edit-post-two__group">
         <label class="edit-post-two__label">Imagen del producto</label>
         <input 
@@ -60,14 +34,26 @@
         >
       </div>
 
-      <!-- Grupo: Descripción -->
-      <div class="edit-post-two__group edit-post-two__group--full">
-        <label class="edit-post-two__label">Descripción</label>
-        <textarea class="edit-post-two__textarea">Tomates frescos del Valle, cultivados sin pesticidas.</textarea>
+      <div class="edit-post-two__group">
+        <label class="edit-post-two__label">Imagen del producto</label>
+        <input 
+          type="file"
+          class="edit-post-two__input"
+          accept="image/*"
+        >
       </div>
 
-      <!-- Grupo Botón cancelar -->
-      <div class="edit-post-two__group ">
+      <div class="edit-post-two__group">
+        <label class="edit-post-two__label">Imagen del producto</label>
+        <input 
+          type="file"
+          class="edit-post-two__input"
+          accept="image/*"
+        >
+      </div>
+
+      <!-- Botón cancelar -->
+      <div class="edit-post-two__group">
         <div class="edit-post-two__secondary">
           <button class="btn-secundary btn-secundary-style edit-post-two__cancel">
             Cancelar producto
@@ -76,8 +62,8 @@
         </div>
       </div>
 
-      <!-- Grupo Botón guardar -->
-      <div class="edit-post-two__group ">
+      <!-- Botón guardar -->
+      <div class="edit-post-two__group">
         <div class="edit-post-two__buttons">
           <button type="button" class="btn btn--primary edit-post-two__save">
             Guardar cambios

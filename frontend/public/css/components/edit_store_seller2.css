@@ -78,6 +78,14 @@
   color: var(--black);
   margin-bottom: var(--gap-lg);
 }
+.edit-store-seller__subtitle{
+  display: flex;
+  justify-content: center;
+  font-size: var(--fs-xs);
+  font-family: var(--font-primary);
+  color: var(--black);
+  margin-bottom: var(--gap-lg);
+}
 .edit-store-seller__form {
   display: grid;
   grid-template-columns: repeat(2, 1fr);

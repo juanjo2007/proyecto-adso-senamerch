@@ -57,15 +57,11 @@
     min-width: 0;
     box-sizing: border-box;
   }
-  .register__buttons {
-    width: 100%;
-    max-width: none;
-    justify-content: flex-end;
-    flex-wrap: wrap;
-    gap: var(--gap-xxs);
-  }
 }
 
+/* =========================
+   FORM HEADER
+   ========================= */
 .register__header {
   text-align: center;
   margin-bottom: var(--gap-lg);
@@ -84,6 +80,9 @@
   color: var(--black);
 }
 
+/* =========================
+   FORM GRID
+   ========================= */
 .register__form {
   display: grid;
   grid-template-columns: repeat(2, 1fr);
@@ -127,30 +126,14 @@
   box-shadow: 0 0 4px var(--secundary-900);
 }
 
-.register__buttons {
-  grid-column: 1 / -1;     /* ⬅ OCUPA LAS 2 COLUMNAS */
-  display: flex;
-  justify-content: center; /* ⬅ CENTRADO */
-  align-items: center;
-  gap: var(--gap-xxs);
-  margin-top: var(--gap-xxs);
-}
-
-.register__link {
-  color: var(--secundary-700);
-  font-size: var(--fs-xxs);
-  text-decoration: none;
-  transition: color 0.3s;
-  text-align: center;
-}
-.register__link:hover {
-  color: var(--secundary-950);
-  text-decoration: underline;
-}
+/* =========================
+   PASSWORD TOGGLE
+   ========================= */
 .register__password-wrapper {
   position: relative;
   width: 100%;      
 }
+
 .register__toggle-password {
   position: absolute;
   right: 12px;      
@@ -166,14 +149,63 @@
   color: var(--white);
   margin-left: 0;
 }
+
 .register__toggle-password:hover {
   background-color: var(--secundary-700);
 }
+
 .register__toggle-password:active {
   transform: translateY(-50%) scale(0.95);
 }
 
-@media (width < 640px) {
+/* =========================
+   LINKS
+   ========================= */
+.register__link {
+  color: var(--secundary-700);
+  font-size: var(--fs-xxs);
+  text-decoration: none;
+  transition: color 0.3s;
+  text-align: center;
+}
+
+.register__link:hover {
+  color: var(--secundary-950);
+  text-decoration: underline;
+}
+
+/* =========================
+   BOTONES
+   ========================= */
+.register__actions {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: var(--gap-lg);
+  margin-top: var(--gap-md);
+  grid-column: 1 / -1; /* ocupa las 2 columnas del formulario */
+}
+
+.register__actions button:first-child {
+  justify-self: start; /* Volver a la izquierda */
+}
+
+.register__actions button:last-child {
+  justify-self: end;   /* Registrar a la derecha */
+}
+
+.register__buttons {
+  grid-column: 1 / -1;     
+  display: flex;
+  justify-content: center; 
+  align-items: center;
+  gap: var(--gap-xxs);
+  margin-top: var(--gap-xxs);
+}
+
+/* =========================
+   MEDIA QUERIES
+   ========================= */
+@media (max-width: 640px) {
   .register__wrapper {
     width: 100%;
     margin-inline: var(--gap-lg);
@@ -193,6 +225,17 @@
     grid-template-columns: 1fr;
     gap: var(--gap-lg);
   }
+
+  .register__actions {
+    grid-template-columns: 1fr; /* apila los botones */
+    gap: var(--gap-sm);
+  }
+
+  .register__actions button {
+    justify-self: stretch;
+    width: 100%;
+  }
+
   .register__buttons {
     flex-direction: column;
     align-items: start;

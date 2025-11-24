@@ -3,45 +3,53 @@
 
     <!-- HEADER -->
     <header class="create-post__header">
-      <h1 class="create-post__title">caracterizticas del producto</h1>
+      <h1 class="create-post__title">Agrega las características del producto</h1>
       <p class="create-post__subtitle">
         Este formulario es para registrar tu producto.<br>
         Podrás publicarlo y gestionarlo fácilmente.
       </p>
     </header>
+
     <!-- FORMULARIO -->
     <form class="create-post__form">
 
-      <!-- Acaba lo que tendrias que saber-->
-      <div class="create-post__group ">
-        <label class="create-post__label">caracterizticas</label>
+      <!-- Acaba lo que tendrías que saber -->
+      <div class="create-post__group">
+        <label class="create-post__label">Características</label>
         <textarea 
           class="create-post__textarea"
           placeholder="Describe brevemente el producto..."
         ></textarea>
       </div>
-      <div class="create-post__group ">
+
+      <div class="create-post__group">
         <label class="create-post__label">Unidad de medida</label>
-        <textarea 
-          class="create-post__textarea"
-          placeholder="Describe brevemente el producto..."
-        ></textarea>
+        <select class="create-post__input" required>
+          <option value="" selected disabled>Selecciona una unidad</option>
+          <option value="kg">Kilogramos (kg)</option>
+          <option value="lb">Libras (lb)</option>
+          <option value="unidad">Unidad</option>
+          <option value="litro">Litros (L)</option>
+          <option value="mililitro">Mililitros (mL)</option>
+          <option value="todas">Todas las opciones (*)</option>
+        </select>
       </div>
-      <div class="create-post__group ">
+
+      <div class="create-post__group">
         <label class="create-post__label">Tipo de garantía</label>
         <textarea 
           class="create-post__textarea"
           placeholder="Describe brevemente el producto..."
         ></textarea>
       </div>
-      <div class="create-post__group ">
-        <label class="create-post__label">caracterizticas adicionales</label>
+
+      <div class="create-post__group">
+        <label class="create-post__label">Características adicionales</label>
         <textarea 
           class="create-post__textarea"
           placeholder="Describe brevemente el producto..."
         ></textarea>
       </div>
-
 
       <!-- Botón secundario -->
       <div class="create-post__secondary">
