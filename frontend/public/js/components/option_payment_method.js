@@ -26,7 +26,7 @@ document.addEventListener('DOMContentLoaded', function () {
         // === 🔥 Evento: botón "Pagar" redirige a details.html ===
         if (payButton) {
           payButton.addEventListener("click", () => {
-            window.location.href = "view_client-order.html";
+            window.location.href = "view_client_  order.html";
           });
         }
 

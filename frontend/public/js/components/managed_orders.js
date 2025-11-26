@@ -1,4 +1,5 @@
 document.addEventListener('DOMContentLoaded', function () {
+
   const container = document.querySelector('.managed-orders-container');
 
   if (!container) {
@@ -6,23 +7,39 @@ document.addEventListener('DOMContentLoaded', function () {
     return;
   }
 
-  // ============================================================
-  // Cargar componente HTML
-  // ============================================================
+  // ======================================
+  // CARGAR COMPONENTE
+  // ======================================
   fetch('/frontend/public/views/components/managed_orders.html')
-    .then((response) => response.text())
-    .then((data) => {
-      container.innerHTML = data;
+    .then(res => res.text())
+    .then(html => {
 
-      // ============================================================
-      // Exportar PDF
-      // ============================================================
+      container.innerHTML = html;
+
+      // ======================================
+      // MOVER EL MODAL DENTRO DEL CONTAINER
+      // ======================================
+      const modalOutside = document.querySelector(".modal-confirm");
+
+      if (modalOutside) {
+        container.appendChild(modalOutside); // 🔥 AQUÍ SE SOLUCIONA TODO
+      }
+
+      // Obtener elementos ya dentro del container
       const exportBtn = container.querySelector(".order-detail__export");
+      const cancelBtn = container.querySelector(".order-detail__suspend");
+      const modal = container.querySelector(".modal-confirm");
+      const modalCancel = container.querySelector(".modal-confirm__cancel");
+      const modalConfirm = container.querySelector(".modal-confirm__confirm");
+
+      // ======================================================
+      // EXPORTAR PDF
+      // ======================================================
       if (exportBtn) {
         exportBtn.addEventListener("click", function (e) {
           e.preventDefault();
 
-          const element = document.querySelector(".order-detail");
+          const element = container.querySelector(".order-detail");
 
           const script = document.createElement("script");
           script.src = "https://cdnjs.cloudflare.com/ajax/libs/html2pdf.js/0.10.1/html2pdf.bundle.min.js";
@@ -44,34 +61,30 @@ document.addEventListener('DOMContentLoaded', function () {
         });
       }
 
-      // ============================================================
+      // ======================================================
       // CANCELAR PEDIDO — CON MODAL
-      // ============================================================
-      const cancelBtn = container.querySelector(".order-detail__suspend");
-      const modal = container.querySelector(".modal-confirm");
-      const modalCancel = container.querySelector(".modal-confirm__cancel");
-      const modalConfirm = container.querySelector(".modal-confirm__confirm");
-
+      // ======================================================
       if (!cancelBtn || !modal) return;
 
-      // --- 1. Abrir modal ---
+      // Abrir modal
       cancelBtn.addEventListener("click", function (e) {
         e.preventDefault();
-        modal.classList.add("modal-confirm--show"); // mostrar modal
+        modal.classList.add("modal-confirm--show");
       });
 
-      // --- 2. Cerrar modal (botón NO) ---
+      // Cerrar modal
       modalCancel.addEventListener("click", function () {
         modal.classList.remove("modal-confirm--show");
       });
 
-      // --- 3. CONFIRMAR cancelación del pedido ---
+      // Confirmar cancelación
       modalConfirm.addEventListener("click", function () {
 
         modal.classList.remove("modal-confirm--show");
 
         // ALERTA GLOBAL
         let alertContainer = document.querySelector(".alert");
+
         if (!alertContainer) {
           alertContainer = document.createElement("div");
           alertContainer.classList.add("alert");
@@ -81,22 +94,22 @@ document.addEventListener('DOMContentLoaded', function () {
         alertContainer.className = "alert alert--error alert--show";
         alertContainer.innerHTML = `
           <div class="alert__content">
-            <p class="alert__message">
-              Pedido cancelado correctamente.
-            </p>
+            <p class="alert__message">Pedido cancelado correctamente.</p>
           </div>
         `;
-
-        // Deshabilitar botón y cambiar texto
-        cancelBtn.classList.add("btn--disabled");
-        cancelBtn.textContent = "Pedido cancelado";
 
         setTimeout(() => {
           alertContainer.classList.remove("alert--show");
         }, 2000);
+
+        // Deshabilitar botón
+        cancelBtn.classList.add("btn--disabled");
+        cancelBtn.disabled = true;
+        cancelBtn.innerHTML = `
+          Pedido cancelado
+          <img src="/frontend/public/assets/icons/cancel.svg" class="btn__icon">
+        `;
       });
     })
-    .catch((error) =>
-      console.error("Error cargando componente de pedidos:", error)
-    );
+    .catch(err => console.error("Error cargando componente:", err));
 });
