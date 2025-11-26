@@ -56,8 +56,6 @@
   }
 }
 
-
-
 .edit-order__card--product {
   display: flex;
   flex-direction: column;
@@ -65,12 +63,12 @@
   padding: var(--gap-sm);
   border-radius: 8px;
   border: 1px solid var(--primary-900);
-  background-color: var(--tertiary-600);
+  background-color: var(--secundary-600);
 }
 
 /* BOTÓN “QUITAR PRODUCTO” */
 .edit-order__card--product .btn-secundary {
-  width: auto;          /* 🔥 no ocupar 100% */
+  width: auto; /* 🔥 no ocupar 100% */
   align-self: flex-end; /* que quede al inicio */
 }
 
@@ -84,7 +82,8 @@
 
 /* SELECT PRODUCTO (MAX 360PX) */
 .edit-order__select-product {
-  padding: var(--padding-top) var(--padding-right) var(--padding-bottom) var(--padding-left);
+  padding: var(--padding-top) var(--padding-right) var(--padding-bottom)
+    var(--padding-left);
   border: 1px solid var(--secundary-900);
   border-radius: 8px;
   font-size: var(--fs-xs);
@@ -92,8 +91,8 @@
   width: 100%;
   max-width: 360px;
   box-sizing: border-box;
-  color: var(--white);
-  background-color: var(--tertiary-600);
+  color: var(--black);
+  background-color: var(--white);
   transition: border 0.3s ease, box-shadow 0.3s ease;
 }
 
@@ -116,7 +115,8 @@
 
 .edit-order__input {
   width: 60px;
-  padding: var(--padding-top) var(--padding-right) var(--padding-bottom) var(--padding-left);
+  padding: var(--padding-top) var(--padding-right) var(--padding-bottom)
+    var(--padding-left);
   border-radius: 6px;
   border: 1px solid var(--secundary-900);
   font-size: var(--fs-xs);
@@ -146,8 +146,8 @@
   }
 
   .edit-order__actions button {
-    width: auto;          /* No ocupar todo el ancho */
-    min-width: 200px;     /* Recomendado */
+    width: auto; /* No ocupar todo el ancho */
+    min-width: 200px; /* Recomendado */
     text-align: center;
   }
 }

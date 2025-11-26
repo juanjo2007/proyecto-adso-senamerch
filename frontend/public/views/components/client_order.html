@@ -9,7 +9,6 @@
           <option value="pendiente">Pendientes</option>
           <option value="entregado">Entregados</option>
         </select>
-        <a class="client-orders__link" href="details.html">detalle del pedido</a>
       </div>
     </header>
 
@@ -18,7 +17,6 @@
           ITEM DEL PEDIDO (CLIENTE)
       ========================================================= -->
       <article class="client-orders__item">
-
         <!-- ===== INFO PRINCIPAL ===== -->
         <h3 class="client-orders__id">Pedido #0123</h3>
         <p class="client-orders__date"><strong>Fecha:</strong> 15/11/2025</p>
@@ -27,24 +25,29 @@
           Tienda: Donde don pastor
         </div>
 
-        
         <!-- ===== CARD DE PRODUCTOS ===== -->
         <div class="client-orders__products">
           <h3 class="client-orders__product-title">Productos del pedido</h3>
 
           <div class="client-orders__card client-orders__card--product">
-            <p class="client-orders__product-name"><strong>Tomate chonto</strong></p>
+            <p class="client-orders__product-name">
+              <strong>Tomate chonto</strong>
+            </p>
             <p class="client-orders__product-detail">Cantidad: 2 kg</p>
             <p class="client-orders__product-detail">Precio: $12.000</p>
           </div>
 
           <div class="client-orders__card client-orders__card--product">
-            <p class="client-orders__product-name"><strong>Lechuga crespa</strong></p>
+            <p class="client-orders__product-name">
+              <strong>Lechuga crespa</strong>
+            </p>
             <p class="client-orders__product-detail">Cantidad: 1 und</p>
             <p class="client-orders__product-detail">Precio: $3.000</p>
           </div>
           <div class="client-orders__card client-orders__card--product">
-            <p class="client-orders__product-name"><strong>Lechuga crespa</strong></p>
+            <p class="client-orders__product-name">
+              <strong>Lechuga crespa</strong>
+            </p>
             <p class="client-orders__product-detail">Cantidad: 1 und</p>
             <p class="client-orders__product-detail">Precio: $3.000</p>
           </div>
@@ -56,18 +59,26 @@
 
         <!-- ===== BOTONES ===== -->
         <div class="client-orders__actions">
-          <button class="btn-secundary btn-secundary-style client-orders__cancel">
-            Volver 
-            <img src="/frontend/public/assets/icons/return.svg" alt="Cancelar" class="btn__icon" />
+          <button
+            class="btn-secundary btn-secundary-style client-orders__cancel"
+          >
+            Volver
+            <img
+              src="/frontend/public/assets/icons/return.svg"
+              alt="Cancelar"
+              class="btn__icon"
+            />
           </button>
 
-          
           <button class="btn btn--primary client-orders__edit">
             Editar pedido
-            <img src="/frontend/public/assets/icons/edit.svg" alt="Editar" class="btn__icon" />
+            <img
+              src="/frontend/public/assets/icons/edit.svg"
+              alt="Editar"
+              class="btn__icon"
+            />
           </button>
         </div>
-
       </article>
     </div>
   </section>

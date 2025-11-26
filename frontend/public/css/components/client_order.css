@@ -18,7 +18,7 @@
   background-color: var(--white);
   border-radius: 12px;
   padding: var(--gap-lg);
-  box-shadow: 0 2px 8px rgba(0,0,0,0.06);
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.06);
   font-family: var(--font-primary);
   border: 1px solid var(--secundary-900);
 }
@@ -43,7 +43,7 @@
   padding: var(--padding-top) var(--padding-right);
   border: 1px solid var(--secundary-900);
   border-radius: 8px;
-  background-color: var(--tertiary-600);
+  background-color: var(--secundary-600);
   font-size: var(--fs-xs);
   color: var(--white);
 }
@@ -77,11 +77,11 @@
   border: 1px solid var(--secundary-900);
 
   grid-template-areas:
-    "id status total"
-    "date status total"
-    "shipping shipping shipping"
-    "products products products"
-    "actions actions actions";
+    'id status total'
+    'date status total'
+    'shipping shipping shipping'
+    'products products products'
+    'actions actions actions';
 
   gap: var(--gap-sm);
 }
@@ -151,7 +151,7 @@
 }
 
 .client-orders__card--product {
-  background-color: var(--tertiary-600);
+  background-color: var(--secundary-600);
 }
 
 .client-orders__subtitle {
@@ -188,7 +188,7 @@
   grid-template-columns: repeat(5, 1fr);
   gap: var(--gap-md);
   margin-top: var(--gap-md);
-} 
+}
 .client-orders__actions {
   grid-column: 1 / -1;
   display: flex;
@@ -206,7 +206,6 @@
   justify-content: center;
 }
 
-
 /* =========================================================
    RESPONSIVE
 ========================================================= */
@@ -214,13 +213,13 @@
   .client-orders__item {
     grid-template-columns: 1fr;
     grid-template-areas:
-      "id"
-      "date"
-      "status"
-      "total"
-      "shipping"
-      "products"
-      "actions";
+      'id'
+      'date'
+      'status'
+      'total'
+      'shipping'
+      'products'
+      'actions';
   }
 
   .client-orders__products {

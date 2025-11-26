@@ -16,28 +16,29 @@
     font-size: 0; /* h1 */
     font-family: var(--font-primary-bold);
     color: var(--white);
+    margin-left: 2.4rem;
 }
 .navbar_product_category__letter {
     display: inline-block;
     font-size: var(--fs-md);
     font-family: var(--font-primary-bold);
 }
-.navbar_product_category__letter--1 { color: var(--secundary-400); }
+.navbar_product_category__letter--1 { color: var(--secundary-200); }
 .navbar_product_category__letter--2 { color: var(--white); }
 
-.navbar_product_category__letter--3 { color: var(--secundary-400); }
+.navbar_product_category__letter--3 { color: var(--secundary-200); }
 
 .navbar_product_category__letter--4 { color: var(--white); }
 
-.navbar_product_category__letter--5 { color: var(--secundary-400); }
+.navbar_product_category__letter--5 { color: var(--secundary-200); }
 
 .navbar_product_category__letter--6 { color: var(--white); }
 
-.navbar_product_category__letter--7 { color: var(--secundary-400); }
+.navbar_product_category__letter--7 { color: var(--secundary-200); }
 
 .navbar_product_category__letter--8 { color: var(--white); }
 
-.navbar_product_category__letter--9 { color: var(--secundary-400); }
+.navbar_product_category__letter--9 { color: var(--secundary-200); }
 
 .navbar_product_category__actions {
     display: flex;
@@ -66,6 +67,13 @@
 
     border-bottom: 2px solid var(--primary-700);
 }
+.navbar_product_category__icon {
+    width: 32px;
+    height: 32px;
+    margin-left: 6px;
+    vertical-align: -8px;
+}
+
 @media (max-width: 768px) {
     .navbar_product_category {
         flex-direction: column;
