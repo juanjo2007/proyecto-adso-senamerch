@@ -7,57 +7,56 @@ document.addEventListener("DOMContentLoaded", function () {
       .then(data => {
         form.innerHTML = data;
 
-        // === Seleccionar botones ===
-        const btnSave = form.querySelector(".btn--primary"); // Guardar cambios
-        const btnCancel = form.querySelector(".btn-secundary"); // Cancelar producto
+        // Botones correctos del componente
+        const btnSave = form.querySelector(".edit-post-two__save");    // Guardar cambios
+        const btnCancel = form.querySelector(".edit-post-two__cancel"); // Volver
 
-        // === FUNCIÓN ALERTA ===
-        function showAlert(message, type = "success") {
-          const existingAlert = document.querySelector(".alert");
-          if (existingAlert) existingAlert.remove();
-
-          const alert = document.createElement("div");
-          alert.className = `alert alert--${type}`;
-          alert.innerHTML = `
-            <div class="alert__content">
-              <p class="alert__message">${message}</p>
-            </div>
-          `;
-
-          document.body.appendChild(alert);
-
-          // Mostrar animación
-          setTimeout(() => alert.classList.add("alert--show"), 50);
-
-          // Ocultar después de 1.5s
-          setTimeout(() => {
-            alert.classList.remove("alert--show");
-            setTimeout(() => alert.remove(), 300);
-          }, 1500);
-        }
-
-        // === Evento: Guardar cambios ===
+        // 🟢 GUARDAR CAMBIOS → ALERTA + REDIRECCIÓN
         if (btnSave) {
-          btnSave.addEventListener("click", function (e) {
+          btnSave.addEventListener("click", (e) => {
             e.preventDefault();
-            showAlert("Producto editado correctamente", "success");
+            showAlert("Edición realizada con éxito", "success");
+
             setTimeout(() => {
               window.location.href = "view_seller_cards.html";
-            }, 1500);
+            }, 2500);
           });
         }
 
-        // === Evento: Cancelar ===
+        // 🔴 VOLVER → SIN ALERTA, SOLO REDIRECCIÓN
         if (btnCancel) {
-          btnCancel.addEventListener("click", function (e) {
+          btnCancel.addEventListener("click", (e) => {
             e.preventDefault();
-            showAlert("Cambios cancelados", "error");
-            setTimeout(() => {
-              window.location.href = "view_edit_post.html";
-            }, 1500);
+            window.location.href = "view_edit_post6.html";
           });
         }
       })
-      .catch(error => console.log("Error:", error));
+      .catch(error => console.log("Error cargando el componente:", error));
+  }
+
+  // ===== ALERTA (misma que la de publicaciones) =====
+  function showAlert(message, type = "success") {
+    const existingAlert = document.querySelector(".alert");
+    if (existingAlert) existingAlert.remove();
+
+    const alert = document.createElement("div");
+    alert.className = `alert alert--${type}`;
+
+    alert.innerHTML = `
+      <div class="alert__content">
+        <p class="alert__message">${message}</p>
+      </div>
+    `;
+
+    document.body.appendChild(alert);
+
+    // Animación
+    setTimeout(() => alert.classList.add("show"), 50);
+
+    // Ocultar después de 1.5s
+    setTimeout(() => {
+      alert.classList.remove("show");
+      setTimeout(() => alert.remove(), 400);
+    }, 1500);
   }
 });

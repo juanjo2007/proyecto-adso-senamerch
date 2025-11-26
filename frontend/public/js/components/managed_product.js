@@ -33,7 +33,7 @@ document.addEventListener("DOMContentLoaded", function () {
           });
         }
 
-        // === BOTÓN: Suspender / Habilitar PRODUCTO ===
+        // === BOTÓN: Deshabilitar / Habilitar PRODUCTO ===
         const suspendBtn = container.querySelector(".product-detail__suspend");
         if (suspendBtn) {
           suspendBtn.addEventListener("click", function (e) {
@@ -49,7 +49,7 @@ document.addEventListener("DOMContentLoaded", function () {
             const isSuspended = suspendBtn.classList.contains("is-suspended");
 
             /* ============================================================
-               CASO 1: SUSPENDER PRODUCTO (pasa a "Habilitar")
+               CASO 1: DESHABILITAR PRODUCTO → pasa a "Habilitar"
             ============================================================ */
             if (!isSuspended) {
               alertContainer.className =
@@ -57,7 +57,7 @@ document.addEventListener("DOMContentLoaded", function () {
               alertContainer.innerHTML = `
                 <div class="alert__content">
                   <p class="alert__message">
-                    Producto suspendido correctamente.<br>
+                    Producto deshabilitado correctamente.<br>
                     Ya no estará visible en el catálogo.
                   </p>
                 </div>
@@ -68,12 +68,11 @@ document.addEventListener("DOMContentLoaded", function () {
 
                 suspendBtn.innerHTML = `
                   Habilitar producto
-                  <img src="/frontend/public/assets/icons/enabled.svg" 
+                  <img src="/frontend/public/assets/icons/mobiledata.svg" 
                        alt="Icono habilitar" 
                        class="btn__icon">
                 `;
 
-                // Estado activado
                 suspendBtn.classList.add("is-suspended");
 
                 // Colores
@@ -83,7 +82,7 @@ document.addEventListener("DOMContentLoaded", function () {
             }
 
             /* ============================================================
-               CASO 2: HABILITAR PRODUCTO (vuelve a "Suspendido")
+               CASO 2: HABILITAR PRODUCTO → vuelve a "Deshabilitar"
             ============================================================ */
             else {
               alertContainer.className =
@@ -98,16 +97,15 @@ document.addEventListener("DOMContentLoaded", function () {
                 alertContainer.classList.remove("alert--show");
 
                 suspendBtn.innerHTML = `
-                  Suspender producto
+                  Deshabilitar producto
                   <img src="/frontend/public/assets/icons/off.svg" 
-                       alt="Icono suspender" 
+                       alt="Icono deshabilitar" 
                        class="btn__icon">
                 `;
 
-                // Quitar estado suspendido
                 suspendBtn.classList.remove("is-suspended");
 
-                // Volver a warning
+                // volver a warning
                 suspendBtn.classList.remove("btn--success");
                 suspendBtn.classList.add("btn--warning");
               }, 2000);

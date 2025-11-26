@@ -144,6 +144,19 @@
 .edit-profile-admin__toggle-password:active {
   transform: translateY(-50%) scale(0.95);
 }
+.edit-profile-admin__link {
+  color: var(--secundary-700);
+  font-size: var(--fs-xxs);
+  text-decoration: none;
+  transition: color 0.3s;
+  text-align: center;
+}
+
+.edit-profile-admin__link:hover {
+  color: var(--secundary-950);
+  text-decoration: underline;
+}
+
 .edit-profile-admin__buttons {
   display: flex;
   justify-content: flex-end;

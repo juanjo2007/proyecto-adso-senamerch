@@ -19,9 +19,9 @@
         </select>
       </div>
 
-      <div class="register__group">
-        <label class="edit-profile-user__label">Teléfono</label>
-        <input type="tel" class="edit-profile-user__input" value="+57 300 000 0000" required>
+      <div class="register__group ">
+        <label class="register__label">Imagen de portada</label>
+        <input type="file" class="register__input" accept="image/*">
       </div>
 
       <div class="register__group">
@@ -37,27 +37,19 @@
           <button type="button" class="register__toggle-password">Mostrar</button>
         </div>
       </div>
-      
-
       <div class="register__group">
         <label class="register__label">Confirma tu contraseña</label>
         <div class="register__password-wrapper">
           <input 
             class="register__input register__input--password"
             type="password"
-            name="password-confirm"
+            name="password"
             autocomplete="new-password"
             required
           >
           <button type="button" class="register__toggle-password">Mostrar</button>
         </div>
       </div>
-      
-      <div class="register__group ">
-        <label class="register__label">Imagen de portada</label>
-        <input type="file" class="register__input" accept="image/*">
-      </div>
-
       <!-- CONTENEDOR DE BOTONES (alineados frente a frente) -->
       <div class="register__actions">
         <button type="button" class="btn-secundary btn-secundary-style">

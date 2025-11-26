@@ -22,7 +22,7 @@ document.addEventListener("DOMContentLoaded", function () {
     if (cancelBtn) {
       cancelBtn.addEventListener("click", (e) => {
         e.preventDefault();
-        window.location.href = "view_publications_gestor6.html";
+        window.location.href = "view_publications_gestor4.html";
       });
     }
 
@@ -30,7 +30,7 @@ document.addEventListener("DOMContentLoaded", function () {
     if (continueBtn) {
       continueBtn.addEventListener("click", (e) => {
         e.preventDefault();
-        window.location.href = "view_publications_gestor2.html";
+        window.location.href = "view_publications_gestor5.html";
       });
     }
   }

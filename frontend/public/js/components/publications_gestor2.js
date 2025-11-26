@@ -10,7 +10,7 @@ document.addEventListener("DOMContentLoaded", function () {
         const publishBtn = direction.querySelector(".btn--primary");
         const cancelBtn = direction.querySelector(".btn-secundary");
 
-        // 🔵 Botón primario → view_seller_cards.html
+        // 🔵 Botón primario → view_seller_cards.html (SE MANTIENE IGUAL)
         if (publishBtn) {
           publishBtn.addEventListener("click", (e) => {
             e.preventDefault();
@@ -21,21 +21,18 @@ document.addEventListener("DOMContentLoaded", function () {
           });
         }
 
-        // 🔴 Botón secundario → publications_gestor.html
+        // 🔴 Botón secundario → volver SIN ALERTA a view_publications_gestor6.html
         if (cancelBtn) {
           cancelBtn.addEventListener("click", (e) => {
             e.preventDefault();
-            showAlert("Publicación cancelada", "error");
-            setTimeout(() => {
-              window.location.href = "publications_gestor.html";
-            }, 2500);
+            window.location.href = "view_publications_gestor5.html";
           });
         }
       })
       .catch((error) => console.error("Error al cargar las publicaciones:", error));
   }
 
-  // ===== FUNCIÓN DE ALERTA =====
+  // ===== FUNCIÓN DE ALERTA (solo para el botón primario) =====
   function showAlert(message, type = "success") {
     const existingAlert = document.querySelector(".alert");
     if (existingAlert) existingAlert.remove();

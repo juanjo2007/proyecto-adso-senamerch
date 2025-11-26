@@ -40,10 +40,10 @@
 .store-form__group {
   display: flex;
   flex-direction: column;
-  gap: var(--gap-xs);
+  gap: var(--gap-xxs);
 }
 .store-form__label {
-  font-size: var(--fs-xxs);
+  font-size: var(--fs-xxxs);
   color: var(--gray-950);
 }
 .store-form__input,

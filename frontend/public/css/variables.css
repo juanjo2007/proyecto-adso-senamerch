@@ -92,13 +92,13 @@
     --secundary-padding-left:8px;
 
     /* ================== Label / Input ================== */
-    --padding-top:14px;
+    --padding-top:16px;
     --padding-right:16px;
-    --padding-bottom:14px;
+    --padding-bottom:16px;
     --padding-left:16px;
 
     /* ================== Spacing / Gap ================== */
-    --gap-xxs: 0px;  /* 4px  - Extra extra small */
+    --gap-xxs: 4px;  /* 4px  - Extra extra small */
     --gap-xs:  8px;  /* 8px  - Extra small */
     --gap-sm:  12px;  /* 12px - Small */
     --gap-md:  16px;  /* 16px - Medium (default recommended) */

@@ -25,6 +25,48 @@
         </button>
       </form>
     </li>
+    <li class="shopping-cart__item">
+      <img 
+        src="/frontend/public/assets/img/tomato_image.png" 
+        alt="Tomate fresco" 
+        class="shopping-cart__item-image"
+      >
+      <div class="shopping-cart__item-details">
+        <h3 class="shopping-cart__item-name">Tomate del Valle</h3>
+        <p class="shopping-cart__item-price">$3.000 Kilo</p>
+        <p class="shopping-cart__item-quantity">Cantidad: 2</p>
+        <p class="shopping-cart__item-unit">Kilogramos</p>
+      </div>
+
+      <!-- Botón eliminar -->
+      <form class="shopping-cart__remove-form" action="/eliminar-producto" method="POST">
+        <input type="hidden" name="producto" value="tomate-del-valle">
+        <button type="submit" class="shopping-cart__remove-button" aria-label="Eliminar producto">
+          <img src="/frontend/public/assets/icons/delete.svg" alt="Eliminar">
+        </button>
+      </form>
+    </li>
+    <li class="shopping-cart__item">
+      <img 
+        src="/frontend/public/assets/img/tomato_image.png" 
+        alt="Tomate fresco" 
+        class="shopping-cart__item-image"
+      >
+      <div class="shopping-cart__item-details">
+        <h3 class="shopping-cart__item-name">Tomate del Valle</h3>
+        <p class="shopping-cart__item-price">$3.000 Kilo</p>
+        <p class="shopping-cart__item-quantity">Cantidad: 2</p>
+        <p class="shopping-cart__item-unit">Kilogramos</p>
+      </div>
+
+      <!-- Botón eliminar -->
+      <form class="shopping-cart__remove-form" action="/eliminar-producto" method="POST">
+        <input type="hidden" name="producto" value="tomate-del-valle">
+        <button type="submit" class="shopping-cart__remove-button" aria-label="Eliminar producto">
+          <img src="/frontend/public/assets/icons/delete.svg" alt="Eliminar">
+        </button>
+      </form>
+    </li>
 
     <!-- Producto 2 -->
     <li class="shopping-cart__item">

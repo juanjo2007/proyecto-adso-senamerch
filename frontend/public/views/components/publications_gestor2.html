@@ -5,15 +5,33 @@
     <header class="create-post__header">
       <h1 class="create-post__title">Termina de crear el producto</h1>
       <p class="create-post__subtitle">
-        Este formulario es para registrar<br> tu producto en <strong>SENA MERCH</strong>.
-        Podrás publicarlo y gestionarlo fácilmente.
+        Completa la información necesaria para continuar
+        con el registro de tu producto en <strong>SENA MERCH</strong>.
       </p>
     </header>
 
     <!-- FORMULARIO -->
     <form class="create-post__form">
 
-      <!-- Campo: Descuento -->
+      <div class="create-post__group ">
+        <label class="create-post__label">Quinta imagen del producto</label>
+        <input type="file" class="create-post__input" accept="image/*">
+      </div>
+
+      <div class="create-post__group ">
+        <label class="create-post__label">Sexta imagen del producto</label>
+        <input type="file" class="create-post__input" accept="image/*">
+      </div>
+
+      <!-- Campo: Texto -->
+      <div class="create-post__group">
+        <label class="create-post__label">Aporte para inventarios</label>
+        <textarea 
+          class="create-post__textarea"
+          placeholder="Describe brevemente el producto..."
+        ></textarea>
+      </div>
+
       <div class="create-post__group">
         <label class="create-post__label">Descuento (%)</label>
         <input 
@@ -25,21 +43,6 @@
         >
       </div>
 
-      <!-- Campo: Imagen (3 entradas) -->
-      <div class="create-post__group ">
-        <label class="create-post__label">Imagen del producto</label>
-        <input type="file" class="create-post__input" accept="image/*">
-      </div>
-
-      <div class="create-post__group ">
-        <label class="create-post__label">Imagen del producto</label>
-        <input type="file" class="create-post__input" accept="image/*">
-      </div>
-
-      <div class="create-post__group ">
-        <label class="create-post__label">Imagen del producto</label>
-        <input type="file" class="create-post__input" accept="image/*">
-      </div>
 
       <!-- Botón secundario -->
       <div class="create-post__secondary">
@@ -48,8 +51,9 @@
           class="btn-secundary btn-secundary-style create-post__cancel"
           aria-label="Cancelar edición"
         >
-          Cancelar
-          <img src="/frontend/public/assets/icons/cancel.svg" alt="" class="btn-secundary__icon" aria-hidden="true"/>
+          Volver
+          <img
+            src="/frontend/public/assets/icons/return.svg" alt="" class="btn-secundary__icon" aria-hidden="true"/>
         </button>
       </div>
 
@@ -61,7 +65,7 @@
           aria-label="Guardar datos del administrador"
         >
           Crear producto
-          <img src="/frontend/public/assets/icons/continue.svg" alt="" class="btn__icon" aria-hidden="true"/>
+          <img src="/frontend/public/assets/icons/create_product.svg" alt="" class="btn__icon" aria-hidden="true"/>
         </button>
       </div>
 

@@ -12,7 +12,34 @@
     <!-- FORMULARIO -->
     <form class="edit-post-two__form">
 
+      <!-- Imágenes -->
+      <div class="edit-post-two__group">
+        <label class="edit-post-two__label">Quinta imagen del producto</label>
+        <input 
+          type="file"
+          class="edit-post-two__input"
+          accept="image/*"
+        >
+      </div>
+
+      <div class="edit-post-two__group">
+        <label class="edit-post-two__label">Sexta imagen del producto</label>
+        <input 
+          type="file"
+          class="edit-post-two__input"
+          accept="image/*"
+        >
+      </div>
+
       <!-- Descuento -->
+      <div class="edit-post-two__group">
+        <label class="edit-post-two__label">Edita el aporte para inventarios</label>
+        <textarea 
+          class="edit-post-two__textarea"
+          placeholder="Describe brevemente el producto..."
+        ></textarea>
+      </div>
+
       <div class="edit-post-two__group">
         <label class="edit-post-two__label">Descuento (%)</label>
         <input 
@@ -24,40 +51,13 @@
         >
       </div>
 
-      <!-- Imágenes -->
-      <div class="edit-post-two__group">
-        <label class="edit-post-two__label">Imagen del producto</label>
-        <input 
-          type="file"
-          class="edit-post-two__input"
-          accept="image/*"
-        >
-      </div>
-
-      <div class="edit-post-two__group">
-        <label class="edit-post-two__label">Imagen del producto</label>
-        <input 
-          type="file"
-          class="edit-post-two__input"
-          accept="image/*"
-        >
-      </div>
-
-      <div class="edit-post-two__group">
-        <label class="edit-post-two__label">Imagen del producto</label>
-        <input 
-          type="file"
-          class="edit-post-two__input"
-          accept="image/*"
-        >
-      </div>
-
       <!-- Botón cancelar -->
       <div class="edit-post-two__group">
         <div class="edit-post-two__secondary">
           <button class="btn-secundary btn-secundary-style edit-post-two__cancel">
-            Cancelar producto
-            <img src="/frontend/public/assets/icons/cancel.svg" alt="Icono cancelar" class="btn-secundary__icon">
+            Volver
+            <img
+            src="/frontend/public/assets/icons/return.svg" alt="Icono cancelar" class="btn-secundary__icon">
           </button>
         </div>
       </div>

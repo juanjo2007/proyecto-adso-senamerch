@@ -39,6 +39,7 @@
   align-items: flex-start;
   gap: var(--gap-xxs);
   margin: 300px;
+  margin: 0;
 }
 .login__label {
   font-size: var(--fs-xxxs);

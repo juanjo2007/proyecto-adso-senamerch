@@ -55,6 +55,18 @@
   flex-direction: column;
   gap: 0.3rem;
 }
+.store-profile__link {
+  color: var(--secundary-700);
+  font-size: var(--fs-xxs);
+  text-decoration: none;
+  transition: color 0.3s;
+  text-align: start;
+}
+
+.store-profile__link:hover {
+  color: var(--secundary-950);
+  text-decoration: underline;
+}
 .store-profile__label {
   font-size: var(--fs-xxs);
   color: var(--gray-950);
@@ -84,21 +96,52 @@
     grid-template-columns: repeat(2, 1fr);
   }
 }
+/* =========================================================
+   RESPONSIVE — CELULARES (≤ 640px)
+========================================================= */
+/* =========================================================
+   FIX - ELIMINAR DESBORDAMIENTO EN CELULARES
+========================================================= */
 @media (max-width: 640px) {
-  .store-profile__grid {
-    grid-template-columns: 1fr;
-  }
-  .store-profile {
-    padding-block: 2rem;
-  }
-  .store-profile__container {
+
+  /* Garantiza que NADA pueda crecer más que la pantalla */
+  .store-profile,
+  .store-profile__container,
+  .store-profile__grid,
+  .store-profile__card {
+    max-width: 100%;
     width: 100%;
-    padding-inline: 24px;
+    box-sizing: border-box;
+    overflow-x: hidden;
   }
-  .store-profile__title {
-    font-size: var(--fs-sm);
+
+  /* Padding lateral seguro */
+  .store-profile__container {
+    padding-inline: var(--gap-lg); /* 24px */
   }
+
+  /* La grilla a una columna */
+  .store-profile__grid {
+    grid-template-columns: 1fr !important;
+  }
+
+  /* Corrige contenidos que pueden causar overflow */
+  .store-profile__item,
+  .store-profile__text,
+  .store-profile__label {
+    overflow-wrap: break-word;
+    word-wrap: break-word;
+  }
+
+  /* Imágenes 100% seguras */
+  .store-profile__image {
+    width: 100%;
+    max-width: 100%;
+    height: auto;
+  }
+
+  /* El botón nunca genera desbordamiento */
   .store-profile__actions {
-    grid-template-columns: 1fr;
+    width: 100%;
   }
 }

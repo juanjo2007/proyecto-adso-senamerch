@@ -19,9 +19,6 @@
   margin: 24px;
   box-sizing: border-box;
 }
-.login__field {
-  margin: var(--gap-xxs);
-}
 .verify__title {
   font-size: var(--fs-sm);
   color: var(--black);

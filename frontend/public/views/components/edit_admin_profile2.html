@@ -8,13 +8,37 @@
     </header>
 
     <form class="edit-profile-admin__form">
+
+      <div class="edit-profile-admin__group">
+        <label class="edit-profile-admin__label">Tipo de usuario</label>
+        <input
+          type="text"
+          class="edit-profile-admin__input edit-profile-admin__input--readonly"
+          value="Administrador del sistema"
+          readonly
+        />
+      </div>
       <div class="edit-profile-admin__group">
         <label class="edit-profile-admin__label">Dirección</label>
-        <input type="text" class="edit-profile-admin__input" required />
+        <a href="/frontend/public/views/view_add_adress_admin_edit.html" class="edit-profile-admin__link">Editar dirección</a>
+        <small class="edit-profile-admin__text">Todo estará más cerca de ti.</small>
       </div>
 
       <div class="edit-profile-admin__group">
-        <label class="edit-profile-admin__label">Escribe tu contraseña</label>
+        <label class="edit-profile-admin__label">Edita tu contraseña</label>
+        <div class="edit-profile-admin__password-wrapper">
+          <input
+            class="edit-profile-admin__input edit-profile-admin__input--password"
+            type="password"
+            placeholder="Contraseña"
+            required
+          />
+          <button type="button" class="edit-profile-admin__toggle-password">Mostrar</button>
+        </div>
+      </div>
+
+      <div class="edit-profile-admin__group">
+        <label class="edit-profile-admin__label">Confirma tu contraseña</label>
         <div class="edit-profile-admin__password-wrapper">
           <input
             class="edit-profile-admin__input edit-profile-admin__input--password"

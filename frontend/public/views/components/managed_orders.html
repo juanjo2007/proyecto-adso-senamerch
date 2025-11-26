@@ -147,7 +147,7 @@
   <section class="order-detail__section order-detail__section--actions">
     <h2 class="order-detail__section-title">Acciones administrativas</h2>
 
-    <!-- ✅ Botón secundario (exportar) -->
+    <!-- Botón secundario (exportar) -->
     <div class="order-detail__actions-secondary">
       <button class="btn-secundary btn-secundary-style order-detail__export">
         Exportar información en PDF
@@ -155,12 +155,32 @@
       </button>
     </div>
 
-    <!-- ✅ Botón primario (suspender usuario) -->
+    <!-- Botón primario (cancelar pedido) -->
     <div class="order-detail__actions-primary">
-      <button class="btn btn--primary order-detail__suspend">
+      <button class="btn btn--warning order-detail__suspend">
         Cancelar pedido
-        <img src="/frontend/public/assets/icons/cancel.svg" alt="Icono cancelar pedido" class="btn__icon">
+        <img src="/frontend/public/assets/icons/cancel.svg" class="btn__icon">
       </button>
     </div>
   </section>
+
 </section>
+
+<!-- ============================
+     MODAL DE CONFIRMACIÓN
+============================ -->
+<div class="modal-confirm">
+  <div class="modal-confirm__content">
+    <h3 class="modal-confirm__title">¿Cancelar pedido?</h3>
+
+    <p class="modal-confirm__text">
+      Esta acción no se puede deshacer.<br>
+      ¿Estás seguro de que deseas cancelar este pedido?
+    </p>
+
+    <div class="modal-confirm__actions">
+      <button class="btn btn--secondary modal-confirm__cancel">No, volver</button>
+      <button class="btn btn--warning modal-confirm__confirm">Sí, cancelar</button>
+    </div>
+  </div>
+</div>

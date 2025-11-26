@@ -15,15 +15,15 @@
   width: 100%;
   max-width: 1100px;
   background-color: var(--white);
-  border-radius: 1rem;
+  border-radius: 12px;
   border: 1px solid var(--secundary-900);
   padding: calc(var(--gap-lg) * 1.25);
-  box-shadow: 0 8px 30px rgba(0, 0, 0, 0.45);
+  box-shadow: 0 2px 8px rgba(0,0,0,0.06); /* Igual al componente anterior */
   display: flex;
   flex-direction: column;
   gap: var(--gap-lg);
-  color: var(--black);
   font-family: var(--font-primary);
+  color: var(--black);
 }
 
 /* ============================
@@ -47,22 +47,25 @@
 
 .store-order-detail__title {
   font-size: var(--fs-sm);
-  font-family: var(--font-primary-semibold);
+  font-weight: 600;
+  color: var(--black);
 }
 
 .store-order-detail__date {
-  font-size: var(--fs-xs);
-  color: var(--gray-700);
+  font-size: var(--fs-xxs);
+  color: var(--gray-950);
 }
 
 .store-order-detail__status {
   font-size: var(--fs-xxs);
-  padding: 0.45rem 0.9rem;
-  border-radius: 999px;
+  font-weight: 700;
+  padding: 6px 14px;
+  border-radius: 8px;
+  text-align: center;
 }
 
 .store-order-detail__status--pending {
-  background-color: var(--secundary-700);
+  background-color: var(--secundary-600); /* Igualado al componente anterior */
   color: var(--white);
 }
 
@@ -77,9 +80,9 @@
 }
 
 .store-order-detail__card {
-  background-color: var(--secundary-100);
+  background-color: var(--secundary-600); /* Igual al diseño anterior */
   border: 1px solid var(--secundary-900);
-  border-radius: 8px;
+  border-radius: 10px;
   padding: var(--gap-md);
   display: flex;
   flex-direction: column;
@@ -88,16 +91,25 @@
 
 .store-order-detail__card-title {
   font-size: var(--fs-xs);
-  font-family: var(--font-primary-semibold);
+  font-weight: 600;
+  color: var(--white);
   border-bottom: 1px solid var(--secundary-900);
   padding-bottom: var(--gap-xs);
   margin-bottom: var(--gap-sm);
 }
 
+.store-order-detail__card-item {
+  font-size: var(--fs-xxs);
+  color: var(--white);
+}
+
 /* ============================
    PRODUCTOS COMO CARDS
 =============================== */
-
+.store-order-detail__section-title{
+  font-size: var(--fs-xs);
+  color: var(--black);
+}
 .store-order-detail__products-grid {
   display: grid;
   grid-template-columns: repeat(auto-fill, minmax(230px, 1fr));
@@ -105,9 +117,9 @@
 }
 
 .store-order-detail__product-card {
-  background: var(--secundary-900);
+  background-color: var(--tertiary-600); /* Igualado */
   border: 1px solid var(--secundary-900);
-  border-radius: 8px;
+  border-radius: 10px;
   padding: var(--gap-md);
   color: var(--white);
   display: flex;
@@ -118,17 +130,18 @@
 .store-order-detail__product-title {
   font-size: var(--fs-xs);
   font-weight: 600;
+  color: var(--white);
 }
 
 .store-order-detail__product-item {
   font-size: var(--fs-xxs);
+  color: var(--white);
 }
 
 .store-order-detail__product-total {
-  
   border: 1px solid var(--secundary-900);
   grid-column: 1 / -1;
-  background: var(--gray-950);
+  background: var(--tertiary-600); /* Igualado */
   padding: var(--gap-md);
   border-radius: 8px;
   text-align: right;

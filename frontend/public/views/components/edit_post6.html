@@ -15,30 +15,35 @@
       <!-- CARACTERÍSTICAS -->
       <div class="edit-post-two__group">
         <label class="edit-post-two__label">Edita sus características</label>
-        <textarea class="edit-post-two__textarea">Describe brevemente el producto.</textarea>
-      </div>
-
-      <div class="edit-post-two__group">
-        <label class="edit-post-two__label">Edita el tipo de garantía</label>
-        <textarea class="edit-post-two__textarea">Describe brevemente el producto.</textarea>
+        <textarea class="edit-post-two__textarea" placeholder="Describe brevemente el producto."></textarea>
       </div>
 
       <div class="edit-post-two__group">
         <label class="edit-post-two__label">Edita la unidad de medida</label>
-        <textarea class="edit-post-two__textarea">Describe brevemente el producto.</textarea>
+        <select class="edit-post-two__input" required>
+          <option value="" selected disabled>Selecciona una unidad</option>
+          <option value="kg">Solido</option>
+          <option value="lb">Liquido</option>
+        </select>
+      </div>
+
+      <div class="edit-post-two__group">
+        <label class="edit-post-two__label">Edita el tipo de garantía</label>
+        <textarea class="edit-post-two__textarea" placeholder="Describe brevemente el producto."></textarea>
       </div>
 
       <div class="edit-post-two__group">
         <label class="edit-post-two__label">Edita las características adicionales</label>
-        <textarea class="edit-post-two__textarea">Describe brevemente el producto.</textarea>
+        <textarea class="edit-post-two__textarea" placeholder="Describe brevemente el producto."></textarea>
       </div>
 
       <!-- Botón cancelar -->
       <div class="edit-post-two__group">
         <div class="edit-post-two__secondary">
           <button class="btn-secundary btn-secundary-style edit-post-two__cancel">
-            Cancelar producto
-            <img src="/frontend/public/assets/icons/cancel.svg" alt="Icono cancelar" class="btn-secundary__icon">
+            Volver
+            <img
+            src="/frontend/public/assets/icons/return.svg" alt="Icono cancelar" class="btn-secundary__icon">
           </button>
         </div>
       </div>
