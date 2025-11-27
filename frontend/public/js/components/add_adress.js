@@ -1,4 +1,5 @@
 document.addEventListener("DOMContentLoaded", function () { 
+  
   const form = document.querySelector(".add-adress");
 
   if (form) {
@@ -7,21 +8,30 @@ document.addEventListener("DOMContentLoaded", function () {
       .then(data => {
         form.innerHTML = data;
 
-        // ✅ Agregar eventos después de insertar el contenido
-        attachEditPostEvents();
+        attachAddressEvents(form);
       })
-      .catch(error => console.log("Error al cargar el componente:", error));
+      .catch(error => console.log("Error al cargar componente:", error));
   }
 
-  // === Función que agrega los eventos ===
-  function attachEditPostEvents() {
-    const saveBtn = document.querySelector(".btn--primary");
-    // 🔵 Botón primario → ir a view_edit_post2.html
-    if (saveBtn) {
-      saveBtn.addEventListener("click", (e) => {
-        e.preventDefault();
-        window.location.href = "add_adress2.html";
-      });
+  function attachAddressEvents(container) {
+    const backBtn = container.querySelector(".btn-secundary");
+    const nextBtn = container.querySelector(".address-store-form__continue");
+
+    if (!backBtn || !nextBtn) {
+      console.error("Botones no encontrados en:", container);
+      return;
     }
+
+    // ← botón VOLVER
+    backBtn.addEventListener("click", (e) => {
+      e.preventDefault();
+      window.location.href = "register.html";
+    });
+
+    // → botón SIGUIENTE
+    nextBtn.addEventListener("click", (e) => {
+      e.preventDefault();
+      window.location.href = "add_adress2.html";
+    });
   }
 });

@@ -142,7 +142,6 @@
 @media (width < 640px) {
   .edit-product-one {
     width: 100%;
-    padding-block: 2.4rem;
   }
   .edit-product-one__wrapper {
     width: 100%;

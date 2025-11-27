@@ -11,7 +11,7 @@ document.addEventListener("DOMContentLoaded", function () {
       .catch(error => console.log("Error", error));
   }
 
-  // 🔹 Función para mostrar la alerta (con mismo diseño que las anteriores)
+  // 🔹 Función para mostrar la alerta
   function showAlert(message, type = "success", duration = 1500) {
     const alert = document.createElement("div");
     alert.classList.add("alert", `alert--${type}`);
@@ -32,15 +32,17 @@ document.addEventListener("DOMContentLoaded", function () {
     }, duration);
   }
 
-  // 🔹 Función para manejar el botón "Guardar"
+  // 🔹 Función para manejar los botones
   function attachAddressEvents() {
     const saveBtn = document.querySelector(".btn--primary");
+    const returnBtn = document.querySelector(".btn-secundary"); // ← botón Volver
 
     if (!saveBtn) {
       console.error("No se encontró el botón de guardar");
       return;
     }
 
+    // Botón Guardar
     saveBtn.addEventListener("click", (e) => {
       e.preventDefault();
       showAlert("Dirección añadida correctamente.", "success");
@@ -48,5 +50,13 @@ document.addEventListener("DOMContentLoaded", function () {
         window.location.href = "create_store2.html";
       }, 2000);
     });
+
+    // Botón Volver → view_add_adress_store.html
+    if (returnBtn) {
+      returnBtn.addEventListener("click", (e) => {
+        e.preventDefault();
+        window.location.href = "view_add_adress_store.html";
+      });
+    }
   }
 });

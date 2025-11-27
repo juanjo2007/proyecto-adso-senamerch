@@ -77,6 +77,10 @@
   color: var(--black);
   margin-bottom: var(--gap-lg);
 }
+.create-store-one__icon{
+  background-color: var(--black);
+  color: var(--black);
+}
 .create-store-one__subtitle {
   font-size: var(--fs-xs);
   font-family: var(--font-primary);

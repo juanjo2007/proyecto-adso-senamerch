@@ -50,7 +50,7 @@
 .order-detail__card {
   background-color: var(--white);
   border-radius: 1.2rem;
-  box-shadow: 0 4px 12px rgba(0,0,0,0.08);
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
   border: 1px solid var(--secundary-900);
   padding: var(--gap-md);
   width: 100%;
@@ -154,5 +154,68 @@
   }
   .order-detail__actions-primary {
     justify-content: flex-end;
+  }
+}
+.btn--disabled {
+  background: var(--tertiary-600);
+  cursor: not-allowed;
+  opacity: 0.7;
+}
+
+.modal-confirm {
+  display: none;
+  position: fixed;
+  inset: 0;
+  background: rgba(0, 0, 0, 0.5);
+  justify-content: center;
+  align-items: center;
+  z-index: 9999;
+}
+
+/* Cuando se activa */
+.modal-confirm--show {
+  display: flex;              /* Ahora sí aparece */
+}
+.modal-confirm__content {
+  background: var(--gray-900);
+  padding: 2rem;
+  border: 2px solid var(--secundary-700);
+  border-radius: 1rem;
+  width: min(400px, 90%);
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+  text-align: center;
+  box-shadow: 0 8px 30px rgba(0, 0, 0, 0.15);
+  animation: modalFadeIn 0.25s ease;
+}
+
+.modal-confirm__title {
+  font-size: var(--fs-sm);
+  font-family: var(--font-primary-semibold);
+  color: var(--white);
+}
+
+.modal-confirm__text {
+  font-size: var(--fs-xs);
+  color: var(--gray-100);
+}
+
+.modal-confirm__actions {
+  margin-top: 1rem;
+  display: flex;
+  justify-content: center;
+  gap: 1rem;
+}
+
+/* Animación suave */
+@keyframes modalFadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(-10px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
   }
 }

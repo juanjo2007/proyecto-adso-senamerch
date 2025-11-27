@@ -79,6 +79,7 @@
 .create-post__textarea {
   padding: var(--padding-top) var(--padding-right) var(--padding-bottom) var(--padding-left);
   border: 1px solid var(--secundary-900);
+  max-height: 56px;
   border-radius: 8px;
   font-size: var(--fs-xs);
   outline: none;

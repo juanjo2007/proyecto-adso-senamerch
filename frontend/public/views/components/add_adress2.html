@@ -13,14 +13,14 @@
 
       <div class="address-store-form__group">
         <label class="address-store-form__label">Departamento</label>
-        <input 
-          type="text"
-          name="department"
-          placeholder="Ej: Cundinamarca"
-          class="address-store-form__input"
-        >
+        <select class="address-store-form__input" required>
+          <option value="">Selecciona...</option>
+          <option value="Risaralda">Risaralda</option>
+          <option value="Quindío">Quindío</option>
+          <option value="Caldas">Caldas</option>
+        </select>
       </div>
-
+      
       <div class="address-store-form__group">
         <label class="address-store-form__label">Municipio</label>
         <input 
@@ -44,7 +44,7 @@
       <div class="address-store-form__secondary">
         <button class="btn-secundary btn-secundary-style">
           Volver
-          <img src="/frontend/public/assets/icons/edit.svg" class="btn-secundary__icon">
+          <img src="/frontend/public/assets/icons/return.svg" class="btn-secundary__icon">
         </button>
       </div>
 

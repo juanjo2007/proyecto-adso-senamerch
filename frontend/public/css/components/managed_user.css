@@ -52,7 +52,7 @@
 .user-detail__card {
   background-color: var(--white);
   border-radius: 1.2rem;
-  box-shadow: 0 4px 12px rgba(0,0,0,0.08);
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
   border: 1px solid var(--secundary-900);
   padding: var(--gap-md);
   transition: transform 0.2s ease;
@@ -153,4 +153,21 @@
   .user-detail__actions-primary {
     justify-content: flex-end;
   }
+}
+/* === ESTADO: DESHABILITAR (advertencia) === */
+.btn--warning {
+  background-color: var(--tertiary-600);
+  color: var(--white);
+}
+.btn--warning:hover {
+  background-color: var(--tertiary-700);
+}
+
+/* === ESTADO: HABILITAR (éxito) === */
+.btn--success {
+  background-color: var(--secundary-900);
+  color: var(--white);
+}
+.btn--success:hover {
+  background-color: var(--secundary-700);
 }

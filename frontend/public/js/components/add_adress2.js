@@ -35,11 +35,20 @@ document.addEventListener("DOMContentLoaded", function () {
   // 🔹 Función para manejar el botón "Guardar"
   function attachAddressEvents() {
     const saveBtn = document.querySelector(".btn--primary");
+    const saveSecundary = document.querySelector(".btn-secundary");
 
     if (!saveBtn) {
       console.error("No se encontró el botón de guardar");
       return;
     }
+
+    saveSecundary.addEventListener("click", (e) => {
+      e.preventDefault();
+      showAlert("Dirección añadida correctamente.", "success");
+      setTimeout(() => {
+        window.location.href = "add_adress.html";
+      }, 2000);
+    });
 
     saveBtn.addEventListener("click", (e) => {
       e.preventDefault();
