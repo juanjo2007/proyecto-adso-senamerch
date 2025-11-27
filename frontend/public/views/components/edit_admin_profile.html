@@ -1,92 +1,63 @@
-<section class="edit-profile-admin">
-  <section class="edit-profile-admin__container">
-    <h1 class="edit-profile-admin__title">Editar perfil del administrador</h1>
+<section class="edit-profile-admin"> 
+  <div class="edit-profile-admin__wrapper">
+    <header class="edit-profile-admin__header">
+      <h1 class="edit-profile-admin__title">Editar perfil del administrador</h1>
+      <p class="edit-profile-admin__subtitle">
+        Este formulario te permite editar los datos del perfil de administrador.
+      </p>
+    </header>
 
     <form class="edit-profile-admin__form">
-      <!-- 🖼️ Imagen -->
-      <div class="edit-profile-admin__field">
-        <label class="edit-profile-admin__label">Foto de perfil</label>
-        <label class="edit-profile-admin__avatar">
-          <img
-            src="/frontend/public/assets/img/admin_profile.png"
-            alt="Foto del administrador"
-            class="edit-profile-admin__avatar-img"
-          />
-          <input type="file" class="edit-profile-admin__avatar-input" accept="image/*" />
-        </label>
+      <div class="edit-profile-admin__group">
+          <label class="edit-profile-admin__label">Foto de perfil</label>
+          <input type="file" class="create-store__input" accept="image/*" />
       </div>
-
-      <div class="edit-profile-admin__field">
+    
+      <div class="edit-profile-admin__group">
         <label class="edit-profile-admin__label">Correo electrónico</label>
-        <input type="email" class="edit-profile-admin__input" value="juanperez@empresa.com" />
+        <input type="email" class="edit-profile-admin__input" required />
       </div>
 
-      <div class="edit-profile-admin__field">
+      <div class="edit-profile-admin__group">
         <label class="edit-profile-admin__label">Nombre</label>
-        <input type="text" class="edit-profile-admin__input" value="Juan Pérez" />
+        <input type="text" class="edit-profile-admin__input" required />
       </div>
 
-      <div class="edit-profile-admin__field">
-        <label class="edit-profile-admin__label">Departamento</label>
-        <select class="edit-profile-admin__input">
-          <option value="Risaralda" selected>Risaralda</option>
-          <option value="Quindío">Quindío</option>
-          <option value="Caldas">Caldas</option>
-        </select>
+      <div class="edit-profile-admin__group">
+        <label class="edit-profile-admin__label">Teléfono</label>
+        <input type="tel" class="edit-profile-admin__input" value="+57 300 000 0000" required>
       </div>
-
-      <div class="edit-profile-admin__field">
-        <label class="edit-profile-admin__label">Dirección</label>
-        <input type="text" class="edit-profile-admin__input" value="Calle 10 #15-23, Pereira" />
-      </div>
-
-      <div class="edit-profile-admin__field">
-        <label class="edit-profile-admin__label">Escribe tu contraseña</label>
-        <div class="edit-profile-admin__password-wrapper">
-          <input
-            class="edit-profile-admin__input edit-profile-admin__input--password"
-            type="password"
-            placeholder="Contraseña"
-            required
+      <div class="edit-profile-admin__secondary">
+        <button
+          type="button"
+          class="btn-secundary btn-secundary-style edit-profile-admin__cancel"
+          aria-label="Cancelar edición"
+        >
+          Cancelar
+          <img
+            src="/frontend/public/assets/icons/cancel.svg"
+            alt=""
+            class="btn-secundary__icon"
+            aria-hidden="true"
           />
-          <button type="button" class="edit-profile-admin__toggle-password">Mostrar</button>
-        </div>
+        </button>
       </div>
 
-      <!-- 🔹 Acciones (misma estructura que admin-profile) -->
-      <div class="edit-profile-admin__actions-grid">
-        <div class="edit-profile-admin__actions-secondary">
-          <button
-            type="button"
-            class="btn-secundary btn-secundary-style edit-profile-admin__cancel"
-            aria-label="Cancelar edición"
-          >
-            Cancelar
-            <img
-              src="/frontend/public/assets/icons/cancel.svg"
-              alt=""
-              class="btn-secundary__icon"
-              aria-hidden="true"
-            />
-          </button>
-        </div>
-
-        <div class="edit-profile-admin__actions-primary">
-          <button
-            type="submit"
-            class="btn btn--primary edit-profile-admin__submit"
-            aria-label="Guardar datos del administrador"
-          >
-            Guardar datos
-            <img
-              src="/frontend/public/assets/icons/save.svg"
-              alt=""
-              class="btn__icon edit-profile-admin__icon"
-              aria-hidden="true"
-            />
-          </button>
-        </div>
+      <div class="edit-profile-admin__buttons">
+        <button
+          type="submit"
+          class="btn btn--primary edit-profile-admin__submit"
+          aria-label="Guardar datos del administrador"
+        >
+          Siguiente
+          <img
+            src="/frontend/public/assets/icons/continue.svg"
+            alt=""
+            class="btn__icon edit-profile-admin__icon"
+            aria-hidden="true"
+          />
+        </button>
       </div>
     </form>
-  </section>
+  </div>
 </section>

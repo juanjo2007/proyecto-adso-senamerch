@@ -2,7 +2,7 @@
   width: 100%;
   margin: 0 auto;
   box-sizing: border-box;
-  padding-block: 8.8rem;
+  padding-block: 2.4rem;
   display: flex;
   justify-content: center;
 }
@@ -103,4 +103,16 @@
   font-size: var(--fs-xs);
   color: var(--gray-900);
   text-align: right;
+}
+.admin-profile__link {
+  color: var(--secundary-700);
+  font-size: var(--fs-xxs);
+  text-decoration: none;
+  transition: color 0.3s;
+  text-align: center;
+}
+
+.admin-profile__link:hover {
+  color: var(--secundary-950);
+  text-decoration: underline;
 }

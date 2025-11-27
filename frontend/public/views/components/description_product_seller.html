@@ -1,79 +1,100 @@
 <section class="product-admin-description">
-  <!-- Galería -->
+
+  <!-- GALERÍA (igual) -->
   <div class="product-admin-description__gallery">
-    <img
-      src="/frontend/public/assets/img/tomato_image.png"
-      alt="Tomate fresco"
-      class="product-admin-description__image--main"
-    />
+    <img src="/frontend/public/assets/img/tomato_image.png" 
+         alt="Tomate fresco" 
+         class="product-admin-description__image product-admin-description__image--main" />
 
     <div class="product-admin-description__thumbnails">
-      <img src="/frontend/public/assets/img/tomato_image.png" alt="Tomate vista 1" class="product-admin-description__thumbnail" />
-      <img src="/frontend/public/assets/img/tomato_image.png" alt="Tomate vista 2" class="product-admin-description__thumbnail" />
-      <img src="/frontend/public/assets/img/tomato_image.png" alt="Tomate vista 3" class="product-admin-description__thumbnail" />
-      <img src="/frontend/public/assets/img/tomato_image.png" alt="Tomate vista 4" class="product-admin-description__thumbnail" />
-      <img src="/frontend/public/assets/img/tomato_image.png" alt="Tomate vista 5" class="product-admin-description__thumbnail" />
+      <img src="/frontend/public/assets/img/tomato_image.png" class="product-admin-description__thumbnail" />
+      <img src="/frontend/public/assets/img/tomato1_image.png" class="product-admin-description__thumbnail" />
+      <img src="/frontend/public/assets/img/tomato2_image.png" class="product-admin-description__thumbnail" />
+      <img src="/frontend/public/assets/img/tomato3_image.png" class="product-admin-description__thumbnail" />
+      <img src="/frontend/public/assets/img/tomato4_image.png" class="product-admin-description__thumbnail" />
+      <img src="/frontend/public/assets/img/tomato2_image.png" class="product-admin-description__thumbnail" />
     </div>
 
-    <!-- SECCIÓN DE COMENTARIOS -->
-    <div class="product-admin-comments">
-      <h3 class="product-admin-comments__title">Opiniones de los usuarios</h3>
+    <!-- COMENTARIOS (igual) -->
+    <div class="product-admin-description__comments seller-comments">
+      <h3 class="comments__title">Opiniones de los usuarios</h3>
 
-      <div class="product-admin-comments__list">
-        <div class="product-admin-comments__item">
-          <p class="product-admin-comments__user">María López <span>• Hace 2 días</span></p>
-          <p class="product-admin-comments__text">Tomates muy frescos y de excelente tamaño. Recomendado 100%.</p>
+      <div class="seller-comments__list">
+        <div class="seller-comments__item">
+          <p class="seller-comments__user">María López <span class="comments__date">• Hace 2 días</span></p>
+          <p class="seller-comments__text">Tomates muy frescos…</p>
         </div>
-        <div class="product-admin-comments__item">
-          <p class="product-admin-comments__user">Carlos Pérez <span>• Hace 5 días</span></p>
-          <p class="product-admin-comments__text">Buen sabor, llegaron rápido y en buen estado.</p>
+        <div class="seller-comments__item">
+          <p class="seller-comments__user">Carlos Pérez <span class="comments__date">• Hace 5 días</span></p>
+          <p class="seller-comments__text">Buen sabor…</p>
+        </div>
+
+        <div class="seller-comments__secondary">
+          <button class="btn-secundary btn-secundary-style seller-comments__edit">
+            Editar producto
+            <img src="/frontend/public/assets/icons/edit.svg" alt="Icono exportar PDF" class="btn-secundary__icon">
+          </button>
         </div>
       </div>
     </div>
   </div>
 
-  <!-- Detalles -->
-  <div class="product-admin-description__details">
-    <!-- Estado -->
-    <div class="product-admin-description__status">
-      <p class="product-admin-description__status-text">
-        Estado: <span class="product-admin-description__status--active">Habilitado</span>
-      </p>
-      <a href="#" class="btn btn--primary">Deshabilitar producto
-        <img src="/frontend/public/assets/icons/off.svg" alt="Icono deshabilitar producto" class="product-admin-description__icon">
-      </a>
+  <!-- DETALLES DEL PRODUCTO (ADMIN) -->
+  <div class="product-admin-description__details seller-details">
+
+    <!-- BOTÓN ADMIN -->
+    <div class="seller-details__actions">
+      <p class="product-admin-description__status"> Estado </p>
+      <button class="btn btn--warning product-admin-description__suspend">
+        Deshabilitar producto
+        <img src="/frontend/public/assets/icons/off.svg" class="btn__icon" />
+      </button>
+
     </div>
 
-    <!-- Calificación promedio -->
-    <div class="product-admin-description__rating">
-      <div class="product-admin-description__rating-stars">
-        <span class="star" data-value="1" aria-hidden="true">★</span>
-        <span class="star" data-value="2" aria-hidden="true">★</span>
-        <span class="star" data-value="3" aria-hidden="true">★</span>
-        <span class="star" data-value="4" aria-hidden="true">★</span>
-        <span class="star" data-value="5" aria-hidden="true">★</span>
-      </div>
-      <p class="product-admin-description__rating-text">(4.5 / 5 promedio por su frescura y versatilidad)</p>
+    <div class="seller-details__rating rating">
+      <p class="rating__text">★ ★ ★ ★ ★ <span class="rating__score">(4.5/5)</span></p>
     </div>
 
-    <!-- Información principal -->
-    <h2 class="product-admin-description__title">Tomate Del Valle</h2>
-    <p class="product-admin-description__price"><strong class="product-admin-description__price--name">Precio </strong>$3.000 Kilo</p>
+    <h2 class="seller-details__title">Tomate Del Valle</h2>
+    <p class="seller-details__price">$3.000 Kilo</p>
 
-    <!-- Info extendida -->
-    <div class="product-admin-description__info">
-      <h3 class="product-admin-description__subtitle">Características sobre este producto</h3>
-      <p><strong>Unidad de medida:</strong> Kilogramo (kg) / libra (lb) / unidad.</p>
-      <p><strong>Tipo de garantía:</strong> Garantía de frescura (solo aplica al momento de la entrega, reemplazo si llega en mal estado).</p>
-      <p><strong>Descripción:</strong> El tomate es un fruto fresco, rojo, jugoso y de sabor ligeramente ácido, utilizado en ensaladas, salsas, guisos y múltiples preparaciones gastronómicas.</p>
-      <p><strong>Descuento:</strong> 10%</p>
-      <ul class="product-admin-description__list">
-        <li>Origen agrícola nacional/regional.</li>
-        <li>Fruto maduro, firme y fresco.</li>
-        <li>Rico en vitaminas A, C y antioxidantes.</li>
-        <li>Bajo en calorías.</li>
-        <li>Variedades comunes: chonto, cherry, perita, entre otros.</li>
+    <!-- INFORMACIÓN PROFUNDA -->
+    <div class="seller-info">
+      <h3 class="seller-info__subtitle">Lo que necesitas saber de este producto</h3>
+
+      <p class="seller-info__text">
+        El tomate es un alimento fundamental en la cocina y un insumo versátil dentro de cualquier sistema de inventario o abastecimiento de un restaurante. Aporta valor nutricional, 
+        variedad culinaria y requiere un manejo adecuado para conservar su calidad.<br> <strong>Información esencial.</strong><br>
+        <strong>Producto fresco y perecedero:</strong> El tomate tiene una vida útil corta, por lo que requiere rotación constante (método PEPS/ FIFO) para evitar pérdidas.<br>
+        <strong>Alto contenido nutritivo:</strong> Es rico en vitamina C, potasio, antioxidantes y especialmente en licopeno, que contribuye a la salud cardiovascular.<br>
+        <strong>Variedades comunes:</strong> Tomate chonto, tomate cherry, tomate perita/plum y tomate beefsteak. Cada tipo se usa para preparaciones específicas.<br>
+        <strong>Condiciones de almacenamiento:</strong> Temperatura ideal: 12–15 °C Evitar refrigeración excesiva para no afectar sabor y textura. 
+        Mantener en ambientes ventilados <br> <strong>Usos en cocina:</strong> Ideal para salsas, guisos, ensaladas, bases de sopas, aderezos y acompañamientos.<br>
+        <strong>Control de calidad:</strong> Color uniforme Firme pero no duro Sin golpes, moho ni zonas blandas. <br>
+        <strong>Precio variable:</strong> Suele fluctuar según temporada, clima y disponibilidad del proveedor. <br>
+        <strong>Aporte para inventarios:</strong> 
+        Requiere seguimiento diario Se debe registrar su entrada y salida para mantener frescura
+        Es un insumo de alta rotación en restaurantes.</p>
+    </div>
+
+    <!-- CARACTERÍSTICAS -->
+    <div class="seller-info">
+      <h3 class="seller-info__subtitle">Características sobre este producto</h3>
+      <p class="seller-info__text"><strong>Unidad de medida:</strong> Kilogramo (kg) / libra (lb) / unidad.</p>
+      <p class="seller-info__text"><strong>Tipo de garantía:</strong> Garantía de frescura…</p>
+      <p class="seller-info__text"><strong>Descripción:</strong> El tomate es un fruto fresco…</p>
+      <p class="seller-info__text"><strong>Descuento:</strong> 10%</p>
+      <ul class="seller-info__list">
+        <li class="seller-info__item">Origen agrícola nacional/regional.</li>
+        <li class="seller-info__item">Fruto maduro y fresco.</li>
+        <li class="seller-info__item">Rico en vitaminas A y C.</li>
+        <li class="seller-info__item">Bajo en calorías.</li>
+        <li class="seller-info__item">Variedades: chonto, cherry, perita…</li>
       </ul>
     </div>
+
+
+
   </div>
 </section>

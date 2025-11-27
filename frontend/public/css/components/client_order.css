@@ -1,0 +1,232 @@
+/* =========================================================
+   CONTENEDOR PRINCIPAL
+========================================================= */
+.client-content {
+  display: flex;
+  justify-content: center;
+  padding-block: 2.4rem;
+  width: 100%;
+  min-width: 320px;
+  box-sizing: border-box;
+}
+
+/* =========================================================
+   CONTENEDOR DE PEDIDOS
+========================================================= */
+.client-orders {
+  width: 80%;
+  background-color: var(--white);
+  border-radius: 12px;
+  padding: var(--gap-lg);
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.06);
+  font-family: var(--font-primary);
+  border: 1px solid var(--secundary-900);
+}
+
+.client-orders__header {
+  display: flex;
+  flex-direction: column;
+  gap: var(--gap-sm);
+  margin-bottom: var(--gap-md);
+}
+
+.client-orders__title {
+  font-size: var(--fs-sm);
+  font-weight: 600;
+  color: var(--black);
+}
+
+/* =========================================================
+   SELECT
+========================================================= */
+.client-orders__filter {
+  padding: var(--padding-top) var(--padding-right);
+  border: 1px solid var(--secundary-900);
+  border-radius: 8px;
+  background-color: var(--secundary-600);
+  font-size: var(--fs-xs);
+  color: var(--white);
+}
+.client-orders__link {
+  color: var(--secundary-700);
+  font-size: var(--fs-xxs);
+  text-decoration: none;
+  transition: color 0.3s;
+  text-align: center;
+}
+.client-orders__link:hover {
+  color: var(--secundary-950);
+  text-decoration: underline;
+}
+/* =========================================================
+   LISTA
+========================================================= */
+.client-orders__list {
+  display: grid;
+  gap: var(--gap-lg);
+}
+
+/* =========================================================
+   CARD DEL PEDIDO
+========================================================= */
+.client-orders__item {
+  display: grid;
+  background-color: var(--white);
+  border-radius: 12px;
+  padding: var(--gap-lg);
+  border: 1px solid var(--secundary-900);
+
+  grid-template-areas:
+    'id status total'
+    'date status total'
+    'shipping shipping shipping'
+    'products products products'
+    'actions actions actions';
+
+  gap: var(--gap-sm);
+}
+
+/* =========================================================
+   INFO DEL PEDIDO
+========================================================= */
+.client-orders__id {
+  font-size: var(--fs-xs);
+  font-weight: 700;
+  color: var(-gray-900);
+}
+
+.client-orders__date {
+  font-size: var(--fs-xs);
+  color: var(--gray-950);
+}
+
+.client-orders__total {
+  font-size: var(--fs-xs);
+  font-weight: 700;
+  color: var(--gray-900);
+}
+
+/* =========================================================
+   ESTADOS
+========================================================= */
+.client-orders__status {
+  font-size: var(--fs-xxs);
+  font-weight: 700;
+  padding: 6px 14px;
+  border-radius: 8px;
+  text-align: center;
+}
+
+.client-orders__status--pending {
+  background-color: var(--tertiary-100);
+  color: var(--primary-950);
+}
+
+.client-orders__status--in-process {
+  background-color: var(--secundary-600);
+  color: var(--white);
+}
+
+.client-orders__status--delivered {
+  background-color: var(--secundary-300);
+  color: var(--secundary-950);
+}
+
+.client-orders__status--cancelled {
+  background-color: var(--tertiary-300);
+  color: var(--tertiary-950);
+}
+
+/* =========================================================
+   MINI CARDS
+========================================================= */
+.client-orders__card {
+  background-color: var(--primary-700);
+  border: 1px solid var(--secundary-900);
+  border-radius: 10px;
+  padding: var(--gap-md);
+  display: flex;
+  flex-direction: column;
+  gap: var(--gap-xxs);
+}
+
+.client-orders__card--product {
+  background-color: var(--secundary-600);
+}
+
+.client-orders__subtitle {
+  font-size: var(--fs-xs);
+  font-weight: 600;
+  color: var(--primary-950);
+  margin-bottom: var(--gap-xxs);
+}
+
+.client-orders__info,
+.client-orders__product-detail {
+  font-size: var(--fs-xxs);
+  color: var(--white);
+}
+
+.client-orders__product-name {
+  font-size: var(--fs-xxs);
+  font-weight: 600;
+  color: var(--white);
+}
+
+.client-orders__product-title {
+  font-size: var(--fs-xs);
+  font-weight: 600;
+  color: var(--black);
+}
+
+/* =========================================================
+   PRODUCTOS
+========================================================= */
+.client-orders__products {
+  grid-column: 1 / -1;
+  display: grid;
+  grid-template-columns: repeat(5, 1fr);
+  gap: var(--gap-md);
+  margin-top: var(--gap-md);
+}
+.client-orders__actions {
+  grid-column: 1 / -1;
+  display: flex;
+  justify-content: space-between; /* uno a la izquierda, otro a la derecha */
+  align-items: center;
+  gap: var(--gap-md);
+  margin-top: var(--gap-md);
+}
+
+/* Mantener el tamaño natural de los botones */
+.client-orders__actions .btn,
+.client-orders__actions .btn-secundary {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+}
+
+/* =========================================================
+   RESPONSIVE
+========================================================= */
+@media (max-width: 768px) {
+  .client-orders__item {
+    grid-template-columns: 1fr;
+    grid-template-areas:
+      'id'
+      'date'
+      'status'
+      'total'
+      'shipping'
+      'products'
+      'actions';
+  }
+
+  .client-orders__products {
+    grid-template-columns: 1fr;
+  }
+
+  .client-orders__actions {
+    flex-direction: column;
+  }
+}

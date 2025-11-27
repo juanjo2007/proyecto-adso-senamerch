@@ -12,9 +12,8 @@
   font-size: var(--fs-xs);
   line-height: 1.5;
   box-shadow: var(--gap-xxs) var(--gap-xxs) var(--gap-xxs) var(--black);
-
-  width: 95%;
-  margin: var(--gap-md) auto;
+  width: 100%;
+  margin: var(--gap-lg) auto;
   max-width: 700px; 
 }
 .search-bar__input {
@@ -45,28 +44,8 @@
   height: var(--gap-lg);
   display: block;
 }
-@media (max-width: 640px) {
+@media (width < 640px) {
   .search-bar {
-    max-width: 300px; 
-  }
-}
-@media (max-width: 768px) {
-  .search-bar {
-    max-width: 480px;
-  }
-}
-@media (max-width: 1024px) {
-  .search-bar {
-    max-width: 640px;
-  }
-}
-@media (max-width: 1280px) {
-  .search-bar {
-    max-width: 400px;
-  }
-}
-@media (min-width: 1536px) {
-  .search-bar {
-    max-width: 400px; 
+    width: 90%;
   }
 }

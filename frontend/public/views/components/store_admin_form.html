@@ -1,6 +1,12 @@
 <section class="main-store-form">
   <div class="store-form">
-    <h2 class="store-form__title">Información del Administrador de la Tienda</h2>
+    <header class="store-form__header">
+      <h2 class="store-form__title">Información del empleado</h2>
+      <p class="store-form__subtitle">
+          Este formulario es para registrar<br> tu tienda en <strong>SENA MERCH</strong>.
+          Con tu perfil podrás publicar productos y gestionar tus ventas fácilmente.
+      </p>
+    </header>
 
     <form class="store-form__fields">
       <!-- Nombre completo -->
@@ -8,13 +14,6 @@
         <label class="store-form__label">Nombre completo</label>
         <input type="text" name="full-name" class="store-form__input" placeholder="Ingresa tu nombre completo" required>
       </div>
-
-      <!-- Documento / NIT / RUT -->
-      <div class="store-form__group">
-        <label class="store-form__label">Documento / NIT / RUT</label>
-        <input type="text" name="document-id" class="store-form__input" placeholder="Ingresa el número de documento" required>
-      </div>
-
       <!-- Correo electrónico -->
       <div class="store-form__group">
         <label class="store-form__label">Correo electrónico</label>
@@ -33,14 +32,18 @@
         <select name="role" class="store-form__select" required>
           <option value="">Selecciona un rol</option>
           <option value="owner">Propietario</option>
-          <option value="manager">Gerente</option>
-          <option value="legal-representative">Representante legal</option>
-          <option value="legal-representative">Vendedor</option>
+          <option value="manager">Bodegero</option>
+          <option value="legal-representative">Sistemas</option>
+          <option value="legal-representative">Almacen</option>
         </select>
       </div>      
       <div class="store-form__actions">
-        <a href="create_store2.html" class="btn btn--primary">Guardar información</a>
+        <button type="submit" class="btn btn--primary store-form__pay">
+          Guardar Información
+          <img src="/frontend/public/assets/icons/save.svg" alt="Icono Comprar" class="btn__icon store-form__icon" />
+        </button>
       </div>
+
     </form>
   </div>
 </section>

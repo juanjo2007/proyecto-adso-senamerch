@@ -98,11 +98,60 @@
     text-transform: capitalize;
   }
 }
-@media (max-width: 480px) {
+@media (max-width: 640px) {
+  .stores-admin__table-secondary {
+    justify-content: end;
+    text-align: right;
+  }
+}
+@media (max-width: 1024px) {
+  .stores-admin {
+    padding: var(--gap-sm);
+    margin: 20px auto;
+  }
   .stores-admin__title {
-    font-size: var(--fs-xxs);
+    font-size: var(--fs-xs);
+  }
+  .stores-admin__table,
+  .stores-admin__table thead,
+  .stores-admin__table tbody,
+  .stores-admin__table th,
+  .stores-admin__table td,
+  .stores-admin__table tr {
+    display: block;
+    width: 100%;
+  }
+  .stores-admin__table thead {
+    display: none;
+  }
+  .stores-admin__table-row {
+    margin-bottom: var(--gap-sm);
+    background: var(--white);
+    border: 1px solid var(--gray-200);
+    border-radius: 8px;
+    padding: var(--gap-sm);
+    box-shadow: 0 2px 6px rgba(0, 0, 0, 0.05);
   }
   .stores-admin__table-cell {
-    font-size: var(--fs-xxxs);
+    border: none;
+    display: flex;
+    justify-content: space-between;
+    text-align: left;
+    padding: 0.4rem 0;
+    font-size: var(--fs-xxs);
+    border-bottom: 1px solid var(--gray-100);
+  }
+  .stores-admin__table-cell:last-child {
+    border-bottom: none;
+  }
+  .stores-admin__table-cell::before {
+    content: attr(data-label);
+    font-weight: 600;
+    color: var(--primary-950);
+    text-transform: capitalize;
+  }
+  .stores-admin__table-secondary {
+    justify-content: end;
+    text-align: right;
   }
 }

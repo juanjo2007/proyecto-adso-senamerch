@@ -1,62 +1,56 @@
-/* >>> SECCIÓN DE CONTENEDOR DE LAS TARJETAS DE LA TIENDA  */
 .seller-cards__container {
   display: grid;
   gap: var(--gap-lg);
   width: 100%;
   box-sizing: border-box;
   margin: var(--gap-md) auto;
-  padding-inline: 24px; /* ✅ Margen lateral en móvil */
+  padding-inline: 24px;
   justify-content: center;
   justify-items: center;
-  grid-template-columns: 1fr; /* ✅ Una columna por defecto (móvil) */
+  grid-template-columns: 1fr;
 }
 
-/* >>> TABLET PEQUEÑA (≥640px) */
 @media (min-width: 640px) {
   .seller-cards__container {
     grid-template-columns: repeat(2, 1fr);
     gap: var(--gap-lg);
-    padding-inline: var(--gap-sm);
+    padding-inline: var(--gap-lg);
   }
 }
 
-/* >>> TABLET GRANDE (≥1024px) */
 @media (min-width: 1024px) {
   .seller-cards__container {
     grid-template-columns: repeat(3, 1fr);
     gap: var(--gap-lg);
+    padding-inline: var(--gap-lg);
   }
 }
 
-/* >>> DESKTOP GRANDE (≥1280px) */
 @media (min-width: 1280px) {
   .seller-cards__container {
     grid-template-columns: repeat(4, 1fr);
     gap: var(--gap-lg);
+    padding-inline: var(--gap-lg);
   }
 }
 
-/* >>> SECCIÓN DE CONTENIDO DE LAS TARJETAS */
+/* ---------------- CARD ---------------- */
+
 .card-seller {
   border: 1px solid var(--secundary-900);
   border-radius: 12px;
   padding: 24px;
-  text-align: center;
   background-color: var(--secundary-50);
   width: 100%;
-  max-width: 100%;
   box-shadow: 0 2px 4px var(--secundary-900);
-  overflow: hidden;
+  overflow: visible;            /* ← IMPORTANTE */
   display: flex;
   flex-direction: column;
-  align-items: center;
-  transition: transform 0.3s ease, box-shadow 0.3s ease;
-  cursor: pointer;
 }
 
 .card-seller:hover {
   transform: translateY(-4px);
-  box-shadow: 0 6px 14px rgba(0, 0, 0, 0.15);
+  box-shadow: 0 6px 14px rgba(0,0,0,0.15);
 }
 
 .card-seller__image {
@@ -66,19 +60,18 @@
   border-radius: 8px;
 }
 
+/* ------------ GRID EN DESKTOP (2 COLUMNAS) ------------ */
+
 .card-seller__info {
   display: grid;
-  grid-template-columns: 1fr 1fr;
-  grid-template-rows: auto auto;
-  gap: 12px 10px;
   width: 100%;
   margin-top: 16px;
-  align-items: center;
+  gap: 12px;
+  grid-template-columns: 40% 60%;   /* título izquierda / precio derecha */
 }
 
 .card-seller__title {
-  grid-column: 1 / 2;
-  grid-row: 1 / 2;
+  grid-column: 1;
   text-align: left;
   font-size: var(--fs-xs);
   color: var(--secundary-900);
@@ -87,8 +80,7 @@
 }
 
 .card-seller__price {
-  grid-column: 2 / 3;
-  grid-row: 1 / 2;
+  grid-column: 2;
   text-align: right;
   font-size: var(--fs-sm);
   color: var(--black);
@@ -96,46 +88,41 @@
   margin: 0;
 }
 
-/* >>> SECCIÓN DE ACCIONES DE LAS TARJETAS */
 .card-seller__secondary {
-  grid-column: 1 / 2;
-  grid-row: 2 / 3;
+  grid-column: 1;
   display: flex;
   justify-content: flex-start;
 }
 
 .card-seller__primary {
-  grid-column: 2 / 3;
-  grid-row: 2 / 3;
+  grid-column: 2;
   display: flex;
   justify-content: flex-end;
 }
 
-/* >>> RESPONSIVIDAD MÓVIL */
 @media (max-width: 640px) {
+
   .card-seller {
-    text-align: left;
-    align-items: flex-start;
-    padding: var(--gap-md);
-  }
-
-  .card-seller__info {
-    grid-template-columns: 1fr;
-    grid-template-rows: repeat(4, auto);
-    gap: var(--gap-xs);
-  }
-
-  .card-seller__title,
-  .card-seller__price {
-    text-align: left;
-  }
-
-  .card-seller__secondary,
-  .card-seller__primary {
-    justify-content: flex-start;
+    padding: 16px;
+    overflow: visible;
   }
 
   .card-seller__image {
     height: 180px;
+  }
+
+  .card-seller__info {
+    grid-template-columns: 1fr !important; /* UNA col */
+    gap: 8px;
+  }
+
+  /* QUE TODO OCUPE 1 COLUMNA */
+  .card-seller__title,
+  .card-seller__price,
+  .card-seller__secondary,
+  .card-seller__primary {
+    grid-column: 1 / -1 !important;
+    text-align: left;
+    justify-content: flex-start;
   }
 }

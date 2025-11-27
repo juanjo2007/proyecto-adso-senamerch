@@ -1,14 +1,12 @@
-/* >>> SECCIÓN DE CONTENEDOR DE PRODUCTOS*/
 .user-detail {
   display: flex;
   flex-direction: column;
   align-items: flex-start;
   justify-content: center;
-  margin-block: 2rem;
+  margin: var(--gap-lg) auto;
+  width: min(1300px, calc(100% - (var(--gap-lg) * 2)));
   padding-block: 2rem;
   padding-inline: var(--gap-lg);
-  margin-inline: auto;
-  width: min(1300px, 95%);
   background-color: var(--white);
   border: 1px solid var(--secundary-900);
   border-radius: 1rem;
@@ -17,7 +15,6 @@
   color: var(--gray-950);
   gap: var(--gap-lg);
 }
-/* >>> SECCIÓN DE CONTENIDO DEL CONTENEDOR DE PRODUCTOS*/
 .user-detail__header {
   margin-bottom: var(--gap-xs);
 }
@@ -32,44 +29,39 @@
   color: var(--gray-700);
   max-width: 70ch;
 }
-/* >>> SECCIÓN FILAS Y COLUMNAS DEL CONTENEDOR*/
 .user-detail__grid {
   display: grid;
   grid-template-columns: 1fr;
   gap: var(--gap-lg);
-  justify-content: center;
-  justify-items: center;
+  width: 100%;
 }
 @media (min-width: 640px) {
   .user-detail__grid {
-    grid-template-columns: repeat(auto-fit, minmax(600px, 1fr));
+    grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
     justify-content: center;
     justify-items: center;
   }
 }
-@media (min-width: 1200px) {
+@media (min-width: 1280px) {
   .user-detail__grid {
-    grid-template-columns: repeat(2, 600px);
+    grid-template-columns: repeat(2, 1fr);
     justify-content: center;
-    align-items: start;
+    align-items: flex-start;
   }
 }
-/* >>> SECCIÓN DE LA CARD*/
 .user-detail__card {
   background-color: var(--white);
   border-radius: 1.2rem;
-  box-shadow: 0 4px 12px rgba(0,0,0,0.08);
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
   border: 1px solid var(--secundary-900);
   padding: var(--gap-md);
   transition: transform 0.2s ease;
   width: 100%;
   height: fit-content;
-  max-width: 600px;
 }
 .user-detail__card:hover {
   transform: translateY(-4px);
 }
-/* >>> SECCIÓN CONTENIDO DE LA CARD*/
 .user-detail__card-title {
   font-size: var(--fs-xs);
   font-family: var(--font-primary-semibold);
@@ -78,7 +70,6 @@
   padding-bottom: var(--gap-xs);
   margin-bottom: var(--gap-sm);
 }
-/* >>> SECCIÓN COLUMNAS Y FILAS DE LA CARD*/
 .user-detail__card-grid {
   display: grid;
   grid-template-columns: 1fr;
@@ -87,10 +78,8 @@
 @media (min-width: 768px) {
   .user-detail__card-grid {
     grid-template-columns: repeat(2, 1fr);
-    
   }
 }
-/* >>> SECCIÓN CONTENIDO DE LA CARD*/
 .user-detail__info {
   display: flex;
   flex-direction: column;
@@ -128,10 +117,9 @@
   border: 2px solid var(--gray-300);
   margin-top: var(--gap-xs);
 }
-/* >>> SECCIÓN DE ACCIONES ADMINISTRATIVAS */
 .user-detail__section--actions {
   display: grid;
-  grid-template-columns: 1fr; 
+  grid-template-columns: 1fr;
   gap: var(--gap-md);
   padding-block: var(--gap-md);
   border-top: 1px solid var(--secundary-900);
@@ -152,12 +140,11 @@
 }
 @media (min-width: 1024px) {
   .user-detail__section--actions {
-    grid-template-columns: 1fr 1fr; 
+    grid-template-columns: 1fr 1fr;
     align-items: start;
   }
   .user-detail__section-title {
     grid-column: 1 / 3;
-    text-align: center;
     margin-bottom: var(--gap-sm);
   }
   .user-detail__actions-secondary {
@@ -167,4 +154,20 @@
     justify-content: flex-end;
   }
 }
+/* === ESTADO: DESHABILITAR (advertencia) === */
+.btn--warning {
+  background-color: var(--tertiary-600);
+  color: var(--white);
+}
+.btn--warning:hover {
+  background-color: var(--tertiary-700);
+}
 
+/* === ESTADO: HABILITAR (éxito) === */
+.btn--success {
+  background-color: var(--secundary-900);
+  color: var(--white);
+}
+.btn--success:hover {
+  background-color: var(--secundary-700);
+}

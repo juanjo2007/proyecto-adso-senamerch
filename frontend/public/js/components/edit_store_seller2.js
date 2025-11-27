@@ -60,7 +60,7 @@ document.addEventListener("DOMContentLoaded", () => {
       e.preventDefault();
       showAlert("Cambios cancelados.", "error");
       setTimeout(() => {
-        window.location.href = "profile_store_seller.html";
+        window.location.href = "edit_store_seller.html";
       }, 2000);
     });
   }

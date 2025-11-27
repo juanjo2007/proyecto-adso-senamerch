@@ -1,0 +1,61 @@
+<section class="address-store-form">
+  <div class="address-store-form__wrapper">
+
+    <header class="address-store-form__header">
+      <h2 class="address-store-form__title">Continúa añadiendo tu dirección</h2>
+      <p class="address-store-form__subtitle">
+        Completa la información restante para registrar 
+        tu dirección en <strong>SENA MERCH</strong>.
+      </p>
+    </header>
+
+    <form class="address-store-form__form">
+
+      <div class="address-store-form__group">
+        <label class="address-store-form__label">Departamento</label>
+        <select class="address-store-form__input" required>
+          <option value="">Selecciona...</option>
+          <option value="Risaralda">Risaralda</option>
+          <option value="Quindío">Quindío</option>
+          <option value="Caldas">Caldas</option>
+        </select>
+      </div>
+      
+      <div class="address-store-form__group">
+        <label class="address-store-form__label">Municipio</label>
+        <input 
+          type="text"
+          name="city"
+          placeholder="Ej: Bogotá"
+          class="address-store-form__input"
+        >
+      </div>
+
+      <div class="address-store-form__group address-store-form__group--full">
+        <label class="address-store-form__label">Información adicional</label>
+        <input 
+          type="text"
+          name="additional-info"
+          placeholder="Apartamento, interior, referencias, etc."
+          class="address-store-form__input"
+        >
+      </div>
+
+      <div class="address-store-form__secondary">
+        <button class="btn-secundary btn-secundary-style">
+          Volver
+          <img src="/frontend/public/assets/icons/return.svg" class="btn-secundary__icon">
+        </button>
+      </div>
+
+      <div class="address-store-form__buttons">
+        <button type="submit" class="btn btn--primary">
+          Guardar
+          <img src="/frontend/public/assets/icons/save.svg" class="btn__icon">
+        </button>
+      </div>
+
+    </form>
+
+  </div>
+</section>

@@ -102,13 +102,13 @@
 
 
     /* ================== Spacing / Gap ================== */
-    --gap-xxs: 0.4rem;  /* 4px  - Extra extra small */
-    --gap-xs:  0.8rem;  /* 8px  - Extra small */
-    --gap-sm:  1.2rem;  /* 12px - Small */
-    --gap-md:  1.6rem;  /* 16px - Medium (default recommended) */
-    --gap-lg:  2.4rem;  /* 24px - Large */
-    --gap-xl:  3.2rem;  /* 32px - Extra large */
-    --gap-xxl: 4.8rem;
+    --gap-xxs: 4px;  /* 4px  - Extra extra small */
+    --gap-xs:  8px;  /* 8px  - Extra small */
+    --gap-sm:  12px;  /* 12px - Small */
+    --gap-md:  16px;  /* 16px - Medium (default recommended) */
+    --gap-lg:  24px;  /* 24px - Large */
+    --gap-xl:  32px;  /* 32px - Extra large */
+    --gap-xxl: 48px;
 }
 
 

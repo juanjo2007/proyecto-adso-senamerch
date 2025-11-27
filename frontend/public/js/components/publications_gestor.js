@@ -15,23 +15,54 @@ document.addEventListener("DOMContentLoaded", function () {
 
   // === Función que agrega los eventos ===
   function attachCreatePostEvents() {
-    const cancelBtn = document.querySelector(".create-post-one__cancel");
-    const continueBtn = document.querySelector(".create-post-one__continue");
+    const cancelBtn = document.querySelector(".create-product-post-one__cancel");
+    const continueBtn = document.querySelector(".create-product-post-one__continue");
 
-    // 🟠 Botón secundario → view_seller_cards.html
+    // 🟠 CANCELAR → ALERTA + redirección a view_seller_cards.html
     if (cancelBtn) {
       cancelBtn.addEventListener("click", (e) => {
         e.preventDefault();
-        window.location.href = "view_seller_cards.html";
+
+        showAlert("Creación cancelada", "error");
+
+        setTimeout(() => {
+          window.location.href = "view_seller_cards.html";
+        }, 2500);
       });
     }
 
-    // 🔵 Botón primario → view_publications_gestor2.html
+    // 🔵 CONTINUAR → ir a view_publications_gestor3.html
     if (continueBtn) {
       continueBtn.addEventListener("click", (e) => {
         e.preventDefault();
-        window.location.href = "view_publications_gestor2.html";
+        window.location.href = "view_publications_gestor3.html";
       });
     }
+  }
+
+  // === FUNCIÓN DE ALERTA ===
+  function showAlert(message, type = "success") {
+    const existingAlert = document.querySelector(".alert");
+    if (existingAlert) existingAlert.remove();
+
+    const alert = document.createElement("div");
+    alert.className = `alert alert--${type}`;
+
+    alert.innerHTML = `
+      <div class="alert__content">
+        <p class="alert__message">${message}</p>
+      </div>
+    `;
+
+    document.body.appendChild(alert);
+
+    // Animación de entrada
+    setTimeout(() => alert.classList.add("show"), 50);
+
+    // Ocultar después de 1.5s
+    setTimeout(() => {
+      alert.classList.remove("show");
+      setTimeout(() => alert.remove(), 400);
+    }, 1500);
   }
 });

@@ -1,52 +1,37 @@
-document.addEventListener("DOMContentLoaded", function () {
-  const direction = document.querySelector(".add-adress");
+document.addEventListener("DOMContentLoaded", function () { 
+  
+  const form = document.querySelector(".add-adress");
 
-  if (direction) {
+  if (form) {
     fetch("/frontend/public/views/components/add_adress.html")
       .then(response => response.text())
       .then(data => {
-        direction.innerHTML = data;
-        attachAddressEvents(); // ✅ Se agregan los eventos después de cargar el HTML
+        form.innerHTML = data;
+
+        attachAddressEvents(form);
       })
-      .catch(error => console.log("Error", error));
+      .catch(error => console.log("Error al cargar componente:", error));
   }
 
-  // 🔹 Función para mostrar la alerta (con mismo diseño que las anteriores)
-  function showAlert(message, type = "success", duration = 1500) {
-    const alert = document.createElement("div");
-    alert.classList.add("alert", `alert--${type}`);
-    alert.innerHTML = `
-      <div class="alert__content">
-        <p class="alert__message">${message}</p>
-      </div>
-    `;
-    document.body.appendChild(alert);
+  function attachAddressEvents(container) {
+    const backBtn = container.querySelector(".btn-secundary");
+    const nextBtn = container.querySelector(".address-store-form__continue");
 
-    // Animación de aparición
-    requestAnimationFrame(() => alert.classList.add("alert--show"));
-
-    // Ocultar después del tiempo definido
-    setTimeout(() => {
-      alert.classList.remove("alert--show");
-      setTimeout(() => alert.remove(), 400);
-    }, duration);
-  }
-
-  // 🔹 Función para manejar el botón "Guardar"
-  function attachAddressEvents() {
-    const saveBtn = document.querySelector(".btn--primary");
-
-    if (!saveBtn) {
-      console.error("No se encontró el botón de guardar");
+    if (!backBtn || !nextBtn) {
+      console.error("Botones no encontrados en:", container);
       return;
     }
 
-    saveBtn.addEventListener("click", (e) => {
+    // ← botón VOLVER
+    backBtn.addEventListener("click", (e) => {
       e.preventDefault();
-      showAlert("Dirección añadida correctamente.", "success");
-      setTimeout(() => {
-        window.location.href = "register.html";
-      }, 2000);
+      window.location.href = "register.html";
+    });
+
+    // → botón SIGUIENTE
+    nextBtn.addEventListener("click", (e) => {
+      e.preventDefault();
+      window.location.href = "add_adress2.html";
     });
   }
 });

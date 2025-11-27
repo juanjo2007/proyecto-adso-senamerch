@@ -10,35 +10,76 @@ document.addEventListener('DOMContentLoaded', function () {
       .then(data => {
         descriptionContainer.innerHTML = data;
 
-        // ===============================
+        // =======================================
         // 🔁 BOTÓN HABILITAR / DESHABILITAR
-        // ===============================
-        const toggleButton = descriptionContainer.querySelector('.btn--primary');
-        const statusText = descriptionContainer.querySelector('.product-admin-description__status--active');
+        // =======================================
+        const toggleBtn = descriptionContainer.querySelector('.product-admin-description__suspend');
+        const stateText = descriptionContainer.querySelector('.product-admin-description__status');
 
-        if (toggleButton && statusText) {
-          toggleButton.addEventListener('click', (event) => {
+        if (toggleBtn && stateText) {
+          toggleBtn.addEventListener('click', (event) => {
             event.preventDefault();
-            const isActive = statusText.textContent.trim() === "Habilitado";
 
-            if (isActive) {
-              statusText.textContent = "Deshabilitado";
-              statusText.classList.remove('product-admin-description__status--active');
-              statusText.classList.add('product-admin-description__status--inactive');
-              toggleButton.textContent = "Habilitar producto";
+            const isDisabled = stateText.textContent.trim() === "Deshabilitado";
+
+            if (isDisabled) {
+              stateText.textContent = "Habilitado";
+
+              toggleBtn.classList.remove('btn--success');
+              toggleBtn.classList.add('btn--warning');
+
+              toggleBtn.innerHTML = `
+                Deshabilitar producto
+                <img src="/frontend/public/assets/icons/off.svg" class="btn__icon" />
+              `;
             } else {
-              statusText.textContent = "Habilitado";
-              statusText.classList.remove('product-admin-description__status--inactive');
-              statusText.classList.add('product-admin-description__status--active');
-              toggleButton.textContent = "Deshabilitar producto";
+              stateText.textContent = "Deshabilitado";
+
+              toggleBtn.classList.remove('btn--warning');
+              toggleBtn.classList.add('btn--success');
+
+              toggleBtn.innerHTML = `
+                Habilitar producto
+                <img src="/frontend/public/assets/icons/mobiledata.svg" class="btn__icon" />
+              `;
             }
           });
         }
 
-        // ===============================
+        // =======================================
+        // 🔄 GALERÍA – MINIATURAS → IMAGEN PRINCIPAL
+        // =======================================
+        const mainImage = descriptionContainer.querySelector('.product-admin-description__image--main');
+        const thumbnails = descriptionContainer.querySelectorAll('.product-admin-description__thumbnail');
+
+        thumbnails.forEach((thumb) => {
+          thumb.addEventListener('click', () => {
+            mainImage.src = thumb.src;
+
+            thumbnails.forEach(t =>
+              t.classList.remove('product-admin-description__thumbnail--active')
+            );
+
+            thumb.classList.add('product-admin-description__thumbnail--active');
+          });
+        });
+
+        // =======================================
+        // ✏️ BOTÓN EDITAR PRODUCTO — REDIRECCIÓN
+        // =======================================
+        const editButton = descriptionContainer.querySelector('.seller-comments__edit');
+
+        if (editButton) {
+          editButton.addEventListener('click', (event) => {
+            event.preventDefault();
+            window.location.href = "view_edit_post.html";
+          });
+        }
+
+        // =======================================
         // ⭐ CALIFICACIÓN PROMEDIO (solo lectura)
-        // ===============================
-        const averageRating = 4.5; // Puedes traerlo desde la BD en el futuro
+        // =======================================
+        const averageRating = 4.5;
         const stars = descriptionContainer.querySelectorAll('.product-admin-description__rating-stars .star');
 
         stars.forEach(star => {
@@ -46,9 +87,10 @@ document.addEventListener('DOMContentLoaded', function () {
           if (value <= Math.floor(averageRating)) {
             star.classList.add('active');
           } else if (value - 1 < averageRating && averageRating < value) {
-            star.classList.add('active'); // media estrella si deseas
+            star.classList.add('active');
           }
         });
+
       })
       .catch(error => console.error("Error cargando el componente Description:", error));
   }

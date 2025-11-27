@@ -1,0 +1,110 @@
+<section class="edit-order-content">
+  <section class="edit-order">
+
+    <header class="edit-order__header">
+      <h2 class="edit-order__title">Editar Pedido #0123</h2>
+    </header>
+
+    <div class="edit-order__products">
+      <h3 class="edit-order__product-title">Productos del pedido</h3>
+
+      <!-- PRODUCTO 1 -->
+      <div class="edit-order__card edit-order__card--product">
+        <p class="edit-order__product-name"><strong>Tomate chonto</strong></p>
+
+        <div class="edit-order__quantity">
+          <label>Cantidad:</label>
+          <input type="number" class="edit-order__input" value="2" min="1">
+        </div>
+
+        <button class="btn-secundary btn-secundary-style edit-order__remove">
+            Quitar producto
+            <img
+                src="/frontend/public/assets/icons/cancel.svg"
+                alt=""
+                class="btn-secundary__icon"
+                aria-hidden="true"
+            />
+        </button>
+
+      </div>
+      <div class="edit-order__card edit-order__card--product">
+        <p class="edit-order__product-name"><strong>Tomate chonto</strong></p>
+
+        <div class="edit-order__quantity">
+          <label>Cantidad:</label>
+          <input type="number" class="edit-order__input" value="2" min="1">
+        </div>
+
+        <button class="btn-secundary btn-secundary-style edit-order__remove">
+            Quitar producto
+            <img
+                src="/frontend/public/assets/icons/cancel.svg"
+                alt=""
+                class="btn-secundary__icon"
+                aria-hidden="true"
+            />
+        </button>
+
+      </div>
+
+      <!-- PRODUCTO 2 -->
+      <div class="edit-order__card edit-order__card--product">
+        <p class="edit-order__product-name"><strong>Lechuga crespa</strong></p>
+
+        <div class="edit-order__quantity">
+          <label>Cantidad:</label>
+          <input type="number" class="edit-order__input" value="1" min="1">
+        </div>
+
+        <button class="btn-secundary btn-secundary-style edit-order__remove">
+            Quitar producto
+            <img
+                src="/frontend/public/assets/icons/cancel.svg"
+                alt=""
+                class="btn-secundary__icon"
+                aria-hidden="true"
+            />
+        </button>
+
+      </div>
+
+      <!-- AGREGAR NUEVO PRODUCTO -->
+      <div class="edit-order__add-product">
+        <select class="edit-order__select-product">
+          <option value="">Seleccionar producto</option>
+          <option value="tomate-chonto">Tomate chonto</option>
+          <option value="lechuga-crespa">Lechuga crespa</option>
+          <option value="zanahoria">Zanahoria</option>
+          <option value="papa">Papa pastusa</option>
+        </select>
+
+        <input type="number" class="edit-order__input" placeholder="Cantidad" min="1">
+
+        <button class="btn btn--primary edit-order__add">Agregar producto</button>
+      </div>
+    </div>
+
+    <!-- BOTONES — ambos dentro del mismo contenedor -->
+    <div class="edit-order__actions">
+
+      <button
+        type="button"
+        class="btn-secundary btn-secundary-style edit-order__cancel"
+      >
+        Cancelar pedido
+        <img
+          src="/frontend/public/assets/icons/cancel.svg"
+          class="btn-secundary__icon"
+          aria-hidden="true"
+        />
+      </button>
+
+      <button class="btn btn--primary edit-order__save">
+        Entregar Pedido
+      </button>
+
+    </div>
+
+  </section>
+</section>

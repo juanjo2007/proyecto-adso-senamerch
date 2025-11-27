@@ -1,0 +1,93 @@
+.navbar_product_category {
+    width: 100%;
+    padding: var(--gap-xxs);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: var(--secundary-700);
+    font-family: var(--font-primary);
+}
+.navbar_product_category__title {
+    font-size: var(--fs-md); 
+    font-family: var(--font-primary-bold);
+    color: var(--white);
+}
+.navbar_product_category__title--SenaMerch{
+    font-size: 0; /* h1 */
+    font-family: var(--font-primary-bold);
+    color: var(--white);
+    margin-left: 2.4rem;
+}
+.navbar_product_category__letter {
+    display: inline-block;
+    font-size: var(--fs-md);
+    font-family: var(--font-primary-bold);
+}
+.navbar_product_category__letter--1 { color: var(--secundary-200); }
+.navbar_product_category__letter--2 { color: var(--white); }
+
+.navbar_product_category__letter--3 { color: var(--secundary-200); }
+
+.navbar_product_category__letter--4 { color: var(--white); }
+
+.navbar_product_category__letter--5 { color: var(--secundary-200); }
+
+.navbar_product_category__letter--6 { color: var(--white); }
+
+.navbar_product_category__letter--7 { color: var(--secundary-200); }
+
+.navbar_product_category__letter--8 { color: var(--white); }
+
+.navbar_product_category__letter--9 { color: var(--secundary-200); }
+
+.navbar_product_category__actions {
+    display: flex;
+    align-items: center;
+    gap: var(--gap-md);
+}
+.navbar_product_category__link {
+    font-size: var(--fs-xs); 
+    font-family: var(--font-primary-semibold);
+    color: var(--white);
+    text-decoration: none;
+    padding: 8px 12px;
+    border-radius: 6px;
+    transition: all 0.2s ease-in-out;
+}
+.navbar_product_category__link:hover {
+    background-color: var(--tertiary-600);
+    color: var(--white);
+}
+.navbar_product_category__link.active {
+    background-color: var(--primary-300);
+    color: var(--primary-950);
+    font-family: var(--font-primary-bold);
+
+    border-bottom: 2px solid var(--primary-700);
+}
+.navbar_product_category__icon {
+    width: 32px;
+    height: 32px;
+    margin-left: 6px;
+    vertical-align: -8px;
+}
+
+@media (max-width: 768px) {
+    .navbar_product_category {
+        flex-direction: column;
+        align-items: flex-start;
+        gap: var(--gap-sm);
+    }
+    .navbar_product_category__title {
+        font-size: var(--fs-md);
+    }
+}
+@media (max-width: 640px) {
+    .navbar_product_category__actions {
+        flex-wrap: wrap;
+        gap: var(--gap-xs);
+    }
+    .navbar_product_category__link {
+        width: auto;
+    }
+}

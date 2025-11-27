@@ -1,11 +1,10 @@
 /* El archivo main.css solo debe importar los demás para evitar múltiples solicitudes HTTP en producción: */
 
-@import url('reset.css');
+/* @import url('reset.css'); */
 @import url('variables.css');
 @import url('layout.css');
 @import url('pages/home.css');
 @import url('themes/dark-mode.css');
-
 
 /* Importaciones de SenaMerch Juan Jose */
 @import url('components/navbar.css');
@@ -44,14 +43,11 @@
 @import url('components/admin_validation.css');
 
 /* Importaciones de SenaMerch Mateo */
-@import url('components/car.css'); 
-@import url('components/sales-history.css');  
+@import url('components/car.css');
+@import url('components/sales-history.css');
 @import url('components/users.css');
-@import url('components/posts.css');  
+@import url('components/posts.css');
 @import url('components/products.css');
-
-
-
 
 /* Importaciones de SenaMerch Emanuel */
 @import url('components/card.css');
@@ -100,8 +96,14 @@
 @import url('components/managed_sales.css');
 @import url('components/card_home.css');
 @import url('components/sales_made.css');
-
-
+@import url('components/add_adress_store.css');
+@import url('components/global_form_structure.css');
+@import url('components/shopping_cart.css');
+@import url('components/publications_gestor5.css');
+@import url('components/edit_post5.css');
+@import url('components/navbar_product_category.css');
+@import url('components/client_order.css');
+@import url('components/edit_order_client.css');
 
 /* Importaciones de SenaMerch Jeferson */
 @import url('components/order.css');
@@ -109,6 +111,3 @@
 @import url('components/payment_gateway.css');
 @import url('components/stores.css');
 @import url('components/order_admin.css');
-
-
-

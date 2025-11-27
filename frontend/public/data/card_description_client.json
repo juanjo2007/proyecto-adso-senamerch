@@ -1,0 +1,8 @@
+[
+  {
+    "id": "lechuga",
+    "name": "Lechuga",
+    "price": "2500 * Unidad",
+    "image": "/frontend/public/assets/img/lettuce_image.png"
+  }
+]

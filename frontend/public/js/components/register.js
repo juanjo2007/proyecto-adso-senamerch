@@ -1,81 +1,27 @@
-document.addEventListener("DOMContentLoaded", async () => {
-  const container = document.querySelector(".form-container");
+document.addEventListener("DOMContentLoaded", function () { 
+  const form = document.querySelector(".form-container");
 
-  if (!container) {
-    console.error("❌ No se encontró el contenedor .form-container");
-    return;
+  if (form) {
+    fetch("/frontend/public/views/components/register.html")
+      .then(response => response.text())
+      .then(data => {
+        form.innerHTML = data;
+
+        // ✅ Agregar eventos después de insertar el contenido
+        attachEditPostEvents();
+      })
+      .catch(error => console.log("Error al cargar el componente:", error));
   }
 
-  // Cargar el formulario
-  try {
-    const response = await fetch("/frontend/public/views/components/register.html");
-    const html = await response.text();
-    container.innerHTML = html;
-  } catch (error) {
-    console.error("❌ Error al cargar el formulario de registro:", error);
-    return;
-  }
-
-  // Variables del formulario
-  const form = container.querySelector(".register__form");
-  const userType = form.querySelector("select[name='user-type']");
-  const passwordInput = form.querySelector("input[name='password']");
-  const togglePasswordBtn = form.querySelector(".register__toggle-password");
-
-  // Mostrar / ocultar contraseña
-  togglePasswordBtn.addEventListener("click", () => {
-    const isHidden = passwordInput.type === "password";
-    passwordInput.type = isHidden ? "text" : "password";
-    togglePasswordBtn.textContent = isHidden ? "Ocultar" : "Mostrar";
-  });
-
-  // ===== ALERTA =====
-  function showAlert(message, type = "success", duration = 2000) {
-    const alert = document.createElement("div");
-    alert.classList.add("alert");
-
-    if (type === "success") {
-      alert.classList.add("alert--success");
-    } else if (type === "error") {
-      alert.classList.add("alert--error");
+  // === Función que agrega los eventos ===
+  function attachEditPostEvents() {
+    const saveBtn = document.querySelector(".btn--primary");
+    // 🔵 Botón primario → ir a view_edit_post2.html
+    if (saveBtn) {
+      saveBtn.addEventListener("click", (e) => {
+        e.preventDefault();
+        window.location.href = "register2.html";
+      });
     }
-
-    alert.innerHTML = `
-      <div class="alert__content">
-        <p class="alert__message">${message}</p>
-      </div>
-    `;
-
-    document.body.appendChild(alert);
-
-    // Mostrar animación
-    requestAnimationFrame(() => alert.classList.add("alert--show"));
-
-    // Ocultar después de un tiempo
-    setTimeout(() => {
-      alert.classList.remove("alert--show");
-      setTimeout(() => alert.remove(), 400);
-    }, duration);
   }
-
-  // ===== SUBMIT =====
-  form.addEventListener("submit", (e) => {
-    e.preventDefault();
-
-    if (!userType.value) {
-      showAlert("Selecciona un tipo de usuario.", "error");
-      return;
-    }
-
-    showAlert("Registro completado correctamente.", "success");
-
-    setTimeout(() => {
-      const routes = {
-        admin: "/frontend/public/views/admin_validation.html",
-        seller: "/frontend/public/views/create_store.html",
-        client: "/frontend/public/views/client_view.html",
-      };
-      window.location.href = routes[userType.value];
-    }, 2200);
-  });
 });

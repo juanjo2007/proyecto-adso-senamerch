@@ -1,5 +1,5 @@
 document.addEventListener("DOMContentLoaded", function(){
-    const navbarElement = document.querySelector(".navbar_viwe_car");
+    const navbarElement = document.querySelector(".navbar_shopping_cart");
 
     if(navbarElement){
         fetch("/frontend/public/views/components/navbar_viwe_car.html")

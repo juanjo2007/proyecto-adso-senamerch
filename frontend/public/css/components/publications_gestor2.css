@@ -1,169 +1,181 @@
-/* >>> SECCIÓN DE CONTENEDOR PARA SUBIR UN PRODUCTO A TU TIENDA*/
 .create-post {
   display: flex;
-  justify-content: center;
-  padding: var(--gap-lg);
-  width: 100%;
-  margin: 0 auto;
+  align-items: center;
   box-sizing: border-box;
-  padding-block: 6.8rem;
+  padding-block: 2.4rem;
+  overflow: hidden;
+  min-height: 100%;
 }
 
-/* >>> SECCIÓN DE CONTENIDO DEL CONTENEDOR */
-.create-post__form {
-  background: var(--white);
-  padding: var(--gap-lg);
-  border-radius: 1.2rem;
-  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.15);
+.create-post__wrapper {
   border: 1px solid var(--secundary-900);
-
+  background-color: var(--white);
+  padding: var(--gap-lg);
   width: fit-content;
-  max-width: 100%;
-
-  display: grid;
-  grid-template-columns: repeat(2, minmax(0, 360px));
-  grid-auto-rows: auto;
-  justify-content: center;
-  box-sizing: border-box;
-}
-
-/* >>> GRID INTERNO */
-.create-post__fields-wrapper {
-  grid-column: 1 / -1;
-  display: grid;
-  grid-template-columns: repeat(2, minmax(0, 360px));
-  gap: var(--gap-md);
-  width: 100%;
-  justify-content: center;
-  box-sizing: border-box;
-}
-
-/* >>> TÍTULO */
-.create-post__title {
-  grid-column: 1 / -1;
-  text-align: center;
-  font-size: var(--fs-sm);
-  font-weight: 600;
-  margin-bottom: var(--gap-xs);
-  color: var(--black);
-  font-family: var(--font-primary-semibold);
-}
-
-/* >>> FIELD */
-.create-post__field {
+  margin: 0px auto;
+  border-radius: 8px;
+  font-family: var(--font-primary);
   display: flex;
   flex-direction: column;
-  gap: var(--gap-xxxs);
-  width: 100%;
-  max-width: 360px;
+  align-items: center;
+  justify-content: center;
   box-sizing: border-box;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.15);
 }
 
-/* >>> FIELDS FULL WIDTH */
-.create-post__field--full {
+/* Inputs 360px en desktop */
+.create-post__input,
+.create-post__select,
+.create-post__textarea {
+  width: 360px;
+  min-width: 360px;
+  max-width: 360px;
+}
+
+.create-post__header {
+  text-align: center;
+  margin-bottom: var(--gap-lg);
+}
+
+.create-post__title {
+  font-size: var(--fs-sm);
+  font-family: var(--font-primary-bold);
+  color: var(--black);
+  margin-bottom: var(--gap-md);
+}
+
+.create-post__subtitle {
+  font-size: var(--fs-xs);
+  font-family: var(--font-primary);
+  color: var(--black);
+}
+
+.create-post__form {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: var(--gap-lg);
+}
+
+.create-post__group {
+  display: flex;
+  flex-direction: column;
+  gap: var(--gap-xxs);
+  width: 100%;
+}
+
+.create-post__group--full {
   grid-column: 1 / -1;
-  max-width: 100% !important; /* 🔥 Permite usar las dos columnas */
+  width: 100%;
 }
 
-/* >>> LABEL */
 .create-post__label {
   font-size: var(--fs-xxxs);
-  font-family: var(--font-primary-semibold);
+  font-family: var(--font-primary-bold);
   color: var(--black);
-  word-wrap: break-word;
-  overflow-wrap: break-word;
-  white-space: normal;
 }
 
-/* >>> INPUTS / SELECT */
 .create-post__input,
-.create-post__select {
-  padding: var(--padding-top) var(--padding-right)
-           var(--padding-bottom) var(--padding-left);
-  border: 1px solid var(--secundary-900);
-  border-radius: 0.6rem;
-  font-size: var(--fs-xs);
-  font-family: var(--font-primary);
-  color: var(--gray-600);
-  background: var(--white);
-  transition: border 0.3s;
-  width: 100%;
-  max-width: 360px;
-  box-sizing: border-box;
-}
-
-/* >>> TEXTAREA */
+.create-post__select,
 .create-post__textarea {
-  padding: var(--padding-top) var(--padding-right)
-           var(--padding-bottom) var(--padding-left);
+  padding: var(--padding-top) var(--padding-right) var(--padding-bottom) var(--padding-left);
   border: 1px solid var(--secundary-900);
+  max-height: 56px;
   border-radius: 8px;
   font-size: var(--fs-xs);
-  font-family: var(--font-primary);
-  color: var(--gray-600);
-  background: var(--white);
   outline: none;
-  width: 100%;
+  transition: border 0.3s, box-shadow 0.3s;
   box-sizing: border-box;
+  color: var(--gray-600);
+  background-color: var(--white);
+}
+
+.create-post__textarea {
   min-height: 12rem;
   resize: vertical;
+  color: var(--gray-950);
 }
 
-/* >>> TEXTAREA FULL WIDTH (🔥 Solución final) */
-.create-post__field--full .create-post__textarea {
-  max-width: 100% !important;
-}
-
-/* >>> FOCUS */
 .create-post__input:focus,
-.create-post__textarea:focus,
-.create-post__select:focus {
-  border-color: var(--secundary-600);
-  outline: none;
+.create-post__select:focus,
+.create-post__textarea:focus {
+  border-color: var(--secundary-900);
+  box-shadow: 0 0 4px var(--secundary-900);
 }
 
-/* >>> BOTONES */
-.create-post__field-secundary,
-.create-post__field-actions {
+.create-post__buttons,
+.create-post__secondary {
   display: flex;
-  align-items: center;
-  margin: 1.2rem 0;
+  gap: var(--gap-xxs);
+  flex-wrap: wrap;
+  width: 100%;
+  margin-top: var(--gap-xxs);
 }
 
-.create-post__field-secundary {
-  grid-column: 1 / 2;
-  justify-self: start;
+.create-post__buttons {
+  justify-content: flex-end;
 }
 
-.create-post__field-actions {
-  grid-column: 2 / 3;
-  justify-self: end;
+.create-post__secondary {
+  justify-content: flex-start;
 }
-
-/* >>> RESPONSIVE */
-@media (max-width: 1024px) {
-  .create-post__fields-wrapper {
-    grid-template-columns: 1fr;
-    justify-content: stretch;
+/* ===================================== */
+/*         RESPONSIVE <1024px            */
+/* ===================================== */
+@media (width < 1024px) {
+  .create-post {
+    padding-inline: 24px;
   }
+
+  .create-post__wrapper {
+    width: 100%;
+    max-width: 100%;
+    /* margin: 24px auto; */
+    box-sizing: border-box;
+  }
+
+  /* Grid sigue en 2 columnas hasta 1024px */
+  .create-post__form {
+    grid-template-columns: 1fr 1fr;
+    gap: var(--gap-md);
+    width: 100%;
+  }
+
+  /* Inputs ahora son fluidos pero mantienen un maximo de 360px */
+  .create-post__input,
+  .create-post__select,
+  .create-post__textarea {
+    width: 100%;       /* Se adapta */
+    max-width: 360px;  /* Pero mantiene el límite */
+    min-width: 0;      /* Permite que reduzca */
+    box-sizing: border-box;
+  }
+}
+
+@media (width < 640px) {
+  .create-post {
+    width: 100%;
+  }
+  .create-post__wrapper {
+    width: 100%;
+  }
+
   .create-post__form {
     grid-template-columns: 1fr;
-  }
-  .create-post__field-secundary,
-  .create-post__field-actions {
-    grid-column: 1 / -1;
-    justify-self: start;
-  }
-}
-
-@media (max-width: 640px) {
-  .create-post__form {
-    grid-template-columns: 1fr;
+    width: 100%;
+    gap: var(--gap-lg);
   }
 
-  .create-post__field-secundary,
-  .create-post__field-actions {
-    grid-column: 1 / -1;
-    justify-self: start;
+  /* Inputs al 100% */
+  .create-post__input,
+  .create-post__select,
+  .create-post__textarea {
+    width: 100%;
+    min-width: 0;
+    max-width: none;
+  }
+
+  .create-post__buttons {
+    flex-direction: column;
+    align-items: flex-start;
   }
 }
