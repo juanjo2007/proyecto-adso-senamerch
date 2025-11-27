@@ -1,0 +1,64 @@
+<section class="register">
+  <div class="register__wrapper">
+    <header class="register__header">
+      <h1 class="register__title">Completa los datos para crear tu cuenta</h1>
+      <p class="register__subtitle">
+        Este formulario es para registrar<br> tu tienda en <strong>SENA MERCH</strong>.
+        Con tu perfil podrás publicar productos y gestionar tus ventas fácilmente.
+      </p>
+    </header>
+
+    <form class="register__form">
+      <div class="register__group">
+        <label class="register__label">Tipo de usuario</label>
+        <select name="user-type" class="register__input" required>
+          <option value="">Selecciona...</option>
+          <option value="client">Cliente</option>
+          <option value="seller">Vendedor</option>
+          <option value="admin">Administrador</option>
+        </select>
+      </div>
+
+      <div class="register__group">
+        <label class="register__label">Crea tu contraseña</label>
+        <div class="register__password-wrapper">
+          <input 
+            class="register__input register__input--password"
+            type="password"
+            name="password"
+            autocomplete="new-password"
+            required
+          >
+          <button type="button" class="register__toggle-password">Mostrar</button>
+        </div>
+      </div>
+
+      <div class="register__group">
+        <label class="register__label">Confirma tu contraseña</label>
+        <div class="register__password-wrapper">
+          <input 
+            class="register__input register__input--password"
+            type="password"
+            name="password-confirm"
+            autocomplete="new-password"
+            required
+          >
+          <button type="button" class="register__toggle-password">Mostrar</button>
+        </div>
+      </div>
+
+      <!-- CONTENEDOR DE BOTONES (alineados frente a frente) -->
+      <div class="register__actions">
+        <button type="button" class="btn-secundary btn-secundary-style">
+          Volver
+          <img src="/frontend/public/assets/icons/return.svg" class="btn-secundary__icon">
+        </button>
+
+        <button type="submit" class="btn btn--primary register__button-register">
+          Registrar
+          <img src="/frontend/public/assets/icons/register.svg" alt="" class="btn__icon">
+        </button>
+      </div>
+    </form>
+  </div>
+</section>

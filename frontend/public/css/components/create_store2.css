@@ -2,7 +2,7 @@
   display: flex;
   align-items: center;
   box-sizing: border-box;
-  padding-block: 1.6rem;
+  padding-block: 2.4rem;
   min-height: 100%;
 }
 .create-store__wrapper {
@@ -19,7 +19,7 @@
 }
 @media (width > 640px) {
   .create-store {
-    margin: var(--gap-lg);
+    margin-inline: var(--gap-lg);
   }
   .create-store__wrapper {
     width: fit-content;
@@ -90,7 +90,7 @@
 .create-store__group {
   display: flex;
   flex-direction: column;
-  gap: var(--gap-xs);
+  gap: var(--gap-xxs);
 }
 
 .create-store__group--full {

@@ -76,7 +76,7 @@ document.addEventListener('DOMContentLoaded', function () {
         // === 🔥 Evento: botón “Agregar al carrito” va a login ===
         if (addToCartButton) {
           addToCartButton.addEventListener('click', () => {
-            window.location.href = "viwe_car.html";
+            window.location.href = "view_shopping_cart.html";
           });
         }
 

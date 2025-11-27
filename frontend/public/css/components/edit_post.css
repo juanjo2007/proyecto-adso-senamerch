@@ -1,13 +1,11 @@
- .edit-post-one  {
+.edit-product-one {
   display: flex;
-  align-items: center;
   box-sizing: border-box;
-  padding-block: 8.4rem;
+  padding-block: 2.4rem;
   overflow: hidden;
   min-height: 100%;
-  margin: 0 auto
 }
-.edit-post-one__wrapper {
+.edit-product-one__wrapper {
   border: 1px solid var(--secundary-900);
   background-color: var(--white);
   padding: var(--gap-lg);
@@ -20,90 +18,87 @@
   box-sizing: border-box;
 }
 @media (width > 640px) {
-  .edit-post-one {
-    margin: var(--gap-lg);
+  .edit-product-one {
+    margin-inline: var(--gap-lg);
   }
-  .edit-post-one__wrapper {
+  .edit-product-one__wrapper {
     width: fit-content;
     padding: var(--gap-lg);
     margin: 0 auto;
     box-shadow: 0 2px 8px rgba(0, 0, 0, 0.15);
   }
-  .edit-post-one__input {
+  .edit-product-one__input {
     width: 360px;
     max-width: 360px;
     min-width: 360px;
   }
 }
 @media (width < 1024px) {
-  .edit-post-one__wrapper {
+  .edit-product-one__wrapper {
     width: 100%;
     max-width: fit-content;
     margin: 0 auto;
   }
-  .edit-post-one__form {
-    width: 100%;
+  .edit-product-one__form {
     grid-template-columns: repeat(2, 1fr);
     gap: var(--gap-lg);
   }
-  .edit-post-one__group {
+  .edit-product-one__group {
     width: 100%;
   }
-  .edit-post-one__input {
+  .edit-product-one__input {
     width: 100%;
-    max-width: none;  
+    max-width: none;
     min-width: 0;
     box-sizing: border-box;
   }
-  .edit-post-one__buttons {
+  .edit-product-one__buttons {
     width: 100%;
-    max-width: none;
     justify-content: flex-end;
     flex-wrap: wrap;
     gap: var(--gap-xxs);
   }
-  .edit-post-one__secondary {
+  .edit-product-one__secondary {
     width: 100%;
-    max-width: none;
     justify-content: flex-start;
   }
 }
-.edit-post-one__header {
+.edit-product-one__header {
   text-align: center;
   margin-bottom: var(--gap-lg);
 }
-.edit-post-one__title {
+.edit-product-one__title {
   font-size: var(--fs-sm);
   font-family: var(--font-primary-bold);
   color: var(--black);
   margin-bottom: var(--gap-lg);
 }
-.edit-post-one__subtitle {
+.edit-product-one__subtitle {
   font-size: var(--fs-xs);
   font-family: var(--font-primary);
   color: var(--black);
 }
-.edit-post-one__form {
+.edit-product-one__form {
   display: grid;
   grid-template-columns: repeat(2, 1fr);
   gap: var(--gap-lg);
 }
-.edit-post-one__group {
+.edit-product-one__group {
   display: flex;
   flex-direction: column;
   align-items: flex-start;
-  gap: var(--gap-xs);
+  gap: var(--gap-xxs);
   width: 100%;
 }
-.edit-post-one__group--full {
+.edit-product-one__group--full {
   grid-column: 1 / -1;
 }
-.edit-post-one__label {
+.edit-product-one__label {
   font-size: var(--fs-xxxs);
   font-family: var(--font-primary-bold);
   color: var(--black);
 }
-.edit-post-one__input {
+.edit-product-one__input {
   padding: var(--padding-top) var(--padding-right) var(--padding-bottom) var(--padding-left);
   border: 1px solid var(--secundary-900);
   border-radius: 8px;
@@ -115,43 +110,50 @@
   color: var(--gray-600);
   background-color: var(--white);
 }
-.edit-post-one__input:focus {
+
+.edit-product-one__input:focus {
   border-color: var(--secundary-900);
   box-shadow: 0 0 4px var(--secundary-900);
 }
-.edit-post-one__buttons {
+.edit-product-one__link {
+  color: var(--secundary-700);
+  font-size: var(--fs-xxs);
+  text-decoration: none;
+  transition: color 0.3s;
+  text-align: center;
+}
+.edit-product-one__link:hover {
+  color: var(--secundary-950);
+  text-decoration: underline;
+}
+.edit-product-one__buttons {
   display: flex;
   justify-content: flex-end;
   align-items: center;
   gap: var(--gap-xxs);
   margin-top: var(--gap-xxs);
 }
-.edit-post-one__secondary {
+
+.edit-product-one__secondary {
   display: flex;
   justify-content: flex-start;
   align-items: center;
 }
 @media (width < 640px) {
-  .edit-post-one__wrapper {
+  .edit-product-one {
+    width: 100%;
+    padding-block: 2.4rem;
+  }
+  .edit-product-one__wrapper {
     width: 100%;
     margin: 2.4rem;
   }
-  .edit-post-one {
-    width: 100%;
-    padding-block: 10rem;
-  }
-  .edit-post-one__input {
-    width: 100%;
-  }
-  .edit-post-one__subtitle {
+  .edit-product-one__form {
     grid-template-columns: 1fr;
-  }
-  .edit-post-one__form {
     width: 100%;
-    grid-template-columns: 1fr;
     gap: var(--gap-lg);
   }
-  .edit-post-one__buttons {
+  .edit-product-one__buttons {
     flex-direction: column;
     align-items: start;
   }

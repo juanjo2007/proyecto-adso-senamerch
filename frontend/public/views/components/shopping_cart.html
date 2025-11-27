@@ -1,0 +1,63 @@
+<section class="shopping-cart">
+  <h2 class="shopping-cart__title">Carrito de compras</h2>
+
+  <!-- Lista de productos -->
+  <ul class="shopping-cart__list">
+    <!-- Producto 1 -->
+    <li class="shopping-cart__item">
+      <img 
+        src="/frontend/public/assets/img/tomato_image.png" 
+        alt="Tomate fresco" 
+        class="shopping-cart__item-image"
+      >
+      <div class="shopping-cart__item-details">
+        <h3 class="shopping-cart__item-name">Tomate del Valle</h3>
+        <p class="shopping-cart__item-price">$3.000 Kilo</p>
+        <p class="shopping-cart__item-quantity">Cantidad: 2</p>
+        <p class="shopping-cart__item-unit">Kilogramos</p>
+      </div>
+
+      <!-- Botón eliminar -->
+      <form class="shopping-cart__remove-form" action="/eliminar-producto" method="POST">
+        <input type="hidden" name="producto" value="tomate-del-valle">
+        <button type="submit" class="shopping-cart__remove-button" aria-label="Eliminar producto">
+          <img src="/frontend/public/assets/icons/delete.svg" alt="Eliminar">
+        </button>
+      </form>
+    </li>
+
+    <!-- Producto 2 -->
+    <li class="shopping-cart__item">
+      <img 
+        src="/frontend/public/assets/img/lettuce_image.png" 
+        alt="Papa roja" 
+        class="shopping-cart__item-image"
+      >
+      <div class="shopping-cart__item-details">
+        <h3 class="shopping-cart__item-name">Lechuga</h3>
+        <p class="shopping-cart__item-price">$5.000 Kilo</p>
+        <p class="shopping-cart__item-quantity">Cantidad: 1</p>
+        <p class="shopping-cart__item-unit">Libras</p>
+      </div>
+
+      <!-- Botón eliminar -->
+      <form class="shopping-cart__remove-form" action="/eliminar-producto" method="POST">
+        <input type="hidden" name="producto" value="papa-roja">
+        <button type="submit" class="shopping-cart__remove-button" aria-label="Eliminar producto">
+          <img src="/frontend/public/assets/icons/delete.svg" alt="Eliminar">
+        </button>
+      </form>
+    </li>
+  </ul>
+
+  <!-- Resumen del carrito -->
+  <div class="shopping-cart__summary">
+    <p class="shopping-cart__total">Total: <strong class="shopping-cart__total-price">$11.000</strong></p>
+  </div>
+    <div class="shopping-cart__actions-secundary">
+      <button type="button" class="btn-secundary btn-secundary-style shopping-cart__continue" aria-label="Continuar comprando">
+        Continuar comprando
+        <img src="/frontend/public/assets/icons/continue.svg" alt="" class="btn-secundary__icon shopping-cart__icon-secundary" >
+      </button>
+    </div>
+</section>

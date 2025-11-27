@@ -1,82 +1,101 @@
-<section class="edit-post-one">
-  <div class="edit-post-one__wrapper">
-
-    <!-- HEADER -->
-    <header class="edit-post-one__header">
-      <h1 class="edit-post-one__title">Editar producto</h1>
-      <p class="edit-post-one__subtitle">
-        Este formulario es para registrar<br> tu tienda en <strong>SENA MERCH</strong>.
-        Con tu perfil podrás publicar productos y gestionar tus ventas fácilmente.
+<section class="edit-product-one">
+  <div class="edit-product-one__wrapper">
+    
+    <!-- Encabezado -->
+    <header class="edit-product-one__header">
+      <h1 class="edit-product-one__title">Editar producto</h1>
+      <p class="edit-product-one__subtitle">
+        Este formulario es para editar<br> tu producto en <strong>SENA MERCH</strong>.
+        Podrás actualizar su información y gestionarlo fácilmente.
       </p>
     </header>
 
     <!-- FORMULARIO -->
-    <form class="edit-post-one__form">
+    <form class="edit-product-one__form">
 
       <!-- Campo: Título -->
-      <div class="edit-post-one__group">
-        <label class="edit-post-one__label">Título del producto</label>
+      <div class="edit-product-one__group">
+        <label class="edit-product-one__label">Edita el nombre del producto</label>
         <input 
           type="text"
-          class="edit-post-one__input"
-          placeholder="Ejemplo: Tomate del Valle"
+          class="edit-product-one__input"
+          placeholder="Ej: Tomate del Valle"
           required
         >
       </div>
 
       <!-- Campo: Precio -->
-      <div class="edit-post-one__group">
-        <label class="edit-post-one__label">Precio</label>
+      <div class="edit-product-one__group">
+        <label class="edit-product-one__label">Edita el precio</label>
         <input 
           type="number"
-          class="edit-post-one__input"
-          placeholder="3000"
+          class="edit-product-one__input"
+          placeholder="Ej: 3000"
           min="0"
           required
         >
       </div>
-
+      
       <!-- Campo: Categoría -->
-      <div class="edit-post-one__group">
-        <label class="edit-post-one__label">Categoría</label>
-        <select class="edit-post-one__input" required>
-          <option value="" disabled selected>Selecciona una categoría</option>
+      <div class="edit-product-one__group">
+        <label class="edit-product-one__label">Edita la categoría</label>
+        <select class="edit-product-one__input" required>
+          <option value="" selected disabled>Selecciona una categoría</option>
           <option value="frutas">Frutas</option>
           <option value="verduras">Verduras</option>
-          <option value="granos">Granos</option>
           <option value="carnes">Carnes</option>
           <option value="bebidas">Bebidas</option>
           <option value="otros">Otros</option>
         </select>
       </div>
 
-      <!-- Campo: Stock -->
-      <div class="edit-post-one__group">
-        <label class="edit-post-one__label">Stock disponible</label>
-        <input 
-          type="number"
-          class="edit-post-one__input"
-          placeholder="50"
-          min="1"
-          required
-        >
+      <!-- Campo: Unidad -->
+      <div class="edit-product-one__group">
+        <label class="edit-product-one__label">Edita la unidad de medida</label>
+        <select class="edit-product-one__input" required>
+          <option value="" selected disabled>Selecciona una unidad</option>
+          <option value="kg">Kilogramos (kg)</option>
+          <option value="lb">Libras (lb)</option>
+          <option value="unidad">Unidad</option>
+          <option value="litro">Litros (L)</option>
+          <option value="mililitro">Mililitros (mL)</option>
+        </select>
       </div>
 
       <!-- Botón secundario -->
-      <div class="edit-post-one__secondary">
-        <button type="button" class="btn-secundary btn-secundary-style edit-post-one__cancel">
+      <div class="edit-product-one__secondary">
+        <button
+          type="button"
+          class="btn-secundary btn-secundary-style edit-product-one__cancel"
+          aria-label="Cancelar edición"
+        >
           Cancelar
-          <img src="/frontend/public/assets/icons/cancel.svg" alt="" class="btn-secundary__icon">
+          <img
+            src="/frontend/public/assets/icons/cancel.svg"
+            alt=""
+            class="btn-secundary__icon"
+            aria-hidden="true"
+          />
         </button>
       </div>
 
-      <!-- Botones -->
-      <div class="edit-post-one__buttons">
-        <button type="button" class="btn btn--primary edit-post-one__save">
+      <!-- Botón principal -->
+      <div class="edit-product-one__buttons">
+        <button
+          type="submit"
+          class="btn btn--primary edit-product-one__continue"
+          aria-label="Guardar datos del administrador"
+        >
           Siguiente
-          <img src="/frontend/public/assets/icons/continue.svg" alt="" class="btn__icon"/>
+          <img
+            src="/frontend/public/assets/icons/continue.svg"
+            alt=""
+            class="btn__icon"
+            aria-hidden="true"
+          />
         </button>
       </div>
+
     </form>
   </div>
 </section>

@@ -54,8 +54,14 @@
     height: 38vh; 
   }
 }
+@media (min-width: 1024px) {
+  .hero-seller {
+    height: 30vh; 
+  }
+}
 @media (min-width: 1280px) {
   .hero-seller {
     height: 40vh; 
   }
 }
+

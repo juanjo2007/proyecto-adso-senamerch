@@ -44,8 +44,8 @@
   height: var(--gap-lg);
   display: block;
 }
-@media (max-width: 640px) {
+@media (width < 640px) {
   .search-bar {
-    max-width: 300px; 
+    width: 100%;
   }
 }
