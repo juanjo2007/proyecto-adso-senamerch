@@ -20,7 +20,7 @@ document.addEventListener("DOMContentLoaded", function() {
 
           if (!confirmCancel) return;
 
-          window.location.href = "view_client-order.html";
+          window.location.href = "view_shopping_cart.html";
         });
 
         // Guardar cambios → redirigir a la vista del pedido del cliente

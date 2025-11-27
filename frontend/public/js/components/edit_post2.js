@@ -1,5 +1,5 @@
 document.addEventListener("DOMContentLoaded", function () {
-  const form = document.querySelector(".edit-post-two");
+  const form = document.querySelector(".edit-post-two-two");
 
   if (form) {
     fetch("/frontend/public/views/components/edit_post2.html")

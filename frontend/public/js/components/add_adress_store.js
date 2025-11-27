@@ -16,11 +16,21 @@ document.addEventListener("DOMContentLoaded", function () {
   // === Función que agrega los eventos ===
   function attachEditPostEvents() {
     const saveBtn = document.querySelector(".btn--primary");
-    // 🔵 Botón primario → ir a view_edit_post2.html
+    const returnBtn = document.querySelector(".btn-secundary"); // <- SIN ID
+
+    // 🔵 Botón Siguiente → va a view_add_adress_store2.html
     if (saveBtn) {
       saveBtn.addEventListener("click", (e) => {
         e.preventDefault();
         window.location.href = "view_add_adress_store2.html";
+      });
+    }
+
+    // 🔙 Botón Volver → va a create_store2.html
+    if (returnBtn) {
+      returnBtn.addEventListener("click", (e) => {
+        e.preventDefault();
+        window.location.href = "create_store2.html";
       });
     }
   }

@@ -43,7 +43,7 @@
   padding: var(--padding-top) var(--padding-right);
   border: 1px solid var(--secundary-900);
   border-radius: 8px;
-  background-color: var(--tertiary-600);
+  background-color: var(--secundary-600);
   font-size: var(--fs-xs);
   color: var(--white);
 }
@@ -127,7 +127,7 @@
    MINI CARDS
 ========================================================= */
 .store-orders__card {
-  background-color: var(--secundary-600);
+  background-color: var(--primary-50);
   border: 1px solid var(--secundary-900);
   border-radius: 10px;
   padding: var(--gap-md);
@@ -137,26 +137,26 @@
 }
 
 .store-orders__card--product {
-  background-color: var(--tertiary-600);
+  background-color: var(--secundary-600);
   border: 1px solid var(--secundary-900);
 }
 
 .store-orders__subtitle {
   font-size: var(--fs-xs);
   font-weight: 600;
-  color: var(--white);
+  color: var(--black);
   margin-bottom: var(--gap-xxs);
 }
 
 .store-orders__client,
 .store-orders__product-detail {
   font-size: var(--fs-xxs);
-  color: var(--white);
+  color: var(--gray-950);
 }
 .store-orders__client,
 .store-orders__product-detail {
   font-size: var(--fs-xxs);
-  color: var(--white);
+  color: var(--gray-950);
 }
 
 .store-orders__product-name {

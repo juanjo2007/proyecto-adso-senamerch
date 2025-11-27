@@ -32,15 +32,17 @@ document.addEventListener("DOMContentLoaded", function () {
     }, duration);
   }
 
-  // 🔹 Función para manejar el botón "Guardar"
+  // 🔹 Función para manejar los botones
   function attachAddressEvents() {
     const saveBtn = document.querySelector(".btn--primary");
+    const returnBtn = document.querySelector(".btn-secundary"); // ✅ SIN ID
 
     if (!saveBtn) {
       console.error("No se encontró el botón de guardar");
       return;
     }
 
+    // Botón Guardar
     saveBtn.addEventListener("click", (e) => {
       e.preventDefault();
       showAlert("Dirección editada correctamente.", "success");
@@ -48,5 +50,13 @@ document.addEventListener("DOMContentLoaded", function () {
         window.location.href = "edit_store_seller2.html";
       }, 2000);
     });
+
+    // ✅ Botón Volver (solo clase)
+    if (returnBtn) {
+      returnBtn.addEventListener("click", (e) => {
+        e.preventDefault();
+        window.location.href = "view_add_adress_store_edit.html";
+      });
+    }
   }
 });

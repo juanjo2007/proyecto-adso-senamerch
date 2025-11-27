@@ -6,12 +6,12 @@ document.addEventListener("DOMContentLoaded", function () {
       .then(response => response.text())
       .then(data => {
         direction.innerHTML = data;
-        attachAddressEvents(); // ✅ Se agregan los eventos después de cargar el HTML
+        attachAddressEvents(); // ✅ Agregamos los eventos después de cargar el HTML
       })
       .catch(error => console.log("Error", error));
   }
 
-  // 🔹 Función para mostrar la alerta (con mismo diseño que las anteriores)
+  // 🔹 Función para mostrar la alerta
   function showAlert(message, type = "success", duration = 1500) {
     const alert = document.createElement("div");
     alert.classList.add("alert", `alert--${type}`);
@@ -22,31 +22,36 @@ document.addEventListener("DOMContentLoaded", function () {
     `;
     document.body.appendChild(alert);
 
-    // Animación de aparición
     requestAnimationFrame(() => alert.classList.add("alert--show"));
 
-    // Ocultar después del tiempo definido
     setTimeout(() => {
       alert.classList.remove("alert--show");
       setTimeout(() => alert.remove(), 400);
     }, duration);
   }
 
-  // 🔹 Función para manejar el botón "Guardar"
+  // 🔹 Función para manejar botones Guardar y Volver
   function attachAddressEvents() {
     const saveBtn = document.querySelector(".btn--primary");
+    const returnBtn = document.querySelector(".btn-secundary"); // ← botón Volver
 
-    if (!saveBtn) {
-      console.error("No se encontró el botón de guardar");
-      return;
+    // Botón Guardar → edit_seller_profile_view2.html
+    if (saveBtn) {
+      saveBtn.addEventListener("click", (e) => {
+        e.preventDefault();
+        showAlert("Dirección editada correctamente.", "success");
+        setTimeout(() => {
+          window.location.href = "edit_seller_profile_view2.html";
+        }, 2000);
+      });
     }
 
-    saveBtn.addEventListener("click", (e) => {
-      e.preventDefault();
-      showAlert("Dirección editada correctamente.", "success");
-      setTimeout(() => {
-        window.location.href = "edit_seller_profile_view2.html";
-      }, 2000);
-    });
+    // Botón Volver → view_add_adress_seller_edit.html
+    if (returnBtn) {
+      returnBtn.addEventListener("click", (e) => {
+        e.preventDefault();
+        window.location.href = "view_add_adress_seller_edit.html";
+      });
+    }
   }
 });

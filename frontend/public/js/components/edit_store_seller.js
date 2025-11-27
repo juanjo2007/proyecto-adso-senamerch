@@ -1,4 +1,4 @@
-document.addEventListener("DOMContentLoaded", function () {
+document.addEventListener("DOMContentLoaded", function () { 
   const formContainer = document.querySelector(".edit-store-seller-container");
 
   if (formContainer) {
@@ -8,9 +8,9 @@ document.addEventListener("DOMContentLoaded", function () {
         formContainer.innerHTML = data;
 
         const saveBtn = formContainer.querySelector(".btn--primary");
-        const cancelBtn = formContainer.querySelector(".btn-variant2--secondary");
+        const cancelBtn = formContainer.querySelector(".edit-store-seller-one__cancel"); // ✅ corregido
 
-        // ✅ Botón "Guardar"
+        // Botón "Guardar"
         if (saveBtn) {
           saveBtn.addEventListener("click", function (e) {
             e.preventDefault();
@@ -18,7 +18,7 @@ document.addEventListener("DOMContentLoaded", function () {
           });
         }
 
-        // ✅ Botón "Cancelar"
+        // Botón "Volver"
         if (cancelBtn) {
           cancelBtn.addEventListener("click", function (e) {
             e.preventDefault();

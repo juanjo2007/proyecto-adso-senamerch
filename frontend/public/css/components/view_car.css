@@ -7,7 +7,7 @@
 } 
 .car-pay-grid {
   display: grid;
-  grid-template-columns: 1fr 1fr; 
+  grid-template-columns: 70% 30%; 
   gap: var(--gap-lg);
   width: 100%;
   box-sizing: border-box;

@@ -19,7 +19,7 @@ document.addEventListener("DOMContentLoaded", function () {
 
         filterSelect.addEventListener("change", () => {
           if (filterSelect.value === "entregado") {
-            window.location.href = "view_purchases.html";   // <---- ✨ AQUÍ ESTÁ EL LINK
+            window.location.href = "view_purchases.html";
           }
         });
 
@@ -40,12 +40,22 @@ document.addEventListener("DOMContentLoaded", function () {
           });
         });
 
-        // ===== VOLVER (ANTES CANCELAR) =====
+        // ===== CANCELAR PEDIDO (CON ALERTA) =====
         const cancelButtons = container.querySelectorAll(".client-orders__cancel");
 
         cancelButtons.forEach(button => {
           button.addEventListener("click", () => {
-            window.location.href = "view_shopping_cart.html";
+
+            // CONFIRMACIÓN
+            const confirmar = confirm(
+              "¿Estás seguro de que deseas cancelar este pedido?\nEsta acción no se puede deshacer."
+            );
+
+            if (confirmar) {
+              window.location.href = "view_shopping_cart.html";
+            }
+
+            // Si el usuario elige "Cancelar", simplemente no se hace nada
           });
         });
 
