@@ -1,67 +1,67 @@
-<section class="site-main-login">
-  <div class="login">
-    <h1 class="login__title">Iniciar Sesión</h1>
+<main class="main-login">
+  <section class="site-main-login">
+    <div class="login">
+      <h1 class="login__title">Iniciar Sesión</h1>
 
-    <form class="login__form">
+      <form class="login__form">
 
-      <div class="login__field">
-        <label class="login__label">Utiliza tu correo electrónico</label>
-        <input
-          class="login__input login__input--email"
-          type="email"
-          placeholder="Correo electrónico"
-          required
-        >
-      </div>
-
-      <div class="login__field">
-        <label class="login__label">Tipo de usuario</label>
-        <select
-          class="login__input login__input--user-type"
-          required
-        >
-          <option value="">Selecciona tipo de usuario</option>
-          <option value="admin">Administrador</option>
-          <option value="client">Cliente</option>
-          <option value="seller">Vendedor</option>
-        </select>
-      </div>
-
-      <div class="login__field">
-        <label class="login__label">Escribe tu contraseña</label>
-
-        <div class="login__password-wrapper">
+        <div class="login__field">
+          <label class="login__label">Utiliza tu correo electrónico</label>
           <input
-            class="login__input login__input--password"
-            type="password"
-            placeholder="Contraseña"
+            class="login__input login__input--email"
+            type="email"
+            placeholder="Correo electrónico"
             required
           >
-          <button type="button" class="login__toggle-password">Mostrar</button>
         </div>
-      </div>
 
-      <!-- 🔹 Aquí el botón sigue la metodología BEM combinada -->
-      <div class="login__actions">
-        <button
-          type="submit"
-          class="btn btn--primary login__btn"
-        >
-          Ingresar
-          <img
-            src="/frontend/public/assets/icons/get_into.svg"
-            alt="Icono ingresar"
-            class="btn__icon login__btn-icon"
+        <div class="login__field">
+          <label class="login__label">Tipo de usuario</label>
+          <select
+            class="login__input login__input--user-type"
+            required
           >
-        </button>
-      </div>
+            <option value="">Selecciona tipo de usuario</option>
+            <option value="admin">Administrador</option>
+            <option value="client">Cliente</option>
+            <option value="seller">Vendedor</option>
+          </select>
+        </div>
 
-      <a href="forgot_password.html" class="login__link">
-        ¿Olvidaste tu contraseña?
-      </a>
-    </form>
-  </div>
-</section>
- 
+        <div class="login__field">
+          <label class="login__label">Escribe tu contraseña</label>
 
+          <div class="login__password-wrapper">
+            <input
+              class="login__input login__input--password"
+              type="password"
+              placeholder="Contraseña"
+              required
+            >
+            <button type="button" class="login__toggle-password">Mostrar</button>
+          </div>
+        </div>
 
+        <!-- Botón con icono alineado -->
+        <div class="login__actions">
+          <button
+            type="submit"
+            class="btn btn--primary login__btn"
+          >
+            Ingresar
+            <img
+              src="/frontend/public/assets/icons/get_into.svg"
+              alt="Icono ingresar"
+              class="btn__icon"
+            >
+          </button>
+        </div>
+
+        <a href="forgot_password.html" class="login__link">
+          ¿Olvidaste tu contraseña?
+        </a>
+
+      </form>
+    </div>
+  </section>
+</main>

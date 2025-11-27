@@ -1,4 +1,6 @@
-/* >>> SECCIÓN DE CONTENEDOR DE LA IMAGEN DEL CONTACTO*/
+/* ===================================================== */
+/*              CONTENEDOR DE LA IMAGEN                  */
+/* ===================================================== */
 .contact {
   position: relative;
   background: url("/frontend/public/assets/img/img_contact.jpg") no-repeat center center/cover;
@@ -11,61 +13,83 @@
   color: var(--white);
   font-family: var(--font-primary);
 }
-/* >>> SECCIÓN DE CONTENIDO DE LA IMAGEN */
+
+/* ===================================================== */
+/*              OVERLAY DE LA IMAGEN                     */
+/* ===================================================== */
 .contact__overlay {
   width: 100%;
-  max-width: 700px;
+  width: max-content;
   height: 100%;
   padding: var(--gap-md);
   display: flex;
   align-items: center;
   justify-content: center;
 }
-/* >>> SECCIÓN DE CONTENEDOR DEL CONTACTO */
+
+/* ===================================================== */
+/*              CONTENEDOR DEL CONTACTO                  */
+/* ===================================================== */
 .contact__container {
   border: 1px solid var(--secundary-900);
   background: var(--white);
   color: var(--gray-900);
   border-radius: 12px;
   padding: var(--gap-md);
-  max-width: 700px;
+  max-width: 600px;
   width: 100%;
-  box-shadow: 0 4px 12px rgba(0,0,0,0.15);
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
 }
-/* >>> SECCIÓN DE CONTENIDO DEL CONTENEDOR DEL CONTACTO*/
+
+/* ===================================================== */
+/*                     HEADER                            */
+/* ===================================================== */
 .contact__header {
   text-align: center;
   margin-bottom: var(--gap-lg);
 }
+
 .contact__title {
   font-size: var(--fs-sm);
   font-family: var(--font-primary-bold);
   margin-bottom: var(--gap-sm);
   color: var(--primary-950);
 }
+
 .contact__subtitle {
   font-size: var(--fs-xs);
   color: var(--gray-700);
   line-height: 1.6;
 }
+
+/* ===================================================== */
+/*                     FORMULARIO                        */
+/* ===================================================== */
 .contact__form {
   display: flex;
   flex-direction: column;
   gap: var(--gap-md);
 }
+
 .contact__group {
   display: flex;
   flex-direction: column;
   gap: var(--gap-xxxs);
 }
+
 .contact__group label {
   font-size: var(--fs-xxs);
   font-family: var(--font-primary-bold);
   color: var(--gray-800);
 }
-.contact__group input,
-.contact__group textarea {
+
+/* ===================================================== */
+/*                INPUTS - ALTURA 56px MD                */
+/* ===================================================== */
+.contact__group input {
   padding: var(--padding-top) var(--padding-right) var(--padding-bottom) var(--padding-left);
+  height: 56px; /* ✅ Material Design */
+  width: 100%; /* ✅ Ocupa todo el ancho disponible */
   border: 1px solid var(--secundary-900);
   border-radius: 8px;
   font-size: var(--fs-xs);
@@ -73,28 +97,67 @@
   color: var(--gray-900);
   background: var(--white);
   outline: none;
-  transition: border-color 0.2s ease-in-out;
+  transition: border-color 0.3s, box-shadow 0.3s;
+  box-sizing: border-box;
 }
-.contact__group input:focus,
-.contact__group textarea:focus {
+
+.contact__group input:focus {
   border-color: var(--primary-600);
+  box-shadow: 0 0 0 3px var(--primary-100); /* ✅ Mejor enfoque visual */
 }
-.contact__group textarea{
+
+/* ===================================================== */
+/*                TEXTAREA - MISMO ANCHO                 */
+/* ===================================================== */
+.contact__group textarea {
+  padding: var(--padding-top) var(--padding-right) var(--padding-bottom) var(--padding-left);
   height: 80px;
   min-height: 80px;
+  width: 100%; /* ✅ Ocupa todo el ancho disponible */
+  border: 1px solid var(--secundary-900);
+  border-radius: 8px;
+  font-size: var(--fs-xs);
+  font-family: var(--font-primary);
+  color: var(--gray-900);
+  background: var(--white);
+  outline: none;
+  transition: border-color 0.3s, box-shadow 0.3s;
   resize: vertical;
+  box-sizing: border-box;
 }
-/* >>> SECCIÓN DE ACCIONES DEL CONTENEDOR DE CONTACTO */
-.contact__actions-primary{
+
+.contact__group textarea:focus {
+  border-color: var(--primary-600);
+  box-shadow: 0 0 0 3px var(--primary-100); /* ✅ Mejor enfoque visual */
+}
+
+/* ===================================================== */
+/*                     ACCIONES                          */
+/* ===================================================== */
+.contact__actions-primary {
   display: flex;
   justify-content: center;
 }
+
+/* ===================================================== */
+/*                     RESPONSIVE                        */
+/* ===================================================== */
 @media (max-width: 640px) {
   .contact__container {
     padding: var(--gap-lg);
   }
+  
   .contact__title {
     font-size: var(--fs-sm);
   }
 }
 
+@media (width > 640px ){
+  .contact__group input{
+
+    width: 400px;
+  }
+  .contact__container{
+    width: max-content;
+  }
+}

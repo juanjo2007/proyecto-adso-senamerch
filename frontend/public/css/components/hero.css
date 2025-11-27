@@ -58,7 +58,8 @@
 .hero__actions .btn {
   align-self: flex-start;
   padding: var(--button-padding-top) var(--button-padding-right)
-           var(--button-padding-bottom) var(--button-padding-left);
+         var(--button-padding-bottom) var(--button-padding-left);
+
 }
 .hero__actions {
   font-family: var(--font-primary-regular);

@@ -79,7 +79,7 @@ BOTONES
   font-family: var(--font-primary-semibold);
   border-radius: var(--gap-xs);
   font-size: var(--fs-xs);
-  display: inline-block;
+  display: flex;
   transition: background 0.3s ease, transform 0.2s ease;
   box-shadow: 0 2px 5px rgba(0,0,0,0.15);
 }

@@ -60,6 +60,10 @@
 }
 .login__input {
   padding: var(--padding-top) var(--padding-right) var(--padding-bottom) var(--padding-left);
+  height: 56px;
+  
+
+
   border: 1px solid var(--secundary-900);
   border-radius: 8px;
   font-size: var(--fs-xs);
@@ -122,6 +126,7 @@
   }
   .login__input{
     width: 360px;
+    height: 56px;
   }
 }
 
