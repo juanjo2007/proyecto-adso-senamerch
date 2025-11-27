@@ -8,6 +8,7 @@
   font-family: var(--font-primary);
   padding: var(--gap-lg);
   overflow: hidden; /* evita scroll */
+  padding-block: 10rem;
 }
 
 .admin-code-panel__content {
@@ -27,7 +28,7 @@
 }
 
 .admin-code-panel__title {
-  font-size: var(--fs-md);
+  font-size: var(--fs-sm);
   font-weight: var(--font-primary-semibold);
   color: var(--black);
   margin: var(--gap-lg);

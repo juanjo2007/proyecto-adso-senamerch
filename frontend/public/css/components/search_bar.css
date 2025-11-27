@@ -46,6 +46,6 @@
 }
 @media (width < 640px) {
   .search-bar {
-    width: 100%;
+    width: 90%;
   }
 }
