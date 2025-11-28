@@ -18,12 +18,30 @@ document.addEventListener('DOMContentLoaded', async function () {
 
         // activar botones una vez cargado el HTML
         initDownloadButtons();
+        initBackButton();   // ←🔥 AGREGADO
       })
       .catch(error => console.error("Error cargando Purchases User:", error));
   } else {
     console.warn("No se encontró '.purchases-container' en el HTML.");
   }
 });
+
+
+/* ────────────────────────────────────────────────
+      BOTÓN VOLVER → view_client_order.html
+───────────────────────────────────────────────── */
+function initBackButton() {
+  const backBtn = document.querySelector(".purchases-details__download-volver");
+
+  if (!backBtn) {
+    console.warn("No se encontró el botón Volver (.purchases-details__download-volver)");
+    return;
+  }
+
+  backBtn.addEventListener("click", () => {
+    window.location.href = "/frontend/public/views/view_client_order.html";
+  });
+}
 
 
 /* ────────────────────────────────────────────────

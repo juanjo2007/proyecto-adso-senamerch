@@ -1,153 +1,140 @@
 .edit-order-content {
+  padding-inline: 24px;           
+  box-sizing: border-box;
+  width: 100%;
   display: flex;
   justify-content: center;
-  padding-block: var(--gap-lg);
+  padding-block: 16px;
+}
+.edit-order--premium {
   width: 100%;
+  max-width: 1600px;  
+  background: var(--white);
+  border-radius: 16px;
+  padding: var(--gap-xl);
+  border: 1px solid var(--secundary-900);
+  box-shadow: 0 6px 20px rgba(0,0,0,0.06);
   box-sizing: border-box;
 }
-
-.edit-order {
-  width: 80%;
-  background-color: var(--white);
-  border-radius: 12px;
-  padding: var(--gap-lg);
-  font-family: var(--font-primary);
-  border: 1px solid var(--primary-900);
-}
-
-.edit-order__header {
-  margin-bottom: var(--gap-md);
-}
-
 .edit-order__title {
   font-size: var(--fs-sm);
-  font-weight: 600;
   color: var(--black);
+  font-weight: 700;
 }
-/* === GRID SOLO PARA LAS CARDS === */
+
+.edit-order__subtitle {
+  font-size: var(--fs-xs);
+  color: var(--gray-600);
+  margin-top: var(--gap-xs);
+}
 .edit-order__products {
+  margin-top: var(--gap-lg);
   display: grid;
   gap: var(--gap-md);
-  margin-bottom: var(--gap-lg);
-  grid-template-columns: 1fr; /* móvil */
 }
-
-/* === Los productos deben ocupar la grilla === */
-.edit-order__card--product {
-  width: 100%;
-}
-
-/* === El bloque "Agregar producto" NO es una card → ocupa toda la fila === */
-.edit-order__add-product {
-  grid-column: 1 / -1; /* 🔥 siempre ancho completo */
-}
-
-/* === TABLET (2 cards por fila) === */
 @media (min-width: 768px) {
   .edit-order__products {
     grid-template-columns: repeat(2, 1fr);
   }
 }
-
-/* === ESCRITORIO (4 cards por fila) === */
 @media (min-width: 1280px) {
   .edit-order__products {
-    grid-template-columns: repeat(4, 1fr);
+    grid-template-columns: repeat(3, 1fr);
   }
 }
-
 .edit-order__card--product {
+  background: var(--secundary-600);
+  border: 1px solid var(--secundary-900);
+  border-radius: 12px;
+  padding: var(--gap-lg);
+  gap: var(--gap-lg);
   display: flex;
   flex-direction: column;
-  gap: var(--gap-xs);
-  padding: var(--gap-sm);
-  border-radius: 8px;
-  border: 1px solid var(--primary-900);
-  background-color: var(--secundary-600);
-}
-
-/* BOTÓN “QUITAR PRODUCTO” */
-.edit-order__card--product .btn-secundary {
-  width: auto; /* 🔥 no ocupar 100% */
-  align-self: flex-end; /* que quede al inicio */
-}
-
-/* CONTENEDOR DEL SELECT + BOTÓN */
-.edit-order__add-product {
-  display: flex;
   gap: var(--gap-sm);
+  box-shadow: 0 3px 12px rgba(0,0,0,0.05);
+  transition: transform .2s ease, box-shadow .2s ease;
+}
+.edit-order__card--product:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 6px 18px rgba(0,0,0,0.08);
+}
+.edit-order__product-header {
+  display: flex;
+  justify-content: space-between;
   align-items: center;
-  flex-wrap: wrap; /* Para que no se rompa en pantallas pequeñas */
 }
-
-/* SELECT PRODUCTO (MAX 360PX) */
-.edit-order__select-product {
-  padding: var(--padding-top) var(--padding-right) var(--padding-bottom)
-    var(--padding-left);
-  border: 1px solid var(--secundary-900);
+.edit-order__tag {
+  background: var(--secundary-100);
+  color: var(--secundary-800);
+  padding: 4px 10px;
+  border-radius: 20px;
+  font-size: var(--fs-xxxs);
+  font-weight: 600;
+}
+.edit-order__row {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.edit-order__label {
+  font-size: var(--fs-xxs);
+  color: var(--gray-950);
+  font-weight: 600;
+}
+.edit-order__input {
+  width: 80px;
+  padding: 8px;
   border-radius: 8px;
-  font-size: var(--fs-xs);
-  outline: none;
-  width: 100%;
-  max-width: 360px;
-  box-sizing: border-box;
-  color: var(--black);
-  background-color: var(--white);
-  transition: border 0.3s ease, box-shadow 0.3s ease;
+  font-size: var(--fs-xxs);
+  border: 1px solid var(--secundary-900);
+  background: var(--white);
 }
-
-.edit-order__select-product:hover {
+.edit-order__unit {
+  padding: 10px 14px;
+  font-size: var(--fs-xxs);
+  border: 1px solid var(--gray-300);
+  border-radius: 8px;
+  background: var(--white);
+  cursor: pointer;
+  transition: border .2s ease;
+}
+.edit-order__unit:hover {
   border-color: var(--secundary-600);
 }
-
-/* RESPONSIVE SELECT EN MÓVILES */
-@media (max-width: 480px) {
-  .edit-order__select-product {
-    max-width: 100%;
-  }
-}
-
-.edit-order__quantity {
+.edit-order__add-product {
+  grid-column: 1 / -1;
+  background: var(--gray-50);
+  border: 1px solid var(--gray-200);
+  border-radius: 12px;
+  padding: var(--gap-md);
   display: flex;
-  align-items: center;
-  gap: var(--gap-xs);
-}
-
-.edit-order__input {
-  width: 60px;
-  padding: var(--padding-top) var(--padding-right) var(--padding-bottom)
-    var(--padding-left);
-  border-radius: 6px;
-  border: 1px solid var(--secundary-900);
-  font-size: var(--fs-xs);
-}
-
-/* =========================================================
-   BOTONES PRINCIPALES (GUARDAR / CANCELAR)
-========================================================= */
-.edit-order__actions {
-  display: flex;
-  justify-content: space-between; /* 🔥 uno a cada extremo en PC */
-  align-items: center;
   gap: var(--gap-md);
-  margin-top: var(--gap-md);
+  flex-wrap: wrap;
+  align-items: center;
+}
+.edit-order__select-product {
+  padding: var(--padding-top) var(--padding-right) var(--padding-bottom) var(--padding-left);
+  border: 1px solid var(--secundary-900);
+  border-radius: 8px;
+  font-size: var(--fs-xs);
+  width: 100%;
+  max-width: 300px;
+  background: var(--white);
+  transition: border 0.3s ease;
+}
+.edit-order__actions {
+  margin-top: var(--gap-xl);
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
 }
 
-.edit-order__actions .btn,
-.edit-order__actions .btn-secundary {
-  width: auto; /* 🔥 evita que se estiren */
-}
-
-/* RESPONSIVE: BOTONES UNO DEBAJO DEL OTRO EN MÓVIL */
 @media (max-width: 640px) {
   .edit-order__actions {
     flex-direction: column;
-    align-items: center;
-  }
-
-  .edit-order__actions button {
-    width: auto; /* No ocupar todo el ancho */
-    min-width: 200px; /* Recomendado */
-    text-align: center;
+    gap: var(--gap-md);
+  
   }
 }
+
+
