@@ -172,16 +172,16 @@
   align-self: flex-start;
 }
 .seller-details__info {
-  font-size: var(--fs-xxs);
+  font-size: var(--fs-xs);
   color: var(--gray-800);
 }
 .seller-info__subtitle {
-  font-size: var(--fs-xxs);
+  font-size: var(--fs-xs);
   font-weight: 600;
   margin-bottom: var(--gap-xs);
 }
 .seller-info__text {
-  font-size: var(--fs-xxs);
+  font-size: var(--fs-xs);
   color: var(--gray-800);
   line-height: 1.4;
 }
@@ -190,7 +190,7 @@
   padding-left: 1.2rem;
 }
 .seller-info__item {
-  font-size: var(--fs-xxs);
+  font-size: var(--fs-xs);
   color: var(--gray-800);
   margin-bottom: var(--gap-xxs);
 }
@@ -205,7 +205,7 @@
 }
 .seller-rating__text {
   color: var(--secundary-600); 
-  font-size: var(--fs-xxs);
+  font-size: var(--fs-xs);
 }
 .seller-rating__score {
   color: var(--gray-700);
@@ -250,7 +250,7 @@
   word-break: break-word; 
 }
 .seller-comments__user {
-  font-size: var(--fs-xxs);
+  font-size: var(--fs-xs);
   font-weight: 600;
   color: var(--secundary-700);
   margin-bottom: var(--gap-xxs);
@@ -258,7 +258,7 @@
 .seller-comments__date {
   font-weight: 400;
   color: var(--gray-500);
-  font-size: var(--fs-xxxs);
+  font-size: var(--fs-xs);
 }
 .seller-comments__secondary{
   display: flex;
@@ -266,7 +266,7 @@
   margin-top: 4rem;
 }
 .comments__text {
-  font-size: var(--fs-xxs);
+  font-size: var(--fs-xs);
   color: var(--gray-800);
   line-height: 1.4;
 }
@@ -277,7 +277,7 @@
   width: 100%;
 }
 .seller-comments__label {
-  font-size: var(--fs-xxs);
+  font-size: var(--fs-xxxs);
   color: var(--gray-800);
 }
 .seller-comments__textarea {

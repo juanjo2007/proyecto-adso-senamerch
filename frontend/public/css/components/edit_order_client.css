@@ -63,7 +63,7 @@
   padding: var(--gap-sm);
   border-radius: 8px;
   border: 1px solid var(--primary-900);
-  background-color: var(--secundary-600);
+  background-color: var(--secundary-200);
 }
 
 /* BOTÓN “QUITAR PRODUCTO” */
