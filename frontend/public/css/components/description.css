@@ -163,16 +163,16 @@
   align-self: flex-start;
 }
 .details__info {
-  font-size: var(--fs-xxs);
+  font-size: var(--fs-xs);
   color: var(--gray-800);
 }
 .info__subtitle {
-  font-size: var(--fs-xxs);
+  font-size: var(--fs-xs);
   font-weight: 600;
   margin-bottom: var(--gap-xs);
 }
 .info__text {
-  font-size: var(--fs-xxs);
+  font-size: var(--fs-xs);
   color: var(--gray-700);
   line-height: 1.4;
 }
@@ -239,7 +239,7 @@
   word-break: break-word; 
 }
 .comments__user {
-  font-size: var(--fs-xxs);
+  font-size: var(--fs-xs);
   font-weight: 600;
   color: var(--secundary-700);
   margin-bottom: var(--gap-xxs);
@@ -250,7 +250,7 @@
   font-size: var(--fs-xxxs);
 }
 .comments__text {
-  font-size: var(--fs-xxs);
+  font-size: var(--fs-xs);
   color: var(--gray-800);
   line-height: 1.4;
 }
