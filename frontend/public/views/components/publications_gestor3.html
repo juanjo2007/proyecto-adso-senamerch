@@ -12,42 +12,44 @@
     <!-- FORMULARIO -->
     <form class="create-post__form">
 
-      <!-- Campo: Lo que tendrías que saber -->
       <div class="create-post__group">
-        <label class="create-post__label">Lo que tendrías que saber</label>
-        <textarea 
-          class="create-post__textarea"
-          placeholder="Describe brevemente el producto..."
-        ></textarea>
+        <label class="create-post__label">Unidad de medida</label>
+        <select class="create-post__input" required>
+          <option value="" selected disabled>Selecciona una unidad</option>
+          <option value="kg">Solido</option>
+          <option value="lb">Liquido</option>
+        </select>
       </div>
 
-      <!-- Campo: Información esencial -->
       <div class="create-post__group">
-        <label class="create-post__label">Información esencial</label>
-        <textarea 
-          class="create-post__textarea"
-          placeholder="Describe brevemente el producto..."
-        ></textarea>
+        <label class="create-post__label">Descuento (%)</label>
+        <input 
+          type="number"
+          class="create-post__input"
+          placeholder="Ej: 10"
+          min="0"
+          max="100"
+        >
       </div>
 
-      <!-- Campo: Contenido nutritivo -->
+      <!-- NUEVO: Fecha de caducidad -->
       <div class="create-post__group">
-        <label class="create-post__label">Contenido nutritivo</label>
-        <textarea 
-          class="create-post__textarea"
-          placeholder="Describe brevemente el producto..."
-        ></textarea>
+        <label class="create-post__label">Fecha de caducidad</label>
+        <input 
+          type="date"
+          class="create-post__input"
+          required
+        >
       </div>
 
-      <!-- Campo: Variedades comunes -->
+      <!-- NUEVO: Pago en efectivo -->
       <div class="create-post__group">
-        <label class="create-post__label">Variedades comunes</label>
-        <textarea 
-          class="create-post__textarea"
-          placeholder="Describe brevemente el producto..."
-        ></textarea>
+        <label class="create-post__label">¿Acepta pago en efectivo?</label>
+        <select class="create-post__input" required>
+          <option value="" selected disabled>Selecciona una opción</option>
+          <option value="si">Efectivo</option>
+        </select>
       </div>
-
       <!-- Botón secundario -->
       <div class="create-post__secondary">
         <button

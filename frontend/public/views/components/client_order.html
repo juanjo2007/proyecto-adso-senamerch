@@ -1,85 +1,90 @@
-<section class="client-content">
-  <section class="client-orders">
-    <header class="client-orders__header">
-      <h2 class="client-orders__title">Mis pedidos</h2>
+<section class="orders-panel">
+  <div class="orders-panel__container">
 
-      <div class="client-orders__filters">
-        <select class="client-orders__filter">
-          <option value="">Todos los estados</option>
-          <option value="pendiente">Pendientes</option>
-          <option value="entregado">Entregados</option>
-        </select>
-      </div>
-    </header>
+    <!-- ========================================
+         TABS (DISEÑO PROFESIONAL)
+    ======================================== -->
+    <nav class="orders-panel__tabs">
+      <button class="orders-panel__tab orders-panel__tab--active" data-status="all">
+        Todos
+      </button>
+      <button class="orders-panel__tab" data-status="pending">
+        Pendientes
+      </button>
+      <a href="view_purchases.html" class="orders-panel__tab" data-status="delivered">
+        Entregados
+      </a>
+    </nav>
 
-    <div class="client-orders__list">
-      <!-- =========================================================
-          ITEM DEL PEDIDO (CLIENTE)
-      ========================================================= -->
-      <article class="client-orders__item">
-        <!-- ===== INFO PRINCIPAL ===== -->
-        <h3 class="client-orders__id">Pedido #0123</h3>
-        <p class="client-orders__date"><strong>Fecha:</strong> 15/11/2025</p>
-
-        <div class="client-orders__status client-orders__status--pending">
-          Tienda: Donde don pastor
-        </div>
-
-        <!-- ===== CARD DE PRODUCTOS ===== -->
-        <div class="client-orders__products">
-          <h3 class="client-orders__product-title">Productos del pedido</h3>
-
-          <div class="client-orders__card client-orders__card--product">
-            <p class="client-orders__product-name">
-              <strong>Tomate chonto</strong>
-            </p>
-            <p class="client-orders__product-detail">Cantidad: 2 kg</p>
-            <p class="client-orders__product-detail">Precio: $12.000</p>
-          </div>
-
-          <div class="client-orders__card client-orders__card--product">
-            <p class="client-orders__product-name">
-              <strong>Lechuga crespa</strong>
-            </p>
-            <p class="client-orders__product-detail">Cantidad: 1 und</p>
-            <p class="client-orders__product-detail">Precio: $3.000</p>
-          </div>
-          <div class="client-orders__card client-orders__card--product">
-            <p class="client-orders__product-name">
-              <strong>Lechuga crespa</strong>
-            </p>
-            <p class="client-orders__product-detail">Cantidad: 1 und</p>
-            <p class="client-orders__product-detail">Precio: $3.000</p>
-          </div>
-
-          <div class="client-orders__total">
-            Total: <strong>$78.000</strong>
-          </div>
-        </div>
-
-        <!-- ===== BOTONES ===== -->
-        <div class="client-orders__actions">
-          <button
-            class="btn-secundary btn-secundary-style client-orders__cancel"
-          >
-            Cancelar Pedido
-            <img
-              src="/frontend/public/assets/icons/cancel.svg"
-              alt="Cancelar"
-              class="btn__icon"
-            />
-          </button>
-
-          <button class="btn btn--primary client-orders__edit">
-            Editar pedido
-            <img
-              src="/frontend/public/assets/icons/edit.svg"
-              alt="Editar"
-              class="btn__icon"
-            />
-          </button>
-        </div>
-      </article>
+    <!-- Select adicional (responsive / accesibilidad) -->
+    <div class="orders-panel__filter">
+      <select class="orders-panel__select">
+        <option value="all">Todos</option>
+        <option value="pending">Pendientes</option>
+        <option value="delivered">Entregados</option>
+      </select>
     </div>
-  </section>
+
+    <!-- ========================================
+         LISTA DE PEDIDOS
+    ======================================== -->
+    <div class="orders-panel__list">
+
+      <!-- TARJETA PROFESIONAL -->
+      <article class="order-card" data-status="pending">
+
+        <header class="order-card__top">
+          <div class="order-card__meta">
+            <h3 class="order-card__id">Pedido #0123</h3>
+            <p class="order-card__date">15/11/2025</p>
+          </div>
+
+          <span class="order-card__status order-card__status--pending">
+            Pendiente
+          </span>
+        </header>
+
+        <!-- TIENDA -->
+        <div class="order-card__store">
+          Tienda: <strong>Donde Don Pastor</strong>
+        </div>
+
+        <!-- LISTA MINI DE PRODUCTOS -->
+        <div class="order-card__products">
+
+          <div class="order-card__product">
+            <p class="order-card__product-name">Tomate chonto</p>
+            <p class="order-card__product-qty">2 kg</p>
+          </div>
+
+          <div class="order-card__product">
+            <p class="order-card__product-name">Lechuga crespa</p>
+            <p class="order-card__product-qty">1 und</p>
+          </div>
+
+        </div>
+
+        <!-- TOTAL -->
+        <div class="order-card__total">
+          Total del pedido: <strong>$78.000</strong>
+        </div>
+
+        <!-- ACCIONES -->
+        <div class="order-card__actions">
+          <button class="btn-secundary btn-secundary-style order-card__cancel">
+            Cancelar
+            <img src="/frontend/public/assets/icons/cancel.svg" class="btn__icon" alt="" />
+          </button>
+
+          <button class="btn btn--primary order-card__edit">
+            Editar
+            <img src="/frontend/public/assets/icons/edit.svg" class="btn__icon" alt="" />
+          </button>
+        </div>
+
+      </article>
+
+    </div>
+
+  </div>
 </section>

@@ -3,51 +3,45 @@
 
     <!-- HEADER -->
     <header class="create-post__header">
-      <h1 class="create-post__title">Continúa agregando la información del producto</h1>
+      <h1 class="create-post__title">Termina de crear el producto</h1>
       <p class="create-post__subtitle">
-        Este formulario es para registrar tu producto.  
-        Podrás publicarlo y gestionarlo fácilmente.
+        Completa la información necesaria para continuar
+        con el registro de tu producto en <strong>SENA MERCH</strong>.
       </p>
     </header>
 
     <!-- FORMULARIO -->
     <form class="create-post__form">
+      
 
-      <!-- Campo: Condiciones de almacenamiento -->
+      <!-- Campo: Texto -->
       <div class="create-post__group">
-        <label class="create-post__label">Condiciones de almacenamiento</label>
+        <label class="create-post__label">Descripción producto</label>
         <textarea 
           class="create-post__textarea"
           placeholder="Describe brevemente el producto..."
         ></textarea>
       </div>
-
-      <!-- Campo: Usos en cocina -->
+      <!-- NUEVO: Envío contraentrega -->
       <div class="create-post__group">
-        <label class="create-post__label">Usos en cocina</label>
-        <textarea 
-          class="create-post__textarea"
-          placeholder="Describe brevemente el producto..."
-        ></textarea>
+        <label class="create-post__label">Tipo de envío</label>
+        <select class="create-post__input" required>
+          <option value="" selected disabled>Selecciona una opción</option>
+          <option value="si">Sí, solo envío contraentrega</option>
+        </select>
       </div>
 
-      <!-- Campo: Control de calidad -->
-      <div class="create-post__group">
-        <label class="create-post__label">Control de calidad</label>
-        <textarea 
-          class="create-post__textarea"
-          placeholder="Describe brevemente el producto..."
-        ></textarea>
+      <div class="create-post__group ">
+        <label class="create-post__label">Primera imagen del producto</label>
+        <input type="file" class="create-post__input" accept="image/*">
       </div>
 
-      <!-- Campo: Precio variable -->
-      <div class="create-post__group">
-        <label class="create-post__label">Precio variable</label>
-        <textarea 
-          class="create-post__textarea"
-          placeholder="Describe brevemente el producto..."
-        ></textarea>
+      <div class="create-post__group ">
+        <label class="create-post__label">Segunda imagen del producto</label>
+        <input type="file" class="create-post__input" accept="image/*">
       </div>
+      
+      
 
       <!-- Botón secundario -->
       <div class="create-post__secondary">
@@ -58,11 +52,7 @@
         >
           Volver
           <img
-            src="/frontend/public/assets/icons/return.svg"
-            alt=""
-            class="btn-secundary__icon"
-            aria-hidden="true"
-          />
+            src="/frontend/public/assets/icons/return.svg" alt="" class="btn-secundary__icon" aria-hidden="true"/>
         </button>
       </div>
 
@@ -73,16 +63,12 @@
           class="btn btn--primary create-post__continue"
           aria-label="Guardar datos del administrador"
         >
-          Siguiente
-          <img
-            src="/frontend/public/assets/icons/continue.svg"
-            alt=""
-            class="btn__icon"
-            aria-hidden="true"
-          />
+          Crear producto
+          <img src="/frontend/public/assets/icons/create_product.svg" alt="" class="btn__icon" aria-hidden="true"/>
         </button>
       </div>
 
     </form>
+
   </div>
 </section>

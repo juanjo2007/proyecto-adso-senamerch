@@ -10,17 +10,27 @@ document.addEventListener('DOMContentLoaded', function () {
       .then(data => {
         adminprofileContainer.innerHTML = data;
 
-        // === Botón primario: Editar datos ===
-        const manageButtons = adminprofileContainer.querySelectorAll('.admin-profile__submit');
-        manageButtons.forEach(button => {
+        // Detectar si el panel es STORE o SELLER
+        const adminProfile = adminprofileContainer.querySelector('.admin-profile');
+        const type = adminProfile?.dataset.type; // "store" o "seller"
+
+        // === Botón: Editar datos ===
+        const editButtons = adminprofileContainer.querySelectorAll('.admin-profile__submit');
+        editButtons.forEach(button => {
           button.addEventListener('click', () => {
-            window.location.href = "edit_seller_profile_view.html";
+
+            if (type === "store") {
+              window.location.href = "edit_store_seller.html";
+            } else if (type === "seller") {
+              window.location.href = "edit_seller_profile_view.html";
+            }
+
           });
         });
 
-        // === Botón secundario: Cerrar sesión ===
-        const logoutButtons = adminprofileContainer.querySelectorAll('.admin-profile__session');
-        logoutButtons.forEach(button => {
+        // === Botón: Volver ===
+        const backButtons = adminprofileContainer.querySelectorAll('.admin-profile__session');
+        backButtons.forEach(button => {
           button.addEventListener('click', () => {
             window.location.href = "profile_store_seller.html";
           });
@@ -29,6 +39,6 @@ document.addEventListener('DOMContentLoaded', function () {
       })
       .catch(error => console.error("Error cargando el componente admin_profile:", error));
   } else {
-    console.warn("No se encontró '.profile-admin-container' en el HTML.");
+    console.warn("No se encontró '.profile-seller-container' en el HTML.");
   }
 });

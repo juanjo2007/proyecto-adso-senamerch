@@ -15,7 +15,7 @@ document.addEventListener("DOMContentLoaded", function () {
             showAlert("Cambios guardados exitosamente", "success");
 
             setTimeout(() => {
-              window.location.href = "seller_profile_view.html";
+              window.location.href = "profile_store_seller.html";
             }, 1200);
           });
         }
