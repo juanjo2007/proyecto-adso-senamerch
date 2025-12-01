@@ -50,28 +50,21 @@
   gap: var(--gap-lg);
   display: flex;
   flex-direction: column;
-  gap: var(--gap-sm);
-  box-shadow: 0 3px 12px rgba(0,0,0,0.05);
-  transition: transform .2s ease, box-shadow .2s ease;
+  gap: var(--gap-xs);
+  padding: var(--gap-sm);
+  border-radius: 8px;
+  border: 1px solid var(--primary-900);
+  background-color: var(--secundary-200);
 }
-.edit-order__card--product:hover {
-  transform: translateY(-4px);
-  box-shadow: 0 6px 18px rgba(0,0,0,0.08);
+
+/* BOTÓN “QUITAR PRODUCTO” */
+.edit-order__card--product .btn-secundary {
+  width: auto; /* 🔥 no ocupar 100% */
+  align-self: flex-end; /* que quede al inicio */
 }
-.edit-order__product-header {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-}
-.edit-order__tag {
-  background: var(--secundary-100);
-  color: var(--secundary-800);
-  padding: 4px 10px;
-  border-radius: 20px;
-  font-size: var(--fs-xxxs);
-  font-weight: 600;
-}
-.edit-order__row {
+
+/* CONTENEDOR DEL SELECT + BOTÓN */
+.edit-order__add-product {
   display: flex;
   justify-content: space-between;
   align-items: center;

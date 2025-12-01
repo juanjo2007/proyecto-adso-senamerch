@@ -109,6 +109,6 @@
 /* Importaciones de SenaMerch Jeferson */
 @import url('components/order.css');
 @import url('components/sales-doc.css');
-@import url('components/payment_gateway.css');
+/* @import url('components/payment_gateway.css'); */
 @import url('components/stores.css');
 @import url('components/order_admin.css');

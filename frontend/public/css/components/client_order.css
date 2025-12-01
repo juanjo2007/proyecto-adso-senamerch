@@ -111,10 +111,20 @@
 .order-card__product-name {
   font-weight: 600;
 }
-.order-card__product-qty {
-  font-size: var(--fs-xxs);
+
+.client-orders__info,
+.client-orders__product-detail {
+  font-size: var(--fs-xs);
+  color: var(--white);
 }
-.order-card__total {
+
+.client-orders__product-name {
+  font-size: var(--fs-xs);
+  font-weight: 600;
+  color: var(--white);
+}
+
+.client-orders__product-title {
   font-size: var(--fs-xs);
   font-weight: 700;
   color: var(--primary-950);
