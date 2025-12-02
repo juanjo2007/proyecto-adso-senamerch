@@ -22,7 +22,7 @@ document.addEventListener("DOMContentLoaded", function () {
     if (cancelBtn) {
       cancelBtn.addEventListener("click", (e) => {
         e.preventDefault();
-        window.location.href = "register.html";
+        window.location.href = "client_view.html";
       });
     }
 
