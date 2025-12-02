@@ -2,7 +2,7 @@
   display: grid;
   grid-template-columns: 300px 1fr;
   gap: var(--gap-xl);
-  padding: var(--gap-xl);
+  padding: 24px; /* <<< AQUÍ: 24px exactos arriba/abajo y lados */
   background: var(--white);
   border-radius: 12px;
   border: 1px solid var(--gray-200);
@@ -11,6 +11,7 @@
   width: 100%;
   font-family: var(--font-primary);
 }
+
 .sale-details--modern {
   background: var(--primary-50);
   border: 1px solid var(--secundary-900);
@@ -50,7 +51,7 @@
   align-items: center;
 }
 .sale-details__title {
-  font-size: var(--fs-sm);
+  font-size: var(--fs-xs);
   font-weight: 600;
   color: var(--gray-900);
 }

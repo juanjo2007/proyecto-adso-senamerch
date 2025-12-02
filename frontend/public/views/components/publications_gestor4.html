@@ -3,18 +3,17 @@
 
     <!-- HEADER -->
     <header class="create-post__header">
-      <h1 class="create-post__title">Termina de crear el producto</h1>
+      <h1 class="create-post__title">Agrega las características del producto</h1>
       <p class="create-post__subtitle">
-        Completa la información necesaria para continuar
-        con el registro de tu producto en <strong>SENA MERCH</strong>.
+        Este formulario es para registrar tu producto.
+        Podrás publicarlo y gestionarlo fácilmente.
       </p>
     </header>
 
     <!-- FORMULARIO -->
     <form class="create-post__form">
-      
 
-      <!-- Campo: Texto -->
+            <!-- Campo: Texto -->
       <div class="create-post__group">
         <label class="create-post__label">Descripción producto</label>
         <textarea 
@@ -40,9 +39,6 @@
         <label class="create-post__label">Segunda imagen del producto</label>
         <input type="file" class="create-post__input" accept="image/*">
       </div>
-      
-      
-
       <!-- Botón secundario -->
       <div class="create-post__secondary">
         <button
@@ -52,7 +48,11 @@
         >
           Volver
           <img
-            src="/frontend/public/assets/icons/return.svg" alt="" class="btn-secundary__icon" aria-hidden="true"/>
+            src="/frontend/public/assets/icons/return.svg"
+            alt=""
+            class="btn-secundary__icon"
+            aria-hidden="true"
+          />
         </button>
       </div>
 
@@ -63,12 +63,16 @@
           class="btn btn--primary create-post__continue"
           aria-label="Guardar datos del administrador"
         >
-          Crear producto
-          <img src="/frontend/public/assets/icons/create_product.svg" alt="" class="btn__icon" aria-hidden="true"/>
+          Siguiente
+          <img
+            src="/frontend/public/assets/icons/continue.svg"
+            alt=""
+            class="btn__icon"
+            aria-hidden="true"
+          />
         </button>
       </div>
 
     </form>
-
   </div>
 </section>

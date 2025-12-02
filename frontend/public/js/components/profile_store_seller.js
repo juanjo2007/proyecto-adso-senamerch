@@ -17,7 +17,9 @@ document.addEventListener('DOMContentLoaded', function () {
 
         if (editStoreBtn) {
           editStoreBtn.addEventListener('click', () => {
-            window.location.href = "edit_store_seller.html";
+            if (!editStoreBtn.disabled) {
+              window.location.href = "edit_store_seller.html";
+            }
           });
         }
 
@@ -40,6 +42,65 @@ document.addEventListener('DOMContentLoaded', function () {
         if (backSellerBtn) {
           backSellerBtn.addEventListener('click', () => {
             window.location.href = "profile_store_seller.html";
+          });
+        }
+
+        // ================== DESHABILITAR / HABILITAR TIENDA ==================
+        const suspendBtn = profileclientContainer.querySelector('.store-profile__suspend');
+        const editStoreBtn2 = profileclientContainer.querySelector('.store-profile__submit--store'); // importante
+
+        if (suspendBtn) {
+          suspendBtn.addEventListener('click', () => {
+
+            const isDisabled = suspendBtn.classList.contains('disabled-state');
+
+            // ⚠️ Confirmación al deshabilitar
+            if (!isDisabled) {
+              const confirmDisable = confirm("¿Estás seguro que deseas DESHABILITAR la tienda?");
+              if (!confirmDisable) return;
+            }
+
+            // Limpia icono previo
+            const oldIcon = suspendBtn.querySelector('.btn__icon');
+            if (oldIcon) oldIcon.remove();
+
+            if (isDisabled) {
+              // --------- HABILITAR TIENDA ---------
+              suspendBtn.textContent = "Deshabilitar Tienda";
+              suspendBtn.classList.remove('disabled-state');
+              suspendBtn.classList.remove('btn--success');
+              suspendBtn.classList.add('btn--warning');
+
+              const icon = document.createElement('img');
+              icon.src = "/frontend/public/assets/icons/off.svg";
+              icon.classList.add("btn__icon");
+              suspendBtn.appendChild(icon);
+
+              // 🔥 HABILITAR botón Editar Datos de la tienda
+              if (editStoreBtn2) {
+                editStoreBtn2.disabled = false;
+                editStoreBtn2.classList.remove("disabled-edit");
+              }
+
+            } else {
+              // --------- DESHABILITAR TIENDA ---------
+              suspendBtn.textContent = "Habilitar Tienda";
+              suspendBtn.classList.add('disabled-state');
+              suspendBtn.classList.remove('btn--warning');
+              suspendBtn.classList.add('btn--success');
+
+              const icon = document.createElement('img');
+              icon.src = "/frontend/public/assets/icons/home.svg";
+              icon.classList.add("btn__icon");
+              suspendBtn.appendChild(icon);
+
+              // ❌ DESHABILITAR botón Editar Datos de la tienda
+              if (editStoreBtn2) {
+                editStoreBtn2.disabled = true;
+                editStoreBtn2.classList.add("disabled-edit");
+              }
+            }
+
           });
         }
 

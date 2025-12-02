@@ -27,7 +27,7 @@ document.addEventListener("DOMContentLoaded", function () {
         if (btnCancel) {
           btnCancel.addEventListener("click", (e) => {
             e.preventDefault();
-            window.location.href = "view_edit_post6.html";
+            window.location.href = "view_edit_post4.html";
           });
         }
       })

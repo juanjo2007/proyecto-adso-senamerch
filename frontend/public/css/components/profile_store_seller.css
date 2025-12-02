@@ -19,7 +19,7 @@
   box-shadow: 0 4px 12px rgba(0,0,0,0.1);
 
   width: 100%;
-  min-width: 500px;
+  min-width: 600px;
 
   /* BORRAMOS FORZADO CUALQUIER MIN-WIDTH */
   /* min-width: 0 !important; */
@@ -49,12 +49,73 @@
   }
 }
 
+/* ================================
+   MOBILE — rompe pareja label/valor
+   ================================ */
+@media (max-width: 640px) {
+  .store-profile__field {
+    flex-direction: column !important;
+    align-items: flex-start !important;
+    gap: 4px !important;
+  }
+
+  .store-profile__value {
+    text-align: left !important;
+    width: 100% !important;
+    word-break: break-word;
+  }
+}
+
+/* ================================
+   MOBILE — rompe pareja label/valor
+   ================================ */
+@media (width < 1024px) {
+  .store-profile__card {
+    width: 100% !important;
+    max-width: 100% !important;
+    min-width: 0 !important;
+  }
+}
+@media (width < 1280px) {
+  .store-profile__card {
+    width: 100% !important;
+    max-width: 100% !important;
+    min-width: 0 !important;
+  }
+}
+@media (width < 768px) {
+  .store-profile__field {
+    flex-direction: column !important;
+    align-items: flex-start !important;
+    gap: 4px !important;
+  }
+  .store-profile__card {
+    width: 100% !important;
+    max-width: 100% !important;
+    min-width: 0 !important;
+  }
+}
+
+
 /* >>> SECCIÓN DE ACCIONES DEL PERFIL DEL ADMINISTRADOR */
 .store-profile__actions-grid {
   display: grid;
+  grid-template-columns: 1fr 1fr;
   align-items: center;
 }
+.store-profile__actions-grid--seller {
+  display: flex;           /* cambiamos de grid a flex */
+  justify-content: center; /* centramos horizontalmente */
+  align-items: center;     /* centramos verticalmente */
+  margin-top: 2.4rem;      /* espacio arriba igual que el otro panel */
+}
+
 .store-profile__actions-primary {
+  display: flex;
+  align-items: center;
+  margin-top: 2.4rem;
+}
+.store-profile__actions-secondary {
   display: flex;
   align-items: center;
   margin-top: 2.4rem;
@@ -75,15 +136,15 @@
   display: flex;
   align-items: center;
   gap: var(--gap-md);
-  border-bottom: 1px solid var(--gray-300);
-  padding-bottom: var(--gap-md);
+  /* border-bottom: 1px solid var(--secundary-900); */
+  padding-bottom: var(--gap-lg);
 }
 .store-profile__avatar {
   width: 90px;
   height: 90px;
   border-radius: 50%;
   overflow: hidden;
-  border: 2px solid var(--secundary-700);
+  border: 2px solid var(--secundary-900);
   flex-shrink: 0;
 }
 .store-profile__avatar img {
@@ -114,7 +175,7 @@
 .store-profile__field {
   display: flex;
   justify-content: space-between;
-  border-bottom: 1px dashed var(--gray-300);
+  border-bottom: 1px dashed var(--secundary-900);
   padding-bottom: 0.4rem;
 }
 .store-profile__label {
