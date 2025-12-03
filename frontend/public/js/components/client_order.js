@@ -1,66 +1,66 @@
-document.addEventListener("DOMContentLoaded", function () {
-
+document.addEventListener("DOMContentLoaded", () => {
   const container = document.querySelector(".client-orders-container");
 
   if (container) {
     fetch("/frontend/public/views/components/client_order.html")
-      .then(response => response.text())
-      .then(data => {
+      .then(res => res.text())
+      .then(html => {
+        container.innerHTML = html;
 
-        // Insertamos el componente en el contenedor
-        container.innerHTML = data;
+        // ===========================
+        // TABS
+        // ===========================
+        const tabs = container.querySelectorAll(".orders-panel__tab");
+        const cards = container.querySelectorAll(".order-card");
+        const select = container.querySelector(".orders-panel__select");
 
-        // ================================================
-        // LÓGICA DE BOTONES (se ejecuta tras cargar HTML)
-        // ================================================
+        const applyFilter = (status) => {
+          cards.forEach(card => {
+            const cardStatus = card.dataset.status;
 
-        // ===== FILTRO DEL SELECT =====
-        const filterSelect = container.querySelector(".client-orders__filter");
+            card.style.display =
+              status === "all" || status === cardStatus
+                ? "block"
+                : "none";
+          });
+        };
 
-        filterSelect.addEventListener("change", () => {
-          if (filterSelect.value === "entregado") {
-            window.location.href = "view_purchases.html";
-          }
+        tabs.forEach(tab => {
+          tab.addEventListener("click", () => {
+            tabs.forEach(t => t.classList.remove("orders-panel__tab--active"));
+            tab.classList.add("orders-panel__tab--active");
+            applyFilter(tab.dataset.status);
+          });
         });
 
-        // ===== EDITAR PEDIDO =====
-        const editButtons = container.querySelectorAll(".client-orders__edit");
+        select.addEventListener("change", () => {
+          applyFilter(select.value);
+        });
 
-        editButtons.forEach(button => {
-          button.addEventListener("click", () => {
-            const orderElement = button.closest(".client-orders__item");
-
-            const orderId = orderElement
-              .querySelector(".client-orders__id")
-              .textContent
-              .replace("Pedido #", "")
+        // ===========================
+        // EDITAR
+        // ===========================
+        container.querySelectorAll(".order-card__edit").forEach(btn => {
+          btn.addEventListener("click", () => {
+            const id = btn.closest(".order-card")
+              .querySelector(".order-card__id")
+              .textContent.replace("Pedido #", "")
               .trim();
 
-            window.location.href = `view_edit_order_client.html?order=${orderId}`;
+            window.location.href = `view_edit_order_client.html?order=${id}`;
           });
         });
 
-        // ===== CANCELAR PEDIDO (CON ALERTA) =====
-        const cancelButtons = container.querySelectorAll(".client-orders__cancel");
-
-        cancelButtons.forEach(button => {
-          button.addEventListener("click", () => {
-
-            // CONFIRMACIÓN
-            const confirmar = confirm(
-              "¿Estás seguro de que deseas cancelar este pedido?\nEsta acción no se puede deshacer."
-            );
-
-            if (confirmar) {
+        // ===========================
+        // CANCELAR
+        // ===========================
+        container.querySelectorAll(".order-card__cancel").forEach(btn => {
+          btn.addEventListener("click", () => {
+            if (confirm("¿Deseas cancelar este pedido?")) {
               window.location.href = "view_shopping_cart.html";
             }
-
-            // Si el usuario elige "Cancelar", simplemente no se hace nada
           });
         });
-
-      })
-      .catch(error => console.error("Error cargando el componente de pedidos del cliente:", error));
+      });
   }
-
 });

@@ -182,7 +182,7 @@
 }
 .seller-info__text {
   font-size: var(--fs-xs);
-  color: var(--gray-800);
+  color: var(--gray-950);
   line-height: 1.4;
 }
 .seller-info__list {

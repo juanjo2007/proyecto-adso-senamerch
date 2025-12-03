@@ -1,109 +1,129 @@
-<section class="store-profile">
-  <div class="store-profile__container">
-    <h1 class="store-profile__title">Perfil de la Tienda</h1>
+<section class="store-profile-wrapper">
 
-    <div class="store-profile__grid">
+  <!-- ============================= -->
+  <!-- PANEL DE TIENDA (TAL CUAL TU CÓDIGO) -->
+  <!-- ============================= -->
+  <section class="store-profile">
+    <section class="store-profile__card">
 
-      <!-- === Caja 1: Información de la Tienda === -->
-      <div class="store-profile__card">
-        <h2 class="store-profile__subtitle">Información de la Tienda</h2>
+      <!-- === Encabezado con imagen y datos principales === -->
+      <div class="store-profile__header">
+        <div class="store-profile__avatar">
+          <img src="/frontend/public/assets/img/store_seller.jpg" 
+               alt="Imagen de la tienda Frutas La Esperanza">
+        </div>
+
         <div class="store-profile__info">
-          <div class="store-profile__item">
-            <span class="store-profile__label">Nombre de la tienda:</span>
-            <p class="store-profile__text">Frutas La Esperanza</p>
-          </div>
-          <div class="store-profile__item">
-            <span class="store-profile__label">Correo electrónico:</span>
-            <p class="store-profile__text">contacto@frutaslaesperanza.com</p>
-          </div>
-          <div class="store-profile__item">
-            <span class="store-profile__label">Teléfono:</span>
-            <p class="store-profile__text">+57 310 456 7890</p>
-          </div>
-          <div class="store-profile__item">
-            <span class="store-profile__label">Categoría:</span>
-            <p class="store-profile__text">Frutas</p>
-          </div>
-          <div class="store-profile__item">
-            <span class="store-profile__label">Descripción:</span>
-            <p class="store-profile__text">
-              Tienda especializada en frutas frescas y productos agrícolas locales de alta calidad.
-            </p>
-          </div>
-          <div class="store-profile__item">
-            <span class="store-profile__label">Imagen de portada:</span>
-            <img src="/frontend/public/assets/img/store_seller.jpg" alt="Portada de Frutas La Esperanza" class="store-profile__image">
-          </div>
+          <h1 class="store-profile__name">Frutas La Esperanza</h1>
+          <p class="store-profile__category">Tienda de Frutas</p>
         </div>
       </div>
 
-      <!-- === Caja 2: Dirección === -->
-      <div class="store-profile__card">
-        <h2 class="store-profile__subtitle">Dirección de la Tienda</h2>
-        <div class="store-profile__info">
-          <div class="store-profile__item">
-            <span class="store-profile__label">Barrio:</span>
-            <p class="store-profile__text">Buenos Aires</p>
-          </div>
-          <div class="store-profile__item">
-            <span class="store-profile__label">Número de dirección:</span>
-            <p class="store-profile__text">10 #34-36 </p>
-          </div>
-          <div class="store-profile__item">
-            <span class="store-profile__label">Tipo de vía:</span>
-            <p class="store-profile__text">Carrera</p>
-          </div>
-          <div class="store-profile__item">
-            <span class="store-profile__label">Código postal:</span>
-            <p class="store-profile__text">110111</p>
-          </div>
-          <div class="store-profile__item">
-            <span class="store-profile__label">Departamento:</span>
-            <p class="store-profile__text">Risaralda</p>
-          </div>
-          <div class="store-profile__item">
-            <span class="store-profile__label">Municipio:</span>
-            <p class="store-profile__text">Pereira</p>
-          </div>
-          <div class="store-profile__item">
-            <span class="store-profile__label">Información adicional:</span>
-            <p class="store-profile__text">Local 2, frente al parque principal.</p>
-          </div>
+      <!-- === Información principal === -->
+      <div class="store-profile__details">
+
+        <div class="store-profile__field">
+          <span class="store-profile__label">Correo electrónico:</span>
+          <span class="store-profile__value">contacto@frutaslaesperanza.com</span>
+        </div>
+
+        <div class="store-profile__field">
+          <span class="store-profile__label">Teléfono:</span>
+          <span class="store-profile__value">+57 310 456 7890</span>
+        </div>
+        <div class="store-profile__field">
+          <span class="store-profile__label">Categoría:</span>
+          <span class="store-profile__value">Todas</span>
+        </div>
+
+        <div class="store-profile__field">
+          <span class="store-profile__label">Descripción:</span>
+          <span class="store-profile__value">
+            Tienda especializada en frutas frescas y<br> productos agrícolas locales de alta calidad.
+          </span>
+        </div>
+
+        <div class="store-profile__field">
+          <a href="view_store_admin_form.html"><span class="store-profile__link">Ver dirección:</span></a>
         </div>
       </div>
 
-      <!-- === Caja 3: Administrador === -->
-      <div class="store-profile__card">
-        <h2 class="store-profile__subtitle">Empleado de la Tienda</h2>
+      <!-- === Acciones === -->
+      <div class="store-profile__actions-grid">
+        <!-- Botón editar -->
+        <div class="store-profile__actions-secondary">
+        <button class="btn btn--warning store-profile__suspend">
+            Deshabilitar Tienda
+          <img src="/frontend/public/assets/icons/off.svg" class="btn__icon" />
+        </button>
+        </div>
+      
+        <div class="store-profile__actions-primary">
+          <button type="button" 
+                  class="btn btn--primary store-profile__submit--store" 
+                  aria-label="Editar datos de la tienda">
+            Editar datos
+            <img src="/frontend/public/assets/icons/edit.svg" 
+                 alt="" 
+                 class="btn__icon store-profile__icon" 
+                 aria-hidden="true">
+          </button>
+        </div>
+
+      </div>
+
+    </section>
+  </section>
+
+  <!-- ============================= -->
+  <!-- PANEL DE VENDEDOR (TAL CUAL TU CÓDIGO) -->
+  <!-- ============================= -->
+  <section class="store-profile">
+    <section class="store-profile__card">
+
+      <div class="store-profile__header">
+        <div class="store-profile__avatar">
+          <img src="/frontend/public/assets/img/admin_profile.png" alt="Foto del administrador">
+        </div>
         <div class="store-profile__info">
-          <div class="store-profile__item">
-            <span class="store-profile__label">Nombre completo:</span>
-            <p class="store-profile__text">María Fernanda Gómez</p>
-          </div>
-          <div class="store-profile__item">
-            <span class="store-profile__label">Correo electrónico:</span>
-            <p class="store-profile__text">maria.gomez@frutaslaesperanza.com</p>
-          </div>
-          <div class="store-profile__item">
-            <span class="store-profile__label">Teléfono / WhatsApp:</span>
-            <p class="store-profile__text">+57 301 987 6543</p>
-          </div>
-          <div class="store-profile__item">
-            <span class="store-profile__label">Rol en la empresa:</span>
-            <p class="store-profile__text">Propietaria</p>
-          </div>
-          <div class="store-profile__item">
-            <label class="store-profile__label">Vendedor</label>
-            <a href="seller_profile_view.html " class="store-profile__link">Ver datos del vendedor</a>
-          </div>
+          <h1 class="store-profile__name">Tipo usuario</h1>
+          <p class="store-profile__role">Común</p>
         </div>
       </div>
-    </div>
-    <div class="store-profile__actions">
-      <button class="btn btn--primary store-profile__edit">
-        Editar datos
-        <img src="/frontend/public/assets/icons/edit.svg" alt="Icono cancelar pedido" class="btn__icon store-profile__icon">
-      </button>
-    </div>
-  </div>
+
+      <div class="store-profile__details">
+        <div class="store-profile__field">
+          <span class="store-profile__label">Correo electrónico:</span>
+          <span class="store-profile__value">juanperez@empresa.com</span>
+        </div>
+        <div class="store-profile__field">
+          <span class="store-profile__label">Nombre:</span>
+          <span class="store-profile__value">Juan Jose Perez Acevedo</span>
+        </div>
+        <div class="store-profile__field">
+          <span class="store-profile__label">Teléfono:</span>
+          <span class="store-profile__value">3102973825</span>
+        </div>
+    
+        <div class="store-profile__field">
+          <span class="store-profile__label">Contraseña:</span>
+          <span class="store-profile__value">************</span>
+        </div>
+        <div class="store-profile__field">
+          <a href="seller_profile_adress_view.html"><span class="store-profile__link">Ver dirección:</span></a>
+        </div>
+      </div>
+
+      <div class="store-profile__actions-grid--seller">
+        <div class="store-profile__actions-primary">
+          <button type="button" class="btn btn--primary store-profile__submit--seller" aria-label="Editar datos del administrador">
+            Editar datos
+            <img src="/frontend/public/assets/icons/edit.svg" alt="" class="btn__icon store-profile__icon" aria-hidden="true">
+          </button>
+        </div>
+      </div>
+
+    </section>
+  </section>
+
 </section>

@@ -23,7 +23,7 @@ document.addEventListener("DOMContentLoaded", function () {
         if (cancelButton) {
           cancelButton.addEventListener("click", (e) => {
             e.preventDefault();
-            window.location.href = "seller_profile_view.html";
+            window.location.href = "profile_store_seller.html";
           });
         }
       })

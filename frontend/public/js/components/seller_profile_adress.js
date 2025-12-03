@@ -13,7 +13,7 @@ document.addEventListener('DOMContentLoaded', function () {
         const logoutButtons = adminprofileContainer.querySelectorAll('.admin-profile__session');
         logoutButtons.forEach(button => {
           button.addEventListener('click', () => {
-            window.location.href = "seller_profile_view.html";
+            window.location.href = "profile_store_seller.html";
           });
         });
 

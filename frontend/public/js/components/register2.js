@@ -2,7 +2,7 @@ document.addEventListener("DOMContentLoaded", async () => {
   const container = document.querySelector(".form-container-two");
 
   if (!container) {
-    console.error("❌ No se encontró el contenedor .form-container");
+    console.error("❌ No se encontró el contenedor .form-container-two");
     return;
   }
 
@@ -18,10 +18,9 @@ document.addEventListener("DOMContentLoaded", async () => {
 
   // ====== Seleccionar elementos DESPUÉS de cargar el HTML ======
   const form = container.querySelector(".register__form");
-  const userType = form.querySelector("select[name='user-type']");
   const passwordInput = form.querySelector("input[name='password']");
   const togglePasswordBtn = form.querySelector(".register__toggle-password");
-  const backButton = form.querySelector(".btn-secundary"); // Botón Volver
+  const backButton = form.querySelector(".btn-secundary");
 
   // ====== Mostrar / Ocultar contraseña ======
   if (togglePasswordBtn && passwordInput) {
@@ -30,27 +29,22 @@ document.addEventListener("DOMContentLoaded", async () => {
       passwordInput.type = isHidden ? "text" : "password";
       togglePasswordBtn.textContent = isHidden ? "Ocultar" : "Mostrar";
     });
-  } else {
-    console.warn("⚠ No se encontró el botón o el campo de contraseña.");
   }
 
-  // ====== Redirigir botón Volver ======
+  // ===== Botón Volver =====
   if (backButton) {
     backButton.addEventListener("click", () => {
       window.location.href = "register.html";
     });
   }
 
-  // ===== ALERTA =====
+  // ===== ALERTA PERSONALIZADA =====
   function showAlert(message, type = "success", duration = 2000) {
     const alert = document.createElement("div");
     alert.classList.add("alert");
 
-    if (type === "success") {
-      alert.classList.add("alert--success");
-    } else if (type === "error") {
-      alert.classList.add("alert--error");
-    }
+    if (type === "success") alert.classList.add("alert--success");
+    if (type === "error") alert.classList.add("alert--error");
 
     alert.innerHTML = `
       <div class="alert__content">
@@ -60,8 +54,10 @@ document.addEventListener("DOMContentLoaded", async () => {
 
     document.body.appendChild(alert);
 
+    // Animación
     requestAnimationFrame(() => alert.classList.add("alert--show"));
 
+    // Remover
     setTimeout(() => {
       alert.classList.remove("alert--show");
       setTimeout(() => alert.remove(), 400);
@@ -72,20 +68,12 @@ document.addEventListener("DOMContentLoaded", async () => {
   form.addEventListener("submit", (e) => {
     e.preventDefault();
 
-    if (!userType.value) {
-      showAlert("Selecciona un tipo de usuario.", "error");
-      return;
-    }
+    // 💬 Alerta SIEMPRE antes de redirigir
+    showAlert("Registro completado con éxito.", "success", 2000);
 
-    showAlert("Registro completado correctamente.", "success");
-
+    // 🔁 Redirección fija a client_view.html
     setTimeout(() => {
-      const routes = {
-        admin: "/frontend/public/views/admin_validation.html",
-        seller: "/frontend/public/views/create_store.html",
-        client: "/frontend/public/views/client_view.html",
-      };
-      window.location.href = routes[userType.value];
+      window.location.href = "/frontend/public/views/client_view.html";
     }, 2200);
   });
 });

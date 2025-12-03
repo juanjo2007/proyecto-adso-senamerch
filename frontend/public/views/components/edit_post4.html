@@ -13,26 +13,31 @@
     <form class="edit-post-two__form">
 
       <!-- Grupo: Descripción -->
-      <div class="edit-post-two__group ">
-        <label class="edit-post-two__label">Edita las condiciones de almacenamiento</label>
-        <textarea class="edit-post-two__textarea" placeholder="Describe brevemente el producto."></textarea>
+      <div class="edit-post-two__group">
+        <label class="edit-post-two__label">Edita la Descripción producto</label>
+        <textarea 
+          class="edit-post-two__textarea"
+          placeholder="Describe brevemente el producto..."
+        ></textarea>
+      </div>
+      <!-- NUEVO: Envío contraentrega -->
+      <div class="edit-post-two__group">
+        <label class="edit-post-two__label">Edita el Tipo de envío</label>
+        <select class="edit-post-two__input" required>
+          <option value="" selected disabled>Selecciona una opción</option>
+          <option value="si">Sí, solo envío contraentrega</option>
+        </select>
       </div>
 
       <div class="edit-post-two__group ">
-        <label class="edit-post-two__label">Edita el control de calidad</label>
-        <textarea class="edit-post-two__textarea" placeholder="Describe brevemente el producto."></textarea>
+        <label class="create-post__label">Edita la Primera imagen del producto</label>
+        <input type="file" class="create-post__input" accept="image/*">
       </div>
 
       <div class="edit-post-two__group ">
-        <label class="edit-post-two__label">Edita sus usos en cocina</label>
-        <textarea class="edit-post-two__textarea" placeholder="Describe brevemente el producto."></textarea>
+        <label class="edit-post-two__label">Edita la Segunda imagen del producto</label>
+        <input type="file" class="edit-post-two__input" accept="image/*">
       </div>
-
-      <div class="edit-post-two__group ">
-        <label class="edit-post-two__label">Edita su precio variable</label>
-        <textarea class="edit-post-two__textarea" placeholder="Describe brevemente el producto."></textarea>
-      </div>
-
       <!-- Grupo Botón cancelar -->
       <div class="edit-post-two__group ">
         <div class="edit-post-two__secondary">

@@ -25,7 +25,7 @@ document.addEventListener("DOMContentLoaded", function () {
         if (cancelBtn) {
           cancelBtn.addEventListener("click", (e) => {
             e.preventDefault();
-            window.location.href = "view_publications_gestor5.html";
+            window.location.href = "view_publications_gestor4.html";
           });
         }
       })

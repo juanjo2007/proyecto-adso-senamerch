@@ -17,7 +17,6 @@ function attachLoginEvents() {
 
   if (!form) return;
 
-  const userTypeSelect = document.querySelector(".login__input--user-type");
   const passwordInput = document.querySelector(".login__input--password");
   const togglePasswordBtn = document.querySelector(".login__toggle-password");
 
@@ -30,29 +29,16 @@ function attachLoginEvents() {
     });
   }
 
-  // ✅ Evento de envío del formulario
+  // ✅ Evento de envío del formulario sin tipo de usuario
   form.addEventListener("submit", function (event) {
     event.preventDefault();
 
-    const userType = userTypeSelect.value;
-
-    if (!userType) {
-      showCustomAlert("Debes seleccionar un tipo de usuario.", "error");
-      return;
-    }
-
-    // ✅ Mostrar alerta de bienvenida
+    // ✅ Alerta de éxito
     showCustomAlert("¡Bienvenido! Iniciaste sesión correctamente.", "success");
 
-    // ⏳ Redirección con retardo
+    // ⏳ Redirección fija a client_view.html
     setTimeout(() => {
-      if (userType === "admin") {
-        window.location.href = "/frontend/public/views/admin_validation.html";
-      } else if (userType === "client") {
-        window.location.href = "/frontend/public/views/client_view.html";
-      } else if (userType === "seller") {
-        window.location.href = "/frontend/public/views/profile_store_seller.html";
-      }
+      window.location.href = "/frontend/public/views/client_view.html";
     }, 2000);
   });
 }

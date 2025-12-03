@@ -164,16 +164,17 @@
 }
 .details__info {
   font-size: var(--fs-xs);
-  color: var(--gray-800);
+  color: var(--gray-950);
 }
 .info__subtitle {
   font-size: var(--fs-xs);
+  color: var(--gray-950);
   font-weight: 600;
   margin-bottom: var(--gap-xs);
 }
 .info__text {
   font-size: var(--fs-xs);
-  color: var(--gray-700);
+  color: var(--gray-950);
   line-height: 1.4;
 }
 .info__list {

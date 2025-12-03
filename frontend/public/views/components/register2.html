@@ -9,17 +9,8 @@
     </header>
 
     <form class="register__form">
-      <div class="register__group">
-        <label class="register__label">Tipo de usuario</label>
-        <select name="user-type" class="register__input" required>
-          <option value="">Selecciona...</option>
-          <option value="client">Cliente</option>
-          <option value="seller">Vendedor</option>
-          <option value="admin">Administrador</option>
-        </select>
-      </div>
 
-      <div class="register__group ">
+      <div class="register__group">
         <label class="register__label">Imagen de portada</label>
         <input type="file" class="register__input" accept="image/*">
       </div>
@@ -37,20 +28,22 @@
           <button type="button" class="register__toggle-password">Mostrar</button>
         </div>
       </div>
+
       <div class="register__group">
         <label class="register__label">Confirma tu contraseña</label>
         <div class="register__password-wrapper">
           <input 
             class="register__input register__input--password"
             type="password"
-            name="password"
+            name="confirm-password"
             autocomplete="new-password"
             required
           >
           <button type="button" class="register__toggle-password">Mostrar</button>
         </div>
       </div>
-      <!-- CONTENEDOR DE BOTONES (alineados frente a frente) -->
+
+      <!-- CONTENEDOR DE BOTONES -->
       <div class="register__actions">
         <button type="button" class="btn-secundary btn-secundary-style">
           Volver
