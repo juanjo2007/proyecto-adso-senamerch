@@ -1,4 +1,4 @@
-document.addEventListener('DOMContentLoaded', function () {
+document.addEventListener('DOMContentLoaded', function () { 
   const cartContainer = document.querySelector('.shopping-car-container');
 
   if (cartContainer) {
@@ -13,43 +13,58 @@ document.addEventListener('DOMContentLoaded', function () {
         // === Seleccionamos elementos ===
         const removeButtons = cartContainer.querySelectorAll('.shopping-cart__remove-button');
         const continueButton = cartContainer.querySelector('.shopping-cart__continue');
+        const returnButton = cartContainer.querySelector('.shopping-cart__return'); // ← NUEVO
 
         // === 🗑️ Funcionalidad: Eliminar producto del carrito ===
         removeButtons.forEach(button => {
           button.addEventListener('click', (e) => {
-            e.preventDefault(); // Evita el envío del form
+            e.preventDefault(); 
             const item = button.closest('.shopping-cart__item');
             if (item) {
-              item.remove(); // Elimina el producto del DOM
-
-              // Actualizar el total (simple: volver a calcular con base en elementos restantes)
+              item.remove(); 
               updateCartTotal();
             }
           });
         });
 
-        // === 🛒 Funcionalidad: Continuar comprando ===
+        // === 🛒 Continuar comprando ===
         if (continueButton) {
           continueButton.addEventListener('click', () => {
-            window.location.href = "client_view.html";
+            window.location.href = "client_view.html"; // ← OK
           });
         }
 
-        // === 🔢 Función auxiliar: recalcular total del carrito ===
+        // === 🔙 Volver ===
+        if (returnButton) {
+          returnButton.addEventListener('click', () => {
+            window.location.href = "quantity_container.html"; // ← NUEVA RUTA
+          });
+        }
+
+        // === 🔢 Recalcular total ===
         function updateCartTotal() {
           const items = cartContainer.querySelectorAll('.shopping-cart__item');
           let total = 0;
 
           items.forEach(item => {
-            const priceText = item.querySelector('.shopping-cart__item-price').textContent.replace(/[^0-9]/g, '');
-            const quantityText = item.querySelector('.shopping-cart__item-quantity').textContent.replace(/[^0-9]/g, '');
+            const priceText = item
+              .querySelector('.shopping-cart__item-price')
+              .textContent.replace(/[^0-9]/g, '');
+            const quantityText = item
+              .querySelector('.shopping-cart__item-quantity')
+              .textContent.replace(/[^0-9]/g, '');
             const price = parseFloat(priceText);
             const quantity = parseInt(quantityText);
-            if (!isNaN(price) && !isNaN(quantity)) total += price * quantity;
+
+            if (!isNaN(price) && !isNaN(quantity)) {
+              total += price * quantity;
+            }
           });
 
           const totalDisplay = cartContainer.querySelector('.shopping-cart__total-price');
-          if (totalDisplay) totalDisplay.textContent = `$${total.toLocaleString('es-CO')}`;
+          if (totalDisplay) {
+            totalDisplay.textContent = `$${total.toLocaleString('es-CO')}`;
+          }
         }
 
       })

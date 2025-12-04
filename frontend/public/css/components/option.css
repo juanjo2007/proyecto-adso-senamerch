@@ -104,31 +104,29 @@
   font-weight: 600;
   color: var(--secundary-700);
 }
-.product-purchase__actions {
-  display: flex;
-  justify-content: center;
+/* Contenedor de los botones */
+.product-purchase__actions-buttons {
+  display: grid;
+  grid-template-columns: 1fr; /* Mobile */
+  gap: var(--gap-md);
+  margin-top: var(--gap-lg);
+  width: fit-content;
+  max-width: 360px;
 }
-.product-purchase__button {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  background-color: var(--secundary-600);
-  color: var(--white);
-  border: none;
-  padding: 0.8rem 1.2rem;
-  border-radius: 8px;
-  font-size: var(--fs-xs);
-  cursor: pointer;
-  transition: background 0.3s ease, transform 0.15s;
-  gap: 0.6rem;
-}
-.product-purchase__button:hover {
-  background-color: var(--secundary-700);
-}
-.product-purchase__button:active {
-  transform: scale(0.95);
-}
-.product-purchase__icon {
-  width: 16px;
-  height: 16px;
+/* Desktop */
+@media (width > 640px) {
+  .product-purchase__actions-buttons {
+    grid-template-columns: 1fr 1fr; /* 2 columnas */
+    align-items: center;
+  }
+
+  /* Asegurar que el secundario quede en columna 1 */
+  .product-purchase__actions-buttons--secondary {
+    grid-column: 1;
+  }
+
+  /* Asegurar que el primario quede en columna 2 */
+  .product-purchase__actions-buttons--primary {
+    grid-column: 2;
+  }
 }

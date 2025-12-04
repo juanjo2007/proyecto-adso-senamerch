@@ -9,27 +9,37 @@ document.addEventListener("DOMContentLoaded", function() {
 
         // ===== BOTONES ACCIÓN =====
         const cancelBtn = editOrderContainer.querySelector(".edit-order__cancel");
-        const saveBtn = editOrderContainer.querySelector(".edit-order__save");
+        const saveBtn = editOrderContainer.querySelector(".edit-order__save");       // Volver a comprar
+        const confirmBtn = editOrderContainer.querySelector(".edit-order__confirm"); // Confirmar pedido
         const addBtn = editOrderContainer.querySelector(".edit-order__add");
 
         // ===========================
-        // CANCELAR PEDIDO (CON ALERTA)
+        // CANCELAR PEDIDO (CONFIRMACIÓN Y REDIRECCIÓN)
         // ===========================
         cancelBtn.addEventListener("click", () => {
-          const confirmCancel = confirm("¿Deseas cancelar este pedido?");
-
-          if (!confirmCancel) return;
-
-          window.location.href = "view_shopping_cart.html";
+          const confirmCancel = confirm("¿Estás seguro de cancelar este pedido?");
+          if (confirmCancel) {
+            window.location.href = "view_shopping_cart.html";
+          }
         });
 
-        // Guardar cambios → redirigir a la vista del pedido del cliente
+        // ===========================
+        // VOLVER A COMPRAR → client_view.html
+        // ===========================
         saveBtn.addEventListener("click", () => {
-          alert("Cambios guardados correctamente!");
+          window.location.href = "client_view.html";
+        });
+
+        // ===========================
+        // CONFIRMAR PEDIDO → details.html
+        // ===========================
+        confirmBtn.addEventListener("click", () => {
           window.location.href = "details.html";
         });
 
-        // Agregar producto
+        // ===========================
+        // AGREGAR PRODUCTO
+        // ===========================
         addBtn.addEventListener("click", () => {
           const select = editOrderContainer.querySelector(".edit-order__select-product");
           const qtyInput = editOrderContainer.querySelector(".edit-order__input");
@@ -70,12 +80,15 @@ document.addEventListener("DOMContentLoaded", function() {
           }
         });
 
-        // Quitar productos existentes
+        // ===========================
+        // QUITAR PRODUCTOS EXISTENTES
+        // ===========================
         editOrderContainer.querySelectorAll(".edit-order__remove").forEach(btn => {
           btn.addEventListener("click", e => {
             e.target.closest(".edit-order__card--product").remove();
           });
         });
+
       })
       .catch(error => console.error("Error cargando el componente:", error));
   }
