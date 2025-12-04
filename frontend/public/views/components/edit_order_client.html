@@ -1,109 +1,49 @@
 <section class="edit-order-content"> 
   <section class="edit-order edit-order--premium">
 
+    <!-- ENCABEZADO -->
     <header class="edit-order__header">
-      <h2 class="edit-order__title">Editar pedido #0123</h2><span class="edit-order__tag">Tienda donde don pastor</span>
-      <p class="edit-order__subtitle">Modifica cantidades, unidades o agrega nuevos productos</p>
+      <h2 class="edit-order__title">Editar pedido #0123</h2>
+      <span class="edit-order__tag">Tienda donde don Pastor</span>
+      <p class="edit-order__subtitle">
+        Selecciona el tipo de entrega o gestiona el estado del pedido
+      </p>
     </header>
 
-    <div class="edit-order__products">
-      <h3 class="edit-order__product-title">Productos del pedido</h3>
+    <!-- TIPO DE ENVÍO -->
+    <div class="edit-order__section">
+      <h3 class="edit-order__product-title">Tipo de entrega</h3>
 
-      <!-- PRODUCT CARD -->
-      <div class="edit-order__card edit-order__card--product">
-        
-        <div class="edit-order__product-header">
-          <p class="edit-order__product-name"><strong>Tomate chonto</strong></p>
-          <span class="edit-order__tag">Vegetal</span>
-        </div>
-
-        <div class="edit-order__row">
-          <label class="edit-order__label">Cantidad:</label>
-          <input type="number" class="edit-order__input" value="2" min="1">
-        </div>
-
-        <div class="edit-order__row">
-          <label class="edit-order__label">Unidad:</label>
-          <select class="edit-order__unit">
-            <option>Kilogramo</option>
-            <option>Libra</option>
-            <option>Unidad</option>
-          </select>
-        </div>
-
-        <button class="btn-secundary btn-secundary-style edit-order__remove">
-            Quitar producto
-            <img src="/frontend/public/assets/icons/cancel.svg" class="btn-secundary__icon">
-        </button>
-
-      </div>
-      <div class="edit-order__card edit-order__card--product">
-        
-        <div class="edit-order__product-header">
-          <p class="edit-order__product-name"><strong>Tomate chonto</strong></p>
-          <span class="edit-order__tag">Vegetal</span>
-        </div>
-
-        <div class="edit-order__row">
-          <label class="edit-order__label">Cantidad:</label>
-          <input type="number" class="edit-order__input" value="2" min="1">
-        </div>
-
-        <div class="edit-order__row">
-          <label class="edit-order__label">Unidad:</label>
-          <select class="edit-order__unit">
-            <option>Kilogramo</option>
-            <option>Libra</option>
-            <option>Unidad</option>
-          </select>
-        </div>
-
-        <button class="btn-secundary btn-secundary-style edit-order__remove">
-            Quitar producto
-            <img src="/frontend/public/assets/icons/cancel.svg" class="btn-secundary__icon">
-        </button>
-
-      </div>
-
-      <!-- DUPLICA LAS CARDS SIGUIENDO LA MISMA ESTRUCTURA -->
-
-      <!-- AGREGAR NUEVO PRODUCTO -->
-      <div class="edit-order__add-product">
-        <select class="edit-order__select-product">
-          <option value="">Seleccionar producto</option>
-          <option value="tomate-chonto">Tomate chonto</option>
-          <option value="lechuga-crespa">Lechuga crespa</option>
-          <option value="zanahoria">Zanahoria</option>
-          <option value="papa">Papa pastusa</option>
+      <div class="edit-order__row">
+        <label class="edit-order__label">Selecciona una opción:</label>
+        <select class="edit-order__unit">
+          <option value="contraentrega">Contraentrega</option>
+          <option value="recoger">Recoger en tienda</option>
         </select>
-
-        <select class="edit-order__unit edit-order__unit--add">
-          <option>Kilogramo</option>
-          <option>Medio kilogramo</option>
-          <option>Libra</option>
-          <option>Media Libra</option>
-          <option>Unidad</option>
-          <option>Tonelada</option>
-          <option>Arroba</option>
-        </select>
-        <input type="number" class="edit-order__input" placeholder="Cantidad" min="1">
-
-        <button class="btn btn--primary edit-order__add">
-          Agregar producto
-        </button>
       </div>
     </div>
 
+    <!-- ACCIONES DEL PEDIDO -->
     <div class="edit-order__actions">
+
+      <!-- 1) Volver a comprar -->
+      <button class="btn btn--primary edit-order__save">
+        Volver a comprar
+        <img src="/frontend/public/assets/icons/delivery.svg" class="btn__icon">
+      </button>
+
+      <!-- 2) Cancelar pedido -->
       <button type="button" class="btn-secundary btn-secundary-style edit-order__cancel">
         Cancelar pedido
         <img src="/frontend/public/assets/icons/cancel.svg" class="btn-secundary__icon">
       </button>
 
-      <button class="btn btn--primary edit-order__save">
-        Entregar pedido
+      <!-- 3) Realizar pedido (nuevo botón) -->
+      <button class="btn btn--primary edit-order__confirm">
+        Realizar pedido
         <img src="/frontend/public/assets/icons/perform.svg" class="btn__icon">
       </button>
+
     </div>
 
   </section>

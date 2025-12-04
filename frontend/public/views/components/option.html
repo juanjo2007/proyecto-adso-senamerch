@@ -5,28 +5,11 @@
     <h2 class="product-purchase__title">Selecciona las opciones de compra</h2>
     <!-- ... resto del formulario ... -->
     <div class="product-purchase__group">
-      <label class="product-purchase__label">Tipo de producto:</label>
-      <div class="product-purchase__options">
-        <label class="product-purchase__option">
-          <input type="radio" name="productType" value="solid" class="product-purchase__radio" checked> Sólido
-        </label>
-        <label class="product-purchase__option">
-          <input type="radio" name="productType" value="liquid" class="product-purchase__radio"> Líquido
-        </label>
-      </div>
-    </div>
-
-    <div class="product-purchase__group">
-      <label class="product-purchase__label">Unidad de medida:</label>
-      <select class="product-purchase__select">
-        <optgroup label="Sólido">
-          <option value="kg">Kilogramo (kg)</option>
-          <option value="g">Libra (Lib)</option>
-        </optgroup>
-        <optgroup label="Líquido">
-          <option value="l">Litro (L)</option>
-          <option value="ml">Mililitro (mL)</option>
-        </optgroup>
+      <label class="product-purchase__label">Tipo de envío</label>
+      <select class="product-purchase__input" required>
+        <option value="" selected disabled>Selecciona una opción</option>
+        <option value="si">Envío contraentrega</option>
+        <option value="si">Recibir en la tienda</option>
       </select>
     </div>
 
@@ -35,11 +18,22 @@
       <input type="number" min="1" class="product-purchase__input" placeholder="Ejemplo: 2">
     </div>
 
-    <div class="product-purchase__actions">
-      <button type="button" class="btn btn--primary product-purchase__button">
-        Agregar al carrito
-        <img src="/frontend/public/assets/icons/shopping-cart-dollar.svg" alt="Icono Comprar" class="btn__icon product-purchase__icon" />
-      </button>
+    <div class="product-purchase__actions-buttons">
+
+      <div class="product-purchase__actions-buttons--secondary">
+        <button class="btn-secundary btn-secundary-style product-purchase__return">
+          Volver
+          <img src="/frontend/public/assets/icons/return.svg" alt="Icono volver" class="btn-secundary__icon">
+        </button>
+      </div>
+
+      <div class="product-purchase__actions-buttons--primary">
+        <button type="button" class="btn btn--primary product-purchase__add">
+          Agregar al carrito
+          <img src="/frontend/public/assets/icons/shopping-cart-dollar.svg" alt="Icono comprar" class="btn__icon">
+        </button>
+      </div>
+
     </div>
   </section>
 </section>
