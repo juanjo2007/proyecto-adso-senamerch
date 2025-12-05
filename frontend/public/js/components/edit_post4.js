@@ -30,7 +30,7 @@ document.addEventListener("DOMContentLoaded", function () {
     if (saveBtn) {
       saveBtn.addEventListener("click", (e) => {
         e.preventDefault();
-        window.location.href = "view_edit_post2.html";
+        window.location.href = "view_edit_form_images_product.html";
       });
     }
   }

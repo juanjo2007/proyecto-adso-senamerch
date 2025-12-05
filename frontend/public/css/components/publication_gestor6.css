@@ -1,6 +1,6 @@
 .product-seller {
   width: 98%;
-  margin: 0 auto;
+  margin: 2.4rem auto;
   padding: var(--gap-md);
   background: var(--white);
   border: 1px solid var(--secundary-900);
