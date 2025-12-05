@@ -30,7 +30,7 @@ document.addEventListener("DOMContentLoaded", function () {
     if (continueBtn) {
       continueBtn.addEventListener("click", (e) => {
         e.preventDefault();
-        window.location.href = "view_publications_gestor2.html";
+        window.location.href = "view_form_images_product.html";
       });
     }
   }
