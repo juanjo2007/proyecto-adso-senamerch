@@ -1,7 +1,7 @@
 .mini-card-products {
   display: flex;
   align-items: center;
-  background: var(--white);
+  background: var(--gray-500);
   border: 1px solid var(--secundary-900);
   border-radius: 12px;
   height: 56px;
@@ -12,7 +12,7 @@
   font-weight: 600;
 
   text-decoration: none;      /* ← no parece link */
-  color: var(--black);        /* ← color normal */
+  color: var(--white);        /* ← color normal */
 
   cursor: pointer;
   transition: background .2s, transform .15s;
@@ -22,6 +22,7 @@
 .mini-card-products:hover {
   background: var(--secundary-100);
   transform: translateY(-2px);
+  color: var(--black); 
 }
 
   
