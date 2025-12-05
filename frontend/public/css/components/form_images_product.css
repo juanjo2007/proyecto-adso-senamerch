@@ -16,7 +16,6 @@
     font-size: var(--fs-sm);
     font-weight: bold;
     color: var(--gray-900);
-    margin-top: 0.4rem;
 }
 .image-upload__subtitle {
     width: 100%;
@@ -24,7 +23,6 @@
     font-family: var(--font-primary);
     font-size: var(--fs-xs);
     color: var(--gray-600);
-    margin-bottom: var(--gap-sm);
 }
 .image-upload__content {
     width: 100%;
