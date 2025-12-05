@@ -13,11 +13,11 @@
 /* >>> SOLO ESTOS DOS se ponen lado a lado desde 1024px */
 @media (min-width: 1024px) {
 
-  .seeker_products_list {
+  .seeker_products_list-product {
     flex: 50%;     /* columna izquierda fija */
   }
 
-  .sellers_product_list {
+  .seeker_products_list-product{
     flex: 1;             /* columna derecha flexible */
   }
 }
