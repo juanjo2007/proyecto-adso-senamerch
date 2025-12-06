@@ -1,11 +1,41 @@
-<article class="card">
-  <img class="card__image" src="{{image}}" alt="Imagen de {{name}}">
-  <div class="card__info">
-    <h2 class="card__title">{{name}}</h2>
-    <p class="card__price">${{price}}</p>
-    <button type="button" class="btn btn--primary card__pay">
+<article class="product-card">
+  <div class="product-card__menu">
+    <button class="product-card__menu-btn">⋮</button>
+    <ul class="product-card__menu-dropdown">
+      <li>
+        <a href="product_description.html" class="product-card__menu-item">Dejar un comentario</a>
+      </li>
+    </ul>
+  </div>
+  <div class="product-card__header">
+    <h2 class="product-card__title">{{name}}</h2>
+    <p class="product-card__price">$ {{price}} / kilo</p>
+    <p class="product-card__discount">{{discount}} % de descuento</p>
+  </div>
+  <a href="#" class="product_card_profile_store__link">
+    <img 
+        src="{{store_logo}}"
+        alt="Logo de la tienda {{store_name}}"
+        class="product-card__store-logo"
+    />
+    <span class="product_card_profile_store__tooltip">Visitar Tienda</span>
+  </a>
+  <div class="product-card__image-wrapper">
+    <img 
+      src="{{image}}"
+      alt="Imagen de {{name}}"
+      class="product-card__image"
+    />
+  </div>
+  <div class="product-card__footer--end">
+    <button type="button" class="btn btn--primary product-card__pay">
       Comprar
-      <img src="/frontend/public/assets/icons/cash-button.svg" alt="Icono Comprar" class="btn__icon card__icon" />
+      <img 
+        src="/frontend/public/assets/icons/cash-button.svg"
+        alt="Icono Comprar"
+        class="btn__icon product-card__icon"
+      />
     </button>
+  </div>
   </div>
 </article>

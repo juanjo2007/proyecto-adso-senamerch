@@ -5,7 +5,7 @@ export async function loadCards(containerSelector) {
   try {
     const [templateRes, dataRes] = await Promise.all([
       fetch("/frontend/public/views/components/card.html"),
-      fetch("/frontend/public/data/cards.json"),
+      fetch("/frontend/public/data/products.json"),
     ]);
 
     if (!templateRes.ok || !dataRes.ok) {
@@ -15,17 +15,20 @@ export async function loadCards(containerSelector) {
     const template = await templateRes.text();
     const products = await dataRes.json();
 
-    products.forEach(card => {
+    products.forEach(product => {
       let html = template
-        .replaceAll("{{image}}", card.image)
-        .replaceAll("{{name}}", card.name)
-        .replaceAll("{{price}}", card.price);
+        .replaceAll("{{name}}", product.name)
+        .replaceAll("{{price}}", product.price)
+        .replaceAll("{{discount}}", product.discount)
+        .replaceAll("{{image}}", product.image)
+        .replaceAll("{{store_logo}}", product.store_logo)
+        .replaceAll("{{store_name}}", product.store_name);
 
       container.insertAdjacentHTML("beforeend", html);
     });
 
     // === Agregar redirección de los botones "Comprar" ===
-    const buyButtons = container.querySelectorAll(".card__pay");
+    const buyButtons = container.querySelectorAll(".product-card__pay");
     buyButtons.forEach(btn => {
       btn.addEventListener("click", () => {
         window.location.href = "product_description.html";

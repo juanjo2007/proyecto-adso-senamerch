@@ -1,10 +1,10 @@
-export async function loadSellercards(containerSelector) {
+export async function loadProductCards(containerSelector) {
   const container = document.querySelector(containerSelector);
   if (!container) return;
 
   try {
     const [templateRes, dataRes] = await Promise.all([
-      fetch("/frontend/public/views/components/seller_card.html"),
+      fetch("/frontend/public/views/components/product_card.html"),
       fetch("/frontend/public/data/products.json"),
     ]);
 
@@ -25,24 +25,6 @@ export async function loadSellercards(containerSelector) {
         .replaceAll("{{store_name}}", product.store_name);
 
       container.insertAdjacentHTML("beforeend", html);
-    });
-
-    // === Agregar eventos una vez insertadas las cards ===
-    const descriptionButtons = container.querySelectorAll(".product-card__description");
-    const editButtons = container.querySelectorAll(".product-card__edit");
-
-    // 🔹 Botón primario → Descripción
-    descriptionButtons.forEach((btn) => {
-      btn.addEventListener("click", () => {
-        window.location.href = "view_description_product_seller.html";
-      });
-    });
-
-    // 🔹 Botón secundario → Gestor de publicaciones
-    editButtons.forEach((btn) => {
-      btn.addEventListener("click", () => {
-        window.location.href = "view_edit_post.html";
-      });
     });
 
   } catch (error) {
