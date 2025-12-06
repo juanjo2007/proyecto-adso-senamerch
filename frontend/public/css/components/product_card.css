@@ -50,16 +50,17 @@
 .product-card__title {
   font-size: var(--fs-xs);
   font-weight: 600;
-  color: var(--secundary-700);
+  color: var(--secundary-600);
   margin-bottom: var(--gap-sm); 
 }
 .product-card__price {
   font-size: var(--fs-sm);
-  color: var(--secundary-600);
+  color: var(--secundary-700);
+  font-weight: 600;
 }
 .product-card__discount{
   font-size: var(--fs-xxs);
-  color: var(--secundary-700);
+  color: var(--secundary-600);
 }
 .product-card__store-logo {
   width: 80px;                  
@@ -155,9 +156,9 @@
   top: 20px;
   right: 0;
   list-style: none;
-  padding: 8px 0;
+  padding: 8px 8px;
   margin: 0;
-  background: var(--white);
+  background: var(--secundary-950);
   border-radius: 8px;
   box-shadow: 0 4px 14px rgba(0,0,0,.18);
   display: none; 
@@ -167,13 +168,90 @@
   display: block;
 }
 .product-card__menu-item {
-  display: block;
-  padding: 8px 12px;
-  color: var(--secundary-900);
+  display: flex;               /* clave */
+  align-items: center;         /* centra verticalmente */
+  justify-content: space-between; /* separa texto e icono */
+  gap: 8px;                    /* espacio entre texto e icono */
+  padding: 4px 4px;
+  color: var(--secundary-100);
   font-size: var(--fs-xxxs);
   text-decoration: none;
   transition: background 0.2s ease-in-out;
 }
+
+/* opcional: por si hace falta ajustar */
+.product-card__icon-menu-item {
+  width: 16px;
+  height: 16px;
+  flex-shrink: 0;
+}
+
 .product-card__menu-item:hover {
   background: var(--secundary-200);
 }
+/* Botón Like */
+.product-card__like-btn {
+  position: absolute;
+  top: 328px;
+  right: 232px; /* Se deja espacio para los tres puntos */
+  background: var(--secundary-700);
+  border: none;
+  cursor: pointer;
+  padding-top: 4px;
+  padding-bottom: 2px;
+  padding-right: 4px;
+  padding-left: 4px;
+  border-radius: 50%;
+  transition: background 0.2s ease-in-out;
+  z-index: 35;
+}
+
+.product-card__like-btn:hover {
+  background: var(--tertiary-600);
+}
+
+.product-card__like-icon {
+  width: 20px;
+  height: 20px;
+  object-fit: contain;
+  filter: drop-shadow(0 1px 2px rgba(0,0,0,.1));
+}
+.product-card__like-btn--active {
+  background: var(--secundary-500);
+  border: solid 2px var(--secundary-950)
+} 
+/* Estado activo del like */
+.product-card__like-btn--active .product-card__like-icon {
+  transform: scale(1.1);
+}
+.product-card__like-btn--dislike {
+  position: absolute;
+  top: 328px;
+  right: 188px; /* Se deja espacio para los tres puntos */
+  background: var(--tertiary-500);
+  border: none;
+  cursor: pointer;
+  padding-top: 4px;
+  padding-bottom: 2px;
+  padding-right: 4px;
+  padding-left: 4px;
+  border-radius: 50%;
+  transition: background 0.2s ease-in-out;
+  z-index: 35;
+}
+.product-card__like-btn--dislike:hover {
+  background: var(--tertiary-600);
+}
+.product-card__like-icon--dislike {
+  width: 20px;
+  height: 20px;
+  object-fit: contain;
+  filter: drop-shadow(0 1px 2px rgba(0,0,0,.1));
+}
+.product-card__like-btn--active--dislike .product-card__like-icon--dislike {
+  transform: scale(1.1);
+}
+.product-card__like-btn--active--dislike {
+  background: var(--tertiary-500);
+  border: solid 2px var(--tertiary-950)
+} 

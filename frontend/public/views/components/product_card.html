@@ -1,6 +1,16 @@
 <article class="product-card">
 
   <!-- Menú tres puntos -->
+  <!-- Menú tres puntos + Like -->
+  <!-- Botón Like (corazón) -->
+  <button class="product-card__like-btn" aria-label="Me gusta">
+    <img 
+      src="/frontend/public/assets/icons/heart.svg" 
+      alt="Icono me gusta"
+      class="product-card__like-icon"
+    />
+  </button>
+  <!-- Menú tres puntos -->
   <div class="product-card__menu">
     <button class="product-card__menu-btn">⋮</button>
 
@@ -9,8 +19,7 @@
         <a href="/comentarios" class="product-card__menu-item">Dejar un comentario</a>
       </li>
     </ul>
-  </div>
-
+  </div>  
   <!-- Header: nombre y precio -->
   <div class="product-card__header">
     <h2 class="product-card__title">{{name}}</h2>

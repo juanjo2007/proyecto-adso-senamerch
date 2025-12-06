@@ -1,14 +1,36 @@
 <article class="product-card">
 
   <!-- Menú tres puntos -->
-  <div class="product-card__menu">
-    <button class="product-card__menu-btn">⋮</button>
+  <div class="product-card__actions">
 
-    <ul class="product-card__menu-dropdown">
-      <li>
-        <a href="login.html" class="product-card__menu-item">Dejar un comentario</a>
-      </li>
-    </ul>
+    <!-- Botón Like -->
+    <button class="product-card__like-btn" aria-label="Me gusta">
+      <img 
+        src="/frontend/public/assets/icons/heart.svg" 
+        alt="Icono me gusta"
+        class="product-card__like-icon"
+      />
+    </button>
+    <button class="product-card__like-btn--dislike" aria-label="Me gusta">
+      <img 
+        src="/frontend/public/assets/icons/heart-off.svg" 
+        alt="Icono me gusta"
+        class="product-card__like-icon--dislike"
+      />
+    </button>
+
+    <!-- Menú tres puntos -->
+    <div class="product-card__menu">
+      <button class="product-card__menu-btn">⋮</button>
+
+      <ul class="product-card__menu-dropdown">
+        <li>
+          <a href="/comentarios" class="product-card__menu-item">Dejar un comentario
+            <img src="/frontend/public/assets/icons/contact.svg" alt="imagen mensaje" class="product-card__icon-menu-item"/>
+          </a>
+        </li>
+      </ul>
+    </div>
   </div>
 
   <!-- Header: nombre y precio -->
@@ -47,7 +69,6 @@
         class="btn__icon product-card__icon"
       />
     </button>
-  </div>
   </div>
 
 </article>

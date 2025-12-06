@@ -1,17 +1,45 @@
 <article class="product-card">
-  <div class="product-card__menu">
-    <button class="product-card__menu-btn">⋮</button>
-    <ul class="product-card__menu-dropdown">
-      <li>
-        <a href="product_description.html" class="product-card__menu-item">Dejar un comentario</a>
-      </li>
-    </ul>
+
+  <!-- Menú tres puntos -->
+  <div class="product-card__actions">
+
+    <!-- Botón Like -->
+    <button class="product-card__like-btn" aria-label="Me gusta">
+      <img 
+        src="/frontend/public/assets/icons/heart.svg" 
+        alt="Icono me gusta"
+        class="product-card__like-icon"
+      />
+    </button>
+    <button class="product-card__like-btn--dislike" aria-label="Me gusta">
+      <img 
+        src="/frontend/public/assets/icons/heart-off.svg" 
+        alt="Icono me gusta"
+        class="product-card__like-icon--dislike"
+      />
+    </button>
+
+    <!-- Menú tres puntos -->
+    <div class="product-card__menu">
+      <button class="product-card__menu-btn">⋮</button>
+
+      <ul class="product-card__menu-dropdown">
+        <li>
+          <a href="/comentarios" class="product-card__menu-item">Dejar un comentario</a>
+        </li>
+      </ul>
+    </div>
+
   </div>
+
+  <!-- Header: nombre y precio -->
   <div class="product-card__header">
     <h2 class="product-card__title">{{name}}</h2>
     <p class="product-card__price">$ {{price}} / kilo</p>
     <p class="product-card__discount">{{discount}} % de descuento</p>
   </div>
+
+  <!-- Foto redonda de la tienda -->
   <a href="#" class="product_card_profile_store__link">
     <img 
         src="{{store_logo}}"
@@ -20,6 +48,8 @@
     />
     <span class="product_card_profile_store__tooltip">Visitar Tienda</span>
   </a>
+
+  <!-- Imagen grande del producto -->
   <div class="product-card__image-wrapper">
     <img 
       src="{{image}}"
@@ -27,6 +57,8 @@
       class="product-card__image"
     />
   </div>
+
+  <!-- Botones -->
   <div class="product-card__footer--end">
     <button type="button" class="btn btn--primary product-card__pay">
       Comprar
@@ -37,5 +69,5 @@
       />
     </button>
   </div>
-  </div>
+
 </article>

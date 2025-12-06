@@ -27,7 +27,23 @@ export async function loadCards(containerSelector) {
       container.insertAdjacentHTML("beforeend", html);
     });
 
-    // === Agregar redirección de los botones "Comprar" ===
+    // === LIKE ===
+    container.addEventListener("click", (event) => {
+      const btn = event.target.closest(".product-card__like-btn");
+      if (!btn || !container.contains(btn)) return;
+
+      btn.classList.toggle("product-card__like-btn--active");
+    });
+
+    // === DISLIKE (Nueva función, misma lógica que LIKE) ===
+    container.addEventListener("click", (event) => {
+      const btn = event.target.closest(".product-card__like-btn--dislike");
+      if (!btn || !container.contains(btn)) return;
+
+      btn.classList.toggle("product-card__like-btn--active--dislike");
+    });
+
+    // Botón "Comprar"
     const buyButtons = container.querySelectorAll(".product-card__pay");
     buyButtons.forEach(btn => {
       btn.addEventListener("click", () => {
