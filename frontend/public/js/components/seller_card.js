@@ -1,3 +1,5 @@
+import { initCommentsSidebar } from "/frontend/public/js/components/comments.js";
+
 export async function loadSellercards(containerSelector) {
   const container = document.querySelector(containerSelector);
   if (!container) return;
@@ -27,18 +29,33 @@ export async function loadSellercards(containerSelector) {
       container.insertAdjacentHTML("beforeend", html);
     });
 
-    // === Agregar eventos una vez insertadas las cards ===
+    // ✅ Inicializa el sidebar de comentarios
+    initCommentsSidebar();
+
+    // ✅ Abrir sidebar al hacer click en "Dejar un comentario"
+    container.addEventListener("click", (event) => {
+      const btn = event.target.closest('[data-action="open-comments"]');
+      if (!btn) return;
+
+      event.preventDefault();
+
+      const sidebar = document.querySelector(".comments-users-sidebar");
+      const overlay = document.querySelector(".comments-overlay");
+
+      if (sidebar) sidebar.classList.add("comments-users-sidebar--active");
+      if (overlay) overlay.classList.add("comments-overlay--active");
+    });
+
+    // 🔹 Botones existentes
     const descriptionButtons = container.querySelectorAll(".product-card__description");
     const editButtons = container.querySelectorAll(".product-card__edit");
 
-    // 🔹 Botón primario → Descripción
     descriptionButtons.forEach((btn) => {
       btn.addEventListener("click", () => {
         window.location.href = "view_description_product_seller.html";
       });
     });
 
-    // 🔹 Botón secundario → Gestor de publicaciones
     editButtons.forEach((btn) => {
       btn.addEventListener("click", () => {
         window.location.href = "view_edit_post.html";

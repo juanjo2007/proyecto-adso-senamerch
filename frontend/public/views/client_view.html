@@ -6,8 +6,14 @@
     <!-- >>> Sección CSS principal -->
     <link rel="stylesheet" href="/frontend/public/css/main.css">
     <!-- >>> Sección JS componentes -->
-    <script type="module"> import { loadCards } from "/frontend/public/js/components/card.js";
-      document.addEventListener("DOMContentLoaded", () => {loadCards(".cards__container");});
+    <script type="module">
+      import { loadCards } from "/frontend/public/js/components/card.js";
+      import { initCommentsSidebar } from "/frontend/public/js/components/comments.js";
+
+      document.addEventListener("DOMContentLoaded", () => {
+        loadCards(".cards__container");
+        initCommentsSidebar(); // ✅ esto inyecta el sidebar
+      });
     </script>
     <script src="/frontend/public/js/components/navbar_client_view.js"></script>
     <script src="/frontend/public/js/components/search_bar.js"></script>
@@ -23,6 +29,10 @@
       <nav>
         <div class="navbar_client_view"></div>
       </nav>
+      <section class="comments_users">
+        <div class="comments-userss-container"></div>
+        <div class="comments-overlay"></div>
+     </section>
       <!-- >>> Sección Barra de busqueda -->
       <section class="seeker">
         <div class="search-bar-container"></div>

@@ -1,3 +1,5 @@
+import { initCommentsSidebar } from "/frontend/public/js/components/comments.js";
+
 export async function loadCards(containerSelector) {
   const container = document.querySelector(containerSelector);
   if (!container) return;
@@ -27,29 +29,31 @@ export async function loadCards(containerSelector) {
       container.insertAdjacentHTML("beforeend", html);
     });
 
-    // === LIKE ===
+    // 🔥 Inicializa sidebar
+    initCommentsSidebar();
+
+    // Like
     container.addEventListener("click", (event) => {
       const btn = event.target.closest(".product-card__like-btn");
       if (!btn || !container.contains(btn)) return;
-
       btn.classList.toggle("product-card__like-btn--active");
     });
 
-    // === DISLIKE (Nueva función, misma lógica que LIKE) ===
+    // Dislike
     container.addEventListener("click", (event) => {
       const btn = event.target.closest(".product-card__like-btn--dislike");
       if (!btn || !container.contains(btn)) return;
-
       btn.classList.toggle("product-card__like-btn--active--dislike");
     });
 
-    // === Agregar redirección de los botones "Comprar" ===
+    // Comprar
     const buyButtons = container.querySelectorAll(".product-card__pay");
     buyButtons.forEach(btn => {
       btn.addEventListener("click", () => {
         window.location.href = "product_description.html";
       });
     });
+
   } catch (error) {
     console.error("Error cargando las cards:", error);
   }

@@ -7,10 +7,16 @@
     <!-- >>> Sección CSS principal -->
     <link rel="stylesheet" href="/frontend/public/css/main.css">
     <!-- >>> Sección JS componentes -->
-    <script type="module"> import { loadSellercards } from "/frontend/public/js/components/seller_card.js";
-      document.addEventListener("DOMContentLoaded", () => {loadSellercards(".seller-cards__container");});
-    </script>
     <script src="/frontend/public/js/components/navbar_seller_view.js"></script>
+    <script type="module">
+      import { loadSellercards } from "/frontend/public/js/components/seller_card.js";
+      import { initCommentsSidebar } from "/frontend/public/js/components/comments.js";
+
+      document.addEventListener("DOMContentLoaded", () => {
+        loadSellercards(".seller-cards__container");
+        initCommentsSidebar(); // ✅ esto inyecta el sidebar
+      });
+    </script>
     <script src="/frontend/public/js/components/search_bar.js"></script>
     <script src="/frontend/public/js/components/client_view.js"></script>
     <script src="/frontend/public/js/components/footer.js"></script>
@@ -23,6 +29,12 @@
     <nav class="navbar-seller-cards-view">
         <div class="navbar_seller_view"></div>
     </nav>
+    <!-- Sidebar Comentarios -->
+    <section class="comments_users">
+      <div class="comments-userss-container"></div>
+      <div class="comments-overlay"></div>
+    </section>
+
     <!-- >>> Sección Imagen principal de la tienda -->
     <section class="hero">
       <div class="hero-seller__container"></div>

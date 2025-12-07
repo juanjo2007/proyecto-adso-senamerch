@@ -71,7 +71,7 @@
   box-shadow: 0 2px 8px rgba(0,0,0,.15);
 
   position: absolute;
-  top: 80px;                   
+  top: 85px;                   
   right: 32px;                  
   z-index: 10;
 }
@@ -194,7 +194,7 @@
   position: absolute;
   top: 328px;
   right: 232px; /* Se deja espacio para los tres puntos */
-  background: var(--secundary-700);
+  background: var(--secundary-900);
   border: none;
   cursor: pointer;
   padding-top: 4px;
@@ -207,7 +207,7 @@
 }
 
 .product-card__like-btn:hover {
-  background: var(--tertiary-600);
+  background: var(--secundary-500);
 }
 
 .product-card__like-icon {
@@ -228,7 +228,7 @@
   position: absolute;
   top: 328px;
   right: 188px; /* Se deja espacio para los tres puntos */
-  background: var(--tertiary-500);
+  background: var(--tertiary-900);
   border: none;
   cursor: pointer;
   padding-top: 4px;

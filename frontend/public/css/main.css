@@ -109,6 +109,7 @@
 @import url('components/view_seller_cards.css');
 @import url('components/form_images_product.css');
 @import url('components/product_card.css');
+@import url('components/comments.css');
 
 /* Importaciones de SenaMerch Jeferson */
 @import url('components/order.css');
