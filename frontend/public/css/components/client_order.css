@@ -145,21 +145,6 @@
   padding: 24px;
   gap: 24px; 
 }
-.order-card__top {
-  margin-bottom: 24px;
-}
-.order-card__store {
-  margin-bottom: 24px;
-}
-.order-card__products {
-  margin-bottom: 24px;
-}
-.order-card__total {
-  margin-bottom: 24px;
-}
-.order-card__actions {
-  margin-top: 12px;
-}
 @media (max-width: 640px) {
   .orders-panel__tabs {
     display: none;

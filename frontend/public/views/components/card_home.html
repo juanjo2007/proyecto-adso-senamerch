@@ -25,12 +25,18 @@
 
       <ul class="product-card__menu-dropdown">
         <li>
-          <a href="login.html" class="product-card__menu-item">Dejar un comentario
-            <img src="/frontend/public/assets/icons/contact.svg" alt="imagen mensaje" class="product-card__icon-menu-item"/>
+          <a href="login.html" class="product-card__menu-item" data-action="open-comments">
+            Dejar un comentario
+            <img 
+              src="/frontend/public/assets/icons/contact.svg" 
+              alt="Icono me gusta"
+              class="product-card__menu-item-icon"
+             />
           </a>
         </li>
       </ul>
     </div>
+
   </div>
 
   <!-- Header: nombre y precio -->
@@ -41,23 +47,41 @@
   </div>
 
   <!-- Foto redonda de la tienda -->
-  <a href="#" class="product_card_profile_store__link">
+  <a href="login.html" class="product-card__profile-store-link">
     <img 
         src="{{store_logo}}"
         alt="Logo de la tienda {{store_name}}"
         class="product-card__store-logo"
     />
-    <span class="product_card_profile_store__tooltip">Visitar Tienda</span>
+    <span class="product-card__profile-store-tooltip">Visitar Tienda
+    <img 
+        src="/frontend/public/assets/icons/store_profile.svg" 
+        alt="Icono me gusta"
+        class="product-card__profile-store-tooltip-icon"
+        />
+    </span>
+  </a>
+  <!-- Imagen grande del producto (ahora con link y tooltip) -->
+  <a href="login.html" class="product-card__image-link">
+    <div class="product-card__image-wrapper">
+      <img 
+        src="{{image}}"
+        alt="Imagen de {{name}}"
+        class="product-card__image"
+      />
+    </div>
+
+    <!-- Tooltip -->
+    <span class="product-card__image-tooltip">
+      Visualizar Producto
+      <img 
+        src="/frontend/public/assets/icons/eye.svg"
+        alt="Icono visualizar"
+        class="product-card__image-tooltip-icon"
+      />
+    </span>
   </a>
 
-  <!-- Imagen grande del producto -->
-  <div class="product-card__image-wrapper">
-    <img 
-      src="{{image}}"
-      alt="Imagen de {{name}}"
-      class="product-card__image"
-    />
-  </div>
 
   <!-- Botones -->
   <div class="product-card__footer--end">

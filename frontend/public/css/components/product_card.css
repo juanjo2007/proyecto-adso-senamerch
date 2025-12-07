@@ -92,34 +92,37 @@
   display: flex;
   justify-content: space-between;
 }
-.product-card_buttons-grid {
-  display: grid;
-  grid-template-columns: repeat(2, 1fr); 
-  gap: 2rem;
+.product-card__footer--seller-edit {
+  margin-top: var(--gap-sm);
+  display: flex;
+  justify-content: center;
 }
 .product-card__footer--end{
   margin-top: var(--gap-md);
   display: flex;
   justify-content: flex-end;
 }
-.product_card_profile_store__tooltip {
-    position: absolute;
-    bottom: 304px; 
-    left: 232px;
-    transform: translateX(-50%);
-    background-color: var(--secundary-900);
-    color: var(--white);
-    padding: 6px 8px;
-    font-size: var(--fs-xxs);
-    font-family: var(--font-primary-semibold);
-    border-radius: 6px;
-    white-space: nowrap;
-    opacity: 0;
-    pointer-events: none;
-    transition: opacity 0.2s ease-in-out;
-    z-index: 20;
+.product-card__profile-store-tooltip {
+  display: flex;
+  align-items: center;  
+  gap: 8px;             
+  position: absolute;
+  bottom: 304px;
+  left: 232px;
+  transform: translateX(-50%);
+  background-color: var(--secundary-950);
+  color: var(--white);
+  padding: 4px 8px;
+  font-size: var(--fs-xxxs);
+  font-family: var(--font-primary-semibold);
+  border-radius: 6px;
+  white-space: nowrap;
+  opacity: 0;
+  pointer-events: none;
+  transition: opacity 0.2s ease-in-out;
+  z-index: 20;
 }
-.product_card_profile_store__link {
+.product-card__profile-store-link{
     font-size: var(--fs-xs);
     font-family: var(--font-primary-semibold);
     color: var(--white);
@@ -128,8 +131,12 @@
     border-radius: 6px;
     transition: all 0.2s ease-in-out;
 }
-.product_card_profile_store__link:hover .product_card_profile_store__tooltip {
+.product-card__profile-store-link:hover .product-card__profile-store-tooltip {
     opacity: 1;
+}
+.product-card__profile-store-tooltip-icon{
+  height: 16px;
+  width: 16px;
 }
 .product-card__menu {
   position: absolute;
@@ -156,22 +163,25 @@
   top: 20px;
   right: 0;
   list-style: none;
-  padding: 8px 8px;
+  padding: 2px 8px;
   margin: 0;
   background: var(--secundary-950);
   border-radius: 8px;
   box-shadow: 0 4px 14px rgba(0,0,0,.18);
   display: none; 
-  width: 160px;
+  width: 158px;
 }
 .product-card__menu:hover .product-card__menu-dropdown {
   display: block;
+}
+.product-card__menu-item-icon{
+  height: 16px;
+  width: 16px;
 }
 .product-card__menu-item {
   display: flex;               /* clave */
   align-items: center;         /* centra verticalmente */
   justify-content: space-between; /* separa texto e icono */
-  gap: 8px;                    /* espacio entre texto e icono */
   padding: 4px 4px;
   color: var(--secundary-100);
   font-size: var(--fs-xxxs);
@@ -187,13 +197,50 @@
 }
 
 .product-card__menu-item:hover {
-  background: var(--secundary-200);
+  background: var(--primary-600);
+  color: var(--secundary-200);
 }
+/* El link que envuelve la imagen */
+.product-card__image-link {
+  display: block;
+  position: relative;
+}
+
+/* Tooltip de la imagen */
+.product-card__image-tooltip {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  position: absolute;
+  bottom: 24px;
+  left: 88px;
+  transform: translateX(-50%);
+  background-color: var(--secundary-950);
+  color: var(--white);
+  padding: 4px 10px;
+  border-radius: 6px;
+  font-size: var(--fs-xxxs);
+  font-family: var(--font-primary-semibold);
+  opacity: 0;
+  pointer-events: none;
+  transition: opacity 0.2s ease-in-out;
+  z-index: 20;
+}
+.product-card__image-link:hover .product-card__image-tooltip {
+  opacity: 1;
+}
+
+/* Ícono del tooltip */
+.product-card__image-tooltip-icon {
+  width: 16px;
+  height: 16px;
+}
+
 /* Botón Like */
 .product-card__like-btn {
   position: absolute;
   top: 328px;
-  right: 232px; /* Se deja espacio para los tres puntos */
+  right: 248px; 
   background: var(--secundary-900);
   border: none;
   cursor: pointer;
@@ -227,7 +274,7 @@
 .product-card__like-btn--dislike {
   position: absolute;
   top: 328px;
-  right: 188px; /* Se deja espacio para los tres puntos */
+  right: 204px;
   background: var(--tertiary-900);
   border: none;
   cursor: pointer;
@@ -255,3 +302,20 @@
   background: var(--tertiary-500);
   border: solid 2px var(--tertiary-950)
 } 
+ @media (width < 640px) {
+  .product-card__profile-store-tooltip {
+    position: absolute;
+    bottom: 304px; 
+    left: 188px;
+ }
+  .product-card__like-btn {
+    position: absolute;
+    top: 328px;
+    right: 204px; 
+  }
+  .product-card__like-btn--dislike {
+    position: absolute;
+    top: 328px;
+    right: 168px;
+  }
+}

@@ -16,7 +16,7 @@
     "store_name": "Campo Andino"
   },
   {
-    "name": "Cebolla Cabezona",
+    "name": "Pimentón Rojo",
     "price": "3.200",
     "discount": "3",
     "image": "/frontend/public/assets/img/pimenton_image.png",
@@ -24,7 +24,7 @@
     "store_name": "La Despensa Verde"
   },
   {
-    "name": "Aguacate Hass",
+    "name": "Lechuga Fresca",
     "price": "5.800",
     "discount": "5",
     "image": "/frontend/public/assets/img/lettuce_image.png",
@@ -32,7 +32,7 @@
     "store_name": "Finca El Roble"
   },
   {
-    "name": "Banano Criollo",
+    "name": "Zanahoria Fresca",
     "price": "1.900",
     "discount": "2",
     "image": "/frontend/public/assets/img/carrot_image.png",
@@ -40,7 +40,7 @@
     "store_name": "Frutas del Valle"
   },
   {
-    "name": "Zanahoria Fresca",
+    "name": "Cebolla Cabezona",
     "price": "2.700",
     "discount": "4",
     "image": "/frontend/public/assets/img/image_onion.png",
@@ -56,7 +56,7 @@
     "store_name": "Huerta Orgánica"
   },
   {
-    "name": "Mango Tommy",
+    "name": "Piña Dulce",
     "price": "3.900",
     "discount": "3",
     "image": "/frontend/public/assets/img/image_pineapples.png",

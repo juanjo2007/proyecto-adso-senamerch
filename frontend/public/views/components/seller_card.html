@@ -1,18 +1,26 @@
 <article class="product-card">
 
   <!-- Menú tres puntos -->
-  <div class="product-card__menu">
-    <button class="product-card__menu-btn">⋮</button>
+  <div class="product-card__actions">
+    <!-- Menú tres puntos -->
+    <div class="product-card__menu">
+      <button class="product-card__menu-btn">⋮</button>
 
-    <ul class="product-card__menu-dropdown">
-      <li>
-        <a href="#" class="product-card__menu-item" data-action="open-comments">
-          Dejar un comentario
-        </a>
-      </li>
-    </ul>
+      <ul class="product-card__menu-dropdown">
+        <li>
+          <a href="#" class="product-card__menu-item" data-action="open-comments">
+            Dejar un comentario
+            <img 
+              src="/frontend/public/assets/icons/contact.svg" 
+              alt="Icono me gusta"
+              class="product-card__menu-item-icon"
+             />
+          </a>
+        </li>
+      </ul>
+    </div>
+
   </div>
-
   <!-- Header: nombre y precio -->
   <div class="product-card__header">
     <h2 class="product-card__title">{{name}}</h2>
@@ -21,42 +29,46 @@
   </div>
 
   <!-- Foto redonda de la tienda -->
-  <a href="#" class="product_card_profile_store__link">
+  <a href="profile_store_seller.html" class="product-card__profile-store-link">
     <img 
         src="{{store_logo}}"
         alt="Logo de la tienda {{store_name}}"
         class="product-card__store-logo"
     />
-    <span class="product_card_profile_store__tooltip">Visitar Tienda</span>
-  </a>
-
-  <!-- Imagen grande del producto -->
-  <div class="product-card__image-wrapper">
+    <span class="product-card__profile-store-tooltip">Perfil Tienda
     <img 
-      src="{{image}}"
-      alt="Imagen de {{name}}"
-      class="product-card__image"
-    />
-  </div>
-
-  <!-- Botones -->
-  <div class="product-card_buttons-grid">
-    <div class="product-card__footer">
-      <button class="btn-secundary btn-secundary-style product-card__edit">
-        Editar
-        <img src="/frontend/public/assets/icons/edit.svg" alt="Icono gestionar" class="btn-secundary__icon">
-      </button>
-    </div>
-    <div class="product-card__footer">
-      <button type="button" class="btn btn--primary product-card__description">
-        Comprar
-        <img 
-          src="/frontend/public/assets/icons/cash-button.svg"
-          alt="Icono Comprar"
-          class="btn__icon product-card__icon"
+        src="/frontend/public/assets/icons/store_profile.svg" 
+        alt="Icono me gusta"
+        class="product-card__profile-store-tooltip-icon"
         />
-      </button>
+    </span>
+  </a>
+  <!-- Imagen grande del producto (ahora con link y tooltip) -->
+  <a href="view_description_product_seller.html" class="product-card__image-link">
+    <div class="product-card__image-wrapper">
+      <img 
+        src="{{image}}"
+        alt="Imagen de {{name}}"
+        class="product-card__image"
+      />
     </div>
+
+    <!-- Tooltip -->
+    <span class="product-card__image-tooltip">
+      Visualizar Producto
+      <img 
+        src="/frontend/public/assets/icons/eye.svg"
+        alt="Icono visualizar"
+        class="product-card__image-tooltip-icon"
+      />
+    </span>
+  </a>
+  <!-- Botones -->
+  <div class="product-card__footer--seller-edit">
+    <button class="btn-secundary btn-secundary-style product-card__footer--seller-edit">
+      Editar
+      <img src="/frontend/public/assets/icons/edit.svg" alt="Icono gestionar" class="btn-secundary__icon">
+    </button>
   </div>
 
 </article>

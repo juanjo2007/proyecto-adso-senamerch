@@ -77,6 +77,9 @@
   color: var(--gray-900);
   margin-bottom: var(--gap-md);
 }
+.sales-info__title{
+  font-size: var(--fs-xs);
+}
 .product-list {
   display: flex;
   flex-direction: column;

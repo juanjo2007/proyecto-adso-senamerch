@@ -7,7 +7,7 @@ document.addEventListener('DOMContentLoaded', function () {
 
     if (btnReturn) {
       btnReturn.addEventListener('click', () => {
-        window.location.href = "/frontend/public/views/product_description.html";
+        window.location.href = "/frontend/public/views/client_view.html";
       });
     }
 

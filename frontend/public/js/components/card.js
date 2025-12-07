@@ -50,7 +50,7 @@ export async function loadCards(containerSelector) {
     const buyButtons = container.querySelectorAll(".product-card__pay");
     buyButtons.forEach(btn => {
       btn.addEventListener("click", () => {
-        window.location.href = "product_description.html";
+        window.location.href = "quantity_container.html";
       });
     });
 
