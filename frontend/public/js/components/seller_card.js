@@ -48,7 +48,7 @@ export async function loadSellercards(containerSelector) {
 
     // 🔹 Botones existentes
     const descriptionButtons = container.querySelectorAll(".product-card__description");
-    const editButtons = container.querySelectorAll(".product-card__edit");
+    const editButtons = container.querySelectorAll(".product-card__footer--seller-edit");
 
     descriptionButtons.forEach((btn) => {
       btn.addEventListener("click", () => {

@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">    
+    <title>Vista tienda Vendedor</title>
+    <!-- >>> Sección CSS principal -->
+    <link rel="stylesheet" href="/frontend/public/css/main.css">
+    <!-- >>> Sección JS componentes -->
+    <script src="/frontend/public/js/components/navbar_client_view.js"></script>
+    <script type="module">
+      import { loadCardsStore } from "/frontend/public/js/components/car.js";
+      import { initCommentsSidebar } from "/frontend/public/js/components/comments.js";
+
+      document.addEventListener("DOMContentLoaded", () => {
+        loadCardsStore(".cards-store__container");
+        initCommentsSidebar();
+      });
+    </script>
+    <script src="/frontend/public/js/components/search_bar.js"></script>
+    <script src="/frontend/public/js/components/client_view.js"></script>
+    <script src="/frontend/public/js/components/footer.js"></script>
+    <script src="/frontend/public/js/components/hero_seller.js" defer></script> 
+</head>
+<body>
+  <section class="section-footer-content">
+    <!-- >>> Sección Navbar-->
+    <nav>
+        <div class="navbar_client_view"></div>
+    </nav>
+    <!-- Sidebar Comentarios -->
+    <section class="comments_users">
+      <div class="comments-userss-container"></div>
+      <div class="comments-overlay"></div>
+    </section>
+
+    <!-- >>> Sección Imagen principal de la tienda -->
+    <section class="hero">
+      <div class="hero-seller__container"></div>
+    </section>
+    <!-- >>> Sección Barra de busqueda -->
+    <section class="seeker_products_list">
+      <div class="search-bar-container"></div>
+    </section>
+    <section class="comments_users">
+        <div class="comments-userss-container"></div>
+        <div class="comments-overlay"></div>
+     </section>
+
+    <section class="products-cards-clients-viwes">
+        <div class="cards-store__container"></div>
+    </section>
+    <!-- >>> Sección Tarjetas de productos de la tienda -->
+  <!-- >>> Sección Footer -->
+  <footer class="footer-seller-cards-view">
+      <div class="footer-container"></div>
+  </footer>
+</body>
+</html>
+
+    
+ 
