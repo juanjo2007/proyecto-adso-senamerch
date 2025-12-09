@@ -307,7 +307,7 @@
     position: absolute;
     bottom: 304px; 
     left: 188px;
- }
+  }
   .product-card__like-btn {
     position: absolute;
     top: 328px;
@@ -317,5 +317,10 @@
     position: absolute;
     top: 328px;
     right: 168px;
+  }
+  .product-card__profile-store-tooltip {  
+    position: absolute;
+    bottom: 304px;
+    left: 304px;
   }
 }
