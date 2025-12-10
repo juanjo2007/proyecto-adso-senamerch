@@ -16,7 +16,7 @@
 
   cursor: pointer;
   transition: background .2s, transform .15s;
-  margin: 2.4rem;
+  margin: var(--gap-xxs);
 }
 
 .mini-card-products:hover {

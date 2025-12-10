@@ -11,15 +11,20 @@
     document.addEventListener("DOMContentLoaded", () => { loadCards(".cards-home__container");});
   </script>
   <script src="/frontend/public/js/components/navbar.js" defer></script>
+  <script src="/frontend/public/js/components/navabar_go_go.js" defer></script>
   <script src="/frontend/public/js/components/nav_bar_sena.js" defer></script>
   <script src="/frontend/public/js/components/hero.js" defer></script>
   <script src="/frontend/public/js/components/footer.js" defer></script>
+  <script src="/frontend/public/js/components/footer_go_go.js" defer></script>
   <script src="/frontend/public/js/components/search_bar.js" defer></script>
   <script src="/frontend/public/js/components/navbar_product_category.js" defer></script>
 </head>
 <body>  
   <section class="section-footer-content">
     <!-- >>> Sección logo sena-->
+    <nav class="navbar-go-go">
+      <div class="govco-container__one"></div>
+    </nav>
     <nav class="navbar-sena-index-view">
       <div class="navbar_sena_container"></div>
     </nav>
@@ -31,14 +36,15 @@
     <section class="hero-index-view">
       <div class="hero__container"></div>
     </section>
-    <!-- >>> Sección Barra de busqueda -->
-    <section class="seeker-index-view">
-      <div class="search-bar-container"></div>
-    </section>
+    <section class="search-category-grid">
 
-    <nav class="nav">
-      <div class="navbar-product-category-container"></div>
-    </nav>
+      <div class="search-bar-container"></div>
+
+      <nav class="nav">
+        <div class="navbar-product-category-container"></div>
+      </nav>
+
+    </section>
     <!-- >>> Sección Tarjetas de productos de la página-->
     <section class="products-cards-index-view">
       <div class="cards-home__container"></div>
@@ -48,5 +54,10 @@
   <footer class="footer-index-view">
     <div class="footer-container"></div>
   </footer>
+  <footer class="footer-index-view">
+    <div class="govco-container__two"></div>
+  </footer>
+  
+  
 </body>
 </html>
