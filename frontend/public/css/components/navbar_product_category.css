@@ -15,7 +15,7 @@
     align-items: center;
     gap: 1.6rem; 
     background-color: var(--secundary-950);
-    padding: var(--gap-sm);
+    padding: var(--gap-xxxs);
     background-color: var(--secundary-950);
     border-top-right-radius: 100px;
     border-bottom-right-radius: 100px;
@@ -34,7 +34,8 @@
     display: flex;
     justify-content: space-between;
     align-items: center;
-    background-color: var(--primary-500);
+    border-radius: 48px;
+    background-color: var(--secundary-950);
     font-family: var(--font-primary);
     border: 2px solid var(--secundary-400);
 }
@@ -46,7 +47,8 @@
 .navbar_product_category__title--client {
     font-size: var(--fs-md);
     font-family: var(--font-primary-bold);
-    color: var(--secundary-950);
+    color: var(--white);
+    margin-left: 2.4rem;
 }
 .navbar_product_category__title--SenaMerch {
     font-size: 0; 
@@ -64,9 +66,10 @@
     /* gap: var(--gap-md); */
 }
 .navbar_product_category__img {
-    width: 64px;
-    height: 64px;
+    width: 48px;
+    height: 48px;
     vertical-align: -12px;
+    margin-left: 2.4rem;
 
 }
 .navbar_product_category__letter--1 { color: var(--secundary-400); }
@@ -172,7 +175,8 @@
     }
     .navbar_product_category {
         height: 100%;
-        min-height: none;
+        min-height: 120px;
+
         max-height: none;
     }
 }
