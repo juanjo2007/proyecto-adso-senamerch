@@ -4,7 +4,7 @@
   padding-block: 2.4rem; 
 }
 .store-form {
-  border: 1px solid var(--secundary-900);
+  border: 2px solid var(--secundary-400);
   width: fit-content;                
   max-width: fit-content;            
   padding: var(--gap-lg);
@@ -51,7 +51,7 @@
   padding: var(--padding-top) var(--padding-right) var(--padding-bottom) var(--padding-left);
   font-size: var(--fs-xs);
   color: var(--gray-600);
-  border: 1px solid var(--secundary-900);
+  border: 2px solid var(--secundary-400);
   border-radius: 8px;
   background-color: var(--white);
   width: 360px;                      

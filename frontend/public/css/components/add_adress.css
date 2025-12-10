@@ -8,7 +8,7 @@
   background-color: var(--white);
   padding: var(--gap-md);
   border-radius: 1.2rem;
-  border: 1px solid var(--secundary-900);
+  border: 2px solid var(--secundary-400);
   box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
   width: 100%;
   max-width: 700px;
@@ -41,7 +41,7 @@
 }
 .address-form__input {
   padding: var(--padding-top) var(--padding-right);
-  border: 1px solid var(--secundary-900);
+  border: 2px solid var(--secundary-400);
   border-radius: 0.6rem;
   font-family: var(--font-secondary);
   font-size: var(--fs-xs);

@@ -4,6 +4,7 @@
   min-height: 86.8vh;
   background: var(--white);
   font-family: var(--font-primary);
+  border-right: 2px solid var(--secundary-400);
 }
 .admin-layout__container {
   display: grid;

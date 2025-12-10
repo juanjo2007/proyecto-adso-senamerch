@@ -111,6 +111,7 @@
   left: 232px;
   transform: translateX(-50%);
   background-color: var(--secundary-950);
+  border: 2px solid var(--secundary-400);
   color: var(--white);
   padding: 4px 8px;
   font-size: var(--fs-xxxs);
@@ -167,6 +168,7 @@
   margin: 0;
   background: var(--secundary-950);
   border-radius: 8px;
+  border: 2px solid var(--secundary-400);
   box-shadow: 0 4px 14px rgba(0,0,0,.18);
   display: none; 
   width: 158px;
@@ -216,6 +218,7 @@
   left: 88px;
   transform: translateX(-50%);
   background-color: var(--secundary-950);
+  border: 2px solid var(--secundary-400);
   color: var(--white);
   padding: 4px 10px;
   border-radius: 6px;
@@ -302,6 +305,33 @@
   background: var(--tertiary-500);
   border: solid 2px var(--tertiary-950)
 } 
+/* Tooltip general para los botones */
+.product-card__like-tooltip,
+.product-card__dislike-tooltip {
+  position: absolute;
+  top: 110%;                 /* aparece debajo del botón */
+  left: 50%;
+  transform: translateX(-50%);
+  background-color: var(--secundary-950);
+  border: 2px solid var(--secundary-400);
+  color: var(--white);
+  font-size: var(--fs-xxxs);
+  font-family: var(--font-primary-semibold);
+  padding: 4px 8px;
+  border-radius: 6px;
+  white-space: nowrap;
+  opacity: 0;
+  pointer-events: none;
+  transition: opacity 0.2s ease-in-out;
+  z-index: 40;
+}
+
+/* Mostrar tooltip al pasar el mouse */
+.product-card__like-btn:hover .product-card__like-tooltip,
+.product-card__like-btn--dislike:hover .product-card__dislike-tooltip {
+  opacity: 1;
+}
+
  @media (width < 640px) {
   .product-card__profile-store-tooltip {
     position: absolute;
@@ -311,12 +341,12 @@
   .product-card__like-btn {
     position: absolute;
     top: 328px;
-    right: 204px; 
+    right: 210px; 
   }
   .product-card__like-btn--dislike {
     position: absolute;
     top: 328px;
-    right: 168px;
+    right: 172px;
   }
   .product-card__profile-store-tooltip {  
     position: absolute;

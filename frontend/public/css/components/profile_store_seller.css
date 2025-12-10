@@ -13,8 +13,8 @@
 /* PANEL / CARD */
 .store-profile__card {
   background: var(--white);
-  border: 1px solid var(--secundary-900);
-  border-radius: 1.2rem;
+  border: 2px solid var(--secundary-400);
+  border-radius: 24px;
   padding: var(--gap-lg);
   box-shadow: 0 4px 12px rgba(0,0,0,0.1);
 
@@ -175,7 +175,7 @@
 .store-profile__field {
   display: flex;
   justify-content: space-between;
-  border-bottom: 1px dashed var(--secundary-900);
+  border-bottom: 2px dashed var(--secundary-400);
   padding-bottom: 0.4rem;
 }
 .store-profile__label {

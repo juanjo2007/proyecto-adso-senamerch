@@ -9,7 +9,7 @@
   background: var(--white);
   padding: var(--gap-xl);
   border-radius: 14px;
-  border: 1px solid var(--secundary-900);
+  border: 2px solid var(--secundary-400);
   box-shadow: 0 4px 14px rgba(0,0,0,0.08);
 }
 .orders-panel__tabs {
@@ -23,7 +23,7 @@
   border-radius: 8px;
   font-size: var(--fs-xs);
   cursor: pointer;
-  border: 1px solid transparent;
+  border: 2px solid var(--secundary-400);
   transition: 0.25s ease;
   font-weight: 600;
 }
@@ -40,14 +40,14 @@
   background: var(--secundary-600);
   color: var(--white);
   border-radius: 8px;
-  border: 1px solid var(--secundary-900);
+  border: 2px solid var(--secundary-400);
 }
 .orders-panel__list {
   display: grid;
   gap: var(--gap-lg);
 }
 .order-card {
-  border: 1px solid var(--secundary-800);
+  border: 2px solid var(--secundary-400);
   border-radius: 14px;
   padding: var(--gap-lg);
   display: flex;
@@ -106,7 +106,7 @@
   background: var(--secundary-600);
   border-radius: 10px;
   color: var(--white);
-  border: 1px solid var(--secundary-900);
+  border: 2px solid var(--secundary-400);
 }
 .order-card__product-name {
   font-weight: 600;

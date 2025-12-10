@@ -3,7 +3,7 @@
   margin: 40px auto;
   padding: var(--gap-md);
   background: var(--white);
-  border: 1px solid var(--secundary-900);
+  border: 2px solid var(--secundary-400);
   border-radius: 8px;
   color: var(--gray-950);
   font-family: var(--font-primary);
@@ -19,7 +19,7 @@
   width: 100%;
   font-size: var(--fs-xs);
   background-color: var(--white);
-  border: 1px solid var(--secundary-900);
+  border: 2px solid var(--secundary-400);
   box-shadow: 0 2px 6px var(--gray-200);
   border-radius: 6px;
   overflow: hidden;
@@ -28,13 +28,13 @@
   background: var(--gray-500);
   font-weight: 600;
   padding: var(--gap-xs);
-  border: 1px solid var(--secundary-900);
+  border: 2px solid var(--secundary-400);
   color: var(--gray-950);
   text-align: center;
 }
 .users__table-cell {
   color: var(--gray-950);
-  border: 1px solid var(--secundary-900);
+  border: 2px solid var(--secundary-400);
   padding: var(--gap-xxs);
   text-align: center;
 }
