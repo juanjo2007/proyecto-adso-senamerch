@@ -1,16 +1,28 @@
 .verify {
   display: flex;
-  align-items: center;
   box-sizing: border-box;
   overflow: hidden;
-  min-height: 100%;
+  /* min-height: 100vh; */
+  padding-block: 2.4rem;
+
+  /* Fondo con imagen */
+  background-image:
+    linear-gradient(
+      rgba(0, 0, 0, 0.2), 
+      rgba(0, 0, 0, 0.2)
+    ),
+    url("/frontend/public/assets/img/img_contact.jpg");
+
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
 }
 .verify__container {
-  border: 1px solid var(--secundary-900);
+  border: 2px solid var(--secundary-400);
   background-color: var(--white);
   padding: var(--gap-lg);
   width: 100%;
-  border-radius: 8px;
+  border-radius: 24px;
   font-family: var(--font-primary);
   display: flex;
   flex-direction: column;
@@ -44,7 +56,7 @@
   height: 50px;
   text-align: center;
   font-size: var(--fs-md);
-  border: 1px solid var(--secundary-900);
+  border: 2px solid var(--secundary-400);
   border-radius: 8px;
   margin: var(--gap-xxs);
   color: var(--gray-900);

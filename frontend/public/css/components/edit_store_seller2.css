@@ -9,10 +9,10 @@
   width: 100%;
   max-width: fit-content;
   background-color: var(--white);
-  border-radius: 12px;
+  border-radius: 24px;
   padding: var(--gap-lg);
   box-sizing: border-box;
-  border: 1px solid var(--secundary-900);
+  border: 2px solid var(--secundary-400);
   margin: 24px auto;
   display: flex;
   flex-direction: column;
@@ -99,8 +99,8 @@
 .edit-store-seller__textarea {
   padding: var(--padding-top) var(--padding-right)
           var(--padding-bottom) var(--padding-left);
-  border: 1px solid var(--secundary-900);
-  border-radius: 8px;
+  border: 2px solid var(--secundary-400);
+  border-radius: 12px;
   font-size: var(--fs-xs);
   font-family: var(--font-primary);
   color: var(--gray-950);
@@ -121,8 +121,8 @@
 .edit-store-seller__input {
   padding: var(--padding-top) var(--padding-right)
           var(--padding-bottom) var(--padding-left);
-  border: 1px solid var(--secundary-900);
-  border-radius: 8px;
+  border: 2px solid var(--secundary-400);
+  border-radius: 12px;
   font-size: var(--fs-xs);
   font-family: var(--font-primary);
   color: var(--gray-600);

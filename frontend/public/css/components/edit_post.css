@@ -1,24 +1,33 @@
 .edit-product-one {
   display: flex;
   box-sizing: border-box;
-  padding-block: 2.4rem;
   overflow: hidden;
-  min-height: 100%;
+  padding-block: 2.4rem;
+  /* Fondo con imagen */
+  background-image:
+  linear-gradient(
+  rgba(0, 0, 0, 0.2), 
+  rgba(0, 0, 0, 0.2)
+  ),
+  url("/frontend/public/assets/img/hortalizas-portada.png");
+
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
 }
 .edit-product-one__wrapper {
-  border: 1px solid var(--secundary-900);
+  border: 2px solid var(--secundary-400);
   background-color: var(--white);
   padding: var(--gap-lg);
   width: 100%;
-  border-radius: 8px;
+  border-radius: 24px;
   font-family: var(--font-primary);
   display: flex;
   flex-direction: column;
-  margin: 24px;
   box-sizing: border-box;
 }
 @media (width > 640px) {
-  .edit-product-one {
+  .edit-product-one__wrapper {
     margin-inline: var(--gap-lg);
   }
   .edit-product-one__wrapper {
@@ -100,8 +109,8 @@
 }
 .edit-product-one__input {
   padding: var(--padding-top) var(--padding-right) var(--padding-bottom) var(--padding-left);
-  border: 1px solid var(--secundary-900);
-  border-radius: 8px;
+  border: 2px solid var(--secundary-400);
+  border-radius: 12px;
   font-size: var(--fs-xs);
   outline: none;
   transition: border 0.3s, box-shadow 0.3s;

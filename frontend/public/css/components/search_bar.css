@@ -4,7 +4,7 @@
   align-items: center;
   justify-content: flex-start;
   background: var(--white);
-  border: 1px solid var(--secundary-900);
+  border: 2px solid var(--secundary-400);
   border-radius: var(--gap-xs);
   padding: var(--padding-top) var(--padding-right) var(--padding-bottom) var(--padding-left);
   gap: var(--gap-sm); 
