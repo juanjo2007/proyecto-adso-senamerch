@@ -1,3 +1,5 @@
+import { initCommentsSidebar } from "/frontend/public/js/components/comments.js";
+
 export async function loadCards(containerSelector) {
   const container = document.querySelector(containerSelector);
   if (!container) return;
@@ -5,7 +7,7 @@ export async function loadCards(containerSelector) {
   try {
     const [templateRes, dataRes] = await Promise.all([
       fetch("/frontend/public/views/components/card.html"),
-      fetch("/frontend/public/data/cards.json"),
+      fetch("/frontend/public/data/products.json"),
     ]);
 
     if (!templateRes.ok || !dataRes.ok) {
@@ -15,22 +17,43 @@ export async function loadCards(containerSelector) {
     const template = await templateRes.text();
     const products = await dataRes.json();
 
-    products.forEach(card => {
+    products.forEach(product => {
       let html = template
-        .replaceAll("{{image}}", card.image)
-        .replaceAll("{{name}}", card.name)
-        .replaceAll("{{price}}", card.price);
+        .replaceAll("{{name}}", product.name)
+        .replaceAll("{{price}}", product.price)
+        .replaceAll("{{discount}}", product.discount)
+        .replaceAll("{{image}}", product.image)
+        .replaceAll("{{store_logo}}", product.store_logo)
+        .replaceAll("{{store_name}}", product.store_name);
 
       container.insertAdjacentHTML("beforeend", html);
     });
 
-    // === Agregar redirección de los botones "Comprar" ===
-    const buyButtons = container.querySelectorAll(".card__pay");
+    // 🔥 Inicializa sidebar
+    initCommentsSidebar();
+
+    // Like
+    container.addEventListener("click", (event) => {
+      const btn = event.target.closest(".product-card__like-btn");
+      if (!btn || !container.contains(btn)) return;
+      btn.classList.toggle("product-card__like-btn--active");
+    });
+
+    // Dislike
+    container.addEventListener("click", (event) => {
+      const btn = event.target.closest(".product-card__like-btn--dislike");
+      if (!btn || !container.contains(btn)) return;
+      btn.classList.toggle("product-card__like-btn--active--dislike");
+    });
+
+    // Comprar
+    const buyButtons = container.querySelectorAll(".product-card__pay");
     buyButtons.forEach(btn => {
       btn.addEventListener("click", () => {
-        window.location.href = "product_description.html";
+        window.location.href = "quantity_container.html";
       });
     });
+
   } catch (error) {
     console.error("Error cargando las cards:", error);
   }

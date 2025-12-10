@@ -7,27 +7,26 @@
     <!-- >>> Sección CSS principal -->
     <link rel="stylesheet" href="/frontend/public/css/main.css">
     <!-- >>> Sección JS componentes -->
-    <script src="/frontend/public/js/components/navbar_seller_view.js"></script>
+    <script src="/frontend/public/js/components/navbar_shopping_cart.js" defer></script>
     <script type="module">
-      import { loadSellercards } from "/frontend/public/js/components/seller_card.js";
+      import { loadCardsStore } from "/frontend/public/js/components/car.js";
       import { initCommentsSidebar } from "/frontend/public/js/components/comments.js";
 
       document.addEventListener("DOMContentLoaded", () => {
-        loadSellercards(".seller-cards__container");
-        initCommentsSidebar(); // ✅ esto inyecta el sidebar
+        loadCardsStore(".cards-store__container");
+        initCommentsSidebar();
       });
     </script>
     <script src="/frontend/public/js/components/search_bar.js"></script>
     <script src="/frontend/public/js/components/client_view.js"></script>
     <script src="/frontend/public/js/components/footer.js"></script>
     <script src="/frontend/public/js/components/hero_seller.js" defer></script> 
-    <script src="/frontend/public/js/components/publications_gestor5.js" defer></script>
 </head>
 <body>
   <section class="section-footer-content">
     <!-- >>> Sección Navbar-->
-    <nav class="navbar-seller-cards-view">
-        <div class="navbar_seller_view"></div>
+    <nav class="navbar_shopping_cart">
+      <div class="navbar-container-qqqq-qqq"></div>
     </nav>
     <!-- Sidebar Comentarios -->
     <section class="comments_users">
@@ -43,15 +42,15 @@
     <section class="seeker_products_list">
       <div class="search-bar-container"></div>
     </section>
-    
-    <section class="sellers_product_list">
-        <div class="publications-gestor-five"></div>
+    <section class="comments_users">
+        <div class="comments-userss-container"></div>
+        <div class="comments-overlay"></div>
+     </section>
+
+    <section class="products-cards-clients-viwes">
+        <div class="cards-store__container"></div>
     </section>
     <!-- >>> Sección Tarjetas de productos de la tienda -->
-    <section class="products-cards">
-      <div class="seller-cards__container"></div>
-    </section>
-  </section>
   <!-- >>> Sección Footer -->
   <footer class="footer-seller-cards-view">
       <div class="footer-container"></div>

@@ -1,63 +1,80 @@
-<section class="shopping-cart">
-  <h2 class="shopping-cart__title">Carrito de compras</h2>
+<article class="product-card">
 
-  <!-- Lista de productos -->
-  <ul class="shopping-cart__list">
-    <!-- Producto 1 -->
-    <li class="shopping-cart__item">
+  <!-- Menú tres puntos -->
+  <div class="product-card__actions">
+
+    <!-- Botón Like -->
+    <button class="product-card__like-btn" aria-label="Me gusta">
       <img 
-        src="/frontend/public/assets/img/tomato_image.png" 
-        alt="Tomate fresco" 
-        class="shopping-cart__item-image"
-      >
-      <div class="shopping-cart__item-details">
-        <h3 class="shopping-cart__item-name">Tomate del Valle</h3>
-        <p class="shopping-cart__item-price">$3.000 Kilo</p>
-        <p class="shopping-cart__item-quantity">Cantidad: 2</p>
-        <p class="shopping-cart__item-unit">Kilogramos</p>
-      </div>
-
-      <!-- Botón eliminar -->
-      <form class="shopping-cart__remove-form" action="/eliminar-producto" method="POST">
-        <input type="hidden" name="producto" value="tomate-del-valle">
-        <button type="submit" class="shopping-cart__remove-button" aria-label="Eliminar producto">
-          <img src="/frontend/public/assets/icons/delete.svg" alt="Eliminar">
-        </button>
-      </form>
-    </li>
-
-    <!-- Producto 2 -->
-    <li class="shopping-cart__item">
+        src="/frontend/public/assets/icons/heart.svg" 
+        alt="Icono me gusta"
+        class="product-card__like-icon"
+      />
+    </button>
+    <button class="product-card__like-btn--dislike" aria-label="Me gusta">
       <img 
-        src="/frontend/public/assets/img/lettuce_image.png" 
-        alt="Papa roja" 
-        class="shopping-cart__item-image"
-      >
-      <div class="shopping-cart__item-details">
-        <h3 class="shopping-cart__item-name">Lechuga</h3>
-        <p class="shopping-cart__item-price">$5.000 Kilo</p>
-        <p class="shopping-cart__item-quantity">Cantidad: 1</p>
-        <p class="shopping-cart__item-unit">Libras</p>
-      </div>
+        src="/frontend/public/assets/icons/heart-off.svg" 
+        alt="Icono me gusta"
+        class="product-card__like-icon--dislike"
+      />
+    </button>
 
-      <!-- Botón eliminar -->
-      <form class="shopping-cart__remove-form" action="/eliminar-producto" method="POST">
-        <input type="hidden" name="producto" value="papa-roja">
-        <button type="submit" class="shopping-cart__remove-button" aria-label="Eliminar producto">
-          <img src="/frontend/public/assets/icons/delete.svg" alt="Eliminar">
-        </button>
-      </form>
-    </li>
-  </ul>
+    <!-- Menú tres puntos -->
+    <div class="product-card__menu">
+      <button class="product-card__menu-btn">⋮</button>
 
-  <!-- Resumen del carrito -->
-  <div class="shopping-cart__summary">
-    <p class="shopping-cart__total">Total: <strong class="shopping-cart__total-price">$11.000</strong></p>
-  </div>
-    <div class="shopping-cart__actions-secundary">
-      <button type="button" class="btn-secundary btn-secundary-style shopping-cart__continue" aria-label="Continuar comprando">
-        Continuar comprando
-        <img src="/frontend/public/assets/icons/continue.svg" alt="" class="btn-secundary__icon shopping-cart__icon-secundary" >
-      </button>
+      <ul class="product-card__menu-dropdown">
+        <li>
+          <a href="#" class="product-card__menu-item" data-action="open-comments">
+            Dejar un comentario
+            <img 
+              src="/frontend/public/assets/icons/contact.svg" 
+              alt="Icono me gusta"
+              class="product-card__menu-item-icon"
+             />
+          </a>
+        </li>
+      </ul>
     </div>
-</section>
+
+  </div>
+
+  <!-- Header: nombre y precio -->
+  <div class="product-card__header">
+    <h2 class="product-card__title">{{name}}</h2>
+    <p class="product-card__price">$ {{price}} / kilo</p>
+    <p class="product-card__discount">{{discount}} % de descuento</p>
+  </div>
+  <!-- Imagen grande del producto (ahora con link y tooltip) -->
+  <a href="product_description.html" class="product-card__image-link">
+    <div class="product-card__image-wrapper">
+      <img 
+        src="{{image}}"
+        alt="Imagen de {{name}}"
+        class="product-card__image"
+      />
+    </div>
+
+    <!-- Tooltip -->
+    <span class="product-card__image-tooltip">
+      Visualizar Producto
+      <img 
+        src="/frontend/public/assets/icons/eye.svg"
+        alt="Icono visualizar"
+        class="product-card__image-tooltip-icon"
+      />
+    </span>
+  </a>
+  <!-- Botones -->
+  <div class="product-card__footer--end">
+    <button type="button" class="btn btn--primary product-card__pay">
+      Comprar
+      <img 
+        src="/frontend/public/assets/icons/cash-button.svg"
+        alt="Icono Comprar"
+        class="btn__icon product-card__icon"
+      />
+    </button>
+  </div>
+
+</article>

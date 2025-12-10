@@ -4,19 +4,19 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">    
     <title>Vista tienda Vendedor</title>
+
     <!-- >>> Sección CSS principal -->
     <link rel="stylesheet" href="/frontend/public/css/main.css">
-    <!-- >>> Sección JS componentes -->
-    <script src="/frontend/public/js/components/navbar_seller_view.js"></script>
-    <script type="module">
-      import { loadSellercards } from "/frontend/public/js/components/seller_card.js";
-      import { initCommentsSidebar } from "/frontend/public/js/components/comments.js";
 
+    <!-- >>> Sección JS componentes -->
+    <script type="module"> 
+      import { loadProductCards } from "/frontend/public/js/components/product_card.js";
       document.addEventListener("DOMContentLoaded", () => {
-        loadSellercards(".seller-cards__container");
-        initCommentsSidebar(); // ✅ esto inyecta el sidebar
+        loadProductCards(".product-cards__container"); 
       });
     </script>
+
+    <script src="/frontend/public/js/components/navbar_seller_view.js"></script>
     <script src="/frontend/public/js/components/search_bar.js"></script>
     <script src="/frontend/public/js/components/client_view.js"></script>
     <script src="/frontend/public/js/components/footer.js"></script>
@@ -25,20 +25,17 @@
 </head>
 <body>
   <section class="section-footer-content">
+
     <!-- >>> Sección Navbar-->
     <nav class="navbar-seller-cards-view">
         <div class="navbar_seller_view"></div>
     </nav>
-    <!-- Sidebar Comentarios -->
-    <section class="comments_users">
-      <div class="comments-userss-container"></div>
-      <div class="comments-overlay"></div>
-    </section>
 
     <!-- >>> Sección Imagen principal de la tienda -->
     <section class="hero">
       <div class="hero-seller__container"></div>
     </section>
+
     <!-- >>> Sección Barra de busqueda -->
     <section class="seeker_products_list">
       <div class="search-bar-container"></div>
@@ -47,17 +44,18 @@
     <section class="sellers_product_list">
         <div class="publications-gestor-five"></div>
     </section>
+
     <!-- >>> Sección Tarjetas de productos de la tienda -->
-    <section class="products-cards">
-      <div class="seller-cards__container"></div>
+    <section class="card_products_content">
+      <!-- 🔥 ÚNICO CAMBIO HECHO: ESTE CONTENEDOR -->
+      <div class="product-cards__container"></div>
     </section>
+
   </section>
+
   <!-- >>> Sección Footer -->
   <footer class="footer-seller-cards-view">
       <div class="footer-container"></div>
   </footer>
 </body>
 </html>
-
-    
- 

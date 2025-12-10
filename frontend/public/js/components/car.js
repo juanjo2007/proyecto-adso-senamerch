@@ -1,60 +1,60 @@
-document.addEventListener('DOMContentLoaded', function () {
-  const cartContainer = document.querySelector('.shopping-car-container');
+import { initCommentsSidebar } from "/frontend/public/js/components/comments.js";
 
-  if (cartContainer) {
-    fetch("/frontend/public/views/components/car.html")
-      .then(response => {
-        if (!response.ok) throw new Error("Error al cargar car.html");
-        return response.text();
-      })
-      .then(data => {
-        cartContainer.innerHTML = data;
+export async function loadCardsStore(containerSelector) {
+  const container = document.querySelector(containerSelector);
+  if (!container) return;
 
-        // === Seleccionamos elementos ===
-        const removeButtons = cartContainer.querySelectorAll('.shopping-cart__remove-button');
-        const continueButton = cartContainer.querySelector('.shopping-cart__continue');
+  try {
+    const [templateRes, dataRes] = await Promise.all([
+      fetch("/frontend/public/views/components/car.html"),
+      fetch("/frontend/public/data/products.json"),
+    ]);
 
-        // === 🗑️ Funcionalidad: Eliminar producto del carrito ===
-        removeButtons.forEach(button => {
-          button.addEventListener('click', (e) => {
-            e.preventDefault(); // Evita el envío del form
-            const item = button.closest('.shopping-cart__item');
-            if (item) {
-              item.remove(); // Elimina el producto del DOM
+    if (!templateRes.ok || !dataRes.ok) {
+      throw new Error("Error al cargar el componente o los datos");
+    }
 
-              // Actualizar el total (simple: volver a calcular con base en elementos restantes)
-              updateCartTotal();
-            }
-          });
-        });
+    const template = await templateRes.text();
+    const products = await dataRes.json();
 
-        // === 🛒 Funcionalidad: Continuar comprando ===
-        if (continueButton) {
-          continueButton.addEventListener('click', () => {
-            window.location.href = "login.html";
-          });
-        }
+    products.forEach(product => {
+      let html = template
+        .replaceAll("{{name}}", product.name)
+        .replaceAll("{{price}}", product.price)
+        .replaceAll("{{discount}}", product.discount)
+        .replaceAll("{{image}}", product.image)
+        .replaceAll("{{store_logo}}", product.store_logo)
+        .replaceAll("{{store_name}}", product.store_name);
 
-        // === 🔢 Función auxiliar: recalcular total del carrito ===
-        function updateCartTotal() {
-          const items = cartContainer.querySelectorAll('.shopping-cart__item');
-          let total = 0;
+      container.insertAdjacentHTML("beforeend", html);
+    });
 
-          items.forEach(item => {
-            const priceText = item.querySelector('.shopping-cart__item-price').textContent.replace(/[^0-9]/g, '');
-            const quantityText = item.querySelector('.shopping-cart__item-quantity').textContent.replace(/[^0-9]/g, '');
-            const price = parseFloat(priceText);
-            const quantity = parseInt(quantityText);
-            if (!isNaN(price) && !isNaN(quantity)) total += price * quantity;
-          });
+    // 🔥 Inicializa sidebar
+    initCommentsSidebar();
 
-          const totalDisplay = cartContainer.querySelector('.shopping-cart__total-price');
-          if (totalDisplay) totalDisplay.textContent = `$${total.toLocaleString('es-CO')}`;
-        }
+    // Like
+    container.addEventListener("click", (event) => {
+      const btn = event.target.closest(".product-card__like-btn");
+      if (!btn || !container.contains(btn)) return;
+      btn.classList.toggle("product-card__like-btn--active");
+    });
 
-      })
-      .catch(error => console.error("Error:", error));
-  } else {
-    console.warn("No se encontró '.shopping-car-container' en el HTML.");
+    // Dislike
+    container.addEventListener("click", (event) => {
+      const btn = event.target.closest(".product-card__like-btn--dislike");
+      if (!btn || !container.contains(btn)) return;
+      btn.classList.toggle("product-card__like-btn--active--dislike");
+    });
+
+    // Comprar
+    const buyButtons = container.querySelectorAll(".product-card__pay");
+    buyButtons.forEach(btn => {
+      btn.addEventListener("click", () => {
+        window.location.href = "quantity_container.html";
+      });
+    });
+
+  } catch (error) {
+    console.error("Error cargando las cards:", error);
   }
-});
+}

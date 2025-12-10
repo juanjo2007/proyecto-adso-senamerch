@@ -1,7 +1,3 @@
-/* ======================================
-   NAVBAR PRINCIPAL
-   ====================================== */
-
 .navbar_product_category {
     width: 100%;
     padding: var(--gap-xxs);
@@ -11,7 +7,6 @@
     background-color: var(--secundary-700);
     font-family: var(--font-primary);
 }
-
 .navbar_product_category--client {
     width: 100%;
     padding: var(--gap-xxs);
@@ -21,40 +16,27 @@
     background-color: var(--primary-500);
     font-family: var(--font-primary);
 }
-
-/* ======================================
-   TITULOS
-   ====================================== */
-
 .navbar_product_category__title {
     font-size: var(--fs-md);
     font-family: var(--font-primary-bold);
     color: var(--white);
 }
-
 .navbar_product_category__title--client {
     font-size: var(--fs-md);
     font-family: var(--font-primary-bold);
     color: var(--secundary-950);
 }
-
 .navbar_product_category__title--SenaMerch {
-    font-size: 0; /* h1 visual compuesto por spans */
+    font-size: 0; 
     font-family: var(--font-primary-bold);
     color: var(--white);
     margin-left: 2.4rem;
 }
-
-/* ======================================
-   LETRAS DEL LOGO
-   ====================================== */
-
 .navbar_product_category__letter {
     display: inline-block;
     font-size: var(--fs-md);
     font-family: var(--font-primary-bold);
 }
-
 .navbar_product_category__letter--1 { color: var(--secundary-200); }
 .navbar_product_category__letter--2 { color: var(--white); }
 .navbar_product_category__letter--3 { color: var(--secundary-200); }
@@ -64,21 +46,11 @@
 .navbar_product_category__letter--7 { color: var(--secundary-200); }
 .navbar_product_category__letter--8 { color: var(--white); }
 .navbar_product_category__letter--9 { color: var(--secundary-200); }
-
-/* ======================================
-   ACCIONES
-   ====================================== */
-
 .navbar_product_category__actions {
     display: flex;
     align-items: center;
     gap: var(--gap-md);
 }
-
-/* ======================================
-   LINKS
-   ====================================== */
-
 .navbar_product_category__link {
     font-size: var(--fs-xs);
     font-family: var(--font-primary-semibold);
@@ -89,7 +61,6 @@
     transition: all 0.2s ease-in-out;
     margin-right: 2rem;
 }
-
 .navbar_product_category__link--client {
     font-size: var(--fs-xs);
     font-family: var(--font-primary-semibold);
@@ -99,59 +70,43 @@
     border-radius: 6px;
     transition: all 0.2s ease-in-out;
 }
-
-/* HOVER */
 .navbar_product_category__link:hover {
     background-color: var(--tertiary-600);
     color: var(--white);
 }
-
 .navbar_product_category__link--client:hover {
     background-color: var(--tertiary-900);
     color: var(--secundary-200);
 }
-
 .navbar_product_category__link.active {
     background-color: var(--primary-300);
     color: var(--primary-950);
     font-family: var(--font-primary-bold);
     border-bottom: 2px solid var(--primary-700);
 }
-
-/* ======================================
-   ÍCONOS (corregido para alineación)
-   ====================================== */
-
 .navbar_product_category__icon {
     width: 24px;
     height: 24px;
     object-fit: contain;
-    margin-left: 0; /* Importante para evitar desplazamiento */
+    margin-left: 0; 
     vertical-align: -4px;
 }
-
-/* Links que son solo íconos en la navbar */
 .navbar_product_category__link--icon-nav-bar {
     display: flex;
     align-items: center;
     justify-content: center;
-    padding: 6px; /* Evita que el hover se vea corrido */
-    position: relative; /* Necesario para posicionar el tooltip */
+    padding: 6px; 
+    position: relative; 
 }
-
-/* ======================================
-   TOOLTIP
-   ====================================== */
-
 .navbar_product_category__tooltip {
     position: absolute;
-    bottom: -38px; /* Debajo del icono */
+    bottom: -38px;
     left: 50%;
     transform: translateX(-50%);
     background-color: var(--secundary-900);
     color: var(--white);
-    padding: 6px 8px;
-    font-size: var(--fs-xs);
+    padding: 8px 12px;
+    font-size: var(--fs-xxs);
     font-family: var(--font-primary-semibold);
     border-radius: 6px;
     white-space: nowrap;
@@ -160,16 +115,10 @@
     transition: opacity 0.2s ease-in-out;
     z-index: 20;
 }
-
 .navbar_product_category__link--icon-nav-bar:hover 
 .navbar_product_category__tooltip {
     opacity: 1;
 }
-
-/* ======================================
-   RESPONSIVE
-   ====================================== */
-
 @media (max-width: 768px) {
     .navbar_product_category {
         flex-direction: column;
@@ -180,7 +129,6 @@
         font-size: var(--fs-md);
     }
 }
-
 @media (max-width: 640px) {
     .navbar_product_category__actions {
         flex-wrap: wrap;
