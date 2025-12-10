@@ -33,7 +33,7 @@
   background-color: var(--white);
   border-radius: 1.2rem;
   box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
-  border: 1px solid var(--secundary-900);
+  border: 2px solid var(--secundary-400);
   padding: var(--gap-md);
   display: flex;
   flex-direction: column;
@@ -50,7 +50,7 @@
   font-size: var(--fs-xs);
   font-family: var(--font-primary-semibold);
   color: var(--gray-900);
-  border-bottom: 1px solid var(--secundary-900);
+  border-bottom: 2px solid var(--secundary-400);
   padding-bottom: var(--gap-xs);
 }
 

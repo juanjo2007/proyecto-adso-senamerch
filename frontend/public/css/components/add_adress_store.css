@@ -6,7 +6,7 @@
   min-height: 100%;
 }
 .address-store-form__wrapper {
-  border: 1px solid var(--secundary-900);
+  border: 2px solid var(--secundary-400);
   background-color: var(--white);
   padding: var(--gap-lg);
   width: 100%;
@@ -100,7 +100,7 @@
 }
 .address-store-form__input {
   padding: var(--padding-top) var(--padding-right) var(--padding-bottom) var(--padding-left);
-  border: 1px solid var(--secundary-900);
+  border: 2px solid var(--secundary-400);
   border-radius: 8px;
   font-size: var(--fs-xs);
   outline: none;

@@ -20,7 +20,7 @@
   padding: var(--gap-lg);
   box-shadow: 0 2px 8px rgba(0,0,0,0.06);
   font-family: var(--font-primary);
-  border: 1px solid var(--secundary-900);
+  border: 2px solid var(--secundary-400);
 }
 
 .store-orders__header {
@@ -41,7 +41,7 @@
 ========================================================= */
 .store-orders__filter {
   padding: var(--padding-top) var(--padding-right);
-  border: 1px solid var(--secundary-900);
+  border: 2px solid var(--secundary-400);
   border-radius: 8px;
   background-color: var(--secundary-600);
   font-size: var(--fs-xs);
@@ -64,7 +64,7 @@
   background-color: var(--primary-50);
   border-radius: 12px;
   padding: var(--gap-lg);
-  border: 1px solid var(--secundary-900);
+  border: 2px solid var(--secundary-400);
 
   grid-template-areas:
     "id status total"
@@ -128,7 +128,7 @@
 ========================================================= */
 .store-orders__card {
   background-color: var(--primary-50);
-  border: 1px solid var(--secundary-900);
+  border: 2px solid var(--secundary-400);
   border-radius: 10px;
   padding: var(--gap-md);
   display: flex;
@@ -138,7 +138,7 @@
 
 .store-orders__card--product {
   background-color: var(--secundary-600);
-  border: 1px solid var(--secundary-900);
+  border: 2px solid var(--secundary-400);
 }
 
 .store-orders__subtitle {

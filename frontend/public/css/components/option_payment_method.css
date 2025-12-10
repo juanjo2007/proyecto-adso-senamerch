@@ -2,7 +2,7 @@
 .payment-method {
   font-family: var(--font-primary);
   background-color: var(--white);
-  border: 1px solid var(--secundary-900);
+  border: 2px solid var(--secundary-400);
   border-radius: 8px;
   padding: var(--gap-lg);
   width: 90%;
@@ -29,7 +29,7 @@
   align-items: center;
   gap: var(--gap-sm);
   background-color: var(--white);
-  border: 1px solid var(--secundary-900);
+  border: 2px solid var(--secundary-400);
   border-radius: 8px;
   padding: var(--gap-sm) var(--gap-md);
   cursor: pointer;
@@ -68,7 +68,7 @@
   .payment-method {
     font-family: var(--font-primary);
     background-color: var(--white);
-    border: 1px solid var(--secundary-900);
+    border: 2px solid var(--secundary-400);
     border-radius: 8px;
     padding: var(--gap-lg);
     width: 100%;

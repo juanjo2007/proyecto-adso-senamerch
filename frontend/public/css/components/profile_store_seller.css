@@ -175,7 +175,7 @@
 .store-profile__field {
   display: flex;
   justify-content: space-between;
-  border-bottom: 1px dashed var(--secundary-900);
+  border-bottom: 2px dashed var(--secundary-400);
   padding-bottom: 0.4rem;
 }
 .store-profile__label {

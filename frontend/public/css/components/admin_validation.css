@@ -12,7 +12,7 @@
 }
 
 .admin-code-panel__content {
-  border: 1px solid var(--secundary-900);
+  border: 2px solid var(--secundary-400);
   background-color: var(--white);
   padding: var(--gap-lg);
   width: 100%;

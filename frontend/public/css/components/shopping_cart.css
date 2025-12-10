@@ -5,7 +5,7 @@
   gap: var(--gap-md);
   font-family: var(--font-primary);
   background: var(--white);
-  border: 1px solid var(--secundary-900);
+  border: 2px solid var(--secundary-400);
   padding: var(--gap-lg);
   border-radius: 12px;
   box-shadow: 0 2px 6px rgba(0,0,0,0.05);
@@ -35,7 +35,7 @@
   display: flex;
   align-items: flex-start;
   gap: var(--gap-md);
-  border-bottom: 1px solid var(--secundary-900);
+  border-bottom: 2px solid var(--secundary-400);
   padding-bottom: var(--gap-sm);
 }
 .shopping-cart__item-image {
