@@ -23,26 +23,31 @@
 
 /* Línea vertical */
 .navbar_separator {
+    
     width: 2px;
     height: 64px;
     background-color: var(--secundary-400);
 }
 
-.navbar_product_category--client {
+.navbar_product_category-client {
     width: 100%;
+    max-width: 800px;
     padding: var(--gap-xs);
     display: flex;
     justify-content: space-between;
     align-items: center;
     border-radius: 32px;
-    background-color: var(--secundary-950);
+    background-color: var(--white);
     font-family: var(--font-primary);
     border: 2px solid var(--secundary-400);
+    margin: 0.4rem auto;
 }
 .navbar_product_category__title {
     font-size: var(--fs-md);
     font-family: var(--font-primary-bold);
-    color: var(--white);
+    color: var(--secundary-950);
+    margin-left: 2.4rem;
+    margin-right: 2rem;
 }
 .navbar_product_category__title--client {
     font-size: var(--fs-md);
@@ -88,7 +93,7 @@
 .navbar_product_category__link {
     font-size: var(--fs-xs);
     font-family: var(--font-primary-semibold);
-    color: var(--white);
+    background-color: var(--secundary-950);
     text-decoration: none;
     padding: 8px 8px;
     border-radius: 6px;
@@ -96,15 +101,15 @@
     transition: all 0.2s ease-in-out;
     margin-right: 2rem;
 }
-.navbar_product_category__link--client {
+/* .navbar_product_category__link--client {
     font-size: var(--fs-xs);
     font-family: var(--font-primary-semibold);
     color: var(--secundary-950);
     text-decoration: none;
     padding: 8px 12px;
-    border-radius: 6px;
+    border-radius: 12px;
     transition: all 0.2s ease-in-out;
-}
+} */
 .navbar_product_category__link:hover {
     background-color: var(--tertiary-800);
     color: var(--white);
@@ -120,8 +125,24 @@
     border-bottom: 2px solid var(--primary-700);
 }
 .navbar_product_category__icon {
+    width: 24px;
+    height: 24px;
+    object-fit: contain;
+    margin-left: 2px; 
+    margin-right: 4px; 
+    vertical-align: -8px;
+}
+.navbar_product_category__icon-tittle {
     width: 32px;
     height: 32px;
+    object-fit: contain;
+    margin-left: 2px; 
+    margin-right: 4px; 
+    vertical-align: -8px;
+}
+.navbar_product_category__icon-category {
+    width: 24px;
+    height: 24px;
     object-fit: contain;
     margin-left: 2px; 
     margin-right: 4px; 
