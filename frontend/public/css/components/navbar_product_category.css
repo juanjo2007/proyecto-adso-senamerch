@@ -4,7 +4,7 @@
     display: flex;
     justify-content: space-between;
     align-items: center;
-    background-color: var(--secundary-700);
+    background-color: var(--secundary-950);
     font-family: var(--font-primary);
     border-bottom: 2px solid var(--secundary-400);
     height: 100%;
@@ -15,8 +15,8 @@
     align-items: center;
     gap: 1.6rem; 
     background-color: var(--secundary-950);
-    padding: var(--gap-xxxs);
-    background-color: var(--secundary-950);
+    padding: var(--gap-xxs);
+    padding-right: 2.4rem;
     border-top-right-radius: 100px;
     border-bottom-right-radius: 100px;
 }
@@ -30,11 +30,11 @@
 
 .navbar_product_category--client {
     width: 100%;
-    padding: var(--gap-xxs);
+    padding: var(--gap-xs);
     display: flex;
     justify-content: space-between;
     align-items: center;
-    border-radius: 48px;
+    border-radius: 32px;
     background-color: var(--secundary-950);
     font-family: var(--font-primary);
     border: 2px solid var(--secundary-400);
@@ -49,6 +49,7 @@
     font-family: var(--font-primary-bold);
     color: var(--white);
     margin-left: 2.4rem;
+    margin-right: 2rem;
 }
 .navbar_product_category__title--SenaMerch {
     font-size: 0; 
@@ -60,28 +61,27 @@
     font-size: var(--fs-md);
     font-family: var(--font-primary-bold);
 }
-.navbar_product_category__actions {
-    display: flex;
-    align-items: center;
-    /* gap: var(--gap-md); */
-}
 .navbar_product_category__img {
-    width: 48px;
-    height: 48px;
+    width: 64px;
+    height: 64px;
     vertical-align: -12px;
     margin-left: 2.4rem;
 
 }
-.navbar_product_category__letter--1 { color: var(--secundary-400); }
+.navbar_product_category__letter--1 { color: var(--white); }
 .navbar_product_category__letter--2 { color: var(--white); }
-.navbar_product_category__letter--3 { color: var(--secundary-400); }
+.navbar_product_category__letter--3 { color: var(--white); }
 .navbar_product_category__letter--4 { color: var(--white); }
-.navbar_product_category__letter--5 { color: var(--secundary-400); }
+.navbar_product_category__letter--5 { color: var(--white); }
 .navbar_product_category__letter--6 { color: var(--white); }
-.navbar_product_category__letter--7 { color: var(--secundary-400); }
+.navbar_product_category__letter--7 { color: var(--white); }
 .navbar_product_category__letter--8 { color: var(--white); }
-.navbar_product_category__letter--9 { color: var(--secundary-400); }
+.navbar_product_category__letter--9 { color: var(--white); }
 .navbar_product_category__actions {
+    display: flex;
+    align-items: center;
+}
+.navbar_product_category__actions-category {
     display: flex;
     align-items: center;
 }
@@ -120,11 +120,12 @@
     border-bottom: 2px solid var(--primary-700);
 }
 .navbar_product_category__icon {
-    width: 24px;
-    height: 24px;
+    width: 32px;
+    height: 32px;
     object-fit: contain;
-    margin-left: 0; 
-    vertical-align: -4px;
+    margin-left: 2px; 
+    margin-right: 4px; 
+    vertical-align: -8px;
 }
 .navbar_product_category__link--icon-nav-bar {
     display: flex;
@@ -177,6 +178,55 @@
         height: 100%;
         min-height: 120px;
 
-        max-height: none;
     }
+    .navbar_left_group {
+        width: 100%;
+        border-radius: 0px;
+        padding: 4px ;
+    }
+    .navbar_product_category__actions {
+        padding-bottom: 1.6rem; 
+        padding-left: 1.6rem;
+    }
+    .navbar_product_category__icon{
+        margin-left: 0px;
+        margin-right: 0px;
+    }
+    .navbar_product_category__img{
+        margin-left: 2px;
+    }
+  .navbar_product_category--client {
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    gap: 1.2rem;
+    padding: 1.2rem;
+  }
+
+  .navbar_product_category__logo {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+  }
+
+  .navbar_product_category__title--client {
+    margin: 0;
+    text-align: center;
+  }
+
+  /* GRID: 4 iconos por fila */
+  .navbar_product_category__actions-category {
+    width: 100%;
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);  /* 4 por fila */
+    gap: 1.2rem;
+    justify-items: center; /* centrar cada icono */
+    padding-bottom: 1rem;
+    padding-left: 0;
+  }
+
+  .navbar_product_category__link {
+    margin-right: 0;  /* evitar que descuadre */
+  }
+
 }

@@ -25,4 +25,8 @@
   color: var(--black); 
 }
 
-  
+@media (width < 640px) {
+    .mini-card-products{
+      margin-inline: 6rem;
+    }
+}

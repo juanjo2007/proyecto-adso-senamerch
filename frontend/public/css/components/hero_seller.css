@@ -1,16 +1,15 @@
-.hero-seller {
+.hero-store-seller {
   position: relative;
   background-image: url(/frontend/public/assets/img/store_seller.jpg);
   background-position: center;
   background-size: cover;
-  height: 100vh; 
   text-align: center;
   color: var(--secundary-200);
   overflow: hidden;
   border-bottom: 2px solid var(--secundary-400);
 }
-.hero-seller__content {
-  background-color: rgb(10 10 10 / 40%);
+.hero-store-seller__content {
+  background-color: rgb(0, 0, 0, 0.24);
   position: absolute;
   width: 100%;
   height: 100%;
@@ -21,48 +20,56 @@
   padding: var(--gap-lg);
   z-index: 2;
 }
-.hero-seller__title {
+.hero-store-seller__title {
   font-family: var(--font-primary);
   font-size: var(--fs-sm);
   margin-bottom: var(--gap-xxs);
   margin-top: var(--gap-xxs);
 }
-.hero-seller__subtitle {
+.hero-store-seller__subtitle {
   font-family: var(--font-primary);
   font-size: var(--fs-xs);
   font-family: var(--font-primary-bold);
   margin-bottom: var(--gap-xxs);
   margin-top: var(--gap-xxs);
 }
-.hero-seller__description {
+.hero-store-seller__description {
   font-family: var(--font-primary);
   font-size: var(--fs-xs);
   margin-bottom: var(--gap-xxs);
   line-height: 1.6;
 }
-.hero-seller__description--intro {
+.hero-store-seller__description--intro {
   font-family: var(--font-primary);
 }
-.hero-seller__description--extra {
+.hero-store-seller__description--extra {
   font-family: var(--font-primary-bold);
 }
-.hero-seller__description.hero__description--intro,
-.hero-seller__description.hero__description--extra {
+.hero-store-seller__description.hero__description--intro,
+.hero-store-seller__description.hero__description--extra {
   text-align: center;
 }
 @media (min-width: 768px) {
-  .hero-seller {
+  .hero-store-seller {
     height: 38vh; 
   }
 }
 @media (min-width: 1024px) {
-  .hero-seller {
+  .hero-store-seller {
     height: 30vh; 
   }
 }
 @media (min-width: 1280px) {
-  .hero-seller {
+  .hero-store-seller {
     height: 40vh; 
   }
 }
 
+@media (width < 640px) {
+    .hero-store-seller{
+      height: 100%;
+      min-height: 200px;
+      max-height: 324px;
+      
+    }
+}
