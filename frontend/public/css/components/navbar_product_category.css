@@ -187,6 +187,16 @@
         font-size: var(--fs-md);
     }
 }
+@media (width < 1024px) {
+    .navbar_product_category {
+        flex-direction: column;
+        align-items: flex-start;
+        gap: var(--gap-sm);
+    }
+    .navbar_product_category__title {
+        font-size: var(--fs-md);
+    }
+}
 @media (max-width: 640px) {
     .navbar_product_category__actions {
         flex-wrap: wrap;
@@ -236,7 +246,7 @@
   }
 
   /* GRID: 4 iconos por fila */
-  .navbar_product_category__actions-category {
+  .navbar_product_category__actions-category{
     width: 100%;
     display: grid;
     grid-template-columns: repeat(4, 1fr);  /* 4 por fila */
@@ -246,7 +256,7 @@
     padding-left: 0;
   }
 
-  .navbar_product_category__link {
+  .navbar_product_category__link--icon-nav-bar {
     margin-right: 0;  /* evitar que descuadre */
   }
 
