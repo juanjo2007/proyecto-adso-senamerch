@@ -1,0 +1,10 @@
+[
+  {
+    "name": "Tomates Chonto",
+    "price": "4.500",
+    "discount": "4",
+    "image": "/frontend/public/assets/img/tomato_image.png",
+    "store_logo": "/frontend/public/assets/img/store_seller.jpg",
+    "store_name": "Verduras La Huerta"
+  }
+]

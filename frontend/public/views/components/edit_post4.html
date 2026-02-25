@@ -1,0 +1,70 @@
+<section class="edit-post-two">
+  <div class="edit-post-two__wrapper">
+
+    <!-- HEADER -->
+    <header class="edit-post-two__header">
+      <h1 class="edit-post-two__title">Continúa editando la información del producto</h1>
+      <p class="edit-post-two__subtitle">
+        Completa o modifica la información de tu producto en <strong>SENA MERCH</strong>.
+      </p>
+    </header>
+
+    <!-- FORMULARIO -->
+    <form class="edit-post-two__form">
+
+      <!-- Grupo: Descripción -->
+      <div class="edit-post-two__group">
+        <label class="edit-post-two__label">Edita la Descripción producto</label>
+        <textarea 
+          class="edit-post-two__textarea"
+          placeholder="Describe brevemente el producto..."
+        ></textarea>
+      </div>
+      <!-- NUEVO: Envío contraentrega -->
+      <div class="edit-post-two__group">
+        <label class="edit-post-two__label">Edita el Tipo de envío</label>
+        <select class="edit-post-two__input" required>
+          <option value="" selected disabled>Selecciona una opción</option>
+          <option value="si">Sí, solo envío contraentrega</option>
+        </select>
+      </div>
+      <div class="edit-post-two__group">
+        <label class="edit-post-two__label">Edita la categoria</label>
+        <select class="edit-post-two__input" required>
+          <option value="" selected disabled>Selecciona una opción</option>
+          <option value="si">Frutas</option>
+          <option value="si">Verduras</option>
+          <option value="si">Lácteos</option>
+          <option value="si">Granos</option>
+          <option value="si">Ornamentales</option>
+          <option value="si">Cereales</option>
+          <option value="si">Oleaginosas</option>
+        </select>
+      </div>
+      <div>
+        
+      </div>
+      <!-- Grupo Botón cancelar -->
+      <div class="edit-post-two__group ">
+        <div class="edit-post-two__secondary">
+          <button class="btn-secundary btn-secundary-style edit-post-two__cancel">
+            Volver
+            <img
+            src="/frontend/public/assets/icons/return.svg" alt="Icono cancelar" class="btn-secundary__icon">
+          </button>
+        </div>
+      </div>
+
+      <!-- Grupo Botón siguiente -->
+      <div class="edit-post-two__group ">
+        <div class="edit-post-two__buttons">
+          <button type="button" class="btn btn--primary edit-post-two__save">
+            Siguiente
+            <img src="/frontend/public/assets/icons/continue.svg" alt="Icono siguiente" class="btn__icon"/>
+          </button>
+        </div>
+      </div>
+
+    </form>
+  </div>
+</section>

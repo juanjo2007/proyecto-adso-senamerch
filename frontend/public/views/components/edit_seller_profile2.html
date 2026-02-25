@@ -1,0 +1,86 @@
+<section class="edit-profile-admin"> 
+  <div class="edit-profile-admin__wrapper">
+    <header class="edit-profile-admin__header">
+      <h1 class="edit-profile-admin__title">Editar perfil Vendedor</h1>
+      <p class="edit-profile-admin__subtitle">
+        Este formulario te permite editar los datos del perfil del Vendedor.
+      </p>
+    </header>
+
+    <form class="edit-profile-admin__form">
+
+      <div class="edit-profile-admin__group">
+        <label class="edit-profile-admin__label">Tipo de usuario</label>
+        <input
+          type="text"
+          class="edit-profile-admin__input edit-profile-admin__input--readonly"
+          value="Administrador del sistema"
+          readonly
+        />
+      </div>
+      <div class="edit-profile-admin__group">
+        <label class="edit-profile-admin__label">Dirección</label>
+        <a href="/frontend/public/views/view_add_adress_seller_edit.html" class="edit-profile-admin__link">Editar dirección</a>
+        <small class="edit-profile-admin__text">Todo estará más cerca de ti.</small>
+      </div>
+
+      <div class="edit-profile-admin__group">
+        <label class="edit-profile-admin__label">Edita tu contraseña</label>
+        <div class="edit-profile-admin__password-wrapper">
+          <input
+            class="edit-profile-admin__input edit-profile-admin__input--password"
+            type="password"
+            placeholder="Contraseña"
+            required
+          />
+          <button type="button" class="edit-profile-admin__toggle-password">Mostrar</button>
+        </div>
+      </div>
+
+      <div class="edit-profile-admin__group">
+        <label class="edit-profile-admin__label">Confirma tu contraseña</label>
+        <div class="edit-profile-admin__password-wrapper">
+          <input
+            class="edit-profile-admin__input edit-profile-admin__input--password"
+            type="password"
+            placeholder="Contraseña"
+            required
+          />
+          <button type="button" class="edit-profile-admin__toggle-password">Mostrar</button>
+        </div>
+      </div>
+
+      <div class="edit-profile-admin__secondary">
+        <button
+          type="button"
+          class="btn-secundary btn-secundary-style edit-profile-admin__cancel"
+          aria-label="Cancelar edición"
+        >
+          Volver
+          <img
+            src="/frontend/public/assets/icons/return.svg"
+            alt=""
+            class="btn-secundary__icon"
+            aria-hidden="true"
+          />
+        </button>
+      </div>
+
+      <div class="edit-profile-admin__buttons">
+        <button
+          type="submit"
+          class="btn btn--primary edit-profile-admin__submit"
+          aria-label="Guardar datos del administrador"
+        >
+          Guardar datos
+          <img
+            src="/frontend/public/assets/icons/save.svg"
+            alt=""
+            class="btn__icon edit-profile-admin__icon"
+            aria-hidden="true"
+          />
+        </button>
+      </div>
+    </form>
+  </div>
+</section>

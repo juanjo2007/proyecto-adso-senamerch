@@ -1,0 +1,63 @@
+<section class="create-store">
+  <div class="create-store__wrapper">
+    <header class="create-store__header">
+      <h1 class="create-store__title">Crear tienda</h1>
+      <p class="create-store__subtitle">
+        Completa el formulario para registrar tu tienda en <strong>SENA MERCH</strong>.<br>
+        Con tu perfil podrás publicar productos y gestionar tus ventas fácilmente.
+      </p>
+    </header>
+
+    <form class="create-store__form">
+      <div class="create-store__group">
+        <label class="create-store__label">Dirección de la tienda</label>
+        <a href="view_add_adress_store.html" class="create-store__link">Agregar dirección</a>
+      </div>
+      <div class="create-store__group">
+        <label class="create-store__label">Imagen de portada</label>
+        <input 
+          type="file" 
+          class="create-store__input" 
+          accept="image/*"
+        >
+      </div>
+
+      <div class="create-store__group">
+        <label class="create-store__label">Descripción</label>
+        <textarea 
+          class="create-store__textarea" 
+          rows="4" 
+          placeholder="Escribe una breve descripción de tu tienda..." 
+          required
+        ></textarea>
+      </div>
+
+      <div class="create-store__secondary">
+        <button
+          type="button"
+          class="btn-secundary btn-secundary-style create-store__gestor"
+          aria-label="Volver"
+        >
+          Volver
+          <img
+            src="/frontend/public/assets/icons/return.svg"
+            alt=""
+            class="btn-secundary__icon"
+            aria-hidden="true"
+          />
+        </button>
+      </div>
+
+      <div class="create-store__buttons">
+        <button class="btn btn--primary create-store__continue">
+          Crear tienda
+          <img 
+            src="/frontend/public/assets/icons/create_home.svg" 
+            alt="Icono crear tienda" 
+            class="btn__icon"
+          >
+        </button>
+      </div>
+    </form>
+  </div>
+</section>

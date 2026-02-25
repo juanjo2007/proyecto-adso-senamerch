@@ -1,0 +1,155 @@
+<section class="store-content">
+  <section class="store-orders">
+    <header class="store-orders__header">
+      <h2 class="store-orders__title">Pedidos recientes</h2>
+
+      <div class="store-orders__filters">
+        <select class="store-orders__filter">
+          <option value="">Todos los estados</option>
+          <option value="pendiente">Pendientes</option>
+          <option value="entregado">Entregados</option>
+        </select>
+      </div>
+    </header>
+
+    <div class="store-orders__list">
+      <!-- =========================================================
+           ITEM DE PEDIDO
+      ========================================================= -->
+      <article class="store-orders__item">
+        <!-- ===== INFO PRINCIPAL ===== -->
+        <h3 class="store-orders__id">Pedido #0235</h3>
+        <p class="store-orders__date"><strong>Fecha:</strong> 25/10/2025</p>
+
+        <div class="store-orders__status store-orders__status--pending">
+          Pendiente
+        </div>
+
+        <div class="store-orders__total">
+          Total: <strong>$150.000</strong>
+        </div>
+
+        <!-- ===== CARD CLIENTE ===== -->
+        <div class="store-orders__card store-orders__card--client">
+          <h3 class="store-orders__subtitle">Información del cliente</h3>
+
+          <p class="store-orders__client"><strong>Nombre:</strong> Juan Pérez</p>
+          <p class="store-orders__client"><strong>Correo:</strong> JuanPerez12@gmail.com</p>
+          <p class="store-orders__client"><strong>Teléfono:</strong> 3102873825</p>
+        </div>
+
+        <!-- ===== CARD DIRECCIÓN ===== -->
+        <div class="store-orders__card store-orders__card--address">
+          <h3 class="store-orders__subtitle">Dirección del cliente</h3>
+
+          <p class="store-orders__client"><strong>Barrio:</strong> Buenos Aires</p>
+          <p class="store-orders__client"><strong>Dirección:</strong> 10 #34-36</p>
+          <p class="store-orders__client"><strong>Tipo de vía:</strong> Carrera</p>
+          <p class="store-orders__client"><strong>Código postal:</strong> 101010101</p>
+          <p class="store-orders__client"><strong>Departamento:</strong> Antioquia</p>
+          <p class="store-orders__client"><strong>Municipio:</strong> Medellín</p>
+        </div>
+
+        <!-- ===== CARD PRODUCTOS ===== -->
+        <div class="store-orders__products">
+          <h3 class="store-orders__product">Productos del pedido</h3>
+
+          <div class="store-orders__card store-orders__card--product">
+            <p class="store-orders__product-name"><strong >Tomate chonto</strong></p>
+            <p class="store-orders__product-detail">Cantidad: 4 kg</p>
+            <p class="store-orders__product-detail">Precio: $24.000</p>
+          </div>
+
+          <div class="store-orders__card store-orders__card--product">
+            <p class="store-orders__product-name"><strong>Papa pastusa</strong></p>
+            <p class="store-orders__product-detail">Cantidad: 3 kg</p>
+            <p class="store-orders__product-detail">Precio: $18.000</p>
+          </div>
+
+          <div class="store-orders__card store-orders__card--product">
+            <p class="store-orders__product-name"><strong>Cebolla cabezona</strong></p>
+            <p class="store-orders__product-detail">Cantidad: 2 kg</p>
+            <p class="store-orders__product-detail">Precio: $12.000</p>
+          </div>
+        </div>
+
+        <!-- ===== BOTÓN ===== -->
+        <div class="store-orders__primary">
+          <button type="submit" class="btn btn--primary store-orders__delivery">
+            Realizar
+            <img 
+              src="/frontend/public/assets/icons/perform.svg" 
+              alt="Icono Enviar" 
+              class="btn__icon" 
+            />
+          </button>
+        </div>
+      </article>
+
+      <!-- =========================================================
+           COPIA DEL SEGUNDO PEDIDO
+      ========================================================= -->
+      <article class="store-orders__item">
+        <h3 class="store-orders__id">Pedido #0236</h3>
+        <p class="store-orders__date"><strong>Fecha:</strong> 28/10/2025</p>
+
+        <div class="store-orders__status store-orders__status--pending">
+          En proceso
+        </div>
+
+        <div class="store-orders__total">
+          Total: <strong>$98.500</strong>
+        </div>
+
+        <!-- CARD CLIENTE -->
+        <div class="store-orders__card store-orders__card--client">
+          <h3 class="store-orders__subtitle">Información del cliente</h3>
+
+          <p class="store-orders__client"><strong>Nombre:</strong> Carlos Ruiz</p>
+          <p class="store-orders__client"><strong>Correo:</strong> carlosR@gmail.com</p>
+          <p class="store-orders__client"><strong>Teléfono:</strong> 3159902211</p>
+        </div>
+
+        <!-- CARD DIRECCIÓN -->
+        <div class="store-orders__card store-orders__card--address">
+          <h3 class="store-orders__subtitle">Dirección del cliente</h3>
+
+          <p class="store-orders__client"><strong>Barrio:</strong> La Floresta</p>
+          <p class="store-orders__client"><strong>Dirección:</strong> Calle 54 # 67</p>
+          <p class="store-orders__client"><strong>Tipo de vía:</strong> Calle</p>
+          <p class="store-orders__client"><strong>Código postal:</strong> 050030</p>
+          <p class="store-orders__client"><strong>Departamento:</strong> Antioquia</p>
+          <p class="store-orders__client"><strong>Municipio:</strong> Medellín</p>
+        </div>
+
+        <!-- PRODUCTOS -->
+        <div class="store-orders__products">
+          <h3 class="store-orders__product">Productos del pedido</h3>
+
+          <div class="store-orders__card store-orders__card--product">
+            <p class="store-orders__product-name"><strong>Aguacate hass</strong></p>
+            <p class="store-orders__product-detail">Cantidad: 2 kg</p>
+            <p class="store-orders__product-detail">Precio: $16.000</p>
+          </div>
+
+          <div class="store-orders__card store-orders__card--product">
+            <p class="store-orders__product-name"><strong>Banano</strong></p>
+            <p class="store-orders__product-detail">Cantidad: 6 unidades</p>
+            <p class="store-orders__product-detail">Precio: $5.500</p>
+          </div>
+        </div>
+
+        <div class="store-orders__primary">
+          <button type="submit" class="btn btn--primary store-orders__delivery">
+            Realizar
+            <img 
+              src="/frontend/public/assets/icons/perform.svg" 
+              alt="Icono Enviar" 
+              class="btn__icon" 
+            />
+          </button>
+        </div>
+      </article>
+    </div>
+  </section>
+</section>

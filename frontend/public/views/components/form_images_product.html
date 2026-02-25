@@ -1,0 +1,90 @@
+<section class="class main-image-upload">
+    <div class="image-upload">
+
+        <!-- Título dentro del componente -->
+        <h2 class="image-upload__title">Termina de crear el producto</h2>
+
+        <!-- Subtexto dentro del componente -->
+        <p class="image-upload__subtitle">
+            Sube hasta 6 imágenes para completar la presentación de tu producto.
+        </p>
+
+        <div class="image-upload__content">
+            
+            <!-- Sidebar con miniaturas -->
+            <div class="image-upload__sidebar">
+                <div class="image-upload__thumbnail image-upload__thumbnail--empty">
+                    <span class="image-upload__add-text">Agregar</span>
+                    <input type="file" accept="image/*" class="image-upload__input">
+                </div>
+
+                <div class="image-upload__thumbnail image-upload__thumbnail--empty">
+                    <span class="image-upload__add-text">Agregar</span>
+                    <input type="file" accept="image/*" class="image-upload__input">
+                </div>
+
+                <div class="image-upload__thumbnail image-upload__thumbnail--empty">
+                    <span class="image-upload__add-text">Agregar</span>
+                    <input type="file" accept="image/*" class="image-upload__input">
+                </div>
+
+                <div class="image-upload__thumbnail image-upload__thumbnail--empty">
+                    <span class="image-upload__add-text">Agregar</span>
+                    <input type="file" accept="image/*" class="image-upload__input">
+                </div>
+
+                <div class="image-upload__thumbnail image-upload__thumbnail--empty">
+                    <span class="image-upload__add-text">Agregar</span>
+                    <input type="file" accept="image/*" class="image-upload__input">
+                </div>
+
+                <div class="image-upload__thumbnail image-upload__thumbnail--empty">
+                    <span class="image-upload__add-text">Agregar</span>
+                    <input type="file" accept="image/*" class="image-upload__input">
+                </div>
+            </div>
+
+            <!-- Vista previa -->
+            <div class="image-upload__viewer">
+                <div class="image-upload__preview image-upload__preview--empty">
+                    <span class="image-upload__preview-text">Vista previa</span>
+                </div>
+            </div>
+
+        </div>
+        <!-- ACCIONES DEL FORMULARIO -->
+        <div class="image-upload__actions">
+
+            <!-- Botón secundario -->
+            <button
+                type="button"
+                class="btn-secundary btn-secundary-style image-upload__cancel"
+                aria-label="Volver sin crear producto"
+            >
+                Volver
+                <img
+                    src="/frontend/public/assets/icons/return.svg"
+                    alt=""
+                    class="btn-secundary__icon"
+                    aria-hidden="true"
+                />
+            </button>
+
+            <!-- Botón principal -->
+            <button
+                type="submit"
+                class="btn btn--primary image-upload__submit"
+                aria-label="Crear nuevo producto"
+            >
+                Crear producto
+                <img
+                    src="/frontend/public/assets/icons/create_product.svg"
+                    alt=""
+                    class="btn__icon"
+                    aria-hidden="true"
+                />
+            </button>
+
+        </div>
+    </div>
+</section>

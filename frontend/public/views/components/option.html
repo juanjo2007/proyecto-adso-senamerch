@@ -1,0 +1,39 @@
+<!-- Contenedor de contenido (reserva espacio debajo del header) -->
+<section class="page-content">
+  <!-- tu sección product-purchase -->
+  <section class="product-purchase">
+    <h2 class="product-purchase__title">Selecciona las opciones de compra</h2>
+    <!-- ... resto del formulario ... -->
+    <div class="product-purchase__group">
+      <label class="product-purchase__label">Tipo de envío</label>
+      <select class="product-purchase__input" required>
+        <option value="" selected disabled>Selecciona una opción</option>
+        <option value="si">Envío contraentrega</option>
+        <option value="si">Recibir en la tienda</option>
+      </select>
+    </div>
+
+    <div class="product-purchase__group">
+      <label class="product-purchase__label">Cantidad (en <span class="product-purchase__unit">kilogramos</span>):</label>
+      <input type="number" min="1" class="product-purchase__input" placeholder="Ejemplo: 2">
+    </div>
+
+    <div class="product-purchase__actions-buttons">
+
+      <div class="product-purchase__actions-buttons--secondary">
+        <button class="btn-secundary btn-secundary-style product-purchase__return">
+          Volver
+          <img src="/frontend/public/assets/icons/return.svg" alt="Icono volver" class="btn-secundary__icon">
+        </button>
+      </div>
+
+      <div class="product-purchase__actions-buttons--primary">
+        <button type="button" class="btn btn--primary product-purchase__add">
+          Agregar al carrito
+          <img src="/frontend/public/assets/icons/shopping-cart-dollar.svg" alt="Icono comprar" class="btn__icon">
+        </button>
+      </div>
+
+    </div>
+  </section>
+</section>

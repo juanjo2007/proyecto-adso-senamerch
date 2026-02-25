@@ -1,0 +1,84 @@
+<section class="create-post">
+  <div class="create-post__wrapper">
+
+    <!-- HEADER -->
+    <header class="create-post__header">
+      <h1 class="create-post__title">Agrega las características del producto</h1>
+      <p class="create-post__subtitle">
+        Este formulario es para registrar tu producto.
+        Podrás publicarlo y gestionarlo fácilmente.
+      </p>
+    </header>
+
+    <!-- FORMULARIO -->
+    <form class="create-post__form">
+
+            <!-- Campo: Texto -->
+      <div class="create-post__group">
+        <label class="create-post__label">Descripción producto</label>
+        <textarea 
+          class="create-post__textarea"
+          placeholder="Describe brevemente el producto..."
+        ></textarea>
+      </div>
+      <!-- NUEVO: Envío contraentrega -->
+      <div class="create-post__group">
+        <label class="create-post__label">Tipo de envío</label>
+        <select class="create-post__input" required>
+          <option value="" selected disabled>Selecciona una opción</option>
+          <option value="si">Sí, solo envío contraentrega</option>
+        </select>
+      </div>
+      <div class="create-post__group">
+        <label class="create-post__label">Categoria</label>
+        <select class="create-post__input" required>
+          <option value="" selected disabled>Selecciona una opción</option>
+          <option value="si">Frutas</option>
+          <option value="si">Verduras</option>
+          <option value="si">Lácteos</option>
+          <option value="si">Granos</option>
+          <option value="si">Ornamentales</option>
+          <option value="si">Cereales</option>
+          <option value="si">Oleaginosas</option>
+        </select>
+      </div>
+      <div>
+        
+      </div>
+      <!-- Botón secundario -->
+      <div class="create-post__secondary">
+        <button
+          type="button"
+          class="btn-secundary btn-secundary-style create-post__cancel"
+          aria-label="Cancelar edición"
+        >
+          Volver
+          <img
+            src="/frontend/public/assets/icons/return.svg"
+            alt=""
+            class="btn-secundary__icon"
+            aria-hidden="true"
+          />
+        </button>
+      </div>
+
+      <!-- Botón principal -->
+      <div class="create-post__buttons">
+        <button
+          type="submit"
+          class="btn btn--primary create-post__continue"
+          aria-label="Guardar datos del administrador"
+        >
+          Siguiente
+          <img
+            src="/frontend/public/assets/icons/continue.svg"
+            alt=""
+            class="btn__icon"
+            aria-hidden="true"
+          />
+        </button>
+      </div>
+
+    </form>
+  </div>
+</section>

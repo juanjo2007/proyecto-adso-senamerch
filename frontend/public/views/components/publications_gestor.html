@@ -1,0 +1,107 @@
+<section class="create-product-post-one">
+  <div class="create-product-post-one__wrapper">
+    
+    <!-- Encabezado igual que el create-store-one -->
+    <header class="create-product-post-one__header">
+      <h1 class="create-product-post-one__title">Crear Producto</h1>
+      <p class="create-product-post-one__subtitle">
+        Este formulario es para registrar<br> tu producto en <strong>SENA MERCH</strong>.
+        Podrás publicarlo y gestionarlo fácilmente.
+      </p>
+    </header>
+
+    <!-- FORMULARIO -->
+    <form class="create-product-post-one__form">
+
+      <!-- Campo: Título -->
+      <div class="create-product-post-one__group">
+        <label class="create-product-post-one__label">Nombre del producto</label>
+        <input 
+          type="text"
+          class="create-product-post-one__input"
+          placeholder="Ej: Tomate del Valle"
+          required
+        >
+      </div>
+
+      <!-- Campo: Precio -->
+      <div class="create-product-post-one__group">
+        <label class="create-product-post-one__label">Precio</label>
+        <input 
+          type="number"
+          class="create-product-post-one__input"
+          placeholder="Ej: 3000"
+          min="0"
+          required
+        >
+      </div>
+
+      <!-- <div class="create-post-one__group">
+        <label class="create-post-one__label">Dirección</label>
+        <a href="/frontend/public/views/view_publications_gestor3.html" class="create-post-one__link">Agrega más información del producto</a>
+        <small class="create-post-one__text">Todo estará más cerca de ti.</small>
+      </div>       -->
+      <!-- Campo: Categoría -->
+      <div class="create-product-post-one__group">
+        <label class="create-product-post-one__label">Categoría</label>
+        <select class="create-product-post-one__input" required>
+          <option value="" selected disabled>Selecciona una categoría</option>
+          <option value="frutas">Frutas</option>
+          <option value="verduras">Verduras</option>
+          <option value="carnes">Carnes</option>
+          <option value="bebidas">Bebidas</option>
+          <option value="otros">Otros</option>
+        </select>
+      </div>
+
+      <!-- Campo: Unidad -->
+      <div class="create-product-post-one__group">
+        <label class="create-product-post-one__label">Precio * Unidad de medida</label>
+        <select class="create-product-post-one__input" required>
+          <option value="" selected disabled>Selecciona una Unidad</option>
+          <option value="kg">Kilogramos (kg)</option>
+          <option value="lb">Libras (lb)</option>
+          <option value="unidad">Unidad</option>
+          <option value="litro">Litros (L)</option>
+          <option value="mililitro">Mililitros (mL)</option>
+        </select>
+      </div>
+      
+
+      <!-- Botón secundario -->
+      <div class="create-product-post-one__secondary">
+        <button
+          type="button"
+          class="btn-secundary btn-secundary-style create-product-post-one__cancel"
+          aria-label="Cancelar edición"
+        >
+          Cancelar
+          <img
+            src="/frontend/public/assets/icons/cancel.svg"
+            alt=""
+            class="btn-secundary__icon"
+            aria-hidden="true"
+          />
+        </button>
+      </div>
+
+      <!-- Botón principal -->
+      <div class="create-product-post-one__buttons">
+        <button
+          type="submit"
+          class="btn btn--primary create-product-post-one__continue"
+          aria-label="Guardar datos del administrador"
+        >
+          Siguiente
+          <img
+            src="/frontend/public/assets/icons/continue.svg"
+            alt=""
+            class="btn__icon"
+            aria-hidden="true"
+          />
+        </button>
+      </div>
+
+    </form>
+  </div>
+</section>

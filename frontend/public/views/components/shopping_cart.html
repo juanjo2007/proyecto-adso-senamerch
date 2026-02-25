@@ -1,0 +1,125 @@
+<section class="shopping-cart">
+  <h2 class="shopping-cart__title">Carrito de compras</h2>
+
+  <!-- Lista de productos -->
+  <ul class="shopping-cart__list">
+    <!-- Producto 1 -->
+    <li class="shopping-cart__item">
+      <img 
+        src="/frontend/public/assets/img/tomato_image.png" 
+        alt="Tomate fresco" 
+        class="shopping-cart__item-image"
+      >
+      <div class="shopping-cart__item-details">
+        <h3 class="shopping-cart__item-name">Tomate del Valle</h3>
+        <p class="shopping-cart__item-price">$3.000 Kilo</p>
+        <p class="shopping-cart__item-quantity">Cantidad: 2</p>
+        <p class="shopping-cart__item-unit">Kilogramos</p>
+        <p class="shopping-cart__item-unit-store">Tienda: Donde don pastor</p>
+      </div>
+
+      <!-- Botón eliminar -->
+      <form class="shopping-cart__remove-form" action="/eliminar-producto" method="POST">
+        <input type="hidden" name="producto" value="tomate-del-valle">
+        <button type="submit" class="shopping-cart__remove-button" aria-label="Eliminar producto">
+          <img src="/frontend/public/assets/icons/delete.svg" alt="Eliminar">
+        </button>
+      </form>
+    </li>
+    <li class="shopping-cart__item">
+      <img 
+        src="/frontend/public/assets/img/tomato_image.png" 
+        alt="Tomate fresco" 
+        class="shopping-cart__item-image"
+      >
+      <div class="shopping-cart__item-details">
+        <h3 class="shopping-cart__item-name">Tomate del Valle</h3>
+        <p class="shopping-cart__item-price">$3.000 Kilo</p>
+        <p class="shopping-cart__item-quantity">Cantidad: 2</p>
+        <p class="shopping-cart__item-unit">Kilogramos</p>
+        <p class="shopping-cart__item-unit-store">Tienda: Donde don pastor</p>
+      </div>
+
+      <!-- Botón eliminar -->
+      <form class="shopping-cart__remove-form" action="/eliminar-producto" method="POST">
+        <input type="hidden" name="producto" value="tomate-del-valle">
+        <button type="submit" class="shopping-cart__remove-button" aria-label="Eliminar producto">
+          <img src="/frontend/public/assets/icons/delete.svg" alt="Eliminar">
+        </button>
+      </form>
+    </li>
+    <li class="shopping-cart__item">
+      <img 
+        src="/frontend/public/assets/img/tomato_image.png" 
+        alt="Tomate fresco" 
+        class="shopping-cart__item-image"
+      >
+      <div class="shopping-cart__item-details">
+        <h3 class="shopping-cart__item-name">Tomate del Valle</h3>
+        <p class="shopping-cart__item-price">$3.000 Kilo</p>
+        <p class="shopping-cart__item-quantity">Cantidad: 2</p>
+        <p class="shopping-cart__item-unit">Kilogramos</p>
+        <p class="shopping-cart__item-unit-store">Tienda: Donde don pastor</p>
+      </div>
+
+      <!-- Botón eliminar -->
+      <form class="shopping-cart__remove-form" action="/eliminar-producto" method="POST">
+        <input type="hidden" name="producto" value="tomate-del-valle">
+        <button type="submit" class="shopping-cart__remove-button" aria-label="Eliminar producto">
+          <img src="/frontend/public/assets/icons/delete.svg" alt="Eliminar">
+        </button>
+      </form>
+    </li>
+
+    <!-- Producto 2 -->
+    <li class="shopping-cart__item">
+      <img 
+        src="/frontend/public/assets/img/lettuce_image.png" 
+        alt="Papa roja" 
+        class="shopping-cart__item-image"
+      >
+      <div class="shopping-cart__item-details">
+        <h3 class="shopping-cart__item-name">Lechuga</h3>
+        <p class="shopping-cart__item-price">$5.000 Kilo</p>
+        <p class="shopping-cart__item-quantity">Cantidad: 1</p>
+        <p class="shopping-cart__item-unit">Libras</p>
+        <p class="shopping-cart__item-unit-store">Tienda: El mayorista</p>
+      </div>
+
+      <!-- Botón eliminar -->
+      <form class="shopping-cart__remove-form" action="/eliminar-producto" method="POST">
+        <input type="hidden" name="producto" value="papa-roja">
+        <button type="submit" class="shopping-cart__remove-button" aria-label="Eliminar producto">
+          <img src="/frontend/public/assets/icons/delete.svg" alt="Eliminar">
+        </button>
+      </form>
+    </li>
+  </ul>
+
+  <!-- Resumen del carrito -->
+  <div class="shopping-cart__summary">
+    <p class="shopping-cart__total">Total: <strong class="shopping-cart__total-price">$11.000</strong></p>
+  </div>
+    <!-- ... dentro de la sección shopping-cart ... -->
+
+  <div class="shopping-cart__actions-buttons">
+
+    <div class="shopping-cart__actions-buttons--secondary">
+      <button class="btn-secundary btn-secundary-style shopping-cart__return">
+        Volver
+        <img src="/frontend/public/assets/icons/return.svg" alt="Icono volver" class="btn-secundary__icon">
+      </button>
+    </div>
+
+    <div class="shopping-cart__actions-buttons--primary">
+      <button type="button" class="btn btn--primary shopping-cart__continue">
+        Continuar comprando
+        <img src="/frontend/public/assets/icons/shopping-cart-dollar.svg" alt="Icono comprar" class="btn__icon">
+      </button>
+    </div>
+
+  </div>
+
+
+  </div>
+</section>

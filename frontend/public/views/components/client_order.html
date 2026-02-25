@@ -1,0 +1,90 @@
+<section class="orders-panel">
+  <div class="orders-panel__container">
+
+    <!-- ========================================
+         TABS (DISEÑO PROFESIONAL)
+    ======================================== -->
+    <nav class="orders-panel__tabs">
+      <button class="orders-panel__tab orders-panel__tab--active" data-status="all">
+        Todos
+      </button>
+      <button class="orders-panel__tab" data-status="pending">
+        Pendientes
+      </button>
+      <a href="view_purchases.html" class="orders-panel__tab" data-status="delivered">
+        Entregados
+      </a>
+    </nav>
+
+    <!-- Select adicional (responsive / accesibilidad) -->
+    <div class="orders-panel__filter">
+      <select class="orders-panel__select">
+        <option value="all">Todos</option>
+        <option value="pending">Pendientes</option>
+        <option value="delivered">Entregados</option>
+      </select>
+    </div>
+
+    <!-- ========================================
+         LISTA DE PEDIDOS
+    ======================================== -->
+    <div class="orders-panel__list">
+
+      <!-- TARJETA PROFESIONAL -->
+      <article class="order-card" data-status="pending">
+
+        <header class="order-card__top">
+          <div class="order-card__meta">
+            <h3 class="order-card__id">Pedido #0123</h3>
+            <p class="order-card__date">15/11/2025</p>
+          </div>
+
+          <span class="order-card__status order-card__status--pending">
+            Pendiente
+          </span>
+        </header>
+
+        <!-- TIENDA -->
+        <div class="order-card__store">
+          Tienda: <strong>Donde Don Pastor</strong>
+        </div>
+
+        <!-- LISTA MINI DE PRODUCTOS -->
+        <div class="order-card__products">
+
+          <div class="order-card__product">
+            <p class="order-card__product-name">Tomate chonto</p>
+            <p class="order-card__product-qty">2 kg</p>
+          </div>
+
+          <div class="order-card__product">
+            <p class="order-card__product-name">Lechuga crespa</p>
+            <p class="order-card__product-qty">1 und</p>
+          </div>
+
+        </div>
+
+        <!-- TOTAL -->
+        <div class="order-card__total">
+          Total del pedido: <strong>$78.000</strong>
+        </div>
+
+        <!-- ACCIONES -->
+        <div class="order-card__actions">
+          <button class="btn-secundary btn-secundary-style order-card__cancel">
+            Cancelar
+            <img src="/frontend/public/assets/icons/cancel.svg" class="btn__icon" alt="" />
+          </button>
+
+          <button class="btn btn--primary order-card__edit">
+            Editar
+            <img src="/frontend/public/assets/icons/edit.svg" class="btn__icon" alt="" />
+          </button>
+        </div>
+
+      </article>
+
+    </div>
+
+  </div>
+</section>

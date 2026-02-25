@@ -1,0 +1,69 @@
+<section class="edit-store-seller">
+  <div class="edit-store-seller__wrapper">
+    <h2 class="edit-store-seller__title">Editar datos de la tienda</h2>
+
+    <!-- SUBTÍTULO (el mismo del anterior que querías) -->
+    <p class="edit-store-seller__subtitle">
+      Completa o edita la información de tu tienda
+    </p>
+
+    <form class="edit-store-seller__form">
+      <div class="edit-store-seller__group">
+        <label class="edit-store-seller__label">Dirección de la tienda</label>
+        <a
+          href="view_add_adress_store_edit.html"
+          class="edit-store-seller__link"
+          >Editar dirección</a
+        >
+      </div>
+
+      <div class="edit-store-seller__group">
+        <label class="edit-store-seller__label">Imagen de portada</label>
+        <input type="file" class="edit-store-seller__input" accept="image/*" />
+      </div>
+      <!-- Descripción -->
+      <div class="edit-store-seller__group">
+        <label class="edit-store-seller__label">Descripción</label>
+        <textarea
+          class="edit-store-seller__textarea"
+          rows="4"
+          placeholder="Escribe una breve descripción de tu tienda..."
+          required
+        ></textarea>
+      </div>
+      <!-- Botón secundario -->
+      <div class="edit-store-seller__secondary">
+        <button
+          type="button"
+          class="btn-secundary btn-secundary-style edit-store-seller__cancel"
+          aria-label="Cancelar edición"
+        >
+          Volver
+          <img
+            src="/frontend/public/assets/icons/return.svg"
+            alt=""
+            class="btn-secundary__icon"
+            aria-hidden="true"
+          />
+        </button>
+      </div>
+
+      <!-- Botón primario -->
+      <div class="edit-store-seller__primary">
+        <button
+          type="submit"
+          class="btn btn--primary edit-store-seller__save"
+          aria-label="Guardar datos de la tienda"
+        >
+          Guardar cambios
+          <img
+            src="/frontend/public/assets/icons/save.svg"
+            alt=""
+            class="btn__icon edit-store-seller__icon"
+            aria-hidden="true"
+          />
+        </button>
+      </div>
+    </form>
+  </div>
+</section>

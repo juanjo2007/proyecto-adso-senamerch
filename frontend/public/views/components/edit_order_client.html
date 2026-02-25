@@ -1,0 +1,50 @@
+<section class="edit-order-content"> 
+  <section class="edit-order edit-order--premium">
+
+    <!-- ENCABEZADO -->
+    <header class="edit-order__header">
+      <h2 class="edit-order__title">Editar pedido #0123</h2>
+      <span class="edit-order__tag">Tienda donde don Pastor</span>
+      <p class="edit-order__subtitle">
+        Selecciona el tipo de entrega o gestiona el estado del pedido
+      </p>
+    </header>
+
+    <!-- TIPO DE ENVÍO -->
+    <div class="edit-order__section">
+      <h3 class="edit-order__product-title">Tipo de entrega</h3>
+
+      <div class="edit-order__row">
+        <label class="edit-order__label">Selecciona una opción:</label>
+        <select class="edit-order__unit">
+          <option value="contraentrega">Contraentrega</option>
+          <option value="recoger">Recoger en tienda</option>
+        </select>
+      </div>
+    </div>
+
+    <!-- ACCIONES DEL PEDIDO -->
+    <div class="edit-order__actions">
+
+      <!-- 1) Volver a comprar -->
+      <button class="btn btn--primary edit-order__save">
+        Volver a comprar
+        <img src="/frontend/public/assets/icons/delivery.svg" class="btn__icon">
+      </button>
+
+      <!-- 2) Cancelar pedido -->
+      <button type="button" class="btn-secundary btn-secundary-style edit-order__cancel">
+        Cancelar pedido
+        <img src="/frontend/public/assets/icons/cancel.svg" class="btn-secundary__icon">
+      </button>
+
+      <!-- 3) Realizar pedido (nuevo botón) -->
+      <button class="btn btn--primary edit-order__confirm">
+        Realizar pedido
+        <img src="/frontend/public/assets/icons/perform.svg" class="btn__icon">
+      </button>
+
+    </div>
+
+  </section>
+</section>

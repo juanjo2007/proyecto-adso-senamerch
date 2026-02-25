@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- >>> Sección CSS principal -->
+    <link rel="stylesheet" href="/frontend/public/css/main.css">
+    <!-- >>> Sección JS componentes -->
+    <script type="module">
+      import { loadCards } from "/frontend/public/js/components/card.js";
+      import { initCommentsSidebar } from "/frontend/public/js/components/comments.js";
+
+      document.addEventListener("DOMContentLoaded", () => {
+        loadCards(".cards__container");
+        initCommentsSidebar(); // ✅ esto inyecta el sidebar
+      });
+    </script>
+    <script src="/frontend/public/js/components/navbar_client_view.js"></script>
+    <script src="/frontend/public/js/components/search_bar.js"></script>
+    <script src="/frontend/public/js/components/client_view.js"></script>
+    <script src="/frontend/public/js/components/footer.js"></script>
+    <script src="/frontend/public/js/components/navbar_product_category.js" defer></script>
+    <script src="/frontend/public/js/components/navabar_go_go.js" defer></script>
+    <script src="/frontend/public/js/components/footer_go_go.js" defer></script>
+    
+    <title>Sena Merch Cliente</title>
+</head>
+<body>
+    <section class="section-footer-content">
+      <nav class="navbar-go-go">
+        <div class="govco-container__one"></div>
+      </nav>  
+      <!-- >>> Sección Navbar -->
+      <nav class="navabar-users-clients">
+        <div class="navbar_client_view"></div>
+      </nav>
+      <section class="comments_users">
+        <div class="comments-userss-container"></div>
+        <div class="comments-overlay"></div>
+     </section>
+      <!-- >>> Buscador + Categorías en Grid -->
+      <section class="search-category-grid">
+
+        <div class="search-bar-container"></div>
+
+        <nav class="nav">
+          <div class="navbar-product-category-container"></div>
+        </nav>
+
+      </section>
+      <!-- >>> Sección Trajetas de productos del cliente-->
+      <section class="products-cards-clients-viwes">
+        <div class="cards__container"></div>
+      </section>
+    </section>
+    <!-- >>> Sección Footer -->
+    <footer class="footer-client-views">
+      <div class="footer-container"></div>
+    </footer>
+    <footer class="footer-index-view">
+      <div class="govco-container__two"></div>
+    </footer>
+</body>
+</html>
+

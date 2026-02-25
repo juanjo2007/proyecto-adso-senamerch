@@ -1,0 +1,80 @@
+<article class="product-card">
+
+  <!-- Menú tres puntos -->
+  <div class="product-card__actions">
+
+    <!-- Botón Like -->
+    <button class="product-card__like-btn" aria-label="Me gusta">
+      <img 
+        src="/frontend/public/assets/icons/heart.svg" 
+        alt="Icono me gusta"
+        class="product-card__like-icon"
+      />
+    </button>
+    <button class="product-card__like-btn--dislike" aria-label="Me gusta">
+      <img 
+        src="/frontend/public/assets/icons/heart-off.svg" 
+        alt="Icono me gusta"
+        class="product-card__like-icon--dislike"
+      />
+    </button>
+
+    <!-- Menú tres puntos -->
+    <div class="product-card__menu">
+      <button class="product-card__menu-btn">⋮</button>
+
+      <ul class="product-card__menu-dropdown">
+        <li>
+          <a href="#" class="product-card__menu-item" data-action="open-comments">
+            Dejar un comentario
+            <img 
+              src="/frontend/public/assets/icons/contact.svg" 
+              alt="Icono me gusta"
+              class="product-card__menu-item-icon"
+             />
+          </a>
+        </li>
+      </ul>
+    </div>
+
+  </div>
+
+  <!-- Header: nombre y precio -->
+  <div class="product-card__header">
+    <h2 class="product-card__title">{{name}}</h2>
+    <p class="product-card__price">$ {{price}} / kilo</p>
+    <p class="product-card__discount">{{discount}} % de descuento</p>
+  </div>
+  <!-- Imagen grande del producto (ahora con link y tooltip) -->
+  <a href="product_description.html" class="product-card__image-link">
+    <div class="product-card__image-wrapper">
+      <img 
+        src="{{image}}"
+        alt="Imagen de {{name}}"
+        class="product-card__image"
+      />
+    </div>
+
+    <!-- Tooltip -->
+    <span class="product-card__image-tooltip">
+      Visualizar Producto
+      <img 
+        src="/frontend/public/assets/icons/eye.svg"
+        alt="Icono visualizar"
+        class="product-card__image-tooltip-icon"
+      />
+    </span>
+  </a>
+  <!-- Botones -->
+  <div class="product-card__footer--end">
+    <button type="button" class="btn btn--primary product-card__pay">
+      Comprar
+      <img 
+        src="/frontend/public/assets/icons/cash-button.svg"
+        alt="Icono Comprar"
+        class="btn__icon product-card__icon"
+      />
+    </button>
+  </div>
+
+</article>

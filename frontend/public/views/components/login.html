@@ -1,0 +1,54 @@
+<section class="site-main-login">
+  <div class="login">
+    <h1 class="login__title">Iniciar Sesión</h1>
+
+    <form class="login__form">
+
+      <div class="login__field">
+        <label class="login__label">Correo electrónico</label>
+        <input
+          class="login__input login__input--email"
+          type="email"
+          placeholder="Correo electrónico"
+          required
+        >
+      </div>
+
+      <div class="login__field">
+        <label class="login__label">Contraseña</label>
+
+        <div class="login__password-wrapper">
+          <input
+            class="login__input login__input--password"
+            type="password"
+            placeholder="Contraseña"
+            required
+          >
+          <button type="button" class="login__toggle-password">Mostrar</button>
+        </div>
+      </div>
+
+      <div class="login__actions">
+        <button
+          type="submit"
+          class="btn btn--primary login__btn"
+        >
+          Ingresar
+          <img
+            src="/frontend/public/assets/icons/get_into.svg"
+            alt="Icono ingresar"
+            class="btn__icon login__btn-icon"
+          >
+        </button>
+      </div>
+      <div class="class login__content-links">
+        <a href="forgot_password.html" class="login__link">
+          ¿Olvidaste tu contraseña?
+        </a>
+        <a href="register.html" class="login__link">
+          ¿Registrate?
+        </a>
+      </div>
+    </form>
+  </div>
+</section>
