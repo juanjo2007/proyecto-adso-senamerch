@@ -4,7 +4,7 @@
     display: flex;
     justify-content: space-between;
     align-items: center;
-    background-color: var(--secundary-700);
+    background-color: var(--secundary-950);
     font-family: var(--font-primary);
     border-bottom: 2px solid var(--secundary-400);
     height: 100%;
